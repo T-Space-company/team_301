@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Codemind</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="header" id="header">
+      <div class="header__content">
+        <img
+          src="./img/icons/Layer_1.svg"
+          alt="Codemind"
+          class="header__logo"
+          width="63px"
+          height="63px"
+        />
+        <span class="header__text"
+          >Code<span class="header__text-yellow">Mind</span></span
+        >
+      </div>
+    </header>
+    <main class="main">
+      <section class="main__section-hero" id="consultation">
+        <div class="section-hero__text">
+          <h1 class="section-hero__heading">
+            Освойте программирование <br />
+            и начните карьеру в IT!
+          </h1>
+          <p class="section-hero__paragraph">
+            Курсы для начинающих и продвинутых: <br />реальные проекты,
+            поддержка наставников
+          </p>
+          <picture class="section-hero__image">
+            <source
+              srcset="./img/rb_7081-1.png 1x, ./img/rb_7081-1@2x.png 2x"
+              media="(max-width: 768px)"
+            />
+            <img
+              src="./img/Group-2087327372@2x.png"
+              srcset="
+                ./img/Group-2087327372.png    1x,
+                ./img/Group-2087327372@2x.png 2x
+              "
+              alt="Programming"
+            />
+          </picture>
+        </div>
+        <button type="button" class="section-hero__button">
+          Получить консультацию
+        </button>
+      </section>
+      <section class="main__section-about_us" id="about_us">
+        <div class="section-about_us__text">
+          <div class="section-about-us__subheading">
+            <img src="./img/icons/line.svg" alt="Line" />
+            <span class="section-about-us__subheading-us"
+              >Почему именно мы?</span
+            >
+          </div>
+          <h2 class="section-about_us__heading">
+            Обучение построено таким образом, чтобы <br />
+            вы могли сразу применять полученные <br />
+            знания
+          </h2>
+          <p class="section-about_us__paragraph">
+            Наш курс разработан для тех, кто хочет освоить программирование с
+            нуля или прокачать <br />
+            свои навыки. Мы делаем упор на практику: вы будете решать реальные
+            задачи, создавать<br />проекты для портфолио и получать поддержку от
+            опытных наставников на каждом этапе <br />
+            обучения
+          </p>
+        </div>
+        <ul class="section-about_us__list">
+          <li class="section-about_us__item">
+            <img
+              src="./img/icons/certificate.svg"
+              width="56px"
+              alt="Certificate"
+            />
+            <div class="section-about_us__item-content">
+              <span class="section-about_us__item-module">Модуль 1</span>
+              <p class="section-about_us__item-info">
+                Основы программирования (HTML, CSS)
+              </p>
+            </div>
+          </li>
+          <li class="section-about_us__item">
+            <img
+              src="./img/icons/online-classes.svg"
+              width="56px"
+              alt="Online classes"
+            />
+            <div class="section-about_us__item-content">
+              <span class="section-about_us__item-module">Модуль 2</span>
+              <p class="section-about_us__item-info">JavaScript: первые шаги</p>
+            </div>
+          </li>
+          <li class="section-about_us__item">
+            <img src="./img/icons/life-time.svg" width="56px" alt="Life time" />
+            <div class="section-about_us__item-content">
+              <span class="section-about_us__item-module">Модуль 3</span>
+              <p class="section-about_us__item-info">
+                Создание веб-приложений (React/Angular)
+              </p>
+            </div>
+          </li>
+          <li class="section-about_us__item">
+            <img
+              src="./img/icons/beginner-level.svg"
+              width="56px"
+              alt="Beginner level"
+            />
+            <div class="section-about_us__item-content">
+              <span class="section-about_us__item-module">Модуль 4</span>
+              <p class="section-about_us__item-info">
+                Базы данных и серверная часть
+              </p>
+            </div>
+          </li>
+          <li class="section-about_us__item">
+            <img src="./img/icons/subtitles.svg" width="56px" alt="Subtitles" />
+            <div class="section-about_us__item-content">
+              <span class="section-about_us__item-module">Модуль 5</span>
+              <p class="section-about_us__item-info">
+                Работа над финальным проектом
+              </p>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="main__section-study_process" id="study_process">
+        <details open class="section-study_process__details">
+          <summary class="section-study_process__summary">
+            Учебный процесс
+            <button type="button"></button>
+          </summary>
+          <div class="section-study_process__items-wrap">
+            <div class="section-study_process__item">
+              <span class="section-study_process__item-num">01</span>
+              <div class="section-study_process__item-text">
+                <p class="section-study_process__item-subheading">
+                  Вводный этап:
+                </p>
+                <p class="section-study_process__item-paragraph">
+                  Вы изучите базовые концепции программирования, HTML и CSS,
+                  узнаете, как работает веб-разработка, и создадите свой первый
+                  веб-сайт. Этот этап заложит фундамент для дальнейшего обучения
+                </p>
+              </div>
+            </div>
+            <div class="section-study_process__item">
+              <span class="section-study_process__item-num">02</span>
+              <div class="section-study_process__item-text">
+                <p class="section-study_process__item-subheading">
+                  Практическая база:
+                </p>
+                <p class="section-study_process__item-paragraph">
+                  Вы научитесь писать простые скрипты, работать с логикой и
+                  интерактивностью на веб-страницах. В конце этапа создадите
+                  свою первую интерактивную страницу
+                </p>
+              </div>
+            </div>
+            <div class="section-study_process__item">
+              <span class="section-study_process__item-num">03</span>
+              <div class="section-study_process__item-text">
+                <p class="section-study_process__item-subheading">
+                  Углубление знаний:
+                </p>
+                <p class="section-study_process__item-paragraph">
+                  Мы разберем основы работы с фреймворком React: создание
+                  компонентов, управление состоянием и взаимодействие с данными.
+                  Вы создадите первое приложение на React
+                </p>
+              </div>
+            </div>
+            <div class="section-study_process__item">
+              <span class="section-study_process__item-num">04</span>
+              <div class="section-study_process__item-text">
+                <p class="section-study_process__item-subheading">
+                  Работа с сервером:
+                </p>
+                <p class="section-study_process__item-paragraph">
+                  Познакомьтесь с основами серверной разработки, базами данных и
+                  API. Вы научитесь взаимодействовать с сервером, обрабатывать
+                  запросы и сохранять данные
+                </p>
+              </div>
+            </div>
+            <div class="section-study_process__item">
+              <span class="section-study_process__item-num">05</span>
+              <div class="section-study_process__item-text">
+                <p class="section-study_process__item-subheading">
+                  Финальный проект:
+                </p>
+                <p class="section-study_process__item-paragraph">
+                  Под руководством наставников вы разработаете полноценное
+                  веб-приложение, которое станет важной частью вашего портфолио
+                </p>
+              </div>
+            </div>
+            <div class="section-study_process__item">
+              <span class="section-study_process__item-num">06</span>
+              <div class="section-study_process__item-text">
+                <p class="section-study_process__item-subheading">
+                  Подготовка к карьере:
+                </p>
+                <p class="section-study_process__item-paragraph">
+                  Мы поможем вам составить профессиональное резюме, оформить
+                  портфолио и подготовиться к собеседованиям
+                </p>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <h2 class="section-study_process__heading">Учебный процесс</h2>
+        <div class="section-study_process__item-wrap">
+          <div class="section-study_process__item">
+            <span class="section-study_process__item-num">01</span>
+            <div class="section-study_process__item-text">
+              <p class="section-study_process__item-subheading">
+                Вводный этап:
+              </p>
+              <p class="section-study_process__item-paragraph">
+                Вы изучите базовые концепции программирования, HTML и CSS,
+                узнаете, как работает веб-разработка, и создадите свой первый
+                веб-сайт. Этот этап заложит фундамент для дальнейшего обучения
+              </p>
+            </div>
+          </div>
+          <div class="section-study_process__item">
+            <span class="section-study_process__item-num">02</span>
+            <div class="section-study_process__item-text">
+              <p class="section-study_process__item-subheading">
+                Практическая база:
+              </p>
+              <p class="section-study_process__item-paragraph">
+                Вы научитесь писать простые скрипты, работать с логикой и
+                интерактивностью на веб-страницах. В конце этапа создадите свою
+                первую интерактивную страницу
+              </p>
+            </div>
+          </div>
+          <div class="section-study_process__item">
+            <span class="section-study_process__item-num">03</span>
+            <div class="section-study_process__item-text">
+              <p class="section-study_process__item-subheading">
+                Углубление знаний:
+              </p>
+              <p class="section-study_process__item-paragraph">
+                Мы разберем основы работы с фреймворком React: создание
+                компонентов, управление состоянием и взаимодействие с данными.
+                Вы создадите первое приложение на React
+              </p>
+            </div>
+          </div>
+          <div class="section-study_process__item">
+            <span class="section-study_process__item-num">04</span>
+            <div class="section-study_process__item-text">
+              <p class="section-study_process__item-subheading">
+                Работа с сервером:
+              </p>
+              <p class="section-study_process__item-paragraph">
+                Познакомьтесь с основами серверной разработки, базами данных и
+                API. Вы научитесь взаимодействовать с сервером, обрабатывать
+                запросы и сохранять данные
+              </p>
+            </div>
+          </div>
+          <div class="section-study_process__item">
+            <span class="section-study_process__item-num">05</span>
+            <div class="section-study_process__item-text">
+              <p class="section-study_process__item-subheading">
+                Финальный проект:
+              </p>
+              <p class="section-study_process__item-paragraph">
+                Под руководством наставников вы разработаете полноценное
+                веб-приложение, которое станет важной частью вашего портфолио
+              </p>
+            </div>
+          </div>
+          <div class="section-study_process__item">
+            <span class="section-study_process__item-num">06</span>
+            <div class="section-study_process__item-text">
+              <p class="section-study_process__item-subheading">
+                Подготовка к карьере:
+              </p>
+              <p class="section-study_process__item-paragraph">
+                Мы поможем вам составить профессиональное резюме, оформить
+                портфолио и подготовиться к собеседованиям
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main__section-faq" id="faq">
+        <div class="section-faq__text-wrap">
+          <div class="section-faq__text">
+            <h2 class="section-faq__heading">Часто задаваемые вопросы (FAQ)</h2>
+            <p class="section-faq__paragraph">
+              Возникли вопросы? Пиши нам на почту supportCodeMind@gmail.com
+            </p>
+          </div>
+          <img
+            src="./img/21532466_6491426-1.png"
+            srcset="
+              ./img/21532466_6491426-1.png    1x,
+              ./img/21532466_6491426-1@2x.png 2x
+            "
+            width="500px"
+            class="section-faq__image"
+            alt="Programmer"
+          />
+        </div>
+        <div class="section-faq__items">
+          <details open class="section-faq__item">
+            <summary>
+              Нужен ли опыт для прохождения курса?
+              <button type="button" class="section-faq__button">
+                <img src="./img/icons/Button.svg" alt="Open" />
+              </button>
+            </summary>
+            <div class="section-faq__item_text">
+              <p>
+                Нет, наш курс подходит для новичков. Вы начнете <br />
+                с основ и шаг за шагом освоите все ключевые навыки
+                программирования
+              </p>
+              <button type="button" class="section-faq__button_close">
+                <img src="./img/icons/Button1.svg" alt="Close" />
+              </button>
+            </div>
+          </details>
+          <details class="section-faq__item">
+            <summary>
+              Сколько времени занимает обучение?
+              <button type="button" class="section-faq__button">
+                <img src="./img/icons/Button.svg" alt="Open" />
+              </button>
+            </summary>
+            <div class="section-faq__item_text">
+              <p>
+                Курс рассчитан на 3 месяца при интенсивной нагрузке или 6
+                месяцев при более гибком графике. Вы можете обучаться в своем
+                темпе, так как доступ к материалам остается навсегда
+              </p>
+              <button type="button" class="section-faq__button_close">
+                <img src="./img/icons/Button1.svg" alt="Close" />
+              </button>
+            </div>
+          </details>
+          <details class="section-faq__item">
+            <summary>
+              Будет ли трудоустройство после завершения?
+              <button type="button" class="section-faq__button">
+                <img src="./img/icons/Button.svg" alt="Open" />
+              </button>
+            </summary>
+            <div class="section-faq__item_text">
+              <p>
+                Мы предоставляем помощь в составлении резюме, подготовке к
+                собеседованиям и поиске вакансий. Большинство наших студентов
+                находят работу в течение первых 3 месяцев после окончания
+              </p>
+              <button type="button" class="section-faq__button_close">
+                <img src="./img/icons/Button1.svg" alt="Close" />
+              </button>
+            </div>
+          </details>
+          <details class="section-faq__item">
+            <summary>
+              Что делать, если я пропущу урок?
+              <button type="button" class="section-faq__button">
+                <img src="./img/icons/Button.svg" alt="Open" />
+              </button>
+            </summary>
+            <div class="section-faq__item_text">
+              <p>
+                Не волнуйтесь! Все материалы и записи остаются доступными. Вы
+                можете вернуться к пропущенному уроку в любое время
+              </p>
+              <button type="button" class="section-faq__button_close">
+                <img src="./img/icons/Button1.svg" alt="Close" />
+              </button>
+            </div>
+          </details>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="/main.js"></script>
+  </body>
+  <footer class="footer" id="footer">
+    <div class="footer-wrap">
+      <div class="footer-wrap_content">
+        <div class="footer-wrap_content-logo">
+          <img
+            src="./img/icons/Layer_1.svg"
+            alt="Codemind"
+            width="47px"
+            height="47px"
+          />
+          <span class="footer-content_text"
+            >Code<spa class="header__text-yellow">Mind</spa></span
+          >
+        </div>
+        <ul class="footer-content_list">
+          <li class="footer-content_list-item">
+            <a href="#study_process">Учебный процесс</a>
+          </li>
+          <li class="footer-content_list-item">
+            <a href="#consultation">Консультация</a>
+          </li>
+          <li class="footer-content_list-item">
+            <a href="#faq">Часто задаваемые вопросы (FAQ)</a>
+          </li>
+        </ul>
+      </div>
+      <a href="mailto:CodeMind@gmail.com">CodeMind@gmail.com</a>
+    </div>
+  </footer>
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <form></form>
+    </div>
+  </div>
+</html>
