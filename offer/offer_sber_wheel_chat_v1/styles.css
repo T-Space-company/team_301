@@ -45,10 +45,11 @@
 body {
   background-color: #001500;
   background-image: url("./img/Group-13.png");
-  background-position-y: 121px;
+  background-position-y: 105px;
   background-size: 100% auto;
   background-repeat: no-repeat;
   margin: 0;
+  height: 100vh;
 }
 p {
   margin: 0;
@@ -74,7 +75,7 @@ p {
 .main {
   padding: 20px 0 0 0;
   display: flex;
-  /* height: calc(100vh - 65px); */
+  height: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;

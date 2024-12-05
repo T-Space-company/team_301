@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const spinButton = document.querySelector(
     ".main__section-third__container-button"
   );
-  const confettiElements = document.querySelectorAll(".confetti");
   const confettiLeft = document.querySelector(".confetti--left");
   const confettiRight = document.querySelector(".confetti--right");
 
@@ -23,7 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const degreesPerSection = 360 / totalSections;
     const targetSection = 5;
 
-    spinButton.onclick = function () {
+    spinButton.addEventListener("click", handleSpinClick);
+    function handleSpinClick() {
       let duration = 6;
       let fullSpins = 10;
       let targetRotation =
@@ -40,8 +40,13 @@ document.addEventListener("DOMContentLoaded", () => {
         confettiLeft.classList.add("confetti--left__animate");
         confettiRight.classList.add("confetti--right__animate");
 
+        spinButton.removeEventListener("click", handleSpinClick);
         spinButton.innerText = "ЗАБРАТЬ ВЫПЛАТУ";
+        spinButton.addEventListener("click", goChat);
       }, duration * 1050);
-    };
+    }
+    function goChat() {
+      window.open("./chat/chat.html", "_self");
+    }
   }
 });
