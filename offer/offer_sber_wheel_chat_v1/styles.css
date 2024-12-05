@@ -1,10 +1,222 @@
+@font-face {
+  font-family: "TT First Neue";
+  src: url("./fonts/TT-Firs-Neue-Trial-Regular.ttf") format("truetype"); /* Path to the font file */
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT First Neue";
+  src: url("./fonts/TT-Firs-Neue-Trial-Medium.ttf") format("truetype"); /* Path to the font file */
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Fixel Display";
+  src: url("./fonts/FixelDisplay-Light.woff2") format("truetype"); /* Path to the font file */
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Fixel Display";
+  src: url("./fonts/FixelDisplay-Regular.woff2") format("truetype"); /* Path to the font file */
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Fixel Display";
+  src: url("./fonts/FixelDisplay-Medium.woff2") format("truetype"); /* Path to the font file */
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Fixel Display";
+  src: url("./fonts/FixelDisplay-Bold.woff2") format("truetype"); /* Path to the font file */
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Fixel Display";
+  src: url("./fonts/FixelDisplay-ExtraBold.woff2") format("truetype"); /* Path to the font file */
+  font-weight: 800;
+  font-style: normal;
+}
+
 body {
-  /* background-color: #001500; */
-  /* background-image: url("./img/12.png"); */
+  background-color: #001500;
+  background-image: url("./img/Group-13.png");
+  background-position-y: 121px;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  margin: 0;
+}
+p {
+  margin: 0;
 }
 .header {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 17px;
 }
-.header-logo {
+.header__logo {
   display: flex;
   gap: 14px;
+}
+.header__logo-text {
+  font-family: "TT First Neue";
+  color: #fff;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.main {
+  padding: 20px 0 0 0;
+  display: flex;
+  /* height: calc(100vh - 65px); */
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.main__section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main__section-primary__container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 22px;
+  padding: 0 20px;
+  margin-top: 30px;
+}
+
+.main__section-primary__container-item {
+  text-align: center;
+  font-family: "Fixel Display";
+  color: #fff;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: -0.28px;
+}
+
+.secondary {
+  font-size: 48px;
+  font-weight: 800;
+  letter-spacing: -0.48px;
+  background: linear-gradient(
+    82deg,
+    #a3cd39 14.32%,
+    #86c339 28.41%,
+    #21a038 79.26%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.main__section-secondary__container {
+  position: relative;
+  z-index: 2;
+  height: 285px;
+  margin-bottom: 29px;
+}
+
+.main__section-secondary__container-img-border {
+  z-index: 1;
+  width: 267px;
+  height: 284px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main__section-secondary__container-img-content {
+  z-index: 0;
+  width: 313px;
+  height: 313px;
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.secondary {
+  z-index: 2;
+  position: sticky;
+}
+
+.main__section-secondary__container-img {
+  display: block;
+  object-fit: cover;
+  max-width: 100%;
+}
+
+.third {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main__section-third__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  z-index: 3;
+}
+
+.main__section-third__container-button {
+  display: flex;
+  width: 300px;
+  padding: 18px 20px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 25px;
+  background: var(
+    --1,
+    linear-gradient(82deg, #a3cd39 14.32%, #86c339 28.41%, #21a038 79.26%)
+  );
+  box-shadow: 83px 105px 37px 0px rgba(0, 0, 0, 0),
+    53px 67px 34px 0px rgba(0, 0, 0, 0.01),
+    30px 38px 29px 0px rgba(0, 0, 0, 0.05),
+    13px 17px 21px 0px rgba(0, 0, 0, 0.09), 3px 4px 12px 0px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  font-family: "Fixel Display";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+.main__section-third__container-text {
+  text-align: center;
+  color: #fff;
+  font-family: "Fixel Display";
+  font-size: 10px;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.content__tilt {
+  animation: tiltAnimation 3s ease-in-out infinite;
+}
+
+@keyframes tiltAnimation {
+  0% {
+    transform: translate(-50%, -50%) rotate(1deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(-1deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(1deg);
+  }
 }
