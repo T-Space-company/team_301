@@ -8,6 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const spinButton = document.querySelector(
     ".main__section-third__container-button"
   );
+  const confettiElements = document.querySelectorAll(".confetti");
+  const confettiLeft = document.querySelector(".confetti--left");
+  const confettiRight = document.querySelector(".confetti--right");
 
   function addTiltAnimation() {
     rouletteContent.classList.add("content__tilt");
@@ -21,17 +24,24 @@ document.addEventListener("DOMContentLoaded", () => {
     const targetSection = 5;
 
     spinButton.onclick = function () {
-      let randomDuration = 8;
+      let duration = 6;
       let fullSpins = 10;
       let targetRotation =
         fullSpins * 360 + (targetSection - 1) * degreesPerSection;
 
-      roulette.style.transition = `transform ${randomDuration}s cubic-bezier(0.25, 0.1, 0.25, 1)`;
+      roulette.style.transition = `transform ${duration}s cubic-bezier(0.25, 0.1, 0.25, 1)`;
       roulette.style.transform = `rotate(${targetRotation}deg)`;
 
       setTimeout(() => {
         console.log(`Success`);
-      }, randomDuration * 1000);
+        confettiLeft.style.opacity = "1";
+        confettiRight.style.opacity = "1";
+
+        confettiLeft.classList.add("confetti--left__animate");
+        confettiRight.classList.add("confetti--right__animate");
+
+        spinButton.innerText = "ЗАБРАТЬ ВЫПЛАТУ";
+      }, duration * 1050);
     };
   }
 });
