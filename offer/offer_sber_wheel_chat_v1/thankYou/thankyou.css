@@ -149,7 +149,7 @@ h2 {
 .main__section-content-review {
   display: flex;
   flex-direction: column;
-  width: 330px;
+  max-width: 330px;
   padding: 20px;
   height: 156px;
   justify-content: space-between;
