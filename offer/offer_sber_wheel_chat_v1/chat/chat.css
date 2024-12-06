@@ -191,7 +191,7 @@ p {
 .main {
   display: flex;
   flex-direction: column;
-  margin: 80px auto 90px auto;
+  margin: 80px auto 70px auto;
 }
 
 .messages-date {
@@ -376,9 +376,16 @@ button {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 350ms, transform 350ms;
-  padding: 20px;
-  border-radius: 5px;
-  background-color: rgba(217, 225, 255, 0.7);
+  display: flex;
+  width: 330px;
+  box-sizing: border-box;
+  padding: 20px 30px 30px 30px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background: #fff;
+  align-self: center;
 }
 
 .form-container.visible {
@@ -386,10 +393,14 @@ button {
   transform: translateY(0);
 }
 
-.form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.form-heading {
+  color: #393939;
+  text-align: center;
+  font-family: "Fixel Display";
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 125%;
+  margin-bottom: 20px;
 }
 
 .form-field {
@@ -403,18 +414,54 @@ button {
 }
 
 .form-field input {
-  width: 100%;
-  padding: 8px;
-  border: none;
-  border-radius: 4px;
+  width: 290px;
+  display: flex;
+  padding: 10px 15px;
+  align-items: center;
+  border-radius: 10px;
+  border: 0.22px solid #464646;
+  box-sizing: border-box;
+  font-family: "Fixel Display";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 3.955px;
   box-sizing: border-box;
 }
 
 button[type="submit"] {
-  padding: 10px 20px;
+  display: flex;
+  width: 290px;
+  padding: 15px 10px;
+  justify-content: center;
+  align-items: center;
   border: none;
-  border-radius: 40px;
-  background-color: #0038ff;
+  border-radius: 12px;
+  background: var(
+    --1,
+    linear-gradient(82deg, #a3cd39 14.32%, #86c339 28.41%, #21a038 79.26%)
+  );
   color: #fff;
   cursor: pointer;
+  font-family: "Fixel Display";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 3.955px;
+  height: 40px;
+}
+
+.form-rules {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #393939;
+  text-align: center;
+  font-family: "Fixel Display";
+  font-size: 8px;
+  font-weight: 400;
+  line-height: 140%;
+  margin-top: 10px;
+}
+
+.form-policy {
+  text-decoration: underline;
 }

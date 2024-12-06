@@ -333,37 +333,51 @@ document.addEventListener("DOMContentLoaded", () => {
     const formContainer = document.createElement("div");
     formContainer.classList.add("form-container");
 
+    const formHeading = document.createElement("p");
+    formHeading.textContent = "Заполните форму и получите доступ к платформе";
+    formHeading.classList.add("form-heading");
+
+    const formRules = document.createElement("div");
+    formRules.classList.add("form-rules");
+
+    const firstRuleRow = document.createElement("span");
+    firstRuleRow.textContent = "Нажимая “Оправить” вы соглашаетесь c";
+
+    const secondRuleRow = document.createElement("span");
+    secondRuleRow.classList.add("form-policy");
+    secondRuleRow.textContent = "Политикой Конфиденциальности";
+
+    formRules.appendChild(firstRuleRow);
+    formRules.appendChild(secondRuleRow);
+
     const form = document.createElement("form");
     form.classList.add("form");
 
-    function createFormField(labelText, inputType, name) {
+    function createFormField(label, inputType, name) {
       const fieldWrapper = document.createElement("div");
       fieldWrapper.classList.add("form-field");
-
-      const label = document.createElement("label");
-      label.textContent = labelText;
-      label.setAttribute("for", name);
 
       const input = document.createElement("input");
       input.type = inputType;
       input.name = name;
       input.id = name;
       input.required = true;
+      input.placeholder = label;
 
-      fieldWrapper.appendChild(label);
       fieldWrapper.appendChild(input);
 
       return fieldWrapper;
     }
-
+    form.appendChild(formHeading);
     form.appendChild(createFormField("Имя", "text", "firstName"));
     form.appendChild(createFormField("Фамилия", "text", "lastName"));
-    form.appendChild(createFormField("Телефон", "tel", "phone"));
+    form.appendChild(createFormField("+7 (921) 345-67-89", "tel", "phone"));
 
     const submitButton = document.createElement("button");
     submitButton.type = "submit";
     submitButton.textContent = "ОТПРАВИТЬ";
     form.appendChild(submitButton);
+    form.appendChild(formRules);
 
     form.addEventListener("submit", (event) => {
       event.preventDefault();
