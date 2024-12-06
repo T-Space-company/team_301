@@ -409,7 +409,7 @@ document.addEventListener("DOMContentLoaded", () => {
         userData["Телефон"] = formValues.phone;
         form.reset();
         localStorage.setItem("userData", JSON.stringify(userData));
-        window.location.href = "./success.html";
+        window.location.href = "../thankYou/thankyou.html";
       }
     });
     formContainer.appendChild(form);
