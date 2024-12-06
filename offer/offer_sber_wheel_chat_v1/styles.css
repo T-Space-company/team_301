@@ -166,6 +166,7 @@ p {
   margin-bottom: 24px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .main__section-third__container {
