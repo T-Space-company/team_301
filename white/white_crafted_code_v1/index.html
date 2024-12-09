@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crafted Code</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__logo">
+        <img src="./img/icons/logo.svg" alt="Logo" /><span
+          class="header__logo-text"
+          >Crafted Code</span
+        >
+      </div>
+    </header>
+    <main class="main">
+      <section class="main__section main__section--hero">
+        <div class="main__section-hero-wrapper">
+          <div class="main__section-hero-content">
+            <h1 class="main__section-hero-header">
+              Освойте Frontend-разработку с нуля и получите востребованную
+              профессию за 3 месяца!
+            </h1>
+            <p class="main__section-hero-text">
+              Запишитесь на курс и начните карьеру в IT уже сегодня!
+            </p>
+            <p class="main__section-hero-text--bottom">
+              Уникальная программа обучения с практическими заданиями и
+              поддержкой наставников
+            </p>
+          </div>
+          <div class="main__section-form-content">
+            <form action="" class="main__section-form">
+              <h2 class="main__section-form-header">
+                Пройти бесплатный вводный урок
+              </h2>
+              <div class="main__section-form-fields">
+                <div class="main__section-form-field">
+                  <input
+                    type="text"
+                    name="firstName"
+                    id="firstName"
+                    required=""
+                    placeholder="Имя"
+                  />
+                </div>
+                <div class="main__section-form-field">
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    required=""
+                    placeholder="Email"
+                  />
+                </div>
+                <div class="main__section-form-field">
+                  <input
+                    type="tel"
+                    name="phone"
+                    id="phone"
+                    required=""
+                    placeholder="+7 902 284-22-79"
+                  />
+                </div>
+              </div>
+              <button type="submit" class="main__section-form-button">
+                Отправить заявку <img src="./img/icons/arrow.svg" alt="arrow" />
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="main__section main__section--features">
+        <h2 class="main__section-features-header">
+          Почему стоит выбрать этот курс?
+        </h2>
+        <div class="main__section-features-list">
+          <div class="main__section-features-item">
+            <img
+              src="./img/icons/time.svg"
+              alt="time"
+              width="70px"
+              height="70px"
+            />
+            <span>Доступ к курсу навсегда</span>
+            <p>
+              Пересматривайте уроки, обновляйте свои знания и совершенствуйте
+              навыки тогда, когда вам это нужно — доступ остается с вами
+              навсегда!
+            </p>
+          </div>
+          <div class="main__section-features-item">
+            <img
+              src="./img/icons/certificate.svg"
+              alt="certificate"
+              width="70px"
+              height="70px"
+            />
+            <span>Сертификат по окончании курса</span>
+            <p>
+              Этот документ станет отличным дополнением к вашему резюме и
+              поможет выделиться среди других кандидатов при трудоустройстве!
+            </p>
+          </div>
+          <div class="main__section-features-item">
+            <img
+              src="./img/icons/laptop.svg"
+              alt="laptop"
+              width="70px"
+              height="70px"
+            />
+            <span>Поддержка наставников</span>
+            <p>
+              Поддержка опытных профессионалов сделает ваше обучение комфортным
+              и максимально результативным!
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="main__section main__section--program">
+        <h3 class="main__section-program-heading">Чему вы научитесь?</h3>
+        <div class="main__section-program-wrapper">
+          <div class="main__section-program-content">
+            <div class="main__section-program-text">
+              <h3>
+                Наша программа поможет вам освоить все ключевые навыки
+                frontend-разработчика
+              </h3>
+              <p>
+                Уже в процессе обучения вы будете создавать полноценные проекты,
+                которые войдут в ваше портфолио. Курс охватывает все этапы
+                разработки: от создания структуры страницы до сложных
+                интерактивных элементов
+              </p>
+            </div>
+            <ul class="main__section-program-list">
+              <li class="main__section-program-item">
+                Unit 1 - Основы HTML и CSS: создание адаптивных сайтов
+              </li>
+              <li class="main__section-program-item">
+                Unit 2 - JavaScript с нуля: работа с интерактивными элементами
+              </li>
+              <li class="main__section-program-item">
+                Unit 3 - Работа с популярными фреймворками: React или Vue.js
+              </li>
+              <li class="main__section-program-item">
+                Unit 4 - Инструменты разработчика: Git, Webpack, Node.js
+              </li>
+              <li class="main__section-program-item">
+                Unit 5 - Создание собственных проектов для портфолио
+              </li>
+            </ul>
+          </div>
+          <div class="main__section-program-img-wrapper">
+            <img
+              src="./img/program.png"
+              alt="Program"
+              width="398px"
+              height="597px"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="main__section main__section--about">
+        <img src="./img/backseat-beard-car-businessman.jpg" alt="man" />
+        <div class="main__section-about-text">
+          <span class="main__section-about-text-greeting"
+            >Познакомьтесь с нашим амбасадором:</span
+          >
+          <span class="main__section-about-text-name">Андрей Михайлов</span>
+          <p class="main__section-about-text-about">
+            Профессионал с 10-летним опытом разработки веб-приложений. Андрей
+            помогал создавать продукты для мировых брендов и знает, как
+            построить успешную карьеру в IT. На этом курсе он делится своим
+            опытом, секретами и лучшими практиками, которые помогут вам стать
+            востребованным специалистом
+          </p>
+          <p class="main__section-about-text-about-bottom">
+            "Этот курс - идеальная стартовая площадка для тех, кто хочет освоить
+            Frontend-разработку и добиться успеха." — Андрей Михайлов
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <div class="footer__content--left">
+          <div class="footer__left">
+            <div class="footer__logo">
+              <img src="./img/icons/logo.svg" alt="Logo" /><span
+                class="header__logo-text"
+                >Crafted Code</span
+              >
+            </div>
+            <a href="tel:+88003015688">8-800 301 56 88</a>
+            <a href="tel:+79585770417">+7 958 577 04 17</a>
+            <a href="mailto:info@skillfactory.ru">info@skillfactory.ru</a>
+          </div>
+          <div class="footer__right">
+            <span class="footer__right-heading">Наши курсы</span>
+            <ul class="footer__right-list">
+              <li class="footer__right-item">
+                <img src="./img/icons/arrows.svg" alt="arrows" />Дизайн
+              </li>
+              <li class="footer__right-item">
+                <img
+                  src="./img/icons/arrows.svg"
+                  alt="arrows"
+                />Программирование
+              </li>
+              <li class="footer__right-item">
+                <img src="./img/icons/arrows.svg" alt="arrows" />Контакты
+              </li>
+              <li class="footer__right-item">
+                <img src="./img/icons/arrows.svg" alt="arrows" />Курсы для
+                старта
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__content--right">
+          <div class="footer__content-partners-wrapper">
+            <span class="footer__content-partners">Банки партнеры</span>
+            <ul class="footer__content-partners-list">
+              <li class="footer__content-partners-item">
+                Тинькофф. Лицензия ЦБ РФ №2673 от 24.03.15
+              </li>
+              <li class="footer__content-partners-item">
+                ОТП банк. Лицензия ЦБ РФ №2766 от 27.11.14
+              </li>
+              <li class="footer__content-partners-item">
+                Сбербанк. Лицензия ЦБ РФ №1481 от 11.05.15
+              </li>
+              <li class="footer__content-partners-item">
+                МТС Банк. Лицензия ЦБ РФ №2268 от 17.12.14
+              </li>
+            </ul>
+          </div>
+          <div class="footer__content-additional">
+            <ul class="footer__content-additional-list">
+              <li class="footer__content-additional-item">ООО «СКИЛФЭКТОРИ»</li>
+              <li class="footer__content-additional-item">
+                ОГРН 1197746648813
+              </li>
+              <li class="footer__content-additional-item">
+                ИНН 9702009530 119049
+              </li>
+              <li class="footer__content-additional-item">
+                город Москва, вн. тер. г. Муниципальный
+              </li>
+              <li class="footer__content-additional-item">
+                строение 20, этаж 3, комната 21
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
