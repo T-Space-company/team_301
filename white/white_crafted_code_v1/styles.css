@@ -138,7 +138,7 @@ ol {
   box-sizing: border-box;
 }
 
-.main__section-form-field > input:user-invalid {
+.error {
   border: 1px solid rgba(255, 0, 0, 0.585);
 }
 
