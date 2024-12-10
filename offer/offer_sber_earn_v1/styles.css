@@ -1,0 +1,600 @@
+@font-face {
+  font-family: "Liberation Sans";
+  src: url("./fonts/LiberationSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Liberation Sans";
+  src: url("./fonts/LiberationSans-Bold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mont";
+  src: url("./fonts/mont_extralightdemo.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Mont";
+  src: url("./fonts/mont_heavydemo.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cyntho Next";
+  src: url("./fonts/CynthoNextMedium.otf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  background: url(./img/bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.accent {
+  color: #42b000;
+}
+
+.heading {
+  font-size: 32px;
+  letter-spacing: -0.192px;
+}
+
+.header {
+  height: 80px;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0px -1px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo-text {
+  color: #3c3c3c;
+  font-family: Poppins;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.main__section {
+  padding: 0 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.main__section--hero {
+  margin-top: 50px;
+}
+
+.main__section-hero-heading {
+  color: #292929;
+  text-align: center;
+  font-family: "Liberation Sans", sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  max-width: 990px;
+  margin-bottom: 50px;
+}
+
+.main__section-hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1240px;
+}
+
+.main__section-hero-video {
+  width: 380px;
+  height: 675px;
+}
+
+.main__section-hero-video > video {
+  width: 380px;
+  height: 675px;
+  border-radius: 15px;
+}
+
+.main__section-form {
+  display: flex;
+  width: 500px;
+  height: 675px;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+  background: rgba(100, 157, 81, 0.36);
+  box-sizing: border-box;
+}
+
+.main__section-form-content {
+  padding: 0px 30px 30px 30px;
+  margin-top: 24px;
+  width: 85%;
+}
+
+.main__section-form-header {
+  display: flex;
+  height: 85px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(270deg, #629c51 0%, #7ead70 100%);
+  color: #fff;
+  text-align: center;
+  font-family: "Liberation Sans";
+  font-size: 32px;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+  font-weight: 700;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+.timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.timer__digits {
+  display: flex;
+  align-items: center;
+}
+
+.timer > span {
+  color: #fff;
+  text-align: center;
+  font-family: "Liberation Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 35px;
+}
+
+.timer__digit {
+  display: flex;
+  width: 38px;
+  height: 38px;
+  justify-content: center;
+  align-items: flex-end;
+  border-radius: 12px;
+  background: var(--Background-Paper, #292929);
+  color: #fff;
+  text-align: center;
+  font-family: Mont;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 35px;
+}
+
+.timer__separator {
+  color: #fff;
+  text-align: center;
+  font-family: Mont;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 35px;
+}
+
+.main__section-form-fields {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 35px;
+}
+
+.main__section-form-field {
+  width: 100%;
+}
+
+.main__section-form-field > input {
+  display: flex;
+  height: 60px;
+  width: 100%;
+  padding: 15px;
+  align-items: center;
+  border: none;
+  border-radius: 15px;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.main__section-form-field > input::placeholder {
+  color: #7f7f7f;
+  font-family: "Liberation Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.main__section-form-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.main__section-form-input > label {
+  color: #fff;
+  font-family: "Liberation Sans";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.main__section-form-button {
+  margin-top: 35px;
+  display: flex;
+  height: 60px;
+  width: 100%;
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(89deg, #629b4f 5.63%, #00afd5 139.88%);
+  color: #fff;
+  font-family: Roboto;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.main__section--features {
+  margin-top: 74.5px;
+  margin-bottom: 50px;
+}
+
+.main__section-features-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1240px;
+}
+
+.main__section-features-heading {
+  max-width: 900px;
+  color: #535353;
+  text-align: center;
+  font-family: "Liberation Sans";
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 130%;
+  text-transform: uppercase;
+}
+
+.main__section-features-items {
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 100%;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.main__section-features-item {
+  width: 280px;
+  height: 400px;
+  box-sizing: border-box;
+  display: flex;
+  padding: 45px 20px 30px 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.main__section-features-item > p {
+  color: #333;
+  font-family: "Liberation Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: -0.144px;
+}
+
+.main__section-profit {
+  display: flex;
+  max-width: 1240px;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 100px 50px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 25px;
+  background: #fff;
+  gap: 30px;
+}
+
+.main__section-profit-left {
+  max-width: 677px;
+}
+
+.main__section-profit-left > h3 {
+  color: #353535;
+  font-family: "Liberation Sans";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+.main__section-profit-inputs {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.main__section-profit-input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.main__section-profit-input > label {
+  color: #404040;
+  font-family: "Liberation Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.main__section-profit-input > span {
+  color: #404040;
+  font-family: "Liberation Sans";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+#sum {
+  display: flex;
+  width: 100%;
+  max-width: 555px;
+  padding: 20px;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid #c0c0c0;
+  background: #fff;
+  box-sizing: border-box;
+  color: #404040;
+
+  font-family: "Liberation Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+#time {
+  display: flex;
+  width: 554px;
+  padding: 20px;
+  align-items: center;
+  background-image: url(./img/icons/arrow.svg);
+  background-position: right 20px center;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  appearance: none;
+  border-radius: 5px;
+  border: 1px solid #c0c0c0;
+  background-color: #fff;
+  color: #404040;
+  font-family: "Liberation Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.main__section-profit-right {
+  max-width: 415px;
+  width: 100%;
+  height: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main__section-profit-info {
+  display: flex;
+  flex-direction: column;
+  max-width: 415px;
+  width: 100%;
+  height: 170px;
+  padding: 15px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  border: 1px solid #c0c0c0;
+  box-sizing: border-box;
+  background: #eff2f5;
+}
+
+.main__section-profit-info > span:first-child {
+  color: #333;
+  text-align: center;
+  font-family: "Liberation Sans";
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.main__section-profit-sum {
+  color: #404040;
+  font-family: "Liberation Sans";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.main__section-profit-right > button {
+  display: flex;
+  height: 68px;
+  padding: 15px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 25px;
+  border: 1px solid #c0c0c0;
+  background: linear-gradient(260deg, #7cab6e 8.81%, #21a038 100%);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+  color: #fff;
+  text-align: center;
+  font-family: "Liberation Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.main__section--reviews {
+  gap: 30px;
+  max-width: 1240px;
+  margin-bottom: 50px;
+}
+
+.main__section--reviews > h3 {
+  color: #353535;
+  font-family: "Liberation Sans";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+.main__section-reviews-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.main__section-review {
+  display: flex;
+  padding: 30px;
+  max-width: 610px;
+  box-sizing: border-box;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border-radius: 10px 10px 0px 10px;
+  border: 1px solid #c0c0c0;
+  background: #fff;
+}
+
+.main__section-review-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.main__section-review-info > span {
+  color: #333;
+  font-family: "Liberation Sans";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.main__section-review-info > p {
+  color: #333;
+  font-family: "Liberation Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.footer {
+  display: flex;
+  height: 121px;
+  padding: 0px 89px;
+  justify-content: space-between;
+  align-items: center;
+  background: #171a1e;
+}
+
+.footer__menu {
+  max-width: 445px;
+}
+
+.footer__menu-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px 50px;
+}
+
+.footer__menu-item {
+  color: #fff;
+  font-family: "Cyntho Next";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.footer__info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer__address {
+  color: #878b90;
+  font-family: Arial;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: 1.4px;
+}
+
+.footer__socials {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
