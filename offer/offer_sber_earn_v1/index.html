@@ -30,22 +30,22 @@
             <video src="./video/-5959-4b4a-a3c1-c12dc754fc29.mov"></video>
           </div>
           <div class="main__section-hero-form">
-            <form action="" class="main__section-form">
-              <h2 class="main__section-form-header">
-                Заполняйте форму и примите участие
-              </h2>
+            <form action="" class="main__section-form" id="main__form">
+              <div class="main__section-form-header">
+                <h2>Заполняйте форму и примите участие</h2>
+              </div>
               <div class="main__section-form-content">
                 <div class="timer">
                   <span>Времени осталось</span>
                   <div class="timer__digits">
-                    <div class="timer__digit">2</div>
-                    <div class="timer__digit">3</div>
+                    <div class="timer__digit" id="hour1">0</div>
+                    <div class="timer__digit" id="hour2">3</div>
                     <div class="timer__separator">:</div>
-                    <div class="timer__digit">5</div>
-                    <div class="timer__digit">4</div>
+                    <div class="timer__digit" id="minute1">5</div>
+                    <div class="timer__digit" id="minute2">1</div>
                     <div class="timer__separator">:</div>
-                    <div class="timer__digit">3</div>
-                    <div class="timer__digit">7</div>
+                    <div class="timer__digit" id="second1">3</div>
+                    <div class="timer__digit" id="second2">7</div>
                   </div>
                 </div>
                 <div class="main__section-form-fields">
@@ -98,11 +98,11 @@
         </div>
       </section>
       <section class="main__section main__section--features">
+        <h2 class="main__section-features-heading">
+          Стань частью команды инвесторов! Минимальные вложения, максимальный
+          доход
+        </h2>
         <div class="main__section-features-wrapper">
-          <h2 class="main__section-features-heading">
-            Стань частью команды инвесторов! Минимальные вложения, максимальный
-            доход
-          </h2>
           <div class="main__section-features-items">
             <div class="main__section-features-item">
               <p>
@@ -127,41 +127,47 @@
             </div>
             <div class="main__section-features-item">
               <p><span class="heading">Простота:</span> Минимальные вложения</p>
-              <img src="./img/last.png" alt="Simple" />
+              <img src="./img/simple.png" alt="Simple" id="simple" />
             </div>
           </div>
-        </div>
-        <div class="main__section-profit">
-          <div class="main__section-profit-left">
-            <h3>Рассчитайте вашу прибыль</h3>
-            <div class="main__section-profit-inputs">
-              <div class="main__section-profit-input">
-                <label for="sum">Сумма вклада</label>
-                <input
-                  type="number"
-                  id="sum"
-                  name="sum"
-                  min="10000"
-                  value="18560"
-                />
-                <span>от 10 000 ₽</span>
-              </div>
-              <div class="main__section-profit-input">
-                <label for="time">Срок вклада</label>
-                <select name="time" id="time">
-                  <option value="7">7 месяцев</option>
-                </select>
-              </div>
-            </div>
+          <div class="main__section-features-subheading">
+            <h2>
+              <span>Стань частью команды инвесторов!</span> Минимальные
+              вложения, максимальный доход
+            </h2>
           </div>
-          <div class="main__section-profit-right">
-            <!-- <div class="main__section-profit-wrapper"> -->
-            <div class="main__section-profit-info">
-              <span>Ваш доход:</span>
-              <span class="main__section-profit-sum">18 560 ₽</span>
+          <div class="main__section-profit">
+            <div class="main__section-profit-left">
+              <h3>Рассчитайте вашу прибыль</h3>
+              <div class="main__section-profit-inputs">
+                <div class="main__section-profit-input">
+                  <label for="sum">Сумма вклада, ₽</label>
+                  <input
+                    type="number"
+                    id="sum"
+                    name="sum"
+                    min="10000"
+                    value="18560"
+                  />
+                  <span>от 10 000 ₽</span>
+                </div>
+                <div class="main__section-profit-input">
+                  <label for="time">Срок вклада</label>
+                  <select name="time" id="time">
+                    <option value="7">7 месяцев</option>
+                  </select>
+                </div>
+              </div>
             </div>
-            <!-- </div> -->
-            <button type="button">Получить консультацию</button>
+            <div class="main__section-profit-right">
+              <div class="main__section-profit-info">
+                <span>Ваш доход:</span>
+                <span class="main__section-profit-sum">18 560 ₽</span>
+              </div>
+              <button type="button" class="main__section-profit-button">
+                <a href="#main__form">Получить консультацию</a>
+              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -218,6 +224,9 @@
       </section>
     </main>
     <footer class="footer">
+      <div class="footer__logo-top">
+        <img src="./img/icons/logo.svg" alt="logo" />
+      </div>
       <div class="footer__menu">
         <ul class="footer__menu-list">
           <li class="footer__menu-item">Ваша безопасность</li>
@@ -243,4 +252,5 @@
       </div>
     </footer>
   </body>
+  <script type="module" src="./main.js"></script>
 </html>
