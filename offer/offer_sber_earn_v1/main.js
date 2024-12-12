@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
     { img: "./img/Pic-6.png", city: "Москвы" },
     { img: "./img/Pic-7.png", city: "Сочи" },
     { img: "./img/Pic-8.png", city: "Ростова-на-Дону" },
+    { img: "./img/Pic-9.png", city: "Санкт-Петербурга" },
   ];
 
   function formValidate(event) {
