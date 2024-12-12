@@ -55,6 +55,11 @@ body {
   background-repeat: no-repeat;
 }
 
+main {
+  overflow: hidden;
+  position: relative;
+}
+
 .accent {
   color: #42b000;
 }
@@ -137,7 +142,7 @@ body {
   display: flex;
   max-width: 500px;
   width: 100%;
-  height: auto;
+  height: 674px;
   flex-direction: column;
   align-items: center;
   border-radius: 15px;
@@ -386,6 +391,10 @@ input#country {
 
 .main__section-profit-left {
   max-width: 677px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .main__section-profit-left > h3 {
@@ -509,7 +518,7 @@ input#country {
   font-weight: 700;
 }
 
-.main__section-profit-right > button {
+.main__section-profit-button {
   display: flex;
   height: 68px;
   padding: 15px 20px;
@@ -520,9 +529,6 @@ input#country {
   border: 1px solid #c0c0c0;
   background: linear-gradient(260deg, #7cab6e 8.81%, #21a038 100%);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
-
-.main__section-profit-right > button > a {
   color: #fff;
   text-align: center;
   font-family: "Liberation Sans";
@@ -531,11 +537,7 @@ input#country {
   font-weight: 700;
   line-height: normal;
   text-decoration: none;
-  height: 68px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  box-sizing: border-box;
 }
 
 .main__section--reviews {
@@ -572,6 +574,10 @@ input#country {
   border-radius: 10px 10px 0px 10px;
   border: 1px solid #c0c0c0;
   background: #fff;
+}
+
+.main__section-review > img {
+  max-width: 195px;
 }
 
 .main__section-review-info {
@@ -622,11 +628,15 @@ input#country {
 }
 
 .footer__menu-item {
-  color: #fff;
   font-family: "Cyntho Next";
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
+}
+
+.footer__menu-item > a {
+  color: #fff;
+  text-decoration: none;
 }
 
 .footer__info {
@@ -649,6 +659,39 @@ input#country {
   display: flex;
   flex-direction: row;
   gap: 50px;
+}
+
+.notification {
+  display: inline-flex;
+  padding: 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border-radius: 10px 0px 0px 10px;
+  border: 9px solid #2fa241;
+  box-sizing: border-box;
+  background: #fff;
+  position: fixed;
+  top: 20px;
+  right: 0;
+  transform: translatex(100%);
+  transition: transform 250ms ease-in-out;
+  z-index: 100;
+}
+
+.notification-avatar {
+  width: 95px;
+  height: 95px;
+}
+
+.notification-text {
+  color: #333;
+  font-family: "Liberation Sans";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  max-width: 360px;
 }
 
 @media (max-width: 1430px) {
@@ -710,6 +753,14 @@ input#country {
   #time {
     max-width: 450px;
   }
+  .notification-avatar {
+    width: 85px;
+    height: 85px;
+  }
+
+  .notification-text {
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 991px) {
@@ -746,6 +797,21 @@ input#country {
   .footer__address {
     font-size: 11px;
   }
+
+  .notification {
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .notification-avatar {
+    width: 75px;
+    height: 75px;
+  }
+
+  .notification-text {
+    font-size: 18px;
+    max-width: 250px;
+  }
 }
 
 @media (max-width: 887px) {
@@ -766,6 +832,9 @@ input#country {
   .main__section-profit-right {
     height: 275px;
   }
+  .main__section-form {
+    max-width: 380px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -785,8 +854,9 @@ input#country {
   }
 
   .main__section-form {
-    width: 335px;
-    /* height: 452px; */
+    max-width: 335px;
+    min-width: 310px;
+    width: 100%;
     height: auto;
   }
   .main__section-form-header {
@@ -868,7 +938,9 @@ input#country {
     height: auto;
   }
   .main__section-hero-video > video {
-    width: 335px;
+    max-width: 335px;
+    min-width: 310px;
+    width: 100%;
     height: auto;
   }
 
@@ -892,6 +964,7 @@ input#country {
   .main__section-review > img {
     width: 239px;
     height: 239px;
+    max-width: none;
   }
 
   .main__section-review:last-child {
@@ -984,7 +1057,7 @@ input#country {
     height: 36px;
     font-size: 16px;
     padding: 0 20px;
-
+    width: 100%;
     max-width: 335px;
   }
 
@@ -993,6 +1066,7 @@ input#country {
     font-size: 16px;
     padding: 0 20px;
     max-width: 335px;
+    width: 100%;
   }
 
   .main__section-profit-info > span:first-child {
@@ -1026,9 +1100,17 @@ input#country {
 
   .main__section-profit-inputs {
     gap: 22px;
+    max-width: 335px;
+    width: 100%;
+  }
+  .main__section-profit-input {
+    max-width: 335px;
+    width: 100%;
   }
   .main__section-profit-input > span {
     font-size: 16px;
+    width: 100%;
+    max-width: 335px;
   }
   .footer {
     flex-direction: column;
@@ -1051,5 +1133,20 @@ input#country {
   }
   .footer__info {
     align-items: center;
+  }
+  .notification {
+    gap: 10px;
+    border-radius: 5px 0px 0px 5px;
+    border: 4px solid #2fa241;
+  }
+
+  .notification-avatar {
+    width: 50px;
+    height: 50px;
+  }
+
+  .notification-text {
+    font-size: 14px;
+    max-width: 180px;
   }
 }
