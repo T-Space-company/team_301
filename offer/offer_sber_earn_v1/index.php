@@ -1,3 +1,9 @@
+<?php
+if (!isset($rawClick) && !isset($click)) {
+  die();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,6 +22,107 @@
       href="./img/icons/favicon.svg"
       type="image/x-icon"
     />
+    <script src="jquery-3.6.1.min.js"></script>
+
+    <script>
+      window.bgdataLayer = window.bgdataLayer || [];
+
+      function bge() {
+          bgdataLayer.push(arguments);
+      }
+      bge('init', '<?= $_GET['bge'] ?>');
+    </script>
+    <script
+      async
+      src="https://api.imotech.video/ad/events.js?pixel_id=<?= $_GET['bge'] ?>"
+    ></script>
+
+    <script type="application/javascript">
+      function getCookie(name) {
+        var v = document.cookie.match("(^|;) ?" + name + "=([^;]*)(;|$)");
+        return v ? v[2] : null;
+      }
+
+      function setCookie(name, value, days) {
+        var d = new Date();
+        d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days);
+        document.cookie =
+          name + "=" + value + ";path=/;expires=" + d.toGMTString();
+      }
+
+      function getSubId() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!"{subid}".match("{")) {
+          return "{subid}";
+        }
+        var clientSubid =
+          '<?php echo isset($client) ? $client->getSubid() : "" ?>';
+        if (!clientSubid.match(">")) {
+          return clientSubid;
+        }
+        if (params.get("_subid")) {
+          return params.get("_subid");
+        }
+        if (params.get("subid")) {
+          return params.get("subid");
+        }
+        if (getCookie("subid")) {
+          return getCookie("subid");
+        }
+      }
+
+      function getToken() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!"{token}".match("{")) {
+          return "{token}";
+        }
+        var clientToken =
+          '<?php echo isset($client) ? $client->getToken() : "" ?>';
+        if (!clientToken.match(">")) {
+          return clientToken;
+        }
+        if (params.get("_token")) {
+          return params.get("_token");
+        }
+        if (params.get("token")) {
+          return params.get("token");
+        }
+        if (getCookie("token")) {
+          return getCookie("token");
+        }
+        return null;
+      }
+
+      function getPixel() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!"{pixel}".match("{")) {
+          return "{pixel}";
+        }
+        if (params.get("pixel")) {
+          return params.get("pixel");
+        }
+
+        if (getCookie("pixel")) {
+          return getCookie("pixel");
+        }
+
+        return null;
+      }
+
+      if (typeof URLSearchParams === "function") {
+        document.addEventListener("DOMContentLoaded", function (event) {
+          var params = new URLSearchParams(document.location.search.substr(1));
+          var subid = getSubId();
+          var token = getToken();
+          var pixel = getPixel();
+
+          params.set("_token", token);
+          setCookie("pixel", pixel);
+          setCookie("token", token);
+          setCookie("subid", subid);
+        });
+      }
+    </script>
   </head>
   <body>
     <header class="header">
@@ -40,9 +147,15 @@
             ></video>
           </div>
           <div class="main__section-hero-form">
-            <form action="" class="main__section-form" id="form">
-              <div class="main__section-form-header">
-                <h2>Заполняйте форму и примите участие</h2>
+            <form
+              class="form _main-form contact-form freg thin rounded"
+              id="main-form"
+              method="post"
+            >
+              <div class="text-block-6 main__section-form-header">
+                <h2 style="text-align: center">
+                  Заполняйте форму и примите участие
+                </h2>
               </div>
               <div class="main__section-form-content">
                 <div class="timer">
@@ -58,51 +171,12 @@
                     <div class="timer__digit" id="second2">7</div>
                   </div>
                 </div>
-                <div class="main__section-form-fields">
-                  <div class="main__section-form-field">
-                    <input
-                      type="text"
-                      name="firstName"
-                      id="firstName"
-                      required=""
-                      placeholder="Имя"
-                    />
-                  </div>
-                  <div class="main__section-form-field">
-                    <input
-                      type="text"
-                      name="lastName"
-                      id="lastName"
-                      required=""
-                      placeholder="Фамилия"
-                    />
-                  </div>
-                  <div class="main__section-form-field">
-                    <input
-                      type="tel"
-                      name="phone"
-                      id="phone"
-                      required=""
-                      placeholder="Номер телефона"
-                    />
-                  </div>
-                </div>
-                <div class="main__section-form-inputs">
-                  <div class="main__section-form-input">
-                    <input type="checkbox" name="age" id="age" />
-                    <label for="age">Я старше 21 года</label>
-                  </div>
-                  <div class="main__section-form-input">
-                    <input type="checkbox" name="country" id="country" />
-                    <label for="country"
-                      >Я гражданин Российской Федерации</label
-                    >
-                  </div>
-                </div>
-                <button type="submit" class="main__section-form-button">
-                  Оставить заявку
-                </button>
               </div>
+              <input type="hidden" id="utm_medium" value='<?= $_GET['utm_medium'] ?>'>
+              <input type="hidden" id="campaing_id" value='<?= $_GET['campaing_id'] ?>'>
+              <input type="hidden" id="slug" value='<?= $_GET['slug'] ?>'>
+              <input type="hidden" id="bge" value='<?= $_GET['bge'] ?>'> <input
+              type="hidden" id="source" value='<?= $_GET['source'] ?>'>
             </form>
           </div>
         </div>
@@ -275,6 +349,36 @@
         </div>
       </div>
     </footer>
+
+    <script src="loadAssets.js?v=3444371"></script>
+
+    <script>
+      window.onload = function () {
+        var thx = localStorage.getItem("thanks");
+        if (thx && thx === "true") {
+          const fileThx = "thanks-page.php";
+          window.location.href = `${fileThx}${window.location.search}`;
+        }
+      };
+
+      window.onpageshow = function () {
+        var thx = localStorage.getItem("thanks");
+        if (thx && thx === "true") {
+          const fileThx = "thanks-page.php";
+          window.location.href = `${fileThx}${window.location.search}`;
+        }
+      };
+    </script>
+
+    <script type="application/javascript">
+      function getSubId() {
+        if (!"{subid}".match("{")) {
+          localStorage.setItem("subid", "{subid}");
+          return "{subid}";
+        }
+      }
+      getSubId();
+    </script>
   </body>
   <script type="module" src="./main.js"></script>
 </html>

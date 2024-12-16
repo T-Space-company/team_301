@@ -8,13 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const second1 = document.getElementById("second1");
   const second2 = document.getElementById("second2");
 
-  const form = document.getElementById("form");
-  const firstName = document.getElementById("firstName");
-  const lastName = document.getElementById("lastName");
-  const phone = document.getElementById("phone");
-  const age = document.getElementById("age");
-  const resident = document.getElementById("country");
-
   const sumInput = document.getElementById("sum");
   const profitOutput = document.getElementById("profit");
   const timeSelect = document.getElementById("time");
@@ -31,51 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
     { img: "./img/Pic-8.png", city: "Ростова-на-Дону" },
     { img: "./img/Pic-9.png", city: "Санкт-Петербурга" },
   ];
-
-  function formValidate(event) {
-    let isValid = true;
-    let errorMessage = "";
-
-    const cyrillicRegex = /^[\u0400-\u04FF]+$/;
-
-    if (!firstName.value.trim()) {
-      isValid = false;
-      errorMessage += "Имя обязательно к заполнению.\n";
-    } else if (!cyrillicRegex.test(firstName.value.trim())) {
-      isValid = false;
-      errorMessage += "Используйте киррилицу для ввода.\n";
-    }
-
-    if (!lastName.value.trim()) {
-      isValid = false;
-      errorMessage += "Фамилия обязательна к заполнению.\n";
-    } else if (!cyrillicRegex.test(lastName.value.trim())) {
-      isValid = false;
-      errorMessage += "Используйте киррилицу для ввода.\n";
-    }
-
-    if (!phone.value.trim()) {
-      isValid = false;
-      errorMessage += "Номер телефона обязателен к заполнению.\n";
-    } else if (!/^\+?[0-9\s\-]{7,15}$/.test(phone.value.trim())) {
-      isValid = false;
-      errorMessage += "Формат телефона неверный. Пример: +7 987 654 32 10\n";
-    }
-    if (!age.checked) {
-      isValid = false;
-      errorMessage +=
-        "Для участия в программе вам должно быть больше 21 года.\n";
-    }
-    if (!resident.checked) {
-      isValid = false;
-      errorMessage +=
-        "Для участия в программе вы должны быть гражданином РФ.\n";
-    }
-    if (!isValid) {
-      event.preventDefault();
-      alert(errorMessage);
-    }
-  }
 
   function updateTimer() {
     let hours = parseInt(hour1.textContent + hour2.textContent);
@@ -190,8 +138,6 @@ document.addEventListener("DOMContentLoaded", function () {
   timeSelect.addEventListener("change", updateProfit);
 
   const timerInterval = setInterval(updateTimer, 1000);
-
-  form.addEventListener("submit", formValidate);
 
   sumInput.addEventListener("blur", () => {
     const min = parseInt(sumInput.min, 10);

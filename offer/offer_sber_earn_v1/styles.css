@@ -138,7 +138,7 @@ main {
   border-radius: 15px;
 }
 
-.main__section-form {
+.main__section-hero-form {
   display: flex;
   max-width: 500px;
   width: 100%;
@@ -150,8 +150,14 @@ main {
   box-sizing: border-box;
 }
 
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0 30px;
+}
+
 .main__section-form-content {
-  padding: 0px 30px 30px 30px;
+  padding: 0 30px;
   margin-top: 24px;
   width: 85%;
 }
@@ -227,19 +233,42 @@ main {
   line-height: 35px;
 }
 
+#main-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
 .main__section-form-fields {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 24px;
   margin-bottom: 35px;
+  max-width: 440px;
+  width: 100%;
+  box-sizing: content-box;
 }
 
 .main__section-form-field {
   width: 100%;
+  padding: 0 30px;
+  box-sizing: content-box;
 }
 
 .main__section-form-field > input {
+  display: flex;
+  height: 60px;
+  width: 100%;
+  padding: 15px;
+  align-items: center;
+  border: none;
+  border-radius: 15px;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.main__section-form-phone-input {
   display: flex;
   height: 60px;
   width: 100%;
@@ -261,7 +290,7 @@ main {
 }
 
 .main__section-form-inputs {
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   gap: 35px;
 }
@@ -274,6 +303,8 @@ input#age {
 input#country {
   min-width: 25px;
   min-height: 25px;
+  max-width: 25px;
+  max-height: 25px;
 }
 
 .main__section-form-input {
@@ -290,21 +321,28 @@ input#country {
   line-height: 100%;
 }
 
+.form-button-wrapper {
+  margin-top: 35px;
+  margin-bottom: 25px !important;
+}
+
 .main__section-form-button {
   margin-top: 35px;
   display: flex;
-  height: 60px;
+  height: 60px !;
   width: 100%;
   padding: 15px;
   justify-content: center;
   align-items: center;
   border: none;
   border-radius: 20px;
-  background: linear-gradient(89deg, #629b4f 5.63%, #00afd5 139.88%);
+  background: linear-gradient(89deg, #629b4f 5.63%, #00afd5 139.88%) !important;
+}
+
+.main__section-form-button > p {
   color: #fff;
-  font-family: Roboto;
-  font-size: 32px;
-  font-weight: 400;
+  font-family: Roboto !important;
+  font-weight: 400 !important;
   line-height: 100%;
 }
 
@@ -738,6 +776,7 @@ input#country {
   }
   .main__section-form-input > label {
     font-size: 18px;
+    text-align: left;
   }
 
   .main__section-form-field > input::placeholder {
@@ -745,7 +784,7 @@ input#country {
   }
 
   .main__section-form-button {
-    font-size: 28px;
+    font-size: 28px !important;
   }
   #sum {
     max-width: 450px;
@@ -853,7 +892,7 @@ input#country {
     padding: 20px;
   }
 
-  .main__section-form {
+  .main__section-hero-form {
     max-width: 335px;
     min-width: 310px;
     width: 100%;
@@ -901,6 +940,8 @@ input#country {
   input#country {
     min-width: 17px;
     min-height: 17px;
+    max-width: 17px;
+    max-height: 17px;
   }
   .main__section-form-input > label {
     font-size: 16px;
