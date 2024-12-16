@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   const chat = document.querySelector(".main-messages");
+  const form = document.querySelector(".form-wrapper");
+  const formContainer = document.querySelector(".form-container");
+  const avatar = document.querySelector(".message-avatar");
 
   const userData = {
     Имя: "",
@@ -88,25 +91,31 @@ document.addEventListener("DOMContentLoaded", () => {
     }, delay);
   }
 
-  firstMessages.forEach((message, i) => {
-    createMessage(message, i * 800);
-  });
+  setTimeout(() => {
+    firstMessages.forEach((message, i) => {
+      createMessage(message, i * 800);
+    });
+  }, 400);
 
   const answers = document.createElement("div");
   answers.classList.add("answers");
 
   const buttonYes = document.createElement("button");
   const buttonNo = document.createElement("button");
+  buttonYes.classList.add("button");
+  buttonNo.classList.add("button");
   buttonYes.textContent = "Да";
   buttonNo.textContent = "Нет";
 
-  answers.appendChild(buttonYes);
-  answers.appendChild(buttonNo);
-  chat.appendChild(answers);
+  setTimeout(() => {
+    answers.appendChild(buttonYes);
+    answers.appendChild(buttonNo);
+    chat.appendChild(answers);
+  }, 800);
 
   setTimeout(() => {
     answers.classList.add("visible");
-  }, 2400);
+  }, 2800);
 
   const handleClickYes = () => {
     onButtonClick("Да");
@@ -172,18 +181,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const button0 = document.createElement("button");
     button0.textContent = "до 18";
+    button0.classList.add("button");
     button0.addEventListener("click", handleButton0Click);
 
     const button1 = document.createElement("button");
     button1.textContent = "18-24";
+    button1.classList.add("button");
     button1.addEventListener("click", handleButton1Click);
 
     const button2 = document.createElement("button");
     button2.textContent = "25-40";
+    button2.classList.add("button");
     button2.addEventListener("click", handleButton2Click);
 
     const button3 = document.createElement("button");
     button3.textContent = "55+";
+    button3.classList.add("button");
     button3.addEventListener("click", handleButton3Click);
 
     answers.appendChild(button0);
@@ -261,18 +274,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const buttonFirst = document.createElement("button");
     buttonFirst.textContent = "Куплю недвижимость/автомобиль";
+    buttonFirst.classList.add("button");
     buttonFirst.addEventListener("click", handleEarnFirst);
 
     const buttonSecond = document.createElement("button");
     buttonSecond.textContent = "Куплю то, что давно хотел";
+    buttonSecond.classList.add("button");
     buttonSecond.addEventListener("click", handleEarnSecond);
 
     const buttonThird = document.createElement("button");
     buttonThird.textContent = "Буду инвестировать";
+    buttonThird.classList.add("button");
     buttonThird.addEventListener("click", handleEarnThird);
 
     const buttonFourth = document.createElement("button");
     buttonFourth.textContent = "Еще не решил";
+    buttonFourth.classList.add("button");
     buttonFourth.addEventListener("click", handleEarnFourth);
 
     answers.appendChild(buttonFirst);
@@ -337,93 +354,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function createForm() {
-    const formWrapper = document.createElement("div");
-    formWrapper.classList.add("form-wrapper");
-
-    const formContainer = document.createElement("div");
-    formContainer.classList.add("form-container");
-
-    const avatar = document.createElement("img");
-    avatar.setAttribute("src", "./img/icons/avatar.svg");
-    avatar.classList.add("message-avatar");
-
-    const formHeading = document.createElement("img");
-    formHeading.setAttribute("src", "./img/chat_logo.svg");
-    formHeading.classList.add("form-heading");
-
-    const form = document.createElement("form");
-    form.classList.add("form");
-
-    function createFormField(label, inputType, name) {
-      const fieldWrapper = document.createElement("div");
-      fieldWrapper.classList.add("form-field");
-
-      const input = document.createElement("input");
-      input.type = inputType;
-      input.name = name;
-      input.id = name;
-      input.required = true;
-      input.placeholder = label;
-
-      fieldWrapper.appendChild(input);
-
-      return fieldWrapper;
-    }
-    form.appendChild(formHeading);
-    form.appendChild(createFormField("Имя", "text", "firstName"));
-    form.appendChild(createFormField("Фамилия", "text", "lastName"));
-    form.appendChild(createFormField("+7 (921) 345-67-89", "tel", "phone"));
-
-    const submitButton = document.createElement("button");
-    submitButton.type = "submit";
-    submitButton.textContent = "Завершить регистрацию";
-    form.appendChild(submitButton);
-    // form.appendChild(formRules);
-
-    form.addEventListener("submit", (event) => {
-      event.preventDefault();
-      const formData = new FormData(form);
-      const formValues = {};
-      formData.forEach((value, key) => {
-        formValues[key] = value;
-      });
-
-      const validationErrors = [];
-      if (!formValues.firstName) {
-        validationErrors.push("Имя не может быть пустым");
-      }
-      if (!formValues.lastName) {
-        validationErrors.push("Фамилия не может быть пустой");
-      }
-      if (!formValues.phone || !/^\+?\d{10,15}$/.test(formValues.phone)) {
-        validationErrors.push(
-          "Неверный формат телефона. Пример: +7(921)3456789"
-        );
-      }
-
-      if (validationErrors.length > 0) {
-        alert("Ошибки валидации:\n" + validationErrors.join("\n"));
-      } else {
-        alert("Форма успешно отправлена!");
-        userData["Имя"] = formValues.firstName;
-        userData["Фамилия"] = formValues.lastName;
-        userData["Телефон"] = formValues.phone;
-        form.reset();
-        localStorage.setItem("userData", JSON.stringify(userData));
-        window.location.href = "../thankYou/thankyou.html";
-      }
-    });
-    formContainer.appendChild(form);
-
-    formWrapper.appendChild(avatar);
-    formWrapper.appendChild(formContainer);
-    chat.appendChild(formWrapper);
-
     setTimeout(() => {
+      form.classList.add("visible");
       avatar.classList.add("visible");
-
       formContainer.classList.add("visible");
-    }, 2400);
+      scrollDown(500);
+    }, 2200);
   }
 
   function scrollDown(height) {
