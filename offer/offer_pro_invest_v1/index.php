@@ -683,7 +683,7 @@ include_once dirname(__FILE__) . '/config.php';
 
         <div class="chat">
 
-          <div style="width: 100%; margin-top: 90px;">
+          <div class="chart-wrapper" style="width: 100%; display: flex; align-items: center; justify-content: center;">
             <canvas id="chart"></canvas>
           </div>
           <p style="margin-top: 20px; font-family:'OktaNeue'; ">
@@ -827,6 +827,18 @@ include_once dirname(__FILE__) . '/config.php';
 
 .confetti--right {
   right: -300px;
+}
+}
+@media (min-width: 1390px) {
+  .confetti {
+    width: 500px;
+  }
+.confetti--left {
+  left: -500px;
+}
+
+.confetti--right {
+  right: -500px;
 }
 }
 

@@ -288,6 +288,7 @@ img {
 
 .chat {
   padding: 100px 0 20px;
+  margin: 15px;
 }
 
 .chat__time {
@@ -395,6 +396,25 @@ img {
     box-shadow: 0px 5px 7px 1px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
     padding: 10px;
+  }
+}
+
+@media (max-width: 640px) {
+  .chart-wrapper {
+    margin-top: 100px;
+  }
+}
+
+@media (min-width: 800px) {
+  #chart {
+    width: 600px !important;
+    height: 600px !important;
+  }
+}
+
+@media (min-width: 641px) {
+  .chart-wrapper {
+    margin-top: 0;
   }
 }
 
