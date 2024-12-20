@@ -156,7 +156,7 @@ body {
   transition: 0.1s;
   background: #14171f;
   border-top: 49px solid #191c24;
-  padding: 20px 0 26px;
+  /* padding: 20px 0 26px; */
   height: 100%;
 }
 

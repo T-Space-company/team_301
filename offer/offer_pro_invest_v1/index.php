@@ -535,6 +535,7 @@ include_once dirname(__FILE__) . '/config.php';
             height: 100%;
             background: rgba(0, 0, 0, 0.5);
             z-index: 999;
+            overflow: hidden;
         }
         .popup button {
             margin-top: 10px;
@@ -710,11 +711,32 @@ include_once dirname(__FILE__) . '/config.php';
             </button>
             
             
-            <div class="overlay"></div>
+            <div class="overlay">
+              <div class="container-confetti">
+            <img
+              src="./images/confettiL.png"
+              alt="Confetti Left"
+              class="confetti confetti--left"
+            />
+            <img
+              src="./images/confettiR.png"
+              alt="Confetti Right"
+              class="confetti confetti--right"
+            />
+          </div>
+            </div>
             <div class="popup">
                 <!--<h2 style="text-align: center;">Ответьте на вопросы</h2>-->
-            
-                <div id="step1" class="step">
+
+                <div id="step0" class="step">
+                    <p style="text-align: center;font-size: 24px;margin-bottom: 12px;">Поздравляем! <br> Ваша сделка закрылась в плюс!</p>
+                    
+                    <div style="display: flex;justify-content: center;">
+                      <button class="btn" style="width: 80%;background-color: #51a351;height:40px;font-size: 18px;" onclick="goToStep1()">Продолжить</button>
+                    </div>
+                </div>
+
+                <div id="step1" class="step" style="display: none;">
                     <p style="text-align: center;font-size: 24px;margin-bottom: 12px;">Вам есть 18 лет?</p>
                     
                     <div style="display: flex;justify-content: space-between;">
@@ -746,6 +768,69 @@ include_once dirname(__FILE__) . '/config.php';
           </div>
         </div>
       </div>
+      <style>
+        @keyframes confetti-left-animation {
+  0% {
+    transform: scale(0.5) translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(50px);
+  }
+}
+
+@keyframes confetti-right-animation {
+  0% {
+    transform: scale(0.5) translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(50px);
+  }
+}
+
+.container-confetti {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.confetti {
+  opacity: 0;
+  position: absolute;
+  width: 400px;
+  transform: scale(0.5) translateY(-50px);
+}
+
+.confetti--left__animate {
+  animation: confetti-left-animation 1s ease-out forwards;
+}
+.confetti--right__animate {
+  animation: confetti-right-animation 1s ease-out forwards;
+}
+.confetti--left {
+  left: -400px;
+}
+
+.confetti--right {
+  right: -400px;
+}
+@media (max-width: 600px) {
+.confetti--left {
+  left: -300px;
+}
+
+.confetti--right {
+  right: -300px;
+}
+}
+
+        </style>
       <style>
         .form_message.error.inactive {
           display: none;
@@ -875,12 +960,14 @@ include_once dirname(__FILE__) . '/config.php';
         this.innerText = "Рассчитываем прибыль...";
 
         // Запуск расчета прибыли
-        window.setInterval(updateProfit, 1200);
+        window.setInterval(updateProfit, 1000);
 
         // Через 5 секунд показываем квиз
-        window.setTimeout(showQuiz, 5000);
+        window.setTimeout(showQuiz, 5500);
     });
 
+    const confettiLeft = document.querySelector(".confetti--left");
+  const confettiRight = document.querySelector(".confetti--right");
 
     document.getElementById("main-form").addEventListener("click", function () {
         window.setTimeout(openLeadForm, 500);
@@ -892,18 +979,30 @@ include_once dirname(__FILE__) . '/config.php';
     var citizenAnswer = null;
 
     // Функция для показа квиза
-    function showQuiz() {
-        document.querySelector('.popup').style.display = 'block'; // Показываем попап квиза
-        document.querySelector('.overlay').style.display = 'block';
-        document.getElementById('step1').style.display = 'block'; // Показываем первый шаг квиза
-    }
+function showQuiz() {
+    document.querySelector('.popup').style.display = 'block'; // Показываем попап квиза
+    document.querySelector('.overlay').style.display = 'block';
+    document.getElementById('step0').style.display = 'block'; // Показываем нулевой шаг квиза
+    confettiLeft.style.opacity = "1";
+    confettiRight.style.opacity = "1";
+    confettiLeft.classList.add("confetti--left__animate");
+    confettiRight.classList.add("confetti--right__animate");
+}
 
-    // Функция для перехода ко второму шагу
-    function goToStep2(value) {
-        ageAnswer = value; // Сохраняем ответ
-        document.getElementById('step1').style.display = 'none';
-        document.getElementById('step2').style.display = 'block'; // Показываем второй шаг
-    }
+// Функция для перехода к первому шагу
+function goToStep1() {
+  confettiLeft.style.display = "none";
+    confettiRight.style.display = "none";
+    document.getElementById('step0').style.display = 'none'; // Скрываем нулевой шаг
+    document.getElementById('step1').style.display = 'block'; // Показываем первый шаг
+}
+
+// Функция для перехода ко второму шагу
+function goToStep2(value) {
+    ageAnswer = value; // Сохраняем ответ
+    document.getElementById('step1').style.display = 'none'; // Скрываем первый шаг
+    document.getElementById('step2').style.display = 'block'; // Показываем второй шаг
+}
 
     // Функция для отправки квиза и проверки ответов
     function submitQuiz(value) {
