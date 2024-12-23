@@ -11,6 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const confettiLeft = document.querySelector(".confetti--left");
   const confettiRight = document.querySelector(".confetti--right");
 
+  const modal = document.getElementById("modalOverlay");
+
   function addTiltAnimation() {
     rouletteContent.classList.add("content__tilt");
   }
@@ -41,9 +43,13 @@ document.addEventListener("DOMContentLoaded", () => {
         confettiRight.classList.add("confetti--right__animate");
 
         spinButton.removeEventListener("click", handleSpinClick);
-        spinButton.innerText = "ЗАБРАТЬ ВЫИГРЫШ";
-        // spinButton.addEventListener("click", goChat);
+        spinButton.innerText = "Забрать выигрыш";
+        spinButton.addEventListener("click", openForm);
       }, duration * 1050);
+    }
+
+    function openForm() {
+      modal.style.display = "flex";
     }
   }
 });
