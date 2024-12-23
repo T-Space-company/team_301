@@ -22,13 +22,14 @@ body {
 .main {
   display: flex;
   width: 100%;
-  justify-content: space-around;
+  justify-content: space-evenly;
   gap: 20px;
 }
 
 .main__heading {
   display: flex;
   align-items: flex-end;
+  max-width: 770px;
 }
 
 .heading__primary {
@@ -53,7 +54,6 @@ body {
 .main__container-wrapper {
   display: flex;
   flex-direction: column;
-  max-width: 455px;
   width: 100%;
   gap: 20px;
   align-items: center;
@@ -79,11 +79,16 @@ body {
 .main__section-secondary__container-img-content {
   z-index: 1;
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
-  width: 429px;
-  height: 429px;
+  width: 384px;
+  height: 384px;
   transform: translate(-50%, -50%);
+}
+
+.main__section-secondary__container-img-wheel {
+  width: 384px;
+  height: 384px;
 }
 
 .main__section-secondary__container-img {
@@ -102,6 +107,7 @@ body {
 
 .main__section-third__container {
   width: 100%;
+  max-width: 455px;
 }
 
 .main__section-third__container-button {
@@ -117,6 +123,7 @@ body {
   font-weight: 800;
   line-height: 100%;
   width: 100%;
+  cursor: pointer;
 }
 
 .confetti {
@@ -134,17 +141,21 @@ body {
 }
 
 .confetti--left {
-  left: -200px;
+  left: -300px;
 }
 
 .confetti--right {
-  right: -200px;
+  right: -300px;
 }
 
 .main__mobile-img {
   width: 100%;
   display: none;
   justify-content: center;
+}
+
+.content__tilt {
+  animation: tiltAnimation 3s ease-in-out infinite;
 }
 
 @media (max-width: 960px) {
@@ -195,7 +206,12 @@ body {
     font-size: 50px;
   }
   .main__container-wrapper {
-    max-width: 300px;
+    position: absolute;
+    bottom: 20px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
   }
   .main__section-secondary__container-img-border {
     width: 283px;
@@ -205,9 +221,17 @@ body {
     width: 282px;
     height: 282px;
   }
+  .main__section-secondary__container-img-wheel {
+    width: 282px;
+    height: 282px;
+  }
   .main__section-secondary__container {
     height: 300px;
   }
+  .main__section-third__container {
+    max-width: 300px;
+  }
+
   .main__section-third__container-button {
     border-radius: 20px;
     box-shadow: 2.7px 6px 3px 0px rgba(0, 0, 0, 0.25),
@@ -215,5 +239,42 @@ body {
     padding: 16px 38px;
     font-size: 20px;
     line-height: 100%;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+@keyframes tiltAnimation {
+  0% {
+    transform: translate(-50%, -50%) rotate(1deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(-1deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(1deg);
+  }
+}
+
+@keyframes confetti-left-animation {
+  0% {
+    transform: scale(0.5) translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(50px);
+  }
+}
+
+@keyframes confetti-right-animation {
+  0% {
+    transform: scale(0.5) translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(50px);
   }
 }
