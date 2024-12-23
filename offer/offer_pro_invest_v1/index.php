@@ -19,7 +19,7 @@ include_once dirname(__FILE__) . '/config.php';
 
     <meta content="IE=edge" http-equiv="X-UA-Compatible" />
     <meta name="facebook-domain-verification" content="" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="Cache-Control" content="no-cache" />
     <title>Meta</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
@@ -540,6 +540,16 @@ include_once dirname(__FILE__) . '/config.php';
         .popup button {
             margin-top: 10px;
         }
+        .step {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+  }
+
+  .step.active {
+    opacity: 1;
+    visibility: visible;
+  }
     </style>
 
     <script src="jquery-3.6.1.min.js"></script>
@@ -705,7 +715,7 @@ include_once dirname(__FILE__) . '/config.php';
               <span id="profit">0 </span> Рублей
             </p>
           </div>
-          <div id="lead">
+          <div id="lead" style="display: flex; flex-direction: column;align-items: center;">
             <button id="button_next" class="submit_btn" style="margin-top: 8px">
               Попробовать
             </button>
@@ -765,6 +775,11 @@ include_once dirname(__FILE__) . '/config.php';
               method="post"
               style="margin-top: 5px;"
             ></form>
+            <div class="form-video">
+              <h2 class="video-title" style="display: none; font-size: 18px">Также рекомендуем ознакомиться с видео</h2>
+              <iframe class="embedly-embed" src="https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fplayer.vimeo.com%2Fvideo%2F891391828%3Fapp_id%3D122963&dntp=1&display_name=Vimeo&url=https%3A%2F%2Fvimeo.com%2F891391828&image=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F1764041730-cda251526f4113ba5f113d0ce1aa9787ef3500a9eb5cc247c0e54e774a213bbe-d_1280&key=96f1f04c5f4143bcb0f2e68c87d65feb&type=text%2Fhtml&schema=vimeo" width="375" height="200" scrolling="no" allowfullscreen="" title="Sber Invest" style="display: none">
+                </iframe>
+            </div>
           </div>
         </div>
       </div>
@@ -792,6 +807,17 @@ include_once dirname(__FILE__) . '/config.php';
   }
 }
 
+.embedly-embed {
+  margin-top: 20px;
+}
+
+.form-video {
+display: flex; 
+flex-direction: column;
+align-items: center;
+margin-top: 30px;
+}
+
 .container-confetti {
   position: absolute;
   left: 50%;
@@ -804,7 +830,7 @@ include_once dirname(__FILE__) . '/config.php';
   opacity: 0;
   position: absolute;
   width: 400px;
-  transform: scale(0.5) translateY(-50px);
+  transform: scale(0.5) translateY(-50px), opacity 0.5s ease;
 }
 
 .confetti--left__animate {
@@ -995,6 +1021,9 @@ function showQuiz() {
     document.querySelector('.popup').style.display = 'block'; // Показываем попап квиза
     document.querySelector('.overlay').style.display = 'block';
     document.getElementById('step0').style.display = 'block'; // Показываем нулевой шаг квиза
+    const step0 = document.getElementById('step0');
+    step0.style.display = 'block'; // Show step 0
+    step0.classList.add('active'); 
     confettiLeft.style.opacity = "1";
     confettiRight.style.opacity = "1";
     confettiLeft.classList.add("confetti--left__animate");
@@ -1005,15 +1034,21 @@ function showQuiz() {
 function goToStep1() {
   confettiLeft.style.display = "none";
     confettiRight.style.display = "none";
-    document.getElementById('step0').style.display = 'none'; // Скрываем нулевой шаг
-    document.getElementById('step1').style.display = 'block'; // Показываем первый шаг
+
+    // document.getElementById('step0').style.display = 'none'; // Скрываем нулевой шаг
+    // document.getElementById('step1').style.display = 'block'; // Показываем первый шаг
+
+    toggleSteps('step0', 'step1');
 }
 
 // Функция для перехода ко второму шагу
 function goToStep2(value) {
     ageAnswer = value; // Сохраняем ответ
-    document.getElementById('step1').style.display = 'none'; // Скрываем первый шаг
-    document.getElementById('step2').style.display = 'block'; // Показываем второй шаг
+
+    // document.getElementById('step1').style.display = 'none'; // Скрываем первый шаг
+    // document.getElementById('step2').style.display = 'block'; // Показываем второй шаг
+
+     toggleSteps('step1', 'step2');
 }
 
     // Функция для отправки квиза и проверки ответов
@@ -1037,15 +1072,34 @@ function goToStep2(value) {
         document.querySelector('.overlay').style.display = 'none';
     }
 
+// Функция для плавного перехода между вопросами 
+function toggleSteps(currentStepId, nextStepId) {
+    const currentStep = document.getElementById(currentStepId);
+    const nextStep = document.getElementById(nextStepId);
+
+    currentStep.classList.remove('active'); 
+    setTimeout(() => {
+        currentStep.style.display = 'none'; 
+        nextStep.style.display = 'block'; 
+        setTimeout(() => {
+            nextStep.classList.add('active');
+        }, 10); 
+    }, 500); 
+}
+
     // Пример структуры квиза
     function openLeadForm() {
         var formElement = document.getElementById('fm');
+        const videoTitle = document.querySelector(".video-title");
+        const video = document.querySelector('.embedly-embed');
         
         document.getElementById("button_next").style.display = "none";
-        formElement.style.visibility = 'visible';
+        formElement.style.display = 'block';
         formElement.style.borderTop = "1px solid #cdcdcd";
         formElement.style.paddingTop = '10px';
 
+        videoTitle.style.display = "block";
+        video.style.display = "block";
 
         // Прокрутка к форме
         formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
