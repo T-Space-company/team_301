@@ -287,8 +287,8 @@ img {
 }
 
 .chat {
-  padding: 100px 0 20px;
-  margin: 15px;
+  padding: 100px 0 0 0;
+  margin: 15px 15px 10px 15px;
 }
 
 .chat__time {
@@ -312,7 +312,7 @@ img {
 
 @media (max-width: 1390px) {
   .body {
-    width: 1180px;
+    max-width: 1180px;
   }
 
   .content,
@@ -356,7 +356,7 @@ img {
   }
 
   .chat {
-    padding: 130px 0px 20px;
+    padding: 130px 0px 0px 0px;
   }
 }
 
@@ -1006,7 +1006,7 @@ button {
   }
 
   .chat {
-    padding: 20px 0px;
+    padding: 20px 0px 0px 0px;
   }
 }
 

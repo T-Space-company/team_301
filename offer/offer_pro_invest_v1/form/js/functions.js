@@ -109,7 +109,7 @@ export function renderFormRegistrations(allFormClass) {
   const forms = document.querySelectorAll(`.${allFormClass}`);
   const htmlFormHtml = `
 
-  <div id="fm" class="chat-content-item manager " style="visibility: hidden;">
+  <div id="fm" class="chat-content-item manager " style="display:none;">
 
   <div class="chat-content-desc">
       <p class="text" style="margin-bottom: 30px;">Ваш доход за <b>30 секунд работы платформы </b>мог составить <b><span id="profit2">0 </span> Рублей, </b>если бы Вы были участником платформы "ПроИнвест".</p>
