@@ -26,22 +26,22 @@
             <li class="header_menu-list" style="display: none">
               <a href="">Сервисы</a>
             </li>
-            <li class="header_menu-list"><a href="">Тарифы</a></li>
-            <li class="header_menu-list"><a href="">О нас</a></li>
+            <li class="header_menu-list"><a href="https://freedom24.com/anketa/price">Тарифы</a></li>
+            <li class="header_menu-list"><a href="https://freedom24.com/about">О нас</a></li>
           </ul>
         </div>
         <div class="header__right">
           <div class="header__buttons">
-            <button type="button" class="button--secondary">
+            <!-- <button type="button" class="button--secondary">
               <a href="">Войти</a>
-            </button>
+            </button> -->
             <button type="button" class="button--primary">
               <a href="#form">Открыть счет</a>
             </button>
           </div>
           <button class="header_button-lang">
             <a href="./thankyou-page_eng.php">РУС</a></button>
-          <img src="./img/icons/menu.svg" alt="Menu" />
+          <!-- <img src="./img/icons/menu.svg" alt="Menu" /> -->
         </div>
       </div>
     </header>
@@ -69,24 +69,24 @@
             <div class="footer__top--left__block">
               <span>ПРОДУКТЫ</span>
               <ul>
-                <li><a href="">D-счет</a></li>
-                <li><a href="">Акции и ETFs</a></li>
-                <li><a href="">Инвестидеи</a></li>
-                <li><a href="">Партнерская программа</a></li>
-                <li><a href="">White label</a></li>
-                <li><a href="">Freedom Academy</a></li>
+                <li><a href="#form">D-счет</a></li>
+                <li><a href="#form">Акции и ETFs</a></li>
+                <li><a href="#form">Инвестидеи</a></li>
+                <li><a href="#form">Партнерская программа</a></li>
+                <li><a href="#form">White label</a></li>
+                <li><a href="#form">Freedom Academy</a></li>
               </ul>
             </div>
             <div class="footer__top--left__block">
               <span>КОМПАНИЯ</span>
-              <ul>
-                <li><a href="">О нас</a></li>
-                <li><a href="">Социальные проекты</a></li>
-                <li><a href="">Тарифы</a></li>
-                <li><a href="">FAQ</a></li>
-                <li><a href="">Что нового</a></li>
-                <li><a href="">API / FIX подключение</a></li>
-                <li><a href="">Предложить улучшения</a></li>
+             <ul>
+                <li><a href="https://freedom24.com/about">О нас</a></li>
+                <li><a href="https://freedom24.com/esg">Социальные проекты</a></li>
+                <li><a href="https://freedom24.com/anketa/price">Тарифы</a></li>
+                <li><a href="https://freedom24.com/faq">FAQ</a></li>
+                <li><a href="https://freedom24.com/news">Что нового</a></li>
+                <li><a href="https://freedom24.com/api-fix-connection">API / FIX подключение</a></li>
+                <li><a href="https://freedom24.com/feedback">Предложить улучшения</a></li>
               </ul>
             </div>
             <div class="footer__top--left__block">
@@ -239,10 +239,10 @@
             <span>© 2024 Freedom24 - Все права защищены</span>
           </div>
           <div class="footer__bottom_socials">
-            <img src="./img/icons/youtube.svg" alt="Youtube" />
-            <img src="./img/icons/instagram.svg" alt="Instagram" />
-            <img src="./img/icons/facebook.svg" alt="Facebook" />
-            <img src="./img/icons/linkedin.svg" alt="Linkedin" />
+            <a href="https://www.youtube.com/@freedom24eu"><img src="./img/icons/youtube.svg" alt="Youtube" /></a>
+            <a href="https://www.instagram.com/freedom24eu"><img src="./img/icons/instagram.svg" alt="Instagram" /></a>
+            <a href="https://www.facebook.com/freedom24eu"><img src="./img/icons/facebook.svg" alt="Facebook" /></a>
+            <a href="https://www.linkedin.com/company/freedom24eu"><img src="./img/icons/linkedin.svg" alt="Linkedin" /></a>
           </div>
         </div>
       </div>

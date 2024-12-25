@@ -127,21 +127,21 @@
             <li class="header_menu-list" style="display: none">
               <a href="">Services</a>
             </li>
-            <li class="header_menu-list"><a href="">Service Plans</a></li>
-            <li class="header_menu-list"><a href="">About Us</a></li>
+            <li class="header_menu-list"><a href="https://freedom24.com/anketa/price">Service Plans</a></li>
+            <li class="header_menu-list"><a href="https://freedom24.com/about">About Us</a></li>
           </ul>
         </div>
         <div class="header__right">
           <div class="header__buttons">
-            <button type="button" class="button--secondary">
+            <!-- <button type="button" class="button--secondary">
               <a href="">Sign In</a>
-            </button>
+            </button> -->
             <button type="button" class="button--primary">
               <a href="#form">Sign Up</a>
             </button>
           </div>
           <button class="header_button-lang"><a href="./index.php">ENG</a></button>
-          <img src="./img/icons/menu.svg" alt="Menu" />
+          <!-- <img src="./img/icons/menu.svg" alt="Menu" /> -->
         </div>
       </div>
     </header>
@@ -200,7 +200,7 @@ transfer without commission or by instant bank card transfer.
 major US, European and Asian stock exchanges.
             </p>
             <button class="button--primary third__btn">
-              <a href="">More</a>
+              <a href="#form">More</a>
             </button>
           </div>
           <div class="third__image">
@@ -228,7 +228,7 @@ major US, European and Asian stock exchanges.
 value.
             </p>
             <button class="button--primary fourth__btn">
-              <a href="">More</a>
+              <a href="#form">More</a>
             </button>
           </div>
         </div>
@@ -246,7 +246,7 @@ annum on your cash balance. Higher than any
 other alternative on the market*.
             </p>
             <button class="button--primary fifth__btn" style="width: 300px">
-              <a href="" >Learn more about the D-account</a>
+              <a href="#form" >Learn more about the D-account</a>
             </button>
             <span>*based on own research</span>
           </div>
@@ -323,24 +323,24 @@ experts.
             <div class="footer__top--left__block">
               <span>PRODUCTS</span>
               <ul>
-                <li><a href="">D-Account</a></li>
-                <li><a href="">Stocks and ETFs</a></li>
-                <li><a href="">Investideas</a></li>
-                <li><a href="">Affiliate program</a></li>
-                <li><a href="">White label</a></li>
-                <li><a href="">Freedom Academy</a></li>
+                <li><a href="#form">D-Account</a></li>
+                <li><a href="#form">Stocks and ETFs</a></li>
+                <li><a href="#form">Investideas</a></li>
+                <li><a href="#form">Affiliate program</a></li>
+                <li><a href="#form">White label</a></li>
+                <li><a href="#form">Freedom Academy</a></li>
               </ul>
             </div>
             <div class="footer__top--left__block">
               <span>COMPANY SNAPSHOT</span>
               <ul>
-                <li><a href="">About Us</a></li>
-                <li><a href="">Social projects</a></li>
-                <li><a href="">Service Plans</a></li>
-                <li><a href="">FAQ</a></li>
-                <li><a href="">What’s new</a></li>
-                <li><a href="">API / FIX connection</a></li>
-                <li><a href="">Suggest an improvement</a></li>
+                <li><a href="https://freedom24.com/about">О нас</a></li>
+                <li><a href="https://freedom24.com/esg">Социальные проекты</a></li>
+                <li><a href="https://freedom24.com/anketa/price">Тарифы</a></li>
+                <li><a href="https://freedom24.com/faq">FAQ</a></li>
+                <li><a href="https://freedom24.com/news">Что нового</a></li>
+                <li><a href="https://freedom24.com/api-fix-connection">API / FIX подключение</a></li>
+                <li><a href="https://freedom24.com/feedback">Предложить улучшения</a></li>
               </ul>
             </div>
             <div class="footer__top--left__block">
@@ -464,10 +464,10 @@ Regulation S promulgated under the U.S. Securities Act of 1933).
             <span>© 2024 Freedom24 - All rights reserved</span>
           </div>
           <div class="footer__bottom_socials">
-            <img src="./img/icons/youtube.svg" alt="Youtube" />
-            <img src="./img/icons/instagram.svg" alt="Instagram" />
-            <img src="./img/icons/facebook.svg" alt="Facebook" />
-            <img src="./img/icons/linkedin.svg" alt="Linkedin" />
+            <a href="https://www.youtube.com/@freedom24eu"><img src="./img/icons/youtube.svg" alt="Youtube" /></a>
+            <a href="https://www.instagram.com/freedom24eu"><img src="./img/icons/instagram.svg" alt="Instagram" /></a>
+            <a href="https://www.facebook.com/freedom24eu"><img src="./img/icons/facebook.svg" alt="Facebook" /></a>
+            <a href="https://www.linkedin.com/company/freedom24eu"><img src="./img/icons/linkedin.svg" alt="Linkedin" /></a>
           </div>
         </div>
       </div>
