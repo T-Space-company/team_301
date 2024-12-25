@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -119,7 +119,7 @@
       <div class="header__content">
         <div class="header__left">
           <div class="header_logo">
-            <a href="./index.html"
+            <a href="./index.php"
               ><img src="./img/logo.svg" alt="Freedom 24"
             /></a>
           </div>
@@ -137,10 +137,11 @@
               <a href="">Войти</a>
             </button>
             <button type="button" class="button--primary">
-              <a href="">Открыть счет</a>
+              <a href="#form">Открыть счет</a>
             </button>
           </div>
-          <button class="header_button-lang">РУС</button>
+          <button class="header_button-lang">
+            <a href="./index_eng.php">РУС</a></button>
           <img src="./img/icons/menu.svg" alt="Menu" />
         </div>
       </div>
@@ -162,7 +163,7 @@
               <span>Хеджируйте позиции при помощи опционов.</span>
             </div>
             <button class="button--primary hero__btn">
-              <a href="">Открыть счет</a>
+              <a href="#form">Открыть счет</a>
             </button>
             <img
               src="./img/trustpilot.svg"
@@ -281,18 +282,18 @@
               стоп-приказы.
             </p>
             <button class="button--primary sixth__btn">
-              <a href="">Открыть счет</a>
+              <a href="#form">Открыть счет</a>
             </button>
           </div>
         </div>
       </section>
-      <section class="section form__section">
+      <section class="section form__section" id="form">
         <div class="form__section_wrapper">
           <div class="form__section__img">
             <img src="./img/subhero-6.png" alt="Trading account" />
           </div>
           <div class="form__section__content_wrapper">
-            <div class="form__section__content">
+            <div class="form__section__content" >
               <h2>Откройте торговый счет</h2>
               <p>
                 Доступ к основным фондовым биржам в США, Европе и Азии для
