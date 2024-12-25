@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -119,7 +119,7 @@
       <div class="header__content">
         <div class="header__left">
           <div class="header_logo">
-            <a href="./index.html"
+            <a href="./index.php"
               ><img src="./img/logo.svg" alt="Freedom 24"
             /></a>
           </div>
@@ -137,10 +137,11 @@
               <a href="">Войти</a>
             </button>
             <button type="button" class="button--primary">
-              <a href="">Открыть счет</a>
+              <a href="#form">Открыть счет</a>
             </button>
           </div>
-          <button class="header_button-lang">РУС</button>
+          <button class="header_button-lang">
+            <a href="./index_eng.php">РУС</a></button>
           <img src="./img/icons/menu.svg" alt="Menu" />
         </div>
       </div>
@@ -162,7 +163,7 @@
               <span>Хеджируйте позиции при помощи опционов.</span>
             </div>
             <button class="button--primary hero__btn">
-              <a href="">Открыть счет</a>
+              <a href="#form">Открыть счет</a>
             </button>
             <img
               src="./img/trustpilot.svg"
@@ -171,13 +172,17 @@
             />
           </div>
           <div class="hero__right">
-            <img src="./img/hero.png" alt="Cover" class="hero__img" />
+            <img src="./img/hero.png" alt="Cover" class="img-container" />
           </div>
         </div>
       </section>
       <section class="section second">
         <div class="second__wrapper">
-          <img src="./img/subhero.png" alt="Fast & Easy" />
+          <img
+            src="./img/subhero.png"
+            alt="Fast & Easy"
+            class="img-container second__img"
+          />
           <div class="second__text">
             <h2>Быстро и удобно</h2>
             <p>
@@ -201,14 +206,22 @@
             </button>
           </div>
           <div class="third__image">
-            <img src="./img/subhero-2.png" alt="Laptop" />
+            <img
+              src="./img/subhero-2.png"
+              alt="Laptop"
+              class="img-container third__img"
+            />
           </div>
         </div>
       </section>
       <section class="section fourth">
         <div class="fourth__wrapper">
-          <div class="fourth__img">
-            <img src="./img/subhero-3.png" alt="Partner" />
+          <div class="fourth__image">
+            <img
+              src="./img/subhero-3.png"
+              alt="Partner"
+              class="img-container fourth__img"
+            />
           </div>
           <div class="fourth__content">
             <h2>Станьте партнером <br />Freedom24</h2>
@@ -239,13 +252,23 @@
             <span>*по данным наших исследований</span>
           </div>
           <div>
-            <img src="./img/subhero-4.png" alt="People" />
+            <img
+              src="./img/subhero-4.png"
+              alt="People"
+              class="img-container fifth__img"
+            />
           </div>
         </div>
       </section>
       <section class="section sixth">
         <div class="sixth__wrapper">
-          <div><img src="./img/subhero-5.png" alt="Phone" /></div>
+          <div>
+            <img
+              src="./img/subhero-5.png"
+              alt="Phone"
+              class="img-container sixth__img"
+            />
+          </div>
           <div class="sixth__content">
             <h2>Удобная торговая платформа</h2>
             <p>
@@ -259,35 +282,37 @@
               стоп-приказы.
             </p>
             <button class="button--primary sixth__btn">
-              <a href="">Открыть счет</a>
+              <a href="#form">Открыть счет</a>
             </button>
           </div>
         </div>
       </section>
-      <section class="section form__section">
+      <section class="section form__section" id="form">
         <div class="form__section_wrapper">
           <div class="form__section__img">
             <img src="./img/subhero-6.png" alt="Trading account" />
           </div>
-          <div class="form__section__content">
-            <h2>Откройте торговый счет</h2>
-            <p>
-              Доступ к основным фондовым биржам в США, Европе и Азии для
-              инвестиций в акции, ETF, облигации и опционы на акции. Отмеченные
-              наградами инвестиционные рекомендации и образовательные курсы,
-              разработанные экспертами фондового рынка.
-            </p>
-            <form
-              class="form _main-form contact-form freg thin rounded"
-              id="main-form"
-              method="post"
-            >
-              <input type="hidden" id="utm_medium" value='<?= $_GET['utm_medium'] ?>'>
-              <input type="hidden" id="campaing_id" value='<?= $_GET['campaing_id'] ?>'>
-              <input type="hidden" id="slug" value='<?= $_GET['slug'] ?>'>
-              <input type="hidden" id="bge" value='<?= $_GET['bge'] ?>'> <input
-              type="hidden" id="source" value='<?= $_GET['source'] ?>'>
-            </form>
+          <div class="form__section__content_wrapper">
+            <div class="form__section__content" >
+              <h2>Откройте торговый счет</h2>
+              <p>
+                Доступ к основным фондовым биржам в США, Европе и Азии для
+                инвестиций в акции, ETF, облигации и опционы на акции.
+                Отмеченные наградами инвестиционные рекомендации и
+                образовательные курсы, разработанные экспертами фондового рынка.
+              </p>
+              <form
+                class="form _main-form contact-form freg thin rounded"
+                id="main-form"
+                method="post"
+              >
+                <input type="hidden" id="utm_medium" value='<?= $_GET['utm_medium'] ?>'>
+                <input type="hidden" id="campaing_id" value='<?= $_GET['campaing_id'] ?>'>
+                <input type="hidden" id="slug" value='<?= $_GET['slug'] ?>'>
+                <input type="hidden" id="bge" value='<?= $_GET['bge'] ?>'>
+                <input type="hidden" id="source" value='<?= $_GET['source'] ?>'>
+              </form>
+            </div>
           </div>
         </div>
       </section>
@@ -359,7 +384,7 @@
         </div>
         <div class="footer__top_rewards">
           <span>НАШИ НАГРАДЫ</span>
-          <div>
+          <div class="rewards">
             <img src="./img/rewards/1.png" alt="Reward" />
             <img src="./img/rewards/2.png" alt="Reward" />
             <img src="./img/rewards/3.png" alt="Reward" />
@@ -443,9 +468,15 @@
           </div>
           <div class="footer__center--right">
             <div class="footer__center_country">
-              <img src="./img/icons/eu.png" alt="EU" />
-              <span>Головной офис Европа</span>
-              <img src="./img/icons/arrow.svg" alt="Arrow" />
+              <div class="footer__center_country--left">
+                <img src="./img/icons/eu.png" alt="EU" />
+                <span>Головной офис Европа</span>
+              </div>
+              <img
+                src="./img/icons/arrow.svg"
+                alt="Arrow"
+                class="footer__center_arrow"
+              />
             </div>
             <div class="footer__center_text">
               <span>ГОЛОВНОЙ ОФИС ЕВРОПА</span>
