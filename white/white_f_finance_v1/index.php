@@ -127,22 +127,22 @@
             <li class="header_menu-list" style="display: none">
               <a href="">Сервисы</a>
             </li>
-            <li class="header_menu-list"><a href="">Тарифы</a></li>
-            <li class="header_menu-list"><a href="">О нас</a></li>
+            <li class="header_menu-list"><a href="https://freedom24.com/anketa/price">Тарифы</a></li>
+            <li class="header_menu-list"><a href="https://freedom24.com/about">О нас</a></li>
           </ul>
         </div>
         <div class="header__right">
           <div class="header__buttons">
-            <button type="button" class="button--secondary">
+            <!-- <button type="button" class="button--secondary">
               <a href="">Войти</a>
-            </button>
+            </button> -->
             <button type="button" class="button--primary">
               <a href="#form">Открыть счет</a>
             </button>
           </div>
           <button class="header_button-lang">
             <a href="./index_eng.php">РУС</a></button>
-          <img src="./img/icons/menu.svg" alt="Menu" />
+          <!-- <img src="./img/icons/menu.svg" alt="Menu" /> -->
         </div>
       </div>
     </header>
@@ -202,7 +202,7 @@
               на крупнейших биржах США, Европы и Азии.
             </p>
             <button class="button--primary third__btn">
-              <a href="">Подробнее</a>
+              <a href="#form">Подробнее</a>
             </button>
           </div>
           <div class="third__image">
@@ -230,7 +230,7 @@
               портфеля.
             </p>
             <button class="button--primary fourth__btn">
-              <a href="">Подробнее</a>
+              <a href="#form">Подробнее</a>
             </button>
           </div>
         </div>
@@ -247,7 +247,7 @@
               денежных средств. Выше любой другой альтернативы на рынке*.
             </p>
             <button class="button--primary fifth__btn">
-              <a href="">Подробнее о D-счете</a>
+              <a href="#form">Подробнее о D-счете</a>
             </button>
             <span>*по данным наших исследований</span>
           </div>
@@ -324,36 +324,36 @@
             <div class="footer__top--left__block">
               <span>ПРОДУКТЫ</span>
               <ul>
-                <li><a href="">D-счет</a></li>
-                <li><a href="">Акции и ETFs</a></li>
-                <li><a href="">Инвестидеи</a></li>
-                <li><a href="">Партнерская программа</a></li>
-                <li><a href="">White label</a></li>
-                <li><a href="">Freedom Academy</a></li>
+                <li><a href="#form">D-счет</a></li>
+                <li><a href="#form">Акции и ETFs</a></li>
+                <li><a href="#form">Инвестидеи</a></li>
+                <li><a href="#form">Партнерская программа</a></li>
+                <li><a href="#form">White label</a></li>
+                <li><a href="#form">Freedom Academy</a></li>
               </ul>
             </div>
             <div class="footer__top--left__block">
               <span>КОМПАНИЯ</span>
               <ul>
-                <li><a href="">О нас</a></li>
-                <li><a href="">Социальные проекты</a></li>
-                <li><a href="">Тарифы</a></li>
-                <li><a href="">FAQ</a></li>
-                <li><a href="">Что нового</a></li>
-                <li><a href="">API / FIX подключение</a></li>
-                <li><a href="">Предложить улучшения</a></li>
+                <li><a href="https://freedom24.com/about">О нас</a></li>
+                <li><a href="https://freedom24.com/esg">Социальные проекты</a></li>
+                <li><a href="https://freedom24.com/anketa/price">Тарифы</a></li>
+                <li><a href="https://freedom24.com/faq">FAQ</a></li>
+                <li><a href="https://freedom24.com/news">Что нового</a></li>
+                <li><a href="https://freedom24.com/api-fix-connection">API / FIX подключение</a></li>
+                <li><a href="https://freedom24.com/feedback">Предложить улучшения</a></li>
               </ul>
             </div>
             <div class="footer__top--left__block">
               <span>ДОКУМЕНТЫ</span>
               <ul>
-                <li><a href="">Лицензии</a></li>
-                <li><a href="">Official data</a></li>
-                <li><a href="">Privacy Policy</a></li>
-                <li><a href="">Privacy settings</a></li>
-                <li><a href="">Data protection notice</a></li>
-                <li><a href="">General Terms of Business</a></li>
-                <li><a href="">Comprehensive list of legal documents</a></li>
+                <li><a href="https://www.cysec.gov.cy/en-GB/entities/investment-firms/cypriot/73116/">Лицензии</a></li>
+                <li><a>Official data</a></li>
+                <li><a href="https://freedom24.com/download/documents/450/Appendix_7_Privacy_Policy_31102024">Privacy Policy</a></li>
+                <li><a>Privacy settings</a></li>
+                <li><a href="https://freedom24.com/download/documents/83/Data_Protection_Notice">Data protection notice</a></li>
+                <li><a href="https://freedom24.com/download/documents/449/General_Terms_of_Business_31102024">General Terms of Business</a></li>
+                <li><a href="https://freedomfinance.eu/documents?_gl=1*7olowt*_gcl_au*NDczMzE1OTY2LjE3MzUwMjg3MzE.*FPAU*NDczMzE1OTY2LjE3MzUwMjg3MzE.*_ga*MTMyODk5NzM1OS4xNzM1MDI4NzMx*_ga_M19QP7JY69*MTczNTEzODYyNS44LjEuMTczNTEzOTUyMS4wLjAuMTEyMDExODc2OQ..*_fplc*c05INUM5amd6aUZwUFcyV1dlOHpRelMyQkROQUhIQUJrQXRvMmc5S0xqdmFwNXVoa04lMkJQbnBTRDFZTUxkSHRWRzZZMSUyQkJUbXROWDRWVDNrQ1hlOGRUS1o4amRsbTNZOHFRJTJGZ3IlMkJTeXJ1OFVxTzE0SHVkRzZBVWJyZ2ZnRWclM0QlM0Q.">Comprehensive list of legal documents</a></li>
               </ul>
             </div>
           </div>
@@ -494,10 +494,10 @@
             <span>© 2024 Freedom24 - Все права защищены</span>
           </div>
           <div class="footer__bottom_socials">
-            <img src="./img/icons/youtube.svg" alt="Youtube" />
-            <img src="./img/icons/instagram.svg" alt="Instagram" />
-            <img src="./img/icons/facebook.svg" alt="Facebook" />
-            <img src="./img/icons/linkedin.svg" alt="Linkedin" />
+            <a href="https://www.youtube.com/@freedom24eu"><img src="./img/icons/youtube.svg" alt="Youtube" /></a>
+            <a href="https://www.instagram.com/freedom24eu"><img src="./img/icons/instagram.svg" alt="Instagram" /></a>
+            <a href="https://www.facebook.com/freedom24eu"><img src="./img/icons/facebook.svg" alt="Facebook" /></a>
+            <a href="https://www.linkedin.com/company/freedom24eu"><img src="./img/icons/linkedin.svg" alt="Linkedin" /></a>
           </div>
         </div>
       </div>
