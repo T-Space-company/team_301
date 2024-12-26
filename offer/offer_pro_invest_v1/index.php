@@ -1122,6 +1122,7 @@ function toggleSteps(currentStepId, nextStepId) {
       }
     </script>
 
+      <script type="module" src="./js/notifications.js"></script>
     <script src="loadAssets.js?v=332119"></script>
     
     <script>
