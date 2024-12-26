@@ -361,11 +361,11 @@
             <div class="footer__top--right__block">
               <span>МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ</span>
               <div>
-                <a href=""
+                <a href="https://play.google.com/store/apps/details?id=com.tradernet.freedom24app"
                   ><img src="./img/googleplay.svg" alt="GooglePlay"
                 /></a>
-                <a href=""><img src="./img/appstore.svg" alt="AppStore" /></a>
-                <a href=""
+                <a href="https://apps.apple.com/us/app/freedom24-by-freedom-finance/id1498916771?mt=8"><img src="./img/appstore.svg" alt="AppStore" /></a>
+                <a href="https://appgallery.huawei.com/app/C103893791"
                   ><img src="./img/appgallery.svg" alt="AppGallery"
                 /></a>
               </div>
