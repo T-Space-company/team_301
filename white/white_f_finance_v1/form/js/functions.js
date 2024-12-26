@@ -1,5 +1,4 @@
 let htmlLang = document.documentElement.lang;
-console.log(htmlLang);
 
 const body = document.querySelector("body");
 
