@@ -29,7 +29,7 @@ jsFiles = [
   "libs/intlTelInput.js",
   "libs/utils.js",
   "libs/jquery.maskedinput.js",
-  "main-form.js?v=2524",
+  "main-form.js?v=25249",
   "libphonenumber-js.min.js",
 ];
 
