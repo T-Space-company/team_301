@@ -19,7 +19,7 @@ export function thenkYouPage(company) {
   const domain = window.location.hostname;
   const papka = "content";
   const nameCompany = getParramUtm("nameCompany");
-  const fileThenk = "thanks-page.php";
+  const fileThenk = "thankyou_page.php";
 
   window.location.href = `${fileThenk}${window.location.search}`;
 }
