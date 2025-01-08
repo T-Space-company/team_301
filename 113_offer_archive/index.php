@@ -82,23 +82,14 @@
         box-sizing: border-box;
     }
 
-    body {
-        background: url(images/bg.png);
-        background-color: #e8e4e0;
-        background-size: cover;
-        background-repeat: repeat;
-    background-position: center top;
-    background-attachment: fixed;
-    }
-
     .main-bg {
-        /* background: url(images/bg.png) no-repeat center center;
+        background: url(images/bg.png) no-repeat center center;
         background-size: cover;
-        height: 100vh; */
+        height: 100vh;
     }
 
     .pattern-bg {
-        /* height: 100vh; */
+        height: 100vh;
     }
 
     .date {
@@ -108,11 +99,12 @@
     }
 
     .main-chat {
-        /* width: 40%; */
+        width: 40%;
         padding: 0 16px;
+        height: 86%;
         overflow-y: scroll;
         padding-bottom: 30px;
-        margin: 70px auto 0 auto ;
+        margin: 0 auto;
     }
 
     .left-chat, .right-chat {
@@ -145,10 +137,8 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        max-width: 380px;
-        width: 100%;
+        width: 80%;
         margin-top: 10px;
-        box-sizing: content-box;
     }
 
     .vertical {
@@ -158,9 +148,6 @@
 
     .form-wrapper {
         padding: 10px 25px;
-        display: flex
-;
-    justify-content: center;
     }
 
     .form {
@@ -169,21 +156,19 @@
         border-radius: 10px;
         border: 1px solid #D4DADD;
         width: 100%;
-        max-width: 450px;
     }
 
     .form h4 {
         text-align: center;
         font-weight: bold;
         margin-bottom: 13px;
-        font-size: 20px;
+        font-size: 16px;
     }
 
     .form input {
         width: 100%;
-        border: 1px solid #eeeded;
+        border: 1px solid #A9A9A9;
         padding: 5px 10px;
-        border-radius: 5px;
     }
 
     .form button {
@@ -201,23 +186,9 @@
         background: #158F2C;
     }
 
-    .left-chat .chat-block {
-        max-width: 380px;
-        width: 100%;
-    }
-
     @media  screen and (max-width: 767px) {
         .main-chat {
             width: 100%;
-        }
-        .left-chat .chat-block {
-            max-width: 330px;
-    width: 100%;
-        }
-        .horizontal, .vertical {
-            max-width: 330px;
-            width: 100%;
-            padding-right: 20px;
         }
     }
 
@@ -305,27 +276,7 @@
         font-style: normal;
         font-weight: 700;
         line-height: normal;
-        
     }
-
-    .answer-btn-0:first-child {
-        margin-right: 8px;
-    }
-
-    .answer-btn-4 {
-        max-width: 330px;
-        width: 100%;
-    }
-
-    .vertical .answer-btn {
-        max-width: 330px;
-        width: 100%;
-    }
-
-    /* .answer-btn-4 {
-        max-width: 210px;
-        width: 100%;
-    } */
 
     .vertical .answer-btn {
         margin-bottom: 6px;
@@ -335,9 +286,9 @@
         padding: 12px 40px;
     }
 
-    /* .horizontal .answer-btn:not(:last-of-type) {
+    .horizontal .answer-btn:not(:last-of-type) {
         margin-right: 6px;
-    } */
+    }
 
     .right-chat {
         display: flex;
@@ -362,7 +313,7 @@
         color: #000;
         padding: 6px 80px 4px 12px;
         position: relative;
-        max-width: 75%;
+        max-width: 84%;
         box-shadow: -1px 1px 1px 0px rgba(0, 0, 0, 0.1);
     }
 
@@ -401,14 +352,9 @@
     }
 
     .header {
-        width: 100%;
-        min-width: 320px;
+        width: 40%;
         margin: 0 auto;
         border-bottom: 1px solid #A4A39E;
-        position: fixed;
-    top: 0;
-    z-index: 10;
-    padding: 8px 20px 8px 20px
     }
 
     .online {
@@ -422,9 +368,6 @@
     @media(max-width: 767px) {
         .header {
             width: 100%;
-        }
-        .chat-name {
-            font-size: 16px;
         }
     }
 </style>
@@ -442,22 +385,22 @@
                 <img src="images/logo.svg" class="pr-2 w-10" alt="">
                 <div class="flex items-start">
                     <div>
-                        <p class="chat-name">
+                        <p>
                             Сбер Инвестиции
                         </p>
                         <p class="online">
                             в сети
                         </p>
                     </div>
-                    <img src="images/verified.svg" class="mt-1 pl-1 chat-arrow" alt="">
+                    <img src="images/verified.svg" class="mt-1 pl-1" alt="">
                 </div>
             </div>
             <div class="w-1/4 flex justify-end items-center">
                 <img src="images/phone.svg" alt="">
             </div>
         </div>
+        <div class="date">Сегодня</div>
         <div class="main-chat">
-            <div class="date">Сегодня</div>
         </div>
     </div>
 </form>
@@ -603,7 +546,6 @@
                 newMessage.querySelector('.left-chat .chat-block').appendChild(timeElement);
 
                 lastMessage.scrollTop = lastMessage.scrollHeight;
-                scrollDown(400)
                 counter++;
             } else {
                 clearInterval(intervalId);
@@ -636,8 +578,6 @@
                 // Вставляем элемент .time внутрь элемента .chat-block
                 newMessage.querySelector('.right-chat .chat-block').appendChild(timeElement);
                 lastMessage.scrollTop = lastMessage.scrollHeight;
-                scrollDown(400)
-
 
                 if (questions[questionCounter] == 'Вы являетесь гражданином Российской Федерации (есть ли у вас Российское гражданство)?' && content == "Нет") {
                     /* $('#plug2').show();*/
@@ -654,7 +594,6 @@
 
                     lastMessage.appendChild(newMessage1);
                     lastMessage.scrollTop = lastMessage.scrollHeight;
-                    scrollDown(400)
                     localStorage.setItem('unsuitable', false);
                     return false;
                 }
@@ -673,7 +612,6 @@
 
                     lastMessage.appendChild(newMessage1);
                     lastMessage.scrollTop = lastMessage.scrollHeight;
-                    scrollDown(400)
                     localStorage.setItem('unsuitable', false);
                     return false;
                 }
@@ -692,7 +630,6 @@
 
                     lastMessage.appendChild(newMessage1);
                     lastMessage.scrollTop = lastMessage.scrollHeight;
-                    scrollDown(400)
                     localStorage.setItem('unsuitable', false);
                     return false;
                 }
@@ -774,7 +711,7 @@
             } else {
                 let formwrapper = document.createElement('div');
                 formwrapper.className = 'form-wrapper';
-                formwrapper.innerHTML = '<div class="form"> <h4>Заполните форму <br> для обратной связи </h4> <div style="margin-bottom: 10px;"><input type="text" name="firstname" placeholder="Ваше имя" required></div><div style="margin-bottom: 10px;"><input type="text" name="lastname" placeholder="Ваша фамилия" required></div><div style="margin-bottom: 10px;"><input type="tel" name="phone" placeholder="Телефон" required></div><div class="text-center"><button id="submitButton" type="submit">Завершить регистрацию</button></div></div>';
+                formwrapper.innerHTML = '<div class="form"> <h4>Заполните форму <br> для обратной связи </h4> <div style="margin-bottom: 5px;"><input type="text" name="firstname" placeholder="Ваше имя" required></div><div style="margin-bottom: 5px;"><input type="text" name="lastname" placeholder="Ваша фамилия" required></div><div style="margin-bottom: 5px;"><input type="tel" name="phone" placeholder="Телефон" required></div><div class="text-center"><button id="submitButton" type="submit">Завершить регистрацию</button></div></div>';
                 lastMessage.appendChild(formwrapper);
 
 
@@ -891,16 +828,7 @@
             }
 
             lastMessage.scrollTop = lastMessage.scrollHeight;
-            scrollDown(800)
         }
-
-          function scrollDown(height) {
-    window.scrollBy({
-      top: height,
-      behavior: "smooth",
-    });
-  }
-
     });
 </script>
 
