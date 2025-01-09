@@ -43,7 +43,7 @@ input::placeholder {
 .btnFormText {
   margin: 0 !important;
   font-family: Inter;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 @media (min-width: 769px) {
@@ -57,6 +57,12 @@ input::placeholder {
   }
   .form-group .btn {
     height: 45px;
+  }
+}
+
+@media (max-width: 350px) {
+  .btnFormText {
+    font-size: 12px;
   }
 }
 
