@@ -593,6 +593,7 @@
   grid-row-gap: 20px;
   flex-flow: wrap;
   align-items: flex-start;
+  align-content: space-between;
   width: 55%;
   display: flex;
 }
