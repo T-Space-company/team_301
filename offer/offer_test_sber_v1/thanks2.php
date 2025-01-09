@@ -17,6 +17,7 @@
       justify-content: center;
       min-height: 100vh;
       text-align: center;
+      padding: 0 10px;
     }
   </style>
   <body>
@@ -38,8 +39,9 @@ body  {
 }
 
 .wrapperAlert {
-  width: 500px;
-  height: 400px;
+  max-width: 500px;
+  width: 100%;
+  height: auto;
   overflow: hidden;
   border-radius: 12px;
   border: thin solid #ddd;
@@ -174,7 +176,7 @@ li:nth-child(10){
 
 .bottomHalf {
   align-items: center;
-  padding: 35px;
+   padding: 25px;
 }
 .bottomHalf p {
   font-weight: 500;
