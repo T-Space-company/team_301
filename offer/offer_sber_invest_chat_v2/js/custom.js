@@ -1,0 +1,1 @@
+$(document).ready((function(){"use strict";$(".test-step:first").addClass("active"),$(".open").click((function(){$("form#quiz").fadeIn()})),$(".test-step label.radio").on("click",(function(t){setTimeout(function(){$(this).parents(".test-step").fadeOut(500),setTimeout(function(){$(this).parents(".test-step").next().addClass("active")}.bind(this),800)}.bind(this),500)}))}));
