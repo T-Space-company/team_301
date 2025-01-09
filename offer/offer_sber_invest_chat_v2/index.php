@@ -149,6 +149,7 @@
         width: 100%;
         margin-top: 10px;
         box-sizing: content-box;
+        animation: slideInUp 0.4s ease-out forwards;
     }
 
     .vertical {
@@ -158,9 +159,9 @@
 
     .form-wrapper {
         padding: 10px 25px;
-        display: flex
-;
+        display: flex;
     justify-content: center;
+    animation: slideInUp 0.4s ease-out forwards;
     }
 
     .form {
@@ -201,6 +202,23 @@
         background: #158F2C;
     }
 
+    @keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+    .chat-block {
+        opacity: 0;
+        animation: slideInUp 0.4s ease-out forwards;
+        
+    }
+
     .left-chat .chat-block {
         max-width: 380px;
         width: 100%;
@@ -218,8 +236,28 @@
             max-width: 330px;
             width: 100%;
             padding-right: 20px;
+            box-sizing: border-box;
         }
     }
+
+@media screen and (max-width: 325px) {
+    .chat-name {
+            font-size: 14px;
+        }
+        .w-10 {
+    width: 2.2rem;
+}
+.chat-arrow {
+    width: 18px;
+    height: 22px;
+}
+.w-1\/5 {
+    width: 15%;
+}
+.items-start {
+    margin-right: 5px;
+}
+}
 
     body {
         font-family: 'Roboto', sans-serif;
@@ -419,6 +457,21 @@
         line-height: normal;
         letter-spacing: -0.024px;
     }
+
+.header-call {
+    animation: moveUpDown 2s infinite ease-in-out;
+}
+
+@keyframes moveUpDown {
+    0%, 100% {
+        transform: translateY(2px); 
+    }
+    50% {
+        transform: translateY(-2px); 
+    }
+}
+
+
     @media(max-width: 767px) {
         .header {
             width: 100%;
@@ -452,7 +505,7 @@
                     <img src="images/verified.svg" class="mt-1 pl-1 chat-arrow" alt="">
                 </div>
             </div>
-            <div class="w-1/4 flex justify-end items-center">
+            <div class="w-1/4 flex justify-end items-center header-call">
                 <img src="images/phone.svg" alt="">
             </div>
         </div>
