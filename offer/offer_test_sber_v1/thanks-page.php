@@ -227,7 +227,7 @@ button:hover {
       Благодарим за регистрацию!
       </h2>
 
-      <p>Наши специалисты свяжутся с Вами через <span id="timer"> 29:59</span></p>
+      <p class="bottom-message"></p>
 
     </div>
 
@@ -239,38 +239,37 @@ button:hover {
 
 
   <script>
-    // Получаем элемент таймера
-    const timerElement = document.getElementById('timer');
-    
-    // Разбиваем строку времени на минуты и секунды
-    const timeParts = timerElement.innerHTML.split(':');
-    let minutes = parseInt(timeParts[0]);
-    let seconds = parseInt(timeParts[1]);
-    
-    // Функция обновления таймера
-    function updateTimer() {
-      // Проверяем, не стал ли таймер равен 0
-      if (minutes === 0 && seconds === 0) {
-        clearInterval(timerInterval); // Останавливаем таймер
-        alert('Время вышло!'); // Выводим сообщение
-        return;
-      }
-    
-      // Уменьшаем секунды
-      if (seconds === 0) {
-        minutes--;
-        seconds = 59;
-      } else {
-        seconds--;
-      }
-    
-      // Форматируем время и выводим его на страницу
-      timerElement.innerHTML = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    // Get the current time in MSC time zone
+    function getMscTime() {
+        const now = new Date();
+        const mscOffset = 3 * 60; // Msc is UTC+3
+        const localOffset = now.getTimezoneOffset();
+        const mscTime = new Date(now.getTime() + (mscOffset - localOffset) * 60 * 1000);
+        return mscTime;
     }
-    
-    // Вызываем функцию обновления таймера каждую секунду
-    const timerInterval = setInterval(updateTimer, 1000);
-    </script>
+
+    // Get the timer element
+    const timerElement = document.getElementById('timer');
+    const messageElement = document.querySelector('.bottom-message');
+
+    // Check the current time and display the appropriate message
+    function updateMessage() {
+        const mscTime = getMscTime();
+        const currentHour = mscTime.getHours();
+        const currentMinute = mscTime.getMinutes();
+
+        // Check if time is within working hours (8:00 to 17:30)
+        if ((currentHour > 8 || (currentHour === 8 && currentMinute >= 0)) &&
+            (currentHour < 17 || (currentHour === 17 && currentMinute <= 30))) {
+            messageElement.innerHTML = "Менеджер с Вами свяжется в течении 30 минут";
+        } else {
+            messageElement.innerHTML = "Менеджер свяжется с Вами в рабочее время с 8:00 до 17:30";
+        }
+    }
+
+    // Call the function to update the message
+    updateMessage();
+</script>
   
   
   
