@@ -173,75 +173,80 @@
               ></form>
             </div>
           </div>
-          <div class="div-block-39">
-            <div class="div-block-52">
-              <h3 class="text-block-2">Поздравляем!</h3>
-              <div class="text-block-23">
-                У Вас отличное понимание рынка: будь это настоящие сделки, Вы бы
-                заработали <span class="text-span-5">62 500руб.</span>
-              </div>
+          <div class="div-block-39" id="calculator">
+  <div class="div-block-52">
+    <h3 class="text-block-2">Поздравляем!</h3>
+    <div class="text-block-23">
+      У Вас отличное понимание рынка: будь это настоящие сделки, Вы бы заработали 
+      <span class="text-span-5">62 500 руб.</span>
+    </div>
+  </div>
+  <div class="div-block-35">
+    <div class="div-block-55">
+      <h3 class="text-block-5">Рассчитайте свою прибыль:</h3>
+      <div class="div-block-47">
+        <div class="text-block-16">Сумма инвестиций:</div>
+        <div class="div-block-56">
+          <div class="div-block-51">
+            <div class="div-block-48">
+              <div id="investment-value" class="text-block-20">9 500 ₽</div>
             </div>
-            <div class="div-block-35">
-              <div class="div-block-55">
-                <h3 class="text-block-5">Рассчитайте свою прибыль:</h3>
-                <div class="div-block-47">
-                  <div class="text-block-16">Сумма инвестиций:</div>
-                  <div class="div-block-56">
-                    <div class="div-block-51">
-                      <div class="div-block-48">
-                        <div class="text-block-20">9 500 ₽</div>
-                      </div>
-                      <div class="div-block-48 gray">
-                        <div class="text-block-20 gray">200 000+ ₽</div>
-                      </div>
-                    </div>
-                    <div class="div-block-49">
-                      <div class="div-block-46"></div>
-                      <div class="div-block-36"></div>
-                    </div>
-                    <div class="div-block-50">
-                      <div class="text-block-21">9 500</div>
-                      <div class="text-block-21">57 125</div>
-                      <div class="text-block-21">104 750</div>
-                      <div class="text-block-21">152 375</div>
-                      <div class="text-block-21">200 000</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="div-block-42">
-                  <div class="text-block-16">Выберите срок инвестирования:</div>
-                  <div class="div-block-38">
-                    <div class="div-block-37 active">
-                      <div class="text-block-19 white">7 дней</div>
-                    </div>
-                    <div class="div-block-37">
-                      <div class="text-block-19">14 дней</div>
-                    </div>
-                    <div class="div-block-37">
-                      <div class="text-block-19">28 дней</div>
-                    </div>
-                    <div class="div-block-37">
-                      <div class="text-block-19">56 дней</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="div-block-40">
-                  <div class="div-block-43">
-                    <div class="text-block-16">Прибыль:</div>
-                    <div class="text-block-18">1 995 ₽</div>
-                  </div>
-                  <div class="div-block-44">
-                    <div class="text-block-16">В процентах:</div>
-                    <div class="text-block-18">21%</div>
-                  </div>
-                  <div class="div-block-45">
-                    <div class="text-block-16">Итого:</div>
-                    <div class="text-block-18 black">11 495 ₽</div>
-                  </div>
-                </div>
-              </div>
+            <div class="div-block-48 gray">
+              <div class="text-block-20 gray">200 000+ ₽</div>
             </div>
           </div>
+          <input
+            id="investment-slider"
+            type="range"
+            min="9500"
+            max="200000"
+            value="9500"
+            step="500"
+          />
+          <div class="div-block-50">
+            <div class="text-block-21">9 500</div>
+            <div class="text-block-21">57 125</div>
+            <div class="text-block-21">104 750</div>
+            <div class="text-block-21">152 375</div>
+            <div class="text-block-21">200 000</div>
+          </div>
+        </div>
+      </div>
+      <div class="div-block-42">
+        <div class="text-block-16">Выберите срок инвестирования:</div>
+        <div class="investment-period div-block-38">
+          <button data-period="7" class="div-block-37 active">
+            <div class="text-block-19 white">7 дней</div>
+          </button>
+          <button data-period="14" class="div-block-37">
+            <div class="text-block-19">14 дней</div>
+          </button>
+          <button data-period="28" class="div-block-37">
+            <div class="text-block-19">28 дней</div>
+          </button>
+          <button data-period="56" class="div-block-37">
+            <div class="text-block-19">56 дней</div>
+          </button>
+        </div>
+      </div>
+      <div class="div-block-40">
+        <div class="div-block-43">
+          <div class="text-block-16">Прибыль:</div>
+          <div id="profit-value" class="text-block-18">1 995 ₽</div>
+        </div>
+        <div class="div-block-44">
+          <div class="text-block-16">В процентах:</div>
+          <div id="percentage-value" class="text-block-18">21%</div>
+        </div>
+        <div class="div-block-45">
+          <div class="text-block-16">Итого:</div>
+          <div id="total-value" class="text-block-18 black">11 495 ₽</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
           <div class="div-block-35-copy">
             <div class="div-block-55">
               <h3 class="text-block-5">Рассчитайте свою прибыль:</h3>
@@ -322,6 +327,7 @@
       </div>
     </div>
 
+    <script src="./js/calc.js" type="module"></script>
     <script src="js/webflow.js" type="text/javascript"></script>
     <script src="loadAssets.js?v=3444371"></script>
 
