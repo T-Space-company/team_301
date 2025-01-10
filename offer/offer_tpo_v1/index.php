@@ -1,7 +1,7 @@
 <?php
-if (!isset($rawClick) && !isset($click)) {
-  die();
-}
+// if (!isset($rawClick) && !isset($click)) {
+//   die();
+// }
 ?>
 <?php
 
@@ -58,6 +58,7 @@ include_once dirname(__FILE__) . '/config.php';
     <link rel="preload" as="script" href="assets/js/bundle.min.js">
     <link rel="preload" as="script" href="assets/js/custom.min5032.js?v=202411261926">
     <link rel="stylesheet" href="assets/css/bundle.min5032.css?v=202411261926">
+    <link rel="stylesheet" href="./assets/css/form.css">
     
     
 
@@ -323,7 +324,7 @@ Hiç bir tecrübe gerekmeden herkes Yatırımcı olabilir. Teknik ekipler aracı
 
 
             <div class="form">
-                          <form class="form _main-form contact-form freg thin rounded" id="main-form" method="post" style="padding: 20px;">
+                          <form class=" _main-form contact-form freg thin rounded" id="main-form" method="post" style="padding: 20px; margin-top: 20px; width: 100%;">
                             <input type="hidden" id="source" value='<?= $_GET['source'] ?>'>
                             <input type="hidden" name="comment" value="" />
                             <input type="hidden" name="querys">
@@ -483,7 +484,6 @@ Hiç bir tecrübe gerekmeden herkes Yatırımcı olabilir. Teknik ekipler aracı
                     <div class="zulfikarlar">
                         <a href="../www.zulfikarlar.com.tr/index.html"title="Zülfikarlar Holding">
                             <picture>
-                                <source srcset="/assets/img/zulfikarlar-footer.webp" type="image/webp">
                                 <source srcset="/assets/img/zulfikarlar-footer.jpg" type="image/jpeg">
                                 <img loading="lazy" src="assets/img/zulfikarlar-footer.jpg" width="172" height="87" alt="Zülfikarlar Holding" />
                             </picture>

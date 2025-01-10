@@ -1,0 +1,10 @@
+.form {
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+}
+
+input {
+  border-radius: 5px !important;
+}

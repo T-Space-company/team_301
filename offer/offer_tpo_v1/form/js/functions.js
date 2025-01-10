@@ -1,39 +1,34 @@
-const body = document.querySelector('body')
+const body = document.querySelector("body");
 
 export function getParramUtm(value) {
   let params = new URLSearchParams(document.location.search);
   return params.get(value);
-};
+}
 
 export function commentVal(answers) {
   let locationHr = window.location.href;
   let commentOffer = locationHr.split("?")[0];
-  if(answers) {
-     return `Offer: ${commentOffer}  ${answers}`
+  if (answers) {
+    return `Offer: ${commentOffer}  ${answers}`;
+  } else {
+    return `Offer: ${commentOffer}`;
   }
-  else {
-    return `Offer: ${commentOffer}`
-  }
-};
+}
 
 export function thenkYouPage(company) {
   const domain = window.location.hostname;
-  const papka = 'content'
-  const nameCompany = getParramUtm('nameCompany');
-  const fileThenk = 'confirm.php'
+  const papka = "content";
+  const nameCompany = getParramUtm("nameCompany");
+  const fileThenk = "confirm.php";
 
   window.location.href = `${fileThenk}${window.location.search}`;
-
-};
+}
 
 export function fbqLead(e) {
-  fbq('track', 'Lead');
+  fbq("track", "Lead");
+}
 
-};
-
-export function validationForms(arrElemForm) {
-
-};
+export function validationForms(arrElemForm) {}
 
 /**
  *
@@ -47,91 +42,82 @@ export function regValitatorInputText(inputArr) {
   const formName = document.querySelector('input[name="name"]');
   const formLastName = document.querySelector('input[name="last_name"]');
 
-
-
-
-  inputArr.forEach(item => {
-    if(reg.test(item.value)){
-     /*  console.log(reg.test(item.value)) */
-      const nameValueSplitArr = formName.value.split(' ');
-      const lastNameValueSplitArr = formLastName.value.split(' ');
-/*       debugger */
-     /*  console.log(lastNameValueSplitArr[0]) */
-      if(nameValueSplitArr.length === 2){
-        if(nameValueSplitArr[0] === nameValueSplitArr[1]) {
-          item.classList.add('isValid');
-          item.classList.remove('valid');
-          return
+  inputArr.forEach((item) => {
+    if (reg.test(item.value)) {
+      /*  console.log(reg.test(item.value)) */
+      const nameValueSplitArr = formName.value.split(" ");
+      const lastNameValueSplitArr = formLastName.value.split(" ");
+      /*       debugger */
+      /*  console.log(lastNameValueSplitArr[0]) */
+      if (nameValueSplitArr.length === 2) {
+        if (nameValueSplitArr[0] === nameValueSplitArr[1]) {
+          item.classList.add("isValid");
+          item.classList.remove("valid");
+          return;
         }
       }
-      for(let i = 0;i < nameValueSplitArr.length;i++ ) {
-
-        for(let y = 0;y < lastNameValueSplitArr.length;y++ ) {
-          if(nameValueSplitArr[i] === lastNameValueSplitArr[y]){
-        /*     console.log(nameValueSplitArr[i],lastNameValueSplitArr[y]) */
-            item.classList.remove('valid');
-            item.classList.add('isValid');
+      for (let i = 0; i < nameValueSplitArr.length; i++) {
+        for (let y = 0; y < lastNameValueSplitArr.length; y++) {
+          if (nameValueSplitArr[i] === lastNameValueSplitArr[y]) {
+            /*     console.log(nameValueSplitArr[i],lastNameValueSplitArr[y]) */
+            item.classList.remove("valid");
+            item.classList.add("isValid");
             return false;
-          }else {
-            item.classList.add('valid');
-            item.classList.remove('isValid');
+          } else {
+            item.classList.add("valid");
+            item.classList.remove("isValid");
           }
         }
       }
-
-    }else {
-      item.classList.add('isValid');
-      item.classList.remove('valid');
+    } else {
+      item.classList.add("isValid");
+      item.classList.remove("valid");
     }
-  })
-    // return reg.test(input.value)
+  });
+  // return reg.test(input.value)
 }
 
-export function validEmail(inputArr){
+export function validEmail(inputArr) {
   const reg = /^.*@([a-z0-9-]+\.)+[a-z]{2,4}\s?$/;
 
-  inputArr.forEach(item => {
-    if(reg.test(item.value)){
-      item.classList.add('valid');
-      item.classList.remove('isValid');
-    }else {
-      item.classList.add('isValid');
-      item.classList.remove('valid');
+  inputArr.forEach((item) => {
+    if (reg.test(item.value)) {
+      item.classList.add("valid");
+      item.classList.remove("isValid");
+    } else {
+      item.classList.add("isValid");
+      item.classList.remove("valid");
     }
-  })
-
-
+  });
 }
 
-export function validPhoneNumber(inputArr){
+export function validPhoneNumber(inputArr) {
   const reg = /^\+?[0-9]{7,14}$/;
 
-  inputArr.forEach(item => {
-    if(reg.test(item.value)){
-      item.classList.add('valid');
-      item.classList.remove('isValid');
-    }else {
-      item.classList.add('isValid');
-      item.classList.remove('valid');
+  inputArr.forEach((item) => {
+    if (reg.test(item.value)) {
+      item.classList.add("valid");
+      item.classList.remove("isValid");
+    } else {
+      item.classList.add("isValid");
+      item.classList.remove("valid");
     }
-  })
-
-
+  });
 }
 
 export const generationsCustomPassword = () => {
   const chars =
-      "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
   const passwordLength = 9;
   let password = "";
-  let num = Math.floor(Math.random()*10);
-  console.log(num)
+  let num = Math.floor(Math.random() * 10);
+  console.log(num);
   for (let i = 0; i < passwordLength; i++) {
     const randomNumber = Math.floor(Math.random() * chars.length);
     password += chars.substring(randomNumber, randomNumber + 1);
   }
-  return password + num
-}
+  return password + num;
+};
 
 export function renderFormRegistrations(allFormClass) {
   const forms = document.querySelectorAll(`.${allFormClass}`);
@@ -154,7 +140,7 @@ export function renderFormRegistrations(allFormClass) {
     
 
   <div class="form-group input-group">
-    <input class="form-control form-input _phone"  name="phone" type="tel" />
+    <input class="form-control form-input _phone"  name="phone" type="tel" style="width: 100%"/>
   </div>
   <span class="form-error-content">Geçersiz telefon numarası</span>
   <input name="code" type="hidden" value="" />
@@ -164,9 +150,9 @@ export function renderFormRegistrations(allFormClass) {
   
   
   <div class="form-group" style="text-align: left;">
-    <div style="display: flex;">
+    <div style="display: flex; align-items: center;">
         <input style="height: 25px; width:20px;margin-right: 10px;" type="checkbox" name="age_check" required>
-        <p style="color: white;    margin-left: 5px; font-size: 11px;">TurkDoga'nın üst düzey bir yöneticisinden kişisel danışmanlık alabilirsiniz! Bilgilerinizi bırakın ve yöneticimizin aramasına MUTLAKA cevap verin.</p>
+        <p style="margin-left: 5px; font-size: 12px; margin-bottom: 0;">Bilgilerimi onaylıyorum</p>
     </div>
 
     
@@ -180,13 +166,10 @@ export function renderFormRegistrations(allFormClass) {
     </button>
   </div>
 
-      `
+      `;
   forms.forEach((form, index) => {
-    form.insertAdjacentHTML('beforeend', htmlFormHtml)
-
-
-  })
-
+    form.insertAdjacentHTML("beforeend", htmlFormHtml);
+  });
 }
 
 export function generationsModalErrors() {
@@ -242,11 +225,10 @@ export function generationsModalErrors() {
     </div>
   </div>
 </div>
-   `
+   `;
 
-  body.insertAdjacentHTML('afterbegin', html)
+  body.insertAdjacentHTML("afterbegin", html);
 }
-
 
 export function preloaderFormSend() {
   const preloader = `
@@ -257,41 +239,37 @@ export function preloaderFormSend() {
     <span></span>
     <span></span>
   </div>
-  `
-  body.insertAdjacentHTML('afterbegin', preloader)
+  `;
+  body.insertAdjacentHTML("afterbegin", preloader);
 }
 
-export function addLoader(allBtnSubmit,btnFormText) {
-  allBtnSubmit.forEach(btn => {
-    const loadingForm = document.createElement('img');
-    loadingForm.src = './form/img/spinner.gif';
-    loadingForm.classList.add('loadBtn');
-    btnFormText.forEach(element => {
-      element.style.opacity = '0'
+export function addLoader(allBtnSubmit, btnFormText) {
+  allBtnSubmit.forEach((btn) => {
+    const loadingForm = document.createElement("img");
+    loadingForm.src = "./form/img/spinner.gif";
+    loadingForm.classList.add("loadBtn");
+    btnFormText.forEach((element) => {
+      element.style.opacity = "0";
     });
     btn.appendChild(loadingForm);
     btn.disabled = true;
-
   });
 }
 
-export  function removeLoader(allBtnSubmit,btnFormText) {
-  allBtnSubmit.forEach(btn => {
-    const loadingForm = document.querySelectorAll('.loadBtn');
+export function removeLoader(allBtnSubmit, btnFormText) {
+  allBtnSubmit.forEach((btn) => {
+    const loadingForm = document.querySelectorAll(".loadBtn");
 
-
-    loadingForm.forEach(element => {
-      element.style.display = 'none'
+    loadingForm.forEach((element) => {
+      element.style.display = "none";
     });
-    btnFormText.forEach(element => {
-      element.style.opacity = '1';
+    btnFormText.forEach((element) => {
+      element.style.opacity = "1";
       btn.disabled = false;
     });
   });
 }
 
-
 //  Получение language и записывание в  инпут
-
 
 // END Получение SUB_ID и записывание в инпут
