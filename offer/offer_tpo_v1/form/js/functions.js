@@ -150,9 +150,11 @@ export function renderFormRegistrations(allFormClass) {
   
   
   <div class="form-group" style="text-align: left;">
-    <div style="display: flex; align-items: center;">
-        <input style="height: 25px; width:20px;margin-right: 10px;" type="checkbox" name="age_check" required>
+    <div>
+    <label style="display: flex; align-items: center;">
+<input style="height: 25px; width:20px;margin-right: 10px;" type="checkbox" name="age_check" required>
         <p style="margin-left: 5px; font-size: 12px; margin-bottom: 0;">Bilgilerimi onaylıyorum</p>
+    </label>
     </div>
 
     
