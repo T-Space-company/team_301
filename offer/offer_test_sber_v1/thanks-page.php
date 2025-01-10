@@ -241,12 +241,10 @@ button:hover {
 
 
   <script>
-    // Get the current time in MSC time zone
+    // Get the current time in Moscow time zone
     function getMscTime() {
         const now = new Date();
-        const mscOffset = 3 * 60; // Msc is UTC+3
-        const localOffset = now.getTimezoneOffset();
-        const mscTime = new Date(now.getTime() + (mscOffset - localOffset) * 60 * 1000);
+        const mscTime = new Date(now.toLocaleString("en-US", { timeZone: "Europe/Moscow" }));
         return mscTime;
     }
 
@@ -272,6 +270,7 @@ button:hover {
     // Call the function to update the message
     updateMessage();
 </script>
+
   
   
   
