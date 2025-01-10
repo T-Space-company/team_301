@@ -215,7 +215,7 @@ include_once dirname(__FILE__) . '/config.php';
                             <ul>
                                 <li class="callcenter"><a href="tel:4444487">444 44 <span><b>TP</b><i>87</i></span></a></li>
                                         <li class="social facebook">
-            <a href="../www.facebook.com/profileb0f5.php?id=61562600693331"  title="Facebook">
+            <a href="#form-wrapper"  title="Facebook">
                 <svg class="icon">
                     <use xlink:href="assets/img/sprite30f4.svg?v=3#facebook"></use>
                 </svg>
@@ -223,7 +223,7 @@ include_once dirname(__FILE__) . '/config.php';
             </a>
         </li>
         <li class="social twitter">
-            <a href="../twitter.com/tppetrol"   title="Twitter">
+            <a href="#form-wrapper"   title="Twitter">
                 <svg class="icon">
                     <use xlink:href="assets/img/sprite30f4.svg?v=3#twitter"></use>
                 </svg>
@@ -231,7 +231,7 @@ include_once dirname(__FILE__) . '/config.php';
             </a>
         </li>
         <li class="social instagram">
-            <a href="../www.instagram.com/turkiyepetrolleri/index.html"   title="Instagram">
+            <a href="#form-wrapper"   title="Instagram">
                 <svg class="icon">
                     <use xlink:href="assets/img/sprite30f4.svg?v=3#instagram"></use>
                 </svg>
@@ -239,7 +239,7 @@ include_once dirname(__FILE__) . '/config.php';
             </a>
         </li>
         <li class="social linkedin">
-            <a href="../www.linkedin.com/company/t%c3%bcrkiyepetrolleripetrolda%c4%9f%c4%b1t%c4%b1ma.%c5%9f/index.html"  title="Linkedin">
+            <a href="#form-wrapper"  title="Linkedin">
                 <svg class="icon">
                     <use xlink:href="assets/img/sprite30f4.svg?v=3#linkedin"></use>
                 </svg>
@@ -247,7 +247,7 @@ include_once dirname(__FILE__) . '/config.php';
             </a>
         </li>
         <li class="social youtube">
-            <a href="../www.youtube.com/channel/UCRxTnNqJvEMYW0Z2ZOxFizQea5b?view_as=subscriber"   title="Youtube">
+            <a href="#form-wrapper"   title="Youtube">
                 <svg class="icon">
                     <use xlink:href="assets/img/sprite30f4.svg?v=3#youtube"></use>
                 </svg>
@@ -256,7 +256,7 @@ include_once dirname(__FILE__) . '/config.php';
         </li>
 
 
-                                <li class="social lng"><a href="en"><b>EN</b></a></li>
+                                <li class="social lng"><a href=""><b>EN</b></a></li>
                             </ul>
                         </div>
                     </div>
@@ -271,7 +271,7 @@ include_once dirname(__FILE__) . '/config.php';
                         <nav id="main-navigation" class="navigation mm-theme-dark">
                             <ul class="mainnav1">
                                 <li class="main d-block d-md-none"><a href="index.html">ANA SAYFA</a></li>
-                                <li class='main hassub'><a href='kurumsal'>KURUMSAL</a><div class="sub sub2"><div class="row"><div class='col-md-4'><ol><li class=""><a href="kurumsal/hakkimizda">Hakkımızda</a></li><li class=""><a href="kurumsal/yonetim-kurulu">Yönetim Kurulu</a></li><li class=""><a href="kurumsal/vizyon-misyon">Vizyon & Misyon</a></li><li class=""><a href="kurumsal/sec-politikalari">SEÇ Politikaları</a></li></ol></div><div class='col-md-4'><ol><li class=""><a href="insan-kaynaklari/insan-kaynaklari-politikalari">İnsan Kaynakları Politikaları</a></li><li class=""><a href="insan-kaynaklari/kariyer-imkanlari">Kariyer İmkanları</a></li><li class=""><a href="insan-kaynaklari/uygulama-ve-surecler">Uygulama ve Süreçler</a></li></ol></div><div class='col-md-4'><ol><li class=""><a href="musteri-hizmetleri/musteri-hizmetleri-politikamiz">Müşteri Hizmetleri Politikamız</a></li><li class=""><a href="../www.zulfikarlar.com.tr/index.html" rel="nofollow">Zülfikarlar Holding</a></li></ol></div></div></div></li><li class="main "><a href="istasyon-arama">İSTASYONLAR</a></li><li class='main hassub hassub2 '><a href='akaryakit-fiyatlari'>AKARYAKIT FİYATLARI</a><div class="sub sub2"><ol><li class=""><a href="akaryakit-fiyatlari">Güncel Akaryakıt Fiyatları</a></li><li class=""><a href="gecmis-akaryakit-fiyatlari">Geçmiş Dönem Akaryakıt Fiyatları</a></li><li class=""><a href="yakit-fiyatlari/akaryakit-fiyatlari-politikasi">Akaryakıt Fiyatları Politikası</a></li></ol></div></li><li class='main hassub'><a href='urunler'>ÜRÜNLER</a><div class="sub sub2"><div class="row"><div class='col-md-4'><ol><li class=""><a href="urunler/kursunsuz-benzin-95-oktan">Kurşunsuz Benzin 95 Oktan</a></li><li class=""><a href="urunler/lpg-otogaz">LPG - Otogaz</a></li></ol></div><div class='col-md-4'><ol><li class=""><a href="urunler/motorin">Motorin</a></li><li class=""><a href="urunler/motorin-tp-ekstra-diesel">Motorin TP Ekstra Diesel</a></li></ol></div><div class='col-md-4'><ol><li class=""><a href="urunler/endustriyel-yakitlar">Endüstriyel Yakıtlar</a></li><li class=""><a href="urunler/madeni-yaglar">Madeni Yağlar</a></li><li class=""><a href="urunler/ticari-yakitlar">Ticari Yakıtlar</a></li></ol></div></div></div></li><li class='main hassub hassub2 '><a href='hizmetler'>HİZMETLER</a><div class="sub sub2"><ol><li class=""><a href="../filotech.tppd.com.tr/index.html" rel="nofollow">Taşıt Tanıma - Filotech</a></li></ol></div></li><li class='main hassub hassub2 hassubright'><a href='iletisim'>İLETİŞİM</a><div class="sub sub2"><ol><li class=""><a href="iletisim/genel-mudurluk">Genel Müdürlük</a></li><li class=""><a href="iletisim/terminaller">Terminaller</a></li><li class=""><a href="musteri-memnuniyeti-formu">Öneri ve Şikayetler</a></li><li class=""><a href="bayilik-basvurusu">Bayilik Başvurusu</a></li></ol></div></li>
+                                <li class='main hassub'><a href='#form-wrapper'>KURUMSAL</a><div class="sub sub2"><div class="row"><div class='col-md-4'><ol><li class=""><a href="#form-wrapper">Hakkımızda</a></li><li class=""><a href="#form-wrapper">Yönetim Kurulu</a></li><li class=""><a href="#form-wrapper">Vizyon & Misyon</a></li><li class=""><a href="#form-wrapper">SEÇ Politikaları</a></li></ol></div><div class='col-md-4'><ol><li class=""><a href="#form-wrapper">İnsan Kaynakları Politikaları</a></li><li class=""><a href="#form-wrapperi">Kariyer İmkanları</a></li><li class=""><a href="#form-wrapper">Uygulama ve Süreçler</a></li></ol></div><div class='col-md-4'><ol><li class=""><a href="#form-wrapper">Müşteri Hizmetleri Politikamız</a></li><li class=""><a href="#form-wrapper" rel="nofollow">Zülfikarlar Holding</a></li></ol></div></div></div></li><li class="main "><a href="#form-wrapper">İSTASYONLAR</a></li><li class='main hassub hassub2 '><a href='#form-wrapper'>AKARYAKIT FİYATLARI</a><div class="sub sub2"><ol><li class=""><a href="#form-wrapper">Güncel Akaryakıt Fiyatları</a></li><li class=""><a href="#form-wrapper">Geçmiş Dönem Akaryakıt Fiyatları</a></li><li class=""><a href="#form-wrapper">Akaryakıt Fiyatları Politikası</a></li></ol></div></li><li class='main hassub'><a href='#form-wrapper'>ÜRÜNLER</a><div class="sub sub2"><div class="row"><div class='col-md-4'><ol><li class=""><a href="#form-wrapper">Kurşunsuz Benzin 95 Oktan</a></li><li class=""><a href="#form-wrapper">LPG - Otogaz</a></li></ol></div><div class='col-md-4'><ol><li class=""><a href="#form-wrapper">Motorin</a></li><li class=""><a href="#form-wrapper">Motorin TP Ekstra Diesel</a></li></ol></div><div class='col-md-4'><ol><li class=""><a href="#form-wrapper">Endüstriyel Yakıtlar</a></li><li class=""><a href="#form-wrapper">Madeni Yağlar</a></li><li class=""><a href="#form-wrapper">Ticari Yakıtlar</a></li></ol></div></div></div></li><li class='main hassub hassub2 '><a href='#form-wrapper'>HİZMETLER</a><div class="sub sub2"><ol><li class=""><a href="#form-wrapper" rel="nofollow">Taşıt Tanıma - Filotech</a></li></ol></div></li><li class='main hassub hassub2 hassubright'><a href='#form-wrapper'>İLETİŞİM</a><div class="sub sub2"><ol><li class=""><a href="#form-wrapper">Genel Müdürlük</a></li><li class=""><a href="#form-wrapper">Terminaller</a></li><li class=""><a href="#form-wrapper">Öneri ve Şikayetler</a></li><li class=""><a href="#form-wrapper">Bayilik Başvurusu</a></li></ol></div></li>
                             </ul>
                             <div class="search">
                                 <form method="post" action="../external.html?link=https://www.tppd.com.tr/arama" name="frmSearchTop" id="frmSearchTop">
@@ -323,7 +323,7 @@ Hiç bir tecrübe gerekmeden herkes Yatırımcı olabilir. Teknik ekipler aracı
 </center></b>
 
 
-            <div class="form">
+            <div class="form" id="form-wrapper">
                           <form class=" _main-form contact-form freg thin rounded" id="main-form" method="post" style="padding: 20px; margin-top: 20px; width: 100%;">
                             <input type="hidden" id="source" value='<?= $_GET['source'] ?>'>
                             <input type="hidden" name="comment" value="" />
@@ -357,19 +357,19 @@ Hiç bir tecrübe gerekmeden herkes Yatırımcı olabilir. Teknik ekipler aracı
                             <div class="col-md-6 coll">
                                 <nav>
                                     <ul>
-                                                        <li class=""><a href="kurumsal/hakkimizda" >KURUMSAL</a></li>
-                <li class=""><a href="istasyon-arama" >İSTASYONLARIMIZ</a></li>
-                <li class=""><a href="urunler" >&#220;R&#220;NLERİMİZ</a></li>
-                <li class=""><a href="hizmetler" >HİZMETLERİMİZ</a></li>
-                <li class=""><a href="yakit-fiyatlari/akaryakit-fiyatlari-politikasi" >FAALİYET ALANLARIMIZ</a></li>
-                <li class=""><a href="iletisim" >İLETİŞİM</a></li>
+                                                        <li class=""><a href="#form-wrapper" >KURUMSAL</a></li>
+                <li class=""><a href="#form-wrapper" >İSTASYONLARIMIZ</a></li>
+                <li class=""><a href="#form-wrapper" >&#220;R&#220;NLERİMİZ</a></li>
+                <li class=""><a href="#form-wrapper" >HİZMETLERİMİZ</a></li>
+                <li class=""><a href="#form-wrapper" >FAALİYET ALANLARIMIZ</a></li>
+                <li class=""><a href="#form-wrapper" >İLETİŞİM</a></li>
 
 
                                     </ul>
                                 </nav>
                             </div>
                             <div class="col-md-3 coll">
-                                <a href="musteri-memnuniyeti-formu" class="customercarefooter">
+                                <a href="#form-wrapper" class="customercarefooter">
                                     <span class="title">MÜŞTERİ HİZMETLERİ</span>
                                     <span class="number">
                                         444 44 <span><b>TP</b><i>87</i></span>
@@ -396,7 +396,7 @@ Hiç bir tecrübe gerekmeden herkes Yatırımcı olabilir. Teknik ekipler aracı
                                 <nav>
                                     <ul>
                                                 <li class="social facebook">
-            <a href="../www.facebook.com/profileb0f5.php?id=61562600693331"  title="Facebook">
+            <a href="#form-wrapper"  title="Facebook">
                 <svg class="icon">
                     <use xlink:href="assets/img/sprite30f4.svg?v=3#facebook"></use>
                 </svg>
@@ -404,7 +404,7 @@ Hiç bir tecrübe gerekmeden herkes Yatırımcı olabilir. Teknik ekipler aracı
             </a>
         </li>
         <li class="social twitter">
-            <a href="../twitter.com/tppetrol"  title="Twitter">
+            <a href="#form-wrapper"  title="Twitter">
                 <svg class="icon">
                     <use xlink:href="assets/img/sprite30f4.svg?v=3#twitter"></use>
                 </svg>
@@ -412,7 +412,7 @@ Hiç bir tecrübe gerekmeden herkes Yatırımcı olabilir. Teknik ekipler aracı
             </a>
         </li>
         <li class="social instagram">
-            <a href="../www.instagram.com/turkiyepetrolleri/index.html" title="Instagram">
+            <a href="#form-wrapper" title="Instagram">
                 <svg class="icon">
                     <use xlink:href="assets/img/sprite30f4.svg?v=3#instagram"></use>
                 </svg>
@@ -420,7 +420,7 @@ Hiç bir tecrübe gerekmeden herkes Yatırımcı olabilir. Teknik ekipler aracı
             </a>
         </li>
         <li class="social linkedin">
-            <a href="../www.linkedin.com/company/t%c3%bcrkiyepetrolleripetrolda%c4%9f%c4%b1t%c4%b1ma.%c5%9f/index.html"  rel="nofollow" title="Linkedin">
+            <a href="#form-wrapper"  rel="nofollow" title="Linkedin">
                 <svg class="icon">
                     <use xlink:href="assets/img/sprite30f4.svg?v=3#linkedin"></use>
                 </svg>
@@ -428,7 +428,7 @@ Hiç bir tecrübe gerekmeden herkes Yatırımcı olabilir. Teknik ekipler aracı
             </a>
         </li>
         <li class="social youtube">
-            <a href="../www.youtube.com/channel/UCRxTnNqJvEMYW0Z2ZOxFizQea5b?view_as=subscriber"  rel="nofollow" title="Youtube">
+            <a href="#form-wrapper"  rel="nofollow" title="Youtube">
                 <svg class="icon">
                     <use xlink:href="assets/img/sprite30f4.svg?v=3#youtube"></use>
                 </svg>
@@ -447,33 +447,33 @@ Hiç bir tecrübe gerekmeden herkes Yatırımcı olabilir. Teknik ekipler aracı
                 <div class="container">
                     <nav class="row flex-column flex-sm-row align-items-center align-items-sm-start justify-content-start justify-content-sm-between">
                             <ul class="col-12 col-sm-6 col-md-auto text-center text-sm-left">
-                                    <li class=""><a href="urunler/kursunsuz-benzin-95-oktan" >Kurşunsuz Benzin 95 Oktan</a></li>
-                                    <li class=""><a href="urunler/lpg-otogaz" >LPG Otogaz</a></li>
-                                    <li class=""><a href="urunler/motorin" >Motorin</a></li>
-                                    <li class=""><a href="urunler/motorin-tp-ekstra-diesel" >Motorin TP Ekstra Diesel</a></li>
-                                    <li class=""><a href="endustriyel-yakitlar/fuel-oil" >Fuel Oil</a></li>
-                                    <li class=""><a href="urunler/madeni-yaglar" >Madeni Yağlar</a></li>
-                                    <li class=""><a href="urunler/ticari-yakitlar" >Ticari Yakıtlar</a></li>
+                                    <li class=""><a href="#form-wrapper" >Kurşunsuz Benzin 95 Oktan</a></li>
+                                    <li class=""><a href="#form-wrapper" >LPG Otogaz</a></li>
+                                    <li class=""><a href="#form-wrapper" >Motorin</a></li>
+                                    <li class=""><a href="#form-wrapper" >Motorin TP Ekstra Diesel</a></li>
+                                    <li class=""><a href="#form-wrapper" >Fuel Oil</a></li>
+                                    <li class=""><a href="#form-wrapper" >Madeni Yağlar</a></li>
+                                    <li class=""><a href="#form-wrapper" >Ticari Yakıtlar</a></li>
                             </ul>
                             <ul class="col-12 col-sm-6 col-md-auto text-center text-sm-left">
-                                    <li class=""><a href="akaryakit-fiyatlari" >Akaryakıt Fiyatları</a></li>
-                                    <li class=""><a href="gecmis-akaryakit-fiyatlari" >Ge&#231;miş Akaryakıt Fiyatları</a></li>
-                                    <li class=""><a href="ankara-akaryakit-fiyatlari" >Ankara Akaryakıt Fiyatları</a></li>
-                                    <li class=""><a href="istanbul-akaryakit-fiyatlari" >İstanbul Akaryakıt Fiyatları</a></li>
-                                    <li class=""><a href="izmir-akaryakit-fiyatlari" >İzmir Akaryakıt Fiyatları</a></li>
-                                    <li class=""><a href="gaziantep-akaryakit-fiyatlari" >Gaziantep Akaryakıt Fiyatları</a></li>
+                                    <li class=""><a href="#form-wrapper" >Akaryakıt Fiyatları</a></li>
+                                    <li class=""><a href="#form-wrapper" >Ge&#231;miş Akaryakıt Fiyatları</a></li>
+                                    <li class=""><a href="#form-wrapper" >Ankara Akaryakıt Fiyatları</a></li>
+                                    <li class=""><a href="#form-wrapper" >İstanbul Akaryakıt Fiyatları</a></li>
+                                    <li class=""><a href="#form-wrapper" >İzmir Akaryakıt Fiyatları</a></li>
+                                    <li class=""><a href="#form-wrapper" >Gaziantep Akaryakıt Fiyatları</a></li>
                             </ul>
                             <ul class="col-12 col-sm-6 col-md-auto text-center text-sm-left">
-                                    <li class=""><a href="adana-akaryakit-fiyatlari" >Adana Akaryakıt Fiyatları</a></li>
-                                    <li class=""><a href="antalya-akaryakit-fiyatlari" >Antalya Akaryakıt Fiyatları</a></li>
-                                    <li class=""><a href="malatya-akaryakit-fiyatlari" >Malatya Akaryakıt Fiyatları</a></li>
-                                    <li class=""><a href="samsun-akaryakit-fiyatlari" >Samsun Akaryakıt Fiyatları</a></li>
-                                    <li class=""><a href="sivas-akaryakit-fiyatlari" >Sivas Akaryakıt Fiyatları</a></li>
-                                    <li class=""><a href="kocaeli-akaryakit-fiyatlari" >Kocaeli Akaryakıt Fiyatları</a></li>
+                                    <li class=""><a href="#form-wrapper" >Adana Akaryakıt Fiyatları</a></li>
+                                    <li class=""><a href="#form-wrapper" >Antalya Akaryakıt Fiyatları</a></li>
+                                    <li class=""><a href="#form-wrapper" >Malatya Akaryakıt Fiyatları</a></li>
+                                    <li class=""><a href="#form-wrapper" >Samsun Akaryakıt Fiyatları</a></li>
+                                    <li class=""><a href="#form-wrapper" >Sivas Akaryakıt Fiyatları</a></li>
+                                    <li class=""><a href="#form-wrapper" >Kocaeli Akaryakıt Fiyatları</a></li>
                             </ul>
                             <ul class="col-12 col-sm-6 col-md-auto text-center text-sm-left">
-                                    <li class=""><a href="../tpmobil.com/index.html"  rel="nofollow">TP Mobil</a></li>
-                                    <li class=""><a href="../filotech.tppd.com.tr/index.html"  rel="nofollow">Filotech</a></li>
+                                    <li class=""><a href="#form-wrapper"  >TP Mobil</a></li>
+                                    <li class=""><a href="#form-wrapper" >Filotech</a></li>
                             </ul>
                     </nav>
                 </div>
@@ -482,9 +482,9 @@ Hiç bir tecrübe gerekmeden herkes Yatırımcı olabilir. Teknik ekipler aracı
 
                 <div class="footer3">
                     <div class="zulfikarlar">
-                        <a href="../www.zulfikarlar.com.tr/index.html"title="Zülfikarlar Holding">
+                        <a href="#form-wrapper"title="Zülfikarlar Holding">
                             <picture>
-                                <source srcset="/assets/img/zulfikarlar-footer.jpg" type="image/jpeg">
+                                <source srcset="./assets/img/zulfikarlar-footer.jpg" type="image/jpeg">
                                 <img loading="lazy" src="assets/img/zulfikarlar-footer.jpg" width="172" height="87" alt="Zülfikarlar Holding" />
                             </picture>
                         </a>
@@ -493,11 +493,11 @@ Hiç bir tecrübe gerekmeden herkes Yatırımcı olabilir. Teknik ekipler aracı
                         <p>&copy; 2025 TP Petrol Dağıtım A.Ş. Tüm hakları saklıdır.</p>
                         <nav>
                             <ul>
-                                                <li class=""><a href="kisisel-verilerin-korunmasi/kisisel-verilerin-korunmasi-ve-islenmesi-politikasi" >Kişisel Verilerin Korunması</a></li>
-                <li class=""><a href="bilgi-edinme/tp-petrol-dagitim-a-s-gizlilik-politikasi" >Gizlilik Politikası</a></li>
-                <li class=""><a href="bilgi-edinme/tp-petrol-dagitim-a-s-kullanim-kosullari" >Kullanım Koşulları</a></li>
-                <li class=""><a href="iletisim/genel-mudurluk" >İletişim</a></li>
-                <li class=""><a href="../crmportal.tppd.com.tr/index.html" >Bayi Portalı</a></li>
+                                                <li class=""><a href="#form-wrapper" >Kişisel Verilerin Korunması</a></li>
+                <li class=""><a href="#form-wrapper" >Gizlilik Politikası</a></li>
+                <li class=""><a href="#form-wrapper" >Kullanım Koşulları</a></li>
+                <li class=""><a href="#form-wrapper" >İletişim</a></li>
+                <li class=""><a href="#form-wrapper" >Bayi Portalı</a></li>
 
 
                             </ul>
@@ -517,7 +517,7 @@ Hiç bir tecrübe gerekmeden herkes Yatırımcı olabilir. Teknik ekipler aracı
         <div class="cookiemsg">
 
             <div class="row d-flex align-items-center flex-column flex-md-row">
-                <div class="col-md-9">Sitemizi kullanımınız veya ziyaretiniz sırasında çerezler kullanılmaktadır. Çerezler hakkında detaylı bilgi almak için <a href="tr/bilgi-edinme/cerez-politikasi" rel="external"><b>Çerez (Cookie) Politikasını</b></a> incelemenizi rica ederiz. Sitemizdeki kullanımınızı analiz etmek ve içerikleri kişiselleştirmek için çerezlerin kullanımına izin veriyorsanız, lütfen "Kabul Ediyorum" seçeneğini tıklayınız.</div>
+                <div class="col-md-9">Sitemizi kullanımınız veya ziyaretiniz sırasında çerezler kullanılmaktadır. Çerezler hakkında detaylı bilgi almak için <a href="#form-wrapper" rel="external"><b>Çerez (Cookie) Politikasını</b></a> incelemenizi rica ederiz. Sitemizdeki kullanımınızı analiz etmek ve içerikleri kişiselleştirmek için çerezlerin kullanımına izin veriyorsanız, lütfen "Kabul Ediyorum" seçeneğini tıklayınız.</div>
                 <div class="col-md-3 text-right"><button class="btn btn-primary btn-sm cookiemsgclose">Kabul Ediyorum</button></div>
             </div>
 
