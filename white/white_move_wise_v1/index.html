@@ -5,28 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Move Wise</title>
     <link rel="stylesheet" href="styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header class="header">
-      <div class="header__top">
-        <div class="header__contact">
-          <a href="mailto:movevisa@gmail.com" class="header__email"
-            >movevisa@gmail.com</a
-          >
-          <a href="tel:+0250000000" class="header__phone"
-            >+025 (00) 000 00 00</a
-          >
+      <div class="header__contact">
+        <div class="header__contact--left">
+          <div class="header__email">
+            <img src="./img/icons/email.svg" alt="Email" />
+            <a href="mailto:movevisa@gmail.com">movevisa@gmail.com</a>
+          </div>
+          <div class="header__phone">
+            <img src="./img/icons/phone.svg" alt="Phone" />
+            <a href="tel:+0250000000">+025 (00) 000 00 00</a>
+          </div>
         </div>
-        <nav class="header__nav">
+        <div class="header__contact--right">
+          <a href=""><img src="./img/icons/facebook.svg" alt="Facebook" /></a>
+          <a href=""
+            ><img src="./img/icons/inst.svg" class="icon" alt="Instagram"
+          /></a>
+          <a href=""><img src="./img/icons/x.svg" alt="X" /></a>
+          <a href=""><img src="./img/icons/whapp.svg" alt="WhatsApp" /></a>
+          <a href=""><img src="./img/icons/tg.svg" alt="Telegram" /></a>
+        </div>
+      </div>
+      <div class="header__nav">
+        <div class="header__logo">
+          <img src="./img/icons/logo.svg" alt="Logo" />
+        </div>
+        <nav class="header__nav-content">
           <ul class="header__menu">
             <li class="header__menu-item">
-              <a href="#" class="header__menu-link">Права</a>
+              <a href="#" class="header__menu-link"
+                >Права<img src="./img/icons/arrow.svg" alt="Arrow"
+              /></a>
             </li>
             <li class="header__menu-item">
-              <a href="#" class="header__menu-link">Визы</a>
+              <a href="#" class="header__menu-link"
+                >Визы<img src="./img/icons/arrow.svg" alt="Arrow"
+              /></a>
             </li>
             <li class="header__menu-item header__menu-item--dropdown">
-              <a href="#" class="header__menu-link">ВНЖ</a>
+              <a href="#" class="header__menu-link" id="vnzh"
+                >ВНЖ<img
+                  src="./img/icons/arrow-right.svg"
+                  id="vnzh-arrow"
+                  alt="Arrow"
+              /></a>
               <div class="header__dropdown">
                 <div class="header__dropdown-column">
                   <h4 class="header__dropdown-title">Европа</h4>
@@ -111,7 +143,9 @@
               </div>
             </li>
             <li class="header__menu-item">
-              <a href="#" class="header__menu-link">Гражданство</a>
+              <a href="#" class="header__menu-link"
+                >Гражданство<img src="./img/icons/arrow.svg" alt="Arrow"
+              /></a>
             </li>
             <li class="header__menu-item">
               <a href="#" class="header__menu-link">О нас</a>
@@ -124,9 +158,9 @@
             </li>
           </ul>
         </nav>
-        <div class="header__cta">
-          <a href="#" class="header__button">Связаться с нами</a>
-        </div>
+        <button class="header__button">
+          <a href="#">Связаться с нами</a>
+        </button>
       </div>
     </header>
 
