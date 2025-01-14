@@ -973,24 +973,31 @@ details summary {
   outline: none;
   list-style: none;
   cursor: pointer;
+  position: relative;
+  padding-right: 30px;
 }
 
 details summary::marker {
-  display: none; /* Hides default triangle marker */
+  display: none; /
 }
 
 details summary::after {
-  content: ">";
+  content: "";
   position: absolute;
+  top: 50%;
   right: 15px;
+  width: 24px;
+  height: 24px;
   font-size: 18px;
-  transform: rotate(0deg);
+transform: translateY(-50%) rotate(0deg);
+background-image: url('./img/icons/faq-arrow.svg');
+background-repeat: no-repeat;
+  background-size: contain;
   transition: transform 0.3s ease;
 }
 
 details[open] summary::after {
-  transform: rotate(90deg);
-}
+transform: translateY(-50%) rotate(90deg);}
 
 details p {
   color: #6d758f;
