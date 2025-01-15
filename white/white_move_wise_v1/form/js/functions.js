@@ -143,7 +143,7 @@ export function renderFormRegistrations(allFormClass) {
     <div class="error-phone"></div>
     </label>
   </div>
-  <div class="header__contact--right form-contacts ">
+  <div class="form-contacts header__contact--right" id="form-contacts">
             <a href=""
               ><svg
                 class="icon"

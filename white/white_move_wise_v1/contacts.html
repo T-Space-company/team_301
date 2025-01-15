@@ -4,14 +4,113 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Контакты</title>
-    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/contacts.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <script type="module" src="../main.js"></script>
+    <script type="module" src="main.js"></script>
+    <script type="module" src="./js/contacts.js"></script>
+    <script src="jquery-3.6.1.min.js"></script>
+
+    <script>
+      window.bgdataLayer = window.bgdataLayer || [];
+
+      function bge() {
+          bgdataLayer.push(arguments);
+      }
+      bge('init', '<?= $_GET['bge'] ?>');
+    </script>
+
+    <script type="application/javascript">
+      function getCookie(name) {
+        var v = document.cookie.match("(^|;) ?" + name + "=([^;]*)(;|$)");
+        return v ? v[2] : null;
+      }
+
+      function setCookie(name, value, days) {
+        var d = new Date();
+        d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days);
+        document.cookie =
+          name + "=" + value + ";path=/;expires=" + d.toGMTString();
+      }
+
+      function getSubId() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!"{subid}".match("{")) {
+          return "{subid}";
+        }
+        var clientSubid =
+          '<?php echo isset($client) ? $client->getSubid() : "" ?>';
+        if (!clientSubid.match(">")) {
+          return clientSubid;
+        }
+        if (params.get("_subid")) {
+          return params.get("_subid");
+        }
+        if (params.get("subid")) {
+          return params.get("subid");
+        }
+        if (getCookie("subid")) {
+          return getCookie("subid");
+        }
+      }
+
+      function getToken() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!"{token}".match("{")) {
+          return "{token}";
+        }
+        var clientToken =
+          '<?php echo isset($client) ? $client->getToken() : "" ?>';
+        if (!clientToken.match(">")) {
+          return clientToken;
+        }
+        if (params.get("_token")) {
+          return params.get("_token");
+        }
+        if (params.get("token")) {
+          return params.get("token");
+        }
+        if (getCookie("token")) {
+          return getCookie("token");
+        }
+        return null;
+      }
+
+      function getPixel() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!"{pixel}".match("{")) {
+          return "{pixel}";
+        }
+        if (params.get("pixel")) {
+          return params.get("pixel");
+        }
+
+        if (getCookie("pixel")) {
+          return getCookie("pixel");
+        }
+
+        return null;
+      }
+
+      if (typeof URLSearchParams === "function") {
+        document.addEventListener("DOMContentLoaded", function (event) {
+          var params = new URLSearchParams(document.location.search.substr(1));
+          var subid = getSubId();
+          var token = getToken();
+          var pixel = getPixel();
+
+          params.set("_token", token);
+          setCookie("pixel", pixel);
+          setCookie("token", token);
+          setCookie("subid", subid);
+        });
+      }
+    </script>
   </head>
   <body>
     <header class="header">
@@ -19,11 +118,11 @@
         <div class="header__contact">
           <div class="header__contact--left">
             <div class="header__email">
-              <img src="../img/icons/email.svg" alt="Email" />
+              <img src="./img/icons/email.svg" alt="Email" />
               <a href="mailto:movewise@gmail.com">movewise@gmail.com</a>
             </div>
             <div class="header__phone">
-              <img src="../img/icons/phone.svg" alt="Phone" />
+              <img src="./img/icons/phone.svg" alt="Phone" />
               <a href="tel:+0250000000">+025 (00) 000 00 00</a>
             </div>
           </div>
@@ -111,25 +210,29 @@
         </div>
         <div class="header__nav">
           <div class="header__logo">
-            <a href="../index.html"
-              ><img src="../img/icons/logo.svg" alt="Logo"
+            <a href="./index.html"
+              ><img src="./img/icons/logo.svg" alt="Logo"
             /></a>
           </div>
           <nav class="header__nav-content">
             <ul class="header__menu">
               <li class="header__menu-item">
                 <a href="#" class="header__menu-link"
-                  >Права<img src="../img/icons/arrow.svg" alt="Arrow"
+                  >Права<img src="./img/icons/arrow.svg" alt="Arrow"
                 /></a>
               </li>
               <li class="header__menu-item">
                 <a href="#" class="header__menu-link"
-                  >Визы<img src="../img/icons/arrow.svg" alt="Arrow"
+                  >Визы<img src="./img/icons/arrow.svg" alt="Arrow"
                 /></a>
               </li>
               <li class="header__menu-item header__menu-item--dropdown">
                 <div class="header__dropdown-wrapper">
-                  <a href="./services.html" class="header__menu-link" id="vnzh">
+                  <a
+                    href="./pages/services.html"
+                    class="header__menu-link"
+                    id="vnzh"
+                  >
                     ВНЖ
                     <svg
                       id="vnzh-arrow"
@@ -156,7 +259,7 @@
                         <ul class="header__dropdown-list--left">
                           <li class="header__dropdown-item">
                             <img
-                              src="../img/icons/flags/United Kingdom (GB).svg"
+                              src="./img/icons/flags/United Kingdom (GB).svg"
                               alt="GB"
                             />
                             <a href="#" class="header__dropdown-link"
@@ -165,21 +268,21 @@
                           </li>
                           <li class="header__dropdown-item">
                             <img
-                              src="../img/icons/flags/Denmark (DK).svg"
+                              src="./img/icons/flags/Denmark (DK).svg"
                               alt="DK"
                             />
                             <a href="#" class="header__dropdown-link">Дания</a>
                           </li>
                           <li class="header__dropdown-item">
                             <img
-                              src="../img/icons/flags/Italy (IT).svg"
+                              src="./img/icons/flags/Italy (IT).svg"
                               alt="IT"
                             />
                             <a href="#" class="header__dropdown-link">Италия</a>
                           </li>
                           <li class="header__dropdown-item">
                             <img
-                              src="../img/icons/flags/Netherlands (NL).svg"
+                              src="./img/icons/flags/Netherlands (NL).svg"
                               alt="NL"
                             />
                             <a href="#" class="header__dropdown-link"
@@ -188,14 +291,14 @@
                           </li>
                           <li class="header__dropdown-item">
                             <img
-                              src="../img/icons/flags/Serbia (RS).svg"
+                              src="./img/icons/flags/Serbia (RS).svg"
                               alt="RS"
                             />
                             <a href="#" class="header__dropdown-link">Сербия</a>
                           </li>
                           <li class="header__dropdown-item">
                             <img
-                              src="../img/icons/flags/Slovenia (SI).svg"
+                              src="./img/icons/flags/Slovenia (SI).svg"
                               alt="SI"
                             />
                             <a href="#" class="header__dropdown-link"
@@ -204,7 +307,7 @@
                           </li>
                           <li class="header__dropdown-item">
                             <img
-                              src="../img/icons/flags/Finland (FI).svg"
+                              src="./img/icons/flags/Finland (FI).svg"
                               alt="FI"
                             />
                             <a href="#" class="header__dropdown-link"
@@ -213,7 +316,7 @@
                           </li>
                           <li class="header__dropdown-item">
                             <img
-                              src="../img/icons/flags/Montenegro (ME).svg"
+                              src="./img/icons/flags/Montenegro (ME).svg"
                               alt="ME"
                             />
                             <a href="#" class="header__dropdown-link"
@@ -224,7 +327,7 @@
                         <ul ul class="header__dropdown-list--right">
                           <li class="header__dropdown-item">
                             <img
-                              src="../img/icons/flags/Germany (DE).svg"
+                              src="./img/icons/flags/Germany (DE).svg"
                               alt="DE"
                             />
                             <a href="#" class="header__dropdown-link"
@@ -233,7 +336,7 @@
                           </li>
                           <li class="header__dropdown-item">
                             <img
-                              src="../img/icons/flags/Spain (ES).svg"
+                              src="./img/icons/flags/Spain (ES).svg"
                               alt="ES"
                             />
                             <a href="#" class="header__dropdown-link"
@@ -242,7 +345,7 @@
                           </li>
                           <li class="header__dropdown-item">
                             <img
-                              src="../img/icons/flags/Luxembourg (LU).svg"
+                              src="./img/icons/flags/Luxembourg (LU).svg"
                               alt="LU"
                             />
                             <a href="#" class="header__dropdown-link"
@@ -251,7 +354,7 @@
                           </li>
                           <li class="header__dropdown-item">
                             <img
-                              src="../img/icons/flags/Portugal (PT).svg"
+                              src="./img/icons/flags/Portugal (PT).svg"
                               alt="PT"
                             />
                             <a href="#" class="header__dropdown-link"
@@ -260,7 +363,7 @@
                           </li>
                           <li class="header__dropdown-item">
                             <img
-                              src="../img/icons/flags/Slovakia (SK).svg"
+                              src="./img/icons/flags/Slovakia (SK).svg"
                               alt="SK"
                             />
                             <a href="#" class="header__dropdown-link"
@@ -269,14 +372,14 @@
                           </li>
                           <li class="header__dropdown-item">
                             <img
-                              src="../img/icons/flags/Flag_of_Turkey 1.svg"
+                              src="./img/icons/flags/Flag_of_Turkey 1.svg"
                               alt="TR"
                             />
                             <a href="#" class="header__dropdown-link">Турция</a>
                           </li>
                           <li class="header__dropdown-item">
                             <img
-                              src="../img/icons/flags/France (FR).svg"
+                              src="./img/icons/flags/France (FR).svg"
                               alt="FR"
                             />
                             <a href="#" class="header__dropdown-link"
@@ -292,7 +395,7 @@
                       <ul class="header__dropdown-list">
                         <li class="header__dropdown-item">
                           <img
-                            src="../img/icons/flags/Argentina (AR).svg"
+                            src="./img/icons/flags/Argentina (AR).svg"
                             alt="AR"
                           />
                           <a href="#" class="header__dropdown-link"
@@ -301,21 +404,21 @@
                         </li>
                         <li class="header__dropdown-item">
                           <img
-                            src="../img/icons/flags/Paraguay (PY).svg"
+                            src="./img/icons/flags/Paraguay (PY).svg"
                             alt="PY"
                           />
                           <a href="#" class="header__dropdown-link">Парагвай</a>
                         </li>
                         <li class="header__dropdown-item">
                           <img
-                            src="../img/icons/flags/Canada (CA).svg"
+                            src="./img/icons/flags/Canada (CA).svg"
                             alt="CA"
                           />
                           <a href="#" class="header__dropdown-link">Канада</a>
                         </li>
                         <li class="header__dropdown-item">
                           <img
-                            src="../img/icons/flags/Flag_of_the_United_States 1.svg"
+                            src="./img/icons/flags/Flag_of_the_United_States 1.svg"
                             alt="USA"
                           />
                           <a href="#" class="header__dropdown-link">США</a>
@@ -327,14 +430,14 @@
                       <ul class="header__dropdown-list">
                         <li class="header__dropdown-item">
                           <img
-                            src="../img/icons/flags/Flag_of_Bali 1.svg"
+                            src="./img/icons/flags/Flag_of_Bali 1.svg"
                             alt="Bali"
                           />
                           <a href="#" class="header__dropdown-link">Бали</a>
                         </li>
                         <li class="header__dropdown-item">
                           <img
-                            src="../img/icons/flags/Flag_of_the_United_Arab_Emirates 1.svg"
+                            src="./img/icons/flags/Flag_of_the_United_Arab_Emirates 1.svg"
                             alt="UAE"
                           />
                           <a href="#" class="header__dropdown-link">ОАЭ</a>
@@ -346,7 +449,7 @@
               </li>
               <li class="header__menu-item">
                 <a href="#" class="header__menu-link"
-                  >Гражданство<img src="../img/icons/arrow.svg" alt="Arrow"
+                  >Гражданство<img src="./img/icons/arrow.svg" alt="Arrow"
                 /></a>
               </li>
               <li class="header__menu-item">
@@ -373,68 +476,30 @@
         задач. Наши специалисты работают круглосуточно, чтобы предоставить вам
         необходимую информацию и поддержку.
       </p>
-      <div class="contact-section__info">
-        <div class="contact-section__details">
-          <div class="contact-section__detail">
-            <img src="./img/icons/email.svg" alt="Email Icon" />
-            <p>
-              Email:
-              <a href="mailto:contact@company.com">contact@company.com</a>
-            </p>
-          </div>
-          <div class="contact-section__detail">
-            <img src="./img/icons/phone.svg" alt="Phone Icon" />
-            <p>Phone: <a href="tel:+0250000000">+025 (00) 000 00 00</a></p>
-          </div>
-          <div class="contact-section__detail">
-            <img src="./img/icons/whatsapp.svg" alt="WhatsApp Icon" />
-            <p>WhatsApp: <a href="tel:+0250000000">+025 (00) 000 00 00</a></p>
-          </div>
+      <div class="contact-section__details">
+        <div class="contact-section__detail">
+          <img src="./img/contacts/mail.svg" alt="Email" />
+          <p>
+            Email:
+            <a href="mailto:contact@company.com">contact@company.com</a>
+          </p>
         </div>
+        <div class="contact-section__detail">
+          <img src="./img/contacts/phone.svg" alt="Phone" />
+          <p>Phone: <a href="tel:+0250000000">+025 (00) 000 00 00</a></p>
+        </div>
+        <div class="contact-section__detail">
+          <img src="./img/contacts/whatsapp.svg" alt="WhatsApp" />
+          <p>WhatsApp: <a href="tel:+0250000000">+025 (00) 000 00 00</a></p>
+        </div>
+      </div>
+      <div class="contact-section__info">
         <div class="contact-section__form">
-          <form class="form">
-            <div class="form__group">
-              <label for="name">Ваше имя</label>
-              <input type="text" id="name" placeholder="Brian Clark" />
-            </div>
-            <div class="form__group">
-              <label for="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                placeholder="example@youremail.com"
-              />
-            </div>
-            <div class="form__group">
-              <label for="phone">Номер телефона</label>
-              <input type="tel" id="phone" placeholder="(123) 456 - 7890" />
-            </div>
-            <div class="form__group">
-              <label for="platform">Логин и платформа</label>
-              <div class="form__platform">
-                <img src="./img/icons/telegram.svg" alt="Telegram Icon" />
-                <span>Telegram</span>
-              </div>
-              <input type="text" id="platform" placeholder="Логин" />
-            </div>
-            <div class="form__group">
-              <label for="message">Сообщение</label>
-              <textarea
-                id="message"
-                placeholder="Введите ваше сообщение..."
-              ></textarea>
-            </div>
-            <div class="form__checkbox">
-              <input type="checkbox" id="consent" />
-              <label for="consent">
-                Я согласен с Политикой конфиденциальности Move Visa. Подробную
-                информацию о том, как мы обрабатываем ваши персональные данные,
-                можно найти
-                <a href="#">здесь</a>.
-              </label>
-            </div>
-            <button type="submit" class="form__submit">ОТПРАВИТЬ</button>
-          </form>
+          <form
+            class="contact__form form _main-form contact-form freg thin rounded"
+            id="main-form"
+            method="post"
+          ></form>
         </div>
         <div class="contact-section__direct">
           <h3>Хотите связаться с нами напрямую?</h3>
@@ -443,16 +508,10 @@
             вас. Напишите нам через удобную социальную сеть, и мы быстро
             ответим!
           </p>
-          <div class="contact-section__social-icons">
-            <img src="./img/icons/facebook.svg" alt="Facebook" />
-            <img src="./img/icons/instagram.svg" alt="Instagram" />
-            <img src="./img/icons/twitter.svg" alt="Twitter" />
-            <img src="./img/icons/whatsapp.svg" alt="WhatsApp" />
-            <img src="./img/icons/email.svg" alt="Email" />
-          </div>
+          <div class="contact-section__social-icons"></div>
           <div class="contact-section__actions">
             <div class="action">
-              <img src="./img/icons/telegram.svg" alt="Telegram Icon" />
+              <img src="./img/contacts/tg.svg" alt="Telegram" />
               <div>
                 <h4>Добавить Telegram-канал</h4>
                 <p>Получайте новости и обновления первыми</p>
@@ -460,7 +519,7 @@
               <button class="action__button">Перейти к каналу</button>
             </div>
             <div class="action">
-              <img src="./img/icons/telegram.svg" alt="Telegram Icon" />
+              <img src="./img/contacts/tg.svg" alt="Telegram" />
               <div>
                 <h4>Связаться с менеджером</h4>
                 <p>Быстрый ответ на ваши вопросы.</p>
@@ -476,7 +535,7 @@
       <div class="footer__wrapper">
         <div class="footer__top">
           <div class="footer__logo">
-            <img src="../img/icons/logo-white.svg" alt="Logo" />
+            <img src="./img/icons/logo-white.svg" alt="Logo" />
             <ul class="footer__logo-list">
               <li><a href="">Terms</a></li>
               <li><a href="">Privacy</a></li>
@@ -543,11 +602,11 @@
         <div class="footer__bottom">
           <div class="header__contact--left">
             <div class="header__email--footer">
-              <img src="../img/icons/email-white.svg" alt="Email" />
+              <img src="./img/icons/email-white.svg" alt="Email" />
               <a href="mailto:movewise@gmail.com">movewise@gmail.com</a>
             </div>
             <div class="header__phone--footer">
-              <img src="../img/icons/phone-white.svg" alt="Phone" />
+              <img src="./img/icons/phone-white.svg" alt="Phone" />
               <a href="tel:+0250000000">+025 (00) 000 00 00</a>
             </div>
           </div>
@@ -635,5 +694,16 @@
         </div>
       </div>
     </footer>
+    <script src="loadAssets.js?v=3444371"></script>
+
+    <script type="application/javascript">
+      function getSubId() {
+        if (!"{subid}".match("{")) {
+          localStorage.setItem("subid", "{subid}");
+          return "{subid}";
+        }
+      }
+      getSubId();
+    </script>
   </body>
 </html>
