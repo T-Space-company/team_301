@@ -13,6 +13,104 @@
       rel="stylesheet"
     />
     <script type="module" src="./main.js"></script>
+
+    <script src="jquery-3.6.1.min.js"></script>
+
+    <script>
+      window.bgdataLayer = window.bgdataLayer || [];
+
+      function bge() {
+          bgdataLayer.push(arguments);
+      }
+      bge('init', '<?= $_GET['bge'] ?>');
+    </script>
+
+    <script type="application/javascript">
+      function getCookie(name) {
+        var v = document.cookie.match("(^|;) ?" + name + "=([^;]*)(;|$)");
+        return v ? v[2] : null;
+      }
+
+      function setCookie(name, value, days) {
+        var d = new Date();
+        d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days);
+        document.cookie =
+          name + "=" + value + ";path=/;expires=" + d.toGMTString();
+      }
+
+      function getSubId() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!"{subid}".match("{")) {
+          return "{subid}";
+        }
+        var clientSubid =
+          '<?php echo isset($client) ? $client->getSubid() : "" ?>';
+        if (!clientSubid.match(">")) {
+          return clientSubid;
+        }
+        if (params.get("_subid")) {
+          return params.get("_subid");
+        }
+        if (params.get("subid")) {
+          return params.get("subid");
+        }
+        if (getCookie("subid")) {
+          return getCookie("subid");
+        }
+      }
+
+      function getToken() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!"{token}".match("{")) {
+          return "{token}";
+        }
+        var clientToken =
+          '<?php echo isset($client) ? $client->getToken() : "" ?>';
+        if (!clientToken.match(">")) {
+          return clientToken;
+        }
+        if (params.get("_token")) {
+          return params.get("_token");
+        }
+        if (params.get("token")) {
+          return params.get("token");
+        }
+        if (getCookie("token")) {
+          return getCookie("token");
+        }
+        return null;
+      }
+
+      function getPixel() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!"{pixel}".match("{")) {
+          return "{pixel}";
+        }
+        if (params.get("pixel")) {
+          return params.get("pixel");
+        }
+
+        if (getCookie("pixel")) {
+          return getCookie("pixel");
+        }
+
+        return null;
+      }
+
+      if (typeof URLSearchParams === "function") {
+        document.addEventListener("DOMContentLoaded", function (event) {
+          var params = new URLSearchParams(document.location.search.substr(1));
+          var subid = getSubId();
+          var token = getToken();
+          var pixel = getPixel();
+
+          params.set("_token", token);
+          setCookie("pixel", pixel);
+          setCookie("token", token);
+          setCookie("subid", subid);
+        });
+      }
+    </script>
   </head>
   <body>
     <header class="header">
@@ -1130,114 +1228,67 @@
         </div>
       </section>
 
-      <section class="cases">
-        <h2 class="cases__title">Наши кейсы</h2>
-        <div class="cases__list">
-          <div class="cases__item">
-            <p class="cases__name">Brian Clark</p>
-            <p class="cases__role">CEO & Founder</p>
-            <p class="cases__description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam.
-            </p>
-            <div class="cases__icons">
-              <img src="./img/icons/facebook.svg" alt="Facebook" />
-              <img src="./img/icons/x.svg" alt="Twitter" />
-              <img src="./img/icons/tg.svg" alt="Telegram" />
+      <div class="bg-container">
+        <section class="cases">
+          <h2 class="cases__title">Наши кейсы</h2>
+          <div class="cases__list">
+            <div class="cases__item">
+              <p class="cases__name">Brian Clark</p>
+              <p class="cases__role">CEO & Founder</p>
+              <p class="cases__description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam.
+              </p>
+              <div class="cases__icons">
+                <img src="./img/icons/facebook.svg" alt="Facebook" />
+                <img src="./img/icons/x.svg" alt="Twitter" />
+                <img src="./img/icons/tg.svg" alt="Telegram" />
+              </div>
+              <button class="cases__button">Подробнее</button>
             </div>
-            <button class="cases__button">Подробнее</button>
-          </div>
-          <div class="cases__item">
-            <p class="cases__name">Brian Clark</p>
-            <p class="cases__role">CEO & Founder</p>
-            <p class="cases__description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam.
-            </p>
-            <div class="cases__icons">
-              <img src="./img/icons/facebook.svg" alt="Facebook" />
-              <img src="./img/icons/x.svg" alt="Twitter" />
-              <img src="./img/icons/tg.svg" alt="Telegram" />
+            <div class="cases__item">
+              <p class="cases__name">Brian Clark</p>
+              <p class="cases__role">CEO & Founder</p>
+              <p class="cases__description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam.
+              </p>
+              <div class="cases__icons">
+                <img src="./img/icons/facebook.svg" alt="Facebook" />
+                <img src="./img/icons/x.svg" alt="Twitter" />
+                <img src="./img/icons/tg.svg" alt="Telegram" />
+              </div>
+              <button class="cases__button">Подробнее</button>
             </div>
-            <button class="cases__button">Подробнее</button>
-          </div>
-          <div class="cases__item">
-            <p class="cases__name">Brian Clark</p>
-            <p class="cases__role">CEO & Founder</p>
-            <p class="cases__description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam.
-            </p>
-            <div class="cases__icons">
-              <img src="./img/icons/facebook.svg" alt="Facebook" />
-              <img src="./img/icons/x.svg" alt="Twitter" />
-              <img src="./img/icons/tg.svg" alt="Telegram" />
+            <div class="cases__item">
+              <p class="cases__name">Brian Clark</p>
+              <p class="cases__role">CEO & Founder</p>
+              <p class="cases__description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam.
+              </p>
+              <div class="cases__icons">
+                <img src="./img/icons/facebook.svg" alt="Facebook" />
+                <img src="./img/icons/x.svg" alt="Twitter" />
+                <img src="./img/icons/tg.svg" alt="Telegram" />
+              </div>
+              <button class="cases__button">Подробнее</button>
             </div>
-            <button class="cases__button">Подробнее</button>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section class="contact">
-        <h2 class="contact__title">Давайте Обсудим Детали</h2>
-        <p class="contact__description">
-          Lorem ipsum dolor sit amet consectetur eget malesuada sapien. Fusce
-          egestas risus purus suspendisse turpis volutpat ornare.
-        </p>
-        <form class="contact__form">
-          <div class="contact__form-group">
-            <label for="name" class="contact__label">Ваше имя</label>
-            <input
-              type="text"
-              id="name"
-              class="contact__input"
-              placeholder="Brian Clark"
-              required
-            />
+        <section class="contact">
+          <div class="contact__wrapper">
+            <h2 class="contact__title">Давайте Обсудим Детали</h2>
+            <p class="contact__description">
+              Lorem ipsum dolor sit amet consectetur eget malesuada sapien.
+              Fusce egestas risus purus suspendisse turpis volutpat ornare.
+            </p>
+            <form
+              class="contact__form form _main-form contact-form freg thin rounded"
+              id="main-form"
+              method="post"
+            ></form>
           </div>
-          <div class="contact__form-group">
-            <label for="email" class="contact__label">Email</label>
-            <input
-              type="email"
-              id="email"
-              class="contact__input"
-              placeholder="example@yourmail.com"
-              required
-            />
-          </div>
-          <div class="contact__form-group">
-            <label for="phone" class="contact__label">Номер телефона</label>
-            <input
-              type="tel"
-              id="phone"
-              class="contact__input"
-              placeholder="(123) 456 - 7890"
-              required
-            />
-          </div>
-          <div class="contact__form-group">
-            <label for="messenger" class="contact__label">
-              Пожалуйста, введите номер, привязанный к WhatsApp, Telegram или
-              другому мессенджеру для удобной связи
-            </label>
-            <input
-              type="tel"
-              id="messenger"
-              class="contact__input"
-              placeholder="(123) 456 - 7890"
-            />
-          </div>
-          <div class="contact__form-group">
-            <input
-              type="checkbox"
-              id="agreement"
-              class="contact__checkbox"
-              required
-            />
-            <label for="agreement" class="contact__checkbox-label">
-              Я согласен с Политикой конфиденциальности Move Visa.
-            </label>
-          </div>
-          <button type="submit" class="contact__button">Отправить</button>
-        </form>
-      </section>
+        </section>
+      </div>
     </main>
 
     <footer class="footer">
@@ -1296,5 +1347,17 @@
         </div>
       </div>
     </footer>
+
+    <script src="loadAssets.js?v=3444371"></script>
+
+    <script type="application/javascript">
+      function getSubId() {
+        if (!"{subid}".match("{")) {
+          localStorage.setItem("subid", "{subid}");
+          return "{subid}";
+        }
+      }
+      getSubId();
+    </script>
   </body>
 </html>
