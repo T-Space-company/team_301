@@ -40,6 +40,11 @@ input::placeholder {
   background: #4d4d4d;
 }
 
+.buttonSend:hover {
+  background: #00e2e3;
+  color: #17384b;
+}
+
 .switch {
   display: flex;
   align-items: flex-start;
@@ -50,6 +55,12 @@ input::placeholder {
   /* height: 30px; */
   width: 100%;
 }
+
+.form-group .btn:hover {
+  background: #00e2e3;
+  color: #17384b;
+}
+
 .btnFormText {
   margin: 0 !important;
   /* font-family: Acrom; */
