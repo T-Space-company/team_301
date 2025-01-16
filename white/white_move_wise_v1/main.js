@@ -2,22 +2,25 @@ const menuItem = document.querySelector(".header__menu-item--dropdown");
 const dropdown = document.querySelector(".header__dropdown");
 const vnzh = document.getElementById("vnzh");
 const arrow = document.getElementById("vnzh-arrow");
+const modalBtns = document.querySelectorAll(".button-form");
+const modal = document.getElementById("modal");
+const overlay = document.getElementById("overlay");
 
-vnzh.addEventListener("click", (event) => {
-  event.preventDefault();
+// vnzh.addEventListener("click", (event) => {
+//     event.preventDefault();
 
-  const isOpen = dropdown.classList.contains("open");
+//   const isOpen = dropdown.classList.contains("open");
 
-  if (isOpen) {
-    dropdown.classList.remove("open");
-    vnzh.classList.remove("active");
-    arrow.classList.remove("active");
-  } else {
-    dropdown.classList.add("open");
-    vnzh.classList.add("active");
-    arrow.classList.add("active");
-  }
-});
+//   if (isOpen) {
+//     dropdown.classList.remove("open");
+//     vnzh.classList.remove("active");
+//     arrow.classList.remove("active");
+//   } else {
+//     dropdown.classList.add("open");
+//     vnzh.classList.add("active");
+//     arrow.classList.add("active");
+//   }
+// });
 
 document.addEventListener("click", (event) => {
   if (!menuItem.contains(event.target)) {
@@ -47,4 +50,15 @@ dropdown.addEventListener("mouseleave", () => {
   dropdown.classList.remove("open");
   vnzh.classList.remove("active");
   arrow.classList.remove("active");
+});
+
+modalBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    modal.style.display = "block";
+    overlay.style.display = "block";
+  });
+});
+overlay.addEventListener("click", () => {
+  modal.style.display = "none";
+  overlay.style.display = "none";
 });

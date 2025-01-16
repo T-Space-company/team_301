@@ -1,0 +1,51 @@
+.aboutUs {
+  max-width: 1510px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 75px;
+  padding: 60px 0;
+}
+
+.aboutUs__main {
+  max-width: 915px;
+  width: 100%;
+  position: relative;
+}
+
+.aboutUs__heading {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 50px; /* 125% */
+  letter-spacing: -1.6px;
+}
+
+.aboutUs__text {
+  color: var(--TEXT-CLR, #5e6282);
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px; /* 144.444% */
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+.aboutUs__text--img {
+  position: absolute;
+  bottom: 0;
+  right: -60px;
+}
+
+.aboutUs__img {
+  position: relative;
+}
+.aboutUs__img-line {
+  position: absolute;
+  top: -35px;
+  right: -60px;
+}
