@@ -140,6 +140,7 @@ button {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  gap: 20px;
 }
 
 .header__nav-content {
@@ -1263,10 +1264,14 @@ margin-top: 16px;
 
 .contact__form {
     border-radius: 24px;
-border: 1px solid var(--Neutral-colors-400, #E1E4ED);
+ left: -250px;
+  border: 1px solid var(--Neutral-colors-400, #e1e4ed);
+  box-shadow: 0px 360px 101px 0px rgba(0, 0, 0, 0),
+    0px 230px 92px 0px rgba(0, 0, 0, 0.01),
+    0px 130px 78px 0px rgba(0, 0, 0, 0.05),
+    0px 58px 58px 0px rgba(0, 0, 0, 0.09), 0px 14px 32px 0px rgba(0, 0, 0, 0.1);
+  padding: 24px;
 background: var(--Neutral-colors-100, #FFF);
-box-shadow: 0px 360px 101px 0px rgba(0, 0, 0, 0.00), 0px 230px 92px 0px rgba(0, 0, 0, 0.01), 0px 130px 78px 0px rgba(0, 0, 0, 0.05), 0px 58px 58px 0px rgba(0, 0, 0, 0.09), 0px 14px 32px 0px rgba(0, 0, 0, 0.10);
-padding: 24px;
 flex-direction: column;
 align-items: flex-start;
 gap: 10px;
@@ -1276,7 +1281,6 @@ height: auto;
 max-width: 525px;
 width: 100%;
 position: relative;
-    left: -250px;
 }
 
 .contact__button{
@@ -1335,7 +1339,6 @@ line-height: 20px; /* 125% */
 .input-label--switch {
 line-height: 20px; /* 125% */
 gap: 25px;
-margin-top: 42px;
 }
 
 .input-group:nth-child(2) > .input-label {
@@ -1420,13 +1423,16 @@ height: 110px;
 
 .footer__nav {
     display: flex;
-    gap: 70px;
+    gap: 20px;
+    justify-content: space-evenly;
+    width: 100%;
 }
 
 .footer__nav-section {
-    max-width: 265px;
+    max-width: 180px;
     text-align: left;
 }
+
 
 .footer__nav-title {
     color: #FFF;
@@ -1567,4 +1573,166 @@ font-size: 12px;
 font-style: normal;
 font-weight: 400;
 line-height: 20.4px; /* 170% */
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 999;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+max-width: 600px;
+padding: 32px;
+  border-radius: 24px;
+border: 1px solid var(--Neutral-colors-400, #E1E4ED);
+background: var(--Neutral-colors-100, #FFF);
+box-shadow: 0px 360px 101px 0px rgba(0, 0, 0, 0.00), 0px 230px 92px 0px rgba(0, 0, 0, 0.01), 0px 130px 78px 0px rgba(0, 0, 0, 0.05), 0px 58px 58px 0px rgba(0, 0, 0, 0.09), 0px 14px 32px 0px rgba(0, 0, 0, 0.10);
+  display: none;
+  z-index: 1000;
+}
+
+.modal__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__title {
+  color: #000;
+font-family: Montserrat;
+font-size: 32px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+text-align: center;
+}
+
+.faq__form {
+  margin-top: 32px;
+}
+.custom-checkbox-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 20px;
+  margin-top: 42px;
+}
+
+.custom-checkbox {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.custom-checkbox__input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.custom-checkbox__svg {
+  width: 40px;
+  height: 40px;
+}
+
+.custom-checkbox__arrow {
+  stroke: transparent;
+  transition: stroke 0.3s ease;
+}
+
+.custom-checkbox__input:checked + .custom-checkbox__svg .custom-checkbox__arrow {
+  stroke: #00B6B7;
+}
+
+.custom-checkbox__text {
+  color: #17384B;
+font-family: Montserrat;
+font-size: 16px;
+font-style: normal;
+text-align: left;
+font-weight: 400;
+line-height: 20px; /* 125% */
+}
+
+.custom-checkbox__text a {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+@media (max-width: 1290px) {
+  .footer__nav-section {
+    max-width: 145px;
+    
+}
+  .footer__nav-title {
+    font-size: 22px;
+  }
+  .footer__nav-link {
+    font-size: 16px;
+  }
+  .footer__logo-list > li > a {
+    font-size: 16px;
+  }
+  .footer__logo > img {
+    width: 240px;
+  }
+  .footer__subscribe {
+    padding: 20px 20px;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 1220px) {
+  .header__email, .header__phone {
+    font-size: 16px;
+  }
+  
+  .header__menu-link {
+    font-size: 16px;
+  };
+   .footer__logo > img {
+    width: 220px;
+  }
+  .footer__nav-title {
+    font-size: 20px;
+  } 
+}
+
+@media (max-width: 1140px) {
+  .header__menu {
+    gap: 20px;
+  }
+  .header__email, .header__phone {
+    font-size: 14px;
+  }
+.header__menu-link {
+    font-size: 14px;
+  };
+  .header__button {
+    font-size: 16px;
+  }
+  .footer {
+    padding: 40px 25px;
+  }
+   .footer__logo > img {
+    width: 200px;
+  }
 }

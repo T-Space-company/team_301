@@ -225,11 +225,42 @@ export function renderFormRegistrations(allFormClass) {
             </a>
           </div>
 
-  <div class="form-group input-group group-checkbox">
-  <label class="switch input-label--switch">
-  <input class="form-control form-input form-checkbox" type="checkbox" style="width: 40px; height: 40px" required>
-  <span class="checkbox-text">Я согласен с Политикой конфиденциальности Move Wise. Подробную информацию о том, как мы обрабатываем ваши персональные данные, можно найти здесь*</span>
-  </label>
+  <div class="custom-checkbox-container form-group input-group group-checkbox">
+  
+  <label class="switch input-label--switch custom-checkbox">
+  <input class="form-control form-input form-checkbox custom-checkbox__input" type="checkbox" style="width: 40px; height: 40px" required>
+      <svg
+      class="custom-checkbox__svg"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+    >
+      <rect
+        class="custom-checkbox__box"
+        x="2"
+        y="2"
+        width="20"
+        height="20"
+        rx="4"
+        ry="4"
+        fill="white"
+        stroke="#17384B"
+        stroke-width="2"
+      ></rect>
+      <path
+        class="custom-checkbox__arrow"
+        d="M6 12l4 4 8-8"
+        stroke="transparent"
+        stroke-width="3"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></path>
+    </svg>
+</label>
+  <span class="custom-checkbox__text">
+    Я согласен с Политикой конфиденциальности Move Visa. Подробную информацию о том, как мы обрабатываем ваши персональные данные, можно найти
+    <a href="#">здесь*</a>
+  </span>
   </div>
 
   <div class="form-group">

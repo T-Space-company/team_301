@@ -2,6 +2,9 @@ const menuItem = document.querySelector(".header__menu-item--dropdown");
 const dropdown = document.querySelector(".header__dropdown");
 const vnzh = document.getElementById("vnzh");
 const arrow = document.getElementById("vnzh-arrow");
+const modalBtns = document.querySelectorAll(".button-form");
+const modal = document.getElementById("modal");
+const overlay = document.getElementById("overlay");
 
 // vnzh.addEventListener("click", (event) => {
 //     event.preventDefault();
@@ -47,4 +50,15 @@ dropdown.addEventListener("mouseleave", () => {
   dropdown.classList.remove("open");
   vnzh.classList.remove("active");
   arrow.classList.remove("active");
+});
+
+modalBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    modal.style.display = "block";
+    overlay.style.display = "block";
+  });
+});
+overlay.addEventListener("click", () => {
+  modal.style.display = "none";
+  overlay.style.display = "none";
 });

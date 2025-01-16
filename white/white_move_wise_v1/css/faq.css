@@ -32,7 +32,7 @@
 .faq-sect__list {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin-top: 70px;
 }
 
 .faq-sect__item {
@@ -60,7 +60,7 @@
   outline: none;
 
   color: #000;
-  text-align: right;
+  text-align: left;
   font-family: Montserrat;
   font-size: 24px;
   font-style: normal;
@@ -117,5 +117,44 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 1220px) {
+  .faq-sect__number {
+    font-size: 22px;
+  }
+  .faq-sect__summary {
+    font-size: 22px;
+  }
+  .faq-sect__content {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 1140px) {
+  .faq-sect__title {
+    font-size: 36px;
+  }
+  .faq-sect__description {
+    font-size: 16px;
+  }
+  .faq-sect__number {
+    font-size: 20px;
+  }
+  .faq-sect__summary {
+    font-size: 20px;
+  }
+  .faq-sect__content {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1060px) {
+  .faq-sect__number {
+    font-size: 18px;
+  }
+  .faq-sect__summary {
+    font-size: 18px;
   }
 }

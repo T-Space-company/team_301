@@ -461,16 +461,16 @@
                 >
               </li>
               <li class="header__menu-item">
-                <a href="./pages/contacts.html" class="header__menu-link"
+                <a href="./contacts.html" class="header__menu-link"
                   >Контакты</a
                 >
               </li>
               <li class="header__menu-item">
-                <a href="./pages/faq.html" class="header__menu-link">FAQ</a>
+                <a href="./faq.html" class="header__menu-link">FAQ</a>
               </li>
             </ul>
           </nav>
-          <button class="header__button">
+          <button class="header__button button-form" >
             <a href="#">Связаться с нами</a>
           </button>
         </div>
@@ -485,7 +485,7 @@
             Работайте, путешествуйте и наслаждайтесь жизнью по всему миру — мы
             позаботимся обо всём
           </p>
-          <button class="hero__button">
+          <button class="hero__button button-form" >
             <a href="#">Связаться с нами</a>
           </button>
           <div class="hero__info">
@@ -970,7 +970,7 @@
             классической латыни 45 года н.э., то есть более двух тысячелетий
             назад. 
           </p>
-          <button class="team__button">Проконсультироваться</button>
+          <button class="team__button button-form">Проконсультироваться</button>
           <img src="./img/map.png" alt="Map" />
         </div>
         <div class="team--right">
@@ -1487,6 +1487,17 @@
         </div>
       </div>
     </footer>
+      <div class="overlay" id="overlay"></div>
+    <div class="modal" id="modal">
+      <div class="modal__content">
+        <h3 class="modal__title">Контактная форма</h3>
+        <form
+          class="faq__form form _main-form contact-form freg thin rounded"
+          id="main-form"
+          method="post"
+        ></form>
+      </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="loadAssets.js?v=3444371"></script>
