@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Move Wise</title>
     <link rel="stylesheet" href="./css/styles.css" />
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,7 +17,6 @@
       rel="stylesheet"
     />
     <script type="module" src="./main.js"></script>
-
     <script src="jquery-3.6.1.min.js"></script>
 
     <script>
@@ -1049,43 +1052,47 @@
             набор слов, но это не совсем так.
           </p>
         </div>
-        <div class="testimonials__list">
-          <div class="testimonials__item">
-            <img
-              src="./img/vid1.png"
-              alt="Видео"
-              class="testimonials__video-thumbnail"
-            />
-            <span class="testimonials__text">Lorem Ipsum</span>
-            <p class="testimonials__subtext">
-              Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский
-              набор слов, но это не совсем так.
-            </p>
+        <div class="swiper">
+          <div class="testimonials__list swiper-wrapper">
+            
+            <div class="testimonials__item swiper-slide">
+              <img
+                src="./img/vid1.png"
+                alt="Видео"
+                class="testimonials__video-thumbnail"
+              />
+              <span class="testimonials__text">Lorem Ipsum</span>
+              <p class="testimonials__subtext">
+                Многие думают, что Lorem Ipsum - взятый с потолка
+                псевдо-латинский набор слов, но это не совсем так.
+              </p>
+            </div>
+            <div class="testimonials__item swiper-slide">
+              <img
+                src="./img/vid2.png"
+                alt="Видео"
+                class="testimonials__video-thumbnail"
+              />
+              <span class="testimonials__text">Lorem Ipsum</span>
+              <p class="testimonials__subtext">
+                Многие думают, что Lorem Ipsum - взятый с потолка
+                псевдо-латинский набор слов, но это не совсем так.
+              </p>
+            </div>
+            <div class="testimonials__item swiper-slide">
+              <img
+                src="./img/vid3.png"
+                alt="Видео"
+                class="testimonials__video-thumbnail"
+              />
+              <span class="testimonials__text">Lorem Ipsum</span>
+              <p class="testimonials__subtext">
+                Многие думают, что Lorem Ipsum - взятый с потолка
+                псевдо-латинский набор слов, но это не совсем так.
+              </p>
+            </div>
           </div>
-          <div class="testimonials__item">
-            <img
-              src="./img/vid2.png"
-              alt="Видео"
-              class="testimonials__video-thumbnail"
-            />
-            <span class="testimonials__text">Lorem Ipsum</span>
-            <p class="testimonials__subtext">
-              Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский
-              набор слов, но это не совсем так.
-            </p>
-          </div>
-          <div class="testimonials__item">
-            <img
-              src="./img/vid3.png"
-              alt="Видео"
-              class="testimonials__video-thumbnail"
-            />
-            <span class="testimonials__text">Lorem Ipsum</span>
-            <p class="testimonials__subtext">
-              Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский
-              набор слов, но это не совсем так.
-            </p>
-          </div>
+          <div class="swiper-pagination"></div>
         </div>
       </section>
 
@@ -1251,46 +1258,52 @@
       <div class="bg-container">
         <section class="cases">
           <h2 class="cases__title">Наши кейсы</h2>
-          <div class="cases__list">
-            <div class="cases__item">
-              <p class="cases__name">Brian Clark</p>
-              <p class="cases__role">CEO & Founder</p>
-              <p class="cases__description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam.
-              </p>
-              <div class="cases__icons">
-                <img src="./img/icons/facebook.svg" alt="Facebook" />
-                <img src="./img/icons/x.svg" alt="Twitter" />
-                <img src="./img/icons/tg.svg" alt="Telegram" />
+          <div class="swiper" id="swiper--bottom">
+            <div class="cases__list swiper-wrapper">
+              <div class="cases__item swiper-slide">
+                <p class="cases__name">Brian Clark</p>
+                <p class="cases__role">CEO & Founder</p>
+                <p class="cases__description">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Nullam.
+                </p>
+                <div class="cases__icons">
+                  <img src="./img/icons/facebook.svg" alt="Facebook" />
+                  <img src="./img/icons/x.svg" alt="Twitter" />
+                  <img src="./img/icons/tg.svg" alt="Telegram" />
+                </div>
+                <button class="cases__button">Подробнее</button>
               </div>
-              <button class="cases__button">Подробнее</button>
-            </div>
-            <div class="cases__item">
-              <p class="cases__name">Brian Clark</p>
-              <p class="cases__role">CEO & Founder</p>
-              <p class="cases__description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam.
-              </p>
-              <div class="cases__icons">
-                <img src="./img/icons/facebook.svg" alt="Facebook" />
-                <img src="./img/icons/x.svg" alt="Twitter" />
-                <img src="./img/icons/tg.svg" alt="Telegram" />
+              <div class="cases__item swiper-slide">
+                <p class="cases__name">Brian Clark</p>
+                <p class="cases__role">CEO & Founder</p>
+                <p class="cases__description">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Nullam.
+                </p>
+                <div class="cases__icons">
+                  <img src="./img/icons/facebook.svg" alt="Facebook" />
+                  <img src="./img/icons/x.svg" alt="Twitter" />
+                  <img src="./img/icons/tg.svg" alt="Telegram" />
+                </div>
+                <button class="cases__button">Подробнее</button>
               </div>
-              <button class="cases__button">Подробнее</button>
-            </div>
-            <div class="cases__item">
-              <p class="cases__name">Brian Clark</p>
-              <p class="cases__role">CEO & Founder</p>
-              <p class="cases__description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam.
-              </p>
-              <div class="cases__icons">
-                <img src="./img/icons/facebook.svg" alt="Facebook" />
-                <img src="./img/icons/x.svg" alt="Twitter" />
-                <img src="./img/icons/tg.svg" alt="Telegram" />
+              <div class="cases__item swiper-slide">
+                <p class="cases__name">Brian Clark</p>
+                <p class="cases__role">CEO & Founder</p>
+                <p class="cases__description">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Nullam.
+                </p>
+                <div class="cases__icons">
+                  <img src="./img/icons/facebook.svg" alt="Facebook" />
+                  <img src="./img/icons/x.svg" alt="Twitter" />
+                  <img src="./img/icons/tg.svg" alt="Telegram" />
+                </div>
+                <button class="cases__button">Подробнее</button>
               </div>
-              <button class="cases__button">Подробнее</button>
             </div>
+            <div class="swiper-pagination"></div>
           </div>
         </section>
 
@@ -1475,6 +1488,7 @@
       </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="loadAssets.js?v=3444371"></script>
 
     <script type="application/javascript">
@@ -1485,6 +1499,20 @@
         }
       }
       getSubId();
+    </script>
+
+     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const swiper = new Swiper('.swiper', {
+              loop: false,
+              slidesPerView: 3,
+              spaceBetween: 20,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+            });
+        });
     </script>
   </body>
 </html>
