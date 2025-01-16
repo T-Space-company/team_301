@@ -40,7 +40,7 @@ input::placeholder {
   background: #4d4d4d;
 }
 
-.buttonSend:hover {
+button:hover {
   background: #00e2e3;
   color: #17384b;
 }
