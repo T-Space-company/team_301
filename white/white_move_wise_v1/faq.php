@@ -466,6 +466,21 @@
         </div>
       </div>
     </header>
+    <nav class="mobile-menu">
+    <ul class="mobile-menu__list">
+      <li><a href="#">Права</a></li>
+      <li><a href="#">Визы</a></li>
+      <li><a href="#">ВНЖ</a></li>
+      <li><a href="#">Гражданство</a></li>
+      <li><a href="#">О нас</a></li>
+      <li><a href="#">Контакты</a></li>
+      <li><a href="#">FAQ</a></li>
+    </ul>
+    <div class="mobile-menu__footer">
+      <button class="hero__button contact-btn"><a href="">Связаться с нами</a></button>
+      
+    </div>
+  </nav>
     <main class="faq-section">
       <h2 class="faq-sect__title">Частые вопросы</h2>
       <p class="faq-sect__description">

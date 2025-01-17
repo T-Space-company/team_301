@@ -5,6 +5,16 @@ const arrow = document.getElementById("vnzh-arrow");
 const modalBtns = document.querySelectorAll(".button-form");
 const modal = document.getElementById("modal");
 const overlay = document.getElementById("overlay");
+const burgerBtn = document.querySelector(".header__burger-btn");
+const mobileMenu = document.querySelector(".mobile-menu");
+const body = document.body;
+
+function toggleMenu() {
+  mobileMenu.classList.toggle("active");
+  body.classList.toggle("no-scroll");
+}
+
+burgerBtn.addEventListener("click", toggleMenu);
 
 // vnzh.addEventListener("click", (event) => {
 //     event.preventDefault();

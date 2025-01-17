@@ -64,7 +64,7 @@ button:hover {
 .btnFormText {
   margin: 0 !important;
   /* font-family: Acrom; */
-  font-size: 14px;
+  font-size: 18px;
 }
 
 @media (min-width: 769px) {

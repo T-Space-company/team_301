@@ -15,7 +15,7 @@
     <script type="module" src="./main.js"></script>
   </head>
   <body>
-    <header class="header">
+     <header class="header">
       <div class="header__content">
         <div class="header__contact">
           <div class="header__contact--left">
@@ -111,6 +111,7 @@
           </div>
         </div>
         <div class="header__nav">
+          <button class="header__burger-btn" type="button"><img src="./img/mobile/burger.svg" alt="Menu"></button>
           <div class="header__logo">
             <a href="./index.php">
               <img src="./img/icons/logo.svg" alt="Logo" />
@@ -362,6 +363,7 @@
             </ul>
           </nav>
           <button class="header__button button-form">
+            <img src="./img/mobile/support.svg" alt="Support">
             <a href="#">Связаться с нами</a>
           </button>
         </div>

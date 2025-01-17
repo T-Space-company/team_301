@@ -106,3 +106,40 @@
   object-fit: cover;
   border-radius: 8px;
 }
+
+@media (max-width: 1024px) {
+  .case-section__content {
+    flex-direction: column-reverse;
+    margin-top: 24px;
+    padding: 0;
+    box-shadow: none;
+  }
+  .case-section__title {
+    margin-bottom: 0;
+    font-size: 24px;
+  }
+  .case-section__subtitle {
+    font-size: 18px;
+  }
+  .case-section__intro {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 24px;
+  }
+  .case-section__paragraph {
+    font-size: 16px;
+  }
+  .case-section__images {
+    max-width: 500px;
+    width: 100%;
+    align-self: center;
+  }
+  .case-section__thumbnail {
+    max-width: 151px;
+    min-width: 80px;
+  }
+  .case-section__main-image {
+    max-width: 500px;
+    min-width: 280px;
+  }
+}
