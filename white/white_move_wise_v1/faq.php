@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>О нас</title>
+    <title>FAQ</title>
     <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="./css/about-us.css" />
+    <link rel="stylesheet" href="./css/faq.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -227,11 +227,7 @@
               </li>
               <li class="header__menu-item header__menu-item--dropdown">
                 <div class="header__dropdown-wrapper">
-                  <a
-                    href="./pages/services.html"
-                    class="header__menu-link"
-                    id="vnzh"
-                  >
+                  <a href="./services.php" class="header__menu-link" id="vnzh">
                     ВНЖ
                     <svg
                       id="vnzh-arrow"
@@ -452,15 +448,13 @@
                 /></a>
               </li>
               <li class="header__menu-item">
-                <a href="./pages/about-us.html" class="header__menu-link"
-                  >О нас</a
-                >
+                <a href="./about-us.php" class="header__menu-link">О нас</a>
               </li>
               <li class="header__menu-item">
-                <a href="./contacts.html" class="header__menu-link">Контакты</a>
+                <a href="./contacts.php" class="header__menu-link">Контакты</a>
               </li>
               <li class="header__menu-item">
-                <a href="./faq.html" class="header__menu-link">FAQ</a>
+                <a href="./faq.php" class="header__menu-link">FAQ</a>
               </li>
             </ul>
           </nav>
@@ -470,41 +464,96 @@
         </div>
       </div>
     </header>
-    <main class="main" style="padding: 0 60px">
-      <section class="aboutUs">
-        <div class="aboutUs__main">
-          <h2 class="aboutUs__heading">
-            Наша история, миссия и подход к работе
-          </h2>
-          <p class="aboutUs__text">
-            Мы — команда экспертов, которая помогает людям переезжать и строить
-            жизнь за границей. Наш опыт и профессионализм позволили успешно
-            оформить документы тысячам клиентов. Мы ценим ваше время и делаем
-            процесс переезда простым и понятным. <br /><br />Наша миссия —
-            поддерживать вас на каждом этапе пути: от первой консультации до
-            полного завершения процесса. Мы работаем прозрачно, ответственно и с
-            заботой о ваших интересах. <br /><br />Доверяя нам, вы получаете не
-            только услуги, но и уверенность в своём будущем.
-          </p>
-          <button class="header__button button-form">
-            <a href="#">Связаться с нами</a>
-          </button>
-          <img
-            src="./img/about-us/passport.svg"
-            alt="Picture"
-            class="aboutUs__text--img"
-          />
-        </div>
-        <div class="aboutUs__img">
-          <img src="./img/about-us/main.png" alt="Photo" />
-          <img
-            src="./img/about-us/line.svg"
-            alt="Line"
-            class="aboutUs__img-line"
-          />
-        </div>
-      </section>
+    <main class="faq-section">
+      <h2 class="faq-sect__title">Частые вопросы</h2>
+      <p class="faq-sect__description">
+        Lorem ipsum dolor sit amet consectetur eget maecenas sapien fusce
+        egestas risus purus suspendisse turpis volutpat onare.
+      </p>
+      <ul class="faq-sect__list">
+        <li class="faq-sect__item">
+          <details class="faq-sect__details">
+            <summary class="faq-sect__summary">
+              <span class="faq-sect__number">01</span>
+              Почему стоит выбрать именно нас?
+            </summary>
+          </details>
+        </li>
+        <li class="faq-sect__item">
+          <details class="faq-sect__details" open>
+            <summary class="faq-sect__summary">
+              <span class="faq-sect__number">02</span>
+              Подписываете ли вы договор о сотрудничестве?
+            </summary>
+            <p class="faq-sect__content">
+              Да, подписываем. Вы можете не переживать о безопасности своих
+              данных и средств, ведь мы работаем официально и платим налоги. У
+              нас есть официальный адрес, офис, можно платить по банковским
+              реквизитам фирмы, оплата разделена в несколько этапов и так далее.
+            </p>
+          </details>
+        </li>
+        <li class="faq-sect__item">
+          <details class="faq-sect__details">
+            <summary class="faq-sect__summary">
+              <span class="faq-sect__number">03</span>
+              Как происходит оплата?
+            </summary>
+          </details>
+        </li>
+        <li class="faq-sect__item">
+          <details class="faq-sect__details">
+            <summary class="faq-sect__summary">
+              <span class="faq-sect__number">04</span>
+              Необходимо ли личное присутствие в выбранной стране для оформления
+              документов?
+            </summary>
+          </details>
+        </li>
+        <li class="faq-sect__item">
+          <details class="faq-sect__details">
+            <summary class="faq-sect__summary">
+              <span class="faq-sect__number">05</span>
+              Возможно ли подписать договор онлайн?
+            </summary>
+          </details>
+        </li>
+        <li class="faq-sect__item">
+          <details class="faq-sect__details">
+            <summary class="faq-sect__summary">
+              <span class="faq-sect__number">06</span>
+              Нужно ли личное присутствие во время подготовки документов для
+              подачи?
+            </summary>
+          </details>
+        </li>
+        <li class="faq-sect__item">
+          <details class="faq-sect__details">
+            <summary class="faq-sect__summary">
+              <span class="faq-sect__number">07</span>
+              Есть ли у вас офис и в каких странах?
+            </summary>
+          </details>
+        </li>
+        <li class="faq-sect__item">
+          <details class="faq-sect__details">
+            <summary class="faq-sect__summary">
+              <span class="faq-sect__number">08</span>
+              В какую страну можно быстрее всего оформить документы?
+            </summary>
+          </details>
+        </li>
+        <li class="faq-sect__item">
+          <details class="faq-sect__details">
+            <summary class="faq-sect__summary">
+              <span class="faq-sect__number">09</span>
+              В чем отличие визы, ВНЖ, ПМЖ и гражданства?
+            </summary>
+          </details>
+        </li>
+      </ul>
     </main>
+
     <footer class="footer">
       <div class="footer__wrapper">
         <div class="footer__top">
@@ -673,13 +722,12 @@
       <div class="modal__content">
         <h3 class="modal__title">Контактная форма</h3>
         <form
-          class="faq__form form _main-form contact-form freg thin rounded"
+          class="modal__form form _main-form contact-form freg thin rounded"
           id="main-form"
           method="post"
         ></form>
       </div>
     </div>
-
     <script src="loadAssets.js?v=3444371"></script>
 
     <script type="application/javascript">

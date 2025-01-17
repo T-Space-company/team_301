@@ -3,16 +3,113 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Наши кейсы</title>
-    <link rel="stylesheet" href="../css/styles.css" />
-    <link rel="stylesheet" href="../css/our-cases.css" />
+    <title>Сервисы</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/services.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <script type="module" src="../main.js"></script>
+    <script type="module" src="./main.js"></script>
+    <script src="jquery-3.6.1.min.js"></script>
+
+    <script>
+      window.bgdataLayer = window.bgdataLayer || [];
+
+      function bge() {
+          bgdataLayer.push(arguments);
+      }
+      bge('init', '<?= $_GET['bge'] ?>');
+    </script>
+
+    <script type="application/javascript">
+      function getCookie(name) {
+        var v = document.cookie.match("(^|;) ?" + name + "=([^;]*)(;|$)");
+        return v ? v[2] : null;
+      }
+
+      function setCookie(name, value, days) {
+        var d = new Date();
+        d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days);
+        document.cookie =
+          name + "=" + value + ";path=/;expires=" + d.toGMTString();
+      }
+
+      function getSubId() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!"{subid}".match("{")) {
+          return "{subid}";
+        }
+        var clientSubid =
+          '<?php echo isset($client) ? $client->getSubid() : "" ?>';
+        if (!clientSubid.match(">")) {
+          return clientSubid;
+        }
+        if (params.get("_subid")) {
+          return params.get("_subid");
+        }
+        if (params.get("subid")) {
+          return params.get("subid");
+        }
+        if (getCookie("subid")) {
+          return getCookie("subid");
+        }
+      }
+
+      function getToken() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!"{token}".match("{")) {
+          return "{token}";
+        }
+        var clientToken =
+          '<?php echo isset($client) ? $client->getToken() : "" ?>';
+        if (!clientToken.match(">")) {
+          return clientToken;
+        }
+        if (params.get("_token")) {
+          return params.get("_token");
+        }
+        if (params.get("token")) {
+          return params.get("token");
+        }
+        if (getCookie("token")) {
+          return getCookie("token");
+        }
+        return null;
+      }
+
+      function getPixel() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!"{pixel}".match("{")) {
+          return "{pixel}";
+        }
+        if (params.get("pixel")) {
+          return params.get("pixel");
+        }
+
+        if (getCookie("pixel")) {
+          return getCookie("pixel");
+        }
+
+        return null;
+      }
+
+      if (typeof URLSearchParams === "function") {
+        document.addEventListener("DOMContentLoaded", function (event) {
+          var params = new URLSearchParams(document.location.search.substr(1));
+          var subid = getSubId();
+          var token = getToken();
+          var pixel = getPixel();
+
+          params.set("_token", token);
+          setCookie("pixel", pixel);
+          setCookie("token", token);
+          setCookie("subid", subid);
+        });
+      }
+    </script>
   </head>
   <body>
     <header class="header">
@@ -20,11 +117,11 @@
         <div class="header__contact">
           <div class="header__contact--left">
             <div class="header__email">
-              <img src="../img/icons/email.svg" alt="Email" />
+              <img src="./img/icons/email.svg" alt="Email" />
               <a href="mailto:movewise@gmail.com">movewise@gmail.com</a>
             </div>
             <div class="header__phone">
-              <img src="../img/icons/phone.svg" alt="Phone" />
+              <img src="./img/icons/phone.svg" alt="Phone" />
               <a href="tel:+0250000000">+025 (00) 000 00 00</a>
             </div>
           </div>
@@ -112,25 +209,25 @@
         </div>
         <div class="header__nav">
           <div class="header__logo">
-            <a href="../index.html">
-              <img src="../img/icons/logo.svg" alt="Logo" />
+            <a href="./index.php">
+              <img src="./img/icons/logo.svg" alt="Logo" />
             </a>
           </div>
           <nav class="header__nav-content">
             <ul class="header__menu">
               <li class="header__menu-item">
                 <a href="#" class="header__menu-link"
-                  >Права<img src="../img/icons/arrow.svg" alt="Arrow"
+                  >Права<img src="./img/icons/arrow.svg" alt="Arrow"
                 /></a>
               </li>
               <li class="header__menu-item">
                 <a href="#" class="header__menu-link"
-                  >Визы<img src="../img/icons/arrow.svg" alt="Arrow"
+                  >Визы<img src="./img/icons/arrow.svg" alt="Arrow"
                 /></a>
               </li>
               <li class="header__menu-item header__menu-item--dropdown">
                 <div class="header__dropdown-wrapper">
-                  <a href="./services.html" class="header__menu-link" id="vnzh">
+                  <a href="./services.php" class="header__menu-link" id="vnzh">
                     ВНЖ
                     <svg
                       id="vnzh-arrow"
@@ -157,7 +254,7 @@
                         <ul class="header__dropdown-list--left">
                           <li class="header__dropdown-item">
                             <img
-                              src="../img/icons/flags/United Kingdom (GB).svg"
+                              src="./img/icons/flags/United Kingdom (GB).svg"
                               alt="GB"
                             />
                             <a href="#" class="header__dropdown-link"
@@ -166,21 +263,21 @@
                           </li>
                           <li class="header__dropdown-item">
                             <img
-                              src="../img/icons/flags/Denmark (DK).svg"
+                              src="./img/icons/flags/Denmark (DK).svg"
                               alt="DK"
                             />
                             <a href="#" class="header__dropdown-link">Дания</a>
                           </li>
                           <li class="header__dropdown-item">
                             <img
-                              src="../img/icons/flags/Italy (IT).svg"
+                              src="./img/icons/flags/Italy (IT).svg"
                               alt="IT"
                             />
                             <a href="#" class="header__dropdown-link">Италия</a>
                           </li>
                           <li class="header__dropdown-item">
                             <img
-                              src="../img/icons/flags/Netherlands (NL).svg"
+                              src="./img/icons/flags/Netherlands (NL).svg"
                               alt="NL"
                             />
                             <a href="#" class="header__dropdown-link"
@@ -189,14 +286,14 @@
                           </li>
                           <li class="header__dropdown-item">
                             <img
-                              src="../img/icons/flags/Serbia (RS).svg"
+                              src="./img/icons/flags/Serbia (RS).svg"
                               alt="RS"
                             />
                             <a href="#" class="header__dropdown-link">Сербия</a>
                           </li>
                           <li class="header__dropdown-item">
                             <img
-                              src="../img/icons/flags/Slovenia (SI).svg"
+                              src="./img/icons/flags/Slovenia (SI).svg"
                               alt="SI"
                             />
                             <a href="#" class="header__dropdown-link"
@@ -205,7 +302,7 @@
                           </li>
                           <li class="header__dropdown-item">
                             <img
-                              src="../img/icons/flags/Finland (FI).svg"
+                              src="./img/icons/flags/Finland (FI).svg"
                               alt="FI"
                             />
                             <a href="#" class="header__dropdown-link"
@@ -214,7 +311,7 @@
                           </li>
                           <li class="header__dropdown-item">
                             <img
-                              src="../img/icons/flags/Montenegro (ME).svg"
+                              src="./img/icons/flags/Montenegro (ME).svg"
                               alt="ME"
                             />
                             <a href="#" class="header__dropdown-link"
@@ -225,7 +322,7 @@
                         <ul ul class="header__dropdown-list--right">
                           <li class="header__dropdown-item">
                             <img
-                              src="../img/icons/flags/Germany (DE).svg"
+                              src="./img/icons/flags/Germany (DE).svg"
                               alt="DE"
                             />
                             <a href="#" class="header__dropdown-link"
@@ -234,7 +331,7 @@
                           </li>
                           <li class="header__dropdown-item">
                             <img
-                              src="../img/icons/flags/Spain (ES).svg"
+                              src="./img/icons/flags/Spain (ES).svg"
                               alt="ES"
                             />
                             <a href="#" class="header__dropdown-link"
@@ -243,7 +340,7 @@
                           </li>
                           <li class="header__dropdown-item">
                             <img
-                              src="../img/icons/flags/Luxembourg (LU).svg"
+                              src="./img/icons/flags/Luxembourg (LU).svg"
                               alt="LU"
                             />
                             <a href="#" class="header__dropdown-link"
@@ -252,7 +349,7 @@
                           </li>
                           <li class="header__dropdown-item">
                             <img
-                              src="../img/icons/flags/Portugal (PT).svg"
+                              src="./img/icons/flags/Portugal (PT).svg"
                               alt="PT"
                             />
                             <a href="#" class="header__dropdown-link"
@@ -261,7 +358,7 @@
                           </li>
                           <li class="header__dropdown-item">
                             <img
-                              src="../img/icons/flags/Slovakia (SK).svg"
+                              src="./img/icons/flags/Slovakia (SK).svg"
                               alt="SK"
                             />
                             <a href="#" class="header__dropdown-link"
@@ -270,14 +367,14 @@
                           </li>
                           <li class="header__dropdown-item">
                             <img
-                              src="../img/icons/flags/Flag_of_Turkey 1.svg"
+                              src="./img/icons/flags/Flag_of_Turkey 1.svg"
                               alt="TR"
                             />
                             <a href="#" class="header__dropdown-link">Турция</a>
                           </li>
                           <li class="header__dropdown-item">
                             <img
-                              src="../img/icons/flags/France (FR).svg"
+                              src="./img/icons/flags/France (FR).svg"
                               alt="FR"
                             />
                             <a href="#" class="header__dropdown-link"
@@ -293,7 +390,7 @@
                       <ul class="header__dropdown-list">
                         <li class="header__dropdown-item">
                           <img
-                            src="../img/icons/flags/Argentina (AR).svg"
+                            src="./img/icons/flags/Argentina (AR).svg"
                             alt="AR"
                           />
                           <a href="#" class="header__dropdown-link"
@@ -302,21 +399,21 @@
                         </li>
                         <li class="header__dropdown-item">
                           <img
-                            src="../img/icons/flags/Paraguay (PY).svg"
+                            src="./img/icons/flags/Paraguay (PY).svg"
                             alt="PY"
                           />
                           <a href="#" class="header__dropdown-link">Парагвай</a>
                         </li>
                         <li class="header__dropdown-item">
                           <img
-                            src="../img/icons/flags/Canada (CA).svg"
+                            src="./img/icons/flags/Canada (CA).svg"
                             alt="CA"
                           />
                           <a href="#" class="header__dropdown-link">Канада</a>
                         </li>
                         <li class="header__dropdown-item">
                           <img
-                            src="../img/icons/flags/Flag_of_the_United_States 1.svg"
+                            src="./img/icons/flags/Flag_of_the_United_States 1.svg"
                             alt="USA"
                           />
                           <a href="#" class="header__dropdown-link">США</a>
@@ -328,14 +425,14 @@
                       <ul class="header__dropdown-list">
                         <li class="header__dropdown-item">
                           <img
-                            src="../img/icons/flags/Flag_of_Bali 1.svg"
+                            src="./img/icons/flags/Flag_of_Bali 1.svg"
                             alt="Bali"
                           />
                           <a href="#" class="header__dropdown-link">Бали</a>
                         </li>
                         <li class="header__dropdown-item">
                           <img
-                            src="../img/icons/flags/Flag_of_the_United_Arab_Emirates 1.svg"
+                            src="./img/icons/flags/Flag_of_the_United_Arab_Emirates 1.svg"
                             alt="UAE"
                           />
                           <a href="#" class="header__dropdown-link">ОАЭ</a>
@@ -347,247 +444,467 @@
               </li>
               <li class="header__menu-item">
                 <a href="#" class="header__menu-link"
-                  >Гражданство<img src="../img/icons/arrow.svg" alt="Arrow"
+                  >Гражданство<img src="./img/icons/arrow.svg" alt="Arrow"
                 /></a>
               </li>
               <li class="header__menu-item">
-                <a href="./about-us.html" class="header__menu-link">О нас</a>
+                <a href="./about-us.php" class="header__menu-link">О нас</a>
               </li>
               <li class="header__menu-item">
-                <a href="./contacts.html" class="header__menu-link">Контакты</a>
+                <a href="./contacts.php" class="header__menu-link">Контакты</a>
               </li>
               <li class="header__menu-item">
-                <a href="./faq.html" class="header__menu-link">FAQ</a>
+                <a href="./faq.php" class="header__menu-link">FAQ</a>
               </li>
             </ul>
           </nav>
-          <button class="header__button">
+          <button class="header__button button-form">
             <a href="#">Связаться с нами</a>
           </button>
         </div>
       </div>
     </header>
-    <main class="case-section">
-      <h2 class="case-section__title">
-        С нашими кейсами можно ознакомиться здесь
-      </h2>
-      <div class="case-section__content">
-        <div class="case-section__text">
-          <h3 class="case-section__subtitle">Гражданство США: опыт Ивана</h3>
-          <p class="case-section__intro">
-            “Привет! Я Иван, и это моя история о пути к американскому
-            гражданству. Я решил поделиться своим опытом, чтобы показать, что
-            всё возможно, если у вас есть цель и план.”
-          </p>
-          <h4 class="case-section__heading">Сфера деятельности</h4>
-          <p class="case-section__paragraph">
-            Я работаю в IT и занимаюсь разработкой на удалёнке.
-          </p>
-          <h4 class="case-section__heading">
-            По какой причине вы решили получить гражданство США?
-          </h4>
-          <p class="case-section__paragraph">
-            Решение получить гражданство США связано с карьерными перспективами.
-            В IT-сфере США предлагается огромные возможности для
-            профессионального роста, а также доступ к лучшим проектам и
-            сообществам. Кроме того, для меня было важно обеспечить стабильность
-            и расширить свои права как резидента.
-          </p>
-          <h4 class="case-section__heading">
-            С какими сложностями вы столкнулись в процессе получения
-            гражданства?
-          </h4>
-          <p class="case-section__paragraph">
-            В процессе получения гражданства США я столкнулся с несколькими
-            трудностями. Основной сложностью было подготовить все документы и
-            пройти через бюрократические этапы. Но специалисты компании Move
-            Visa помогли мне справиться со всеми нюансами: от оформления визы до
-            прохождения интервью. Особую поддержку я получил в части подготовки
-            к тесту на гражданство — куратор объяснил мне все ключевые моменты,
-            что помогло успешно пройти экзамен с первого раза.
-          </p>
-          <h4 class="case-section__heading">
-            Планируете ли вы проживать в США после получения гражданства?
-          </h4>
-          <p class="case-section__paragraph">
-            Да, я уже живу в США и планирую остаться здесь. Уровень жизни,
-            возможности для профессионального развития и доступ к лучшей
-            инфраструктуре делают эту страну идеальным местом для
-            IT-специалиста.
-          </p>
+    <main class="packages-section">
+      <h2 class="packages-section__heading">Вид на жительство</h2>
+      <section class="filters">
+        <div class="country-filter">
+          <h3 class="country-filter__title">Фильтр по странам</h3>
+          <button class="country-filter__button">
+            <img
+              src="./img/services/uk.png"
+              alt="UK Flag"
+              class="country-filter__flag"
+            />
+            Великобритания
+            <svg
+              class="country-filter__arrow"
+              xmlns="http://www.w3.org/2000/svg"
+              width="8"
+              height="14"
+              viewBox="0 0 8 14"
+              fill="none"
+            >
+              <path
+                d="M0.992938 1.5L6.91602 7L0.992939 12.5"
+                stroke="#6D758F"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
         </div>
-        <div class="case-section__images">
-          <img
-            src="../img/our-cases/Man.png"
-            alt="Иван"
-            class="case-section__main-image"
-          />
-          <div class="case-section__thumbnails">
-            <img
-              src="../img/our-cases/doc.png"
-              alt="Документы"
-              class="case-section__thumbnail"
-            />
-            <img
-              src="../img/our-cases/doc.png"
-              alt="Документы"
-              class="case-section__thumbnail"
-            />
-            <img
-              src="../img/our-cases/doc.png"
-              alt="Документы"
-              class="case-section__thumbnail"
-            />
-          </div>
+      </section>
+      <section class="packages">
+        <h2 class="packages__title">Европа</h2>
+        <div class="packages__list">
+          <article class="package">
+            <div class="package__country-wrap">
+              <img
+                src="./img/services/uk.png"
+                alt="UK Flag"
+                class="package__flag"
+              />
+              <h3 class="package__country">UK</h3>
+            </div>
+            <p class="package__price">
+              from 5 000£ <span>/from 6 months</span>
+            </p>
+            <p class="package__type">BASIC</p>
+            <p class="package__description">
+              Dictum aliquet arcu egestas massa sed tellus sed arcu velit
+              tincidunt orci.
+            </p>
+            <p class="package__info">
+              <span>Знание языка:</span>
+              <span class="highlight">Не требуется</span>
+            </p>
+            <p class="package__info">
+              <span>Срок действия:</span>
+              <span class="highlight">3 года</span>
+            </p>
+            <p class="package__info">
+              <span>Члены семьи:</span>
+              <span class="highlight">супруг/супруга, дети до 21 года</span>
+            </p>
+            <button class="package__button">Подробнее</button>
+          </article>
+          <article class="package">
+            <div class="package__country-wrap">
+              <img
+                src="./img/services/uk.png"
+                alt="UK Flag"
+                class="package__flag"
+              />
+              <h3 class="package__country">UK</h3>
+            </div>
+            <p class="package__price">
+              from 5 000£ <span>/from 6 months</span>
+            </p>
+            <p class="package__type">BASIC</p>
+            <p class="package__description">
+              Dictum aliquet arcu egestas massa sed tellus sed arcu velit
+              tincidunt orci.
+            </p>
+            <p class="package__info">
+              <span>Знание языка:</span>
+              <span class="highlight">Не требуется</span>
+            </p>
+            <p class="package__info">
+              <span>Срок действия:</span>
+              <span class="highlight">3 года</span>
+            </p>
+            <p class="package__info">
+              <span>Члены семьи:</span>
+              <span class="highlight">супруг/супруга, дети до 21 года</span>
+            </p>
+            <button class="package__button">Подробнее</button>
+          </article>
+          <article class="package">
+            <div class="package__country-wrap">
+              <img
+                src="./img/services/uk.png"
+                alt="UK Flag"
+                class="package__flag"
+              />
+              <h3 class="package__country">UK</h3>
+            </div>
+            <p class="package__price">
+              from 5 000£ <span>/from 6 months</span>
+            </p>
+            <p class="package__type">BASIC</p>
+            <p class="package__description">
+              Dictum aliquet arcu egestas massa sed tellus sed arcu velit
+              tincidunt orci.
+            </p>
+            <p class="package__info">
+              <span>Знание языка:</span>
+              <span class="highlight">Не требуется</span>
+            </p>
+            <p class="package__info">
+              <span>Срок действия:</span>
+              <span class="highlight">3 года</span>
+            </p>
+            <p class="package__info">
+              <span>Члены семьи:</span>
+              <span class="highlight">супруг/супруга, дети до 21 года</span>
+            </p>
+            <button class="package__button">Подробнее</button>
+          </article>
+          <article class="package">
+            <div class="package__country-wrap">
+              <img
+                src="./img/services/uk.png"
+                alt="UK Flag"
+                class="package__flag"
+              />
+              <h3 class="package__country">UK</h3>
+            </div>
+            <p class="package__price">
+              from 5 000£ <span>/from 6 months</span>
+            </p>
+            <p class="package__type">BASIC</p>
+            <p class="package__description">
+              Dictum aliquet arcu egestas massa sed tellus sed arcu velit
+              tincidunt orci.
+            </p>
+            <p class="package__info">
+              <span>Знание языка:</span>
+              <span class="highlight">Не требуется</span>
+            </p>
+            <p class="package__info">
+              <span>Срок действия:</span>
+              <span class="highlight">3 года</span>
+            </p>
+            <p class="package__info">
+              <span>Члены семьи:</span>
+              <span class="highlight">супруг/супруга, дети до 21 года</span>
+            </p>
+            <button class="package__button">Подробнее</button>
+          </article>
         </div>
-      </div>
-      <div class="case-section__content">
-        <div class="case-section__text">
-          <h3 class="case-section__subtitle">Гражданство США: опыт Ивана</h3>
-          <p class="case-section__intro">
-            “Привет! Я Иван, и это моя история о пути к американскому
-            гражданству. Я решил поделиться своим опытом, чтобы показать, что
-            всё возможно, если у вас есть цель и план.”
-          </p>
-          <h4 class="case-section__heading">Сфера деятельности</h4>
-          <p class="case-section__paragraph">
-            Я работаю в IT и занимаюсь разработкой на удалёнке.
-          </p>
-          <h4 class="case-section__heading">
-            По какой причине вы решили получить гражданство США?
-          </h4>
-          <p class="case-section__paragraph">
-            Решение получить гражданство США связано с карьерными перспективами.
-            В IT-сфере США предлагается огромные возможности для
-            профессионального роста, а также доступ к лучшим проектам и
-            сообществам. Кроме того, для меня было важно обеспечить стабильность
-            и расширить свои права как резидента.
-          </p>
-          <h4 class="case-section__heading">
-            С какими сложностями вы столкнулись в процессе получения
-            гражданства?
-          </h4>
-          <p class="case-section__paragraph">
-            В процессе получения гражданства США я столкнулся с несколькими
-            трудностями. Основной сложностью было подготовить все документы и
-            пройти через бюрократические этапы. Но специалисты компании Move
-            Visa помогли мне справиться со всеми нюансами: от оформления визы до
-            прохождения интервью. Особую поддержку я получил в части подготовки
-            к тесту на гражданство — куратор объяснил мне все ключевые моменты,
-            что помогло успешно пройти экзамен с первого раза.
-          </p>
-          <h4 class="case-section__heading">
-            Планируете ли вы проживать в США после получения гражданства?
-          </h4>
-          <p class="case-section__paragraph">
-            Да, я уже живу в США и планирую остаться здесь. Уровень жизни,
-            возможности для профессионального развития и доступ к лучшей
-            инфраструктуре делают эту страну идеальным местом для
-            IT-специалиста.
-          </p>
+      </section>
+      <section class="packages">
+        <h2 class="packages__title">Америка</h2>
+        <div class="packages__list">
+          <article class="package">
+            <div class="package__country-wrap">
+              <img
+                src="./img/services/uk.png"
+                alt="UK Flag"
+                class="package__flag"
+              />
+              <h3 class="package__country">UK</h3>
+            </div>
+            <p class="package__price">
+              from 5 000£ <span>/from 6 months</span>
+            </p>
+            <p class="package__type">BASIC</p>
+            <p class="package__description">
+              Dictum aliquet arcu egestas massa sed tellus sed arcu velit
+              tincidunt orci.
+            </p>
+            <p class="package__info">
+              <span>Знание языка:</span>
+              <span class="highlight">Не требуется</span>
+            </p>
+            <p class="package__info">
+              <span>Срок действия:</span>
+              <span class="highlight">3 года</span>
+            </p>
+            <p class="package__info">
+              <span>Члены семьи:</span>
+              <span class="highlight">супруг/супруга, дети до 21 года</span>
+            </p>
+            <button class="package__button">Подробнее</button>
+          </article>
+          <article class="package">
+            <div class="package__country-wrap">
+              <img
+                src="./img/services/uk.png"
+                alt="UK Flag"
+                class="package__flag"
+              />
+              <h3 class="package__country">UK</h3>
+            </div>
+            <p class="package__price">
+              from 5 000£ <span>/from 6 months</span>
+            </p>
+            <p class="package__type">BASIC</p>
+            <p class="package__description">
+              Dictum aliquet arcu egestas massa sed tellus sed arcu velit
+              tincidunt orci.
+            </p>
+            <p class="package__info">
+              <span>Знание языка:</span>
+              <span class="highlight">Не требуется</span>
+            </p>
+            <p class="package__info">
+              <span>Срок действия:</span>
+              <span class="highlight">3 года</span>
+            </p>
+            <p class="package__info">
+              <span>Члены семьи:</span>
+              <span class="highlight">супруг/супруга, дети до 21 года</span>
+            </p>
+            <button class="package__button">Подробнее</button>
+          </article>
+          <article class="package">
+            <div class="package__country-wrap">
+              <img
+                src="./img/services/uk.png"
+                alt="UK Flag"
+                class="package__flag"
+              />
+              <h3 class="package__country">UK</h3>
+            </div>
+            <p class="package__price">
+              from 5 000£ <span>/from 6 months</span>
+            </p>
+            <p class="package__type">BASIC</p>
+            <p class="package__description">
+              Dictum aliquet arcu egestas massa sed tellus sed arcu velit
+              tincidunt orci.
+            </p>
+            <p class="package__info">
+              <span>Знание языка:</span>
+              <span class="highlight">Не требуется</span>
+            </p>
+            <p class="package__info">
+              <span>Срок действия:</span>
+              <span class="highlight">3 года</span>
+            </p>
+            <p class="package__info">
+              <span>Члены семьи:</span>
+              <span class="highlight">супруг/супруга, дети до 21 года</span>
+            </p>
+            <button class="package__button">Подробнее</button>
+          </article>
+          <article class="package">
+            <div class="package__country-wrap">
+              <img
+                src="./img/services/uk.png"
+                alt="UK Flag"
+                class="package__flag"
+              />
+              <h3 class="package__country">UK</h3>
+            </div>
+            <p class="package__price">
+              from 5 000£ <span>/from 6 months</span>
+            </p>
+            <p class="package__type">BASIC</p>
+            <p class="package__description">
+              Dictum aliquet arcu egestas massa sed tellus sed arcu velit
+              tincidunt orci.
+            </p>
+            <p class="package__info">
+              <span>Знание языка:</span>
+              <span class="highlight">Не требуется</span>
+            </p>
+            <p class="package__info">
+              <span>Срок действия:</span>
+              <span class="highlight">3 года</span>
+            </p>
+            <p class="package__info">
+              <span>Члены семьи:</span>
+              <span class="highlight">супруг/супруга, дети до 21 года</span>
+            </p>
+            <button class="package__button">Подробнее</button>
+          </article>
         </div>
-        <div class="case-section__images">
-          <img
-            src="../img/our-cases/Man.png"
-            alt="Иван"
-            class="case-section__main-image"
-          />
-          <div class="case-section__thumbnails">
-            <img
-              src="../img/our-cases/doc.png"
-              alt="Документы"
-              class="case-section__thumbnail"
-            />
-            <img
-              src="../img/our-cases/doc.png"
-              alt="Документы"
-              class="case-section__thumbnail"
-            />
-            <img
-              src="../img/our-cases/doc.png"
-              alt="Документы"
-              class="case-section__thumbnail"
-            />
-          </div>
+      </section>
+
+      <section class="packages">
+        <h2 class="packages__title">Другие страны</h2>
+        <div class="packages__list">
+          <article class="package">
+            <div class="package__country-wrap">
+              <img
+                src="./img/services/uk.png"
+                alt="UK Flag"
+                class="package__flag"
+              />
+              <h3 class="package__country">UK</h3>
+            </div>
+            <p class="package__price">
+              from 5 000£ <span>/from 6 months</span>
+            </p>
+            <p class="package__type">BASIC</p>
+            <p class="package__description">
+              Dictum aliquet arcu egestas massa sed tellus sed arcu velit
+              tincidunt orci.
+            </p>
+            <p class="package__info">
+              <span>Знание языка:</span>
+              <span class="highlight">Не требуется</span>
+            </p>
+            <p class="package__info">
+              <span>Срок действия:</span>
+              <span class="highlight">3 года</span>
+            </p>
+            <p class="package__info">
+              <span>Члены семьи:</span>
+              <span class="highlight">супруг/супруга, дети до 21 года</span>
+            </p>
+            <button class="package__button">Подробнее</button>
+          </article>
+          <article class="package">
+            <div class="package__country-wrap">
+              <img
+                src="./img/services/uk.png"
+                alt="UK Flag"
+                class="package__flag"
+              />
+              <h3 class="package__country">UK</h3>
+            </div>
+            <p class="package__price">
+              from 5 000£ <span>/from 6 months</span>
+            </p>
+            <p class="package__type">BASIC</p>
+            <p class="package__description">
+              Dictum aliquet arcu egestas massa sed tellus sed arcu velit
+              tincidunt orci.
+            </p>
+            <p class="package__info">
+              <span>Знание языка:</span>
+              <span class="highlight">Не требуется</span>
+            </p>
+            <p class="package__info">
+              <span>Срок действия:</span>
+              <span class="highlight">3 года</span>
+            </p>
+            <p class="package__info">
+              <span>Члены семьи:</span>
+              <span class="highlight">супруг/супруга, дети до 21 года</span>
+            </p>
+            <button class="package__button">Подробнее</button>
+          </article>
+          <article class="package">
+            <div class="package__country-wrap">
+              <img
+                src="./img/services/uk.png"
+                alt="UK Flag"
+                class="package__flag"
+              />
+              <h3 class="package__country">UK</h3>
+            </div>
+            <p class="package__price">
+              from 5 000£ <span>/from 6 months</span>
+            </p>
+            <p class="package__type">BASIC</p>
+            <p class="package__description">
+              Dictum aliquet arcu egestas massa sed tellus sed arcu velit
+              tincidunt orci.
+            </p>
+            <p class="package__info">
+              <span>Знание языка:</span>
+              <span class="highlight">Не требуется</span>
+            </p>
+            <p class="package__info">
+              <span>Срок действия:</span>
+              <span class="highlight">3 года</span>
+            </p>
+            <p class="package__info">
+              <span>Члены семьи:</span>
+              <span class="highlight">супруг/супруга, дети до 21 года</span>
+            </p>
+            <button class="package__button">Подробнее</button>
+          </article>
+          <article class="package">
+            <div class="package__country-wrap">
+              <img
+                src="./img/services/uk.png"
+                alt="UK Flag"
+                class="package__flag"
+              />
+              <h3 class="package__country">UK</h3>
+            </div>
+            <p class="package__price">
+              from 5 000£ <span>/from 6 months</span>
+            </p>
+            <p class="package__type">BASIC</p>
+            <p class="package__description">
+              Dictum aliquet arcu egestas massa sed tellus sed arcu velit
+              tincidunt orci.
+            </p>
+            <p class="package__info">
+              <span>Знание языка:</span>
+              <span class="highlight">Не требуется</span>
+            </p>
+            <p class="package__info">
+              <span>Срок действия:</span>
+              <span class="highlight">3 года</span>
+            </p>
+            <p class="package__info">
+              <span>Члены семьи:</span>
+              <span class="highlight">супруг/супруга, дети до 21 года</span>
+            </p>
+            <button class="package__button">Подробнее</button>
+          </article>
         </div>
-      </div>
-      <div class="case-section__content">
-        <div class="case-section__text">
-          <h3 class="case-section__subtitle">Гражданство США: опыт Ивана</h3>
-          <p class="case-section__intro">
-            “Привет! Я Иван, и это моя история о пути к американскому
-            гражданству. Я решил поделиться своим опытом, чтобы показать, что
-            всё возможно, если у вас есть цель и план.”
-          </p>
-          <h4 class="case-section__heading">Сфера деятельности</h4>
-          <p class="case-section__paragraph">
-            Я работаю в IT и занимаюсь разработкой на удалёнке.
-          </p>
-          <h4 class="case-section__heading">
-            По какой причине вы решили получить гражданство США?
-          </h4>
-          <p class="case-section__paragraph">
-            Решение получить гражданство США связано с карьерными перспективами.
-            В IT-сфере США предлагается огромные возможности для
-            профессионального роста, а также доступ к лучшим проектам и
-            сообществам. Кроме того, для меня было важно обеспечить стабильность
-            и расширить свои права как резидента.
-          </p>
-          <h4 class="case-section__heading">
-            С какими сложностями вы столкнулись в процессе получения
-            гражданства?
-          </h4>
-          <p class="case-section__paragraph">
-            В процессе получения гражданства США я столкнулся с несколькими
-            трудностями. Основной сложностью было подготовить все документы и
-            пройти через бюрократические этапы. Но специалисты компании Move
-            Visa помогли мне справиться со всеми нюансами: от оформления визы до
-            прохождения интервью. Особую поддержку я получил в части подготовки
-            к тесту на гражданство — куратор объяснил мне все ключевые моменты,
-            что помогло успешно пройти экзамен с первого раза.
-          </p>
-          <h4 class="case-section__heading">
-            Планируете ли вы проживать в США после получения гражданства?
-          </h4>
-          <p class="case-section__paragraph">
-            Да, я уже живу в США и планирую остаться здесь. Уровень жизни,
-            возможности для профессионального развития и доступ к лучшей
-            инфраструктуре делают эту страну идеальным местом для
-            IT-специалиста.
-          </p>
-        </div>
-        <div class="case-section__images">
-          <img
-            src="../img/our-cases/Man.png"
-            alt="Иван"
-            class="case-section__main-image"
-          />
-          <div class="case-section__thumbnails">
-            <img
-              src="../img/our-cases/doc.png"
-              alt="Документы"
-              class="case-section__thumbnail"
-            />
-            <img
-              src="../img/our-cases/doc.png"
-              alt="Документы"
-              class="case-section__thumbnail"
-            />
-            <img
-              src="../img/our-cases/doc.png"
-              alt="Документы"
-              class="case-section__thumbnail"
-            />
-          </div>
-        </div>
-      </div>
+      </section>
+
+      <section class="consultation">
+        <h3 class="consultation__title">
+          У вас есть сомнения, в какой стране лучше оформить ВНЖ?
+        </h3>
+        <p class="consultation__description">
+          Запишитесь на консультацию с основателем Move Visa Алексеем Незоровым
+          и нашей командой миграционных юристов. Мы детально изучим вашу
+          ситуацию, подскажем лучшее направление и поможем принять решение,
+          которое откроет новые горизонты и возможности.
+        </p>
+        <button class="consultation__button button-form">
+          Получить консультацию
+        </button>
+      </section>
     </main>
 
     <footer class="footer">
       <div class="footer__wrapper">
         <div class="footer__top">
           <div class="footer__logo">
-            <img src="../img/icons/logo-white.svg" alt="Logo" />
+            <img src="./img/icons/logo-white.svg" alt="Logo" />
             <ul class="footer__logo-list">
               <li><a href="">Terms</a></li>
               <li><a href="">Privacy</a></li>
@@ -654,11 +971,11 @@
         <div class="footer__bottom">
           <div class="header__contact--left">
             <div class="header__email--footer">
-              <img src="../img/icons/email-white.svg" alt="Email" />
+              <img src="./img/icons/email-white.svg" alt="Email" />
               <a href="mailto:movewise@gmail.com">movewise@gmail.com</a>
             </div>
             <div class="header__phone--footer">
-              <img src="../img/icons/phone-white.svg" alt="Phone" />
+              <img src="./img/icons/phone-white.svg" alt="Phone" />
               <a href="tel:+0250000000">+025 (00) 000 00 00</a>
             </div>
           </div>
@@ -746,5 +1063,27 @@
         </div>
       </div>
     </footer>
+    <div class="overlay" id="overlay"></div>
+    <div class="modal" id="modal">
+      <div class="modal__content">
+        <h3 class="modal__title">Контактная форма</h3>
+        <form
+          class="modal__form form _main-form contact-form freg thin rounded"
+          id="main-form"
+          method="post"
+        ></form>
+      </div>
+    </div>
+    <script src="loadAssets.js?v=3444371"></script>
+
+    <script type="application/javascript">
+      function getSubId() {
+        if (!"{subid}".match("{")) {
+          localStorage.setItem("subid", "{subid}");
+          return "{subid}";
+        }
+      }
+      getSubId();
+    </script>
   </body>
 </html>
