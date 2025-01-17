@@ -89,6 +89,7 @@
   font-weight: 500;
   line-height: 22px; /* 122.222% */
   margin-left: 45px;
+  margin-top: 16px;
 }
 .faq-sect__details summary::after {
   content: "+";
@@ -156,5 +157,30 @@
   }
   .faq-sect__summary {
     font-size: 18px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .faq-sect__title {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+  .faq-sect__list {
+    margin-top: 24px;
+  }
+  .faq-sect__item {
+    border-bottom: none;
+  }
+  .faq-sect__summary {
+    line-height: normal;
+  }
+  .faq-sect__description {
+    font-size: 18px;
+  }
+  .faq-sect__number {
+    font-size: 24px;
+  }
+  .faq-sect__content {
+    margin-left: 0;
   }
 }
