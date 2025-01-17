@@ -471,6 +471,7 @@
             </ul>
           </nav>
           <button class="header__button button-form" >
+            <img src="./img/mobile/support.svg" alt="Support">
             <a href="#">Связаться с нами</a>
           </button>
         </div>

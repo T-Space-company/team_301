@@ -44,8 +44,42 @@
 .aboutUs__img {
   position: relative;
 }
+/* .aboutUs__img-main {
+  max-width: 518px;
+  min-width: 320px;
+  width: 100%;
+} */
 .aboutUs__img-line {
   position: absolute;
   top: -35px;
   right: -60px;
+}
+
+@media (max-width: 1540px) {
+  .aboutUs__text--img {
+    bottom: -60px;
+  }
+}
+
+@media (max-width: 1360px) {
+  .aboutUs__text--img {
+    width: 250px;
+  }
+  .aboutUs__img-line {
+    width: 150px;
+  }
+}
+
+@media (max-width: 1220px) {
+  .aboutUs__text--img {
+    bottom: -75px;
+    width: 220px;
+  }
+}
+
+@media (max-width: 1180px) {
+  .aboutUs__text--img {
+    right: -80px;
+    width: 180px;
+  }
 }

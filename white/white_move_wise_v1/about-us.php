@@ -490,7 +490,7 @@
           />
         </div>
         <div class="aboutUs__img">
-          <img src="./img/about-us/main.png" alt="Photo" />
+          <img src="./img/about-us/main.png" alt="Photo" class="aboutUs__img-main"/>
           <img
             src="./img/about-us/line.svg"
             alt="Line"
