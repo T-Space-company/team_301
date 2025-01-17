@@ -22,13 +22,13 @@ const overlay = document.getElementById("overlay");
 //   }
 // });
 
-document.addEventListener("click", (event) => {
-  if (!menuItem.contains(event.target)) {
-    dropdown.classList.remove("open");
-    vnzh.classList.remove("active");
-    arrow.classList.remove("active");
-  }
-});
+// document.addEventListener("click", (event) => {
+//   if (!menuItem.contains(event.target)) {
+//     dropdown.classList.remove("open");
+//     vnzh.classList.remove("active");
+//     arrow.classList.remove("active");
+//   }
+// });
 
 menuItem.addEventListener("mouseenter", () => {
   dropdown.classList.add("open");

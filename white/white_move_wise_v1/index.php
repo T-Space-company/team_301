@@ -213,7 +213,7 @@
         </div>
         <div class="header__nav">
           <div class="header__logo">
-            <a href="./index.html">
+            <a href="./index.php">
               <img src="./img/icons/logo.svg" alt="Logo" />
             </a>
           </div>
@@ -232,7 +232,7 @@
               <li class="header__menu-item header__menu-item--dropdown">
                 <div class="header__dropdown-wrapper">
                   <a
-                    href="./pages/services.html"
+                    href="./services.php"
                     class="header__menu-link"
                     id="vnzh"
                   >
@@ -456,21 +456,22 @@
                 /></a>
               </li>
               <li class="header__menu-item">
-                <a href="./pages/about-us.html" class="header__menu-link"
+                <a href="./about-us.php" class="header__menu-link"
                   >О нас</a
                 >
               </li>
               <li class="header__menu-item">
-                <a href="./contacts.html" class="header__menu-link"
+                <a href="./contacts.php" class="header__menu-link"
                   >Контакты</a
                 >
               </li>
               <li class="header__menu-item">
-                <a href="./faq.html" class="header__menu-link">FAQ</a>
+                <a href="./faq.php" class="header__menu-link">FAQ</a>
               </li>
             </ul>
           </nav>
           <button class="header__button button-form" >
+            <img src="./img/mobile/support.svg" alt="Support">
             <a href="#">Связаться с нами</a>
           </button>
         </div>
@@ -1492,7 +1493,7 @@
       <div class="modal__content">
         <h3 class="modal__title">Контактная форма</h3>
         <form
-          class="faq__form form _main-form contact-form freg thin rounded"
+          class="modal__form form _main-form contact-form freg thin rounded"
           id="main-form"
           method="post"
         ></form>

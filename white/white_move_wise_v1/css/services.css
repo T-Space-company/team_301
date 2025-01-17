@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  padding: 40px 60px;
+  padding: 40px 40px;
 }
 
 .packages-section__heading {
@@ -267,4 +267,19 @@
 
 .consultation__button {
   max-width: 290px;
+}
+
+@media (max-width: 1140px) {
+  .package__price {
+    font-size: 30px;
+  }
+  .package__price span {
+    font-size: 16px;
+  }
+  .package__info {
+    font-size: 16px;
+  }
+  .highlight {
+    font-size: 16px;
+  }
 }
