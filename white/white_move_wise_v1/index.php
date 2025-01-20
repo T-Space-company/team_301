@@ -638,7 +638,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
               >
                 <path
                   d="M7.40391 4.4244C11.9783 1.9582 15.0687 0.0185579 19.9798 0.882049C25.8057 1.61029 36.3253 9.26625 31.5949 17.5445C27.8685 24.0657 20.8949 30.4446 13.0755 31.0913C8.28846 31.4873 3.60762 28.3778 1.80584 24.0042C-0.915033 17.3997 1.78101 7.45588 7.40391 4.4244Z"
-                  fill="#00B6B7"
+                  fill="currentColor"
                 />
                 <path
                   d="M11.2912 14.8186C12.5572 17.0785 12.8024 18.0795 13.2084 20.4786C13.5366 22.418 14.3835 22.9172 15.0883 21.5073C16.896 17.891 18.6137 12.8299 22.2295 9.48486"
@@ -1338,6 +1338,14 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
               </details>
             </li>
           </ul>
+          <form class="faq__email--bottom">
+            <input
+              type="email"
+              class="faq__input"
+              placeholder="Email Address"
+            />
+            <button type="submit" class="faq__button">Отправить</button>
+          </form>
         </div>
       </section>
 
@@ -1398,6 +1406,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
               Lorem ipsum dolor sit amet consectetur eget malesuada sapien.
               Fusce egestas risus purus suspendisse turpis volutpat ornare.
             </p>
+            <img src="./img/mobile/form.png" alt="Our team" class="contact__image">
             <form
               class="contact__form form _main-form contact-form freg thin rounded"
               id="main-form"
@@ -1710,20 +1719,41 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
   <script>
   document.addEventListener( 'DOMContentLoaded', function() {
     var splide = new Splide( '#splide1', { 
-      type   : 'slide',   
-      perPage: 3,        
-      gap    : '30px',   
-      arrows : false,} );
+      breakpoints: {
+        1024: {
+          type: "loop",
+          perPage: 1,
+      }
+      },
+      type: "slide",
+       perPage: 3,
+      gap: "30px",
+      pagination: false,
+      arrows: false,
+      drag: true,
+      autoplay: true,
+      interval: 3000,} );
     splide.mount();
   } );
 </script>
   <script>
   document.addEventListener( 'DOMContentLoaded', function() {
     var splide = new Splide( '#splide2', { 
-      type   : 'slide',   
-      perPage: 3,        
-      gap    : '30px',   
-      arrows : false,} );
+      breakpoints: {
+        1024: {
+          type: "loop",
+          perPage: 1,
+      }
+      }, 
+      type: "slide",
+       perPage: 3,
+      padding: "5rem",
+      gap: "30px",
+      pagination: false,
+      arrows: false,
+      drag: true,
+      autoplay: true,
+      interval: 3000,} );
     splide.mount();
   } );
 </script>
