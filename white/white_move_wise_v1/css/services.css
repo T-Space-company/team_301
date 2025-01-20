@@ -283,3 +283,50 @@
     font-size: 16px;
   }
 }
+
+@media (max-width: 1024px) {
+  .packages-section__heading {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .country-filter__title {
+    font-size: 18px;
+  }
+  .country-filter__button {
+    max-width: none;
+  }
+  .filters {
+    justify-content: center;
+  }
+  .packages__list {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+  }
+  .package {
+    max-width: 420px;
+  }
+  .package__country {
+    font-size: 20px;
+  }
+  .package__price {
+    font-size: 20px;
+  }
+  .package__price span {
+    font-size: 18px;
+  }
+  .package__info {
+    margin-top: 24px;
+  }
+  .consultation {
+    margin-top: 0;
+  }
+  .consultation__title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .consultation__description {
+    font-size: 16px;
+  }
+}

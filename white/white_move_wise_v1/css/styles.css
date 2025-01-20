@@ -60,8 +60,7 @@ button {
 
 
 .mobile-menu {
-  display: flex
-;
+  display: flex;
     flex-direction: column;
   width: 100%;
   height: 100vh;
@@ -106,21 +105,40 @@ font-size: 18px;
 font-style: normal;
 font-weight: 400;
 line-height: 22px; /* 122.222% */
+transition: color 250ms;
+}
+
+.mobile-menu__list li a:active {
+  color: #00B6B7;
 }
 
 .contact-btn {
   margin-top: 160px;
 }
 
-.mobile-menu__socials {
+.mobile-menu__contact {
   display: flex;
-  justify-content: center;
-  gap: 10px;
+  justify-content: space-between;
+    width: 100%;
+    margin-top: 40px;
 }
 
-.mobile-menu__socials a img {
-  width: 24px;
-  height: 24px;
+.mobile-menu__contact > a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 250ms;
+  border-radius: 50%;
+}
+
+.mobile-menu__contact > a:active {
+  background: #00b6b7;
+}
+
+.mobile-menu__contact > a:active > .icon {
+  color: white;
 }
 
 .no-scroll {
@@ -1638,6 +1656,7 @@ gap: 18px;
 
 .footer__subscribe-input {
     width: 100%;
+    height: 50px;
     padding: 15px 20px;
     padding-right: 50px; /* Add space for the button */
     font-size: 16px;
@@ -1710,7 +1729,7 @@ line-height: 20.4px; /* 170% */
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
   display: none;
-  z-index: 999;
+  z-index: 9999;
 }
 
 .modal {
@@ -1726,7 +1745,7 @@ border: 1px solid var(--Neutral-colors-400, #E1E4ED);
 background: var(--Neutral-colors-100, #FFF);
 box-shadow: 0px 360px 101px 0px rgba(0, 0, 0, 0.00), 0px 230px 92px 0px rgba(0, 0, 0, 0.01), 0px 130px 78px 0px rgba(0, 0, 0, 0.05), 0px 58px 58px 0px rgba(0, 0, 0, 0.09), 0px 14px 32px 0px rgba(0, 0, 0, 0.10);
   display: none;
-  z-index: 1000;
+  z-index: 99999;
 }
 
 .modal__content {
@@ -1799,7 +1818,9 @@ line-height: 20px; /* 125% */
   text-decoration: underline;
 }
 
-
+.splide__track {
+  padding: 10px 0;
+}
 
 @media (max-width: 1440px) {
   .team__members {
@@ -2002,6 +2023,8 @@ font-size: 22px;
 @media (max-width: 1024px) {
   .header {
     padding: 5px 20px;
+    border-bottom: none;
+    background: #F9F9F9;
   }
   .header__contact {
     display: none;
@@ -2082,4 +2105,115 @@ font-size: 22px;
   .footer__top-subscribe {
     max-width: 360px;
   }
+  .modal {
+    padding: 32px 16px;
+  }
+  .modal__form {
+    margin-top: 0;
+  }
+  .modal__title {
+    display: none;
+  }
+  .input-label {
+    font-size: 18px;
+  }
+  .contact__wrapper > #main-form > #form-contacts {
+    margin-top: 16px;
+  }
+  .custom-checkbox__text {
+    font-size: 14px;
+  }
+  .form__input::placeholder {
+    font-size: 16px;
+  }
+  
+.input-group:nth-child(2) > .input-label {
+    margin-top: 5px;
+}
+
+.input-group:nth-child(3) > .input-label {
+    margin-top: 16px;
+}
+
+.input-label--second > span {
+    margin-top: 16px;
+}
+.custom-checkbox-container {
+  margin-top: 16px;
+}
+.contact__button {
+  margin-top: 24px;
+}
+.why-choose {
+  padding: 40px 15px;
+}
+.why-choose__items {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+.why-choose__heading > img {
+  display: none;
+}
+.hero {
+  padding: 15px;
+}
+.hero__content {
+  display: flex;
+  flex-direction: column;
+}
+.hero__title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.hero__description {
+  font-size: 18px;
+  line-height: 18px;
+  max-width: 300px;
+}
+.hero__info {
+  display: none;
+}
+.services__list {
+  flex-direction: column;
+}
+.team {
+  flex-direction: column;
+}
+.team__member {
+  max-width: 240px;
+  width: 100%;
+}
+.team__photo  {
+  max-width: 240px;
+  width: 100%;
+}
+.team--left img {
+  display: none;
+}
+.testimonials {
+  padding: 0;
+}
+.testimonials__item {
+  max-width: 267px;
+  width: 267px;
+}
+.testimonials__item > img {
+  width: 267px;
+  height: 267px;
+
+}
+.swiper {
+  overflow: visible !important;
+}
+.swiper-wrapper {
+  display: flex;
+  gap: 15px; 
+}
+.faq {
+  flex-direction: column;
+}
+.faq__img {
+  display: none;
+}
 }

@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setTimeout(function () {
       const contacts = document.getElementById("form-contacts");
-      console.log(contacts);
       if (contacts) {
         contacts.remove();
       }

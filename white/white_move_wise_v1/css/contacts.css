@@ -48,6 +48,12 @@
   justify-content: center;
   flex: 1;
   padding: 0 20px;
+  align-items: center;
+}
+
+.contact__detail-img > svg {
+  height: 24px;
+  color: #000;
 }
 
 .contact-section__detail--border {
@@ -64,7 +70,7 @@
 
 .contact__detail-wrapper > p {
   color: var(--Neutral-colors-600, #6d758f);
-  font-family: Inter;
+  font-family: Montserrat;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -73,7 +79,7 @@
 
 .contact__detail-wrapper > a {
   color: #00b6b7;
-  font-family: Inter;
+  font-family: Montserrat;
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
@@ -97,13 +103,6 @@
   font-weight: 400;
   line-height: 24px; /* 133.333% */
   margin-top: 24px;
-}
-
-.form {
-  background: #f9f9f9;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .form__group {
@@ -249,4 +248,62 @@
     0px 230px 92px 0px rgba(0, 0, 0, 0.01),
     0px 130px 78px 0px rgba(0, 0, 0, 0.05),
     0px 58px 58px 0px rgba(0, 0, 0, 0.09), 0px 14px 32px 0px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1024px) {
+  .contact-section {
+    padding: 40px 15px;
+  }
+  .contact-section__title {
+    font-size: 24px;
+  }
+  .contact-section__details {
+    flex-direction: column;
+  }
+  .contact-section__detail {
+    width: 100%;
+  }
+  .contact-section__detail:nth-child(3) {
+    margin-top: 40px;
+  }
+  .contact__detail-img {
+    border-radius: 24px;
+    width: 40px;
+    height: 40px;
+    background: #00b6b7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact__detail-img > svg {
+    color: white;
+  }
+
+  .contact-section__detail:nth-child(2) {
+    padding-top: 46px;
+    padding-bottom: 16px;
+  }
+  .contact-section__detail--border {
+    border-top: 1px solid #e1e4ed;
+    border-bottom: 1px solid #e1e4ed;
+    border-left: none;
+    border-right: none;
+  }
+  .contact-section__info {
+    flex-direction: column-reverse;
+  }
+  .contact-section__actions {
+    display: none;
+  }
+  .contacts-page__form {
+    padding: 16px;
+  }
+  .contact-section__direct {
+    font-size: 24px;
+    text-align: center;
+  }
+  .contact-section__direct > p {
+    font-family: Montserrat;
+    font-size: 16px;
+  }
 }
