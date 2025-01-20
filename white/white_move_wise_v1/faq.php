@@ -778,7 +778,7 @@
               <ul class="footer__nav-list">
                 <li><a href="#" class="footer__nav-link">Права</a></li>
                 <li><a href="#" class="footer__nav-link">Визы</a></li>
-                <li><a href="#" class="footer__nav-link">ВНЖ</a></li>
+                <li><a href="./services.php" class="footer__nav-link">ВНЖ</a></li>
                 <li><a href="#" class="footer__nav-link">Гражданство</a></li>
               </ul>
             </div>
@@ -797,7 +797,7 @@
                 </li>
                 <li><a href="./our-cases.php" class="footer__nav-link">Отзывы</a></li>
                 <li>
-                  <a href="#" class="footer__nav-link"
+                  <a href="./faq.php" class="footer__nav-link"
                     >Часто задаваемые вопросы</a
                   >
                 </li>
@@ -807,8 +807,8 @@
             <div class="footer__nav-section">
               <h4 class="footer__nav-title">О компании</h4>
               <ul class="footer__nav-list">
-                <li><a href="#" class="footer__nav-link">О нас</a></li>
-                <li><a href="#" class="footer__nav-link">Контакты</a></li>
+                <li><a href="./about-us.php" class="footer__nav-link">О нас</a></li>
+                <li><a href="./contacts.php" class="footer__nav-link">Контакты</a></li>
                 <li><a href="#" class="footer__nav-link">Блог</a></li>
               </ul>
             </div>
