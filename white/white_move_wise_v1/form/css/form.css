@@ -66,6 +66,43 @@ button:hover {
   /* font-family: Acrom; */
   font-size: 18px;
 }
+._phone {
+  /* border: 1px solid #cccccc;
+  border-radius: 5px; */
+}
+
+._phone::placeholder {
+  color: var(--Neutral-colors-600, #6d758f);
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 111.111% */
+}
+.input-group {
+  display: block;
+}
+
+.group-checkbox {
+  display: flex;
+  align-items: flex-start;
+  margin-left: 10px;
+  margin-bottom: -5px;
+}
+@media (max-width: 1024px) {
+  #modal > .modal__content > #main-form > .socials-phone {
+    display: none !important;
+  }
+  #modal > .modal__content > #main-form > #form-contacts {
+    display: none;
+  }
+  ._phone::placeholder {
+    font-size: 16px;
+  }
+  .group-checkbox {
+    margin-left: 0;
+  }
+}
 
 @media (min-width: 769px) {
   input {
@@ -308,19 +345,6 @@ img {
   border: 1px solid gray !important;
 }
 
-._phone {
-  /* border: 1px solid #cccccc;
-  border-radius: 5px; */
-}
-
-._phone::placeholder {
-  color: var(--Neutral-colors-600, #6d758f);
-  font-family: Inter, sans-serif;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20px; /* 111.111% */
-}
 @media (max-width: 400px) {
   .fa__errInfo {
     max-width: 150px;
@@ -393,16 +417,6 @@ img {
   display: block; /* Блочный элемент, чтобы занимал всю ширину контейнера */
   text-align: center; /* Текст по центру */
 }
-.input-group {
-  display: block;
-}
-.group-checkbox {
-  display: flex;
-  align-items: center;
-  margin-left: 10px;
-  margin-bottom: -5px;
-}
-
 .error-phone {
   display: none;
 }

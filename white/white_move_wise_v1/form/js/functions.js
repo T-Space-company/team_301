@@ -136,7 +136,7 @@ export function renderFormRegistrations(allFormClass) {
     </label>
   </div>
 
- <div class="form-group input-group">
+ <div class="socials-phone form-group input-group">
     <label class="input-label--second">
     <span>Пожалуйста, введите номер, привязанный к WhatsApp, Telegram или другому мессенджеру для удобной связи</span>
     <input class="form__input form-control form-input _phone" maxlength="10" placeholder="(123) 456 - 7890" name="phone" type="tel" />
