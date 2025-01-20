@@ -1,0 +1,157 @@
+main {
+  padding: 0 60px;
+}
+
+.aboutUs {
+  max-width: 1510px;
+  margin: 0 auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.aboutUs__content {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 75px;
+}
+
+.aboutUs__main {
+  max-width: 915px;
+  width: 100%;
+  position: relative;
+}
+
+.aboutUs__heading--upper {
+  display: none;
+  color: #000;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px; /* 125% */
+  letter-spacing: -1.6px;
+  text-align: center;
+}
+
+.aboutUs__heading {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 50px; /* 125% */
+  letter-spacing: -1.6px;
+}
+
+.aboutUs__text {
+  color: var(--TEXT-CLR, #5e6282);
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px; /* 144.444% */
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+.aboutUs__text--img {
+  position: absolute;
+  bottom: 0;
+  right: -60px;
+}
+
+.aboutUs__img {
+  position: relative;
+}
+
+.aboutUs__img-line {
+  position: absolute;
+  top: -35px;
+  right: -60px;
+}
+
+.contact-button {
+  display: flex;
+  width: 220px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  background: #00b6b7;
+  color: #fff;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;
+}
+
+@media (max-width: 1540px) {
+  .aboutUs__text--img {
+    bottom: -60px;
+  }
+}
+
+@media (max-width: 1360px) {
+  .aboutUs__text--img {
+    width: 250px;
+  }
+  .aboutUs__img-line {
+    width: 150px;
+  }
+}
+
+@media (max-width: 1220px) {
+  .aboutUs__text--img {
+    bottom: -75px;
+    width: 220px;
+  }
+}
+
+@media (max-width: 1180px) {
+  .aboutUs__text--img {
+    right: -80px;
+    width: 180px;
+  }
+}
+
+@media (max-width: 1024px) {
+  main {
+    padding: 0 15px;
+  }
+  .aboutUs {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .aboutUs__content {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 0;
+  }
+  .aboutUs__img {
+    margin-top: 24px;
+  }
+  .aboutUs__img-main {
+    max-width: 518px;
+    min-width: 320px;
+    width: 100%;
+  }
+  .aboutUs__img-line {
+    display: none;
+  }
+  .aboutUs__text {
+    margin-top: 40px;
+  }
+  .aboutUs__text--img {
+    display: none;
+  }
+  .aboutUs__heading--upper {
+    display: flex;
+    justify-content: center;
+  }
+  .aboutUs__heading {
+    display: none;
+  }
+}
