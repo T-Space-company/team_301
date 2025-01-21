@@ -118,7 +118,7 @@
           <div class="header__contact--left">
             <div class="header__email">
               <img src="./img/icons/email.svg" alt="Email" />
-              <a href="mailto:movewise@gmail.com">movewise@gmail.com</a>
+              <a href="mailto:goglobal@gmail.com">goglobal@gmail.com</a>
             </div>
             <div class="header__phone">
               <img src="./img/icons/phone.svg" alt="Phone" />
@@ -986,7 +986,7 @@
           У вас есть сомнения, в какой стране лучше оформить ВНЖ?
         </h3>
         <p class="consultation__description">
-          Запишитесь на консультацию с основателем Move Visa Алексеем Незоровым
+          Запишитесь на консультацию с основателем GoGlobal Алексеем Незоровым
           и нашей командой миграционных юристов. Мы детально изучим вашу
           ситуацию, подскажем лучшее направление и поможем принять решение,
           которое откроет новые горизонты и возможности.
@@ -1028,7 +1028,7 @@
           <div class="header__contact--left">
             <div class="header__email--footer">
               <img src="./img/icons/email-white.svg" alt="Email" />
-              <a href="mailto:movewise@gmail.com">movewise@gmail.com</a>
+              <a href="mailto:goglobal@gmail.com">goglobal@gmail.com</a>
             </div>
             <div class="header__phone--footer">
               <img src="./img/icons/phone-white.svg" alt="Phone" />
@@ -1133,7 +1133,7 @@
               <ul class="footer__nav-list">
                 <li>
                   <a href="#" class="footer__nav-link"
-                    >Преимущества сотрудничества с Move Visa</a
+                    >Преимущества сотрудничества с GoGlobal</a
                   >
                 </li>
                 <li><a href="#" class="footer__nav-link">Наши услуги</a></li>
@@ -1179,7 +1179,7 @@
           <div class="header__contact--left">
             <div class="header__email--footer">
               <img src="./img/icons/email-white.svg" alt="Email" />
-              <a href="mailto:movewise@gmail.com">movewise@gmail.com</a>
+              <a href="mailto:goglobal@gmail.com">goglobal@gmail.com</a>
             </div>
             <div class="header__phone--footer">
               <img src="./img/icons/phone-white.svg" alt="Phone" />

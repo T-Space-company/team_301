@@ -67,7 +67,7 @@ button {
   padding: 20px;
   background-color: #fff;
   position: fixed;
-  top: 55px;
+  top: 53px;
   left: 0;
   z-index: 9999;
   transform: translateX(-100%); /* Start hidden on the left */
@@ -2083,6 +2083,9 @@ font-size: 22px;
     padding: 5px 20px;
     border-bottom: none;
     background: #F9F9F9;
+  }
+  .header__logo > a > img {
+    width: 34px;
   }
   .header__contact {
     display: none;

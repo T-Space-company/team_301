@@ -113,13 +113,13 @@
     </script>
   </head>
   <body>
-    <header class="header">
+   <header class="header">
       <div class="header__content">
         <div class="header__contact">
           <div class="header__contact--left">
             <div class="header__email">
               <img src="./img/icons/email.svg" alt="Email" />
-              <a href="mailto:movewise@gmail.com">movewise@gmail.com</a>
+              <a href="mailto:goglobal@gmail.com">goglobal@gmail.com</a>
             </div>
             <div class="header__phone">
               <img src="./img/icons/phone.svg" alt="Phone" />
@@ -753,7 +753,7 @@
           <div class="header__contact--left">
             <div class="header__email--footer">
               <img src="./img/icons/email-white.svg" alt="Email" />
-              <a href="mailto:movewise@gmail.com">movewise@gmail.com</a>
+              <a href="mailto:goglobal@gmail.com">goglobal@gmail.com</a>
             </div>
             <div class="header__phone--footer">
               <img src="./img/icons/phone-white.svg" alt="Phone" />
@@ -858,7 +858,7 @@
               <ul class="footer__nav-list">
                 <li>
                   <a href="#" class="footer__nav-link"
-                    >Преимущества сотрудничества с Move Visa</a
+                    >Преимущества сотрудничества с GoGlobal</a
                   >
                 </li>
                 <li><a href="#" class="footer__nav-link">Наши услуги</a></li>
@@ -904,7 +904,7 @@
           <div class="header__contact--left">
             <div class="header__email--footer">
               <img src="./img/icons/email-white.svg" alt="Email" />
-              <a href="mailto:movewise@gmail.com">movewise@gmail.com</a>
+              <a href="mailto:goglobal@gmail.com">goglobal@gmail.com</a>
             </div>
             <div class="header__phone--footer">
               <img src="./img/icons/phone-white.svg" alt="Phone" />

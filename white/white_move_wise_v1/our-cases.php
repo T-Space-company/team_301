@@ -118,7 +118,7 @@
           <div class="header__contact--left">
             <div class="header__email">
               <img src="./img/icons/email.svg" alt="Email" />
-              <a href="mailto:movewise@gmail.com">movewise@gmail.com</a>
+              <a href="mailto:goglobal@gmail.com">goglobal@gmail.com</a>
             </div>
             <div class="header__phone">
               <img src="./img/icons/phone.svg" alt="Phone" />
@@ -594,8 +594,7 @@
           <p class="case-section__paragraph">
             В процессе получения гражданства США я столкнулся с несколькими
             трудностями. Основной сложностью было подготовить все документы и
-            пройти через бюрократические этапы. Но специалисты компании Move
-            Visa помогли мне справиться со всеми нюансами: от оформления визы до
+            пройти через бюрократические этапы. Но специалисты компании GoGlobal помогли мне справиться со всеми нюансами: от оформления визы до
             прохождения интервью. Особую поддержку я получил в части подготовки
             к тесту на гражданство — куратор объяснил мне все ключевые моменты,
             что помогло успешно пройти экзамен с первого раза.
@@ -664,8 +663,7 @@
           <p class="case-section__paragraph">
             В процессе получения гражданства США я столкнулся с несколькими
             трудностями. Основной сложностью было подготовить все документы и
-            пройти через бюрократические этапы. Но специалисты компании Move
-            Visa помогли мне справиться со всеми нюансами: от оформления визы до
+            пройти через бюрократические этапы. Но специалисты компании GoGlobal помогли мне справиться со всеми нюансами: от оформления визы до
             прохождения интервью. Особую поддержку я получил в части подготовки
             к тесту на гражданство — куратор объяснил мне все ключевые моменты,
             что помогло успешно пройти экзамен с первого раза.
@@ -734,8 +732,7 @@
           <p class="case-section__paragraph">
             В процессе получения гражданства США я столкнулся с несколькими
             трудностями. Основной сложностью было подготовить все документы и
-            пройти через бюрократические этапы. Но специалисты компании Move
-            Visa помогли мне справиться со всеми нюансами: от оформления визы до
+            пройти через бюрократические этапы. Но специалисты компании GoGlobal помогли мне справиться со всеми нюансами: от оформления визы до
             прохождения интервью. Особую поддержку я получил в части подготовки
             к тесту на гражданство — куратор объяснил мне все ключевые моменты,
             что помогло успешно пройти экзамен с первого раза.
@@ -808,7 +805,7 @@
           <div class="header__contact--left">
             <div class="header__email--footer">
               <img src="./img/icons/email-white.svg" alt="Email" />
-              <a href="mailto:movewise@gmail.com">movewise@gmail.com</a>
+              <a href="mailto:goglobal@gmail.com">goglobal@gmail.com</a>
             </div>
             <div class="header__phone--footer">
               <img src="./img/icons/phone-white.svg" alt="Phone" />
@@ -913,7 +910,7 @@
               <ul class="footer__nav-list">
                 <li>
                   <a href="#" class="footer__nav-link"
-                    >Преимущества сотрудничества с Move Visa</a
+                    >Преимущества сотрудничества с GoGlobal</a
                   >
                 </li>
                 <li><a href="#" class="footer__nav-link">Наши услуги</a></li>
@@ -959,7 +956,7 @@
           <div class="header__contact--left">
             <div class="header__email--footer">
               <img src="./img/icons/email-white.svg" alt="Email" />
-              <a href="mailto:movewise@gmail.com">movewise@gmail.com</a>
+              <a href="mailto:goglobal@gmail.com">goglobal@gmail.com</a>
             </div>
             <div class="header__phone--footer">
               <img src="./img/icons/phone-white.svg" alt="Phone" />

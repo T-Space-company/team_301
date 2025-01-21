@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Move Wise</title>
+    <title>GoGlobal</title>
     <link rel="stylesheet" href="./css/styles.css" />
     <link href="
 https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
@@ -121,7 +121,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
           <div class="header__contact--left">
             <div class="header__email">
               <img src="./img/icons/email.svg" alt="Email" />
-              <a href="mailto:movewise@gmail.com">movewise@gmail.com</a>
+              <a href="mailto:goglobal@gmail.com">goglobal@gmail.com</a>
             </div>
             <div class="header__phone">
               <img src="./img/icons/phone.svg" alt="Phone" />
@@ -577,7 +577,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
           </button>
           <div class="hero__info">
             <span class="hero__text">
-              Move Wise — эксперт в эмиграции: <br />
+              GoGlobal — эксперт в эмиграции: <br />
               от мечты к реальности
             </span>
             <p class="hero__subtext">
@@ -594,7 +594,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 
       <section class="why-choose">
         <div class="why-choose__heading">
-          <h2 class="why-choose__title">Преимущества сотрудничества с Move Wise</h2>
+          <h2 class="why-choose__title">Преимущества сотрудничества с GoGlobal</h2>
           <img src="./img/icons/lines.svg" alt="Lines" class="lines_desktop" />
           <img src="./img/mobile/lines.svg" alt="Lines" class="lines_mobile">
         </div>
@@ -1449,7 +1449,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
           <div class="header__contact--left">
             <div class="header__email--footer">
               <img src="./img/icons/email-white.svg" alt="Email" />
-              <a href="mailto:movewise@gmail.com">movewise@gmail.com</a>
+              <a href="mailto:goglobal@gmail.com">goglobal@gmail.com</a>
             </div>
             <div class="header__phone--footer">
               <img src="./img/icons/phone-white.svg" alt="Phone" />
@@ -1554,7 +1554,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
               <ul class="footer__nav-list">
                 <li>
                   <a href="#" class="footer__nav-link"
-                    >Преимущества сотрудничества с Move Visa</a
+                    >Преимущества сотрудничества с GoGlobal</a
                   >
                 </li>
                 <li><a href="#" class="footer__nav-link">Наши услуги</a></li>
@@ -1600,7 +1600,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
           <div class="header__contact--left">
             <div class="header__email--footer">
               <img src="./img/icons/email-white.svg" alt="Email" />
-              <a href="mailto:movewise@gmail.com">movewise@gmail.com</a>
+              <a href="mailto:goglobal@gmail.com">goglobal@gmail.com</a>
             </div>
             <div class="header__phone--footer">
               <img src="./img/icons/phone-white.svg" alt="Phone" />
