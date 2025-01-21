@@ -594,8 +594,9 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 
       <section class="why-choose">
         <div class="why-choose__heading">
-          <h2 class="why-choose__title">Почему выбирают Move Wise?</h2>
-          <img src="./img/icons/lines.svg" alt="Lines" />
+          <h2 class="why-choose__title">Преимущества сотрудничества с Move Wise</h2>
+          <img src="./img/icons/lines.svg" alt="Lines" class="lines_desktop" />
+          <img src="./img/mobile/lines.svg" alt="Lines" class="lines_mobile">
         </div>
         <div class="why-choose__items">
           <div class="why-choose__item">

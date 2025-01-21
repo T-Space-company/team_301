@@ -538,11 +538,8 @@ line-height: 22px; /* 137.5% */
 
 .why-choose__heading {
   position: relative;
-}
-
-.why-choose__heading > img {
-  position: absolute;
-  top: 50px;
+  margin: 0 auto;
+  max-width: 920px;
 }
 
 .why-choose__title {
@@ -1871,6 +1868,15 @@ splide {
   object-fit: cover;
 }
 
+.lines_desktop {
+  display: flex;
+  position: absolute;
+  top: 50px;
+  right: 0;
+}
+.lines_mobile {
+  display: none;
+}
 @media (max-width: 1440px) {
   .team__members {
     gap: 20px;
@@ -2208,8 +2214,12 @@ font-size: 22px;
 .why-choose {
   padding: 40px 15px;
 }
+.why-choose__heading {
+  max-width: 350px;
+}
 .why-choose__title {
   font-size: 24px;
+  line-height: 30px;
 }
 .why-choose__items {
   flex-wrap: wrap;
@@ -2234,14 +2244,26 @@ font-size: 22px;
 .why-choose__text {
   font-family: Montserrat;
 }
-.why-choose__heading > img {
+.lines_desktop {
   display: none;
+}
+.lines_mobile {
+  display: flex;
+  position: absolute;
+  top: 60px;
+  right: 0;
 }
 .services {
   padding: 0 15px;
 }
 .services__title {
   margin-bottom: 40px;
+}
+.services__icon {
+  right: 20px;
+  top: -10px;
+    width: 25px;
+    height: 25px;
 }
 .services__subtitle {
   font-size: 18px;
@@ -2278,6 +2300,7 @@ font-size: 22px;
   font-weight: 600;
 }
 .hero {
+  background-image: url(../img/mobile/bg_mobile.png);
   padding: 15px;
 }
 .hero__content {
@@ -2291,7 +2314,7 @@ font-size: 22px;
 .hero__description {
   font-size: 18px;
   line-height: 18px;
-  max-width: 300px;
+  max-width: 235px;
 }
 .hero__button {
   width: 220px;
@@ -2331,6 +2354,7 @@ font-size: 22px;
 }
 .testimonials__heading {
   margin: 40px auto 0 auto;
+  padding: 0 15px;
 }
 .testimonials__item {
   max-width: 267px;
@@ -2341,8 +2365,10 @@ font-size: 22px;
 
 }
 .testimonials__icon {
-  top: -30px;
-  right: 80px;
+ top: 0;
+ right: 140px;
+ width: 25px;
+ height: 25px;
 }
 .cases {
   overflow: hidden;
@@ -2447,19 +2473,19 @@ width: 100%;
 
 @media (max-width: 530px) {
   .testimonials__icon {
-    right: 40px;
+    right: 90px;
   }
 }
 
 @media (max-width: 440px) {
   .testimonials__icon {
-    right: 20px;
+    right: 70px;
   }
 }
 
 @media (max-width: 395px) {
   .testimonials__icon{
-    right: 0;
+    right: 40px;
   }
 }
 
@@ -2468,3 +2494,14 @@ width: 100%;
     padding-bottom: 250px;
   }
 } 
+
+@media (max-width: 360px) {
+  .why-choose__title {
+    font-size: 22px;
+  }
+}
+@media (max-width: 325px) {
+  .why-choose__title {
+    font-size: 21px;
+  }
+}
