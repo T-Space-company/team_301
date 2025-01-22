@@ -5,6 +5,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>БКС</title>
     <link rel="stylesheet" href="./styles/styles.css" />
+    <script src="jquery-3.6.1.min.js"></script>
+
+    <script>
+      window.bgdataLayer = window.bgdataLayer || [];
+
+      function bge() {
+          bgdataLayer.push(arguments);
+      }
+      bge('init', '<?= $_GET['bge'] ?>');
+    </script>
+    <script
+      async
+      src="https://api.imotech.video/ad/events.js?pixel_id=<?= $_GET['bge'] ?>"
+    ></script>
+
+    <script type="application/javascript">
+      function getCookie(name) {
+        var v = document.cookie.match("(^|;) ?" + name + "=([^;]*)(;|$)");
+        return v ? v[2] : null;
+      }
+
+      function setCookie(name, value, days) {
+        var d = new Date();
+        d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days);
+        document.cookie =
+          name + "=" + value + ";path=/;expires=" + d.toGMTString();
+      }
+
+      function getSubId() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!"{subid}".match("{")) {
+          return "{subid}";
+        }
+        var clientSubid =
+          '<?php echo isset($client) ? $client->getSubid() : "" ?>';
+        if (!clientSubid.match(">")) {
+          return clientSubid;
+        }
+        if (params.get("_subid")) {
+          return params.get("_subid");
+        }
+        if (params.get("subid")) {
+          return params.get("subid");
+        }
+        if (getCookie("subid")) {
+          return getCookie("subid");
+        }
+      }
+
+      function getToken() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!"{token}".match("{")) {
+          return "{token}";
+        }
+        var clientToken =
+          '<?php echo isset($client) ? $client->getToken() : "" ?>';
+        if (!clientToken.match(">")) {
+          return clientToken;
+        }
+        if (params.get("_token")) {
+          return params.get("_token");
+        }
+        if (params.get("token")) {
+          return params.get("token");
+        }
+        if (getCookie("token")) {
+          return getCookie("token");
+        }
+        return null;
+      }
+
+      function getPixel() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!"{pixel}".match("{")) {
+          return "{pixel}";
+        }
+        if (params.get("pixel")) {
+          return params.get("pixel");
+        }
+
+        if (getCookie("pixel")) {
+          return getCookie("pixel");
+        }
+
+        return null;
+      }
+
+      if (typeof URLSearchParams === "function") {
+        document.addEventListener("DOMContentLoaded", function (event) {
+          var params = new URLSearchParams(document.location.search.substr(1));
+          var subid = getSubId();
+          var token = getToken();
+          var pixel = getPixel();
+
+          params.set("_token", token);
+          setCookie("pixel", pixel);
+          setCookie("token", token);
+          setCookie("subid", subid);
+        });
+      }
+    </script>
   </head>
   <body>
     <header class="section header">
@@ -263,17 +364,17 @@
             <p>Какой бы ни была ситуация на финансовом рынке</p>
           </div>
           <div class="invest__item">
-            <img src="./img/invest2.png" alt="" />
+            <img src="./img/invest2.png" alt="Рейтинг" />
             <h3>Рейтинг AАА|RU.IV|</h3>
             <p>Присвоен Национальным рейтинговым агентством</p>
           </div>
           <div class="invest__item">
-            <img src="./img/invest3.png" alt="" />
+            <img src="./img/invest3.png" alt="Клиенты" />
             <h3>Более 1 млн клиентов</h3>
             <p>Доверяют нам и используют наши сервисы</p>
           </div>
           <div class="invest__item">
-            <img src="./img/invest4.png" alt="" />
+            <img src="./img/invest4.png" alt="Брокер" />
             <h3>Лицензированный брокер</h3>
             <p>Обладаем всеми необходимыми документами</p>
           </div>
@@ -293,7 +394,160 @@
           <button class="invest__trust-button">Открыть счет</button>
         </div>
       </section>
+      <section class="section invest-start">
+        <h2 class="invest-start__heading">Начать инвестировать легко</h2>
+        <div class="invest-start__items">
+          <div class="invest-start__item">
+            <img src="./img/icons/docs.svg" alt="Documents" />
+            <h3>1. Откройте счет</h3>
+            <span>на сайте или в приложении за 3 минуты</span>
+          </div>
+          <div class="invest-start__item">
+            <img src="./img/icons/money.svg" alt="Deposit" />
+            <h3>2. Пополните счет</h3>
+            <span>с карты любого российского банка без комиссии</span>
+          </div>
+          <div class="invest-start__item">
+            <img src="./img/icons/arrow.svg" alt="Arrow" />
+            <h3>3. Достигайте целей</h3>
+            <span>с решениями от БКС, которые подходят именно вам</span>
+          </div>
+        </div>
+        <div class="invest-start__form"></div>
+      </section>
+      <section class="section news">
+        <div class="news__content">
+          <span class="news__heading"
+            >Эксклюзивная аналитика, свежие новости и обзоры рынков</span
+          >
+          <span class="news__text"
+            >Всегда доступны в приложении и личном кабинете. Нужно просто
+            открыть счет</span
+          >
+          <button class="news__button">Открыть доступ</button>
+        </div>
+        <img src="./img/news.png" alt="Новости" />
+      </section>
+      <section class="section licenses">
+        <h2 class="licenses__heading">Наши лицензиии</h2>
+        <div class="licenses__items">
+          <img src="./img/license1.png" alt="Лицензия" />
+          <img src="./img/license2.png" alt="Лицензия" />
+          <img src="./img/license3.png" alt="Лицензия" />
+          <img src="./img/license4.png" alt="Лицензия" />
+        </div>
+      </section>
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <div class="footer__top">
+        <p>
+          ООО «Компания БКС» <br />
+          Лицензия No 154-04434-100000 от 10.01.2001 на осуществление брокерской
+          деятельности. <br />Выдана ФСФР. Без ограничения срока действия.
+        </p>
+      </div>
+      <div class="footer__main">
+        <span
+          >С информацией об ООО «Компания БКС» можно ознакомиться
+          <span class="footer__link">по ссылке</span></span
+        >
+        <span
+          >Информация на данной странице сайта не является индивидуальной
+          инвестиционной рекомендацией, и финансовые инструменты либо операции,
+          упомянутые на данной странице сайта, могут не соответствовать вашему
+          инвестиционному профилю, финансовому положению, опыту инвестиций,
+          инвестиционным целям. 0% за покупку ценных бумаг, драгметаллов и юаней
+          на тарифе Инвестор. Клиент дополнительно несет расходы по уплате
+          биржевых сборов и иных расходов, установленных договором
+          с ООО «Компания БКС». Более подробно с условиями данного тарифного
+          плана вы можете ознакомиться в приложении № 11 к регламенту оказания
+          услуг на рынке ценных бумаг ООО «Компания БКС»:
+          <span class="footer__link">bcs.ru</span></span
+        >
+        <span
+          >НРА подтвердило некредитный рейтинг надежности и качества услуг ООО
+          «Компания БКС» по национальной рейтинговой шкале инвестиционных
+          компаний для Российской Федерации на уровне «AАА|ru.iv|», прогноз
+          «Стабильный» 28.04.2023. Доступно
+          <span class="footer__link">на сайте</span>
+        </span>
+        <span
+          >ООО «Компания БКС» стало победителем премии Frank Invest & Insurance
+          Award в номинации «Лучшая УК для розничного инвестора» в 2023 году:
+          <span class="footer__link">https://frankmedia.ru</span>
+        </span>
+        <span
+          >ООО «Компания БКС» стало победителем премии Investment Leaders Award
+          в номинации «Advisory — лучшая услуга по управлению активами для
+          состоятельных клиентов» в 2023 году:
+          <span class="footer__link">https://investfunds.ru</span>
+        </span>
+        <span
+          >Данная информация не является индивидуальной инвестиционной
+          рекомендацией, и финансовые инструменты либо операции, упомянутые
+          в данном материале, могут не соответствовать вашему инвестиционному
+          профилю, финансовому положению, опыту инвестиций, инвестиционным
+          целям. Определение соответствия финансового инструмента либо операции
+          инвестиционным целям, инвестиционному горизонту и толерантности
+          к риску является задачей инвестора. ООО «Компания БКС» не несет
+          ответственности за возможные убытки инвестора в случае совершения
+          операций либо инвестирования в финансовые инструменты, упомянутые
+          в настоящем материале, и не рекомендует использовать указанную
+          информацию в качестве единственного источника информации при принятии
+          инвестиционного решения.</span
+        >
+        <span
+          >Данные являются биржевой информацией, обладателем (собственником)
+          которой является ПАО Московская Биржа. Распространение, трансляция или
+          иное предоставление биржевой информации третьим лицам возможно
+          исключительно в порядке и на условиях, предусмотренных порядком
+          использования биржевой информации, предоставляемой ПАО Московская
+          Биржа.</span
+        >
+        <span
+          >ООО «Компания БКС» стало победителем премии Investment Leaders Award
+          в номинации
+          <span class="footer__link"
+            >«Лучшее приложение для инвестиций» по итогам 2023 года</span
+          ></span
+        >
+      </div>
+      <div class="footer__bottom">
+        <span>ООО «Компания БКС» <br />© 1995 — 2025.</span>
+        <span
+          >Любое использование материалов <br />сайта без разрешения
+          запрещено</span
+        >
+      </div>
+    </footer>
+    <script src="loadAssets.js?v=3444371"></script>
+
+    <script>
+      window.onload = function () {
+        var thx = localStorage.getItem("thanks");
+        if (thx && thx === "true") {
+          const fileThx = "thanks-page.php";
+          window.location.href = `${fileThx}${window.location.search}`;
+        }
+      };
+
+      window.onpageshow = function () {
+        var thx = localStorage.getItem("thanks");
+        if (thx && thx === "true") {
+          const fileThx = "thanks-page.php";
+          window.location.href = `${fileThx}${window.location.search}`;
+        }
+      };
+    </script>
+
+    <script type="application/javascript">
+      function getSubId() {
+        if (!"{subid}".match("{")) {
+          localStorage.setItem("subid", "{subid}");
+          return "{subid}";
+        }
+      }
+      getSubId();
+    </script>
   </body>
 </html>
