@@ -1,0 +1,159 @@
+@font-face {
+  font-family: "SB Sans Display";
+  src: url("./fonts/SB-Sans-Display-Semibold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Fixel Display";
+  src: url("./fonts/FixelDisplay-Regular.otf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Fixel Display";
+  src: url("./fonts/FixelDisplay-SemiBold.otf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Fixel Display";
+  src: url("./fonts/FixelDisplay-Bold.otf") format("truetype");
+  font-weight: 700;
+}
+
+body {
+  background: #f3f3f3;
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  background: #0079c5;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-content {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.header-content__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.header-content__amount {
+  color: #fff;
+  font-family: "SB Sans Display";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.header-content__change {
+  color: var(--Green, #21bf73);
+  font-family: "SB Sans Display";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.splide__slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.main-slider__card img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+  border-radius: 10px;
+}
+
+#main-slider {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.splide__list {
+  height: 190px;
+}
+
+.main-form {
+  border-radius: 15px;
+  background: #fff;
+  max-width: 335px;
+  padding: 20px;
+  box-shadow: 0px 6px 6.5px 0px rgba(94, 94, 94, 0.25);
+}
+
+.form-heading {
+  margin: 0;
+  color: #393939;
+  text-align: center;
+  font-family: "Fixel Display";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px; /* 116.667% */
+  margin-bottom: 20px;
+}
+
+.form-label {
+  color: #393939;
+  font-family: "Fixel Display";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 14px */
+  text-align: left;
+}
+
+#name,
+#last_name,
+#phone {
+  border-radius: 12px;
+  background: #e7e7e7;
+  padding: 15px 17px;
+  height: auto;
+
+  color: #b7b7b7;
+  font-family: "Fixel Display";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 100%; /* 13px */
+  border: none;
+  margin-top: 8px !important;
+}
+
+.accent {
+  background: var(--1, linear-gradient(180deg, #0079c5 0%, #0fa8e0 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: underline;
+  text-decoration-color: #0fa8e0;
+}
+
+.form-group-btn {
+  margin-bottom: 0 !important;
+}
+
+#form-button {
+  border-radius: 20px;
+  background: var(--1, linear-gradient(180deg, #0079c5 0%, #0fa8e0 100%));
+  padding: 18px 20px;
+  border: none;
+}
