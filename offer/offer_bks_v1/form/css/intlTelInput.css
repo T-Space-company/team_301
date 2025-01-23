@@ -139,9 +139,9 @@
 }
 .iti--separate-dial-code .iti__selected-dial-code {
   margin-left: 6px;
-  color: #989898;
-  font-family: inherit;
-  font-size: 12px;
+  color: #525252;
+  font-family: Arial;
+  font-size: 16px;
   font-weight: 400;
   letter-spacing: 0.07px;
 }

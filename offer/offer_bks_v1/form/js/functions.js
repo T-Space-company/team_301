@@ -108,9 +108,8 @@ export const generationsCustomPassword = () => {
 export function renderFormRegistrations(allFormClass) {
   const forms = document.querySelectorAll(`.${allFormClass}`);
   const htmlFormHtml = `
-  <div class="text-block-6 center">
-              Оставьте свои контактные данные и начинайте зарабатывать уже
-              сейчас.
+  <div class="form-text text-block-6 center">
+              Доступ к основным фондовым биржам в США, Европе и Азии для инвестиций в акции, ETF, облигации и опционы на акции. Отмеченные наградами инвестиционные рекомендации и образовательные курсы, разработанные экспертами фондового рынка.
             </div>
  <div class="form-group input-group ">
     <input class="form-control form-input form__input text-field w-input" name="name" placeholder="Имя"  type="text" required />
@@ -133,26 +132,20 @@ export function renderFormRegistrations(allFormClass) {
     <div class="error-phone"></div>
   </div>
 
-  <div class="form-group">
-  
-    <button class="btn secondary-solid-btn btn-block buttonSend submit-button"  name="submitBtn" type="submit">
-    <p class="btnFormText" style="color:white; ">Регистрация
+ <div class="form-group input-group group-checkbox">
+  <label class="switch">
+  <input type="checkbox" name="consent" class="form-control form-input form-checkbox" required>
+  <span class="slider"></span>
+  <span class="checkbox-text">Даю согласие на обработку персональных данных в соответствии с Политикой конфиденциальности</span>
+</label>
+  </div>
+
+
+  <div class="form-group" id="form-btn-wrapper">
+    <button class="btn secondary-solid-btn btn-block buttonSend submit-button" id="form-button" name="submitBtn" type="submit">
+    <p class="btnFormText" style="color:white; ">Зарегистрироваться
     </p>
     </button>
-  </div>
-
-  <div class="form-group input-group group-checkbox">
-  <label class="switch">
-  <input class="form-control form-input form-checkbox" type="checkbox" style="width: 13px; height: 13px" required>
-  <span class="checkbox-text">Подтверждаю, что мне исполнилось 18 лет</span>
-  </label>
-  </div>
-
-  <div class="form-group input-group group-checkbox">
-  <label class="switch">
-  <input class="form-control form-input form-checkbox" type="checkbox" style="width: 13px; height: 13px" required>
-  <span class="checkbox-text second">Подтверждаю, что являюсь гражданином РФ</span>
-  </label>
   </div>
 
    <input name="code" type="hidden" value="" />
