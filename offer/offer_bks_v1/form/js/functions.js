@@ -134,7 +134,7 @@ export function renderFormRegistrations(allFormClass) {
 
  <div class="form-group input-group group-checkbox">
   <label class="switch">
-  <input type="checkbox" class="form-control form-input form-checkbox" required>
+  <input type="checkbox" name="consent" class="form-control form-input form-checkbox" required>
   <span class="slider"></span>
   <span class="checkbox-text">Даю согласие на обработку персональных данных в соответствии с Политикой конфиденциальности</span>
 </label>

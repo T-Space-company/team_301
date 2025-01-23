@@ -5,7 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>БКС</title>
     <link rel="stylesheet" href="./styles/styles.css" />
+    <link href="
+https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
+" rel="stylesheet">
+
     <script src="./modal.js"></script>
+    <script src="./slider.js"></script>
+    <script src="./main.js"></script>
     <script src="jquery-3.6.1.min.js"></script>
 
     <script>
@@ -157,57 +163,64 @@
               <div class="menu__item"><span>Обучение</span></div>
             </div>
           </div>
-          <div class="strategy__right">
-            <div class="strategy__feature">
-              <div class="strategy__feature-title">
-                <h3 class="strategy__feature-heading">Удобные тарифы</h3>
-                <div class="strategy__feature-btn">
-                  <img src="./img/icons/arrow_feature.svg" alt="" />
-                </div>
-              </div>
-              <p class="strategy__feature-value">от 0%</p>
-              <span class="strategy__feature-description"
-                >Удобные условия для начинающих и активных инвесторов</span
-              >
-            </div>
-            <div class="strategy__feature">
-              <div class="strategy__feature-title">
-                <h3 class="strategy__feature-heading">Тысячи возможностей</h3>
-                <div class="strategy__feature-btn">
-                  <img src="./img/icons/arrow_feature.svg" alt="" />
-                </div>
-              </div>
-              <p class="strategy__feature-value">20 000+</p>
-              <span class="strategy__feature-description">
-                Акции и облигации со всего мира, ПИФы, стратегии, готовые
-                решения
-              </span>
-            </div>
-            <div class="strategy__feature">
-              <div class="strategy__feature-title">
-                <h3 class="strategy__feature-heading">Бесплатное обучение</h3>
-                <div class="strategy__feature-btn">
-                  <img src="./img/icons/arrow_feature.svg" alt="" />
-                </div>
-              </div>
-              <p class="strategy__feature-value">50+</p>
-              <span class="strategy__feature-description"
-                >Более 50 бесплатных обучающих курсов и статей</span
-              >
-            </div>
-            <div class="strategy__feature">
-              <div class="strategy__feature-title">
-                <h3 class="strategy__feature-heading">Всегда онлайн</h3>
-                <div class="strategy__feature-btn">
-                  <img src="./img/icons/arrow_feature.svg" alt="" />
-                </div>
-              </div>
-              <p class="strategy__feature-value">24/7</p>
-              <span class="strategy__feature-description"
-                >Инвестиции и аналитика у вас под рукой</span
-              >
-            </div>
+          <div id="strategy-slider" class="splide">
+  <div class="splide__track">
+    <div class="splide__list strategy__right">
+      <div class="splide__slide strategy__feature">
+        <div class="strategy__feature-title">
+          <h3 class="strategy__feature-heading">Удобные тарифы</h3>
+          <div class="strategy__feature-btn">
+            <img src="./img/icons/arrow_feature.svg" alt="" />
           </div>
+        </div>
+        <p class="strategy__feature-value">от 0%</p>
+        <span class="strategy__feature-description">
+          Удобные условия для начинающих и активных инвесторов
+        </span>
+      </div>
+
+      <div class="splide__slide strategy__feature">
+        <div class="strategy__feature-title">
+          <h3 class="strategy__feature-heading">Тысячи возможностей</h3>
+          <div class="strategy__feature-btn">
+            <img src="./img/icons/arrow_feature.svg" alt="" />
+          </div>
+        </div>
+        <p class="strategy__feature-value">20 000+</p>
+        <span class="strategy__feature-description">
+          Акции и облигации со всего мира, ПИФы, стратегии, готовые решения
+        </span>
+      </div>
+
+      <div class="splide__slide strategy__feature">
+        <div class="strategy__feature-title">
+          <h3 class="strategy__feature-heading">Бесплатное обучение</h3>
+          <div class="strategy__feature-btn">
+            <img src="./img/icons/arrow_feature.svg" alt="" />
+          </div>
+        </div>
+        <p class="strategy__feature-value">50+</p>
+        <span class="strategy__feature-description">
+          Более 50 бесплатных обучающих курсов и статей
+        </span>
+      </div>
+
+      <div class="splide__slide strategy__feature">
+        <div class="strategy__feature-title">
+          <h3 class="strategy__feature-heading">Всегда онлайн</h3>
+          <div class="strategy__feature-btn">
+            <img src="./img/icons/arrow_feature.svg" alt="" />
+          </div>
+        </div>
+        <p class="strategy__feature-value">24/7</p>
+        <span class="strategy__feature-description">
+          Инвестиции и аналитика у вас под рукой
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
         </div>
       </section>
       <section class="section offers-form">
@@ -221,7 +234,7 @@
             method="post"
           >
             <div class="text-block-6">
-              <h2 class="form-heading">Премиальные предложения</h2>
+              <h2 class="form-heading" id="main-form__heading">Премиальные предложения</h2>
             </div>
             <input type="hidden" id="utm_medium" value='<?= $_GET['utm_medium'] ?>'>
             <input type="hidden" id="campaing_id" value='<?= $_GET['campaing_id'] ?>'>
@@ -241,11 +254,21 @@
             <div class="products__type">Облигации</div>
           </div>
         </div>
-        <div class="products__charts">
-          <img src="./img/chart1.png" alt="Т-Технологии" />
-          <img src="./img/chart2.png" alt="Сбербанк" />
-          <img src="./img/chart3.png" alt="Газпром" />
-        </div>
+  <div id="products-slider" class="splide products__charts">
+  <div class="splide__track products__track">
+    <div class="splide__list products__list">
+      <div class="splide__slide">
+        <img src="./img/chart1.png" alt="Т-Технологии" />
+      </div>
+      <div class="splide__slide">
+        <img src="./img/chart2.png" alt="Сбербанк" />
+      </div>
+      <div class="splide__slide">
+        <img src="./img/chart3.png" alt="Газпром" />
+      </div>
+    </div>
+  </div>
+</div>
         <button type="button" class="products__button">
           Подобрать решение<img src="./img/icons/arrow_btn.svg" alt="Arrow" />
         </button>
@@ -373,28 +396,33 @@
       </section>
       <section class="section invest">
         <h2 class="invest__heading">Инвестируйте с нами</h2>
-        <div class="invest__items">
-          <div class="invest__item">
-            <img src="./img/invest1.png" alt="" />
-            <h3>29 лет активной работы</h3>
-            <p>Какой бы ни была ситуация на финансовом рынке</p>
-          </div>
-          <div class="invest__item">
-            <img src="./img/invest2.png" alt="Рейтинг" />
-            <h3>Рейтинг AАА|RU.IV|</h3>
-            <p>Присвоен Национальным рейтинговым агентством</p>
-          </div>
-          <div class="invest__item">
-            <img src="./img/invest3.png" alt="Клиенты" />
-            <h3>Более 1 млн клиентов</h3>
-            <p>Доверяют нам и используют наши сервисы</p>
-          </div>
-          <div class="invest__item">
-            <img src="./img/invest4.png" alt="Брокер" />
-            <h3>Лицензированный брокер</h3>
-            <p>Обладаем всеми необходимыми документами</p>
-          </div>
-        </div>
+        <div id="invest-slider" class="splide">
+  <div class="splide__track">
+    <div class="splide__list invest__items">
+      <div class="splide__slide invest__item">
+        <img src="./img/invest1.png" alt="" />
+        <h3>29 лет активной работы</h3>
+        <p>Какой бы ни была ситуация на финансовом рынке</p>
+      </div>
+      <div class="splide__slide invest__item">
+        <img src="./img/invest2.png" alt="Рейтинг" />
+        <h3>Рейтинг AАА|RU.IV|</h3>
+        <p>Присвоен Национальным рейтинговым агентством</p>
+      </div>
+      <div class="splide__slide invest__item">
+        <img src="./img/invest3.png" alt="Клиенты" />
+        <h3>Более 1 млн клиентов</h3>
+        <p>Доверяют нам и используют наши сервисы</p>
+      </div>
+      <div class="splide__slide invest__item">
+        <img src="./img/invest4.png" alt="Брокер" />
+        <h3>Лицензированный брокер</h3>
+        <p>Обладаем всеми необходимыми документами</p>
+      </div>
+    </div>
+  </div>
+</div>
+
         <div class="invest__trust">
           <div class="invest__trust-content">
             <img
@@ -462,13 +490,26 @@
         <img src="./img/news.png" alt="Новости" />
       </section>
       <section class="section licenses">
-        <h2 class="licenses__heading">Наши лицензиии</h2>
-        <div class="licenses__items">
-          <img src="./img/license1.png" alt="Лицензия" />
-          <img src="./img/license2.png" alt="Лицензия" />
-          <img src="./img/license3.png" alt="Лицензия" />
-          <img src="./img/license4.png" alt="Лицензия" />
-        </div>
+        <h2 class="licenses__heading">Наши лицензии</h2>
+        <div id="licenses-slider" class="splide">
+  <div class="splide__track">
+    <div class="splide__list licenses__items">
+      <div class="splide__slide">
+        <img src="./img/license1.png" class="license" alt="Лицензия 1" />
+      </div>
+      <div class="splide__slide">
+        <img src="./img/license2.png" class="license" alt="Лицензия 2" />
+      </div>
+      <div class="splide__slide">
+        <img src="./img/license3.png" class="license" alt="Лицензия 3" />
+      </div>
+      <div class="splide__slide">
+        <img src="./img/license4.png" class="license" alt="Лицензия 4" />
+      </div>
+    </div>
+  </div>
+</div>
+
       </section>
     </main>
     <footer class="footer">
@@ -552,6 +593,8 @@
           запрещено</span
         >
       </div>
+        <button class="footer__toggle-button">Свернуть</button>
+
     </footer>
     <div id="modal" class="modal">
       <button class="modal-close" id="button-close"><img src="./img/icons/close_btn.png" alt="Close"></button>
@@ -576,6 +619,13 @@
           </form>
       </div>
     </div>
+
+    <script src="
+https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
+"></script>
+
+
+
     <script src="loadAssets.js?v=3444371"></script>
 
     <script>
