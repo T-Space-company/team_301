@@ -123,17 +123,17 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
         <div class="header__menu-wrapper">
           <nav class="header__menu">
             <ul class="header__list">
-              <li class="header__item"><a href="">Офисы</a></li>
-              <li class="header__item"><a href="">О нас</a></li>
+              <li class="header__item"><a href="#main-section-form">Офисы</a></li>
+              <li class="header__item"><a href="#main-section-form">О нас</a></li>
               <li class="header__item">
-                <a href="">Проекты БКС</a
+                <a href="#main-section-form">Проекты БКС</a
                 ><img src="./img/icons/arrow_menu.svg" alt="Arrow" />
               </li>
             </ul>
           </nav>
         </div>
         <div class="header__entry">
-          <button type="button" class="header__login">
+          <button type="button" id="sign-in-button" class="header__login">
             <img src="./img/icons/login.svg" alt="Логин" />Войти
           </button>
           <button type="button" id="button-form" class="header__signup">
@@ -150,7 +150,9 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
               <h1>Стратегия на 2025 год</h1>
               <p>Рекордные ставки принесут рекордные доходы</p>
               <button type="button">
-                Читать<img src="./img/icons/arrow_btn.svg" alt="Arrow" />
+                <a href="#main-section-form">
+                  Читать<img src="./img/icons/arrow_btn.svg" alt="Arrow" />
+                </a>
               </button>
             </div>
             <div class="strategy__menu">
@@ -270,7 +272,9 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
   </div>
 </div>
         <button type="button" class="products__button">
-          Подобрать решение<img src="./img/icons/arrow_btn.svg" alt="Arrow" />
+          <a href="#main-section-form">
+            Подобрать решение<img src="./img/icons/arrow_btn.svg" alt="Arrow" />
+          </a>
         </button>
       </section>
       <section class="section education">
@@ -319,7 +323,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
             </details>
           </div>
           <button type="button" class="education__button">
-            Начать учиться<img src="./img/icons/arrow_btn.svg" alt="Arrow" />
+            <a href="#main-section-form">Начать учиться<img src="./img/icons/arrow_btn.svg" alt="Arrow" /></a>
           </button>
         </div>
         <div class="education__right">
@@ -358,7 +362,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                 стилем жизни
               </li>
             </ul>
-            <button type="button" class="offers__button">Подробнее</button>
+            <button type="button" class="offers__button"><a href="#main-section-form">Подробнее</a></button>
           </div>
           <div class="offers__right">
             <div class="offers__content--right">
@@ -390,7 +394,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                 />Бесплатный аудит вашего портфеля
               </li>
             </ul>
-            <button type="button" class="offers__button">Подробнее</button>
+            <button type="button" class="offers__button"><a href="#main-section-form">Подробнее</a></button>
           </div>
         </div>
       </section>
@@ -435,7 +439,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
               инвесторов по версии Investfunds.
             </span>
           </div>
-          <button class="invest__trust-button">Открыть счет</button>
+          <button class="invest__trust-button"><a href="#main-section-form">Открыть счет</a></button>
         </div>
       </section>
       <section class="section invest-start">
@@ -457,7 +461,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
             <span>с решениями от БКС, которые подходят именно вам</span>
           </div>
         </div>
-        <div class="invest-start__form">
+        <div class="invest-start__form" id="main-section-form">
           <form
             class="form _main-form contact-form freg thin rounded"
             id="main-form main-form--second"
@@ -485,7 +489,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
             >Всегда доступны в приложении и личном кабинете. Нужно просто
             открыть счет</span
           >
-          <button class="news__button">Открыть доступ</button>
+          <button class="news__button"><a href="#main-section-form">Открыть доступ</a></button>
         </div>
         <img src="./img/news.png" alt="Новости" />
       </section>
@@ -523,8 +527,8 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
       <div class="footer__main">
         <span
           >С информацией об ООО «Компания БКС» можно ознакомиться
-          <span class="footer__link">по ссылке</span></span
-        >
+          <a href="#main-section-form"><span class="footer__link">по ссылке</span></a>
+          </span>
         <span
           >Информация на данной странице сайта не является индивидуальной
           инвестиционной рекомендацией, и финансовые инструменты либо операции,
@@ -536,25 +540,25 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
           с ООО «Компания БКС». Более подробно с условиями данного тарифного
           плана вы можете ознакомиться в приложении № 11 к регламенту оказания
           услуг на рынке ценных бумаг ООО «Компания БКС»:
-          <span class="footer__link">bcs.ru</span></span
-        >
+          <a href="#main-section-form"><span class="footer__link">bcs.ru</span></a>
+        </span>
         <span
           >НРА подтвердило некредитный рейтинг надежности и качества услуг ООО
           «Компания БКС» по национальной рейтинговой шкале инвестиционных
           компаний для Российской Федерации на уровне «AАА|ru.iv|», прогноз
           «Стабильный» 28.04.2023. Доступно
-          <span class="footer__link">на сайте</span>
+          <a href="#main-section-form"><span class="footer__link">на сайте</span></a>
         </span>
         <span
           >ООО «Компания БКС» стало победителем премии Frank Invest & Insurance
           Award в номинации «Лучшая УК для розничного инвестора» в 2023 году:
-          <span class="footer__link">https://frankmedia.ru</span>
+          <a href="#main-section-form"><span class="footer__link">https://frankmedia.ru</span></a>
         </span>
         <span
           >ООО «Компания БКС» стало победителем премии Investment Leaders Award
           в номинации «Advisory — лучшая услуга по управлению активами для
           состоятельных клиентов» в 2023 году:
-          <span class="footer__link">https://investfunds.ru</span>
+          <a href="#main-section-form"><span class="footer__link">https://investfunds.ru</span></a>
         </span>
         <span
           >Данная информация не является индивидуальной инвестиционной
@@ -609,7 +613,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
             method="post"
           >
             <div class="text-block-6">
-              <h2 class="form-heading">Премиальные предложения</h2>
+              <h2 class="modal-form__heading">Премиальные предложения</h2>
             </div>
             <input type="hidden" id="utm_medium" value='<?= $_GET['utm_medium'] ?>'>
             <input type="hidden" id="campaing_id" value='<?= $_GET['campaing_id'] ?>'>

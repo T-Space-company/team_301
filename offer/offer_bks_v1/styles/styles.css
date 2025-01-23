@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
 }
@@ -169,10 +173,13 @@ main {
   font-style: normal;
   font-weight: 400;
   line-height: 20px; /* 125% */
+  margin-top: 28px;
+}
+
+.strategy__text_wrapper > button > a {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 28px;
   gap: 16px;
 }
 
@@ -422,9 +429,6 @@ main {
   max-width: 250px;
   width: 100%;
   margin: 40px auto 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   border-radius: 8px;
   background: #006df0;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.02);
@@ -433,6 +437,12 @@ main {
   font-family: Arial;
   font-size: 16px;
   line-height: 20px;
+}
+
+.products__button > a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .education {
@@ -530,17 +540,21 @@ details[open] .education__icon {
   background: #006df0;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.02);
   color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
   font-family: Arial;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
-  gap: 16px;
   padding: 22px 0px;
   width: 100%;
+}
+
+.education__button > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
 }
 
 .offers {
@@ -954,6 +968,23 @@ details[open] .education__icon {
   margin-top: 80px;
 }
 
+.footer__toggle-button {
+  border-radius: 8px;
+  padding: 10px;
+  background: #006df0;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.02);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  font-family: Arial;
+  font-size: 16px;
+  line-height: 20px; /* 125% */
+  width: 100%;
+  margin-top: 25px;
+}
+
 .footer.hidden .footer__main,
 .footer.hidden .footer__bottom {
   display: none;
@@ -968,8 +999,18 @@ details[open] .education__icon {
   height: 100%;
   background: rgba(64, 64, 64, 0.52);
   z-index: 1000;
+  padding: 20px;
   justify-content: center;
   align-items: center;
+}
+
+.modal-form__heading {
+  color: #2a2a2a;
+  font-family: Arial;
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 50px;
+  margin-bottom: 20px;
 }
 
 .modal-content {
@@ -978,6 +1019,7 @@ details[open] .education__icon {
   align-items: center;
   width: 100%;
   justify-content: space-between;
+  gap: 20px;
 }
 
 .modal-close {
@@ -1038,7 +1080,7 @@ details[open] .education__icon {
   }
 
   .header {
-    padding: 25px 20px 15px 20px;
+    padding: 25px 16px 15px 16px;
   }
   .header__menu-wrapper {
     display: none;
@@ -1147,7 +1189,9 @@ details[open] .education__icon {
     font-size: 30px;
     line-height: 36px;
   }
-
+  .form-input::placeholder {
+    color: #6b7280 !important;
+  }
   #form-btn-wrapper {
     display: flex;
     justify-content: center;
@@ -1155,6 +1199,7 @@ details[open] .education__icon {
   #form-button {
     max-width: none;
   }
+
   .education {
     padding: 56px 16px;
     justify-content: center;
@@ -1249,8 +1294,14 @@ details[open] .education__icon {
   .news__button {
     max-width: none;
   }
+  .footer {
+    padding: 0 16px 10px 16px;
+  }
   .footer__bottom {
     display: none;
+  }
+  .footer__toggle-button {
+    display: flex;
   }
   #products-slider > .splide__track > .splide__list > .splide__slide > img {
     max-width: 280px;
@@ -1266,6 +1317,30 @@ details[open] .education__icon {
   }
   #licenses-slider > .splide__track > .splide__list > .splide__slide {
     max-width: 220px;
+  }
+  .modal-form__heading {
+    font-size: 30px;
+    line-height: 36px; /* 120% */
+  }
+  .form-text {
+    color: #6b7280;
+  }
+  .modal {
+    padding: 15px;
+  }
+  .modal-close {
+    width: 30px;
+    height: 30px;
+  }
+  .modal-close > img {
+    width: 30px;
+    height: 30px;
+  }
+  .modal-content {
+    justify-content: center;
+    border-radius: 24px;
+    background: #f4f4f5;
+    padding: 30px 15px;
   }
 }
 

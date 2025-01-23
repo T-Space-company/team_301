@@ -343,6 +343,12 @@ img {
 ._phone::placeholder {
   color: #989898;
 }
+@media (max-width: 1024px) {
+  .checkbox-text {
+    color: #6b7280;
+  }
+}
+
 @media (max-width: 400px) {
   .fa__errInfo {
     max-width: 150px;
