@@ -60,19 +60,30 @@ document.addEventListener("DOMContentLoaded", () => {
           {
             label: `График для ${pair}`,
             data: initialData,
-            color: {
-              up: "#00c853",
-              down: "#d50000",
+            borderColors: {
+              up: "#02C173",
+              down: "#E11A38",
               unchanged: "#999",
             },
-            barThickness: 6,
+            borderThickness: 1,
+            barThickness: 8,
             categoryPercentage: 0.2,
             barPercentage: 0.7,
+            backgroundColors: {
+              up: "#02C173",
+              down: "#E11A38",
+              unchanged: "#999",
+            },
           },
         ],
       },
       options: {
         responsive: true,
+        plugins: {
+          colors: {
+            enabled: false,
+          },
+        },
         maintainAspectRatio: false,
         scales: {
           x: {
@@ -80,16 +91,31 @@ document.addEventListener("DOMContentLoaded", () => {
             time: {
               unit: "minute",
             },
-            ticks: { color: "#fff" },
+            ticks: { color: "#98989A" },
             grid: { color: "#444" },
           },
           y: {
-            ticks: { color: "#fff" },
+            ticks: { color: "#98989A" },
             grid: { color: "#444" },
           },
         },
         plugins: {
           legend: { display: false },
+        },
+        elements: {
+          candlestick: {
+            color: {
+              up: "#00c853",
+              down: "#d50000",
+              unchanged: "#999",
+            },
+            borderColor: {
+              up: "#00c853",
+              down: "#d50000",
+              unchanged: "#999",
+            },
+            borderWidth: 1,
+          },
         },
       },
     });
