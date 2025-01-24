@@ -22,7 +22,7 @@ p {
 body {
   margin: 0;
   background-color: #0b0b0b;
-  background-image: url(../img/background.png);
+  background-image: url(../img/background.svg);
   background-repeat: no-repeat;
   background-position: center center;
   height: 100vh;
@@ -149,7 +149,6 @@ body {
   padding-top: 30px;
   width: 100%;
   height: 100%;
-  gap: 25px;
   display: flex;
   flex-direction: column;
 }
@@ -158,6 +157,7 @@ body {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  margin-bottom: 25px;
 }
 
 .screen__profit,
@@ -202,7 +202,7 @@ body {
 }
 
 .screen__bot-control {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .screen__bot-button {
@@ -221,27 +221,40 @@ body {
   line-height: 130%;
 }
 
+.screen__bot-button.active {
+  background: #e11a38;
+}
+
+.screen__bot-button.disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
 .screen__tabs {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  margin-bottom: 20px;
 }
 
 .screen__tab {
-  padding: 10px 15px;
-  font-size: 14px;
-  font-weight: bold;
+  border-radius: 10px 10px 0px 0px;
+  border-top: 1px solid #ff6711;
+  border-right: 1px solid #ff6711;
+  border-left: 1px solid #ff6711;
+  border-bottom: none;
+  background: rgba(43, 43, 43, 0.5);
+  display: flex;
+  padding: 5px 10px;
+  align-items: flex-start;
   color: #fff;
-  background-color: transparent;
-  border: 1px solid #ff6711;
-  border-radius: 5px;
-  cursor: pointer;
+  font-family: "Fixel Display";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 130%;
 }
 
 .screen__tab--active {
   background-color: #ff6711;
-  color: #000;
 }
 
 .screen__chart-placeholder {
@@ -250,7 +263,8 @@ body {
   align-items: center;
   width: 100%;
   height: 430px;
-  border: 1px solid #f7931a;
+  border: 1px solid #ff6711;
+
   border-radius: 10px;
 }
 
@@ -258,6 +272,18 @@ body {
   width: 100%;
   max-width: 600px;
   height: 430px;
+}
+
+/*//////////// THIRD SCREEN /////////////*/
+
+#screen-3 {
+  width: 100%;
+  height: 90%;
+  background-color: black;
+  background-image: url(../img/background-3.svg);
+  background-position: top;
+  background-repeat: no-repeat;
+  position: absolute;
 }
 
 /*//////////// QUESTIONS /////////////*/
