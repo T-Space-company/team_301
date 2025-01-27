@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const startChartButton = document.getElementById("start-chart");
   const ctx = document.getElementById("chartCanvas").getContext("2d");
 
   // Генерация данных для свечей
@@ -144,5 +145,19 @@ document.addEventListener("DOMContentLoaded", () => {
         initializeChart(pair);
       }
     });
+  });
+
+  const removeTabEventListeners = () => {
+    tabs.forEach((tab) => {
+      const clone = tab.cloneNode(true); // Create a clone of the element
+      tab.parentNode.replaceChild(clone, tab); // Replace the original element with the clone
+    });
+  };
+
+  // Monitor the button text content and remove listeners
+  startChartButton.addEventListener("click", () => {
+    if (startChartButton.textContent === "Остановить бот") {
+      removeTabEventListeners();
+    }
   });
 });
