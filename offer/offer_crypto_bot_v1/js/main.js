@@ -15,7 +15,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const goToNextScreen = () => {
     screen1.classList.remove("active");
     screen2.classList.add("active");
-    header.classList.remove("active");
+
+    if (window.innerWidth < 768) {
+      header.classList.remove("active");
+    }
+
     footer.classList.remove("active");
     body.style.backgroundImage = "none";
     openQuiz();
