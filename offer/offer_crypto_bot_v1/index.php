@@ -11,14 +11,14 @@
     <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment"></script>
     <script src="jquery-3.6.1.min.js"></script>
 
-    <!-- <script>
+    <script>
       window.bgdataLayer = window.bgdataLayer || [];
 
       function bge() {
           bgdataLayer.push(arguments);
       }
       bge('init', '<?= $_GET['bge'] ?>');
-    </script> -->
+    </script>
     <script
       async
       src="https://api.imotech.video/ad/events.js?pixel_id=<?= $_GET['bge'] ?>"
