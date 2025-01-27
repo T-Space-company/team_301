@@ -1,0 +1,359 @@
+@font-face {
+  font-family: "Fixel Display";
+  src: url("../fonts/FixelDisplay-Light.otf") format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Fixel Display";
+  src: url("../fonts/FixelDisplay-Regular.otf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Fixel Display";
+  src: url("../fonts/FixelDisplay-SemiBold.otf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Fixel Display";
+  src: url("../fonts/FixelDisplay-Bold.otf") format("truetype");
+  font-weight: 700;
+}
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+body {
+  margin: 0;
+  background: #eaeaea;
+  height: 100vh;
+}
+.screen {
+  display: none;
+}
+.screen.active {
+  display: block;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/*//////////// SECOND SCREEN /////////////*/
+
+.screen.second.active {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 0;
+}
+
+.second__wrapper {
+  border-radius: 40px;
+  background: #fff;
+  margin: 10px 12px 0 12px;
+}
+
+#screen-3 > .second__wrapper {
+  margin-top: 50px;
+}
+
+.screen__controls-wrapper {
+  margin: 20px 10px 0 10px;
+}
+
+.second__header {
+  background: #f14635;
+  border-radius: 40px 40px 0px 0px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.second__header > img {
+  width: 140px;
+}
+
+.second__header > p {
+  color: #fff;
+  font-family: "Fixel Display";
+  font-size: 18px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.screen__header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.screen__header > .screen__tab {
+  display: none;
+}
+
+.screen__profit,
+.screen__time {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.screen__profit-label,
+.screen__time-label {
+  color: #f14635;
+  font-family: "Fixel Display";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 130%;
+}
+
+.screen__profit-value {
+  color: #2b2b2b;
+  font-family: "Fixel Display";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%; /* 46.8px */
+}
+
+.screen__time-value {
+  color: #fff;
+  font-family: "Fixel Display";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 80%;
+  padding: 10px;
+  border-radius: 20px;
+  background: #2b2b2b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.screen__bot-control {
+  margin: 0 10px 25px 10px;
+}
+
+.screen__bot-button {
+  border: none;
+  width: 100%;
+  max-width: 400px;
+  padding: 18px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: "Fixel Display";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 100%;
+  margin: 0 auto;
+  border-radius: 25px;
+  background: #f14635;
+}
+
+.screen__bot-button.disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.screen__tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.screen__tab {
+  border-radius: 13px;
+  background: #f14635;
+  border: none;
+  display: flex;
+  padding: 5px 10px;
+  align-items: flex-start;
+  color: #fff;
+  font-family: "Fixel Display";
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 130%;
+}
+
+.screen__chart-wrapper {
+  margin: 0 10px 20px 10px;
+}
+
+.screen__chart-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 700px;
+  height: 340px;
+  padding: 5px;
+  border-radius: 25px;
+  background: #fff;
+  box-shadow: 0px 1.88px 30.744px 5.641px rgba(94, 94, 94, 0.25);
+  margin: 0 auto;
+}
+.screen__chart {
+  width: 100%;
+  max-width: 600px;
+  height: 430px;
+}
+
+/*//////////// THIRD SCREEN /////////////*/
+
+#screen-3 {
+  width: 100%;
+  height: 100%;
+  background: #eaeaea;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+}
+
+.screen.third.active {
+  display: flex;
+}
+
+.form-wrapper {
+  border-radius: 20px;
+  max-width: 700px;
+  border: none;
+  background: #fff;
+  padding: 30px 20px;
+  margin: 0 10px 10px 10px;
+  box-shadow: 0px 2px 32.7px 6px rgba(94, 94, 94, 0.25);
+}
+
+.form-heading {
+  color: #2b2b2b;
+  font-family: "Fixel Display";
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28px;
+  margin-bottom: 20px;
+}
+
+.heading-accent {
+  color: #f14635;
+}
+
+.input-label {
+  text-align: left;
+  color: #2b2b2b;
+  font-family: "Fixel Display";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.form-control {
+  margin-top: 8px !important;
+  border-radius: 12px;
+  background: #eaeaea;
+  border: none;
+  font-family: "Fixel Display";
+  color: #636363;
+}
+
+.form-control::placeholder {
+  color: #636363;
+  font-family: "Fixel Display";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.form-checkbox {
+  width: 16px;
+  height: 16px;
+}
+
+.input-accent {
+  color: #f14635;
+  text-decoration: underline;
+}
+
+div.iti.iti--separate-dial-code {
+  margin-top: 8px;
+}
+
+.form-group-button {
+  margin-bottom: 0 !important;
+}
+
+.screen__chart-text {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .screen__chart-placeholder {
+    height: 510px;
+  }
+  .screen.second.active {
+    margin: 0 20px 0 20px;
+  }
+  .second__wrapper {
+    margin: 0 auto;
+    max-width: 1000px;
+    padding-bottom: 40px;
+  }
+  .second__header {
+    flex-direction: row;
+    padding: 30px 40px;
+  }
+  .screen__header {
+    max-width: 800px;
+    margin: 0 auto;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .screen__tabs {
+    display: none;
+  }
+  .screen__header > .screen__tab {
+    display: flex;
+    align-items: center;
+  }
+  .screen__tab {
+    font-size: 20px;
+    height: 40px;
+    border-radius: 16px;
+  }
+  .screen__chart-text {
+    display: flex;
+    margin: 20px auto;
+    max-width: 800px;
+  }
+  .screen__chart-text > p {
+    color: #2b2b2b;
+    font-family: "Fixel Display";
+    font-size: 20px;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .screen__bot-control {
+    margin: 0 auto;
+  }
+  .form-wrapper {
+    margin: 0 auto;
+  }
+}
