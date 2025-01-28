@@ -25,6 +25,10 @@ a {
 
 .accent {
   color: #0289cc;
+  font-family: Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
 }
 
 .main {
@@ -262,4 +266,136 @@ section {
 
 .benefit__text.accent.second {
   margin-top: 10px;
+}
+
+.section__addons {
+  display: flex;
+  margin-top: 35px;
+  gap: 10px;
+}
+.addon__item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.addon__item > img {
+  margin: 0 auto;
+}
+
+.addon__item:first-child {
+  padding-left: 20px;
+}
+
+.addon__wrapper {
+  border-left: 1px solid #eaeaea;
+  padding-left: 20px;
+  height: 100px;
+}
+
+.addon__heading {
+  color: #464b4a;
+  font-family: Georgia;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  align-self: flex-start;
+  margin-top: 20px;
+}
+
+.addon__text {
+  color: #464b4a;
+  font-family: Helvetica;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 150% */
+  margin-top: 20px;
+  margin-bottom: 12px;
+}
+
+.addon__rates {
+  display: flex;
+  margin-top: 20px;
+  gap: 48px;
+}
+
+.rate__heading {
+  color: #6f7473;
+  text-shadow: 0px 1px 0px #fff;
+  font-family: Arial;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px; /* 100% */
+}
+
+.rate__info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rate__info > img {
+  margin-bottom: 8px;
+}
+
+.info__nums {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  gap: 3px;
+}
+
+.nums__top {
+  color: #ed4619;
+  font-family: Helvetica;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 75% */
+}
+
+.nums__top.up {
+  color: #559d26;
+}
+
+.nums__bottom {
+  color: #ed4619;
+  font-family: Helvetica;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 9px;
+}
+
+.nums__bottom.up {
+  color: #559d26;
+}
+
+.section__socials {
+  margin-top: 20px;
+}
+
+.socials__list {
+  display: flex;
+  gap: 4px;
+  padding-bottom: 25px;
+}
+.socials__list-share {
+  color: #464b4a;
+  font-family: Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
+.footer {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.05) 100%
+  );
+}
+
+.footer__top {
+  box-shadow: 0px 1px 0px 0px rgba(95, 104, 104, 0.12);
 }
