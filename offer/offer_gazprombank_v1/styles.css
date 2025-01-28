@@ -1,0 +1,171 @@
+@font-face {
+  font-family: "Fixel Display";
+  src: url("./fonts/FixelDisplay-Light.otf") format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Fixel Display";
+  src: url("./fonts/FixelDisplay-Regular.otf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Fixel Display";
+  src: url("./fonts/FixelDisplay-SemiBold.otf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Fixel Display";
+  src: url("./fonts/FixelDisplay-Bold.otf") format("truetype");
+  font-weight: 700;
+}
+
+body {
+  margin: 0;
+  background: #63c3e5;
+}
+
+main {
+  padding: 22px 22px 60px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form__wrapper {
+  border-radius: 15px;
+  background: #fff;
+  padding: 20px;
+  max-width: 700px;
+  width: 100%;
+}
+
+.form-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-heading {
+  color: #393939;
+  text-align: center;
+  font-family: "Fixel Display";
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28px; /* 116.667% */
+}
+
+.text-block-6 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.accent {
+  color: #0079c4;
+  text-align: center;
+  font-family: "Fixel Display";
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 120%; /* 43.2px */
+}
+
+.label-text {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #393939;
+  font-family: "Fixel Display";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%; /* 14px */
+}
+
+.form-control {
+  border-radius: 12px;
+  background: #e7e7e7;
+  padding: 14px 17px;
+  height: auto;
+  font-family: "Fixel Display";
+}
+
+.switch > .form-control {
+  width: 16px;
+  height: 16px;
+}
+
+.underline {
+  text-decoration: underline;
+  color: #0079c4;
+}
+
+.form-control::placeholder {
+  color: #b7b7b7;
+  font-family: "Fixel Display";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 50%; /* 13px */
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+.text__wrapper {
+  margin-top: 30px;
+  border-radius: 15px;
+  background: #fff;
+  padding: 20px;
+  max-width: 700px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feedback {
+  color: #393939;
+  text-align: center;
+  font-family: "Fixel Display";
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 120%;
+}
+
+.footer {
+  height: 40px;
+  width: 100%;
+  background: #003;
+  position: fixed;
+  bottom: 0;
+}
+
+@media (min-width: 768px) {
+  main {
+    padding: 40px 40px 160px 40px;
+  }
+  .form__wrapper {
+    padding: 40px;
+  }
+  .form-image > img {
+    width: 350px;
+  }
+  .form-heading {
+    font-size: 28px;
+  }
+  .label-text {
+    font-size: 16px;
+  }
+  .form-control::placeholder {
+    font-size: 14px;
+  }
+  .feedback {
+    font-size: 18px;
+    max-width: 495px;
+  }
+  .footer {
+    height: 120px;
+  }
+}
