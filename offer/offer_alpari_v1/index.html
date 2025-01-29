@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alpari</title>
     <link rel="stylesheet" href="./css/styles.css" />
+    <script src="./js/main.js"></script>
   </head>
   <body>
     <header class="header">
@@ -38,7 +39,7 @@
             Программный комплекс QUIK обеспечивает доступ к российским и
             зарубежным торговым площадкам с одного терминала.
           </p>
-          <button type="button" class="hero__button">Зарегистрироваться</button>
+          <button type="button" class="hero__button"><a href="">Зарегистрироваться</a></button>
         </div>
       </section>
       <section class="section__items">
@@ -53,7 +54,7 @@
         </div>
         <div class="section__item">
           <div class="section__img">
-            <img src="./img/item-2.png" alt="Item" />
+            <img src="./img/item-2.jpg" alt="Item" />
           </div>
           <span
             >Доступ к ведущей российской
@@ -62,7 +63,7 @@
         </div>
         <div class="section__item">
           <div class="section__img">
-            <img src="./img/item-3.png" alt="Item" />
+            <img src="./img/item-3.jpg" alt="Item" />
           </div>
           <span
             >Торговля
@@ -72,7 +73,7 @@
         </div>
         <div class="section__item">
           <div class="section__img">
-            <img src="./img/item-4.png" alt="Item" />
+            <img src="./img/item-4.jpg" alt="Item" />
           </div>
           <span
             >Контроль <a href="" class="accent">всех операций </a> Центральным
@@ -81,7 +82,7 @@
         </div>
         <div class="section__item">
           <div class="section__img">
-            <img src="./img/item-5.png" alt="Item" />
+            <img src="./img/item-5.jpg" alt="Item" />
           </div>
           <span
             >Членство в Национальной ассоциации участников фондового рынка</span
@@ -108,10 +109,12 @@
             >
             <a href="" class="benefit__text accent">Узнать больше</a>
           </div>
-          <div><img src="./img/benefit-1.png" alt="Logo" /></div>
+          <div class="benefit__img">
+            <img src="./img/benefit-1.png" alt="Logo" />
+        </div>
         </div>
         <div class="benefit--second">
-          <div>
+          <div class="benefit__img">
             <img src="./img/benefit-2.png" alt="Logo" />
           </div>
           <div class="benefit__content">
@@ -141,7 +144,7 @@
       </section>
       <section class="section__addons">
         <div class="addon__item">
-          <img src="./img/news.png" alt="News" />
+          <img src="./img/news.jpg" alt="News" />
           <h2 class="addon__heading">Новости компании</h2>
           <p class="addon__text">
             16.12.2024 <span class="accent">Уведомляем о вступлении в силу с 01.01.2025 новой
@@ -153,7 +156,7 @@
           <span class="accent">Все новости</span>
         </div>
         <div class="addon__item">
-          <img src="./img/courses.png" alt="Courses" />
+          <img src="./img/courses.jpg" alt="Courses" />
           <div class="addon__wrapper">
               <h2 class="addon__heading">Очные и онлайн курсы</h2>
               <p class="addon__text">Наши курсы для трейдеров и инвесторов помогут
@@ -162,7 +165,7 @@
           </div>
         </div>
         <div class="addon__item">
-          <img src="./img/chart.png" alt="Chart" />
+          <img src="./img/chart.jpg" alt="Chart" />
           <div class="addon__wrapper">
               <h2 class="addon__heading">Курсы валют ЦБ на сегодня</h2>
               <div class="addon__rates">
@@ -206,11 +209,37 @@
       <div class="footer__top">
         <div class="footer__top-contacts">
             <a href="">Контакты</a>
-            <a href=""></a>
+            <a href="mailto:info@alpari-broker.ru">info@alpari-broker.ru</a>
         </div>
-        <a href=""></a>
+        <a href="">Раскрытие информации</a>
       </div>
-      <div></div>
+      <div class="footer__main">
+            <img src="./img/logo_footer.png" alt="Logo">
+            <div class="footer__content">
+                <p>Настоящий информационный сайт ООО «Альпари-Брокер» является единственным, на котором могут размещаться предложения услуг
+                в рамках лицензий, представленных ниже.</p>
+                <p>ООО «Альпари-Брокер» не несет ответственности за незаконное использование товарных знаков и лицензии, в том числе за
+                предоставление финансовых услуг на сайтах третьих лиц, включая ссылки на партнерские отношения, в которых ООО «Альпари-
+                Брокер» не состоит.</p>
+                <p>ООО «Альпари-Брокер» не осуществляет деятельность по кредитованию физических и юридических лиц, а также не оказывает
+                содействие в получении кредитов.</p>
+                <p>Информация, представленная на сайте alpari-broker.ru, не является индивидуальной инвестиционной рекомендацией. ООО «Альпари-
+                Брокер» не несет ответственности за возможные убытки клиента в случае совершения им операций с упомянутыми на сайте
+                финансовыми инструментами.</p>
+                <p>Брокер зарегистрирован в Российской Федерации в 2008 году и находится по адресу: г. Москва, Волоколамское шоссе, д. 73, этаж 4,
+                помещение I, комнаты 32-34, офис 413.</p>
+                <p>ООО «Альпари-Брокер» имеет лицензии на осуществление брокерской деятельности №<span class="accent">045-12915-100000</span> от 11.02.2010г., деятельности по управлению ценными бумагами №<span class="accent">045-12919-100000</span> от 11.02.2010 г. и дилерской деятельности №<span class="accent">045-12917-010000</span> от 11.02.2010 г., выданные ФСФР России в соответствии с Федеральным законом №39-ФЗ «О рынке ценных бумаг».
+                    Является членом СРО <span class="accent">НАУФОР</span>, свидетельство №<span class="accent">000774</span>. Входит в реестр профессиональных участников рынка ценных бумаг на <span class="accent">официальном сайте</span> Центрального Банка Российской Федерации.
+                </p>
+                <a class="accent">Уведомление о внешних ссылках<br>Условия перепечатки материалов</a>
+                <span>© 2008-2025 Alpari-Broker</span>
+            </div>
+      </div>
     </footer>
+    <div class="buttons-container">
+    <a href="#" class="button phone-button" title="Call"><img src="./img/icons/call.svg" alt="Call"></a>
+    <a href="#" class="button chat-button" title="Chat"><img src="./img/icons/support.svg" alt=""></a>
+    <button class="button scroll-top-button" title="Scroll" ></button>
+  </div>
   </body>
 </html>
