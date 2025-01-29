@@ -514,6 +514,17 @@ section {
   .nav-list {
     flex-wrap: wrap;
   }
+  .hero__content {
+    text-align: center;
+    background-color: #e0f1eea6;
+    padding: 15px;
+    border-radius: 24px;
+    align-items: center;
+    width: auto;
+  }
+  .hero__content > span {
+    color: #0f1010;
+  }
 }
 @media (max-width: 375px) {
   .nums__top {
