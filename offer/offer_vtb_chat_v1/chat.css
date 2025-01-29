@@ -424,9 +424,6 @@ p {
   body {
     background-image: url(./img/bg_desktop.png);
   }
-  .header {
-    height: 90px;
-  }
   .main {
     margin: 100px auto 80px auto;
   }
@@ -455,17 +452,14 @@ p {
   .heading-subtitle {
     font-size: 14px;
   }
-  #logo {
-    width: 45px;
-  }
   .form-container {
-    max-width: 350px;
+    max-width: 400px;
   }
   .form-field input {
-    max-width: 310px;
+    max-width: 360px;
   }
   .buttonFormSend {
-    max-width: 310px;
+    max-width: 360px;
   }
   .footer {
     height: 70px;
