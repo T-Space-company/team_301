@@ -11,6 +11,12 @@
       href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Russo+One&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="
+https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
+"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <main class="main">
@@ -27,13 +33,12 @@
         </div>
         <div class="hero__content">
           <div class="hero__content--left">
-            <span>Регистрируйтесь на <br />курс</span>
+            <span>Регистрируйтесь на курс</span>
           </div>
-          <button class="hero__content-button">Регистрация</button>
+          <button class="hero__content-button modal-button">Регистрация</button>
           <div class="hero__content--right">
             <span
-              >и <span class="accent">забирайте подарок</span><br />
-              уже сейчас!</span
+              >и <span class="accent">забирайте подарок</span> уже сейчас!</span
             >
           </div>
         </div>
@@ -117,7 +122,7 @@
           Начните зарабатывать<br />
           <span class="accent">на торговли на финансовых рынках</span>
         </h2>
-        <button class="start__button">НАЧАТЬ ЗАРАБАТЫВАТЬ</button>
+        <button class="start__button modal-button">НАЧАТЬ ЗАРАБАТЫВАТЬ</button>
       </section>
       <section class="section__benefits">
         <span class="benefits__pre-heading">Сомневаетесь?</span>
@@ -125,70 +130,75 @@
           Взвесьте все <span class="accent">плюсы и минусы</span> такого
           <br />заработка
         </h2>
-        <div class="benefits__items">
-          <div class="benefits__pros">
-            <h3 class="pros__heading">Плюсы</h3>
-            <div class="pros__item">
-              <div class="item__content pros">
-                <img src="./img/icons/benefits_pros.png" alt="Icon" />
-                <span>Ежедневная прибыль</span>
+        <div id="benefits-slider" class="splide">
+          <div class="splide__track benefits">
+            <div class="splide__list benefits__items">
+              <div class="splide__slide benefits__pros">
+                <h3 class="pros__heading">Плюсы</h3>
+                <div class="pros__item">
+                  <div class="item__content pros">
+                    <img src="./img/icons/benefits_pros.png" alt="Icon" />
+                    <span>Ежедневная прибыль</span>
+                  </div>
+                  <span class="item__descr">
+                    Зарабатывая на торговле на финансовом рынке, вы получаете
+                    прибыль в тот же день
+                  </span>
+                </div>
+                <div class="pros__item">
+                  <div class="item__content pros">
+                    <img src="./img/icons/benefits_pros.png" alt="Icon" />
+                    <span>Минимальный риск</span>
+                  </div>
+                  <span class="item__descr pros">
+                    Вы не рискуете из-за изменения цены на валюты. Разница в
+                    цене играет вам только на руку
+                  </span>
+                </div>
+                <div class="pros__item">
+                  <div class="item__content pros">
+                    <img src="./img/icons/benefits_pros.png" alt="Icon" />
+                    <span>Небольшие вложения</span>
+                  </div>
+                  <span class="item__descr pros">
+                    Чтобы начать зарабатывать на торговле на финансовом рынке,
+                    достаточно 15 000 рублей
+                  </span>
+                </div>
+                <div class="pros__item">
+                  <div class="item__content pros">
+                    <img src="./img/icons/benefits_pros.png" alt="Icon" />
+                    <span>Независимость и свобода</span>
+                  </div>
+                  <span class="item__descr">
+                    Вы сам себе начальник, поэтому имеете свободный график и
+                    возможность работать из любой точки мира
+                  </span>
+                </div>
               </div>
-              <span class="item__descr"
-                >Зарабатывая на торговле на финансовом рынке вы получаете
-                прибыль в тот же день</span
-              >
-            </div>
-            <div class="pros__item">
-              <div class="item__content pros">
-                <img src="./img/icons/benefits_pros.png" alt="Icon" />
-                <span>Минимальный риск</span>
+
+              <div class="splide__slide benefits__cons">
+                <h3 class="cons__heading">Минусы</h3>
+                <div class="cons__item">
+                  <div class="item__content cons">
+                    <img src="./img/icons/benefits_cons.svg" alt="Icon" />
+                    <span>Требует времени</span>
+                  </div>
+                  <span class="item__descr cons">
+                    Чтобы зарабатывать на арбитраже криптовалют, надо уделять
+                    этому хотя бы <span class="accent">2 часа в день</span>
+                  </span>
+                </div>
+                <div class="cons__item">
+                  <div class="item__content cons">
+                    <img src="./img/icons/benefits_cons.svg" alt="Icon" />
+                    <span>Нужны базовые знания</span>
+                  </div>
+                  <span class="item__descr cons">
+                    Которым мы <span class="accent">учим на курсе</span>
+                  </span>
+                </div>
               </div>
-              <span class="item__descr pros"
-                >Вы не рискуете из-за изменения цены на валюты. Разница в цене
-                играет вам только на руку</span
-              >
-            </div>
-            <div class="pros__item">
-              <div class="item__content pros">
-                <img src="./img/icons/benefits_pros.png" alt="Icon" />
-                <span>Небольшие вложения</span>
-              </div>
-              <span class="item__descr pros"
-                >Чтобы начать зарабатывать на торговле на финансовом рынке
-                достаточно 15 000 рублей</span
-              >
-            </div>
-            <div class="pros__item">
-              <div class="item__content pros">
-                <img src="./img/icons/benefits_pros.png" alt="Icon" />
-                <span>Независимость и свобода</span>
-              </div>
-              <span class="item__descr"
-                >Вы сам себе начальник, поэтому имеете свободный график и
-                возможность работать из любой точки мира</span
-              >
-            </div>
-          </div>
-          <div class="benefits__cons">
-            <h3 class="cons__heading">Минусы</h3>
-            <div class="cons__item">
-              <div class="item__content cons">
-                <img src="./img/icons/benefits_cons.svg" alt="Icon" />
-                <span>Требует времени</span>
-              </div>
-              <span class="item__descr cons"
-                >Чтобы зарабатывать на арбитраже криптовалют надо уделять этому
-                хотя бы <span class="accent">2 часа в день</span></span
-              >
-            </div>
-            <div class="cons__item">
-              <div class="item__content cons">
-                <img src="./img/icons/benefits_cons.svg" alt="Icon" />
-                <span>Нужны базовые знания</span>
-              </div>
-              <span class="item__descr cons"
-                >Которым мы <span class="accent">учим на курсе</span></span
-              >
             </div>
           </div>
         </div>
@@ -250,45 +260,71 @@
         </div>
       </section>
       <section class="section__why-us">
-        <h2 class="why-us__heading">Почему выбирают нас?</h2>
-        <div class="why-us__items">
-          <div class="why-us__item">
-            <img src="./img/why-us1.png" alt="Icon" />
-            <span class="why-us__item-heading">Грамотная программа</span>
-            <span class="why-us__item-text"
-              >Составлена при участии специалиста в области финансов</span
-            >
-          </div>
-          <div class="why-us__item">
-            <img src="./img/why-us2.png" alt="Icon" />
-            <span class="why-us__item-heading">Быстрый старт</span>
-            <span class="why-us__item-text"
-              >Начать зарабатывать вы можете сразу после регистрации и первой
-              инвестиции</span
-            >
-          </div>
-          <div class="why-us__item">
-            <img src="./img/why-us3.png" alt="Icon" />
-            <span class="why-us__item-heading">У руля - ВЫ!</span>
-            <span class="why-us__item-text"
-              >Где и когда заниматься — решать только вам</span
-            >
+        <h2 class="why-us__heading">
+          Почему выбирают <span class="accent">нас?</span>
+        </h2>
+        <div id="why-us-slider" class="splide">
+          <div class="splide__track why-us">
+            <div class="splide__list why-us__items">
+              <div class="splide__slide why-us__item">
+                <img src="./img/why-us1.png" alt="Icon" />
+                <span class="why-us__item-heading">Грамотная программа</span>
+                <span class="why-us__item-text">
+                  Составлена при участии специалиста в области финансов
+                </span>
+              </div>
+              <div class="splide__slide why-us__item">
+                <img src="./img/why-us2.png" alt="Icon" />
+                <span class="why-us__item-heading">Быстрый старт</span>
+                <span class="why-us__item-text">
+                  Начать зарабатывать вы можете сразу после регистрации и первой
+                  инвестиции
+                </span>
+              </div>
+              <div class="splide__slide why-us__item">
+                <img src="./img/why-us3.png" alt="Icon" />
+                <span class="why-us__item-heading">У руля - ВЫ!</span>
+                <span class="why-us__item-text">
+                  Где и когда заниматься — решать только вам
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
       <section class="section__timer">
-        <div>
-          <p></p>
-          <div></div>
-          <div>
-            <img src="" alt="" />
-            <div>
-              <span></span>
-              <span></span>
+        <div class="timer__wrapper">
+          <p class="timer__text">
+            Начните зарабатывать <span class="accent">от 10000</span> в день на
+            торговле финансовыми активами
+          </p>
+          <div class="timer__container">
+            <span class="timer-part" id="minutes">15</span>
+            <span class="colon">:</span>
+            <span class="timer-part" id="seconds">00</span>
+          </div>
+          <div class="timer__content">
+            <img src="./img/timer_gift.png" alt="Gift" />
+            <div class="timer__descr">
+              <span class="timer__descr-heading">В подарок к курсу</span>
+              <span class="timer__descr-text"
+                >Бонус к первому депозиту за регистрацию в течении 15
+                минут</span
+              >
             </div>
           </div>
         </div>
       </section>
     </main>
+    <div id="modal" class="modal hidden">
+      <div class="modal-content"></div>
+    </div>
+
+    <script src="
+https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
+"></script>
+    <script src="./js/sliders.js"></script>
+    <script src="./js/timer.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
