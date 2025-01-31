@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
   new Splide("#after-slider", {
     type: "loop",
     perPage: 1,
-    autoplay: false,
+    autoplay: true,
     interval: 3000,
     arrows: true,
     pagination: false,
