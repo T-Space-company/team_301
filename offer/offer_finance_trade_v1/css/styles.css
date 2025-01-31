@@ -800,11 +800,62 @@ section {
 
 .modal-content {
   border-radius: 15px;
+  max-width: 700px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: #fff;
-  padding: 20px;
-  width: 400px;
+  padding: 40px 60px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-heading {
+  color: #393939;
+  text-align: center;
+  font-family: Exo, sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 120%;
+  margin-bottom: 20px;
+}
+
+.form__input {
+  margin-top: 8px !important;
+  border-radius: 12px;
+  background: #e7e7e7;
+  border: none;
+}
+
+.form__input::placeholder {
+  color: #b7b7b7;
+  font-family: Exo, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.iti--separate-dial-code {
+  margin-top: 8px;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+.checkbox-accent {
+  background: var(
+    --1,
+    linear-gradient(90deg, #9456ae 35.94%, #7d3c98 82.81%, #7d3c98 100%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: auto;
+  text-decoration-color: #7d3c98;
 }
 
 @media (max-width: 1160px) {
@@ -1160,5 +1211,16 @@ section {
   }
   #why-us-slider {
     width: auto;
+  }
+  .modal-content {
+    padding: 20px;
+    margin: 0 15px;
+    max-width: 330px;
+  }
+  .form-heading {
+    font-size: 24px;
+  }
+  .form-group > label {
+    font-size: 14px;
   }
 }
