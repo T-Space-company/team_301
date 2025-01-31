@@ -24,6 +24,24 @@ document.addEventListener("DOMContentLoaded", function () {
     interval: 3000,
     arrows: false,
     pagination: false,
+  }).mount();
+
+  new Splide("#for-who-slider", {
+    type: "loop",
+    perPage: 1,
+    autoplay: true,
+    interval: 3000,
+    arrows: false,
+    pagination: false,
+  }).mount();
+
+  new Splide("#after-slider", {
+    type: "loop",
+    perPage: 1,
+    autoplay: false,
+    interval: 3000,
+    arrows: true,
+    pagination: false,
     gap: 20,
   }).mount();
 });
