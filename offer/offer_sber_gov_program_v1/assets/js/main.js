@@ -17,11 +17,11 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       text: `<span class="quiz__text">Вы являетесь гражданином Российской Федерации (есть ли у Вас Российское гражданство)?</span>`,
       buttons: `<button id="quiz-btn" class="quiz__button secondary" type="button">Да</button>
-                <button id="quiz-btn" class="quiz__button secondary" type="button">Нет</button>`,
+                <button id="quiz-btn" class="quiz__button secondary f" type="button">Нет</button>`,
     },
     {
       text: `<span class="quiz__text question"><b>Сколько вам лет?</b></span>`,
-      buttons: `<button id="quiz-btn" class="quiz__button secondary" type="button">до 18</button>
+      buttons: `<button id="quiz-btn" class="quiz__button secondary f" type="button">до 18</button>
                 <button id="quiz-btn" class="quiz__button secondary" type="button">18-24</button>
                 <button id="quiz-btn" class="quiz__button secondary" type="button">25-40</button>
                 <button id="quiz-btn" class="quiz__button secondary" type="button">40-55</button>
@@ -80,6 +80,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function handleQuizStep(event) {
+    if (event.target.classList.contains("f")) {
+      window.location.href = "error-page.html";
+      return;
+    }
+
     currentStep++;
     if (currentStep < quizSteps.length) {
       updateQuizContent();
