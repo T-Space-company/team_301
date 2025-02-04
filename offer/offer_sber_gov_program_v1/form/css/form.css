@@ -121,7 +121,7 @@ input {
   align-items: center;
   position: relative;
   background: #4d9e46;
-  border-radius: 15px;
+  border-radius: 10px;
   font-size: 18px;
   border: 1px solid;
 }
@@ -144,10 +144,6 @@ input {
   text-align: center;
   width: 100%;
   position: relative;
-}
-
-.form-group:last-child {
-  margin-bottom: 0;
 }
 
 .valid:-webkit-autofill {
@@ -181,7 +177,7 @@ input {
 
 .form-group .btn {
   margin: 0 auto;
-  height: auto;
+  height: 35px;
   width: 100%;
 }
 

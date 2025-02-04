@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const body = document.querySelector("body");
   const quizBtn = document.getElementById("open-quiz-btn");
   const modal = document.getElementById("modal");
   const nextQuestionBtn = document.getElementById("quiz-btn");
@@ -8,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   quizBtn.addEventListener("click", () => {
     modal.classList.remove("hidden");
+    body.style.overflow = "hidden";
   });
 
   const quizSteps = [
