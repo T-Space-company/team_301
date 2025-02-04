@@ -8,7 +8,11 @@
   </head>
   <body>
     <header class="header">
-      <img src="./assets/img/icons/logo.svg" alt="СберБанк" />
+      <img
+        src="./assets/img/icons/logo.svg"
+        alt="СберБанк"
+        class="header__logo"
+      />
     </header>
     <main class="main">
       <div class="main__top">
@@ -21,13 +25,71 @@
             воспользуйтесь выгодными условиями для роста и стабильности!
           </p>
         </div>
-        <img src="./assets/img/cat.png" alt="СберКот" />
+        <img src="./assets/img/cat.png" alt="СберКот" class="top__img" />
       </div>
       <div class="main__bottom">
-        <div></div>
-        <div></div>
+        <img
+          src="./assets/img/bg_image_left.png"
+          alt="Image"
+          class="bottom__bg--left"
+        />
+        <div class="bottom__img">
+          <img src="./assets/img/main_img.png" alt="Фото" />
+        </div>
+        <div class="bottom__content">
+          <h2 class="bottom__heading">
+            Государственная программа для всех граждан!
+          </h2>
+          <span class="bottom__text"
+            >Гарантия выплат от государства и СБЕР БАНК</span
+          >
+          <div class="bottom__img--mobile">
+            <img src="./assets/img/main_img.png" alt="Фото" />
+          </div>
+          <button class="bottom__btn" type="button">Узнать подробнее</button>
+        </div>
+        <img
+          src="./assets/img/bg_image_right.png"
+          alt="Image"
+          class="bottom__bg--right"
+        />
       </div>
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <img
+        src="./assets/img/icons/logo.svg"
+        alt="СберБанк"
+        class="footer__logo"
+      />
+      <div class="footer__info">
+        <span class="footer__text"
+          >Россия, Москва, 117997, ул. Вавилова, 19</span
+        >
+        <span class="footer__text">© 1997—2025 ПАО Сбербанк.</span>
+      </div>
+      <div class="footer__info--mobile">
+        <span class="footer__text"
+          ><a href="">Политика обработки данных</a></span
+        >
+        <span class="footer__text"><a href="">www.sberbank.ru</a></span>
+        <span class="footer__text">© 2025 ПАО «Сбербанк»</span>
+      </div>
+    </footer>
+    <div class="modal hidden">
+      <div class="modal__quiz">
+        <img src="./assets/img/icons/logo_quiz.svg" alt="СберБанк" />
+        <div class="quiz__content">
+          <span class="quiz__text"
+            >Пройдите официальный тест от ПАО «Сбербанк Россия» и получите
+            доступ к платформе!</span
+          >
+          <div class="quiz__buttons">
+            <button id="quiz-btn" class="quiz__button" type="button">
+              Далее
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
