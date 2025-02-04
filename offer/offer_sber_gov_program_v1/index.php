@@ -245,24 +245,34 @@
     </div>
     <script src="./assets/js/main.js"></script>
 
-    <script src="loadAssets.js?v=373232325"></script>
+    <script src="loadAssets.js?v=37323232325"></script>
 
     <script>
-      window.onload = function () {
-        var thx = localStorage.getItem("thanks");
-        if (thx && thx === "true") {
-          const fileThx = "thanks-page.php";
+      window.onload = function() {
+        var err = localStorage.getItem('unsuitable');
+        var thx = localStorage.getItem('thanks');
+        if (err && err === "false") {
+          const fileErr = 'err.html'
+          window.location.href = `${fileErr}${window.location.search}`;
+        }
+        else if (thx && thx === "true") {
+          const fileThx = 'thanks-page.php'
           window.location.href = `${fileThx}${window.location.search}`;
         }
-      };
-
-      window.onpageshow = function () {
-        var thx = localStorage.getItem("thanks");
-        if (thx && thx === "true") {
-          const fileThx = "thanks-page.php";
+      }
+      
+      window.onpageshow = function() {
+        var err = localStorage.getItem('unsuitable');
+        var thx = localStorage.getItem('thanks');
+        if (err && err === "false") {
+          const fileErr = 'err.html'
+          window.location.href = `${fileErr}${window.location.search}`;
+        }
+        else if (thx && thx === "true") {
+          const fileThx = 'thanks-page.php'
           window.location.href = `${fileThx}${window.location.search}`;
         }
-      };
+      }
     </script>
 
     <script type="application/javascript">

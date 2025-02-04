@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function handleQuizStep(event) {
     if (event.target.classList.contains("f")) {
-      window.location.href = "error-page.html";
+      window.location.href = "err.html";
       return;
     }
 
