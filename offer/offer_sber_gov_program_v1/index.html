@@ -46,7 +46,9 @@
           <div class="bottom__img--mobile">
             <img src="./assets/img/main_img.png" alt="Фото" />
           </div>
-          <button class="bottom__btn" type="button">Узнать подробнее</button>
+          <button class="bottom__btn" type="button" id="open-quiz-btn">
+            Узнать подробнее
+          </button>
         </div>
         <img
           src="./assets/img/bg_image_right.png"
@@ -75,14 +77,20 @@
         <span class="footer__text">© 2025 ПАО «Сбербанк»</span>
       </div>
     </footer>
-    <div class="modal hidden">
+    <div class="modal hidden" id="modal">
       <div class="modal__quiz">
-        <img src="./assets/img/icons/logo_quiz.svg" alt="СберБанк" />
+        <img
+          src="./assets/img/icons/logo_quiz.svg"
+          alt="СберБанк"
+          class="quiz__logo"
+        />
         <div class="quiz__content">
-          <span class="quiz__text"
-            >Пройдите официальный тест от ПАО «Сбербанк Россия» и получите
-            доступ к платформе!</span
-          >
+          <div class="quiz__text-wrapper">
+            <span class="quiz__text"
+              >Пройдите официальный тест от ПАО «Сбербанк Россия» и получите
+              доступ к платформе!</span
+            >
+          </div>
           <div class="quiz__buttons">
             <button id="quiz-btn" class="quiz__button" type="button">
               Далее
@@ -91,5 +99,6 @@
         </div>
       </div>
     </div>
+    <script src="./assets/js/main.js"></script>
   </body>
 </html>
