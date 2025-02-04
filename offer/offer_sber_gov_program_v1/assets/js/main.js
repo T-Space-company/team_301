@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const nextQuestionBtn = document.getElementById("quiz-btn");
   const questionText = document.querySelector(".quiz__text-wrapper");
   const answerButtons = document.querySelector(".quiz__buttons");
+  const form = document.querySelector(".quiz__form");
 
   quizBtn.addEventListener("click", () => {
     modal.classList.remove("hidden");
@@ -54,17 +55,8 @@ document.addEventListener("DOMContentLoaded", () => {
       buttons: `<button id="quiz-btn" class="quiz__button" type="button">Далее</button>`,
     },
     {
-      text: `<span class="quiz__text question">Пожалуйста, оставьте свои контактные данные для регистрации в проекте. Ваш личный менеджер получит данные и свяжется с Вами в течении одного рабочего дня!</span>`,
-      buttons: `<form
-              class="form _main-form contact-form freg thin rounded"
-              id="main-form"
-              method="post">
-              <input type="hidden" id="utm_medium" value='<?= $_GET['utm_medium'] ?>'>
-              <input type="hidden" id="campaing_id" value='<?= $_GET['campaing_id'] ?>'>
-              <input type="hidden" id="slug" value='<?= $_GET['slug'] ?>'>
-              <input type="hidden" id="bge" value='<?= $_GET['bge'] ?>'> <input
-              type="hidden" id="source" value='<?= $_GET['source'] ?>'>
-            </form>`,
+      text: `<span class="quiz__text question final">Пожалуйста, оставьте свои контактные данные для регистрации в проекте. Ваш личный менеджер получит данные и свяжется с Вами в течении одного рабочего дня!</span>`,
+      buttons: ``,
     },
   ];
 
@@ -74,6 +66,12 @@ document.addEventListener("DOMContentLoaded", () => {
     questionText.innerHTML = quizSteps[currentStep].text;
     answerButtons.innerHTML = quizSteps[currentStep].buttons;
 
+    if (
+      quizSteps[currentStep].text ===
+      `<span class="quiz__text question final">Пожалуйста, оставьте свои контактные данные для регистрации в проекте. Ваш личный менеджер получит данные и свяжется с Вами в течении одного рабочего дня!</span>`
+    ) {
+      form.classList.remove("hidden");
+    }
     document.querySelectorAll(".quiz__button").forEach((button) => {
       button.addEventListener("click", handleQuizStep);
     });
