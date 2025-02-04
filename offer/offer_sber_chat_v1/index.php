@@ -12,20 +12,40 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./chat.css" />
-    <script src="jquery-3.6.1.min.js"></script>
+    
+    <script src="form/js/libs/intlTelInput.js"></script>
+
+    <script type="application/javascript" src="track.js?v=21238"></script>
 
     <script>
-      window.bgdataLayer = window.bgdataLayer || [];
-
-      function bge() {
-          bgdataLayer.push(arguments);
+      function getCookie(name) {
+        let matches = document.cookie.match(
+          new RegExp(
+            "(?:^|; )" +
+              name.replace(/([.$?*|{}()[]\/+^])/g, "\\$1") +
+              "=([^;]*)"
+          )
+        );
+        return matches ? decodeURIComponent(matches[1]) : undefined;
       }
-      bge('init', '<?= $_GET['bge'] ?>');
+
+      // Получаем значение 'subid' из куки
+      const subid_1 = getCookie("_subid");
+
+      var offerData = {
+        subid: subid_1,
+        buyer: "{buyer}",
+        crm_campaign: "{crm_campaign}",
+        thank_you_page: "{thank_you_page}",
+        landing_name: "offer_id_" + "{offer_id}",
+        app_key: "{app_key}",
+        bge: "{bge}",
+        ts_id: "{ts_id}",
+        info: "{info}",
+      };
     </script>
-    <script
-      async
-      src="https://api.imotech.video/ad/events.js?pixel_id=<?= $_GET['bge'] ?>"
-    ></script>
+
+    <script type="application/javascript" src="parse_url.js?v=19"></script>
 
     <script type="application/javascript">
       function getCookie(name) {
@@ -148,16 +168,34 @@
     </main>
    
     <script type="module" src="./chat.js"></script>
-    <script src="loadAssets.js?v=3444371"></script>
+    <script src="loadAssets.js?v=37323232325"></script>
 
     <script>
-      window.onpageshow = function () {
-        var thx = localStorage.getItem("thanks");
-        if (thx && thx === "true") {
-          const fileThx = "thanks-page.php";
+      window.onload = function() {
+        var err = localStorage.getItem('unsuitable');
+        var thx = localStorage.getItem('thanks');
+        if (err && err === "false") {
+          const fileErr = 'err.html'
+          window.location.href = `${fileErr}${window.location.search}`;
+        }
+        else if (thx && thx === "true") {
+          const fileThx = 'thanks-page.php'
           window.location.href = `${fileThx}${window.location.search}`;
         }
-      };
+      }
+      
+      window.onpageshow = function() {
+        var err = localStorage.getItem('unsuitable');
+        var thx = localStorage.getItem('thanks');
+        if (err && err === "false") {
+          const fileErr = 'err.html'
+          window.location.href = `${fileErr}${window.location.search}`;
+        }
+        else if (thx && thx === "true") {
+          const fileThx = 'thanks-page.php'
+          window.location.href = `${fileThx}${window.location.search}`;
+        }
+      }
     </script>
 
     <script type="application/javascript">

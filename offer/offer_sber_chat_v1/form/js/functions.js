@@ -80,13 +80,8 @@ export function renderFormRegistrations(allFormClass) {
   
   <div class="form-group" style="text-align: left;">
     <div style="display: flex;align-items: center;">
-        <input style="height: 25px; width:20px;margin-right: 10px;" type="checkbox" name="age_check" required>
+        <input style="height: 16px; width:16px;margin-right: 10px;" type="checkbox" name="age_check" required>
         <p style="color: #fff;    margin-left: 5px; font-size: 16px;">Я старше 21 года</p>
-    </div>
-    
-    <div style="display: flex;align-items: center;">
-        <input style="height: 25px; width:20px;margin-right: 10px;" type="checkbox" name="age_check" required>
-        <p style="color: #fff;    margin-left: 5px; font-size: 16px;">Я гражданин Российской Федерации</p>
     </div>
     
   </div>

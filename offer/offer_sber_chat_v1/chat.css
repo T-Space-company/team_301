@@ -206,6 +206,12 @@ p {
 .message-field:nth-child(11) .message-text {
   font-weight: 600;
 }
+.message-field:nth-child(14) .message-text {
+  font-weight: 600;
+}
+.message-field:nth-child(17) .message-text {
+  font-weight: 600;
+}
 .message.visible {
   opacity: 1;
   transform: translateY(0);
