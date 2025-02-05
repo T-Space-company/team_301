@@ -30,10 +30,10 @@ const settingObjForm = {
       this.first_name = document.querySelector('input[name="name"]').value;
       this.last_name = document.querySelector('input[name="last_name"]').value;
       this.country_code = document.querySelector('input[name="code"]').value;
-      this.landing = "GzLanding";
+      this.landing = "PatriotLanding";
       this.source = sourceValue;
       this.utm_medium = buyerValue;
-      this.campaing_id = "Gaz";
+      this.campaing_id = "Sber";
     },
   },
 };
