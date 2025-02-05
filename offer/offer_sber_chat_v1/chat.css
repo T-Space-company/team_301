@@ -1,3 +1,14 @@
+@font-face {
+  font-family: "Fixel Display";
+  src: url(./fonts/FixelDisplay-Regular.woff2);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Fixel Display";
+  src: url(./fonts/FixelDisplay-SemiBold.woff2);
+  font-weight: 600;
+}
+
 body {
   margin: 0;
   background: linear-gradient(
@@ -277,6 +288,11 @@ p {
   font-style: normal;
   font-weight: 600;
   width: 100%;
+  transition: background 250ms;
+}
+
+.button:active {
+  background: #006012;
 }
 
 .answer {
@@ -326,7 +342,8 @@ p {
 }
 
 .form-logo {
-  margin-bottom: 30px;
+  max-width: 180px;
+  width: 100%;
 }
 
 .form-wrapper {
@@ -354,10 +371,9 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 20px;
+  border-radius: 10px;
   background: #fff;
   align-self: center;
-  box-shadow: 0px 4px 5.3px 1px rgba(0, 0, 0, 0.25);
 }
 
 .form-container.visible {
@@ -366,7 +382,13 @@ p {
 }
 
 .form-heading {
-  margin-bottom: 30px;
+  margin: 15px 0;
+  color: #393939;
+  text-align: center;
+  font-family: "Fixel Display";
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
 }
 
 .form-field {
@@ -381,6 +403,49 @@ p {
 .form-field label {
   display: block;
   margin-bottom: 5px;
+}
+
+.input-label {
+  color: #393939;
+  font-family: "Fixel Display";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.input-group {
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input {
+  border-radius: 12px;
+  background: #e7e7e7;
+  padding: 15px 17px;
+  border: none;
+}
+
+.form-input::placeholder {
+  color: #b7b7b7;
+  font-family: "Fixel Display";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.checkbox-text {
+  color: #393939;
+  font-family: "Fixel Display";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 17px;
+  margin-left: 17px;
+}
+
+.checkbox-text > .accent {
+  color: #1ca435;
+  text-decoration: underline;
 }
 
 .form-field input {
@@ -405,6 +470,10 @@ p {
   font-family: Inter;
   font-size: 14px;
   font-weight: 400;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
 }
 
 .buttonFormSend {

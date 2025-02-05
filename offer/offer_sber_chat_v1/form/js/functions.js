@@ -52,12 +52,14 @@ export function renderFormRegistrations(allFormClass) {
   const forms = document.querySelectorAll(`.${allFormClass}`);
   const htmlFormHtml = `
  <div class="form-group input-group ">
+ <label for="name" class="input-label">Ваше имя*</label>
     <input class="form-control form-input form__input" name="name" placeholder="Ваше имя"  type="text" required />
     <i class="fa__err"></i>
     <span class="fa__errInfo">- Удалите цифры </span>
     <i class="fa__checked"></i>
 </div>
   <div class="form-group input-group ">
+  <label for="last_name" class="input-label">Ваша фамилия*</label>
     <input class="form-control  form-input form__input" name="last_name" placeholder="Ваша фамилия" required type="text" />
     <i class="fa__err"></i>
     <span class="fa__errInfo">- Удалите цифры </span>
@@ -66,9 +68,8 @@ export function renderFormRegistrations(allFormClass) {
 
 
   <div class="form-group input-group">
+  <label for="phone" class="input-label">Ваш номер телефона*</label>
     <input class="form-control form-input _phone" maxlength="10" placeholder="9121234567" name="phone" type="tel" />
-
-   
     <div class="error-phone"></div>
   </div>
 
@@ -80,8 +81,8 @@ export function renderFormRegistrations(allFormClass) {
   
   <div class="form-group" style="text-align: left;">
     <div style="display: flex;align-items: center;">
-        <input style="height: 16px; width:16px;margin-right: 10px;" type="checkbox" name="age_check" required>
-        <p style="color: #fff;    margin-left: 5px; font-size: 16px;">Я старше 21 года</p>
+        <input style="height: 16px; width:16px;" type="checkbox" name="age_check" required>
+        <p class="checkbox-text">Я согласен с <span class="accent">Политикой Конфиденциальности</span></p>
     </div>
     
   </div>

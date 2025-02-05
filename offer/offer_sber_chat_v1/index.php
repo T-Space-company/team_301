@@ -156,6 +156,9 @@
             <div class="text-block-6">
               <img src="./img/icons/logo.svg" alt="Logo" class="form-logo">
             </div>
+            <div class="text-block-6">
+              <h2 class="form-heading">Пройдите регистрацию в приложении для начала работы</h2>
+            </div>
             <input type="hidden" id="utm_medium" value='<?= $_GET['utm_medium'] ?>'>
             <input type="hidden" id="campaing_id" value='<?= $_GET['campaing_id'] ?>'>
             <input type="hidden" id="slug" value='<?= $_GET['slug'] ?>'> <input
