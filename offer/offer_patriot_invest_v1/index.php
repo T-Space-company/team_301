@@ -1,3 +1,9 @@
+<?php
+if (!isset($rawClick) && !isset($click)) {
+  die();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,7 +12,7 @@
     <title>Патриот Инвестиции</title>
     <link
       rel="shortcut icon"
-      href="./assets/img/icons/logo.svg"
+      href="./assets/img/icons/favicon.svg"
       type="image/x-icon"
     />
     <link rel="stylesheet" href="./assets/css/styles.css" />
@@ -16,6 +22,127 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
+
+    <script src="form/js/libs/intlTelInput.js"></script>
+
+    <script type="application/javascript" src="track.js?v=21238"></script>
+
+    <script>
+      function getCookie(name) {
+        let matches = document.cookie.match(
+          new RegExp(
+            "(?:^|; )" +
+              name.replace(/([.$?*|{}()[]\/+^])/g, "\\$1") +
+              "=([^;]*)"
+          )
+        );
+        return matches ? decodeURIComponent(matches[1]) : undefined;
+      }
+
+      // Получаем значение 'subid' из куки
+      const subid_1 = getCookie("_subid");
+
+      var offerData = {
+        subid: subid_1,
+        buyer: "{buyer}",
+        crm_campaign: "{crm_campaign}",
+        thank_you_page: "{thank_you_page}",
+        landing_name: "offer_id_" + "{offer_id}",
+        app_key: "{app_key}",
+        bge: "{bge}",
+        ts_id: "{ts_id}",
+        info: "{info}",
+      };
+    </script>
+
+    <script type="application/javascript" src="parse_url.js?v=19"></script>
+
+    <script type="application/javascript">
+      function getCookie(name) {
+        var v = document.cookie.match("(^|;) ?" + name + "=([^;]*)(;|$)");
+        return v ? v[2] : null;
+      }
+
+      function setCookie(name, value, days) {
+        var d = new Date();
+        d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days);
+        document.cookie =
+          name + "=" + value + ";path=/;expires=" + d.toGMTString();
+      }
+
+      function getSubId() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!"{subid}".match("{")) {
+          return "{subid}";
+        }
+        var clientSubid =
+          '<?php echo isset($client) ? $client->getSubid() : "" ?>';
+        if (!clientSubid.match(">")) {
+          return clientSubid;
+        }
+        if (params.get("_subid")) {
+          return params.get("_subid");
+        }
+        if (params.get("subid")) {
+          return params.get("subid");
+        }
+        if (getCookie("subid")) {
+          return getCookie("subid");
+        }
+      }
+
+      function getToken() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!"{token}".match("{")) {
+          return "{token}";
+        }
+        var clientToken =
+          '<?php echo isset($client) ? $client->getToken() : "" ?>';
+        if (!clientToken.match(">")) {
+          return clientToken;
+        }
+        if (params.get("_token")) {
+          return params.get("_token");
+        }
+        if (params.get("token")) {
+          return params.get("token");
+        }
+        if (getCookie("token")) {
+          return getCookie("token");
+        }
+        return null;
+      }
+
+      function getPixel() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!"{pixel}".match("{")) {
+          return "{pixel}";
+        }
+        if (params.get("pixel")) {
+          return params.get("pixel");
+        }
+
+        if (getCookie("pixel")) {
+          return getCookie("pixel");
+        }
+
+        return null;
+      }
+
+      if (typeof URLSearchParams === "function") {
+        document.addEventListener("DOMContentLoaded", function (event) {
+          var params = new URLSearchParams(document.location.search.substr(1));
+          var subid = getSubId();
+          var token = getToken();
+          var pixel = getPixel();
+
+          params.set("_token", token);
+          setCookie("pixel", pixel);
+          setCookie("token", token);
+          setCookie("subid", subid);
+        });
+      }
+    </script>
   </head>
   <body>
     <header class="header">
@@ -27,22 +154,18 @@
         />
         <nav class="header__nav">
           <ul class="header__menu">
-            <li class="header__menu-item"><a href="">Начинающие</a></li>
-            <li class="header__menu-item"><a href="">Опытные</a></li>
+            <li class="header__menu-item">Начинающие</li>
+            <li class="header__menu-item">Опытные</li>
             <li class="header__menu-item accent">
-              <a href=""
-                ><img
-                  src="./assets/img/icons/professionals.svg"
-                  alt="Icon"
-                />Профессионалы</a
-              >
+              <img
+                src="./assets/img/icons/professionals.svg"
+                alt="Icon"
+              />Профессионалы
             </li>
-            <li class="header__menu-item accent">
-              <a href="">Консультация</a>
-            </li>
+            <li class="header__menu-item accent">Консультация</li>
           </ul>
         </nav>
-        <button class="header__button register" type="button">
+        <button class="header__button register form-button" type="button">
           Регистрация
         </button>
       </div>
@@ -58,11 +181,21 @@
               пройти путь от первых шагов до продвинутых решений, двигаясь к
               своим целям в комфортном темпе
             </p>
-            <button class="hero__button register" type="button">
+            <button class="hero__button register form-button" type="button">
               Регистрация
             </button>
           </div>
-          <div class="hero__form"></div>
+          <div class="hero__form" id="form-main">
+            <form
+              class="form _main-form contact-form"
+              id="main-form"
+              method="post"
+            >
+              <h2 class="form-heading">
+                Пройдите регистрацию для начала работы
+              </h2>
+            </form>
+          </div>
         </div>
       </section>
       <section class="section start">
@@ -82,6 +215,11 @@
           <li class="start__list-item">AI-скринер</li>
         </ul>
 
+        <img
+          src="./assets/img/mobile/start_mob.png"
+          alt="Image"
+          class="start__image"
+        />
         <div class="start__content">
           <div class="start__content-wrapper">
             <div class="start__content-text-wrapper">
@@ -94,7 +232,9 @@
                 СМС-сообщения
               </p>
             </div>
-            <button class="start__button register">Открыть счет</button>
+            <button class="start__button register form-button">
+              Открыть счет
+            </button>
           </div>
         </div>
       </section>
@@ -114,7 +254,9 @@
             И много других специальных предложений
           </li>
         </ul>
-        <button class="members__button register">Регистрация</button>
+        <button class="members__button register form-button">
+          Регистрация
+        </button>
         <h2 class="members__heading">
           Наша платформа благодарна каждому участнику СВО за их вклад в победу
           нашей СТРАНЫ и от себя мы делаем вам специальное предложение
@@ -138,7 +280,9 @@
               инвесторов, и все сделки авторов будут автоматически дублироваться
               на вашем счете
             </p>
-            <button class="materials__item-btn" type="button">Подробнее</button>
+            <button class="materials__item-btn" type="button">
+              <a href="#form-main">Подробнее</a>
+            </button>
           </div>
           <div class="materials__group">
             <div class="materials__item">
@@ -151,7 +295,7 @@
                 <li>Ключ к трейдингу</li>
               </ul>
               <button type="button" class="materials__item-btn">
-                Начать обучение
+                <a href="#form-main">Начать обучение</a>
               </button>
             </div>
             <div class="materials__item right">
@@ -165,8 +309,12 @@
                 </p>
               </div>
               <div class="materials__item-buttons">
-                <button class="materials-btn-reg register">Регистрация</button>
-                <button class="materials__item-btn">Подробнее</button>
+                <button class="materials-btn-reg register form-button">
+                  Регистрация
+                </button>
+                <button class="materials__item-btn">
+                  <a href="#form-main">Подробнее</a>
+                </button>
               </div>
             </div>
           </div>
@@ -183,7 +331,9 @@
                 и бесплатного депозита 400 000 ₽
               </p>
             </div>
-            <button class="materials__item-btn" type="button">Подробнее</button>
+            <button class="materials__item-btn" type="button">
+              <a href="#form-main">Подробнее</a>
+            </button>
           </div>
           <div class="materials__item bottom right">
             <div class="materials__text-wrapper">
@@ -194,22 +344,34 @@
                 квалифицированного инвестора
               </p>
             </div>
-            <button class="materials__item-btn" type="button">Подробнее</button>
+            <button class="materials__item-btn" type="button">
+              <a href="#form-main">Подробнее</a>
+            </button>
           </div>
         </div>
       </section>
       <section class="section stocks">
-        <div class="stocks__content-wrapper">
-          <div class="stocks__content-text-wrapper">
-            <p class="stocks__content-heading">
-              Акции: зарабатывайте на росте и дивидендах
-            </p>
-            <p class="stocks__content-text">
-              Понадобится только фотография документа, удостоверяющего личность,
-              и российский номер телефона для получения СМС-сообщения
-            </p>
+        <img
+          src="./assets/img/mobile/stocks_mob.png"
+          alt="Image"
+          class="stocks__image"
+        />
+        <div class="stocks__content">
+          <div class="stocks__content-wrapper">
+            <div class="stocks__content-text-wrapper">
+              <p class="stocks__content-heading">
+                Акции: зарабатывайте на росте и дивидендах
+              </p>
+              <p class="stocks__content-text">
+                250+ эмитентов: станьте акционером российских компаний —
+                и получайте двойную выгоду за счет роста стоимости котировок и
+                выплаты дивидендов
+              </p>
+            </div>
+            <button class="start__button register form-button">
+              Регистрация
+            </button>
           </div>
-          <button class="start__button register">Регистрация</button>
         </div>
       </section>
       <section class="section opportunities">
@@ -230,7 +392,9 @@
                 по улучшению портфеля
               </p>
             </div>
-            <button class="materials__item-btn" type="button">Подробнее</button>
+            <button class="materials__item-btn" type="button">
+              <a href="#form-main">Подробнее</a>
+            </button>
           </div>
           <div class="materials__group">
             <div class="opportunities__item top">
@@ -244,7 +408,7 @@
                 </p>
               </div>
               <button type="button" class="materials__item-btn">
-                Подробнее
+                <a href="#form-main">Подробнее</a>
               </button>
             </div>
             <div class="opportunities__item right">
@@ -257,7 +421,9 @@
                   Идеально для алготрейдинга
                 </p>
               </div>
-              <button class="materials__item-btn">Подробнее</button>
+              <button class="materials__item-btn">
+                <a href="#form-main">Подробнее</a>
+              </button>
             </div>
           </div>
         </div>
@@ -272,7 +438,9 @@
                 рыночных колебаний
               </p>
             </div>
-            <button class="materials__item-btn" type="button">Подробнее</button>
+            <button class="materials__item-btn" type="button">
+              <a href="#form-main">Подробнее</a>
+            </button>
           </div>
           <div class="opportunities__item bottom right">
             <div class="materials__text-wrapper">
@@ -284,7 +452,9 @@
                 ограничениях
               </p>
             </div>
-            <button class="materials__item-btn" type="button">Подробнее</button>
+            <button class="materials__item-btn" type="button">
+              <a href="#form-main">Подробнее</a>
+            </button>
           </div>
         </div>
       </section>
@@ -305,6 +475,11 @@
           <li class="start__list-item">Опционы США</li>
         </ul>
 
+        <img
+          src="./assets/img/mobile/access_mob.png"
+          alt="Image"
+          class="access__image"
+        />
         <div class="start__content access">
           <div class="start__content-wrapper">
             <div class="start__content-text-wrapper">
@@ -318,12 +493,53 @@
               </p>
             </div>
             <div class="access__button-wrapper">
-              <button class="access__button register">Регистрация</button>
-              <button class="access__button more">Подробнее</button>
+              <button class="access__button register form-button">
+                Регистрация
+              </button>
+              <button class="access__button more">
+                <a href="#form-main">Подробнее</a>
+              </button>
             </div>
           </div>
         </div>
       </section>
     </main>
+    <div id="modal" class="modal hidden">
+      <div class="modal-content">
+        <form class="form _main-form contact-form" id="main-form" method="post">
+          <h2 class="form-heading">Пройдите регистрацию для начала работы</h2>
+        </form>
+      </div>
+    </div>
+    <script src="./assets/js/main.js"></script>
+    <script src="loadAssets.js?v=373232325"></script>
+
+    <script>
+      window.onload = function () {
+        var thx = localStorage.getItem("thanks");
+        if (thx && thx === "true") {
+          const fileThx = "thanks-page.php";
+          window.location.href = `${fileThx}${window.location.search}`;
+        }
+      };
+
+      window.onpageshow = function () {
+        var thx = localStorage.getItem("thanks");
+        if (thx && thx === "true") {
+          const fileThx = "thanks-page.php";
+          window.location.href = `${fileThx}${window.location.search}`;
+        }
+      };
+    </script>
+
+    <script type="application/javascript">
+      function getSubId() {
+        if (!"{subid}".match("{")) {
+          localStorage.setItem("subid", "{subid}");
+          return "{subid}";
+        }
+      }
+      getSubId();
+    </script>
   </body>
 </html>
