@@ -141,7 +141,6 @@ input {
 
 .form-group {
   margin-bottom: 15px;
-  text-align: center;
   width: 100%;
   position: relative;
 }
@@ -222,7 +221,7 @@ input {
   align-items: center;
   position: absolute;
   right: 0px;
-  top: -13%;
+  top: 20%;
   padding: 5px;
   color: RED;
   font-size: 7px;

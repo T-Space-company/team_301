@@ -214,7 +214,7 @@ document.addEventListener("DOMContentLoaded", () => {
       onButtonClick("50 000 ₽");
       removeEventListeners();
       createQuestion("У вас есть опыт в инвестициях?");
-      createRExperienceuttons();
+      createExperienceButtons();
       scrollDown(200);
     };
 
