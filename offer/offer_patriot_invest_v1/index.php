@@ -162,7 +162,6 @@
                 alt="Icon"
               />Профессионалы
             </li>
-            <li class="header__menu-item accent">Консультация</li>
           </ul>
         </nav>
         <button class="header__button register form-button" type="button">
@@ -295,7 +294,7 @@
             
           </div>
           <div class="materials__group">
-            <div class="materials__item">
+            <div class="materials__item top">
               <p class="materials__item-heading">
                 45+ онлайн-курсов для обучения
               </p>
