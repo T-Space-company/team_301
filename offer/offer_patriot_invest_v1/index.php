@@ -1,7 +1,7 @@
 <?php
-if (!isset($rawClick) && !isset($click)) {
-  die();
-}
+// if (!isset($rawClick) && !isset($click)) {
+//   die();
+// }
 ?>
 
 <!DOCTYPE html>
@@ -240,9 +240,7 @@ if (!isset($rawClick) && !isset($click)) {
       </section>
 
       <section class="section members">
-        <div class="members__badge">
-          <span class="members__badge-text">Для опытных</span>
-        </div>
+        <img src="./assets/img/icons/members_warning.svg" alt="Image">
         <h2 class="members__heading">
           Для участников СВО, а также для родственников участников СВО-
           специальное предложение:
@@ -261,8 +259,22 @@ if (!isset($rawClick) && !isset($click)) {
           Наша платформа благодарна каждому участнику СВО за их вклад в победу
           нашей СТРАНЫ и от себя мы делаем вам специальное предложение
         </h2>
+        <img src="./assets/img/icons/members_warning.svg" alt="Image">
+      </section>
+      <section class="section partners">
+      <div class="partners__text">
+        <h2 class="partners__heading">Партнеры</h2>
+        <p class="partners__descr">Проект работает при поддержке:</p>
+      </div>
+      <div class="partners__logo">
+        <img src="./assets/img/icons/partners_psb.png" alt="ПСБ">
+        <img src="./assets/img/icons/partners_vtb.svg" alt="ВТБ">
+      </div>
       </section>
       <section class="section materials">
+        <div class="members__badge">
+          <span class="members__badge-text">Для опытных</span>
+        </div>
         <h3 class="materials__heading">Продвигайтесь вперед</h3>
         <p class="materials__text">
           Получите доступ к технологичным продуктам и полезным материалам,
@@ -280,9 +292,7 @@ if (!isset($rawClick) && !isset($click)) {
               инвесторов, и все сделки авторов будут автоматически дублироваться
               на вашем счете
             </p>
-            <button class="materials__item-btn" type="button">
-              <a href="#form-main">Подробнее</a>
-            </button>
+            
           </div>
           <div class="materials__group">
             <div class="materials__item">
@@ -294,9 +304,7 @@ if (!isset($rawClick) && !isset($click)) {
                 <li>Как собрать инвестиционный портфель?</li>
                 <li>Ключ к трейдингу</li>
               </ul>
-              <button type="button" class="materials__item-btn">
-                <a href="#form-main">Начать обучение</a>
-              </button>
+              
             </div>
             <div class="materials__item right">
               <div class="materials__text-wrapper">
@@ -309,12 +317,8 @@ if (!isset($rawClick) && !isset($click)) {
                 </p>
               </div>
               <div class="materials__item-buttons">
-                <button class="materials-btn-reg register form-button">
-                  Регистрация
-                </button>
-                <button class="materials__item-btn">
-                  <a href="#form-main">Подробнее</a>
-                </button>
+                
+                
               </div>
             </div>
           </div>
@@ -331,9 +335,7 @@ if (!isset($rawClick) && !isset($click)) {
                 и бесплатного депозита 400 000 ₽
               </p>
             </div>
-            <button class="materials__item-btn" type="button">
-              <a href="#form-main">Подробнее</a>
-            </button>
+            
           </div>
           <div class="materials__item bottom right">
             <div class="materials__text-wrapper">
@@ -344,9 +346,7 @@ if (!isset($rawClick) && !isset($click)) {
                 квалифицированного инвестора
               </p>
             </div>
-            <button class="materials__item-btn" type="button">
-              <a href="#form-main">Подробнее</a>
-            </button>
+           
           </div>
         </div>
       </section>
@@ -392,25 +392,9 @@ if (!isset($rawClick) && !isset($click)) {
                 по улучшению портфеля
               </p>
             </div>
-            <button class="materials__item-btn" type="button">
-              <a href="#form-main">Подробнее</a>
-            </button>
+            
           </div>
           <div class="materials__group">
-            <div class="opportunities__item top">
-              <div class="materials__text-wrapper">
-                <p class="materials__item-heading">
-                  Стратегии для самых амбициозных
-                </p>
-                <p class="materials__item-text">
-                  Премиальный доступ к стратегиям автоследования для инвестиций
-                  с максимальной выгодой
-                </p>
-              </div>
-              <button type="button" class="materials__item-btn">
-                <a href="#form-main">Подробнее</a>
-              </button>
-            </div>
             <div class="opportunities__item right">
               <div class="materials__text-wrapper">
                 <p class="materials__item-heading">
@@ -421,14 +405,9 @@ if (!isset($rawClick) && !isset($click)) {
                   Идеально для алготрейдинга
                 </p>
               </div>
-              <button class="materials__item-btn">
-                <a href="#form-main">Подробнее</a>
-              </button>
+              
             </div>
-          </div>
-        </div>
-        <div class="opportunities__bottom">
-          <div class="opportunities__item bottom left">
+            <div class="opportunities__item bottom left">
             <div class="materials__text-wrapper">
               <p class="materials__item-heading">
                 Инвестиции с защитой капитала до 100%
@@ -438,25 +417,11 @@ if (!isset($rawClick) && !isset($click)) {
                 рыночных колебаний
               </p>
             </div>
-            <button class="materials__item-btn" type="button">
-              <a href="#form-main">Подробнее</a>
-            </button>
+            
           </div>
-          <div class="opportunities__item bottom right">
-            <div class="materials__text-wrapper">
-              <p class="materials__item-heading">
-                Торговля заблокированными иностранными ценными бумагами
-              </p>
-              <p class="materials__item-text">
-                Избавляйтесь от замороженных активов или зарабатывайте на
-                ограничениях
-              </p>
-            </div>
-            <button class="materials__item-btn" type="button">
-              <a href="#form-main">Подробнее</a>
-            </button>
           </div>
         </div>
+        
       </section>
       <section class="section access">
         <div class="access__badge">
@@ -471,8 +436,7 @@ if (!isset($rawClick) && !isset($click)) {
 
         <ul class="start__list">
           <li class="start__list-item active">Cегрегированный счет</li>
-          <li class="start__list-item">Высокочастотный трейдинг</li>
-          <li class="start__list-item">Опционы США</li>
+          <li class="start__list-item">Опционы РФ</li>
         </ul>
 
         <img
@@ -484,20 +448,15 @@ if (!isset($rawClick) && !isset($click)) {
           <div class="start__content-wrapper">
             <div class="start__content-text-wrapper">
               <p class="start__content-heading">
-                Счет для торговли на американских биржах
+                Счет для торговли на русских биржах
               </p>
               <p class="start__content-text">
-                Получите прямой доступ к биржам США — NYSE, NASDAQ, CBOE, CME —
-                и торгуйте более чем 20 000 иностранными ценными бумагами.
-                Активы надежно хранятся у зарубежного кастодиана
+                Получите прямой доступ к биржам РФ  и торгуйте отечественными ценными бумагами. Активы надежно хранятся у отечественного кастодиана
               </p>
             </div>
             <div class="access__button-wrapper">
               <button class="access__button register form-button">
                 Регистрация
-              </button>
-              <button class="access__button more">
-                <a href="#form-main">Подробнее</a>
               </button>
             </div>
           </div>
