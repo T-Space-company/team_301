@@ -127,6 +127,7 @@ main {
 .header__menu-item.accent {
   border-radius: 8px;
   background: rgba(79, 79, 89, 0.16);
+  color: #ebebf2;
 }
 
 .header__menu-item.accent:last-child {
@@ -157,6 +158,12 @@ main {
   font-weight: 500;
   line-height: 24px;
   letter-spacing: -0.13px;
+  transition: background 250ms;
+}
+
+.register:hover,
+.register:active {
+  background: #ba9242;
 }
 
 .hero {
@@ -298,7 +305,7 @@ main {
   align-items: center;
 }
 
-.start__list-item {
+.start__list-item > button {
   border-radius: 8px;
   background: rgba(79, 79, 89, 0.16);
   color: #a4a4b2;
@@ -311,7 +318,7 @@ main {
   padding: 8px 16px;
 }
 
-.start__list-item.active {
+.start__list-item.active > button {
   color: #ebebf2;
   background: rgba(79, 79, 89, 0.4);
 }
@@ -482,6 +489,10 @@ main {
   max-width: 604px;
 }
 
+.materials__item.top {
+  height: 50%;
+}
+
 .materials__item.left {
   background-image: url(../img/bg_materials_left.jpeg);
   background-size: cover;
@@ -556,7 +567,7 @@ main {
   justify-content: space-between;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 60%;
 }
 
 .materials__item.right > .materials__text-wrapper {
@@ -571,7 +582,7 @@ main {
 }
 
 .materials__item-buttons {
-  display: flex;
+  display: none;
   gap: 12px;
 }
 
@@ -592,6 +603,7 @@ main {
   background-image: url(../img/bg_materials_right_bottom.jpeg);
   background-size: cover;
   background-position: center;
+  height: 100%;
 }
 
 .materials__item.bottom.right > .materials__text-wrapper {
@@ -602,7 +614,7 @@ main {
   width: 100%;
   max-width: 1228px;
   height: 530px;
-  margin-top: 24px;
+  margin-top: 50px;
 }
 
 .stocks__image {
@@ -782,7 +794,7 @@ main {
 }
 
 .start__content.access {
-  background-image: url(../img/bg_access.jpeg);
+  background-image: url(../img/bg_access.png);
   align-items: flex-start;
   margin-top: 24px;
   margin-bottom: 0;
@@ -822,6 +834,27 @@ main {
   align-items: center;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 1000;
+}
+
+.modal-close {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 50px;
+  height: 50px;
+  background: #272730;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-close:hover,
+.modal-close:active {
+  transform: scale(1.1);
 }
 
 .modal.hidden {
@@ -865,10 +898,13 @@ main {
   }
   .hero__wrapper {
     flex-direction: column;
-    background-image: url(../img/mobile/bg_hero_mob.jpg);
+    background-image: url(../img/mobile/bg_hero_mob.jpeg);
     gap: 48px;
-    padding: 70px 12px 48px 12px;
+    padding: 255px 12px 48px 12px;
     align-items: center;
+    background-position-y: top;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
   .hero__button {
     display: none;
@@ -914,7 +950,7 @@ main {
     margin-top: 24px;
   }
 
-  .start__list-item {
+  .start__list-item > button {
     font-size: 12px;
     line-height: 16px;
     padding: 6px 10px;
@@ -924,7 +960,7 @@ main {
     background-color: #202023;
     border-radius: 0 0 10px 10px;
     margin-top: 0;
-    max-width: 380px;
+    max-width: 376px;
     height: auto;
     padding: 24px 16px 16px 16px;
   }
@@ -934,7 +970,7 @@ main {
   .start__image {
     display: block;
     width: 100%;
-    max-width: 380px;
+    max-width: 376px;
     margin-top: 24px;
   }
 
@@ -945,6 +981,12 @@ main {
 
   .members {
     gap: 20px;
+  }
+
+  .members > img {
+    max-width: 190px;
+    width: 100%;
+    min-width: 150px;
   }
 
   .members__badge {
@@ -971,9 +1013,7 @@ main {
   }
 
   .materials__section.bottom {
-    flex-direction: column;
-    height: auto;
-    align-items: center;
+    display: none;
   }
 
   .materials__group {
@@ -1007,6 +1047,7 @@ main {
   }
 
   .materials__item-buttons {
+    display: flex;
     width: 100%;
     margin-top: 24px;
   }
@@ -1017,7 +1058,10 @@ main {
 
   .materials__item-btn {
     width: 100%;
+    height: 40px;
     margin-top: 42px;
+    background: #ffc759;
+    color: #202023;
   }
 
   .materials-btn-reg {
@@ -1029,11 +1073,12 @@ main {
     align-items: center;
     display: flex;
     flex-direction: column;
+    margin-top: 50px;
   }
 
   .stocks__image {
     display: block;
-    max-width: 400px;
+    max-width: 376px;
     width: 100%;
     bottom: -5px;
     position: relative;
@@ -1045,7 +1090,7 @@ main {
     height: auto;
     padding: 24px 16px 16px 16px;
     border-radius: 0 0 10px 10px;
-    max-width: 400px;
+    max-width: 376px;
   }
 
   .stocks__content-wrapper {
@@ -1083,6 +1128,7 @@ main {
   }
 
   .opportunities__item.right {
+    display: none;
     background-image: none;
   }
 
@@ -1132,6 +1178,7 @@ main {
     background-color: #202023;
     padding: 24px 16px 16px 16px;
     margin-top: 0;
+    max-width: 376px;
   }
 
   .start__content.access > .start__content-wrapper {
@@ -1147,11 +1194,31 @@ main {
   .access__image {
     display: block;
     margin-top: 24px;
-    max-width: 380px;
+    max-width: 376px;
     width: 100%;
   }
 
   .modal-content {
     padding: 20px;
+  }
+
+  .partners__logo {
+    gap: 15px;
+  }
+
+  .partners__logo > img {
+    max-width: 165px;
+    min-width: 100px;
+    width: 100%;
+  }
+
+  .modal-close {
+    width: 40px;
+    height: 40px;
+  }
+
+  .modal-close > img {
+    width: 24px;
+    height: 24px;
   }
 }

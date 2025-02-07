@@ -1,7 +1,7 @@
 <?php
-// if (!isset($rawClick) && !isset($click)) {
-//   die();
-// }
+if (!isset($rawClick) && !isset($click)) {
+  die();
+}
 ?>
 
 <!DOCTYPE html>
@@ -154,15 +154,14 @@
         />
         <nav class="header__nav">
           <ul class="header__menu">
-            <li class="header__menu-item">Начинающие</li>
-            <li class="header__menu-item">Опытные</li>
+            <li class="header__menu-item"><a href="#start">Начинающие</a></li>
+            <li class="header__menu-item"><a href="#materials">Опытные</a></li>
             <li class="header__menu-item accent">
               <img
                 src="./assets/img/icons/professionals.svg"
                 alt="Icon"
-              />Профессионалы
+              /><a href="#access">Профессионалы</a>
             </li>
-            <li class="header__menu-item accent">Консультация</li>
           </ul>
         </nav>
         <button class="header__button register form-button" type="button">
@@ -198,7 +197,7 @@
           </div>
         </div>
       </section>
-      <section class="section start">
+      <section class="section start" id="start">
         <div class="start__badge">
           <span class="start__badge-text">Для начинающих</span>
         </div>
@@ -210,9 +209,9 @@
         </p>
 
         <ul class="start__list">
-          <li class="start__list-item active">Открытие счета</li>
-          <li class="start__list-item">Популярные бумаги</li>
-          <li class="start__list-item">AI-скринер</li>
+          <li class="start__list-item active"><button type="button">Открытие счета</button></li>
+          <li class="start__list-item"><button type="button">Популярные бумаги</button></li>
+          <li class="start__list-item"><button type="button">AI-скринер</button></li>
         </ul>
 
         <img
@@ -271,7 +270,7 @@
         <img src="./assets/img/icons/partners_vtb.svg" alt="ВТБ">
       </div>
       </section>
-      <section class="section materials">
+      <section class="section materials" id="materials">
         <div class="members__badge">
           <span class="members__badge-text">Для опытных</span>
         </div>
@@ -295,7 +294,7 @@
             
           </div>
           <div class="materials__group">
-            <div class="materials__item">
+            <div class="materials__item top">
               <p class="materials__item-heading">
                 45+ онлайн-курсов для обучения
               </p>
@@ -317,8 +316,9 @@
                 </p>
               </div>
               <div class="materials__item-buttons">
-                
-                
+                <button class="materials__item-btn register form-button" type="button">
+              Регистрация
+            </button>
               </div>
             </div>
           </div>
@@ -423,7 +423,7 @@
         </div>
         
       </section>
-      <section class="section access">
+      <section class="section access" id="access">
         <div class="access__badge">
           <span class="access__badge-text">Для профессионалов</span>
         </div>
@@ -435,8 +435,8 @@
         </p>
 
         <ul class="start__list">
-          <li class="start__list-item active">Cегрегированный счет</li>
-          <li class="start__list-item">Опционы РФ</li>
+          <li class="start__list-item active"><button type="button">Cегрегированный счет</button></li>
+          <li class="start__list-item"><button type="button">Опционы РФ</button></li>
         </ul>
 
         <img
@@ -465,6 +465,7 @@
     </main>
     <div id="modal" class="modal hidden">
       <div class="modal-content">
+        <button class="modal-close" aria-label="Close modal"><img src="./assets/img/icons/close.svg" alt=""></button>
         <form class="form _main-form contact-form" id="main-form" method="post">
           <h2 class="form-heading">Пройдите регистрацию для начала работы</h2>
         </form>
