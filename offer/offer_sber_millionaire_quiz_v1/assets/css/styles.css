@@ -231,6 +231,10 @@ body {
   font-size: 14px;
 }
 
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
 .form-input {
   border-radius: 12px;
   background: #e7e7e7;
@@ -275,6 +279,14 @@ body {
 
 #thanks-screen {
   gap: 20px;
+  padding: 40px 20px 80px 20px;
+  overflow: hidden;
+}
+
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .testimonials-heading {
@@ -284,4 +296,105 @@ body {
   font-weight: 700;
   letter-spacing: 7.8px;
   text-transform: capitalize;
+}
+
+.testimonials-item {
+  border-radius: 10px;
+  border: 3px solid #f2c26e;
+  background: #fff;
+  display: flex;
+  width: 330px;
+  height: 220px;
+  padding: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.testimonials-item.third {
+  justify-content: flex-start;
+  gap: 30px;
+}
+
+.testimonials-info {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.testimonials-info > img {
+  width: 41px;
+  height: 41px;
+}
+
+.testimonials-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonials-name {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.4px;
+  background: var(--1, linear-gradient(96deg, #7731cf 0%, #3c0d8f 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.testimonials-age {
+  font-family: Raleway;
+  font-size: 13px;
+  letter-spacing: -0.325px;
+  background: var(--1, linear-gradient(96deg, #7731cf 0%, #3c0d8f 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.testimonials-text {
+  color: var(--Style, #0b0f2f);
+  font-family: Raleway;
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0.14px;
+}
+
+.splide {
+  max-width: 375px;
+  margin: auto;
+}
+
+.splide__arrow {
+  top: auto !important;
+  bottom: -40%;
+  width: 45px !important;
+  height: 45px !important;
+  opacity: 1 !important;
+  background: var(
+    --1,
+    linear-gradient(96deg, #7731cf 0%, #3c0d8f 100%)
+  ) !important;
+}
+
+.splide__arrow--next {
+  right: 10em !important;
+}
+
+.splide__arrow--prev {
+  left: 10em !important;
+}
+
+.splide__arrow:disabled {
+  background: #363636 !important;
+  opacity: 1 !important;
+}
+
+.splide__arrow > svg {
+  fill: #fff !important;
+}
+
+.splide__slide {
+  width: 330px !important;
 }
