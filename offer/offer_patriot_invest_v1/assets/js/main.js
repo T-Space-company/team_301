@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const modal = document.getElementById("modal");
   const closeModalButton = document.querySelector(".modal-close");
   const formButtons = document.querySelectorAll(".form-button");
+  const startListButton = document.querySelector(".start-list-btn");
 
   formButtons.forEach((btn) => {
     btn.addEventListener("click", () => {
@@ -22,6 +23,16 @@ document.addEventListener("DOMContentLoaded", () => {
     modal.classList.add("hidden");
     body.style.overflow = "auto";
   });
+
+  function updateButtonText() {
+    if (window.innerWidth < 1024) {
+      startListButton.textContent = "Регистрация";
+    } else {
+      startListButton.textContent = "Открыть счет";
+    }
+  }
+
+  updateButtonText();
 
   function initializeSection(sectionSelector, contentData, mobileImages) {
     const section = document.querySelector(sectionSelector);
@@ -59,8 +70,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const startContentData = [
     {
       bgImage: "url(./assets/img/bg_start.png)",
-      heading: "Откройте брокерский счет онлайн всего за 3 минуты",
-      text: "Понадобится только фотография документа, удостоверяющего личность, и российский номер телефона для получения СМС-сообщения",
+      heading:
+        "При открытии счета, новым пользователям, предоставляется личный менеджер!",
+      text: "Ваш персональный менеджер проведет с вами первые 50 сделок – бесплатно! При депозите от 20000 рублей – первые 100 сделок бесплатные!",
     },
     {
       bgImage: "url('./assets/img/bg_start-2.jpeg')",
