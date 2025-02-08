@@ -81,7 +81,7 @@ export function renderFormRegistrations(allFormClass) {
   <input type="hidden" name="answer">
   
   
-  <div class="form-group" style="text-align: left;">
+  <div class="form-group checkbox" style="text-align: left;">
     <div style="display: flex;align-items: center;">
         <input style="height: 16px; width:16px;" type="checkbox" name="age_check" required>
         <p class="checkbox-text">Я согласен с <span class="accent">Политикой Конфиденциальности</span></p>
@@ -89,11 +89,14 @@ export function renderFormRegistrations(allFormClass) {
     
   </div>
   
-  
-  
-  
-  <div class="form-group">
+  <div class="form-group accent-info">
+  <ul class="form-list">
+          <li class="form-list-item">Бонус к депозиту 100% для новых пользователей</li>
+          <li class="form-list-item">Бесплатное сопровождение менеджера до первого результата</li>
+        </ul>
+  </div>
 
+  <div class="form-group">
     <button class="btn secondary-solid-btn btn-block buttonSend"  name="submitBtn" type="submit">
     <p class="btnFormText">Оставить заявку
     </p>
