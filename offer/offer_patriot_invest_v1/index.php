@@ -154,13 +154,13 @@ if (!isset($rawClick) && !isset($click)) {
         />
         <nav class="header__nav">
           <ul class="header__menu">
-            <li class="header__menu-item"><a href="#start">Начинающие</a></li>
-            <li class="header__menu-item"><a href="#materials">Опытные</a></li>
+            <li class="header__menu-item"><a href="#form-main">Начинающие</a></li>
+            <li class="header__menu-item"><a href="#form-main">Опытные</a></li>
             <li class="header__menu-item accent">
               <img
                 src="./assets/img/icons/professionals.svg"
                 alt="Icon"
-              /><a href="#access">Профессионалы</a>
+              /><a href="#form-main">Профессионалы</a>
             </li>
           </ul>
         </nav>
@@ -209,29 +209,29 @@ if (!isset($rawClick) && !isset($click)) {
         </p>
 
         <ul class="start__list">
-          <li class="start__list-item active"><button type="button">Открытие счета</button></li>
+          <li class="start__list-item active"><button type="button">Личный менеджер</button></li>
           <li class="start__list-item"><button type="button">Популярные бумаги</button></li>
           <li class="start__list-item"><button type="button">AI-скринер</button></li>
         </ul>
 
-        <img
-          src="./assets/img/mobile/start_mob.png"
-          alt="Image"
-          class="start__image"
-        />
+        <div>
+          <img
+            src="./assets/img/mobile/start_mob.png"
+            alt="Image"
+            class="start__image"
+          />
+        </div>
         <div class="start__content">
           <div class="start__content-wrapper">
             <div class="start__content-text-wrapper">
               <p class="start__content-heading">
-                Откройте брокерский счет онлайн всего за 3 минуты
+                При открытии счета, новым пользователям, предоставляется личный менеджер!
               </p>
               <p class="start__content-text">
-                Понадобится только фотография документа, удостоверяющего
-                личность, и российский номер телефона для получения
-                СМС-сообщения
+                Ваш персональный менеджер проведет с вами первые 50 сделок – бесплатно! При депозите от 20000 рублей – первые 100 сделок бесплатные!
               </p>
             </div>
-            <button class="start__button register form-button">
+            <button class="start__button register form-button start-list-btn">
               Открыть счет
             </button>
           </div>
@@ -269,8 +269,9 @@ if (!isset($rawClick) && !isset($click)) {
         <img src="./assets/img/icons/partners_psb.png" alt="ПСБ">
         <img src="./assets/img/icons/partners_vtb.svg" alt="ВТБ">
       </div>
+      <div class="partners__underline"></div>
       </section>
-      <section class="section materials" id="materials">
+      <!-- <section class="section materials" id="materials">
         <div class="members__badge">
           <span class="members__badge-text">Для опытных</span>
         </div>
@@ -349,7 +350,7 @@ if (!isset($rawClick) && !isset($click)) {
            
           </div>
         </div>
-      </section>
+      </section> -->
       <section class="section stocks">
         <img
           src="./assets/img/mobile/stocks_mob.png"
@@ -392,9 +393,11 @@ if (!isset($rawClick) && !isset($click)) {
                 по улучшению портфеля
               </p>
             </div>
-            
+            <button class="start__button register form-button">
+              Открыть счет 
+            </button>
           </div>
-          <div class="materials__group">
+          <!-- <div class="materials__group">
             <div class="opportunities__item right">
               <div class="materials__text-wrapper">
                 <p class="materials__item-heading">
@@ -419,11 +422,11 @@ if (!isset($rawClick) && !isset($click)) {
             </div>
             
           </div>
-          </div>
+          </div> -->
         </div>
         
       </section>
-      <section class="section access" id="access">
+      <!-- <section class="section access" id="access">
         <div class="access__badge">
           <span class="access__badge-text">Для профессионалов</span>
         </div>
@@ -461,13 +464,13 @@ if (!isset($rawClick) && !isset($click)) {
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
     </main>
     <div id="modal" class="modal hidden">
       <div class="modal-content">
         <button class="modal-close" aria-label="Close modal"><img src="./assets/img/icons/close.svg" alt=""></button>
         <form class="form _main-form contact-form" id="main-form" method="post">
-          <h2 class="form-heading">Пройдите регистрацию для начала работы</h2>
+          <h2 class="form-heading">Пройдите регистрацию, чтобы начать зарабатывать</h2>
         </form>
       </div>
     </div>
