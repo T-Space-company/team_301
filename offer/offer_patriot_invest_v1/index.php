@@ -268,6 +268,7 @@ if (!isset($rawClick) && !isset($click)) {
       <div class="partners__logo">
         <img src="./assets/img/icons/partners_psb.png" alt="ПСБ">
         <img src="./assets/img/icons/partners_vtb.svg" alt="ВТБ">
+        <img src="./assets/img/icons/partners_sber.png" alt="СБЕР">
       </div>
       <div class="partners__underline"></div>
       </section>

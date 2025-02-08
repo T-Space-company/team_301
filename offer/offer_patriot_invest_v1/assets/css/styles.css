@@ -462,6 +462,13 @@ main {
 .partners__logo {
   display: flex;
   gap: 60px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.partners__logo > img {
+  width: 200px;
 }
 
 .materials {
@@ -1277,12 +1284,12 @@ main {
   }
 
   .partners__logo {
-    gap: 15px;
+    gap: 30px;
     padding: 0 20px;
   }
 
   .partners__logo > img {
-    max-width: 165px;
+    max-width: 150px;
     min-width: 100px;
     width: 100%;
   }
