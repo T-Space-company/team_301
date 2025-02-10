@@ -720,6 +720,9 @@ main {
   .header {
     justify-content: center;
   }
+  .header.thanks {
+    padding: 20px 0 0 0;
+  }
   .header__logo > img {
     width: 31px;
     height: 31px;
@@ -736,6 +739,15 @@ main {
   .hero {
     flex-direction: column-reverse;
     align-items: center;
+    margin-top: 20px;
+  }
+
+  .hero.thanks {
+    margin-top: 0;
+  }
+
+  .hero__content.thanks {
+    justify-content: center;
   }
 
   .hero__image {
@@ -748,6 +760,7 @@ main {
   .hero__heading {
     text-align: center;
     font-size: 32px;
+    margin-top: 20px;
   }
   .hero__text {
     text-align: center;

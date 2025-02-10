@@ -6,273 +6,233 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Спасибо за регистрацию!</title>
-
-
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link
+      rel="shortcut icon"
+      href="./assets/img/icons/logo.svg"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="
+https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
+"
+      rel="stylesheet"
+    />
+    <script src="
+https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
+"></script>
   </head>
 
-  <style>
-    .wrapper {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      text-align: center;
-    }
-  </style>
   <body>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Khand:wght@500&display=swap');
-*{
-  margin:0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body  {
-  height: 100vh;
-  display: flex;
-  font-size: 14px;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Khand', sans-serif;
-}
-
-.wrapperAlert {
-  width: 500px;
-  height: 400px;
-  overflow: hidden;
-  border-radius: 12px;
-  border: thin solid #ddd;
-}
-
-.topHalf {
-  width: 100%;
-  color: white;
-  overflow: hidden;
-  min-height: 250px;
-  position: relative;
-  padding: 40px 0;
-  background: rgb(0,0,0);
-  background: -webkit-linear-gradient(45deg, #019871, #a0ebcf);
-}
-
-.topHalf p {
-  margin-bottom: 30px;
-}
-svg {
-  fill: white;
-}
-.topHalf h1 {
-  font-size: 2.25rem;
-  display: block;
-  font-weight: 500;
-  letter-spacing: 0.15rem;
-  text-shadow: 0 2px rgba(128, 128, 128, 0.6);
-}
-
-/* Original Author of Bubbles Animation -- https://codepen.io/Lewitje/pen/BNNJjo */
-.bg-bubbles{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-
-li{
-  position: absolute;
-  list-style: none;
-  display: block;
-  width: 40px;
-  height: 40px;
-  background-color: rgba(255, 255, 255, 0.15);/* fade(green, 75%);*/
-  bottom: -160px;
-
-  -webkit-animation: square 20s infinite;
-  animation:         square 20s infinite;
-
-  -webkit-transition-timing-function: linear;
-  transition-timing-function: linear;
-}
-li:nth-child(1){
-  left: 10%;
-}
-li:nth-child(2){
-  left: 20%;
-
-  width: 80px;
-  height: 80px;
-
-  animation-delay: 2s;
-  animation-duration: 17s;
-}
-li:nth-child(3){
-  left: 25%;
-  animation-delay: 4s;
-}
-li:nth-child(4){
-  left: 40%;
-  width: 60px;
-  height: 60px;
-
-  animation-duration: 22s;
-
-  background-color: rgba(white, 0.3); /* fade(white, 25%); */
-}
-li:nth-child(5){
-  left: 70%;
-}
-li:nth-child(6){
-  left: 80%;
-  width: 120px;
-  height: 120px;
-
-  animation-delay: 3s;
-  background-color: rgba(white, 0.2); /* fade(white, 20%); */
-}
-li:nth-child(7){
-  left: 32%;
-  width: 160px;
-  height: 160px;
-
-  animation-delay: 7s;
-}
-li:nth-child(8){
-  left: 55%;
-  width: 20px;
-  height: 20px;
-
-  animation-delay: 15s;
-  animation-duration: 40s;
-}
-li:nth-child(9){
-  left: 25%;
-  width: 10px;
-  height: 10px;
-
-  animation-delay: 2s;
-  animation-duration: 40s;
-  background-color: rgba(white, 0.3); /*fade(white, 30%);*/
-}
-li:nth-child(10){
-  left: 90%;
-  width: 160px;
-  height: 160px;
-
-  animation-delay: 11s;
-}
-
-@-webkit-keyframes square {
-  0%   { transform: translateY(0); }
-  100% { transform: translateY(-500px) rotate(600deg); }
-}
-@keyframes square {
-  0%   { transform: translateY(0); }
-  100% { transform: translateY(-500px) rotate(600deg); }
-}
-
-.bottomHalf {
-  align-items: center;
-  padding: 35px;
-}
-.bottomHalf p {
-  font-weight: 500;
-  font-size: 1.05rem;
-  margin-bottom: 20px;
-}
-
-button {
-  border: none;
-  color: white;
-  cursor: pointer;
-  border-radius: 12px;
-  padding: 10px 18px;
-  background-color: #019871;
-  text-shadow: 0 1px rgba(128, 128, 128, 0.75);
-}
-button:hover {
-  background-color: #85ddbf;
-}
-    </style>
-    <div class="wrapper">
-      <div class="bloc">
-      <div class="wrapperAlert">
-
-  <div class="contentAlert">
-
-    <div class="topHalf">
-
-      <p><svg viewBox="0 0 512 512" width="100" title="check-circle">
-        <path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z" />
-        </svg></p>
-
-     <ul class="bg-bubbles">
-       <li></li>
-       <li></li>
-       <li></li>
-       <li></li>
-       <li></li>
-       <li></li>
-       <li></li>
-       <li></li>
-       <li></li>
-       <li></li>
-     </ul>
-    </div>
-
-    <div class="bottomHalf">
-
-      <h2>
-      Благодарим за регистрацию!
-      </h2>
-
-      <p>Наши специалисты свяжутся с Вами через <span id="timer"> 29:59</span></p>
-
-    </div>
-
-  </div>
-
-</div>
+   <header class="header thanks">
+      <div class="header__logo">
+        <img src="./assets/img/icons/logo.svg" alt="Logo" />
+        <span>Финансовый Рост</span>
       </div>
-    </div>
+      <nav class="header__nav">
+        <ul class="header__menu">
+          <li class="header__menu-item"><a href="#course">О курсе</a></li>
+          <li class="header__menu-item"><a href="#success">Успехи</a></li>
+          <li class="header__menu-item accent">
+            <a href="#testimonials">Отзывы</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="header__button form-button" type="button">
+        Оставить заявку
+      </button>
+    </header>
+    <main class="main">
+      <section class="section hero thanks">
+        <div class="hero__content thanks">
+          <h1 class="hero__heading">
+           Спасибо за регистрацию!
+          </h1>
+          <p class="hero__text">
+           Наш менеджер в скором времени свяжется с вами!
+          </p>
+        </div>
+        <div class="hero__image">
+          <img src="./assets/img/hero_img.png" alt="Image" />
+        </div>
+      </section>
+    <section class="section testimonials" id="testimonials">
+        <div class="course__head">
+          <span class="course__preheading">Отзывы</span>
+          <h2 class="course__heading">Что наши выпускники говорят о нас</h2>
+        </div>
+        <div id="testimonials-slider" class="splide">
+          <div class="splide__track">
+            <div class="splide__list">
+              <div class="splide__slide">
+                <div class="testimonials-item">
+                  <div class="testimonials-info">
+                    <img src="./assets/img/avatars/avatar-1.png" alt="Avatar" />
+                    <div class="testimonials-details">
+                      <span class="testimonials-name">Евгений Виноградов</span>
+                      <span class="testimonials-age">47 лет, Москва</span>
+                    </div>
+                  </div>
+                  <p class="testimonials-text">
+                    Проект от Финансового Роста изменил мою жизнь! Я начал
+                    получать стабильный пассивный доход, практически ничего не
+                    делая. Теперь могу больше времени уделять семье и своим
+                    увлечениям
+                  </p>
+                </div>
+              </div>
 
+              <div class="splide__slide">
+                <div class="testimonials-item">
+                  <div class="testimonials-info">
+                    <img src="./assets/img/avatars/avatar-2.png" alt="Avatar" />
+                    <div class="testimonials-details">
+                      <span class="testimonials-name">Алиса Филатова</span>
+                      <span class="testimonials-age">72 года, Тверь</span>
+                    </div>
+                  </div>
+                  <p class="testimonials-text">
+                    Долгое время искала способ получать дополнительный доход без
+                    сложностей. Проект от Финансового Роста справился с этим на
+                    100%! Программа сама работает, а я просто наслаждаюсь
+                    результатом!
+                  </p>
+                </div>
+              </div>
 
-  <script>
-    // Получаем элемент таймера
-    const timerElement = document.getElementById('timer');
-    
-    // Разбиваем строку времени на минуты и секунды
-    const timeParts = timerElement.innerHTML.split(':');
-    let minutes = parseInt(timeParts[0]);
-    let seconds = parseInt(timeParts[1]);
-    
-    // Функция обновления таймера
-    function updateTimer() {
-      // Проверяем, не стал ли таймер равен 0
-      if (minutes === 0 && seconds === 0) {
-        clearInterval(timerInterval); // Останавливаем таймер
-        alert('Время вышло!'); // Выводим сообщение
-        return;
-      }
-    
-      // Уменьшаем секунды
-      if (seconds === 0) {
-        minutes--;
-        seconds = 59;
-      } else {
-        seconds--;
-      }
-    
-      // Форматируем время и выводим его на страницу
-      timerElement.innerHTML = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-    }
-    
-    // Вызываем функцию обновления таймера каждую секунду
-    const timerInterval = setInterval(updateTimer, 1000);
+              <div class="splide__slide">
+                <div class="testimonials-item third">
+                  <div class="testimonials-info">
+                    <img src="./assets/img/avatars/avatar-3.png" alt="Avatar" />
+                    <div class="testimonials-details">
+                      <span class="testimonials-name">Игорь Смирнов</span>
+                      <span class="testimonials-age">45 лет, Казань</span>
+                    </div>
+                  </div>
+                  <p class="testimonials-text">
+                    Сначала не верил, что можно зарабатывать так легко, но
+                    проект от Финансового Роста реально изменил мою жизнь!
+                    Теперь деньги работают на меня, а не наоборот!
+                  </p>
+                </div>
+              </div>
+
+              <div class="splide__slide">
+                <div class="testimonials-item">
+                  <div class="testimonials-info">
+                    <img src="./assets/img/avatars/avatar-4.png" alt="Avatar" />
+                    <div class="testimonials-details">
+                      <span class="testimonials-name">Мария Ковальчук</span>
+                      <span class="testimonials-age">65 лет, Астрахань</span>
+                    </div>
+                  </div>
+                  <p class="testimonials-text">
+                    Я долго сомневалась, но решила попробовать. Теперь понимаю –
+                    это лучшее решение! Проект от Финансового Роста позволил мне
+                    начать пассивно зарабатывать, а недавно я даже смогла
+                    позволить себе новую квартиру!
+                  </p>
+                </div>
+              </div>
+
+              <div class="splide__slide">
+                <div class="testimonials-item">
+                  <div class="testimonials-info">
+                    <img src="./assets/img/avatars/avatar-5.png" alt="Avatar" />
+                    <div class="testimonials-details">
+                      <span class="testimonials-name">Фарид Джурагов</span>
+                      <span class="testimonials-age">51 год, Томск</span>
+                    </div>
+                  </div>
+                  <p class="testimonials-text">
+                    Раньше приходилось много работать, чтобы откладывать на
+                    мечту, а теперь проект от Финансового Роста делает это за
+                    меня! Доход приходит сам, а я наконец-то могу позволить себе
+                    жить так, как хочу.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+</main>
+      <footer class="footer">
+      <div class="footer__wrapper">
+        <div class="footer__top">
+          <div class="footer__top--left">
+            <div class="footer__logo">
+              <img src="./assets/img/icons/logo_footer.svg" alt="Logo" />
+              <span class="footer__logo-text">Финансовый Рост</span>
+            </div>
+            <p class="footer__text">
+              ООО «Финансовый Рост» <br />зарегистрирована 10.03.2005 г. по
+              адресу г. Москва, вн.тер.г. Муниципальный округ Головинский, б-р
+              Кронштадтский, д. 3а стр. 1. <br />ОГРН 1057746395079 <br />ИНН
+              7743553167 <br />Юридический адрес: г. Москва, вн.тер.г.
+              Муниципальный округ Головинский, б-р Кронштадтский, д. 3а стр. 1.
+            </p>
+          </div>
+          <div class="footer__top--right">
+            <div class="footer__contacts">
+              <span>Контакты</span>
+              <div class="footer__contact">
+                <a href="tel:+7(524) 333 6565">(524) 333 6565</a>
+                <a href="mailto:fin_rost@mail.ru">Fin_rost@mail.ru</a>
+              </div>
+            </div>
+            <div class="footer__buttons">
+              <img src="./assets/img/icons/whatsapp.png" alt="Whatsapp" />
+              <img src="./assets/img/icons/x.png" alt="X" />
+              <img src="./assets/img/icons/facebook.png" alt="Facebook" />
+              <img src="./assets/img/icons/youtube.png" alt="Youtube" />
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span>© 2025 Финансовый Рост</span>
+          <span>Политика конфиденциальности</span>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        new Splide("#testimonials-slider", {
+          type: "slide",
+          perPage: 2.5,
+          perMove: 1,
+          autoplay: true,
+          rewind: true,
+          focus: "center",
+          interval: 3000,
+          gap: 40,
+          pagination: false,
+          arrows: true,
+          speed: 300,
+          breakpoints: {
+            1240: {
+              perPage: 2,
+              gap: 20,
+            },
+            890: {
+              perPage: 2,
+              gap: 20,
+              focus: "left",
+            },
+            600: {
+              perPage: 1.5,
+              gap: 120,
+              focus: "left",
+            },
+          },
+        }).mount();
+      });
     </script>
-  
-  
-  
   </body>
 </html>
