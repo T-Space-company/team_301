@@ -51,7 +51,7 @@ a {
 
 button {
   cursor: pointer;
-  border: none;
+  border: none !important;
 }
 
 h1,
@@ -527,15 +527,6 @@ main {
   gap: 20px;
 }
 
-.footer__button {
-  border-radius: 100%;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: transparent;
-}
-
 .footer__bottom {
   border-top: 1px solid #d9d9d9;
   width: 100%;
@@ -662,6 +653,53 @@ main {
   padding: 40px 60px;
   margin: 0 30px;
   max-width: 615px;
+}
+
+.form-heading {
+  color: #fff;
+  text-align: center;
+  font-family: Inter, sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 120%;
+  margin-bottom: 20px;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+.form-group > label {
+  color: #fff;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+}
+
+.form-input {
+  border-radius: 12px;
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.64) 0%,
+      rgba(255, 255, 255, 0.64) 100%
+    ),
+    rgba(255, 255, 255, 0.64);
+}
+
+.checkbox-text {
+  color: #fff;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  margin-left: 17px;
+}
+
+.checkbox-text > .accent {
+  background: var(--1, linear-gradient(96deg, #7731cf 0%, #3c0d8f 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration-line: underline;
+  text-decoration-color: #3c0d8f;
 }
 
 @media (max-width: 890px) {
@@ -874,5 +912,15 @@ main {
   }
   .footer__bottom > span {
     margin-top: 22px;
+  }
+  .modal-content {
+    padding: 20px;
+    max-width: 330px;
+  }
+  .form-heading {
+    font-size: 24px;
+  }
+  .form-group > label {
+    font-size: 14px;
   }
 }

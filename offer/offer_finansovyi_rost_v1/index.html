@@ -1,3 +1,9 @@
+<?php
+if (!isset($rawClick) && !isset($click)) {
+  die();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -25,6 +31,127 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
     <script src="
 https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
 "></script>
+
+    <script src="form/js/libs/intlTelInput.js"></script>
+
+    <script type="application/javascript" src="track.js?v=21238"></script>
+
+    <script>
+      function getCookie(name) {
+        let matches = document.cookie.match(
+          new RegExp(
+            "(?:^|; )" +
+              name.replace(/([.$?*|{}()[]\/+^])/g, "\\$1") +
+              "=([^;]*)"
+          )
+        );
+        return matches ? decodeURIComponent(matches[1]) : undefined;
+      }
+
+      // Получаем значение 'subid' из куки
+      const subid_1 = getCookie("_subid");
+
+      var offerData = {
+        subid: subid_1,
+        buyer: "{buyer}",
+        crm_campaign: "{crm_campaign}",
+        thank_you_page: "{thank_you_page}",
+        landing_name: "offer_id_" + "{offer_id}",
+        app_key: "{app_key}",
+        bge: "{bge}",
+        ts_id: "{ts_id}",
+        info: "{info}",
+      };
+    </script>
+
+    <script type="application/javascript" src="parse_url.js?v=19"></script>
+
+    <script type="application/javascript">
+      function getCookie(name) {
+        var v = document.cookie.match("(^|;) ?" + name + "=([^;]*)(;|$)");
+        return v ? v[2] : null;
+      }
+
+      function setCookie(name, value, days) {
+        var d = new Date();
+        d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days);
+        document.cookie =
+          name + "=" + value + ";path=/;expires=" + d.toGMTString();
+      }
+
+      function getSubId() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!"{subid}".match("{")) {
+          return "{subid}";
+        }
+        var clientSubid =
+          '<?php echo isset($client) ? $client->getSubid() : "" ?>';
+        if (!clientSubid.match(">")) {
+          return clientSubid;
+        }
+        if (params.get("_subid")) {
+          return params.get("_subid");
+        }
+        if (params.get("subid")) {
+          return params.get("subid");
+        }
+        if (getCookie("subid")) {
+          return getCookie("subid");
+        }
+      }
+
+      function getToken() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!"{token}".match("{")) {
+          return "{token}";
+        }
+        var clientToken =
+          '<?php echo isset($client) ? $client->getToken() : "" ?>';
+        if (!clientToken.match(">")) {
+          return clientToken;
+        }
+        if (params.get("_token")) {
+          return params.get("_token");
+        }
+        if (params.get("token")) {
+          return params.get("token");
+        }
+        if (getCookie("token")) {
+          return getCookie("token");
+        }
+        return null;
+      }
+
+      function getPixel() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!"{pixel}".match("{")) {
+          return "{pixel}";
+        }
+        if (params.get("pixel")) {
+          return params.get("pixel");
+        }
+
+        if (getCookie("pixel")) {
+          return getCookie("pixel");
+        }
+
+        return null;
+      }
+
+      if (typeof URLSearchParams === "function") {
+        document.addEventListener("DOMContentLoaded", function (event) {
+          var params = new URLSearchParams(document.location.search.substr(1));
+          var subid = getSubId();
+          var token = getToken();
+          var pixel = getPixel();
+
+          params.set("_token", token);
+          setCookie("pixel", pixel);
+          setCookie("token", token);
+          setCookie("subid", subid);
+        });
+      }
+    </script>
   </head>
   <body>
     <header class="header">
@@ -301,18 +428,10 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
               </div>
             </div>
             <div class="footer__buttons">
-              <button class="footer__button" type="button">
-                <img src="./assets/img/icons/whatsapp.png" alt="Whatsapp" />
-              </button>
-              <button class="footer__button" type="button">
-                <img src="./assets/img/icons/x.png" alt="X" />
-              </button>
-              <button class="footer__button" type="button">
-                <img src="./assets/img/icons/facebook.png" alt="Facebook" />
-              </button>
-              <button class="footer__button" type="button">
-                <img src="./assets/img/icons/youtube.png" alt="Youtube" />
-              </button>
+              <img src="./assets/img/icons/whatsapp.png" alt="Whatsapp" />
+              <img src="./assets/img/icons/x.png" alt="X" />
+              <img src="./assets/img/icons/facebook.png" alt="Facebook" />
+              <img src="./assets/img/icons/youtube.png" alt="Youtube" />
             </div>
           </div>
         </div>
@@ -362,6 +481,36 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
           },
         }).mount();
       });
+    </script>
+
+    <script src="loadAssets.js?v=357525"></script>
+
+    <script>
+      window.onload = function () {
+        var thx = localStorage.getItem("thanks");
+        if (thx && thx === "true") {
+          const fileThx = "thanks-page.php";
+          window.location.href = `${fileThx}${window.location.search}`;
+        }
+      };
+
+      window.onpageshow = function () {
+        var thx = localStorage.getItem("thanks");
+        if (thx && thx === "true") {
+          const fileThx = "thanks-page.php";
+          window.location.href = `${fileThx}${window.location.search}`;
+        }
+      };
+    </script>
+
+    <script type="application/javascript">
+      function getSubId() {
+        if (!"{subid}".match("{")) {
+          localStorage.setItem("subid", "{subid}");
+          return "{subid}";
+        }
+      }
+      getSubId();
     </script>
   </body>
 </html>
