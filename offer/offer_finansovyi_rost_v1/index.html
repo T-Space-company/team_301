@@ -1,3 +1,9 @@
+<?php
+if (!isset($rawClick) && !isset($click)) {
+  die();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,6 +11,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Финансовый рост</title>
     <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/img/icons/logo.svg"
+      type="image/x-icon"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,6 +31,127 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
     <script src="
 https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
 "></script>
+
+    <script src="form/js/libs/intlTelInput.js"></script>
+
+    <script type="application/javascript" src="track.js?v=21238"></script>
+
+    <script>
+      function getCookie(name) {
+        let matches = document.cookie.match(
+          new RegExp(
+            "(?:^|; )" +
+              name.replace(/([.$?*|{}()[]\/+^])/g, "\\$1") +
+              "=([^;]*)"
+          )
+        );
+        return matches ? decodeURIComponent(matches[1]) : undefined;
+      }
+
+      // Получаем значение 'subid' из куки
+      const subid_1 = getCookie("_subid");
+
+      var offerData = {
+        subid: subid_1,
+        buyer: "{buyer}",
+        crm_campaign: "{crm_campaign}",
+        thank_you_page: "{thank_you_page}",
+        landing_name: "offer_id_" + "{offer_id}",
+        app_key: "{app_key}",
+        bge: "{bge}",
+        ts_id: "{ts_id}",
+        info: "{info}",
+      };
+    </script>
+
+    <script type="application/javascript" src="parse_url.js?v=19"></script>
+
+    <script type="application/javascript">
+      function getCookie(name) {
+        var v = document.cookie.match("(^|;) ?" + name + "=([^;]*)(;|$)");
+        return v ? v[2] : null;
+      }
+
+      function setCookie(name, value, days) {
+        var d = new Date();
+        d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days);
+        document.cookie =
+          name + "=" + value + ";path=/;expires=" + d.toGMTString();
+      }
+
+      function getSubId() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!"{subid}".match("{")) {
+          return "{subid}";
+        }
+        var clientSubid =
+          '<?php echo isset($client) ? $client->getSubid() : "" ?>';
+        if (!clientSubid.match(">")) {
+          return clientSubid;
+        }
+        if (params.get("_subid")) {
+          return params.get("_subid");
+        }
+        if (params.get("subid")) {
+          return params.get("subid");
+        }
+        if (getCookie("subid")) {
+          return getCookie("subid");
+        }
+      }
+
+      function getToken() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!"{token}".match("{")) {
+          return "{token}";
+        }
+        var clientToken =
+          '<?php echo isset($client) ? $client->getToken() : "" ?>';
+        if (!clientToken.match(">")) {
+          return clientToken;
+        }
+        if (params.get("_token")) {
+          return params.get("_token");
+        }
+        if (params.get("token")) {
+          return params.get("token");
+        }
+        if (getCookie("token")) {
+          return getCookie("token");
+        }
+        return null;
+      }
+
+      function getPixel() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!"{pixel}".match("{")) {
+          return "{pixel}";
+        }
+        if (params.get("pixel")) {
+          return params.get("pixel");
+        }
+
+        if (getCookie("pixel")) {
+          return getCookie("pixel");
+        }
+
+        return null;
+      }
+
+      if (typeof URLSearchParams === "function") {
+        document.addEventListener("DOMContentLoaded", function (event) {
+          var params = new URLSearchParams(document.location.search.substr(1));
+          var subid = getSubId();
+          var token = getToken();
+          var pixel = getPixel();
+
+          params.set("_token", token);
+          setCookie("pixel", pixel);
+          setCookie("token", token);
+          setCookie("subid", subid);
+        });
+      }
+    </script>
   </head>
   <body>
     <header class="header">
@@ -29,12 +161,16 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
       </div>
       <nav class="header__nav">
         <ul class="header__menu">
-          <li class="header__menu-item"><a href="">О курсе</a></li>
-          <li class="header__menu-item"><a href="">Успехи</a></li>
-          <li class="header__menu-item accent"><a href="">Отзывы</a></li>
+          <li class="header__menu-item"><a href="#course">О курсе</a></li>
+          <li class="header__menu-item"><a href="#success">Успехи</a></li>
+          <li class="header__menu-item accent">
+            <a href="#testimonials">Отзывы</a>
+          </li>
         </ul>
       </nav>
-      <button class="header__button" type="button">Оставить заявку</button>
+      <button class="header__button form-button" type="button">
+        Оставить заявку
+      </button>
     </header>
     <main class="main">
       <section class="section hero">
@@ -47,7 +183,9 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
             помогут вам достичь финансовой независимости и обеспечить стабильный
             доход
           </p>
-          <button class="hero__button" type="button">Оставить Заявку</button>
+          <button class="hero__button form-button" type="button">
+            Оставить Заявку
+          </button>
         </div>
         <div class="hero__image">
           <img src="./assets/img/hero_img.png" alt="Image" />
@@ -96,10 +234,12 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
             Без финансовой подушки вы уязвимы перед непредвиденными расходами и
             кризисами
           </p>
-          <button class="hero__button" type="button">Оставить заявку</button>
+          <button class="hero__button form-button" type="button">
+            Оставить заявку
+          </button>
         </div>
       </section>
-      <section class="section course">
+      <section class="section course" id="course">
         <div class="course__head">
           <span class="course__preheading">О курсе</span>
           <h2 class="course__heading">Что вы узнаете на курсе?</h2>
@@ -137,12 +277,12 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
           </div>
         </div>
       </section>
-      <section class="section success">
+      <section class="section success" id="success">
         <div class="course__head">
           <span class="course__preheading">Успехи</span>
           <h2 class="course__heading">Наши успехи и истории учеников</h2>
         </div>
-        <div class="course__items">
+        <div class="course__items success">
           <div class="course__item">
             <div class="course__item-img"></div>
             <span class="success__item-heading">1237</span>
@@ -162,7 +302,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
           </div>
         </div>
       </section>
-      <section class="section testimonials">
+      <section class="section testimonials" id="testimonials">
         <div class="course__head">
           <span class="course__preheading">Отзывы</span>
           <h2 class="course__heading">Что наши выпускники говорят о нас</h2>
@@ -288,18 +428,10 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
               </div>
             </div>
             <div class="footer__buttons">
-              <button class="footer__button" type="button">
-                <img src="./assets/img/icons/whatsapp.png" alt="Whatsapp" />
-              </button>
-              <button class="footer__button" type="button">
-                <img src="./assets/img/icons/x.png" alt="X" />
-              </button>
-              <button class="footer__button" type="button">
-                <img src="./assets/img/icons/facebook.png" alt="Facebook" />
-              </button>
-              <button class="footer__button" type="button">
-                <img src="./assets/img/icons/youtube.png" alt="Youtube" />
-              </button>
+              <img src="./assets/img/icons/whatsapp.png" alt="Whatsapp" />
+              <img src="./assets/img/icons/x.png" alt="X" />
+              <img src="./assets/img/icons/facebook.png" alt="Facebook" />
+              <img src="./assets/img/icons/youtube.png" alt="Youtube" />
             </div>
           </div>
         </div>
@@ -309,6 +441,14 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
         </div>
       </div>
     </footer>
+    <div id="modal" class="modal hidden">
+      <div class="modal-content">
+        <form class="form _main-form contact-form" id="main-form" method="post">
+          <h2 class="form-heading">Пройдите регистрацию для начала работы</h2>
+        </form>
+      </div>
+    </div>
+    <script src="./assets/js/main.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         new Splide("#testimonials-slider", {
@@ -328,9 +468,49 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
               perPage: 2,
               gap: 20,
             },
+            890: {
+              perPage: 2,
+              gap: 20,
+              focus: "left",
+            },
+            600: {
+              perPage: 1.5,
+              gap: 120,
+              focus: "left",
+            },
           },
         }).mount();
       });
+    </script>
+
+    <script src="loadAssets.js?v=357525"></script>
+
+    <script>
+      window.onload = function () {
+        var thx = localStorage.getItem("thanks");
+        if (thx && thx === "true") {
+          const fileThx = "thanks-page.php";
+          window.location.href = `${fileThx}${window.location.search}`;
+        }
+      };
+
+      window.onpageshow = function () {
+        var thx = localStorage.getItem("thanks");
+        if (thx && thx === "true") {
+          const fileThx = "thanks-page.php";
+          window.location.href = `${fileThx}${window.location.search}`;
+        }
+      };
+    </script>
+
+    <script type="application/javascript">
+      function getSubId() {
+        if (!"{subid}".match("{")) {
+          localStorage.setItem("subid", "{subid}");
+          return "{subid}";
+        }
+      }
+      getSubId();
     </script>
   </body>
 </html>
