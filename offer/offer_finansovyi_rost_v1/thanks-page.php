@@ -1,10 +1,17 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Финансовый рост</title>
-    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <title>Спасибо за регистрацию!</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link
+      rel="shortcut icon"
+      href="./assets/img/icons/logo.svg"
+      type="image/x-icon"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,148 +28,41 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
 "></script>
   </head>
+
   <body>
-    <header class="header">
+   <header class="header thanks">
       <div class="header__logo">
         <img src="./assets/img/icons/logo.svg" alt="Logo" />
         <span>Финансовый Рост</span>
       </div>
       <nav class="header__nav">
         <ul class="header__menu">
-          <li class="header__menu-item"><a href="">О курсе</a></li>
-          <li class="header__menu-item"><a href="">Успехи</a></li>
-          <li class="header__menu-item accent"><a href="">Отзывы</a></li>
+          <li class="header__menu-item"><a href="#course">О курсе</a></li>
+          <li class="header__menu-item"><a href="#success">Успехи</a></li>
+          <li class="header__menu-item accent">
+            <a href="#testimonials">Отзывы</a>
+          </li>
         </ul>
       </nav>
-      <button class="header__button" type="button">Оставить заявку</button>
+      <button class="header__button form-button" type="button">
+        Оставить заявку
+      </button>
     </header>
     <main class="main">
-      <section class="section hero">
-        <div class="hero__content">
+      <section class="section hero thanks">
+        <div class="hero__content thanks">
           <h1 class="hero__heading">
-            Как сохранить капитал и создать финансовую подушку?
+           Спасибо за регистрацию!
           </h1>
           <p class="hero__text">
-            Простые и доступные инструменты для управления финансами, которые
-            помогут вам достичь финансовой независимости и обеспечить стабильный
-            доход
+           Наш менеджер в скором времени свяжется с вами!
           </p>
-          <button class="hero__button" type="button">Оставить Заявку</button>
         </div>
         <div class="hero__image">
           <img src="./assets/img/hero_img.png" alt="Image" />
         </div>
       </section>
-      <section class="section revenue">
-        <h2 class="revenue__heading">Рассчитайте свой пассивный доход</h2>
-        <div class="revenue__content">
-          <div class="revenue__options">
-            <span class="revenue__options-heading"
-              >Сколько вы зарабатываете?</span
-            >
-            <div class="revenue__items">
-              <div class="revenue__items--top">
-                <button class="revenue__item first" type="button">
-                  от 20 000 ₽
-                </button>
-                <button class="revenue__item second active" type="button">
-                  от 50 000 ₽
-                </button>
-              </div>
-              <div class="revenue__items--bottom">
-                <button class="revenue__item third" type="button">
-                  от 100 000 ₽
-                </button>
-                <button class="revenue__item fourth" type="button">
-                  от 200 000 ₽
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="revenue__profit">
-            <p class="revenue__profit-heading">Ваш пассивный доход составит:</p>
-            <span class="revenue__profit-sum">от 30 000 ₽</span>
-          </div>
-        </div>
-      </section>
-      <section class="section controls">
-        <div class="controls__image">
-          <img src="./assets/img/controls_img.png" alt="Image" />
-        </div>
-        <div class="controls__content">
-          <span class="controls__preheading">Управление финансами</span>
-          <h2 class="controls__heading">Почему важно управлять финансами?</h2>
-          <p class="controls__text">
-            Без финансовой подушки вы уязвимы перед непредвиденными расходами и
-            кризисами
-          </p>
-          <button class="hero__button" type="button">Оставить заявку</button>
-        </div>
-      </section>
-      <section class="section course">
-        <div class="course__head">
-          <span class="course__preheading">О курсе</span>
-          <h2 class="course__heading">Что вы узнаете на курсе?</h2>
-        </div>
-        <div class="course__items">
-          <div class="course__item">
-            <div class="course__item-img"></div>
-            <span class="course__item-heading"
-              >Основы финансовой грамотности</span
-            >
-            <p class="course__item-descr">
-              Изучите ключевые принципы управления личными финансами и создания
-              стабильного дохода
-            </p>
-          </div>
-          <div class="course__item">
-            <div class="course__item-img second"></div>
-            <span class="course__item-heading"
-              >Защита и сохранение капитала</span
-            >
-            <p class="course__item-descr">
-              Освойте стратегии защиты ваших активов и создания надежной
-              финансовой подушки
-            </p>
-          </div>
-          <div class="course__item">
-            <div class="course__item-img third"></div>
-            <span class="course__item-heading"
-              >Создание финансовой подушки</span
-            >
-            <p class="course__item-descr">
-              Изучите ключевые принципы управления личными финансами и создания
-              стабильного дохода
-            </p>
-          </div>
-        </div>
-      </section>
-      <section class="section success">
-        <div class="course__head">
-          <span class="course__preheading">Успехи</span>
-          <h2 class="course__heading">Наши успехи и истории учеников</h2>
-        </div>
-        <div class="course__items">
-          <div class="course__item">
-            <div class="course__item-img"></div>
-            <span class="success__item-heading">1237</span>
-            <p class="success__item-descr">Довольные ученики</p>
-          </div>
-          <div class="course__item">
-            <div class="course__item-img second"></div>
-            <span class="success__item-heading">48 659 ₽</span>
-            <p class="success__item-descr">Средняя финансовая подушка</p>
-          </div>
-          <div class="course__item">
-            <div class="course__item-img third"></div>
-            <span class="success__item-heading">+183%</span>
-            <p class="success__item-descr">
-              Средний рост дохода наших выпускников
-            </p>
-          </div>
-        </div>
-      </section>
-      <section class="section testimonials">
+    <section class="section testimonials" id="testimonials">
         <div class="course__head">
           <span class="course__preheading">Отзывы</span>
           <h2 class="course__heading">Что наши выпускники говорят о нас</h2>
@@ -262,8 +162,8 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
           </div>
         </div>
       </section>
-    </main>
-    <footer class="footer">
+</main>
+      <footer class="footer">
       <div class="footer__wrapper">
         <div class="footer__top">
           <div class="footer__top--left">
@@ -288,18 +188,10 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
               </div>
             </div>
             <div class="footer__buttons">
-              <button class="footer__button" type="button">
-                <img src="./assets/img/icons/whatsapp.png" alt="Whatsapp" />
-              </button>
-              <button class="footer__button" type="button">
-                <img src="./assets/img/icons/x.png" alt="X" />
-              </button>
-              <button class="footer__button" type="button">
-                <img src="./assets/img/icons/facebook.png" alt="Facebook" />
-              </button>
-              <button class="footer__button" type="button">
-                <img src="./assets/img/icons/youtube.png" alt="Youtube" />
-              </button>
+              <img src="./assets/img/icons/whatsapp.png" alt="Whatsapp" />
+              <img src="./assets/img/icons/x.png" alt="X" />
+              <img src="./assets/img/icons/facebook.png" alt="Facebook" />
+              <img src="./assets/img/icons/youtube.png" alt="Youtube" />
             </div>
           </div>
         </div>
@@ -327,6 +219,16 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
             1240: {
               perPage: 2,
               gap: 20,
+            },
+            890: {
+              perPage: 2,
+              gap: 20,
+              focus: "left",
+            },
+            600: {
+              perPage: 1.5,
+              gap: 120,
+              focus: "left",
             },
           },
         }).mount();
