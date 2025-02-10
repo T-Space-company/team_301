@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Финансовый рост</title>
     <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/img/icons/logo.svg"
+      type="image/x-icon"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -29,12 +34,16 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
       </div>
       <nav class="header__nav">
         <ul class="header__menu">
-          <li class="header__menu-item"><a href="">О курсе</a></li>
-          <li class="header__menu-item"><a href="">Успехи</a></li>
-          <li class="header__menu-item accent"><a href="">Отзывы</a></li>
+          <li class="header__menu-item"><a href="#course">О курсе</a></li>
+          <li class="header__menu-item"><a href="#success">Успехи</a></li>
+          <li class="header__menu-item accent">
+            <a href="#testimonials">Отзывы</a>
+          </li>
         </ul>
       </nav>
-      <button class="header__button" type="button">Оставить заявку</button>
+      <button class="header__button form-button" type="button">
+        Оставить заявку
+      </button>
     </header>
     <main class="main">
       <section class="section hero">
@@ -47,7 +56,9 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
             помогут вам достичь финансовой независимости и обеспечить стабильный
             доход
           </p>
-          <button class="hero__button" type="button">Оставить Заявку</button>
+          <button class="hero__button form-button" type="button">
+            Оставить Заявку
+          </button>
         </div>
         <div class="hero__image">
           <img src="./assets/img/hero_img.png" alt="Image" />
@@ -96,10 +107,12 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
             Без финансовой подушки вы уязвимы перед непредвиденными расходами и
             кризисами
           </p>
-          <button class="hero__button" type="button">Оставить заявку</button>
+          <button class="hero__button form-button" type="button">
+            Оставить заявку
+          </button>
         </div>
       </section>
-      <section class="section course">
+      <section class="section course" id="course">
         <div class="course__head">
           <span class="course__preheading">О курсе</span>
           <h2 class="course__heading">Что вы узнаете на курсе?</h2>
@@ -137,12 +150,12 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
           </div>
         </div>
       </section>
-      <section class="section success">
+      <section class="section success" id="success">
         <div class="course__head">
           <span class="course__preheading">Успехи</span>
           <h2 class="course__heading">Наши успехи и истории учеников</h2>
         </div>
-        <div class="course__items">
+        <div class="course__items success">
           <div class="course__item">
             <div class="course__item-img"></div>
             <span class="success__item-heading">1237</span>
@@ -162,7 +175,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
           </div>
         </div>
       </section>
-      <section class="section testimonials">
+      <section class="section testimonials" id="testimonials">
         <div class="course__head">
           <span class="course__preheading">Отзывы</span>
           <h2 class="course__heading">Что наши выпускники говорят о нас</h2>
@@ -309,6 +322,14 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
         </div>
       </div>
     </footer>
+    <div id="modal" class="modal hidden">
+      <div class="modal-content">
+        <form class="form _main-form contact-form" id="main-form" method="post">
+          <h2 class="form-heading">Пройдите регистрацию для начала работы</h2>
+        </form>
+      </div>
+    </div>
+    <script src="./assets/js/main.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         new Splide("#testimonials-slider", {
@@ -327,6 +348,16 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
             1240: {
               perPage: 2,
               gap: 20,
+            },
+            890: {
+              perPage: 2,
+              gap: 20,
+              focus: "left",
+            },
+            600: {
+              perPage: 1.5,
+              gap: 120,
+              focus: "left",
             },
           },
         }).mount();
