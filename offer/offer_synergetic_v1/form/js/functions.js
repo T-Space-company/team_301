@@ -64,7 +64,7 @@ export function renderFormRegistrations(allFormClass) {
 
   <div class="form-group input-group">
   <label for="phone">Ваш номер телефона*</label>
-    <input class="form-control form-input _phone" maxlength="10" placeholder="9121234567" name="phone" type="tel" />
+    <input class="form-control form-input _phone" maxlength="10" placeholder="(921) 345-67-89" name="phone" type="tel" />
     <div class="error-phone"></div>
   </div>
 
@@ -87,7 +87,7 @@ export function renderFormRegistrations(allFormClass) {
   <div class="form-group">
 
     <button class="btn secondary-solid-btn btn-block buttonSend"  name="submitBtn" type="submit">
-    <p class="btnFormText" style="color:white; font-weight: 800;">Оставить заявку
+    <p class="btnFormText">Оставить заявку
     </p>
     </button>
   </div>

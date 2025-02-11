@@ -25,9 +25,11 @@ document.addEventListener("DOMContentLoaded", function () {
     summary.addEventListener("click", function (event) {
       event.preventDefault();
 
+      let padding = window.innerWidth <= 1024 ? 42 : 64;
+
       if (!detail.open) {
         content.style.display = "block";
-        let height = content.scrollHeight + "px";
+        let height = content.scrollHeight + padding + "px";
         content.style.maxHeight = height;
 
         setTimeout(() => {

@@ -120,8 +120,8 @@ input {
   justify-content: center;
   align-items: center;
   position: relative;
-  border-radius: 15px;
-  background: var(--1, linear-gradient(96deg, #7731cf 0%, #3c0d8f 100%));
+  border-radius: 25px;
+  background: #b973fc;
   font-size: 18px;
   border: 1px solid;
 }
@@ -137,6 +137,11 @@ input {
 
 .btnFormText {
   margin: 0 !important;
+  color: #fff;
+  font-family: "Fixel Display";
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 100%;
 }
 
 .form-group {
