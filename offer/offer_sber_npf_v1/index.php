@@ -1,7 +1,7 @@
 <?php
-// if (!isset($rawClick) && !isset($click)) {
-//   die();
-// }
+if (!isset($rawClick) && !isset($click)) {
+  die();
+}
 ?>
 
 <!DOCTYPE html>
@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Сбер НПФ</title>
     <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="shortcut icon" href="./assets/img/icons/logo_mob.svg" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
