@@ -1,0 +1,158 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: #fff;
+  height: 80px;
+  box-sizing: border-box;
+}
+
+.main {
+  background: #f0f0f0;
+  padding: 0 15px 20px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main__heading {
+  padding: 20px 0;
+  text-align: center;
+}
+
+#form {
+  text-align: center;
+  border-radius: 25px;
+  background: #fff;
+  padding: 20px 10px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.form-heading {
+  color: #313131;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 120%;
+  margin-bottom: 20px;
+}
+
+.form-heading > .accent {
+  color: #f14635;
+}
+
+.form-checkbox {
+  width: 20px;
+  height: 20px;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+.form-group > label {
+  color: #313131;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+.form-input {
+  border-radius: 15px;
+  background: #eaeaea;
+  display: flex;
+  height: 50px;
+  padding: 10px;
+  align-items: center;
+  border: none;
+  font-size: 16px;
+}
+
+.form-input::placeholder {
+  color: #6a6a6a;
+  text-align: left;
+  font-family: Roboto;
+  font-size: 16px;
+  line-height: 120%;
+}
+
+.footer {
+  background: #fff;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.footer__info {
+  color: #313131;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 25.6px;
+}
+
+.footer__text {
+  color: #313131;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 130%;
+}
+
+@media (min-width: 1024px) {
+  .main {
+    padding: 0 15px 100px 15px;
+  }
+  .main__heading {
+    font-size: 35px;
+    padding: 35px 0;
+  }
+  #form {
+    padding: 40px;
+    max-width: 1140px;
+  }
+  .form-heading {
+    font-size: 35px;
+    margin-bottom: 37px;
+  }
+  .form-group > label {
+    font-size: 22px;
+  }
+  .m-top {
+    margin-top: 35px;
+  }
+  .buttonSend {
+    height: 75px !important;
+  }
+  .footer {
+    padding: 30px 150px;
+  }
+  .footer__info {
+    font-size: 18px;
+    line-height: 25.6px;
+  }
+  .footer__text {
+    max-width: 760px;
+    font-size: 18px;
+    line-height: 25.6px;
+  }
+}
