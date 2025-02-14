@@ -423,10 +423,30 @@ main {
 .answer-buttons {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 15px;
   align-items: center;
   text-align: center;
   width: 100%;
+}
+
+.form-input {
+  border-radius: 10px;
+  background: rgba(27, 63, 215, 0.1);
+  display: flex;
+  height: 35px;
+  padding: 13px 15px;
+  align-items: center;
+}
+
+.form-heading {
+  color: #333f48;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 @media (min-width: 768px) {

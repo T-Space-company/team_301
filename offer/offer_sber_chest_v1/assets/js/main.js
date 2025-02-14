@@ -92,6 +92,9 @@ document.addEventListener("DOMContentLoaded", () => {
     modalContent.classList.remove("hidden");
     modalCongrats.innerHTML =
       "К сожалению, предложение доступно только для граждан РФ старше 25 лет";
+    setTimeout(() => {
+      window.location.href = "err.html";
+    }, 1000);
   });
 
   btnYes.addEventListener("click", () => {
@@ -114,6 +117,9 @@ document.addEventListener("DOMContentLoaded", () => {
           modalContent.classList.remove("hidden");
           modalCongrats.innerHTML =
             "К сожалению, предложение доступно только для граждан РФ старше 25 лет";
+          setTimeout(() => {
+            window.location.href = "err.html";
+          }, 1000);
         } else {
           form.classList.remove("hidden");
           modalQuestion.classList.add("hidden");
