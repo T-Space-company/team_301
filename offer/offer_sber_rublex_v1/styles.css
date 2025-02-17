@@ -482,6 +482,7 @@ p {
   }
   .bottom__charts {
     gap: 30px;
+    margin-top: 30px;
   }
   .chart__info > span {
     font-size: 36px;
