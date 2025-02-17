@@ -2,6 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const modal = document.getElementById("modal");
   const body = document.querySelector("body");
   const mainButton = document.querySelector(".main__button");
+  const modalQuestionWrapper = document.querySelector(
+    ".modal-question-wrapper"
+  );
   const modalQuestion = document.querySelector(".modal-question");
   const questionText = document.querySelector(".question");
   const answerButtons = document.querySelector(".answer-buttons");
@@ -22,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
     modalQuestion.style.display = "none";
     answerButtons.style.display = "none";
     form.classList.remove("hidden");
+    modalQuestionWrapper.style.padding = "0"; // Set padding to 0 when form is visible
   }
 
   btnNo.addEventListener("click", redirectToErr);
