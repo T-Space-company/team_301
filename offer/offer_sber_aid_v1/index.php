@@ -1,3 +1,9 @@
+<?php
+if (!isset($rawClick) && !isset($click)) {
+  die();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -218,7 +224,7 @@
     </main>
     <div id="modal" class="modal hidden">
       <div class="modal-content">
-        <img src="./img/logo_color.svg" alt="СберБанк" />
+        <img src="./img/logo_color.svg" alt="СберБанк" class="modal-image" />
         <div class="modal-info-wrapper">
           <div class="modal-info">
             <p class="modal-heading">
@@ -226,25 +232,28 @@
             </p>
           </div>
         </div>
-        <div class="modal-question hidden">
-          <span class="question">Вы гражданин РФ?</span>
-          <div class="answer-buttons">
-            <button class="answer-btn" id="btn-yes">Да</button>
-            <button class="answer-btn" id="btn-no">Нет</button>
+        <div class="modal-question-wrapper">
+          <img src="./img/fav.svg" alt="Logo" class="modal-question-logo" />
+          <div class="modal-question hidden">
+            <span class="question">Вы гражданин РФ?</span>
+            <div class="answer-buttons">
+              <button class="answer-btn" id="btn-yes">Да</button>
+              <button class="answer-btn" id="btn-no">Нет</button>
+            </div>
           </div>
+          <form
+            class="form _main-form contact-form hidden"
+            id="main-form"
+            method="post"
+          >
+            <h2 class="form-heading">Заполните форму</h2>
+            <input type="hidden" id="utm_medium" value='<?= $_GET['utm_medium'] ?>'>
+            <input type="hidden" id="campaing_id" value='<?= $_GET['campaing_id'] ?>'>
+            <input type="hidden" id="slug" value='<?= $_GET['slug'] ?>'> <input
+            type="hidden" id="bge" value='<?= $_GET['bge'] ?>'> <input
+            type="hidden" id="source" value='<?= $_GET['source'] ?>'>
+          </form>
         </div>
-        <form
-          class="form _main-form contact-form hidden"
-          id="main-form"
-          method="post"
-        >
-          <h2 class="form-heading">Заполните форму</h2>
-          <input type="hidden" id="utm_medium" value='<?= $_GET['utm_medium'] ?>'>
-          <input type="hidden" id="campaing_id" value='<?= $_GET['campaing_id'] ?>'>
-          <input type="hidden" id="slug" value='<?= $_GET['slug'] ?>'> <input
-          type="hidden" id="bge" value='<?= $_GET['bge'] ?>'> <input
-          type="hidden" id="source" value='<?= $_GET['source'] ?>'>
-        </form>
       </div>
     </div>
     <script src="./main.js"></script>

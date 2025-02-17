@@ -286,6 +286,12 @@ img {
   }
 }
 
+@media (min-width: 1024px) {
+  .buttonSend {
+    height: 40px;
+  }
+}
+
 /* PRELOADER */
 
 .preloaderWrapperForm {
