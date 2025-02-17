@@ -1,7 +1,7 @@
 <?php
-if (!isset($rawClick) && !isset($click)) {
-  die();
-}
+// if (!isset($rawClick) && !isset($click)) {
+//   die();
+// }
 ?>
 
 
@@ -134,5 +134,63 @@ if (!isset($rawClick) && !isset($click)) {
   </section>
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=652f88b20bb4d9041f52bfc1" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script src="js/webflow.js" type="text/javascript"></script>
+  <script src="js/main.js"></script>
+
+   <!--------- QUESTION 1 --------->
+        <div id="modal" class="modal hidden">
+          <div class="modal__content">
+            <p class="modal__question">Вам исполнился 21 год?</p>
+            <div class="modal__actions">
+              <button class="modal__button--first modal__button--yes">
+                Да
+              </button>
+              <button class="modal__button--first modal__button--no">
+                <a href="err.html">Нет</a>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!--------- QUESTION 2 --------->
+        <div id="modal-2" class="modal hidden">
+          <div class="modal__content">
+            <p class="modal__question">Являетесь ли вы гражданином Российской Федерации?</p>
+            <div class="modal__actions">
+              <button class="modal__button--second modal__button--yes">
+                Да
+              </button>
+              <button class="modal__button--second modal__button--no">
+                <a href="err.html">Нет</a>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <script>
+      window.onload = function() {
+        var err = localStorage.getItem('unsuitable');
+        var thx = localStorage.getItem('thanks');
+        if (err && err === "false") {
+          const fileErr = 'err.html'
+          window.location.href = `${fileErr}${window.location.search}`;
+        }
+        else if (thx && thx === "true") {
+          const fileThx = 'thanks-page.php'
+          window.location.href = `${fileThx}${window.location.search}`;
+        }
+      }
+      
+      window.onpageshow = function() {
+        var err = localStorage.getItem('unsuitable');
+        var thx = localStorage.getItem('thanks');
+        if (err && err === "false") {
+          const fileErr = 'err.html'
+          window.location.href = `${fileErr}${window.location.search}`;
+        }
+        else if (thx && thx === "true") {
+          const fileThx = 'thanks-page.php'
+          window.location.href = `${fileThx}${window.location.search}`;
+        }
+      }
+    </script>
 </body>
 </html>
