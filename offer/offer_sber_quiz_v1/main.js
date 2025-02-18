@@ -1,23 +1,60 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const quizNum = document.querySelector(".quiz__num");
+  const quizQuestion = document.querySelector(".quiz__question");
+  const quizButtonsContainer = document.querySelector(".quiz__buttons");
+  const formBlock = document.getElementById("form-block");
+
   const questions = [
     {
       question:
-        "Какой суммы в месяц Вам было бы достаточно для исполнения своих желаний?",
-      answers: [
-        "А: 100 тыс рублей",
-        "Б: 250 тыс рублей",
-        "В: 400 тыс рублей",
-        "Г: больше 500 тыс",
-      ],
-    },
-    {
-      question: "Готовы ли вы к новым начинаниям в жизни?",
-      answers: ["А: Да", "Б: Нужно подумать"],
+        " Считаете ли Вы, что каждый житель России должен получать доход с торговли ресурсами страны?",
+      answers: ["Да", "Нет"],
     },
     {
       question:
-        "Хотели бы вы получать пассивный доход уделяя час времени в день?",
-      answers: ["A: Да", "Б: Нету времени"],
+        "Какой суммы в месяц Вам было бы достаточно для исполнения своих желаний?",
+      answers: ["100 000 ₽", "250 000 ₽", "400 000 ₽", "от 500 000 ₽"],
+    },
+    {
+      question: "Через сколько времени вы хотели бы получить первую прибыль?",
+      answers: ["В течении 3-х дней", "Через неделю", "Без разницы"],
+    },
+    {
+      question: "Каким способом вам было бы удобнее получать выплаты?",
+      answers: ["Наличными в кассе банка", "Получать выплату на карту"],
     },
   ];
+
+  let currentQuestionIndex = 0;
+
+  function loadQuestion(index) {
+    if (index < questions.length) {
+      const currentQuestion = questions[index];
+
+      quizNum.textContent = `Вопрос №${index + 1}`;
+      quizQuestion.textContent = currentQuestion.question;
+
+      quizButtonsContainer.innerHTML = "";
+
+      currentQuestion.answers.forEach((answer) => {
+        const button = document.createElement("button");
+        button.classList.add("quiz__button");
+        button.textContent = answer;
+        button.addEventListener("click", () => {
+          currentQuestionIndex++;
+          loadQuestion(currentQuestionIndex);
+        });
+        quizButtonsContainer.appendChild(button);
+      });
+    } else {
+      quizNum.style.display = "none";
+      quizQuestion.style.display = "none";
+      quizButtonsContainer.style.display = "none";
+      formBlock.style.display = "block";
+    }
+  }
+
+  formBlock.style.display = "none";
+
+  loadQuestion(0);
 });
