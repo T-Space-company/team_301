@@ -1,0 +1,197 @@
+@font-face {
+  font-family: "SB Sans Text";
+  src: url(./fonts/SB-Sans-Text-Medium.woff2);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "SB Sans Text";
+  src: url(./fonts/SB-Sans-Text-Bold.woff2);
+  font-weight: 700;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: auto;
+  background-image: url(./img/bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  gap: 15px;
+  padding: 0 15px 150px 15px;
+}
+
+.main-banner {
+  border-radius: 15px;
+  background: #f3f5f7;
+  display: flex;
+  padding: 30px 10px;
+  justify-content: center;
+  align-items: center;
+  max-width: 335px;
+  width: 100%;
+}
+
+.main-banner > p {
+  color: #54585d;
+  text-align: center;
+  font-family: "SB Sans Text";
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 120%;
+  text-transform: uppercase;
+}
+
+.main-text {
+  color: #fff;
+  text-align: center;
+  font-family: "SB Sans Text";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  text-shadow: 0px 2px 12px rgba(0, 0, 0, 0.9);
+  padding: 10px 0;
+}
+
+.count {
+  border-radius: 99px;
+  background: #fff;
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  color: #2c3137;
+  text-align: center;
+  font-family: "SB Sans Text";
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 22px;
+  box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.9);
+  text-shadow: none;
+}
+
+.form-wrapper {
+  border-radius: 20px;
+  background: #f3f5f7;
+  box-shadow: 0px 0px 100px 0px #1c5b25;
+  max-width: 335px;
+  padding: 20px;
+  width: 100%;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+.form-heading {
+  color: #54585d;
+  text-align: center;
+  font-family: "SB Sans Text";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 22px;
+  margin-bottom: 10px;
+}
+
+.form-subheading {
+  color: #54585d;
+  text-align: center;
+  font-family: "SB Sans Text";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 15.4px;
+}
+
+.form-input {
+  border-radius: 20px;
+  opacity: 0.9;
+  background: #cecece;
+  border: none;
+  display: flex;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  font-family: "SB Sans Text";
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.form-input::placeholder {
+  color: #717171;
+  font-family: "SB Sans Text";
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.form-checkbox {
+  width: 20px;
+  height: 20px;
+  accent-color: #24b23e;
+}
+
+.checkbox-text {
+  color: #54585d;
+  font-family: "SB Sans Text";
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 25.6px;
+  margin-left: 5px;
+}
+
+.text-block-6 {
+  margin-bottom: 10px;
+}
+
+@media (min-width: 1024px) {
+  .main-banner {
+    max-width: 440px;
+  }
+  .main-banner > p {
+    max-width: 395px;
+  }
+  .main-text {
+    font-size: 20px;
+  }
+  .count {
+    font-size: 32px;
+  }
+  .form-wrapper {
+    max-width: 440px;
+    padding: 20px 50px;
+  }
+  .form-input {
+    font-size: 16px;
+  }
+  .form-input::placeholder {
+    font-size: 16px;
+  }
+  .checkbox-text {
+    font-size: 16px;
+  }
+}
