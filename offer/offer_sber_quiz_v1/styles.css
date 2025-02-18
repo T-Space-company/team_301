@@ -1,0 +1,173 @@
+@font-face {
+  font-family: "TT Firs Neue";
+  src: url(./fonts/TTFirsNeue-Regular.woff2);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "TT Firs Neue";
+  src: url(./fonts/TTFirsNeue-Medium.woff2);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "TT Firs Neue";
+  src: url(./fonts/TTFirsNeue-Bold.woff2);
+  font-weight: 700;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  box-shadow: 0px 12px 12px 0px rgba(0, 0, 0, 0.1);
+  padding: 20px 50px;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to right, #12dc00, #fefe00);
+}
+
+.main {
+  background: #dfdfdf;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.main__block,
+.main__quiz {
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0px 3px 8px 8px rgba(0, 0, 0, 0),
+    0px 5px 5px 7px rgba(0, 0, 0, 0.09), 5px 9px 3px 7px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+  max-width: 335px;
+  width: 100%;
+}
+
+.block__heading {
+  color: #171717;
+  font-family: "TT Firs Neue";
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 125%;
+}
+
+.block__info {
+  color: #8e8e8e;
+  font-family: "TT Firs Neue";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 125%;
+  letter-spacing: 0.3px;
+}
+
+.block__descr {
+  background: var(--1, linear-gradient(96deg, #78d150 0%, #549d32 100%));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  font-family: "TT Firs Neue";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 125%;
+}
+
+.block__video {
+  width: 100%;
+}
+
+.quiz__num {
+  background: var(--5, linear-gradient(96deg, #78d150 0%, #549d32 100%));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "TT Firs Neue";
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 125%;
+  letter-spacing: 0.44px;
+}
+
+.quiz__question {
+  color: #171717;
+  font-family: Raleway;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 125%;
+  letter-spacing: 0.44px;
+}
+
+.quiz__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  width: 100%;
+}
+
+.quiz__button {
+  border-radius: 15px;
+  display: flex;
+  padding: 15px 30px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: var(--5, linear-gradient(96deg, #78d150 0%, #549d32 100%));
+  color: #fff;
+  text-align: center;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "TT Firs Neue";
+  font-size: 18px;
+  font-weight: 500;
+  width: 100%;
+}
+
+.footer {
+  background: #1b1b1b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 10px;
+}
+
+.footer__text {
+  color: #959595;
+  text-align: center;
+  font-family: "TT Firs Neue";
+  font-size: 11px;
+  line-height: 14px;
+}
