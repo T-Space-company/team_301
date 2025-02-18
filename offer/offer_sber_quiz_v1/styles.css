@@ -20,6 +20,7 @@
 
 body {
   margin: 0;
+  background: #1b1b1b;
 }
 
 h1,
@@ -75,7 +76,7 @@ button {
   justify-content: center;
   gap: 20px;
   text-align: center;
-  max-width: 500px;
+  max-width: 780px;
   width: 100%;
 }
 
@@ -85,6 +86,7 @@ button {
   font-size: 22px;
   font-weight: 700;
   line-height: 125%;
+  max-width: 500px;
 }
 
 .block__info {
@@ -105,10 +107,12 @@ button {
   font-size: 16px;
   font-weight: 700;
   line-height: 125%;
+  max-width: 400px;
 }
 
 .block__video {
   width: 100%;
+  max-width: 300px;
 }
 
 .quiz__num {
@@ -129,6 +133,7 @@ button {
   font-weight: 700;
   line-height: 125%;
   letter-spacing: 0.44px;
+  max-width: 400px;
 }
 
 .quiz__buttons {
@@ -137,6 +142,7 @@ button {
   gap: 15px;
   align-items: center;
   width: 100%;
+  max-width: 400px;
 }
 
 .quiz__button {
@@ -154,6 +160,10 @@ button {
   font-size: 18px;
   font-weight: 500;
   width: 100%;
+}
+
+#form-block {
+  max-width: 400px;
 }
 
 .form-heading {
@@ -179,4 +189,78 @@ button {
   font-family: "TT Firs Neue";
   font-size: 11px;
   line-height: 14px;
+}
+
+.form-checkbox {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+}
+
+.checkbox-text {
+  color: #393939;
+  font-family: "TT Firs Neue";
+  font-size: 13px;
+  line-height: 17px;
+  margin-left: 15px;
+}
+
+.checkbox-text > .input-accent {
+  background: var(--1, linear-gradient(96deg, #78d150 0%, #549d32 100%));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "TT Firs Neue";
+  font-size: 13px;
+  line-height: 17px;
+  text-decoration-line: underline;
+  text-underline-position: from-font;
+  text-decoration-color: #78d150;
+}
+
+.iti--separate-dial-code {
+  margin-top: 8px;
+}
+.input-label {
+  color: #393939;
+  font-family: Raleway;
+  font-size: 14px;
+}
+
+.form-input {
+  border-radius: 12px;
+  background: #e7e7e7;
+  display: flex;
+  padding: 15px 17px;
+  align-items: center;
+  font-family: "TT Firs Neue";
+  font-size: 13px;
+}
+
+.form-input::placeholder {
+  color: #6a6a6a;
+  font-family: "TT Firs Neue";
+  font-size: 13px;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 1024px) {
+  .header > img {
+    width: 220px;
+  }
+  .block__heading {
+    font-size: 28px;
+  }
+  .quiz__question {
+    font-size: 24px;
+  }
+  .footer {
+    padding: 30px 80px;
+  }
+  .footer__text {
+    font-size: 14px;
+    max-width: 600px;
+  }
 }
