@@ -29,6 +29,7 @@ input::placeholder {
   border-radius: 25px;
   background: linear-gradient(158deg, #2fe5dc 0%, #07a099 100%);
   border: none;
+  height: 55px;
 }
 
 .form-group .btn {

@@ -153,13 +153,16 @@ document.addEventListener("DOMContentLoaded", () => {
           question.textContent =
             "Куда пойдет цена Bitcoin на фоне новостей что обанкротился биржа Coinbase?";
         } else if (clickCount === 3) {
-          mainChart.classList.add("hidden");
-          quiz.classList.add("hidden");
-          tradingPair.classList.add("hidden");
-          formMain.classList.remove("hidden");
+          buttonUp.classList.add("disabled");
+          buttonDown.classList.add("disabled");
+          setTimeout(() => {
+            mainChart.classList.add("hidden");
+            quiz.classList.add("hidden");
+            tradingPair.classList.add("hidden");
+            formMain.classList.remove("hidden");
+          }, 500);
         }
 
-        // Восстанавливаем обработчики после завершения процесса
         buttonUp.addEventListener("click", upHandler);
         buttonDown.addEventListener("click", downHandler);
       }, 3000);

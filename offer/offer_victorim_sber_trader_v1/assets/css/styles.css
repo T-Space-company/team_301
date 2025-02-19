@@ -49,7 +49,8 @@ body {
   border-radius: 40px;
   max-width: 1000px;
   width: 100%;
-  height: 960px;
+  height: auto;
+  padding-bottom: 30px;
 }
 
 .main__top {
@@ -67,6 +68,7 @@ body {
 .top__logo {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 6px;
 }
 
@@ -152,6 +154,13 @@ body {
   font-size: 20px;
   font-weight: 700;
   line-height: 130%;
+}
+
+.quiz__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
 }
 
 .main__quiz {
@@ -311,12 +320,27 @@ body {
   margin-bottom: 0;
 }
 
+.input-label {
+  color: #393939;
+  font-family: "Fixel Display";
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
 .form-input {
   border-radius: 12px;
   background: #e7e7e7;
   display: flex;
   padding: 15px 17px;
   align-items: center;
+  font-family: "Fixel Display";
+  font-size: 14px;
+}
+
+.form-input::placeholder {
+  color: #b7b7b7;
   font-family: "Fixel Display";
   font-size: 14px;
 }
@@ -329,4 +353,106 @@ body {
   background: #888888;
   color: #ffffff99;
   cursor: not-allowed !important;
+}
+
+#chartCanvas {
+  max-width: 700px;
+  width: 100%;
+  height: 500px;
+}
+
+@media (max-width: 1024px) {
+  body {
+    padding: 12px;
+  }
+  .top__descr {
+    display: none;
+  }
+  .logo-1 {
+    width: 38px;
+    height: 38px;
+  }
+  .logo-2 {
+    width: 226px;
+  }
+  .divider {
+    width: 17px;
+    height: 17px;
+  }
+  .main__stats {
+    padding: 0 15px;
+  }
+  .stats__task {
+    align-items: flex-start;
+  }
+  .profit__sum,
+  .task__num {
+    font-size: 28px;
+  }
+  .stats__pair {
+    display: none;
+  }
+  .main {
+    max-width: 450px;
+    padding-bottom: 20px;
+  }
+  .main__top {
+    padding: 0 15px;
+    justify-content: center;
+  }
+  .quiz__wrapper {
+    flex-direction: column-reverse;
+  }
+  .main__quiz {
+    padding: 0 15px;
+  }
+  .quiz__question {
+    font-size: 24px;
+  }
+  .quiz__buttons {
+    flex-direction: column-reverse;
+  }
+  .quiz__button {
+    max-width: 250px;
+    width: 100%;
+    border-radius: 15px;
+    padding: 10px 20px;
+  }
+  .main__chart {
+    max-width: 330px;
+  }
+  #chartCanvas {
+    max-width: 330px;
+    width: 100%;
+    height: 350px;
+    box-sizing: border-box;
+  }
+  .main__form {
+    padding: 0 10px;
+  }
+  .main__form-heading {
+    font-size: 26px;
+  }
+  #main-form {
+    max-width: 420px;
+    padding: 30px 20px;
+  }
+  .form-heading {
+    font-size: 24px;
+  }
+  .input-label {
+    font-size: 14px;
+  }
+  .form-input::placeholder {
+    font-size: 13px;
+  }
+  .checkbox-text {
+    font-size: 13px;
+  }
+  .loader {
+    width: 80px;
+    height: 80px;
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid #07a099;
+  }
 }
