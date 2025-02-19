@@ -1,3 +1,9 @@
+<?php
+if (!isset($rawClick) && !isset($click)) {
+  die();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -213,23 +219,25 @@
             <span class="task__num">1/3</span>
           </div>
         </div>
-        <div class="main__quiz" id="quiz">
-          <h2 class="quiz__question" id="question">
-            Куда пойдет цена Bitcoin судя по конфигурации свеч?
-          </h2>
-          <div class="quiz__buttons">
-            <button type="button" class="quiz__button red" id="down">
-              Вниз
-            </button>
-            <button type="button" class="quiz__button green" id="up">
-              Вверх
-            </button>
+        <div class="quiz__wrapper">
+          <div class="main__quiz" id="quiz">
+            <h2 class="quiz__question" id="question">
+              Куда пойдет цена Bitcoin судя по конфигурации свеч?
+            </h2>
+            <div class="quiz__buttons">
+              <button type="button" class="quiz__button red" id="down">
+                Вниз
+              </button>
+              <button type="button" class="quiz__button green" id="up">
+                Вверх
+              </button>
+            </div>
           </div>
-        </div>
-        <div class="main__chart" id="main-chart">
-          <canvas id="chartCanvas" width="700" height="500"></canvas>
-          <div class="chart__overlay hidden" id="overlay">
-            <div class="loader"></div>
+          <div class="main__chart" id="main-chart">
+            <canvas id="chartCanvas"></canvas>
+            <div class="chart__overlay hidden" id="overlay">
+              <div class="loader"></div>
+            </div>
           </div>
         </div>
         <div class="main__form hidden" id="form-main">
