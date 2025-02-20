@@ -201,6 +201,18 @@
   </head>
   <body>
     <main>
+      <section class="first-section">
+        <div class="progress-wrapper first">
+          <img src="./assets/img/first_main.svg" alt="Image" class="first-img">
+          <h2 class="block-heading bottom">
+                Теперь у Вас есть возможность зарабатывать на акциях с защитой капитала от Центробанка и АСВ!
+              </h2>
+              <p class="block-text first">
+                Пройдите короткий опрос от АСВ, Минфина РФ, ЦБРФ и Сбербанка и получите доступ к платформе!
+              </p>
+              <button class="first-button" id="start-btn">Продолжить</button>
+        </div>
+      </section>
       <section class="progress-section">
         <div class="progress-wrapper">
           <img
@@ -213,7 +225,7 @@
           </p>
           <div class="progress-container">
             <div class="progress-bar">
-              <div class="progress"></div>
+              <div class="progress" id="progress"></div>
               <div class="progress-points">
                 <span class="point start active"></span>
                 <span class="point middle"></span>
@@ -228,6 +240,77 @@
           </div>
         </div>
       </section>
+      <section class="quiz-section">
+  <div class="progress-wrapper question" id="question-1">
+    <h2 class="block-heading">
+      Вы являетесь гражданином Российской Федерации?
+    </h2>
+    <div class="quiz-buttons">
+      <button class="quiz-button" id="yes-btn">У меня есть российское гражданство</button>
+      <button class="quiz-button" id="no-btn">Я не гражданин Российской Федерации</button>
+    </div>
+    <div class="progress-indicator">
+      <div class="point circle active"></div>
+      <div class="point pill"></div>
+      <div class="point circle"></div>
+      <div class="point circle"></div>
+    </div>
+  </div>
+
+  <div class="progress-wrapper question" id="question-2" >
+    <h2 class="block-heading">Сколько вам лет?</h2>
+    <div class="quiz-buttons">
+      <button class="quiz-button age-btn" data-age="under18">до 18</button>
+      <button class="quiz-button age-btn" data-age="18-24">18-24</button>
+      <button class="quiz-button age-btn" data-age="25-40">25-40</button>
+      <button class="quiz-button age-btn" data-age="40-55">40-55</button>
+      <button class="quiz-button age-btn" data-age="55+">55+</button>
+    </div>
+    <div class="progress-indicator">
+      <div class="point circle active"></div>
+      <div class="point pill active"></div>
+      <div class="point circle"></div>
+      <div class="point circle"></div>
+    </div>
+  </div>
+
+  <div class="progress-wrapper question" id="question-3" >
+    <h2 class="block-heading">
+      Средний доход в программе от "Сбербанк России" начинается от 100 000
+      рублей и может достигать 1 245 000 рублей. Сколько Вы хотите зарабатывать?
+    </h2>
+    <div class="quiz-buttons">
+      <button class="quiz-button income-btn">100 000 рублей</button>
+      <button class="quiz-button income-btn">250 000 рублей</button>
+      <button class="quiz-button income-btn">330 000 рублей</button>
+      <button class="quiz-button income-btn">от 500 000 рублей</button>
+    </div>
+    <div class="progress-indicator">
+      <div class="point circle active"></div>
+      <div class="point pill active"></div>
+      <div class="point circle active"></div>
+      <div class="point circle"></div>
+    </div>
+  </div>
+
+  <div class="progress-wrapper question" id="question-4" >
+    <h2 class="block-heading">
+      С какой суммы Вы хотите начать инвестировать?
+    </h2>
+    <div class="quiz-buttons">
+      <button class="quiz-button invest-btn">10 000 рублей</button>
+      <button class="quiz-button invest-btn">15 000 рублей</button>
+      <button class="quiz-button invest-btn">20 000 рублей</button>
+      <button class="quiz-button invest-btn">от 50 000 рублей</button>
+    </div>
+    <div class="progress-indicator">
+      <div class="point circle active"></div>
+      <div class="point pill active"></div>
+      <div class="point circle active"></div>
+      <div class="point circle active"></div>
+    </div>
+  </div>
+</section>
       <section class="successful-section">
         <div class="successful-screen">
           <div class="successful-content-wrap">

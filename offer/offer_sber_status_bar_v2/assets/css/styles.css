@@ -313,6 +313,41 @@ main {
   text-decoration-color: #004ba8;
 }
 
+.first-section {
+  padding: 0 22.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.progress-wrapper.first {
+  height: auto;
+}
+
+.first-img {
+  max-width: 300px;
+  width: 100%;
+}
+
+.block-text.first {
+  font-weight: 500;
+}
+
+.first-button {
+  border-radius: 20px;
+  background: linear-gradient(180deg, #004ba8 0%, #002f6c 100%);
+  display: flex;
+  padding: 18px 20px;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: "Fixel Display";
+  font-size: 18px;
+  font-weight: 700;
+  width: 100%;
+}
+
 @media (min-width: 1024px) {
   .progress-wrapper {
     height: auto;
