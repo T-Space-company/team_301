@@ -204,7 +204,7 @@
       <section class="first-section">
         <div class="progress-wrapper first">
           <img src="./assets/img/first_main.svg" alt="Image" class="first-img">
-          <h2 class="block-heading bottom">
+          <h2 class="block-heading bottom first">
                 Теперь у Вас есть возможность зарабатывать на акциях с защитой капитала от Центробанка и АСВ!
               </h2>
               <p class="block-text first">
@@ -240,9 +240,10 @@
           </div>
         </div>
       </section>
-      <section class="quiz-section">
+
+  <section class="quiz-section">
   <div class="progress-wrapper question" id="question-1">
-    <h2 class="block-heading">
+    <h2 class="block-heading questions">
       Вы являетесь гражданином Российской Федерации?
     </h2>
     <div class="quiz-buttons">
@@ -250,15 +251,15 @@
       <button class="quiz-button" id="no-btn">Я не гражданин Российской Федерации</button>
     </div>
     <div class="progress-indicator">
-      <div class="point circle active"></div>
-      <div class="point pill"></div>
-      <div class="point circle"></div>
-      <div class="point circle"></div>
+      <div class="point-quiz pill active"></div>
+      <div class="point-quiz circle"></div>
+      <div class="point-quiz circle"></div>
+      <div class="point-quiz circle"></div>
     </div>
   </div>
 
   <div class="progress-wrapper question" id="question-2" >
-    <h2 class="block-heading">Сколько вам лет?</h2>
+    <h2 class="block-heading questions">Сколько вам лет?</h2>
     <div class="quiz-buttons">
       <button class="quiz-button age-btn" data-age="under18">до 18</button>
       <button class="quiz-button age-btn" data-age="18-24">18-24</button>
@@ -267,15 +268,15 @@
       <button class="quiz-button age-btn" data-age="55+">55+</button>
     </div>
     <div class="progress-indicator">
-      <div class="point circle active"></div>
-      <div class="point pill active"></div>
-      <div class="point circle"></div>
-      <div class="point circle"></div>
+      <div class="point-quiz circle active"></div>
+      <div class="point-quiz pill active"></div>
+      <div class="point-quiz circle"></div>
+      <div class="point-quiz circle"></div>
     </div>
   </div>
 
   <div class="progress-wrapper question" id="question-3" >
-    <h2 class="block-heading">
+    <h2 class="block-heading questions">
       Средний доход в программе от "Сбербанк России" начинается от 100 000
       рублей и может достигать 1 245 000 рублей. Сколько Вы хотите зарабатывать?
     </h2>
@@ -286,15 +287,15 @@
       <button class="quiz-button income-btn">от 500 000 рублей</button>
     </div>
     <div class="progress-indicator">
-      <div class="point circle active"></div>
-      <div class="point pill active"></div>
-      <div class="point circle active"></div>
-      <div class="point circle"></div>
+      <div class="point-quiz circle active"></div>
+      <div class="point-quiz circle active"></div>
+      <div class="point-quiz pill active"></div>
+      <div class="point-quiz circle"></div>
     </div>
   </div>
 
   <div class="progress-wrapper question" id="question-4" >
-    <h2 class="block-heading">
+    <h2 class="block-heading questions">
       С какой суммы Вы хотите начать инвестировать?
     </h2>
     <div class="quiz-buttons">
@@ -304,10 +305,10 @@
       <button class="quiz-button invest-btn">от 50 000 рублей</button>
     </div>
     <div class="progress-indicator">
-      <div class="point circle active"></div>
-      <div class="point pill active"></div>
-      <div class="point circle active"></div>
-      <div class="point circle active"></div>
+      <div class="point-quiz circle active"></div>
+      <div class="point-quiz circle active"></div>
+      <div class="point-quiz circle active"></div>
+      <div class="point-quiz pill active"></div>
     </div>
   </div>
 </section>

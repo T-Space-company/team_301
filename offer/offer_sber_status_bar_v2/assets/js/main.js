@@ -40,8 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const intervalId = setInterval(() => {
       progress += firstPhaseIncrement;
       progressBar.style.width = `${progress}%`;
-      console.log("First phase progress:", progress);
-      console.log("First phase interval:", firstPhaseInterval);
 
       if (progress >= 50) {
         clearInterval(intervalId);
@@ -61,7 +59,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const intervalId = setInterval(() => {
       progress += secondPhaseIncrement;
       progressBar.style.width = `${progress}%`;
-      console.log("Second phase progress:", progress);
 
       if (progress >= 99) {
         clearInterval(intervalId);
@@ -74,10 +71,9 @@ document.addEventListener("DOMContentLoaded", () => {
         body.style.overflow = "auto";
         setTimeout(() => {
           primaryScreen.style.display = "none";
-          body.style.height = "100%";
           quizSection.style.display = "flex";
           showQuestion(1);
-        }, 250);
+        }, 1000);
       }
     }, secondPhaseInterval);
   }
@@ -125,6 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.addEventListener("click", () => {
       quizSection.style.display = "none";
       secondScreen.style.display = "flex";
+      body.style.height = "100%";
     });
   });
 });
