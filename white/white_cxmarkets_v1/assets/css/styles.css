@@ -11,6 +11,11 @@ span {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 button {
   cursor: pointer;
   border: none;
@@ -120,4 +125,88 @@ button {
   color: #212121;
   font-size: 16px;
   font-weight: 600;
+}
+
+.trading {
+  padding: 40px 15px;
+}
+
+.trading__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 40px 15px;
+  background: #f3f3f3;
+}
+
+.trading__heading {
+  color: #26a9e0;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+.trading__text {
+  color: #212121;
+  font-size: 16px;
+  line-height: 140%;
+}
+
+.footer {
+  background: #003863;
+  padding: 50px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+.footer__top,
+.footer__bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.footer__top-info,
+.footer__bottom-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.footer__top-info > span,
+.footer__bottom-info > span {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+.footer__top-contacts,
+.footer__bottom-contacts,
+.footer__details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.footer__details > span {
+  color: #fff;
+  font-size: 12px;
+  line-height: 120%;
+}
+
+.footer__top-contacts,
+.footer__bottom-contacts {
+  color: #42c1e9;
+  font-family: Montserrat;
+  font-size: 12px;
+  line-height: 120%;
 }
