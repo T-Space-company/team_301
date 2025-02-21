@@ -1,3 +1,9 @@
+* {
+  font-family: "Montserrat";
+}
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   font-family: Montserrat;
@@ -242,6 +248,7 @@ button {
   background: rgba(38, 169, 224, 0.2);
   border-radius: 0;
   font-size: 16px;
+  font-family: Montserrat;
 }
 
 .form-input::placeholder {
@@ -281,4 +288,137 @@ button {
 
 .contact-form {
   width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .header {
+    height: 80px;
+  }
+  .header__logo {
+    width: 200px;
+  }
+  .hero {
+    background-image: url(../img/main.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+  }
+  .hero__heading {
+    font-size: 60px;
+    max-width: 900px;
+  }
+  .hero__text {
+    font-size: 20px;
+  }
+  .hero__text-wrapper {
+    max-width: none;
+    padding: 0;
+  }
+  .hero__image {
+    display: none;
+  }
+  .hero__wrapper {
+    align-items: flex-start;
+    max-width: 1140px;
+    width: 100%;
+    gap: 40px;
+    padding: 40px 20px;
+  }
+  .hero__text-wrapper {
+    margin: 0;
+    gap: 40px;
+  }
+  .hero__text.accent {
+    max-width: 530px;
+  }
+  .hero__button-wrapper {
+    padding: 0;
+  }
+  .fast {
+  }
+  .fast__image {
+    display: none;
+  }
+  .fast__heading {
+    font-size: 60px;
+  }
+  .fast__text-wrapper {
+    max-width: 690px;
+    margin: 0;
+  }
+  .fast__text {
+    font-size: 20px;
+  }
+  .fast__wrapper {
+    padding: 180px 20px 150px 20px;
+    max-width: 1240px;
+    width: 100%;
+    align-items: flex-end;
+    background-image: url(../img/second.png);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+  }
+  .trading {
+    padding: 40px;
+    gap: 40px;
+  }
+  .trading__heading {
+    font-size: 36px;
+  }
+  .trading__text {
+    font-size: 20px;
+  }
+  .trading__form {
+    margin: 0;
+    max-width: 515px;
+    padding-top: 0;
+  }
+  .trading__image {
+    display: none;
+  }
+  .trading__content {
+    max-width: 690px;
+    width: 100%;
+    padding: 40px;
+    gap: 40px;
+  }
+  .footer {
+    padding: 70px 200px 100px 200px;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 200px;
+  }
+  .form-input {
+    height: 60px;
+    font-size: 20px;
+  }
+
+  .form-input::placeholder {
+    font-size: 20px;
+  }
+  .form-checkbox {
+    height: 25px;
+  }
+  .checkbox-text {
+    font-size: 18px;
+  }
+  .buttonSend {
+    height: 60px;
+  }
+}
+
+@media (max-width: 1220px) {
+  .fast__wrapper {
+    background-size: 45%;
+  }
+}
+
+@media (max-width: 1120px) {
+  .fast__wrapper {
+    background-size: 40%;
+  }
 }
