@@ -11,6 +11,12 @@ span {
   margin: 0;
 }
 
+img {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -53,6 +59,8 @@ button {
   flex-direction: column;
   gap: 20px;
   padding: 20px 20px 0 20px;
+  max-width: 430px;
+  margin: 0 auto;
 }
 
 .hero__heading {
@@ -87,6 +95,7 @@ button {
   justify-content: center;
   align-items: center;
   background: #26a9e0;
+  border-radius: 0;
   width: 100%;
   color: #fff;
   font-family: Montserrat;
@@ -112,6 +121,8 @@ button {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  max-width: 430px;
+  margin: 0 auto;
 }
 
 .fast__heading {
@@ -129,6 +140,15 @@ button {
 
 .trading {
   padding: 40px 15px;
+}
+
+.trading__form {
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .trading__content {
@@ -152,6 +172,10 @@ button {
   color: #212121;
   font-size: 16px;
   line-height: 140%;
+}
+
+.trading__image {
+  max-width: 320px;
 }
 
 .footer {
@@ -209,4 +233,52 @@ button {
   font-family: Montserrat;
   font-size: 12px;
   line-height: 120%;
+}
+
+.form-input {
+  display: flex;
+  padding: 15px;
+  align-items: center;
+  background: rgba(38, 169, 224, 0.2);
+  border-radius: 0;
+  font-size: 16px;
+}
+
+.form-input::placeholder {
+  color: #7f7f7f;
+  font-family: Montserrat;
+  font-size: 16px;
+}
+
+.btnFormText {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: Montserrat;
+}
+
+.form-checkbox {
+  width: 25px;
+  height: 25px;
+}
+
+.checkbox-wrap {
+  width: 25px;
+  height: 25px;
+}
+
+.checkbox-text {
+  color: #212121;
+  font-family: Montserrat;
+  font-size: 16px;
+  margin-left: 20px;
+}
+
+.form-group-button {
+  margin: 35px 0px;
+}
+
+.contact-form {
+  width: 100%;
 }
