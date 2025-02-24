@@ -1,7 +1,7 @@
 <?php
-// if (!isset($rawClick) && !isset($click)) {
-//   die();
-// }
+if (!isset($rawClick) && !isset($click)) {
+  die();
+}
 ?>
 
 
