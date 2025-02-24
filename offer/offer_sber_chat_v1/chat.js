@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const chat = document.querySelector(".main-messages");
   const form = document.querySelector(".form-wrapper");
   const formContainer = document.querySelector(".form-container");
-  const avatar = document.querySelector(".message-avatar");
 
   const userData = {
     Имя: "",
@@ -11,14 +10,14 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const firstMessages = [
-    `Здравствуйте, я Анна! Ваш личный менеджер`,
-    "Спасибо за установку приложения! Мы рады предложить вам уникальную возможность сделать следующий шаг к финансовому благополучию — инвестиции с Сбербанком. Доверьте свои средства крупнейшему банку России, чтобы с уверенностью строить своё будущее.",
-    "Представляем вам нашу новую инвестиционную программу, которая позволяет получить значительную прибыль. Инвестируя 10 000 рублей уже сегодня, вы получите ощутимые результаты всего через неделю.",
+    "Здравствуйте, я Анна! Ваш личный менеджер",
+    "Спасибо за установку приложения! Мы рады предложить вам уникальную возможность сделать следующий шаг к финансовому благополучию — инвестиции с Сбербанком.",
+    "Представляем вам нашу новую инвестиционную программу, которая позволяет получить значительную прибыль.",
     "Пройдите небольшой опрос перед началом работы:",
     "Вы являетесь гражданином или резидентом Российской Федерации?",
   ];
 
-  function createMessage(message, delay = 800) {
+  function showTypingIndicator(callback, message, delay = 400) {
     const messageField = document.createElement("div");
     messageField.classList.add("message-field");
 
@@ -26,13 +25,41 @@ document.addEventListener("DOMContentLoaded", () => {
     avatar.setAttribute("src", "./img/icons/avatar.svg");
     avatar.classList.add("message-avatar");
 
-    const div = document.createElement("div");
-    div.classList.add("message");
+    const typingDiv = document.createElement("div");
+    typingDiv.classList.add("message", "typing-visible"); // Ensure visibility
+
+    // Add typing animation
+    typingDiv.innerHTML = `
+      <div class="typing">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    `;
+
+    messageField.appendChild(avatar);
+    messageField.appendChild(typingDiv);
+    chat.appendChild(messageField);
+
+    setTimeout(() => {
+      typingDiv.classList.add("visible");
+      avatar.classList.add("visible");
+    }, 100);
+
+    setTimeout(() => {
+      typingDiv.innerHTML = "";
+      callback(typingDiv, message, delay);
+    }, 800);
+  }
+
+  function createMessage(messageContainer, message, delay = 800) {
+    messageContainer.classList.remove("typing-visible");
+    messageContainer.classList.add("message");
 
     const messageP = document.createElement("p");
     messageP.classList.add("message-text");
     messageP.innerHTML = message;
-    div.appendChild(messageP);
+    messageContainer.appendChild(messageP);
 
     const timeSpan = document.createElement("span");
     timeSpan.classList.add("time");
@@ -43,58 +70,28 @@ document.addEventListener("DOMContentLoaded", () => {
     let time = `${hours}:${minutes}`;
 
     timeSpan.textContent = time;
-    div.appendChild(timeSpan);
-    messageField.appendChild(avatar);
-    messageField.appendChild(div);
-
-    chat.appendChild(messageField);
+    messageContainer.appendChild(timeSpan);
 
     setTimeout(() => {
-      avatar.classList.add("visible");
-      div.classList.add("visible");
+      messageContainer.classList.add("visible");
     }, delay);
   }
 
-  function createQuestion(message, delay = 800) {
-    const messageField = document.createElement("div");
-    messageField.classList.add("message-field");
-
-    const avatar = document.createElement("img");
-    avatar.setAttribute("src", "./img/icons/avatar.svg");
-    avatar.classList.add("message-avatar");
-
-    const div = document.createElement("div");
-    div.classList.add("message");
-
-    const messageP = document.createElement("p");
-    messageP.classList.add("message-text");
-    messageP.textContent = message;
-    div.appendChild(messageP);
-
-    const timeSpan = document.createElement("span");
-    timeSpan.classList.add("time");
-
-    let currTime = new Date();
-    let hours = currTime.getHours().toString().padStart(2, "0");
-    let minutes = currTime.getMinutes().toString().padStart(2, "0");
-    let time = `${hours}:${minutes}`;
-
-    timeSpan.textContent = time;
-    div.appendChild(timeSpan);
-    messageField.appendChild(avatar);
-    messageField.appendChild(div);
-
-    chat.appendChild(messageField);
-
-    setTimeout(() => {
-      avatar.classList.add("visible");
-      div.classList.add("visible");
-    }, delay);
+  function createQuestion(message, delay = 1000) {
+    showTypingIndicator(
+      (msg, d) => {
+        createMessage(msg, d);
+      },
+      message,
+      delay
+    );
   }
 
   setTimeout(() => {
     firstMessages.forEach((message, i) => {
-      createMessage(message, i * 800);
+      setTimeout(() => {
+        showTypingIndicator(createMessage, message, 400);
+      }, i * 1000);
     });
   }, 400);
 
@@ -112,11 +109,11 @@ document.addEventListener("DOMContentLoaded", () => {
     answers.appendChild(buttonYes);
     answers.appendChild(buttonNo);
     chat.appendChild(answers);
-  }, 800);
+  }, 4800);
 
   setTimeout(() => {
     answers.classList.add("visible");
-  }, 3600);
+  }, 5200);
 
   const handleClickYes = () => {
     onButtonClick("Да");
@@ -203,6 +200,13 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       answers.classList.add("visible");
     }, 800);
+  };
+
+  const handleClickNo = () => {
+    onButtonClick("Нет");
+    createQuestion(
+      "К сожалению, доступ к платформе могут получить только совершеннолетние граждане Российской Федерации."
+    );
   };
 
   function createRevenueButtons() {
@@ -345,73 +349,35 @@ document.addEventListener("DOMContentLoaded", () => {
     answers.classList.add("answers");
     answers.id = "answers__col";
 
-    const handleScheduleFirst = () => {
-      onButtonClick("Один-два дня в неделю");
-      removeEventListeners();
-      createMessage(
+    const handleSchedule = (schedule) => {
+      onButtonClick(schedule);
+      showTypingIndicator(
+        createMessage,
         "Спасибо за уделённое время и пройденный опрос! Теперь Вам открыт доступ к персональной платформе проекта «Сбербанк». Пожалуйста, оставьте свои контактные данные для регистрации в проекте. Ваш личный менеджер получит данные и свяжется с Вами в течение одного рабочего дня!"
       );
       createForm();
       scrollDown(550);
     };
 
-    const handleScheduleSecond = () => {
-      onButtonClick("Два-четыре дня в неделю");
-      removeEventListeners();
-      createMessage(
-        "Спасибо за уделённое время и пройденный опрос! Теперь Вам открыт доступ к персональной платформе проекта «Сбербанк». Пожалуйста, оставьте свои контактные данные для регистрации в проекте. Ваш личный менеджер получит данные и свяжется с Вами в течение одного рабочего дня!"
-      );
-      createForm();
-      scrollDown(550);
-    };
+    const schedules = [
+      "Один-два дня в неделю",
+      "Два-четыре дня в неделю",
+      "Пять дней в неделю",
+    ];
 
-    const handleScheduleThird = () => {
-      onButtonClick("Пять дней в неделю");
-      removeEventListeners();
-      createMessage(
-        "Спасибо за уделённое время и пройденный опрос! Теперь Вам открыт доступ к персональной платформе проекта «Сбербанк». Пожалуйста, оставьте свои контактные данные для регистрации в проекте. Ваш личный менеджер получит данные и свяжется с Вами в течение одного рабочего дня!"
-      );
-      createForm();
-      scrollDown(550);
-    };
+    schedules.forEach((schedule) => {
+      const button = document.createElement("button");
+      button.textContent = schedule;
+      button.classList.add("button");
+      button.addEventListener("click", () => handleSchedule(schedule));
+      answers.appendChild(button);
+    });
 
-    const buttonFirst = document.createElement("button");
-    buttonFirst.textContent = "Один-два дня в неделю";
-    buttonFirst.classList.add("button");
-    buttonFirst.addEventListener("click", handleScheduleFirst);
-
-    const buttonSecond = document.createElement("button");
-    buttonSecond.textContent = "Два-четыре дня в неделю";
-    buttonSecond.classList.add("button");
-    buttonSecond.addEventListener("click", handleScheduleSecond);
-
-    const buttonThird = document.createElement("button");
-    buttonThird.textContent = "Пять дней в неделю";
-    buttonThird.classList.add("button");
-    buttonThird.addEventListener("click", handleScheduleThird);
-
-    answers.appendChild(buttonFirst);
-    answers.appendChild(buttonSecond);
-    answers.appendChild(buttonThird);
     chat.appendChild(answers);
-
     setTimeout(() => {
       answers.classList.add("visible");
     }, 800);
-
-    function removeEventListeners() {
-      buttonFirst.removeEventListener("click", handleScheduleFirst);
-      buttonSecond.removeEventListener("click", handleScheduleSecond);
-      buttonThird.removeEventListener("click", handleScheduleThird);
-    }
   }
-
-  const handleClickNo = () => {
-    onButtonClick("Нет");
-    createQuestion(
-      "К сожалению доступ к платформе могут получить только совершеннолетние граждане Российской Федерации"
-    );
-  };
 
   buttonYes.addEventListener("click", handleClickYes);
   buttonNo.addEventListener("click", handleClickNo);
@@ -419,7 +385,6 @@ document.addEventListener("DOMContentLoaded", () => {
   function onButtonClick(buttonValue) {
     const answer = document.createElement("div");
     answer.classList.add("answer");
-
     const timeSpan = document.createElement("span");
     timeSpan.classList.add("time");
     let currTime = new Date();
@@ -452,10 +417,9 @@ document.addEventListener("DOMContentLoaded", () => {
   function createForm() {
     setTimeout(() => {
       form.classList.add("visible");
-      avatar.classList.add("visible");
       formContainer.classList.add("visible");
-      scrollDown(500);
-    }, 1800);
+      scrollDown(700);
+    }, 1400);
   }
 
   function scrollDown(height) {
