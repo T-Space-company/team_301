@@ -1,0 +1,86 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal__content {
+  border-radius: 20px;
+  border: 1px solid #ffffff;
+  background: #0079c4;
+  display: flex;
+  padding: 30px 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.modal__content.third {
+  margin-top: 150px;
+}
+
+.modal__question {
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28px;
+}
+
+.modal__actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.modal__button--first,
+.modal__button--second,
+.modal__button--third {
+  border-radius: 20px;
+  border: 1px solid #0079c4;
+  background-color: #fff;
+  display: flex;
+  max-width: 120px;
+  width: 100%;
+  height: 40px;
+  padding: 5px 10px;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+}
+
+.modal__button--second:active {
+  background-color: #0079c4;
+}
+
+.modal__button--yes {
+  background-color: #fff;
+}
+
+.modal__button--no {
+  background-color: #fff;
+}
