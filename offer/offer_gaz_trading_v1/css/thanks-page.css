@@ -1,0 +1,134 @@
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main-thankyou {
+  width: 100%;
+  height: 95%;
+  padding: 20px;
+  background: #3898ec;
+  background-position: top;
+  background-repeat: no-repeat;
+  position: absolute;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-image.thanks {
+  display: block;
+  max-width: 200px;
+}
+
+.main-image.thanks > img {
+  width: 100%;
+  animation: ring 1.5s infinite ease-in-out;
+}
+
+.main-thankyou__block {
+  border-radius: 20px;
+  border: 3px solid #0079c4;
+  background: #fff;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.main-thankyou__block > h2 {
+  color: #0079c4;
+  text-align: center;
+  font-family: Inter, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28px;
+}
+
+.main-thankyou__block > span {
+  color: #000;
+  text-align: center;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 120%;
+}
+
+.header {
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0079c4;
+  box-sizing: border-box;
+  gap: 8px;
+  z-index: 1;
+}
+
+.timer {
+  color: #000;
+  text-align: center;
+  font-family: Inter, sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 28px;
+}
+
+@keyframes ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(-10deg);
+  }
+  30% {
+    transform: rotate(10deg);
+  }
+  45% {
+    transform: rotate(-10deg);
+  }
+  60% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@media (min-width: 768px) {
+  .main-thankyou {
+    background-image: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .main-thankyou__block {
+    margin-top: 0;
+    gap: 30px;
+    max-width: 500px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .main-thankyou__block > h2 {
+    font-size: 36px;
+    line-height: 42px;
+  }
+  .main-thankyou__block > span {
+    font-size: 24px;
+  }
+  .timer {
+    font-size: 38px;
+  }
+  .main-image.thanks {
+    max-width: 350px;
+  }
+}

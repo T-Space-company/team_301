@@ -3,16 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Спасибо за регистрацию!</title>
-    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
-    <link href="css/normalize.css" rel="stylesheet" type="text/css">
-  <link href="css/webflow.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="./css/thanks-page.css">
-  <link href="css/quiz-sber-phone.webflow.css" rel="stylesheet" type="text/css">
+    <title>Crypto Bot</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="shortcut icon" href="./logo_sb.svg" type="image/x-icon" />
   </head>
   <body>
     <header class="header active">
-      <img style="width: 200px" src="./images/logo-1.png" alt="Logo" />
+      <img style="width: 70px" src="patr.svg" alt="Logo" />
+      <div class="header__text">
+        <span
+          >Государственная<br />
+          Структура</span
+        >
+      </div>
     </header>
     <main class="main-thankyou">
       <div class="main-thankyou__block">
@@ -21,7 +24,7 @@
         <div class="timer"></div>
       </div>
       <div class="main-image thanks">
-        <img src="./images/phone.svg" alt="Background" id="phone" />
+        <img src="./img/phone.svg" alt="Background" id="phone" />
       </div>
     </main>
     <script>
