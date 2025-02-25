@@ -71,4 +71,21 @@ document.addEventListener("DOMContentLoaded", function () {
       480: { perPage: 1.5 },
     },
   }).mount();
+
+  new Splide("#feed-slider", {
+    type: "slide",
+    focus: "left",
+    perPage: 5,
+    gap: 12,
+    drag: "free",
+    pagination: false,
+    arrows: false,
+
+    breakpoints: {
+      1400: { perPage: 4 },
+      1024: { perPage: 3 },
+      768: { perPage: 2 },
+      480: { perPage: 1 },
+    },
+  }).mount();
 });
