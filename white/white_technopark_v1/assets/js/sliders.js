@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   new Splide("#banner-slider", {
     type: "loop",
     autoplay: true,
-    interval: 3000,
+    interval: 5000,
     perPage: 1,
     pagination: true,
     focus: "center",
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     pagination: false,
     arrows: false,
-    gap: "15px",
+    gap: "18px",
     drag: "free",
   }).mount();
 

@@ -14,6 +14,67 @@
   <body>
     <header class="header">
       <div class="header__wrapper">
+        <div class="header__services desktop">
+          <div class="services__list">
+            <span class="service__item">Акции</span>
+            <span class="service__item">BORK</span>
+            <span class="service__item">QYRON</span>
+            <span class="service__item">Delonghi</span>
+            <span class="service__item">Samsung</span>
+            <span class="service__item">Xiaomi</span>
+            <span class="service__item">Sony Playstation</span>
+            <span class="service__item">Уход за одеждой</span>
+          </div>
+          <button type="button" class="services__button">
+            <svg
+              data-v-06fe8e94=""
+              width="20"
+              height="22"
+              viewBox="0 0 20 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="header-services__button--icon"
+            >
+              <rect
+                data-v-06fe8e94=""
+                x="3"
+                y="3.5"
+                width="6"
+                height="6"
+                rx="3"
+                fill="currentColor"
+              ></rect>
+              <rect
+                data-v-06fe8e94=""
+                x="11"
+                y="3.5"
+                width="6"
+                height="6"
+                rx="3"
+                fill="currentColor"
+              ></rect>
+              <rect
+                data-v-06fe8e94=""
+                x="3"
+                y="12.5"
+                width="6"
+                height="6"
+                rx="3"
+                fill="currentColor"
+              ></rect>
+              <rect
+                data-v-06fe8e94=""
+                x="11"
+                y="12.5"
+                width="6"
+                height="6"
+                rx="3"
+                fill="currentColor"
+              ></rect>
+            </svg>
+            Сервисы
+          </button>
+        </div>
         <div class="header__top">
           <svg
             version="1.1"
@@ -326,7 +387,7 @@
                 src="./assets/img/banner-3.jpg"
                 alt="Image"
                 class="responsive-img"
-                data-desktop="./assets/img/banner-3.jpg"
+                data-desktop="./assets/img/banner-3.gif"
                 data-mobile="./assets/img/mobile/banner-3.jpg"
               />
             </li>
@@ -346,6 +407,15 @@
                 class="responsive-img"
                 data-desktop="./assets/img/banner-5.jpg"
                 data-mobile="./assets/img/mobile/banner-5.jpg"
+              />
+            </li>
+            <li class="splide__slide">
+              <img
+                src="./assets/img/banner-6.jpg"
+                alt="Image"
+                class="responsive-img"
+                data-desktop="./assets/img/banner-6.jpg"
+                data-mobile="./assets/img/mobile/banner-6.jpg"
               />
             </li>
           </ul>
@@ -413,6 +483,12 @@
                 <img src="./assets/img/circle-10.jpg" alt="Image" />
               </div>
               <span class="circle__text">Товары для спорта</span>
+            </li>
+            <li class="splide__slide circle__item">
+              <div class="circle__img">
+                <img src="./assets/img/circle-11.jpg" alt="Image" />
+              </div>
+              <span class="circle__text">Техника SMEG</span>
             </li>
           </ul>
         </div>
@@ -2816,16 +2892,67 @@
       <div class="footer__bottom">
         <div class="footer__bottom-wrapper">
           <div class="footer__contacts">
-            <span class="footer__contacts-heading">Контакты</span>
-            <span class="footer__contacts-address"
-              >г. Москва, пос. Московский, кв-л 32, влад. 17А стр. 1</span
-            >
-            <a href="tel:+88001005588" class="footer__contacts-phone"
-              >8 (800) 100-55-88</a
-            >
-            <button type="button" class="footer__contacts-btn">
-              Обратная связь
-            </button>
+            <div class="footer__contacts-wrap">
+              <span class="footer__contacts-heading">Контакты</span>
+              <span class="footer__contacts-address"
+                >г. Москва, пос. Московский, кв-л 32, влад. 17А стр. 1</span
+              >
+              <a href="tel:+88001005588" class="footer__contacts-phone"
+                >8 (800) 100-55-88</a
+              >
+              <button type="button" class="footer__contacts-btn">
+                Обратная связь
+              </button>
+            </div>
+            <div class="footer__socials desktop">
+              <div class="socials__item">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="tp-icon"
+                >
+                  <path
+                    d="M3.3749 10.888C8.74359 8.63001 12.3236 7.14143 14.1148 6.42222C19.2292 4.36873 20.2919 4.01202 20.9846 4.00011C21.1369 3.99765 21.4776 4.0341 21.6982 4.20693C21.8845 4.35287 21.9358 4.55001 21.9603 4.68837C21.9848 4.82673 22.0154 5.14193 21.9911 5.38822C21.714 8.19928 20.5147 15.021 19.9046 18.1694C19.6465 19.5017 19.1382 19.9484 18.6461 19.9921C17.5766 20.0871 16.7645 19.3098 15.7287 18.6543C14.1078 17.6287 13.1921 16.9902 11.6188 15.9894C9.80053 14.8327 10.9792 14.197 12.0154 13.158C12.2866 12.8861 16.9987 8.74876 17.0899 8.37343C17.1013 8.32649 17.1119 8.15151 17.0042 8.05912C16.8965 7.96673 16.7376 7.99833 16.6229 8.02345C16.4604 8.05907 13.871 9.71119 8.85486 12.9798C8.11988 13.467 7.45416 13.7044 6.8577 13.692C6.20015 13.6782 4.93528 13.3331 3.99498 13.038C2.84166 12.6761 1.92503 12.4848 2.00485 11.8701C2.04642 11.55 2.5031 11.2226 3.3749 10.888Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </div>
+              <div class="socials__item">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="tp-icon"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M13.3969 18.9084C6.40696 18.9084 2.16493 14.0588 2 6H5.54021C5.65057 11.9198 8.34384 14.432 10.4084 14.9441V6H13.8024V11.1076C15.7938 10.8868 17.877 8.56309 18.5788 6H21.9157C21.3812 9.15333 19.1132 11.4771 17.5087 12.4356C19.1132 13.2106 21.695 15.2393 22.6907 18.9084H19.0215C18.2465 16.4557 16.3469 14.556 13.8024 14.2981V18.9084H13.3969Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </div>
+              <div class="socials__item">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="tp-icon"
+                >
+                  <path
+                    d="M21.6544 7.24244C21.4095 6.1788 20.5396 5.39408 19.4922 5.27702C17.0121 5.00017 14.5019 4.99873 12.0032 5.00017C9.5041 4.99873 6.99344 5.00017 4.51334 5.27702C3.46663 5.39408 2.59726 6.1788 2.35241 7.24244C2.00392 8.75718 2 10.4106 2 11.9702C2 13.5297 2 15.183 2.34849 16.6975C2.59293 17.7609 3.4625 18.5457 4.50983 18.6629C6.98973 18.94 9.50018 18.9414 11.9993 18.94C14.4988 18.9414 17.0086 18.94 19.4883 18.6629C20.535 18.5459 21.4052 17.7612 21.6501 16.6975C21.9988 15.1828 22 13.5295 22 11.9702C22 10.4106 22.0029 8.75718 21.6544 7.24244ZM9.41905 15.0744C9.41905 12.8621 9.41905 10.6728 9.41905 8.4603C11.5387 9.56626 13.6443 10.6648 15.7773 11.7776C13.6509 12.8804 11.5443 13.9724 9.41905 15.0744Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </div>
+            </div>
           </div>
           <div class="footer__banner">
             <div class="footer__banner-block">
@@ -3654,7 +3781,7 @@
               </div>
             </div>
           </div>
-          <div class="footer__socials">
+          <div class="footer__socials mobile">
             <div class="socials__item">
               <svg
                 width="24"
@@ -3705,7 +3832,17 @@
           </div>
         </div>
         <div class="footer__last">
-          <span class="footer__last-text"> Подпишитесь на акции и скидки </span>
+          <span class="footer__last-text mobile">
+            Подпишитесь на акции и скидки
+          </span>
+          <div class="last-text__wrap">
+            <span class="footer__last-text desktop">
+              Подпишитесь на рассылку
+            </span>
+            <span class="footer__last-text second desktop">
+              Будьте в курсе лучших предложений
+            </span>
+          </div>
           <div class="footer__last-input">
             <span class="last-input__text">Электронная почта</span>
             <button type="button" class="last-input__btn">Подписаться</button>
