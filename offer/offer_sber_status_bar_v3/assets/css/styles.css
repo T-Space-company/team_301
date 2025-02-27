@@ -1,0 +1,547 @@
+@font-face {
+  font-family: "Fixel Display";
+  src: url(../fonts/FixelDisplay-Regular.woff2);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Fixel Display";
+  src: url(../fonts/FixelDisplay-Medium.woff2);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Fixel Display";
+  src: url(../fonts/FixelDisplay-SemiBold.woff2);
+  font-weight: 600;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: var(--1, linear-gradient(180deg, #004ba8 0%, #002f6c 100%));
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+main {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-section {
+  padding: 0 22.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-wrapper {
+  padding: 20px 10px;
+  border-radius: 10px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 550px;
+  width: 100%;
+  height: 330px;
+}
+
+.progress-img {
+  width: 200px;
+}
+
+.progress-heading {
+  color: #222;
+  text-align: center;
+  font-family: "Fixel Display";
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.progress-container {
+  max-width: 210px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.progress-bar {
+  position: relative;
+  max-width: 196px;
+  width: 100%;
+  height: 10px;
+  background: #d9d9d9;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+.progress {
+  height: 100%;
+  background: var(--1, linear-gradient(180deg, #004ba8 0%, #002f6c 100%));
+  border-radius: 5px;
+  width: 0%;
+  transition: width 100ms ease;
+}
+.progress-points {
+  position: absolute;
+  top: -5px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.point {
+  width: 20px;
+  height: 20px;
+  background: #d9d9d9;
+  border: 3px solid var(--1, #004ba8);
+  border-radius: 50%;
+  transition: background 250ms;
+  box-sizing: border-box;
+  position: relative;
+}
+.point.active {
+  background: var(--1, linear-gradient(180deg, #004ba8 0%, #002f6c 100%));
+}
+
+.point.start {
+  left: -2px;
+}
+
+.point.end {
+  right: -2px;
+}
+
+.progress-labels {
+  display: flex;
+  justify-content: space-between;
+  color: #222;
+  text-align: center;
+  font-family: Inter;
+  font-size: 10px;
+  font-weight: 300;
+  width: 100%;
+}
+
+.successful-section {
+  width: 100%;
+  height: 100%;
+  background: var(--1, linear-gradient(180deg, #004ba8 0%, #002f6c 100%));
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 22.5px;
+  box-sizing: border-box;
+}
+
+.successful-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.successful-content-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.successful-block {
+  box-sizing: border-box;
+  border-radius: 10px;
+  background: #fff;
+  padding: 15px;
+  display: flex;
+  max-width: 420px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.block-logo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  justify-content: center;
+}
+
+.block-logo > img {
+  max-width: 140px;
+  width: 100%;
+  min-width: 100px;
+}
+
+.block-heading {
+  text-align: center;
+  color: #393939;
+  font-family: "Fixel Display";
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 28px;
+}
+
+.block-heading.bottom {
+  background: var(--1, linear-gradient(180deg, #004ba8 0%, #002f6c 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.block-heading.thankyou {
+  color: #393939;
+  text-align: center;
+  font-family: "Fixel Display";
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+.block-text {
+  color: #393939;
+  text-align: center;
+  font-family: "Fixel Display";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.timer {
+  display: flex;
+  gap: 2px;
+}
+
+.digit {
+  width: 40px;
+  height: 60px;
+  padding: 10px 11px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: #363636;
+  text-align: center;
+  font-family: "Fixel Display";
+  font-size: 30px;
+  border-radius: 10px;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: white;
+}
+
+.successful-form {
+  border-radius: 10px;
+  background: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 420px;
+}
+
+.form-heading {
+  color: #393939;
+  text-align: center;
+  font-family: "Fixel Display";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: -0.18px;
+  margin-bottom: 20px;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+.form-group > label {
+  color: #393939;
+  font-family: "Fixel Display";
+  font-size: 14px;
+  line-height: 100%;
+}
+
+.form-input {
+  border-radius: 8px;
+  background: #e7e7e7;
+  padding: 14.5px 17px;
+  border: none;
+}
+
+.form-input::placeholder {
+  color: #b7b7b7;
+  font-family: "Fixel Display";
+  font-size: 13px;
+  line-height: 100%;
+}
+
+.checkbox-text {
+  color: #393939;
+  font-family: "Fixel Display";
+  font-size: 13px;
+  line-height: 17px;
+  margin-left: 17px;
+}
+
+.checkbox-text > .accent {
+  background: var(--1, linear-gradient(180deg, #004ba8 0%, #002f6c 100%));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-color: #004ba8;
+}
+
+.first-section {
+  padding: 0 22.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.progress-wrapper.first {
+  height: auto;
+}
+
+.first-img {
+  max-width: 300px;
+  width: 100%;
+}
+
+.block-text.first {
+  font-weight: 500;
+}
+
+.first-button {
+  border-radius: 20px;
+  background: linear-gradient(180deg, #004ba8 0%, #002f6c 100%);
+  display: flex;
+  padding: 18px 20px;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: "Fixel Display";
+  font-size: 18px;
+  font-weight: 700;
+  width: 100%;
+}
+
+.quiz-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 22.5px;
+  width: 100%;
+}
+
+.quiz-buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.quiz-button {
+  width: 100%;
+  border-radius: 15px;
+  border: 1px solid var(--1, #004ba8);
+  background: #fff;
+  display: flex;
+  padding: 15px 28px;
+  justify-content: center;
+  align-items: center;
+  color: #393939;
+  text-align: center;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "Fixel Display";
+  font-size: 18px;
+  font-weight: 500;
+  transition: background 250ms ease, color 250ms ease;
+}
+
+.quiz-button:active {
+  background: var(--1, linear-gradient(180deg, #004ba8 0%, #002f6c 100%));
+  color: #fff;
+}
+
+.progress-wrapper.question {
+  height: auto;
+  padding: 20px;
+}
+
+.progress-indicator {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.point-quiz.circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  border: 1px solid #393939;
+}
+
+.point-quiz.circle.active {
+  background-color: #393939;
+}
+
+.point-quiz.pill.active {
+  width: 30px;
+  height: 15px;
+  border-radius: 20px;
+  border: 1px solid #393939;
+  background-color: #393939;
+}
+
+@media (min-width: 1024px) {
+  .progress-wrapper {
+    height: auto;
+    gap: 67px;
+    padding: 35px 16px;
+  }
+  .progress-img {
+    width: 300px;
+  }
+  .progress-heading {
+    font-size: 30px;
+  }
+  .progress-container {
+    max-width: 346px;
+  }
+  .progress-bar {
+    max-width: 326px;
+    height: 16px;
+  }
+  .progress-points {
+    top: -8px;
+  }
+  .point {
+    width: 33px;
+    height: 33px;
+    border: 5px solid var(--1, #004ba8);
+  }
+  .progress-labels {
+    font-size: 16px;
+  }
+  .successful-section {
+    padding: 80px 120px;
+  }
+  .successful-screen {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 100px;
+  }
+  .successful-block {
+    max-width: 550px;
+    padding: 33px;
+    gap: 33px;
+  }
+  .successful-form {
+    max-width: 550px;
+    padding: 33px;
+  }
+  .block-heading {
+    font-size: 36px;
+    line-height: 46px;
+  }
+  .block-heading.thankyou {
+    font-size: 26px;
+    line-height: 46px;
+  }
+  .block-logo {
+    gap: 33px;
+  }
+  .block-logo > img {
+    max-width: 220px;
+  }
+  .block-text {
+    font-size: 26px;
+  }
+  .timer {
+    gap: 3px;
+  }
+  .digit {
+    width: 72px;
+    height: 102px;
+    font-size: 50px;
+  }
+  .form-heading {
+    font-size: 30px;
+    line-height: 46px;
+    margin-bottom: 33px;
+  }
+
+  .form-input {
+    padding: 25px 28px;
+  }
+
+  .form-input::placeholder {
+    font-size: 16px;
+  }
+
+  .form-group > label {
+    font-size: 23px;
+  }
+
+  .checkbox-text {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .btnFormText {
+    font-size: 26px;
+  }
+  .progress-wrapper.first {
+    padding: 40px;
+    gap: 30px;
+  }
+  .first-img {
+    max-width: 470px;
+  }
+  .block-heading.bottom.first {
+    font-size: 28px;
+    line-height: 125%;
+  }
+  .block-text.first {
+    font-size: 20px;
+    line-height: 125%;
+  }
+  .first-button {
+    font-size: 22px;
+  }
+  .progress-wrapper.question {
+    padding: 40px;
+    gap: 40px;
+  }
+  .quiz-button {
+    font-size: 22px;
+  }
+  .block-heading.questions {
+    font-size: 26px;
+    line-height: 125%;
+  }
+}
