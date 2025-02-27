@@ -1,6 +1,12 @@
 export default function startModalFlow() {
   let currentModalIndex = 1;
   const totalModals = 6;
+  let answers = [];
+
+  function saveAnswer(question, answer) {
+    answers.push(`${question}: ${answer}`);
+    localStorage.setItem("answers", JSON.stringify(answers));
+  }
 
   function showModal(index) {
     document.querySelectorAll(".modal").forEach((modal) => {
@@ -12,12 +18,23 @@ export default function startModalFlow() {
     }
   }
 
-  function handleNextModal(event, nextIndex) {
+  function handleNextModal(event, nextIndex, question, answer) {
     event.preventDefault();
+
+    // Save only answers for modal-1, modal-2, and modal-6
+    if (
+      currentModalIndex === 1 ||
+      currentModalIndex === 2 ||
+      currentModalIndex === 6
+    ) {
+      saveAnswer(question, answer);
+    }
+
     document
       .getElementById(`modal-${currentModalIndex}`)
       .classList.add("hidden");
     currentModalIndex = nextIndex;
+
     if (currentModalIndex <= totalModals) {
       showModal(currentModalIndex);
     } else {
@@ -28,7 +45,7 @@ export default function startModalFlow() {
   document
     .querySelector("#modal-1 .modal__button--yes")
     ?.addEventListener("click", (event) => {
-      handleNextModal(event, 2);
+      handleNextModal(event, 2, "Вы гражданин РФ?", "Да");
     });
 
   document
@@ -47,7 +64,12 @@ export default function startModalFlow() {
     .querySelectorAll("#modal-2 .modal__button--second:not(.modal__button--18)")
     ?.forEach((button) => {
       button.addEventListener("click", (event) => {
-        handleNextModal(event, 3);
+        handleNextModal(
+          event,
+          3,
+          "Выберите ваш возраст",
+          button.innerText.trim()
+        );
       });
     });
 
@@ -79,7 +101,12 @@ export default function startModalFlow() {
     .querySelectorAll("#modal-6 .modal__button--sixth")
     ?.forEach((button) => {
       button.addEventListener("click", (event) => {
-        handleNextModal(event, "form");
+        handleNextModal(
+          event,
+          "form",
+          "Какую сумму инвестиций вы готовы рассмотреть для стабильного пассивного дохода?",
+          button.innerText.trim()
+        );
       });
     });
 

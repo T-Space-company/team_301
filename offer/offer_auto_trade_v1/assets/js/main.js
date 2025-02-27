@@ -1,6 +1,8 @@
 import startModalFlow from "./modal.js";
 
 document.addEventListener("DOMContentLoaded", () => {
+  localStorage.removeItem("answers");
+
   const startBtn = document.getElementById("start-btn");
   const ctx = document.getElementById("chartCanvas").getContext("2d");
   const mainChart = document.getElementById("main-chart");
