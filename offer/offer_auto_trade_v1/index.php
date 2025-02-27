@@ -1,3 +1,9 @@
+<?php
+if (!isset($rawClick) && !isset($click)) {
+  die();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,6 +11,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Автоматическая торговая система</title>
     <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/img/logo_app.svg"
+      type="image/x-icon"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
