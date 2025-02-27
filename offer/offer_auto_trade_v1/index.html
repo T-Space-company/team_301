@@ -11,6 +11,10 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-financial"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment"></script>
   </head>
   <body class="body">
     <main class="main">
@@ -45,7 +49,7 @@
           Активировать автоматическую торговлю
         </button>
       </section>
-      <section id="screen2" class="screen trading">
+      <section id="screen2" class="screen trading hidden">
         <div class="intro__icons">
           <img src="./assets/img/logo_sb.svg" alt="Logo" />
           <img src="./assets/img/logo_mf.svg" alt="Logo" />
@@ -53,12 +57,166 @@
           <img src="./assets/img/logo_sbrf.svg" alt="Logo" />
         </div>
         <div class="trading__main">
-          <h2 class="trading__heading">Подключение к системе...</h2>
-          <h2 class="trading__heading">Проверка ID...</h2>
-          <div class="trading__chart"></div>
+          <h2 class="trading__heading" id="heading1">Подключение к системе</h2>
+          <h2 class="trading__heading" id="heading2">Проверка ID</h2>
+          <h2 class="trading__profit hidden" id="profit"></h2>
+          <div class="trading__chart" id="main-chart">
+            <canvas id="chartCanvas"></canvas>
+          </div>
+          <button type="button" class="trading__button hidden" id="trading-btn">
+            Забрать доход
+          </button>
         </div>
       </section>
+      <!--------- QUESTION 1 --------->
+      <div id="modal-1" class="modal hidden">
+        <div class="modal__content">
+          <span class="modal__preheading"
+            >Проверка соответствия перед выводом средств</span
+          >
+          <h2 class="modal__question">Вы гражданин РФ?</h2>
+          <div class="modal__actions">
+            <button
+              class="modal__button modal__button--first modal__button--yes"
+            >
+              Да
+            </button>
+            <button
+              class="modal__button modal__button--first modal__button--no"
+            >
+              <a href="err.html">Нет</a>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!--------- QUESTION 2 --------->
+      <div id="modal-2" class="modal hidden">
+        <div class="modal__content">
+          <span class="modal__preheading"
+            >Проверка соответствия перед выводом средств</span
+          >
+          <h2 class="modal__question">Выберите ваш возраст</h2>
+          <div class="modal__actions">
+            <button
+              class="modal__button modal__button--second modal__button--18"
+            >
+              <a href="err.html"> до 18 лет </a>
+            </button>
+            <button
+              class="modal__button modal__button--second modal__button--25"
+            >
+              18-25 лет
+            </button>
+            <button
+              class="modal__button modal__button--second modal__button--40"
+            >
+              25-40 лет
+            </button>
+            <button
+              class="modal__button modal__button--second modal__button--55"
+            >
+              40-55 лет
+            </button>
+            <button
+              class="modal__button modal__button--second modal__button--55+"
+            >
+              55+ лет
+            </button>
+          </div>
+        </div>
+      </div>
+      <!--------- QUESTION 3 --------->
+      <div id="modal-3" class="modal hidden">
+        <div class="modal__content">
+          <span class="modal__preheading"
+            >Проверка соответствия перед выводом средств</span
+          >
+          <h2 class="modal__question">Есть ли у вас опыт инвестиций?</h2>
+          <div class="modal__actions">
+            <button
+              class="modal__button modal__button--third modal__button--yes"
+            >
+              Да, я инвестировал ранее
+            </button>
+            <button
+              class="modal__button modal__button--third modal__button--no"
+            >
+              Нет, но я хочу разобраться
+            </button>
+          </div>
+        </div>
+      </div>
+      <!--------- QUESTION 4 --------->
+      <div id="modal-4" class="modal hidden">
+        <div class="modal__content">
+          <span class="modal__preheading"
+            >Проверка соответствия перед выводом средств</span
+          >
+          <h2 class="modal__question">Какой доход вас интересует?</h2>
+          <div class="modal__actions">
+            <button class="modal__button modal__button--fourth">
+              50 000 - 100 000₽
+            </button>
+            <button class="modal__button modal__button--fourth">
+              от 100 000₽
+            </button>
+            <button class="modal__button modal__button--fourth">
+              Хочу увеличить свои накопления
+            </button>
+          </div>
+        </div>
+      </div>
+      <!--------- QUESTION 5 --------->
+      <div id="modal-5" class="modal hidden">
+        <div class="modal__content">
+          <span class="modal__preheading"
+            >Проверка соответствия перед выводом средств</span
+          >
+          <h2 class="modal__question">
+            Как бы вы хотели использовать прибыть 104 728₽?
+          </h2>
+          <div class="modal__actions">
+            <button class="modal__button modal__button--fifth">
+              Потратить на нужды
+            </button>
+            <button class="modal__button modal__button--fifth">
+              Инвестировать часть прибыли
+            </button>
+            <button class="modal__button modal__button--fifth">
+              Оставить в системе, для пассивного дохода
+            </button>
+          </div>
+        </div>
+      </div>
+      <!--------- QUESTION 6 --------->
+      <div id="modal-6" class="modal hidden">
+        <div class="modal__content">
+          <span class="modal__preheading"
+            >Проверка соответствия перед выводом средств</span
+          >
+          <h2 class="modal__question">
+            Как бы вы хотели использовать прибыть 104 728₽?
+          </h2>
+          <div class="modal__actions">
+            <button class="modal__button modal__button--sixth">
+              Минимальный старт – 10 000₽
+            </button>
+            <button class="modal__button modal__button--sixth">
+              Я готов внести больше (30 000₽+)
+            </button>
+            <button class="modal__button modal__button--sixth">
+              Я пока не думал, но хочу узнать подробнее 
+            </button>
+          </div>
+        </div>
+      </div>
+      <!--------- FORM --------->
+      <div id="modal-form" class="modal hidden">
+        <div class="modal__content">
+          <form action=""></form>
+        </div>
+      </div>
     </main>
-    <script src="./assets/js/main.js"></script>
+    <script type="module" src="./assets/js/main.js"></script>
   </body>
 </html>
