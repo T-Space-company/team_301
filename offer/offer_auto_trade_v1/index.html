@@ -198,35 +198,45 @@
   <body class="body">
     <main class="main">
       <section id="screen1" class="screen intro">
-        <h1 class="intro__heading">
-          Автоматическая торговая система под контролем ведущих финансовых
-          структур России
-        </h1>
-        <div class="intro__icons">
-          <img src="./assets/img/logo_sb.svg" alt="Logo" />
-          <img src="./assets/img/logo_mf.svg" alt="Logo" />
-          <img src="./assets/img/logo_app.svg" alt="Logo" />
-          <img src="./assets/img/logo_sbrf.svg" alt="Logo" />
+        <div class="intro__wrapper">
+          <div class="intro__head">
+            <h1 class="intro__heading">
+              Автоматическая торговая система под контролем ведущих финансовых
+              структур России
+            </h1>
+            <div class="intro__icons">
+              <img src="./assets/img/logo_sb.svg" alt="Logo" />
+              <img src="./assets/img/logo_mf.svg" alt="Logo" />
+              <img src="./assets/img/logo_app.svg" alt="Logo" />
+              <img src="./assets/img/logo_sbrf.svg" alt="Logo" />
+            </div>
+          </div>
+          <video
+            src="./assets/img/main_vid.mp4"
+            controls
+            class="intro__video mobile"
+            poster="./assets/img/main.png"
+          ></video>
+          <ul class="intro__list">
+            <li class="intro__item">
+              Запустите алгоритм – система зарабатывает за вас без риска
+            </li>
+            <li class="intro__item">Подойдет людям без опыта</li>
+            <li class="intro__item">
+              Первые пользователи уже вывели от 100 000₽! Программа доступна
+              ограниченному числу участников
+            </li>
+          </ul>
+          <button type="button" class="intro__button" id="start-btn">
+            Активировать автоматическую торговлю
+          </button>
         </div>
         <video
           src="./assets/img/main_vid.mp4"
           controls
-          class="intro__video"
+          class="intro__video desktop"
           poster="./assets/img/main.png"
         ></video>
-        <ul class="intro__list">
-          <li class="intro__item">
-            Запустите алгоритм – система зарабатывает за вас без риска
-          </li>
-          <li class="intro__item">Подойдет людям без опыта</li>
-          <li class="intro__item">
-            Первые пользователи уже вывели от 100 000₽! Программа доступна
-            ограниченному числу участников
-          </li>
-        </ul>
-        <button type="button" class="intro__button" id="start-btn">
-          Активировать автоматическую торговлю
-        </button>
       </section>
       <section id="screen2" class="screen trading hidden">
         <div class="intro__icons">
@@ -236,13 +246,28 @@
           <img src="./assets/img/logo_sbrf.svg" alt="Logo" />
         </div>
         <div class="trading__main">
-          <h2 class="trading__heading" id="heading1">Подключение к системе</h2>
-          <h2 class="trading__heading" id="heading2">Проверка ID</h2>
+          <button
+            type="button"
+            class="trading__button-desktop hidden"
+            id="trading-btn-desktop"
+          >
+            Забрать доход
+          </button>
+          <div class="trading__headings">
+            <h2 class="trading__heading" id="heading1">
+              Подключение к системе
+            </h2>
+            <h2 class="trading__heading" id="heading2">Проверка ID</h2>
+          </div>
           <h2 class="trading__profit hidden" id="profit"></h2>
           <div class="trading__chart" id="main-chart">
             <canvas id="chartCanvas"></canvas>
           </div>
-          <button type="button" class="trading__button hidden" id="trading-btn">
+          <button
+            type="button"
+            class="trading__button hidden mobile"
+            id="trading-btn"
+          >
             Забрать доход
           </button>
         </div>
@@ -320,7 +345,7 @@
             <button
               class="modal__button modal__button--third modal__button--no"
             >
-              Нет, но я хочу разобраться
+              Нет, но хочу разобраться
             </button>
           </div>
         </div>
