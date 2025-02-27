@@ -24,7 +24,7 @@ a {
 
 button {
   cursor: pointer;
-  border: none;
+  border: none !important;
 }
 
 ul,
@@ -168,6 +168,7 @@ li {
   background: #222;
   padding: 30px;
   max-width: 615px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -215,4 +216,37 @@ li {
   font-size: 12px;
   font-weight: 700;
   width: 100%;
+}
+
+.form-heading {
+  color: #fff;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 140%;
+  margin-bottom: 20px;
+}
+
+.form-wrapper {
+  width: 100%;
+}
+
+.form-input {
+  border: 1px solid #3f6e55;
+  font-family: Roboto;
+}
+
+.form-input::placeholder {
+  font-family: Roboto;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .form-heading {
+    font-size: 22px;
+  }
 }
