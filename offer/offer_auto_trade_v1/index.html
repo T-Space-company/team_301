@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Автоматическая торговая система</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="body">
+    <main class="main">
+      <section id="screen1" class="screen intro">
+        <h1 class="intro__heading">
+          Автоматическая торговая система под контролем ведущих финансовых
+          структур России
+        </h1>
+        <div class="intro__icons">
+          <img src="./assets/img/logo_sb.svg" alt="Logo" />
+          <img src="./assets/img/logo_mf.svg" alt="Logo" />
+          <img src="./assets/img/logo_app.svg" alt="Logo" />
+          <img src="./assets/img/logo_sbrf.svg" alt="Logo" />
+        </div>
+        <video
+          src="./assets/img/main_vid.mp4"
+          controls
+          class="intro__video"
+          poster="./assets/img/main.png"
+        ></video>
+        <ul class="intro__list">
+          <li class="intro__item">
+            Запустите алгоритм – система зарабатывает за вас без риска
+          </li>
+          <li class="intro__item">Подойдет людям без опыта</li>
+          <li class="intro__item">
+            Первые пользователи уже вывели от 100 000₽! Программа доступна
+            ограниченному числу участников
+          </li>
+        </ul>
+        <button type="button" class="intro__button" id="start-btn">
+          Активировать автоматическую торговлю
+        </button>
+      </section>
+      <section id="screen2" class="screen trading">
+        <div class="intro__icons">
+          <img src="./assets/img/logo_sb.svg" alt="Logo" />
+          <img src="./assets/img/logo_mf.svg" alt="Logo" />
+          <img src="./assets/img/logo_app.svg" alt="Logo" />
+          <img src="./assets/img/logo_sbrf.svg" alt="Logo" />
+        </div>
+        <div class="trading__main">
+          <h2 class="trading__heading">Подключение к системе...</h2>
+          <h2 class="trading__heading">Проверка ID...</h2>
+          <div class="trading__chart"></div>
+        </div>
+      </section>
+    </main>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
