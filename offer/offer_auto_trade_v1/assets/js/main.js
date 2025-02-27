@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const heading2 = document.getElementById("heading2");
   const profit = document.getElementById("profit");
   const tradingBtn = document.getElementById("trading-btn");
+  const tradingBtnDesktop = document.getElementById("trading-btn-desktop");
 
   function switchScreen() {
     const screen1 = document.getElementById("screen1");
@@ -49,12 +50,19 @@ document.addEventListener("DOMContentLoaded", () => {
         clearInterval(interval);
         profit.innerHTML = `Ваша прибыль: <span class="accent">104 728₽</span>`;
         profit.classList.remove("hidden");
-        tradingBtn.classList.remove("hidden");
+        if (window.innerWidth > 1024) {
+          tradingBtnDesktop.classList.remove("hidden");
+        } else {
+          tradingBtn.classList.remove("hidden");
+        }
       }, 3000);
     }, 3000);
   }
 
   tradingBtn.addEventListener("click", () => {
+    startModalFlow();
+  });
+  tradingBtnDesktop.addEventListener("click", () => {
     startModalFlow();
   });
 

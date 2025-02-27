@@ -47,7 +47,14 @@ li {
   padding: 20px;
 }
 
-#screen1 {
+.intro__wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
   gap: 20px;
 }
 
@@ -105,6 +112,12 @@ li {
   font-weight: 700;
   width: 100%;
   max-width: 600px;
+}
+
+.intro__head {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .hidden {
@@ -245,8 +258,124 @@ li {
   margin-bottom: 0;
 }
 
+.desktop {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .form-heading {
     font-size: 22px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .desktop {
+    display: flex;
+  }
+  .mobile {
+    display: none;
+  }
+  .intro__head {
+    flex-direction: column-reverse;
+    gap: 40px;
+  }
+  .intro__heading {
+    max-width: 558px;
+  }
+  .intro__icons {
+    max-width: 1000px;
+    justify-content: flex-start;
+    gap: 73px;
+  }
+  .intro__icons > img {
+    width: 46px;
+  }
+  .intro__heading {
+    font-size: 40px;
+  }
+  .intro__item {
+    font-size: 22px;
+  }
+  #screen1 {
+    gap: 40px;
+    flex-direction: row;
+    position: absolute;
+  }
+  .intro__button {
+    font-size: 22px;
+    max-width: 520px;
+  }
+  .intro__list {
+    max-width: 555px;
+  }
+  .intro__wrapper {
+    gap: 40px;
+    width: auto;
+    align-items: flex-start;
+  }
+  .intro__video.desktop {
+    max-width: 500px;
+    width: 100%;
+    height: 500px;
+  }
+  .trading__main {
+    flex-direction: column-reverse;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-top: 0;
+  }
+  #main-chart {
+    height: 540px;
+    width: 1000px;
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
+  .trading__headings {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    justify-content: center;
+  }
+  .trading__heading {
+    max-width: none;
+    font-size: 40px;
+  }
+  .trading__profit {
+    text-align: center;
+    font-size: 40px;
+  }
+  #trading-btn-desktop {
+    border-radius: 40px;
+    padding: 20px 40px;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(89deg, #3f6e55 0%, #0b3325 100%);
+    box-shadow: 0px -3px 4px 0px rgba(0, 0, 0, 0.25) inset,
+      0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    color: #fff;
+    font-family: Roboto;
+    font-weight: 700;
+    width: 100%;
+    font-size: 22px;
+    max-width: 468px;
+    margin-top: 40px;
+  }
+  .modal__preheading {
+    font-size: 20px;
+  }
+  .modal__button {
+    font-size: 16px;
+    padding: 10px 20px;
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 1240px) {
+  .intro__video.desktop {
+    max-width: 720px;
+    width: 100%;
+    height: 720px;
   }
 }
