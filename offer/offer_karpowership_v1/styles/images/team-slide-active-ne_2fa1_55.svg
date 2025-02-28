@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="55px" height="55px" viewBox="0 0 55 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 5</title>
+    <g id="all-pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="4-team" transform="translate(-608.000000, -1185.000000)">
+            <g id="Group-5" transform="translate(608.000000, 1185.000000)">
+                <circle id="Oval" fill="#0056A5" cx="27.5" cy="27.5" r="27.5"></circle>
+                <g id="Group" transform="translate(13.000000, 23.000000)">
+                    <line x1="5.5" y1="5.5" x2="25.3823529" y2="5.5" id="Line-3" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square"></line>
+                    <polygon id="Triangle" fill="#FFFFFF" transform="translate(26.000000, 5.000000) rotate(-270.000000) translate(-26.000000, -5.000000) " points="26 1 31 9 21 9"></polygon>
+                    <line x1="2" y1="5.5" x2="0.5" y2="5.5" id="Line-3" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square"></line>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
