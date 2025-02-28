@@ -280,75 +280,75 @@
                             </div>
                             <div class="main-slider-item">
                                 <div class="slider main-slider-for">
-                                    <div class="main-slider-img-item" style="background-image: url('photos/slidernewv3-3_b8d3_28.png');">
+                                    <div class="main-slider-img-item" style="background-image: url('photos/slidernewv3-3_b8d3_28.png'); background-position-x: 20%; background-repeat: no-repeat;">
                                         <div class="container">
                                             <div class="main-wrapper">
                                                 <div class="main-slider-content">
                                                 <h2><strong>KARPOWERSHIP İLE GARANTİLİ KAZANÇ</strong></h2>
-                                                <p>Minimum yatırımla haftada 20.000 ₺'den başlayan kazanç fırsatlarını yakalayın! ⚡🚢</p> 
-                                                <p>🔹 Güçlü enerji projelerine katılın</p>
-                                                <p>🔹 Türkiye’nin lider şirketiyle büyüyün</p>
-                                                <p>🔹 Sınırlı kontenjan – hemen başvurun!</p>
-                                                <p>Şimdi detayları öğrenin!</p>
+                                                <p class="slider-text">Minimum yatırımla haftada 20.000 ₺'den başlayan kazanç fırsatlarını yakalayın! ⚡🚢</p> 
+                                                <p class="slider-text">🔹 Güçlü enerji projelerine katılın</p>
+                                                <p class="slider-text">🔹 Türkiye’nin lider şirketiyle büyüyün</p>
+                                                <p class="slider-text">🔹 Sınırlı kontenjan – hemen başvurun!</p>
+                                                <p class="slider-text">Şimdi detayları öğrenin!</p>
                                             </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="main-slider-img-item" style="background-image: url('photos/slidernewv3-3_b8d3_28.png');">
+                                    <div class="main-slider-img-item" style="background-image: url('photos/slidernewv3-3_b8d3_28.png'); background-position-x: 20%; background-repeat: no-repeat;">
                                         <div class="container">
                                             <div class="main-wrapper">
                                                 <div class="main-slider-content">
                                                 <h2><strong>KARPOWERSHIP İLE GARANTİLİ KAZANÇ</strong></h2>
-                                                <p>Minimum yatırımla haftada 20.000 ₺'den başlayan kazanç fırsatlarını yakalayın! ⚡🚢</p> 
-                                                <p>🔹 Güçlü enerji projelerine katılın</p>
-                                                <p>🔹 Türkiye’nin lider şirketiyle büyüyün</p>
-                                                <p>🔹 Sınırlı kontenjan – hemen başvurun!</p>
-                                                <p>Şimdi detayları öğrenin!</p>
+                                                <p class="slider-text">Minimum yatırımla haftada 20.000 ₺'den başlayan kazanç fırsatlarını yakalayın! ⚡🚢</p> 
+                                                <p class="slider-text">🔹 Güçlü enerji projelerine katılın</p>
+                                                <p class="slider-text">🔹 Türkiye’nin lider şirketiyle büyüyün</p>
+                                                <p class="slider-text">🔹 Sınırlı kontenjan – hemen başvurun!</p>
+                                                <p class="slider-text">Şimdi detayları öğrenin!</p>
                                             </div>
 
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="main-slider-img-item" style="background-image: url('photos/slidernewv3-3_b8d3_28.png');">
+                                    <div class="main-slider-img-item" style="background-image: url('photos/slidernewv3-3_b8d3_28.png'); background-position-x: 20%; background-repeat: no-repeat;">
                                         <div class="container">
                                             <div class="main-wrapper">
                                                 <div class="main-slider-content">
                                                 <h2><strong>KARPOWERSHIP İLE GARANTİLİ KAZANÇ</strong></h2>
-                                                <p>Minimum yatırımla haftada 20.000 ₺'den başlayan kazanç fırsatlarını yakalayın! ⚡🚢</p> 
-                                                <p>🔹 Güçlü enerji projelerine katılın</p>
-                                                <p>🔹 Türkiye’nin lider şirketiyle büyüyün</p>
-                                                <p>🔹 Sınırlı kontenjan – hemen başvurun!</p>
-                                                <p>Şimdi detayları öğrenin!</p>
+                                                <p class="slider-text">Minimum yatırımla haftada 20.000 ₺'den başlayan kazanç fırsatlarını yakalayın! ⚡🚢</p> 
+                                                <p class="slider-text">🔹 Güçlü enerji projelerine katılın</p>
+                                                <p class="slider-text">🔹 Türkiye’nin lider şirketiyle büyüyün</p>
+                                                <p class="slider-text">🔹 Sınırlı kontenjan – hemen başvurun!</p>
+                                                <p class="slider-text">Şimdi detayları öğrenin!</p>
                                             </div>
 
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="main-slider-img-item" style="background-image: url('photos/slidernewv3-3_b8d3_28.png');">
+                                    <div class="main-slider-img-item" style="background-image: url('photos/slidernewv3-3_b8d3_28.png'); background-position-x: 20%; background-repeat: no-repeat;">
                                         <div class="container">
                                             <div class="main-wrapper">
                                                 <div class="main-slider-content">
                                                 <h2><strong>KARPOWERSHIP İLE GARANTİLİ KAZANÇ</strong></h2>
-                                                <p>Minimum yatırımla haftada 20.000 ₺'den başlayan kazanç fırsatlarını yakalayın! ⚡🚢</p> 
-                                                <p>🔹 Güçlü enerji projelerine katılın</p>
-                                                <p>🔹 Türkiye’nin lider şirketiyle büyüyün</p>
-                                                <p>🔹 Sınırlı kontenjan – hemen başvurun!</p>
-                                                <p>Şimdi detayları öğrenin!</p>
+                                                <p class="slider-text">Minimum yatırımla haftada 20.000 ₺'den başlayan kazanç fırsatlarını yakalayın! ⚡🚢</p> 
+                                                <p class="slider-text">🔹 Güçlü enerji projelerine katılın</p>
+                                                <p class="slider-text">🔹 Türkiye’nin lider şirketiyle büyüyün</p>
+                                                <p class="slider-text">🔹 Sınırlı kontenjan – hemen başvurun!</p>
+                                                <p class="slider-text">Şimdi detayları öğrenin!</p>
                                             </div>
 
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="main-slider-img-item" style="background-image: url('photos/slidernewv3-3_b8d3_28.png');">
+                                    <div class="main-slider-img-item" style="background-image: url('photos/slidernewv3-3_b8d3_28.png'); background-position-x: 20%; background-repeat: no-repeat;">
                                         <div class="container">
                                             <div class="main-wrapper">
                                                 <div class="main-slider-content">
                                                 <h2><strong>KARPOWERSHIP İLE GARANTİLİ KAZANÇ</strong></h2>
-                                                <p>Minimum yatırımla haftada 20.000 ₺'den başlayan kazanç fırsatlarını yakalayın! ⚡🚢</p> 
-                                                <p>🔹 Güçlü enerji projelerine katılın</p>
-                                                <p>🔹 Türkiye’nin lider şirketiyle büyüyün</p>
-                                                <p>🔹 Sınırlı kontenjan – hemen başvurun!</p>
-                                                <p>Şimdi detayları öğrenin!</p>
+                                                <p class="slider-text">Minimum yatırımla haftada 20.000 ₺'den başlayan kazanç fırsatlarını yakalayın! ⚡🚢</p> 
+                                                <p class="slider-text">🔹 Güçlü enerji projelerine katılın</p>
+                                                <p class="slider-text">🔹 Türkiye’nin lider şirketiyle büyüyün</p>
+                                                <p class="slider-text">🔹 Sınırlı kontenjan – hemen başvurun!</p>
+                                                <p class="slider-text">Şimdi detayları öğrenin!</p>
                                             </div>
 
                                             </div>
@@ -400,6 +400,8 @@
           method="post"
           id="main-form"
           >
+          <h2 class="form-heading">Bir basvuru birakin ve bugün kazanmaya
+baslayin</h2>
           <input type="hidden" id="source" value='<?= $_GET['source'] ?>'>
           <input type="hidden" name="comment" value="" />
           <input type="hidden" name="querys" />
@@ -412,14 +414,11 @@
             <div class="container">
                 <div class="container flex center justify-center">
             <div class="calculator-part">
-              <h2 class="section-heading text-white text-center animated">
-                Potansiyel kârları hesaplayın
+              <h2 class="calculator-heading">
+                Ne kadar yatirim yapmak
+istediginizi ve potansiyel kârinizi ne kadar süreyle elde etmek istediginizi girin
               </h2>
               <div class="calculator-wrapper animated">
-                <p class="text-center centered">
-                  Ne kadar yatırım yapmak istediğinizi ve potansiyel kârınızı ne
-                  kadar süreyle elde etmek istediğinizi girin
-                </p>
                 <div class="slider-wrapper">
                   <div class="slider-track">
                     <input class="slider-input" type="range" value="8.0" />
@@ -427,7 +426,7 @@
                   </div>
                 </div>
                 <div class="range-output-wrapper text-white text-center">
-                  <h4>Potansiyel Kârlar</h4>
+                  <h4 class="calculator-subheading">Potansiyel Kârlar</h4>
                   <div class="range-output-value">
                     ₺<span id="outcomeValue">15,800</span>
                   </div>
