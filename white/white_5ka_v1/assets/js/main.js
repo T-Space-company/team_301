@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       if (isValid) {
-        alert("Form submitted successfully!");
+        window.location.href = "thankyou-page.html";
       }
     });
 

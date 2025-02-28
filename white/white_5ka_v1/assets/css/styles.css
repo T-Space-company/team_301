@@ -3030,3 +3030,30 @@ video:-webkit-full-page-media {
   color: #e52322;
   font-size: 13px;
 }
+
+.thanks-page {
+  height: 100vh;
+}
+
+.landing.thanks {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-body.thanks {
+  border-radius: 25px;
+  background: #fff;
+  border: 1px solid #e52322;
+  max-width: 500px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thanks-heading {
+  margin: 0 !important;
+}
