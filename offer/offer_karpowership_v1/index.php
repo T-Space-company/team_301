@@ -280,7 +280,7 @@
                             </div>
                             <div class="main-slider-item">
                                 <div class="slider main-slider-for">
-                                    <div class="main-slider-img-item" style="background-image: url('photos/slidernewv3-3_b8d3_28.png'); background-position-x: 20%; background-repeat: no-repeat;">
+                                    <div class="main-slider-img-item" style="background-image: url('photos/slidernewv3-3_b8d3_28.png'); background-position-x: 18%; background-repeat: no-repeat;">
                                         <div class="container">
                                             <div class="main-wrapper">
                                                 <div class="main-slider-content">
@@ -294,22 +294,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="main-slider-img-item" style="background-image: url('photos/slidernewv3-3_b8d3_28.png'); background-position-x: 20%; background-repeat: no-repeat;">
-                                        <div class="container">
-                                            <div class="main-wrapper">
-                                                <div class="main-slider-content">
-                                                <h2><strong>KARPOWERSHIP İLE GARANTİLİ KAZANÇ</strong></h2>
-                                                <p class="slider-text">Minimum yatırımla haftada 20.000 ₺'den başlayan kazanç fırsatlarını yakalayın! ⚡🚢</p> 
-                                                <p class="slider-text">🔹 Güçlü enerji projelerine katılın</p>
-                                                <p class="slider-text">🔹 Türkiye’nin lider şirketiyle büyüyün</p>
-                                                <p class="slider-text">🔹 Sınırlı kontenjan – hemen başvurun!</p>
-                                                <p class="slider-text">Şimdi detayları öğrenin!</p>
-                                            </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="main-slider-img-item" style="background-image: url('photos/slidernewv3-3_b8d3_28.png'); background-position-x: 20%; background-repeat: no-repeat;">
+                                    <div class="main-slider-img-item" style="background-image: url('photos/slidernewv3-3_b8d3_28.png'); background-position-x: 18%; background-repeat: no-repeat;">
                                         <div class="container">
                                             <div class="main-wrapper">
                                                 <div class="main-slider-content">
@@ -324,7 +309,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="main-slider-img-item" style="background-image: url('photos/slidernewv3-3_b8d3_28.png'); background-position-x: 20%; background-repeat: no-repeat;">
+                                    <div class="main-slider-img-item" style="background-image: url('photos/slidernewv3-3_b8d3_28.png'); background-position-x: 18%; background-repeat: no-repeat;">
                                         <div class="container">
                                             <div class="main-wrapper">
                                                 <div class="main-slider-content">
@@ -339,7 +324,22 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="main-slider-img-item" style="background-image: url('photos/slidernewv3-3_b8d3_28.png'); background-position-x: 20%; background-repeat: no-repeat;">
+                                    <div class="main-slider-img-item" style="background-image: url('photos/slidernewv3-3_b8d3_28.png'); background-position-x: 18%; background-repeat: no-repeat;">
+                                        <div class="container">
+                                            <div class="main-wrapper">
+                                                <div class="main-slider-content">
+                                                <h2><strong>KARPOWERSHIP İLE GARANTİLİ KAZANÇ</strong></h2>
+                                                <p class="slider-text">Minimum yatırımla haftada 20.000 ₺'den başlayan kazanç fırsatlarını yakalayın! ⚡🚢</p> 
+                                                <p class="slider-text">🔹 Güçlü enerji projelerine katılın</p>
+                                                <p class="slider-text">🔹 Türkiye’nin lider şirketiyle büyüyün</p>
+                                                <p class="slider-text">🔹 Sınırlı kontenjan – hemen başvurun!</p>
+                                                <p class="slider-text">Şimdi detayları öğrenin!</p>
+                                            </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="main-slider-img-item" style="background-image: url('photos/slidernewv3-3_b8d3_28.png'); background-position-x: 18%; background-repeat: no-repeat;">
                                         <div class="container">
                                             <div class="main-wrapper">
                                                 <div class="main-slider-content">
