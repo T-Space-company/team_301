@@ -14,7 +14,7 @@
   <body>
     <div id="app">
       <header data-v-2426865c="" class="header">
-        <div data-v-2426865c="" class="header-wrapper">
+        <div data-v-2426865c="" class="header-wrapper" id="burger-btn">
           <div
             data-v-2426865c=""
             class="d-flex align-items-center justify-content-center w-100"
@@ -26,7 +26,7 @@
                 ><a
                   data-v-2426865c=""
                   href="#pancakes"
-                  class="header-link router-link-exact-active router-link-active"
+                  class="header-link"
                   aria-current="page"
                 >
                   Блинная перепись </a
@@ -50,8 +50,8 @@
             </div>
           </div>
         </div>
-        <div data-v-2426865c="" class="mobile-menu">
-          <div data-v-2426865c="" class="icon-wrapper">
+        <div data-v-2426865c="" class="mobile-menu" id="mobile-menu">
+          <div data-v-2426865c="" class="icon-wrapper" id="mobile-menu-close">
             <img
               data-v-2426865c=""
               src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADpSURBVHgB1ZjbDcMgDEVNJskna2TyrsFfGaVQUYlGgdgYrBtLeQH2PQoQTIiAzOWT9/5dno8QQiRDS9p7urzy/VaVfwtLpTXIXsMc6YiWQCeQmBlcr3JVl7W0HKcRTbSehpM0XglyCcNxWgHShOE6zwTpwkiCzIrhZgbT+t7CjAQd9WHBSIOPvk02DFdE060imDsx7YAXw7RES5Vq5g3BNIBIA6KCuQAiDUi2jYDs+d0EM4BhpjbMRw9mOYBZKGFSCJjkCibthEnIYbYqMJs4mO2tJUgP6JdCmIJkKxp/fz/qfCZagTSA6APO2Fcm2J2t+QAAAABJRU5ErkJggg=="
@@ -61,7 +61,7 @@
           ><a
             data-v-2426865c=""
             href="#pancakes"
-            class="header-link router-link-exact-active router-link-active"
+            class="header-link"
             aria-current="page"
           >
             Блинная перепись </a
@@ -121,7 +121,6 @@
                   href="#pancakes"
                   aria-current="page"
                   class="button button-white router-link-exact-active router-link-active"
-                  onclick="ym(99941860,'reachGoal','Vote_1')"
                   >Проголосовать</a
                 ><a
                   data-v-36d186c2=""
@@ -178,13 +177,8 @@
                 href="#pancakes"
                 aria-current="page"
                 class="button button-white router-link-exact-active router-link-active"
-                onclick="ym(99941860,'reachGoal','Vote_1')"
                 >Проголосовать</a
-              ><a
-                data-v-36d186c2=""
-                href="#contest"
-                class="button button-white"
-                onclick="ym(99941860,'reachGoal','share_1')"
+              ><a data-v-36d186c2="" href="#contest" class="button button-white"
                 >Участвовать в Конкурсе</a
               >
             </div>
@@ -234,8 +228,7 @@
                   </div>
                   <button
                     data-v-2f5e1ce4=""
-                    onclick="ym(99941860,'reachGoal','curd_vote')"
-                    class="button button-red"
+                    class="button button-red modal-open-btn"
                   >
                     Проголосовать</button
                   ><!----><!----><!----><!----><!---->
@@ -254,8 +247,7 @@
                   </div>
                   <!----><button
                     data-v-2f5e1ce4=""
-                    onclick="ym(99941860,'reachGoal','hamandcheese_vote')"
-                    class="button button-red"
+                    class="button button-red modal-open-btn"
                   >
                     Проголосовать</button
                   ><!----><!----><!----><!---->
@@ -272,8 +264,7 @@
                   </div>
                   <!----><!----><button
                     data-v-2f5e1ce4=""
-                    onclick="ym(99941860,'reachGoal','withoutfilling_vote')"
-                    class="button button-red"
+                    class="button button-red modal-open-btn"
                   >
                     Проголосовать</button
                   ><!----><!----><!---->
@@ -292,8 +283,7 @@
                   </div>
                   <!----><!----><!----><button
                     data-v-2f5e1ce4=""
-                    onclick="ym(99941860,'reachGoal','withmeat_vote')"
-                    class="button button-red"
+                    class="button button-red modal-open-btn"
                   >
                     Проголосовать</button
                   ><!----><!---->
@@ -310,8 +300,7 @@
                   </div>
                   <!----><!----><!----><!----><button
                     data-v-2f5e1ce4=""
-                    onclick="ym(99941860,'reachGoal','fritter_vote')"
-                    class="button button-red"
+                    class="button button-red modal-open-btn"
                   >
                     Проголосовать</button
                   ><!---->
@@ -321,7 +310,6 @@
                 data-v-2f5e1ce4=""
                 href="https://5ka.ru/search/gotovye-bliny--251C24787/"
                 target="_blank"
-                onclick="ym(99941860,'reachGoal','try')"
                 class="button button-red"
                 >Попробовать блинчики</a
               >
@@ -392,8 +380,8 @@
               </div>
               <button
                 data-v-2d3c4d34=""
-                onclick="ym(99941860,'reachGoal','take part')"
                 class="button button-red"
+                id="modal-btn"
               >
                 Принять участие в конкурсе
               </button>
@@ -412,7 +400,7 @@
                 и даю
                 <a
                   data-v-2d3c4d34=""
-                  href="/pdn.pdf"
+                  href="https://maslenitsa-5ka.ru/pdn.pdf"
                   target="_blank"
                   style="color: black; text-decoration: underline"
                   >согласие на обработку персональных данных</a
@@ -560,5 +548,95 @@
         </div>
       </section>
     </div>
+    <div
+      data-v-2f5e1ce4=""
+      id="promocode-modal___BV_modal_outer_"
+      style="position: absolute; z-index: 1040"
+      class="hidden"
+    >
+      <div
+        id="promocode-modal"
+        role="dialog"
+        aria-describedby="promocode-modal___BV_modal_body_"
+        class="modal fade show"
+        aria-modal="true"
+        style="display: block"
+      >
+        <div class="modal-dialog modal-md modal-dialog-centered">
+          <span tabindex="0"></span>
+          <div
+            id="promocode-modal___BV_modal_content_"
+            tabindex="-1"
+            class="modal-content"
+          >
+            <!---->
+            <div id="promocode-modal___BV_modal_body_" class="modal-body">
+              <div data-v-2f5e1ce4="" class="header">
+                <span data-v-2f5e1ce4="" class="close-icon" id="modal-close-btn"
+                  ><img
+                    data-v-2f5e1ce4=""
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADpSURBVHgB1ZjbDcMgDEVNJskna2TyrsFfGaVQUYlGgdgYrBtLeQH2PQoQTIiAzOWT9/5dno8QQiRDS9p7urzy/VaVfwtLpTXIXsMc6YiWQCeQmBlcr3JVl7W0HKcRTbSehpM0XglyCcNxWgHShOE6zwTpwkiCzIrhZgbT+t7CjAQd9WHBSIOPvk02DFdE060imDsx7YAXw7RES5Vq5g3BNIBIA6KCuQAiDUi2jYDs+d0EM4BhpjbMRw9mOYBZKGFSCJjkCibthEnIYbYqMJs4mO2tJUgP6JdCmIJkKxp/fz/qfCZagTSA6APO2Fcm2J2t+QAAAABJRU5ErkJggg=="
+                    aria-label="close"
+                /></span>
+                <h5 data-v-2f5e1ce4="">
+                  Спасибо! <br data-v-2f5e1ce4="" />
+                  Ваш голос принят!
+                </h5>
+                <div data-v-2f5e1ce4="" class="add-text">
+                  Заполните анкету <br data-v-2f5e1ce4="" />
+                  для участия в конкурсе
+                </div>
+                <div class="form-wrapper">
+                  <form id="main-form">
+                    <div class="input-wrapper">
+                      <label for="name" class="input-label">Ваше имя:</label>
+                      <input
+                        type="text"
+                        class="form-input"
+                        id="name"
+                        name="name"
+                        required
+                      />
+                      <div class="error" id="nameError"></div>
+                    </div>
+
+                    <div class="input-wrapper">
+                      <label for="phone" class="input-label"
+                        >Ваш номер телефона:</label
+                      >
+                      <input
+                        type="tel"
+                        class="form-input"
+                        id="phone"
+                        name="phone"
+                        required
+                      />
+                      <div class="error" id="phoneError"></div>
+                    </div>
+
+                    <button type="submit" class="form-button">
+                      Оставить заявку
+                    </button>
+                  </form>
+                </div>
+                <div data-v-2f5e1ce4="" class="small-text">
+                  <br data-v-2f5e1ce4="" /><br data-v-2f5e1ce4="" />
+                  Условия: Период действия - с 24 февраля по 31 июля
+                  <br data-v-2f5e1ce4="" />
+                  Номинал – скидка 10% при покупке от 2000 р
+                </div>
+              </div>
+            </div>
+            <!---->
+          </div>
+          <span tabindex="0"></span>
+        </div>
+      </div>
+      <div
+        id="promocode-modal___BV_modal_backdrop_"
+        class="modal-backdrop"
+      ></div>
+    </div>
+    <script src="./assets/js/main.js"></script>
   </body>
 </html>
