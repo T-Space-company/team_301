@@ -89,7 +89,53 @@ section {
 }
 
 .hero__image {
-  margin-bottom: 260px;
+  margin-bottom: 60px;
+}
+
+.hero__form {
+  margin-bottom: 140px;
+  z-index: 10;
+  width: 100%;
+}
+
+.form__main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 16px;
+}
+
+.input-group > input {
+  border-radius: 8px;
+  border: 1px solid #d0d0d0;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  background-color: transparent;
+  width: 100%;
+  font-family: "Open Sans";
+  font-size: 14px;
+}
+
+.input-group > input::placeholder {
+  color: #828282;
+  font-family: "Open Sans";
+  font-size: 14px;
+}
+
+.submit-btn {
+  border-radius: 40px;
+  background: #3949ab;
+  border: none;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  font-family: "Open Sans";
+  font-size: 14px;
+  height: 40px;
 }
 
 .hero__bottom {
