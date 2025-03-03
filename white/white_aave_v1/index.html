@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AAVE</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <img src="./img/logo.svg" alt="Logo" />
+      <img src="./img/menu.svg" alt="Icon" />
+    </header>
+    <main class="main">
+      <section class="main__hero">
+        <h1 class="hero__heading">
+          <span class="accent">AAVE</span> – ТВОЯ ФИНАНСОВАЯ СВОБОДА
+        </h1>
+        <h2 class="hero__subheading">
+          <span class="accent">DEFI:</span> СТАВЬ, <br />ЗАРАБАТЫВАЙ,
+          <br />УПРАВЛЯЙ
+        </h2>
+        <div class="hero__image">
+          <img src="./img/main.png" alt="Image" />
+        </div>
+        <div class="hero__form">
+          <form action="" class="form__main">
+            <div class="input-group">
+              <input type="text" id="nameInput" placeholder="Ваше имя" />
+            </div>
+
+            <div class="input-group">
+              <input
+                type="text"
+                id="telegramInput"
+                placeholder="Telegram"
+                onfocus="setAtSymbol()"
+                oninput="fixTelegram()"
+              />
+            </div>
+
+            <button type="submit" class="submit-btn">Отправить</button>
+          </form>
+        </div>
+        <img src="./img/bg_top.png" alt="Image" class="hero__bottom" />
+      </section>
+      <section class="main__opportunities">
+        <h2 class="opportunities__heading">
+          ПОЛНЫЙ НАБОР ВОЗМОЖНОСТЕЙ DEFI В AAVE
+        </h2>
+        <div class="opportunities__image">
+          <img src="./img/opport.svg" alt="Image" />
+        </div>
+        <ul class="opportunities__list">
+          <li class="opportunities__item">
+            Гибкие займы без <span class="accent">банков</span>
+          </li>
+          <li class="opportunities__item">
+            <span class="accent">Пассивный</span> доход через стейкинг
+          </li>
+          <li class="opportunities__item">
+            Сигналы для <span class="accent">прибыльной</span> торговли
+          </li>
+        </ul>
+      </section>
+      <section class="main__manager">
+        <div class="manager__wrapper">
+          <div class="manager__choose">
+            <div class="choose__image">
+              <img src="./img/choose.svg" alt="Image" />
+            </div>
+            <span class="choose__text">Выбор менеджера</span>
+          </div>
+          <h2 class="manager__heading">Как это сделать?</h2>
+          <p class="manager__text">
+            У каждого клиента свой менеджер<br />
+            Вся коммуникация только через Telegram<br />
+            Выбери менеджера в боте прямо сейчас<br />
+            Быстрые ответы и полное сопровождение<br />
+          </p>
+        </div>
+        <div class="manager__image">
+          <img src="./img/manager_img.svg" alt="Image" />
+        </div>
+      </section>
+      <!-- <section class="main__bottom">
+        <div class="bottom__pros">
+          <div class="pros__item">
+            <img src="./img/safe.svg" alt="Icon" />
+            <h2 class="pros__heading">Безопасность и прозрачность</h2>
+            <p class="pros__text">
+              Aave работает на смарт-контрактах, гарантируя полную защиту и
+              прозрачность.
+            </p>
+          </div>
+          <div class="pros__item">
+            <img src="./img/lock.svg" alt="Icon" />
+            <h2 class="pros__heading">Мгновенная ликвидность</h2>
+            <p class="pros__text">
+              Получай займы без продажи активов — используй криптовалюту как
+              залог.
+            </p>
+          </div>
+          <div class="pros__item">
+            <img src="./img/signals.svg" alt="Icon" />
+            <h2 class="pros__heading">Умные криптосигналы</h2>
+            <p class="pros__text">
+              Получай актуальные сигналы для выгодных инвестиций в режиме
+              реального времени.
+            </p>
+          </div>
+        </div>
+      </section> -->
+    </main>
+    <script>
+      function setAtSymbol() {
+        let input = document.getElementById("telegramInput");
+        if (input.value === "") {
+          input.value = "@";
+        }
+      }
+
+      function fixTelegram() {
+        let input = document.getElementById("telegramInput");
+        if (!input.value.startsWith("@")) {
+          input.value = "@" + input.value.replace(/@+/g, "");
+        }
+      }
+    </script>
+  </body>
+</html>
