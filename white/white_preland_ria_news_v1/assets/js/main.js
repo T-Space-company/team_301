@@ -10,75 +10,116 @@ document.addEventListener("DOMContentLoaded", () => {
       ".partners__arrows .arrow:last-child"
     );
 
-    let isDragging = false;
-    let startX, scrollLeft;
-
-    // Перемещение по кнопкам
-    const scrollStep = 186; // Ширина карточки + gap (170px + 16px)
-    let scrollAmount = 0;
+    let isDown = false;
+    let startX, startScrollLeft;
 
     nextBtn.addEventListener("click", () => {
-      if (scrollAmount < slider.scrollWidth - slider.clientWidth) {
-        scrollAmount += scrollStep;
-        slider.scrollTo({
-          left: scrollAmount,
-          behavior: "smooth",
-        });
-      }
+      slider.scrollBy({ left: 200, behavior: "smooth" });
     });
 
     prevBtn.addEventListener("click", () => {
-      if (scrollAmount > 0) {
-        scrollAmount -= scrollStep;
-        slider.scrollTo({
-          left: scrollAmount,
-          behavior: "smooth",
-        });
-      }
+      slider.scrollBy({ left: -200, behavior: "smooth" });
     });
 
-    // Drag (перетаскивание)
-    slider.addEventListener("mousedown", (e) => {
-      isDragging = true;
-      startX = e.pageX - slider.offsetLeft;
-      scrollLeft = slider.scrollLeft;
-      slider.style.cursor = "grabbing";
-    });
+    const startDrag = (e) => {
+      isDown = true;
+      startX = e.touches ? e.touches[0].pageX : e.pageX;
+      startScrollLeft = slider.scrollLeft;
+      slider.style.scrollBehavior = "auto";
+    };
 
-    slider.addEventListener("mouseleave", () => {
-      isDragging = false;
-      slider.style.cursor = "grab";
-    });
+    const moveDrag = (e) => {
+      if (!isDown) return;
+      if (e.cancelable) e.preventDefault();
+      const x = e.touches ? e.touches[0].pageX : e.pageX;
+      const walk = startX - x;
+      slider.scrollLeft = startScrollLeft + walk;
+    };
 
-    slider.addEventListener("mouseup", () => {
-      isDragging = false;
-      slider.style.cursor = "grab";
-    });
+    const stopDrag = () => {
+      isDown = false;
+      slider.style.scrollBehavior = "smooth";
+    };
 
-    slider.addEventListener("mousemove", (e) => {
-      if (!isDragging) return;
-      e.preventDefault();
-      const x = e.pageX - slider.offsetLeft;
-      const walk = (x - startX) * 1.5; // Ускоряем движение
-      slider.scrollLeft = scrollLeft - walk;
-    });
+    slider.addEventListener("mousedown", startDrag);
+    slider.addEventListener("mousemove", moveDrag);
+    slider.addEventListener("mouseup", stopDrag);
+    slider.addEventListener("mouseleave", stopDrag);
 
-    // Touch (свайпы для мобильных)
-    slider.addEventListener("touchstart", (e) => {
-      isDragging = true;
-      startX = e.touches[0].pageX - slider.offsetLeft;
-      scrollLeft = slider.scrollLeft;
-    });
-
-    slider.addEventListener("touchend", () => {
-      isDragging = false;
-    });
-
-    slider.addEventListener("touchmove", (e) => {
-      if (!isDragging) return;
-      const x = e.touches[0].pageX - slider.offsetLeft;
-      const walk = (x - startX) * 1.5;
-      slider.scrollLeft = scrollLeft - walk;
-    });
+    slider.addEventListener("touchstart", startDrag, { passive: false });
+    slider.addEventListener("touchmove", moveDrag, { passive: false });
+    slider.addEventListener("touchend", stopDrag);
   });
+
+  const footerSliders = document.querySelectorAll(
+    ".footer__links--top, .footer__links--bottom"
+  );
+
+  footerSliders.forEach((footerSlider) => {
+    let isDown = false;
+    let startX, startScrollLeft;
+
+    const startDrag = (e) => {
+      isDown = true;
+      startX = e.touches ? e.touches[0].pageX : e.pageX;
+      startScrollLeft = footerSlider.scrollLeft;
+      footerSlider.style.scrollBehavior = "auto";
+    };
+
+    const moveDrag = (e) => {
+      if (!isDown) return;
+      if (e.cancelable) e.preventDefault();
+      const x = e.touches ? e.touches[0].pageX : e.pageX;
+      const walk = startX - x;
+      footerSlider.scrollLeft = startScrollLeft + walk;
+    };
+
+    const stopDrag = () => {
+      isDown = false;
+      footerSlider.style.scrollBehavior = "smooth";
+    };
+
+    footerSlider.addEventListener("mousedown", startDrag);
+    footerSlider.addEventListener("mousemove", moveDrag);
+    footerSlider.addEventListener("mouseup", stopDrag);
+    footerSlider.addEventListener("mouseleave", stopDrag);
+
+    footerSlider.addEventListener("touchstart", startDrag, { passive: false });
+    footerSlider.addEventListener("touchmove", moveDrag, { passive: false });
+    footerSlider.addEventListener("touchend", stopDrag);
+  });
+
+  const socialsSlider = document.querySelector(".footer__socials");
+
+  let isDown = false;
+  let startX, startScrollLeft;
+
+  const startDrag = (e) => {
+    isDown = true;
+    startX = e.touches ? e.touches[0].pageX : e.pageX;
+    startScrollLeft = socialsSlider.scrollLeft;
+    socialsSlider.style.scrollBehavior = "auto";
+  };
+
+  const moveDrag = (e) => {
+    if (!isDown) return;
+    if (e.cancelable) e.preventDefault();
+    const x = e.touches ? e.touches[0].pageX : e.pageX;
+    const walk = startX - x;
+    socialsSlider.scrollLeft = startScrollLeft + walk;
+  };
+
+  const stopDrag = () => {
+    isDown = false;
+    socialsSlider.style.scrollBehavior = "smooth";
+  };
+
+  socialsSlider.addEventListener("mousedown", startDrag);
+  socialsSlider.addEventListener("mousemove", moveDrag);
+  socialsSlider.addEventListener("mouseup", stopDrag);
+  socialsSlider.addEventListener("mouseleave", stopDrag);
+
+  socialsSlider.addEventListener("touchstart", startDrag, { passive: false });
+  socialsSlider.addEventListener("touchmove", moveDrag, { passive: false });
+  socialsSlider.addEventListener("touchend", stopDrag);
 });
