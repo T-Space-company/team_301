@@ -24,11 +24,9 @@
           <img src="./assets/img/icons/user.svg" alt="Icon" />
         </a>
       </div>
-      <div class="header__logo">
-        <a href="">
+      <a href="" class="header__logo">
           <img src="./assets/img/logo.svg" alt="Logo" />
-        </a>
-      </div>
+      </ф>
       <div class="header__right">
         <a href="">
           <img src="./assets/img/icons/search.svg" alt="Icon" />
