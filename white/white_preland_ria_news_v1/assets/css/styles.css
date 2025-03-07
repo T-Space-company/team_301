@@ -72,6 +72,9 @@ header {
   font-family: "Roboto Flex";
   font-size: 14px;
   line-height: 18px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .main__article {
@@ -238,7 +241,7 @@ header {
   align-items: flex-start;
 }
 
-.partner__article > span {
+.partner__article > a {
   color: #000;
   font-family: Arial;
   font-size: 14px;
@@ -402,7 +405,7 @@ header {
   height: 106px;
 }
 
-.partners__article > p {
+.partners__article > a {
   color: #333;
   font-family: "Roboto Flex";
   font-size: 14px;
@@ -430,7 +433,6 @@ header {
   overflow-x: auto;
   scroll-behavior: smooth;
   user-select: none;
-  -webkit-overflow-scrolling: touch;
   white-space: nowrap;
 }
 
@@ -491,7 +493,7 @@ header {
   user-select: none;
   white-space: nowrap;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   gap: 20px;
   max-width: 100%;
@@ -553,4 +555,68 @@ header {
   width: 100%;
   justify-content: flex-end;
   padding: 20px 0;
+}
+
+.mobile {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: flex;
+  }
+  .main__article {
+    justify-content: center;
+    margin: 10px 0 100px 0;
+  }
+  .main__article-wrap {
+    gap: 60px;
+  }
+  .main__heading.mobile {
+    margin-bottom: 30px;
+    margin-left: -20px;
+    margin-right: -20px;
+    width: calc(100% + 40px);
+  }
+  .article__heading {
+    font-size: 26px;
+    line-height: 30px;
+  }
+  .article__dzen {
+    margin-top: 10px;
+  }
+  .article__reactions {
+    padding: 20px;
+    justify-content: space-around;
+  }
+  .header {
+    padding: 0 10px;
+  }
+  .header__right a:nth-child(1) img {
+    content: url("../img/icons/user.svg");
+  }
+
+  .header__right a:nth-child(2) img {
+    content: url("../img/icons/search.svg");
+  }
+  .article__copyright {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer__text-wrap {
+    flex-direction: column;
+  }
+  .footer__socials {
+    justify-content: flex-start;
+    padding: 0 20px;
+  }
+  .footer__bottom {
+    padding: 0 20px 80px 20px;
+  }
 }

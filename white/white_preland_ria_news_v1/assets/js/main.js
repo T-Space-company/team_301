@@ -13,11 +13,11 @@ document.addEventListener("DOMContentLoaded", () => {
     let isDown = false;
     let startX, startScrollLeft;
 
-    nextBtn.addEventListener("click", () => {
+    nextBtn?.addEventListener("click", () => {
       slider.scrollBy({ left: 200, behavior: "smooth" });
     });
 
-    prevBtn.addEventListener("click", () => {
+    prevBtn?.addEventListener("click", () => {
       slider.scrollBy({ left: -200, behavior: "smooth" });
     });
 
@@ -122,4 +122,46 @@ document.addEventListener("DOMContentLoaded", () => {
   socialsSlider.addEventListener("touchstart", startDrag, { passive: false });
   socialsSlider.addEventListener("touchmove", moveDrag, { passive: false });
   socialsSlider.addEventListener("touchend", stopDrag);
+
+  const thirdMobileSlider = document.querySelector(
+    ".article__partners.third.mobile .partners__articles"
+  );
+
+  if (thirdMobileSlider) {
+    let isDown = false;
+    let startX, startScrollLeft;
+
+    const startDrag = (e) => {
+      isDown = true;
+      startX = e.touches ? e.touches[0].pageX : e.pageX;
+      startScrollLeft = thirdMobileSlider.scrollLeft;
+      thirdMobileSlider.style.scrollBehavior = "auto";
+    };
+
+    const moveDrag = (e) => {
+      if (!isDown) return;
+      if (e.cancelable) e.preventDefault();
+      const x = e.touches ? e.touches[0].pageX : e.pageX;
+      const walk = startX - x;
+      thirdMobileSlider.scrollLeft = startScrollLeft + walk;
+    };
+
+    const stopDrag = () => {
+      isDown = false;
+      thirdMobileSlider.style.scrollBehavior = "smooth";
+    };
+
+    thirdMobileSlider.addEventListener("mousedown", startDrag);
+    thirdMobileSlider.addEventListener("mousemove", moveDrag);
+    thirdMobileSlider.addEventListener("mouseup", stopDrag);
+    thirdMobileSlider.addEventListener("mouseleave", stopDrag);
+
+    thirdMobileSlider.addEventListener("touchstart", startDrag, {
+      passive: false,
+    });
+    thirdMobileSlider.addEventListener("touchmove", moveDrag, {
+      passive: false,
+    });
+    thirdMobileSlider.addEventListener("touchend", stopDrag);
+  }
 });
