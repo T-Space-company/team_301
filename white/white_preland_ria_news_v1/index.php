@@ -19,16 +19,14 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__left">
+      <div class="header__left desktop">
         <a href="">
           <img src="./assets/img/icons/user.svg" alt="Icon" />
         </a>
       </div>
-      <div class="header__logo">
-        <a href="">
+      <a href="" class="header__logo">
           <img src="./assets/img/logo.svg" alt="Logo" />
-        </a>
-      </div>
+      </ф>
       <div class="header__right">
         <a href="">
           <img src="./assets/img/icons/search.svg" alt="Icon" />
@@ -39,7 +37,7 @@
       </div>
     </header>
     <main class="main">
-      <div class="main__heading">
+      <div class="main__heading desktop">
         <span class="heading__date">17:43 28.02.2025</span>
         <span class="heading__views">706 просмотров</span>
       </div>
@@ -61,8 +59,8 @@
               <span class="copyright__text"
                 >© РИА Новости / Наталья Селиверстова</span
               >
-              <span class="copyright__text">|</span>
-              <span class="copyright__text">Перейти в медиабанк</span>
+              <span class="copyright__text desktop">|</span>
+              <a href="" class="copyright__text">Перейти в медиабанк</a>
             </div>
             <span class="copyright__text bottom"
               >Отделение "Сбербанка" . Архивное фото</span
@@ -97,11 +95,34 @@
                 позитивные настроения инвесторов в отношении банка. Сбер
                 Инвестиции – важный институт развития, который помогает людям и
                 бизнесу в решении их повседневных финансовых вопросов на основе
-                передовых технологических решений", - добавил Силуанов
+                передовых технологических решений", - добавил
+                <a href="" class="underline">Силуанов</a>
               </p>
             </div>
           </div>
           <div class="article--second">
+            <div class="main__heading mobile">
+              <span class="heading__date">11:27 20.02.2025</span>
+              <span class="heading__views"
+                >1409
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="25"
+                  viewBox="0 0 24 25"
+                  fill="none"
+                >
+                  <path
+                    d="M12.0003 18.0765C8.99429 18.0765 5.90309 16.2069 3.29609 12.8121C3.15464 12.6278 3.07802 12.402 3.07813 12.1697C3.07823 11.9374 3.15507 11.7116 3.29669 11.5275C5.90309 8.13327 8.99429 6.26367 12.0003 6.26367C15.0063 6.26367 18.0975 8.13327 20.7045 11.5281C20.8459 11.7123 20.9226 11.9382 20.9225 12.1705C20.9223 12.4028 20.8455 12.6285 20.7039 12.8127C18.0975 16.2069 15.0063 18.0765 12.0003 18.0765ZM4.69829 12.1701C6.10709 13.9329 8.75969 16.5765 12.0003 16.5765C15.2415 16.5765 17.8941 13.9323 19.3023 12.1701C17.8935 10.4073 15.2409 7.76367 12.0003 7.76367C8.75909 7.76367 6.10649 10.4073 4.69829 12.1701Z"
+                    fill="#7B7B7B"
+                  />
+                  <path
+                    d="M12.0008 14.8697C13.492 14.8697 14.7008 13.6609 14.7008 12.1697C14.7008 10.6786 13.492 9.46973 12.0008 9.46973C10.5096 9.46973 9.30078 10.6786 9.30078 12.1697C9.30078 13.6609 10.5096 14.8697 12.0008 14.8697Z"
+                    fill="#7B7B7B"
+                  />
+                </svg>
+              </span>
+            </div>
             <h1 class="article__heading">
               Сбербанк предупредил о всплеске мошенничества с бизнесом под видом
               ФНС
@@ -117,8 +138,8 @@
               <span class="copyright__text"
                 >© РИА Новости / Виталий Белоусов</span
               >
-              <span class="copyright__text">|</span>
-              <span class="copyright__text">Перейти в медиабанк</span>
+              <span class="copyright__text desktop">|</span>
+              <a href="" class="copyright__text">Перейти в медиабанк</a>
             </div>
             <span class="copyright__text bottom"
               >Новый логотип Сбербанка на здании центрального офиса в Москве.
@@ -172,7 +193,7 @@
                 и ссылки с вредоносными программами.
               </p>
             </div>
-            <div class="article__addon">
+            <div class="article__addon desktop">
               <a href="">
                 <img src="./assets/img/fraud.png" alt="Image" />
               </a>
@@ -227,10 +248,10 @@
             <a href="" class="tag">Федеральная налоговая служба (ФНС России)</a>
             <a href="" class="tag">Общество</a>
           </div>
-          <div class="article__partners first">
+          <div class="article__partners first desktop">
             <div class="partners__top">
               <div class="partners__text">
-                <h3 class="partners__heading">Новости партнеров</h3>
+                <a href="" class="partners__heading">Новости партнеров</a>
                 <span class="partners__subheading">СМИ2</span>
               </div>
               <div class="partners__arrows">
@@ -245,37 +266,39 @@
             <div class="partners__articles">
               <div class="partners__article">
                 <img src="./assets/img/prt-1-1.png" alt="Image" />
-                <p>Новейшее супероружие наводит ужас на ВСУ</p>
+                <a href="">Новейшее супероружие наводит ужас на ВСУ</a>
               </div>
               <div class="partners__article">
                 <img src="./assets/img/prt-1-2.png" alt="Image" />
-                <p>
+                <a href="">
                   В Сербии оппозиция зажгла дымовые шашки во время парламентской
                   сессии
-                </p>
+                </a>
               </div>
               <div class="partners__article">
                 <img src="./assets/img/prt-1-3.png" alt="Image" />
-                <p>Крым накрыли "Русским куполом": у врага больше нет шансов</p>
+                <a href=""
+                  >Крым накрыли "Русским куполом": у врага больше нет шансов</a
+                >
               </div>
               <div class="partners__article">
                 <img src="./assets/img/prt-1-4.png" alt="Image" />
-                <p>
+                <a href="">
                   Политолог оценил готовность США отказаться от членства в НАТО
-                </p>
+                </a>
               </div>
               <div class="partners__article">
                 <img src="./assets/img/prt-1-5.png" alt="Image" />
-                <p>
+                <a href="">
                   Киев готов подписать соглашение по ресурсам, заявил Шмыгаль
-                </p>
+                </a>
               </div>
             </div>
           </div>
-          <div class="article__partners second">
+          <div class="article__partners second desktop">
             <div class="partners__top">
               <div class="partners__text">
-                <h3 class="partners__heading">Новости партнеров</h3>
+                <a href="" class="partners__heading">Новости партнеров</a>
                 <span class="partners__subheading">СМИ2</span>
               </div>
               <div class="partners__arrows">
@@ -290,73 +313,148 @@
             <div class="partners__articles">
               <div class="partners__article">
                 <img src="./assets/img/prt-2-1.png" alt="Image" />
-                <p>
+                <a href="">
                   В Индии началась утилизация подсанкционного нефтеналивного
                   танкера
-                </p>
+                </a>
               </div>
               <div class="partners__article">
                 <img src="./assets/img/prt-2-2.png" alt="Image" />
-                <p>
+                <a href="">
                   На польско- украинской границе прекратилась передача ВСУ
                   оружия из США
-                </p>
+                </a>
               </div>
               <div class="partners__article">
                 <img src="./assets/img/prt-2-3.png" alt="Image" />
-                <p>Как юная партизанка стала Героем СССР за необычный подвиг</p>
+                <a href=""
+                  >Как юная партизанка стала Героем СССР за необычный подвиг</a
+                >
               </div>
               <div class="partners__article">
                 <img src="./assets/img/prt-2-4.png" alt="Image" />
-                <p>
+                <a href="">
                   БПЛА противника не долетают до целей: "Русский купол" встал на
                   защиту
-                </p>
+                </a>
               </div>
               <div class="partners__article">
                 <img src="./assets/img/prt-2-5.png" alt="Image" />
-                <p>
+                <a href="">
                   США готовят новый этап кампании по изоляции России в мировом
                   спорте
-                </p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="article__partners third mobile">
+            <div class="partners__top">
+              <div class="partners__text">
+                <a href="" class="partners__heading">Рекомендуем</a>
+              </div>
+            </div>
+            <div class="partners__articles">
+              <div class="partners__article">
+                <img src="./assets/img/prt-1-1.png" alt="Image" />
+                <a href="">Новейшее супероружие наводит ужас на ВСУ</a>
+              </div>
+              <div class="partners__article">
+                <img src="./assets/img/prt-1-2.png" alt="Image" />
+                <a href="">
+                  В Сербии оппозиция зажгла дымовые шашки во время парламентской
+                  сессии
+                </a>
+              </div>
+              <div class="partners__article">
+                <img src="./assets/img/prt-1-3.png" alt="Image" />
+                <a href=""
+                  >Крым накрыли "Русским куполом": у врага больше нет шансов</a
+                >
+              </div>
+              <div class="partners__article">
+                <img src="./assets/img/prt-1-4.png" alt="Image" />
+                <a href="">
+                  Политолог оценил готовность США отказаться от членства в НАТО
+                </a>
+              </div>
+              <div class="partners__article">
+                <img src="./assets/img/prt-1-5.png" alt="Image" />
+                <a href="">
+                  Киев готов подписать соглашение по ресурсам, заявил Шмыгаль
+                </a>
+              </div>
+              <div class="partners__article">
+                <img src="./assets/img/prt-2-1.png" alt="Image" />
+                <a href="">
+                  В Индии началась утилизация подсанкционного нефтеналивного
+                  танкера
+                </a>
+              </div>
+              <div class="partners__article">
+                <img src="./assets/img/prt-2-2.png" alt="Image" />
+                <a href="">
+                  На польско- украинской границе прекратилась передача ВСУ
+                  оружия из США
+                </a>
+              </div>
+              <div class="partners__article">
+                <img src="./assets/img/prt-2-3.png" alt="Image" />
+                <a href=""
+                  >Как юная партизанка стала Героем СССР за необычный подвиг</a
+                >
+              </div>
+              <div class="partners__article">
+                <img src="./assets/img/prt-2-4.png" alt="Image" />
+                <a href="">
+                  БПЛА противника не долетают до целей: "Русский купол" встал на
+                  защиту
+                </a>
+              </div>
+              <div class="partners__article">
+                <img src="./assets/img/prt-2-5.png" alt="Image" />
+                <a href="">
+                  США готовят новый этап кампании по изоляции России в мировом
+                  спорте
+                </a>
               </div>
             </div>
           </div>
         </div>
-        <div class="main__partner-wrap">
+        <div class="main__partner-wrap desktop">
           <div class="partner__top">
-            <h4 class="partner__heading">Новости партнеров</h4>
+            <a href="" class="partner__heading">Новости партнеров</a>
             <span class="partner__subheading">СМИ2</span>
           </div>
           <div class="partner__image">
             <img src="./assets/img/plane.png" alt="Image" />
           </div>
-          <h4 class="partner__heading bottom">
+          <a href="" class="partner__heading bottom">
             Защита территорий: в России разработали уникальную систему
-          </h4>
+          </a>
           <div class="partner__articles">
             <div class="partner__article">
               <img src="./assets/img/gift.png" alt="Image" />
-              <span
-                >В России перед 8 марта провели опрос и удивились
-                результату</span
+              <a href=""
+                >В России перед 8 марта провели опрос и удивились результату</a
               >
             </div>
             <div class="partner__article">
               <img src="./assets/img/bridge.png" alt="Image" />
-              <span
+              <a href=""
                 >Новейшая «супер-система» защитит Крым от вражеских
-                беспилотников</span
+                беспилотников</a
               >
             </div>
             <div class="partner__article">
               <img src="./assets/img/wm.png" alt="Image" />
-              <span>Этой советской девушки боялись лучшие бойцы Вермахта</span>
+              <a href=""
+                >Этой советской девушки боялись лучшие бойцы Вермахта</a
+              >
             </div>
             <div class="partner__article">
               <img src="./assets/img/v.png" alt="Image" />
-              <span
-                >Назван главный способ защиты Крыма от беспилотников ВСУ</span
+              <a href=""
+                >Назван главный способ защиты Крыма от беспилотников ВСУ</a
               >
             </div>
           </div>
