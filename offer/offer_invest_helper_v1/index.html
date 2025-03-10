@@ -327,6 +327,9 @@ if (!isset($rawClick) && !isset($click)) {
     <script src="loadAssets.js?v=321"></script>
 
     <script>
+      localStorage.removeItem("answers");
+    </script>
+    <script>
       window.onload = function () {
         var err = localStorage.getItem("unsuitable");
         var thx = localStorage.getItem("thanks");

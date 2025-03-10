@@ -8,9 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const formMain = document.getElementById("form-main");
   const tradingPair = document.querySelector(".stats__pair");
 
-  let clickCount = 0; // Tracks how many times the user clicks
+  let clickCount = 0;
 
-  // Генерация случайных свечных данных
   const generateCandleData = (lastClose, lastTime, trend = 0) => {
     let open = lastClose;
     let close = open + (Math.random() - 0.5 + trend) * 10;

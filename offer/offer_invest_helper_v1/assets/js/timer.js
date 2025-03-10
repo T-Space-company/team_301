@@ -11,6 +11,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const chartContent = document.getElementById("main-content");
   const formContent = document.getElementById("form-main");
 
+  function saveAnswer(question, answer) {
+    let answers = JSON.parse(localStorage.getItem("answers")) || [];
+    answers.push(`${question}: ${answer}`);
+    localStorage.setItem("answers", JSON.stringify(answers));
+  }
+
   let timerInterval;
   let profitInterval;
   let timerRunning = false;
@@ -89,10 +95,12 @@ document.addEventListener("DOMContentLoaded", () => {
     quiz2.classList.remove("hidden");
   });
   quiz2Button.addEventListener("click", () => {
+    saveAnswer("Вам есть 25 лет?", "Да");
     quiz2.classList.add("hidden");
     quiz3.classList.remove("hidden");
   });
   quiz3Button.addEventListener("click", () => {
+    saveAnswer("Имеете гражданство РФ?", "Да");
     quiz3.classList.add("hidden");
     chartContent.classList.add("hidden");
     formContent.classList.remove("hidden");
