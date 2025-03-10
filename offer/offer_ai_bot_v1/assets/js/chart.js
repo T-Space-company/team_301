@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const body = document.querySelector("body");
   const ctx = document.getElementById("chartCanvas").getContext("2d");
   const overlay = document.getElementById("overlay");
   const profit = document.querySelector(".profit__sum");
@@ -197,6 +198,7 @@ document.addEventListener("DOMContentLoaded", () => {
           balanceChange.classList.remove("hidden");
           setTimeout(() => {
             modal5.classList.remove("hidden");
+            body.style.overflow = "hidden";
           }, 1500);
         }
       }, 3000);

@@ -9,6 +9,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const quiz3Button = document.getElementById("quiz3-btn");
   const quiz4Button = document.getElementById("quiz4-btn");
   const mainScreen = document.getElementById("main-section");
+  const modal5 = document.getElementById("modal-5");
+  const modal5Button = document.getElementById("quiz5-btn");
+  const formModal = document.getElementById("modal-form");
 
   function saveAnswer(question, answer) {
     let answers = JSON.parse(localStorage.getItem("answers")) || [];
@@ -38,5 +41,10 @@ document.addEventListener("DOMContentLoaded", () => {
     quiz4.classList.add("hidden");
     mainScreen.classList.remove("hidden");
     main.classList.remove("first");
+  });
+
+  modal5Button.addEventListener("click", () => {
+    modal5.classList.add("hidden");
+    formModal.classList.remove("hidden");
   });
 });

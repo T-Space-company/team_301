@@ -358,6 +358,74 @@ body {
   height: 24px;
 }
 
+#modal-5 > .modal__content {
+  gap: 30px;
+  padding: 20px 15px;
+}
+
+#modal-5 > .modal__content > .modal__question {
+  color: #393939;
+  text-align: center;
+  font-family: "Fixel Display";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+.modal__text {
+  text-align: center;
+  font-family: "Fixel Display";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 120%;
+  background: linear-gradient(97deg, #1c7d55 0%, #001d06 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.modal__balance {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.modal__balance-heading {
+  font-family: "Fixel Display";
+  font-size: 18px;
+  line-height: 130%;
+  background: linear-gradient(97deg, #1c7d55 0%, #001d06 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.modal__balance-sum {
+  color: #393939;
+  font-family: "Fixel Display";
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.modal__heading {
+  text-align: center;
+  font-family: "Fixel Display";
+  font-size: 26px;
+  font-weight: 900;
+  line-height: 120%;
+  background: linear-gradient(97deg, #1c7d55 0%, #001d06 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.modal__partners {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
 .disabled {
   background: #888888 !important;
   color: #ffffff99;
@@ -366,4 +434,63 @@ body {
 
 .hidden {
   display: none;
+}
+
+#modal-form > .modal__content {
+  padding: 30px 20px;
+}
+
+.form-heading {
+  color: #2b2b2b;
+  font-family: "Fixel Display";
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-heading > .heading-accent {
+  background: linear-gradient(97deg, #1c7d55 0%, #001d06 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.input-label {
+  color: #2b2b2b;
+  font-family: "Fixel Display";
+  font-size: 14px;
+  line-height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-input {
+  border-radius: 12px;
+  background: #eaeaea;
+  padding: 15px 17px;
+  height: auto;
+}
+
+.form-input::placeholder {
+  color: #636363;
+  font-family: "Fixel Display";
+  font-size: 13px;
+}
+
+.form-checkbox {
+  width: 16px;
+  height: 16px;
+}
+
+.checkbox-text {
+  color: #2b2b2b;
+  font-family: "Fixel Display";
+  font-size: 13px;
+  line-height: 17px;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
 }
