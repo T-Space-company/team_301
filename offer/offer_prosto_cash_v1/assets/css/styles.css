@@ -1,0 +1,205 @@
+@font-face {
+  font-family: "Mont";
+  src: url(../fonts/Mont-Regular.woff2);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Mont";
+  src: url(../fonts/Mont-SemiBold.woff2);
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Mont";
+  src: url(../fonts/Mont-Bold.woff2);
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Mont";
+  src: url(../fonts/Mont-Heavy.woff2);
+  font-weight: 800;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Mont;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+.header {
+  background: #145896;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.main {
+  background: #f4f6f8;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.main__heading {
+  border-radius: 15px;
+  background: #fff;
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  color: #041e35;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 130%;
+}
+
+.main__descr {
+  color: #041e35;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 130%;
+}
+
+.main__people-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: calc(100% + 20px);
+  overflow: hidden;
+  margin: 0 -20px;
+}
+
+.main__people {
+  display: flex;
+  gap: 45px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-bottom: 20px;
+  width: 100%;
+}
+
+.main__people::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar {
+  width: calc(100% - 20px);
+  height: 14px;
+  border-radius: 5px;
+  padding: 2px;
+  background: #fff;
+  position: relative;
+  cursor: pointer;
+  margin: 0 20px;
+}
+
+.scrollbar-thumb {
+  width: 68px;
+  height: 10px;
+  background: #145896;
+  border-radius: 5px;
+  position: absolute;
+  left: 0;
+  transition: 0.1s ease;
+}
+
+.people__card {
+  max-width: 180px;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.people__card:nth-child(1) {
+  margin-left: 20px;
+}
+
+.people__card:nth-child(6) {
+  margin-right: 20px;
+}
+
+.card__photo {
+  border-radius: 15px;
+  border: 4px solid #ffbe00;
+  background: #fff;
+  max-width: 166px;
+  width: 100%;
+  height: 230px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.card__photo > img {
+  border-radius: 11px;
+  width: 158px;
+}
+
+.card__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.info__name {
+  color: #041e35;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 130%;
+}
+
+.info__points {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.info__type {
+  color: #041e35;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 130%;
+  align-self: flex-start;
+}
+
+.point.inactive {
+  opacity: 0.3;
+  width: 22px;
+  height: 22px;
+}
+
+.info__count {
+  display: flex;
+}
+
+.count__num {
+  color: #041e35;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.count__num.plus {
+  color: #06bd00;
+}
+
+.count__num.min {
+  color: #b80000;
+}
