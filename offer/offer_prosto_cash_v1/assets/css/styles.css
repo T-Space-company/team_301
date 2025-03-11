@@ -36,6 +36,12 @@ p {
   margin: 0;
 }
 
+button {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
 .header {
   background: #145896;
   display: flex;
@@ -57,7 +63,6 @@ p {
   background: #fff;
   display: flex;
   padding: 10px;
-  justify-content: center;
   align-items: center;
   color: #041e35;
   font-size: 20px;
@@ -202,4 +207,16 @@ p {
 
 .count__num.min {
   color: #b80000;
+}
+
+.main__btn {
+  border-radius: 15px;
+  background: #145896;
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
 }
