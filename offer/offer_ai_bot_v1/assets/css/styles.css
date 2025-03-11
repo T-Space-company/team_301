@@ -232,10 +232,18 @@ body {
   background: #fff;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 -12px;
+}
+
+.trading__wrapper {
+  display: flex;
+  flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   padding: 20px 20px 60px 20px;
-  margin: 0 -12px;
+
   gap: 30px;
 }
 
@@ -426,16 +434,6 @@ body {
   gap: 10px;
 }
 
-.disabled {
-  background: #888888 !important;
-  color: #ffffff99;
-  cursor: not-allowed !important;
-}
-
-.hidden {
-  display: none;
-}
-
 #modal-form > .modal__content {
   padding: 30px 20px;
 }
@@ -491,6 +489,144 @@ body {
   line-height: 17px;
 }
 
+.checkbox-text > .input-accent {
+  background: var(--1, linear-gradient(97deg, #1c7d55 0%, #001d06 100%));
+  background-clip: text;
+  text-decoration: underline;
+}
+
 .form-group:last-child {
   margin-bottom: 0;
+}
+
+.mobile {
+  display: flex;
+}
+.desktop {
+  display: none;
+}
+
+.disabled {
+  background: #888888 !important;
+  color: #ffffff99;
+  cursor: not-allowed !important;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .main.first {
+    background-image: url(../img/bg_desktop.png);
+  }
+  .modal__content {
+    padding: 35px 25px;
+    max-width: 410px;
+  }
+  .modal__question {
+    font-size: 26px;
+  }
+  #modal-4 > .modal__content {
+    max-width: 680px;
+    gap: 40px;
+  }
+  .modal__button--first {
+    max-width: 315px;
+  }
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: flex;
+  }
+  .section {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+    gap: 40px;
+  }
+  .chart__wrapper {
+    width: 580px;
+    max-width: 580px;
+    height: 520px;
+    margin-left: 40px;
+  }
+  .trading__wrapper {
+    padding: 100px 60px 60px 60px;
+  }
+  .trading__messages.desktop {
+    flex-direction: column;
+    gap: 30px;
+    background: #e2e2e2;
+    padding: 20px;
+    height: 500px;
+  }
+  .main__trading {
+    margin: 0;
+  }
+  .chart__message {
+    max-width: 520px;
+    align-items: center;
+  }
+  .chart__message > img {
+    width: 80px;
+    height: 80px;
+  }
+  #modal-5 > .modal__content {
+    max-width: 840px;
+    gap: 33px;
+    padding: 33px;
+  }
+  #quiz5-btn {
+    max-width: none;
+  }
+  #modal-5 > .modal__content > .modal__question {
+    font-size: 24px;
+  }
+  .modal__heading {
+    font-size: 28px;
+  }
+  .modal__text {
+    font-size: 24px;
+  }
+  .modal__partners {
+    width: 100%;
+    gap: 30px;
+  }
+  .modal__partners > img {
+    max-width: 200px;
+    width: 100%;
+  }
+  #modal-form > .modal__content {
+    max-width: 700px;
+    padding: 40px 60px;
+  }
+  .form-wrapper {
+    width: 100%;
+  }
+  .form-heading {
+    font-size: 28px;
+    font-weight: 900;
+  }
+  .input-label {
+    font-size: 16px;
+  }
+  .checkbox-text {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1110px) {
+  .chart__wrapper {
+    max-width: 650px;
+    width: 650px;
+  }
+}
+
+@media (min-width: 1240px) {
+  .chart__wrapper {
+    width: 800px;
+    max-width: 800px;
+  }
 }

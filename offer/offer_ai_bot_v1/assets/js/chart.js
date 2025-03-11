@@ -11,9 +11,11 @@ document.addEventListener("DOMContentLoaded", () => {
   let tradeButton = document.getElementById("action-button");
   const tradeButtonIcon = document.querySelector(".button__icon");
   const greeting = document.getElementById("chart-greeting");
+  const greetingDesktop = document.getElementById("chart-greeting-desktop");
   const balance = document.querySelector(".balance__sum");
   const balanceChange = document.querySelector(".balance__change");
   const message = document.getElementById("message-text");
+  const messageDesktop = document.getElementById("message-text-desktop");
   const tradeNumber = document.querySelector(".trading__count");
   const tradeSum = document.querySelector(".sum__num");
   const modal5 = document.getElementById("modal-5");
@@ -144,12 +146,18 @@ document.addEventListener("DOMContentLoaded", () => {
         clickCount++;
 
         if (clickCount === 1) {
-          greeting.classList.add("hidden");
+          console.log(screen.width);
+          screen.width <= 1024
+            ? greeting.classList.add("hidden")
+            : greetingDesktop.classList.add("hidden");
           balance.textContent = "19 650₽";
           balanceChange.classList.remove("hidden");
           setTimeout(() => {
-            message.textContent =
-              "Тренд сохраняется! Отличный момент для повторной сделки!";
+            screen.width <= 1024
+              ? (message.textContent =
+                  "Тренд сохраняется! Отличный момент для повторной сделки!")
+              : (messageDesktop.textContent =
+                  "Тренд сохраняется! Отличный момент для повторной сделки!");
             tradeNumber.textContent = "Сделка 2";
             tradeSum.textContent = "19 650 ₽";
             balanceChange.classList.add("hidden");
@@ -160,8 +168,11 @@ document.addEventListener("DOMContentLoaded", () => {
           balance.textContent = "25 741₽";
           balanceChange.classList.remove("hidden");
           setTimeout(() => {
-            message.textContent =
-              "Рынок немного корректируется. Давайте откроем сделку вниз. Для снижения рисков ставка уменьшена до 6 200 ₽";
+            screen.width <= 1024
+              ? (message.textContent =
+                  "Рынок немного корректируется. Давайте откроем сделку вниз. Для снижения рисков ставка уменьшена до 6 200 ₽")
+              : (messageDesktop.textContent =
+                  "Рынок немного корректируется. Давайте откроем сделку вниз. Для снижения рисков ставка уменьшена до 6 200 ₽");
             tradeNumber.textContent = "Сделка 3";
             tradeSum.textContent = "6 200 ₽";
             balanceChange.classList.add("hidden");
@@ -178,8 +189,11 @@ document.addEventListener("DOMContentLoaded", () => {
           balanceChange.classList.add("down");
           balanceChange.classList.remove("hidden");
           setTimeout(() => {
-            message.textContent =
-              "Чёткий сигнал на рост! Вкладываем всю сумму вверх!";
+            screen.width <= 1024
+              ? (message.textContent =
+                  "Чёткий сигнал на рост! Вкладываем всю сумму вверх!")
+              : (messageDesktop.textContent =
+                  "Чёткий сигнал на рост! Вкладываем всю сумму вверх!");
             tradeNumber.textContent = "Сделка 4";
             tradeSum.textContent = "19 541 ₽";
             balanceChange.classList.add("hidden");
@@ -190,7 +204,11 @@ document.addEventListener("DOMContentLoaded", () => {
             tradeButton.addEventListener("click", chooseHandler);
           }, 1500);
         } else if (clickCount === 4) {
-          message.textContent = "Поздравляю! Ваш итоговый баланс – 25 598 ₽!";
+          screen.width <= 1024
+            ? (message.textContent =
+                "Поздравляю! Ваш итоговый баланс – 25 598 ₽!")
+            : (messageDesktop.textContent =
+                "Поздравляю! Ваш итоговый баланс – 25 598 ₽!");
           balance.textContent = "25 598₽";
           balanceChange.textContent = "+31%";
           balanceChange.classList.remove("down");

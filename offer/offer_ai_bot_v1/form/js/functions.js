@@ -67,7 +67,7 @@ export function renderFormRegistrations(allFormClass) {
 <div class="form-group input-group ">
 <label class="input-label">
   Ваше имя*
-    <input class="form-control form-input form__input" name="name" placeholder="Ваше имя"  type="text" required />
+    <input class="form-control form-input form__input" name="name" placeholder="Имя"  type="text" required />
     <i class="fa__err"></i>
     <span class="fa__errInfo">- Удалите цифры </span>
     <i class="fa__checked"></i>
@@ -77,7 +77,7 @@ export function renderFormRegistrations(allFormClass) {
   <div class="form-group input-group ">
   <label class="input-label">
   Ваша фамилия*
-    <input class="form-control  form-input form__input" name="last_name" placeholder="Ваша фамилия" required type="text" />
+    <input class="form-control  form-input form__input" name="last_name" placeholder="Фамилия" required type="text" />
     <i class="fa__err"></i>
     <span class="fa__errInfo">- Удалите цифры </span>
     <i class="fa__checked"></i>

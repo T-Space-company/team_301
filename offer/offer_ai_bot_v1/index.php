@@ -1,3 +1,9 @@
+<?php
+if (!isset($rawClick) && !isset($click)) {
+  die();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -198,7 +204,7 @@
     <main class="main first">
       <section class="section hidden" id="main-section">
         <div class="main__chart">
-          <div class="chart__message" id="chart-greeting">
+          <div class="chart__message mobile" id="chart-greeting">
             <img src="./assets/img/avatar.svg" alt="Image" />
             <p class="message__text">
               <span class="accent">
@@ -208,7 +214,7 @@
               точки входа
             </p>
           </div>
-          <div class="chart__message">
+          <div class="chart__message mobile">
             <img src="./assets/img/avatar.svg" alt="Image" />
             <p class="message__text" id="message-text">
               По моему прогнозу график идёт ВВЕРХ. Открываем сделку!
@@ -222,28 +228,48 @@
           </div>
         </div>
         <div class="main__trading">
-          <span class="trading__count">Сделка 1</span>
-          <div class="trading__balance">
-            <div class="balance__wrap">
-              <span class="balance__heading">Баланс</span>
-              <span class="balance__sum">15 000 ₽</span>
+          <div class="trading__wrapper">
+            <span class="trading__count">Сделка 1</span>
+            <div class="trading__balance">
+              <div class="balance__wrap">
+                <span class="balance__heading">Баланс</span>
+                <span class="balance__sum">15 000 ₽</span>
+              </div>
+              <span class="balance__change up hidden">+31%</span>
             </div>
-            <span class="balance__change up hidden">+31%</span>
+            <div class="trading__actions">
+              <div class="actions__sum">
+                <span class="sum__heading">Сумма сделки</span>
+                <span class="sum__num">15 000 ₽</span>
+              </div>
+              <div class="actions__buttons">
+                <button class="actions__button up" id="action-button">
+                  Открыть сделку
+                  <img
+                    src="./assets/img/arr-up.svg"
+                    alt="Icon"
+                    class="button__icon"
+                  />
+                </button>
+              </div>
+            </div>
           </div>
-          <div class="trading__actions">
-            <div class="actions__sum">
-              <span class="sum__heading">Сумма сделки</span>
-              <span class="sum__num">15 000 ₽</span>
+          <div class="trading__messages desktop">
+            <div class="chart__message" id="chart-greeting-desktop">
+              <img src="./assets/img/avatar.svg" alt="Image" />
+              <p class="message__text">
+                <span class="accent">
+                  Приветствую! Я ваш интеллектуальный бот.</span
+                ><br />
+                Мой алгоритм анализирует рынок и подсказывает вам оптимальные
+                точки входа
+              </p>
             </div>
-            <div class="actions__buttons">
-              <button class="actions__button up" id="action-button">
-                Открыть сделку
-                <img
-                  src="./assets/img/arr-up.svg"
-                  alt="Icon"
-                  class="button__icon"
-                />
-              </button>
+            <div class="chart__message">
+              <img src="./assets/img/avatar.svg" alt="Image" />
+              <p class="message__text" id="message-text-desktop">
+                По моему прогнозу график идёт ВВЕРХ. Открываем сделку!
+              </p>
             </div>
           </div>
         </div>
@@ -268,7 +294,7 @@
       <!--------- QUESTION 2 --------->
       <div id="modal-2" class="modal hidden">
         <div class="modal__content">
-          <p class="modal__question second">Являетесь ли вы гражданином РФ?</p>
+          <p class="modal__question">Являетесь ли вы гражданином РФ?</p>
           <div class="modal__actions">
             <button
               class="modal__button--second modal__button--yes"
