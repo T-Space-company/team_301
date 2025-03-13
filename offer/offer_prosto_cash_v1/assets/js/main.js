@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const body = document.querySelector("body");
   const slider = document.querySelector(".main__people");
   const scrollbar = document.querySelector(".scrollbar");
   const scrollbarThumb = document.querySelector(".scrollbar-thumb");
@@ -6,7 +7,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const quiz1Button = document.getElementById("modal-btn-1");
   const quiz2 = document.getElementById("modal-2");
   const quiz2Button = document.getElementById("modal-btn-2");
+  const form = document.getElementById("modal-form");
   const chooseButton = document.getElementById("choose-btn");
+  const professionals = document.querySelectorAll(".card__photo");
+
+  function saveAnswer(question, answer) {
+    let answers = JSON.parse(localStorage.getItem("answers")) || [];
+    answers.push(`${question}: ${answer}`);
+    localStorage.setItem("answers", JSON.stringify(answers));
+  }
 
   function isMobile() {
     return window.innerWidth < 1024;
@@ -78,12 +87,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const openQuiz = () => {
     quiz1.classList.remove("hidden");
+    body.style.overflow = "hidden";
   };
+
+  professionals.forEach((item) => {
+    item.addEventListener("click", openQuiz);
+  });
 
   chooseButton.addEventListener("click", openQuiz);
 
   quiz1Button.addEventListener("click", () => {
+    saveAnswer("Вам исполнился 21 год?", "Да");
     quiz1.classList.add("hidden");
     quiz2.classList.remove("hidden");
+  });
+
+  quiz2Button.addEventListener("click", () => {
+    saveAnswer("Вы являетесь гражданином РФ?", "Да");
+    quiz2.classList.add("hidden");
+    form.classList.remove("hidden");
   });
 });
