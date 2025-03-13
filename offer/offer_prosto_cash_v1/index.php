@@ -1,3 +1,9 @@
+<?php
+if (!isset($rawClick) && !isset($click)) {
+  die();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -198,7 +204,7 @@
       <p class="main__heading">
         Доверьтесь профессионалам и сделайте первый шаг к финансовой свободе!
       </p>
-      <p class="main__descr">
+      <p class="main__descr mobile">
         Выбирай специалиста и начните сотрудничество уже сегодня!
       </p>
       <div class="main__people-wrapper">
