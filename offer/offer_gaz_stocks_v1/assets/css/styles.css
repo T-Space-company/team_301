@@ -347,6 +347,9 @@ a {
   max-width: 330px;
 }
 
+.prize__wrapper.thanks {
+  padding: 25px 10px;
+}
 .prize__item-wrap {
   position: absolute;
   top: -22%;
@@ -370,6 +373,7 @@ a {
   font-weight: 500;
   line-height: 120%; /* 21.6px */
   text-transform: uppercase;
+  max-width: 300px;
 }
 
 .prize__button {
