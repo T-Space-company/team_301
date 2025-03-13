@@ -74,6 +74,9 @@ a {
   font-size: 20px;
   font-weight: 500;
   line-height: 130%;
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .main__descr {
@@ -155,6 +158,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: stretch;
+  cursor: pointer;
 }
 
 .card__photo > img {
@@ -245,6 +249,7 @@ a {
   align-items: center;
   justify-content: center;
   background-size: cover;
+  border-radius: 16px;
 }
 
 .plan__item.first {
@@ -252,6 +257,7 @@ a {
 }
 .plan__item.second {
   background-image: url(../img/bg2.png);
+  margin: 0;
 }
 .plan__item.third {
   background-image: url(../img/bg3.png);
@@ -374,7 +380,6 @@ a {
 
 .form-heading {
   color: #3b3b3b;
-
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -412,8 +417,105 @@ a {
   margin-bottom: 0;
 }
 
+.main.thanks {
+  width: 100%;
+  padding: 20px;
+}
+
+.modal.thanks {
+  background: none;
+  position: relative;
+}
+
+.modal__content.thanks {
+  align-items: flex-start;
+}
+
+.form-text.thanks {
+  margin: 0;
+}
+
+.thanks__image {
+  max-width: 300px;
+  width: 100%;
+}
+
 .hidden {
   display: none;
+}
+.mobile {
+  display: flex;
+}
+.desktop {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: flex;
+  }
+  .header > img {
+    width: 70px;
+  }
+  .main {
+    padding: 40px 20px 30px 20px;
+    gap: 30px;
+    /* overflow: hidden; */
+  }
+  .main__people {
+    padding-bottom: 0;
+  }
+  .main__heading {
+    color: #041e35;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    padding: 20px;
+  }
+  .main__plan {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    margin: 0 auto;
+    max-width: 1240px;
+    width: 100%;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+  .plan__item {
+    min-width: 370px;
+  }
+  .modal__question {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .modal__content {
+    max-width: 800px;
+  }
+  .modal__button--first {
+    max-width: none;
+  }
+  .form-heading {
+    font-size: 20px;
+  }
+  .modal__content.form {
+    padding: 30px 37px;
+  }
+  .footer__logo > img {
+    width: 70px;
+  }
+  .footer {
+    height: 110px;
+    padding: 10px 100px;
+  }
+  .thanks__image {
+    max-width: 765px;
+  }
 }
 
 @media (min-width: 1260px) {
