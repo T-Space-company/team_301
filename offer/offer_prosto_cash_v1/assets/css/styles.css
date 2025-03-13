@@ -25,7 +25,7 @@
 
 body {
   margin: 0;
-  font-family: Mont;
+  font-family: Mont !important;
 }
 
 h1,
@@ -108,7 +108,7 @@ a {
 }
 
 .scrollbar {
-  width: calc(100% - 20px);
+  width: calc(100% - 40px);
   height: 14px;
   border-radius: 5px;
   padding: 2px;
@@ -225,6 +225,9 @@ a {
   color: #fff;
   font-size: 20px;
   font-weight: 500;
+  max-width: 370px;
+  width: 100%;
+  align-self: center;
 }
 
 .main__plan {
@@ -333,6 +336,12 @@ a {
   gap: 20px;
 }
 
+.modal__content.form {
+  border-radius: 15px;
+  background: #f4f6f8;
+  padding: 30px 15px;
+}
+
 .modal__question {
   color: #3b3b3b;
   font-size: 18px;
@@ -363,6 +372,52 @@ a {
   font-weight: 500;
 }
 
+.form-heading {
+  color: #3b3b3b;
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  margin-bottom: 20px;
+}
+
+.form-input {
+  border-radius: 15px;
+  border: 1px solid #145896;
+  background: #fff;
+  padding: 8px 15px;
+  font-family: Mont;
+  font-size: 16px;
+  height: auto;
+}
+
+.form-input::placeholder {
+  color: rgba(59, 59, 59, 0.6);
+  font-family: Mont;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+}
+
+.form-text {
+  color: #3b3b3b;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 120%;
+  margin-bottom: 20px;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
 .hidden {
   display: none;
+}
+
+@media (min-width: 1260px) {
+  .main__people {
+    justify-content: center;
+  }
 }
