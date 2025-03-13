@@ -2,6 +2,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const slider = document.querySelector(".main__people");
   const scrollbar = document.querySelector(".scrollbar");
   const scrollbarThumb = document.querySelector(".scrollbar-thumb");
+  const quiz1 = document.getElementById("modal-1");
+  const quiz1Button = document.getElementById("modal-btn-1");
+  const quiz2 = document.getElementById("modal-2");
+  const quiz2Button = document.getElementById("modal-btn-2");
+  const chooseButton = document.getElementById("choose-btn");
 
   function isMobile() {
     return window.innerWidth < 1024;
@@ -70,4 +75,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   updateScrollBar();
   window.addEventListener("resize", updateScrollBar);
+
+  const openQuiz = () => {
+    quiz1.classList.remove("hidden");
+  };
+
+  chooseButton.addEventListener("click", openQuiz);
+
+  quiz1Button.addEventListener("click", () => {
+    quiz1.classList.add("hidden");
+    quiz2.classList.remove("hidden");
+  });
 });

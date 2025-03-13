@@ -329,7 +329,9 @@
           <div class="scrollbar-thumb"></div>
         </div>
       </div>
-      <button type="button" class="main__btn">Выбрать специалиста</button>
+      <button type="button" class="main__btn" id="choose-btn">
+        Выбрать специалиста
+      </button>
       <p class="main__heading">Вас ждет:</p>
       <div class="main__plan">
         <div class="plan__item first">
@@ -364,6 +366,26 @@
             <span class="plan__item-text"
               >Реальные кейсы и рабочие стратегии</span
             >
+          </div>
+        </div>
+      </div>
+      <!--------- QUESTION 1 --------->
+      <div id="modal-1" class="modal hidden">
+        <div class="modal__content">
+          <p class="modal__question">Вам исполнился 21 год?</p>
+          <div class="modal__actions">
+            <button class="modal__button--first" id="modal-btn-1">Да</button>
+            <a href="err.html" class="modal__button--first">Нет</a>
+          </div>
+        </div>
+      </div>
+      <!--------- QUESTION 2 --------->
+      <div id="modal-2" class="modal hidden">
+        <div class="modal__content">
+          <p class="modal__question">Вы являетесь гражданином РФ?</p>
+          <div class="modal__actions">
+            <button class="modal__button--first" id="modal-btn-2">Да</button>
+            <a href="err.html" class="modal__button--first">Нет</a>
           </div>
         </div>
       </div>
