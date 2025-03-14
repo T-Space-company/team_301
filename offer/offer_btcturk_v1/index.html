@@ -49,22 +49,32 @@
               value="10000"
             />
             <div class="tick-marks">
-              <span class="tick" style="left: 0%">10K</span>
-              <span class="tick" style="left: 25%">25K</span>
-              <span class="tick" style="left: 50%">50K</span>
-              <span class="tick" style="left: 75%">75K</span>
-              <span class="tick" style="left: 100%">100K</span>
+              <span class="tick" style="left: 2%">10K</span>
+              <span class="tick" style="left: 21%">25K</span>
+              <span class="tick" style="left: 46%">50K</span>
+              <span class="tick" style="left: 72%">75K</span>
+              <span class="tick" style="left: 99%">100K</span>
             </div>
           </div>
 
-          <label class="title">Yatırımlarınız</label>
-          <input
-            type="text"
-            id="investment-display"
-            class="investment-display"
-            value="1000.00$"
-            readonly
-          />
+          <div class="slider-container bottom">
+            <label class="title sum">Yatırımlarınız</label>
+            <input
+              type="range"
+              id="investment-slider"
+              min="10"
+              max="50"
+              step="10"
+              value="10"
+            />
+            <div class="tick-marks bottom">
+              <span class="tick" style="left: 2%">10</span>
+              <span class="tick" style="left: 27%">20</span>
+              <span class="tick" style="left: 50%">30</span>
+              <span class="tick" style="left: 73%">40</span>
+              <span class="tick" style="left: 98%">50</span>
+            </div>
+          </div>
         </div>
         <div class="stocks__info"></div>
       </section>
