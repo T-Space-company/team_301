@@ -1,0 +1,606 @@
+@font-face {
+  font-family: "Fixel Display";
+  src: url(../fonts/FixelDisplay-Light.woff2);
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Fixel Display";
+  src: url(../fonts/FixelDisplay-Regular.woff2);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Fixel Display";
+  src: url(../fonts/FixelDisplay-Medium.woff2);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Fixel Display";
+  src: url(../fonts/FixelDisplay-Bold.woff2);
+  font-weight: 700;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.main__intro {
+  background-image: url(../img/bg_mob.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 10px 30px 10px;
+}
+
+.intro__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin-top: 30px;
+  max-width: 355px;
+}
+
+.intro__heading {
+  color: #fff;
+  text-align: center;
+  font-family: Oswald;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+.intro__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.intro__text > p {
+  color: #fff;
+  font-family: "Fixel Display";
+  font-size: 18px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.intro__button,
+.prize__button {
+  border-radius: 7px;
+  border: 1px solid #55a6f2;
+  background: #33a0ff;
+  box-shadow: 0px 0px 5px 5px #5cb3ff;
+  display: inline-flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #fff;
+  text-align: center;
+  font-family: "Fixel Display";
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 50px;
+  animation: scaleBtn 2s ease-in-out infinite;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(18, 16, 99, 0.7);
+  backdrop-filter: blur(41px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal__content {
+  display: flex;
+  padding: 30px 25px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 340px;
+  width: 100%;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 2px 7px 12.2px 0px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(50px);
+}
+
+.modal__question {
+  color: #fff;
+  text-align: center;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "Fixel Display";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.modal__question.second {
+  font-size: 28px;
+  margin-top: 0;
+}
+
+.modal__accent {
+  text-align: center;
+  font-family: "Fixel Display";
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 33px;
+  background: var(--1, linear-gradient(97deg, #a2b3de 0%, #3c63c2 100%));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.modal__actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.modal__button--first,
+.modal__button--second {
+  border-radius: 10px;
+  background: var(--3, linear-gradient(98deg, #1a4bc7 0%, #00609b 100%));
+  display: flex;
+  width: 100%;
+  max-width: 130px;
+  padding: 13px 20px;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: "Fixel Display";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 100%;
+}
+
+.modal__button--no {
+  background: #393939;
+}
+
+.main__choose {
+  background-color: rgb(17, 16, 99);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 10px 40px 10px;
+}
+
+.choose__image {
+  max-width: 420px;
+  width: 100%;
+}
+
+.choose__content {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.choose__heading {
+  color: #fff;
+  text-align: center;
+  font-family: "Fixel Display";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.choose__sum {
+  color: #fff;
+  text-align: center;
+  font-family: Oswald;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+@keyframes scaleBtn {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleGifts {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes tiltAnimation {
+  0% {
+    transform: translate(-50%, -50%) rotate(1deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(-1deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(1deg);
+  }
+}
+
+.scale-animation {
+  transform: scale(1.2);
+  transition: transform 2s ease-in-out;
+}
+
+.choose__items {
+  display: inline-flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.choose__items.animate {
+  animation: scaleGifts 3s ease infinite;
+}
+
+.choose__item-wrap,
+.prize__item-wrap {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.choose__item,
+.prize__item {
+  background-image: url(../img/bg_item.png);
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.item__gift {
+  position: absolute;
+  width: 33px;
+  height: 33px;
+  transform: rotate(13deg);
+  top: 5px;
+  right: 5px;
+}
+
+.main__prize {
+  background: rgba(18, 16, 99, 0.7);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.prize__wrapper {
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 2px 7px 12px 0px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(50px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  gap: 20px;
+  padding: 55px 20px 40px 20px;
+  max-width: 330px;
+}
+
+.prize__wrapper.thanks {
+  padding: 25px 10px;
+}
+.prize__item-wrap {
+  position: absolute;
+  top: -22%;
+}
+
+.prize__heading {
+  color: #fff;
+  text-align: center;
+  font-family: Oswald;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+.prize__text {
+  color: #fff;
+  text-align: center;
+  font-family: "Fixel Display";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 21.6px */
+  text-transform: uppercase;
+  max-width: 300px;
+}
+
+.prize__button {
+  margin: 0;
+}
+
+.main__last {
+  background: rgba(18, 16, 99, 0.7);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 150px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+.form-heading {
+  color: #fff;
+  text-align: center;
+  font-family: "Fixel Display";
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 120%;
+  margin-bottom: 20px;
+}
+
+.form-input {
+  border-radius: 10px;
+  border: 1px solid #4baeff;
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(50px);
+  padding: 15px 17px;
+  height: auto;
+  color: #fff;
+  font-family: "Fixel Display";
+  font-size: 14px;
+}
+
+.form-input::placeholder {
+  color: #fff;
+  font-family: "Fixel Display";
+  font-size: 14px;
+}
+
+.form-group:last-child {
+  margin-top: 60px;
+}
+
+.form-wrapper {
+  max-width: 330px;
+}
+
+.intro__wheel-wrap {
+  position: relative;
+  width: 100%;
+  height: 285px;
+  top: 60px;
+}
+
+.wheel__border {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.wheel__border > img {
+  height: 285px;
+}
+
+.wheel__content-wrap {
+  position: absolute;
+  top: 54%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.wheel__content > img {
+  height: 230px;
+  width: 230px;
+}
+
+.wheel-tilt {
+  animation: tiltAnimation 3s ease-in-out infinite;
+}
+
+.intro__stocks {
+  width: 100%;
+  position: relative;
+  top: -20px;
+}
+
+.intro__stocks > img {
+  position: absolute;
+  max-width: 375px;
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.main__thanks {
+  background-image: url(../img/bg_mob.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 10px;
+}
+
+.thanks__heading {
+  color: #fff;
+  text-align: center;
+  font-family: Oswald;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 120%;
+  margin-top: 45px;
+}
+
+.thanks__text {
+  color: #fff;
+  text-align: center;
+  font-family: "Fixel Display";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  margin-top: 20px;
+}
+
+.thanks__text.bottom {
+  margin-top: 60px;
+}
+
+.thanks__block {
+  border-radius: 30px;
+  background: #2b2c86;
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+  max-width: 330px;
+}
+
+.thanks__subheading {
+  color: #fff;
+  text-align: center;
+  font-family: "Fixel Display";
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 120%;
+}
+
+.thanks__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  margin-top: 20px;
+}
+
+.thanks__item {
+  color: #fff;
+  text-align: center;
+  font-family: "Fixel Display";
+  font-size: 14px;
+  line-height: 120%;
+}
+
+.thanks__time,
+.thanks__safe {
+  color: #fff;
+  font-family: "Fixel Display";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 120%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.thanks__time > .accent,
+.thanks__safe > .accent {
+  font-weight: 800;
+}
+
+@media (min-width: 768px) {
+  .main__intro {
+    background-image: url(../img/bg_desktop.png);
+    justify-content: center;
+  }
+  .main__choose {
+    justify-content: center;
+  }
+  .choose__image {
+    max-width: 620px;
+  }
+  .main__last {
+    justify-content: center;
+    gap: 100px;
+  }
+}
