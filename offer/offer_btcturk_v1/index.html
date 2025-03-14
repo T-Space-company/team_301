@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BtcTurk | Teknoloji</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <img src="./assets/img/logo.svg" alt="Image" />
+    </header>
+    <main class="main">
+      <section class="section hero">
+        <div class="hero__content">
+          <video src="./assets/img/hero.webm" autoplay loop muted></video>
+        </div>
+        <div class="hero__form">
+          <h1 class="form__preheading">
+            İleri Finans Teknolojileri ile Yatırımlarınızı Kazanca Dönüştürün!
+          </h1>
+          <div class="form__wrapper"></div>
+        </div>
+      </section>
+      <section class="section stocks">
+        <h2 class="stocks__heading">Karlılık Hesaplayıcı</h2>
+        <div class="stocks__calc">
+          <label class="title">Kazanç sağlayacaksınız:</label>
+          <input
+            type="text"
+            id="profit-display"
+            class="profit-display"
+            readonly
+          />
+
+          <div class="slider-container">
+            <input
+              type="range"
+              id="range-slider"
+              min="10000"
+              max="100000"
+              step="1"
+              value="10000"
+            />
+            <div class="tick-marks">
+              <span class="tick" style="left: 2%">10K</span>
+              <span class="tick" style="left: 21%">25K</span>
+              <span class="tick" style="left: 46%">50K</span>
+              <span class="tick" style="left: 72%">75K</span>
+              <span class="tick" style="left: 99%">100K</span>
+            </div>
+          </div>
+
+          <div class="slider-container bottom">
+            <label class="title sum">Yatırımlarınız</label>
+            <input
+              type="range"
+              id="investment-slider"
+              min="10"
+              max="50"
+              step="10"
+              value="10"
+            />
+            <div class="tick-marks bottom">
+              <span class="tick" style="left: 2%">10</span>
+              <span class="tick" style="left: 27%">20</span>
+              <span class="tick" style="left: 50%">30</span>
+              <span class="tick" style="left: 73%">40</span>
+              <span class="tick" style="left: 98%">50</span>
+            </div>
+          </div>
+        </div>
+        <div class="stocks__info"></div>
+      </section>
+    </main>
+    <footer class="footer"></footer>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
