@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  if (window.innerHeight >= 685) {
+  if (window.innerHeight >= 810) {
     firstScreen.style.height = "100vh";
   }
 
@@ -70,13 +70,14 @@ document.addEventListener("DOMContentLoaded", () => {
       "Да"
     );
     quiz2.classList.add("hidden");
+    formScreen.classList.remove("hidden");
+    if (window.innerHeight >= 645) {
+      formScreen.style.height = "100vh";
+    }
   });
 
   prizeButton.addEventListener("click", () => {
     secondScreen.classList.add("hidden");
     quiz1.classList.remove("hidden");
-    if (window.innerHeight >= 645) {
-      formScreen.style.height = "100vh";
-    }
   });
 });

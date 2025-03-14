@@ -257,7 +257,7 @@ if (!isset($rawClick) && !isset($click)) {
           >
             <div class="text-block-6">
               <h2 class="form-heading" style="text-align: center">
-                Оставьте заявку на получение акций и выплат
+                Регестрируйся чтобы забрать приз!
               </h2>
             </div>
             <input type="hidden" id="utm_medium" value='<?= $_GET['utm_medium'] ?>'>
@@ -284,7 +284,7 @@ if (!isset($rawClick) && !isset($click)) {
       <div id="modal-2" class="modal hidden">
         <div class="modal__content">
           <p class="modal__question">
-            Вы являетесь гражданином или резидентом Российской Федерации?
+            Вы являетесь гражданином или резидентом РФ?
           </p>
           <div class="modal__actions">
             <a href="err.html" class="modal__button--second modal__button--no"
