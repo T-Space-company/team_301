@@ -1,0 +1,176 @@
+@font-face {
+  font-family: "Fixel Display";
+  src: url(../fonts/FixelDisplay-Light.woff2);
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Fixel Display";
+  src: url(../fonts/FixelDisplay-Regular.woff2);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Fixel Display";
+  src: url(../fonts/FixelDisplay-Medium.woff2);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Fixel Display";
+  src: url(../fonts/FixelDisplay-Bold.woff2);
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Fixel Display";
+  src: url(../fonts/FixelDisplay-ExtraBold.woff2);
+  font-weight: 800;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: radial-gradient(
+    100% 80% at 50% 1%,
+    rgba(0, 0, 0, 0) 0%,
+    #000 40%,
+    #205af0 65%,
+    #1a77f1 90%,
+    #1398f2 100%
+  );
+  background-color: #000;
+  background-repeat: no-repeat;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+  overflow-x: hidden;
+}
+
+.main__heading {
+  background: linear-gradient(98deg, #f99c1c 0%, #f8d631 100%);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  margin-top: 50px;
+  display: flex;
+  padding: 13px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.main__heading > h1 {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.main__subheading {
+  text-align: center;
+  font-family: "Fixel Display";
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 123%;
+  background: linear-gradient(180deg, #fff 0%, rgba(199, 199, 199, 0) 284.62%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 20px;
+}
+
+.main__bonus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.bonus__heading {
+  text-align: center;
+  font-family: "Fixel Display";
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 123%;
+  background: linear-gradient(180deg, #fff 0%, rgba(199, 199, 199, 0) 284.62%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bonus__sum {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0px 4px 4px rgba(117, 117, 117, 0.25);
+  font-family: "Plus Jakarta Sans";
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 100%;
+  letter-spacing: -2.9px;
+  text-transform: uppercase;
+}
+
+.main__coin {
+  width: 460px;
+}
+
+.main__coin > img {
+  width: 100%;
+}
+
+.main__bottom {
+  margin-top: 25px;
+  color: #fff;
+  text-align: center;
+  font-family: "Fixel Display";
+  font-size: 10px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.coin-wrap {
+  transform: translateX(-50%);
+  position: absolute;
+  left: 50%;
+  bottom: 40px;
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+  animation: floatUp 1s forwards;
+}
+
+.coin-value {
+  position: absolute;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0px 4px 4px rgba(117, 117, 117, 0.25);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: -3.3px;
+  text-transform: uppercase;
+  opacity: 1;
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+  animation: floatUp 1s forwards;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) translateY(-40px);
+    opacity: 1;
+  }
+}
