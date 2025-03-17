@@ -24,6 +24,7 @@ include_once dirname(__FILE__) . '/config.php';
     />
     <script src="form/js/libs/intlTelInput.js"></script>
 
+        <script src="jquery-3.6.1.min.js"></script>
     <script src="form/js/libs/jquery.maskedinput.js"></script>
     <script src="form/js/libs/utils.js"></script>
 
@@ -152,7 +153,7 @@ include_once dirname(__FILE__) . '/config.php';
     <main class="main">
       <section class="section hero">
         <div class="hero__content">
-          <video src="./assets/img/hero.webm" autoplay loop muted></video>
+          <img src="./assets/img/hero.png"></img>
         </div>
         <div class="hero__form">
           <h1 class="form__preheading">
