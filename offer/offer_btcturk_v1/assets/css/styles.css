@@ -507,6 +507,10 @@ button {
   .info--left {
     gap: 50px;
   }
+  .info--right {
+    font-size: 20px;
+    width: 100px;
+  }
   .info__chart {
     font-size: 20px;
     height: 36px;
