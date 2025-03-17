@@ -21,7 +21,6 @@ button {
 }
 
 .header {
-  max-width: 1368px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -53,7 +52,7 @@ button {
   width: 100%;
 }
 
-.hero__content > video {
+.hero__content > img {
   width: 100%;
   max-width: 345px;
 }
@@ -467,12 +466,13 @@ button {
     flex-direction: row-reverse;
     padding: 0 72px;
     justify-content: center;
-    margin: 0 -60px;
+    margin: 20px -60px 0 -60px;
+    box-shadow: none;
   }
   .hero__content {
     max-width: 830px;
   }
-  .hero__content > video {
+  .hero__content > img {
     max-width: none;
   }
   .hero__form {
