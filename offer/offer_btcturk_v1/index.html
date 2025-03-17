@@ -1,5 +1,16 @@
+<?php
+if (!isset($rawClick) && !isset($click)) {
+  die();
+}
+?>
+<?php
+
+include_once dirname(__FILE__) . '/config.php';
+
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,6 +22,128 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
+    <script src="form/js/libs/intlTelInput.js"></script>
+
+    <script src="form/js/libs/jquery.maskedinput.js"></script>
+    <script src="form/js/libs/utils.js"></script>
+
+    <script type="application/javascript">
+      function getCookie(name) {
+        var v = document.cookie.match("(^|;) ?" + name + "=([^;]*)(;|$)");
+        return v ? v[2] : null;
+      }
+
+      function setCookie(name, value, days) {
+        var d = new Date();
+        d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days);
+        document.cookie =
+          name + "=" + value + ";path=/;expires=" + d.toGMTString();
+      }
+
+      function getSubId() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!"{subid}".match("{")) {
+          return "{subid}";
+        }
+        var clientSubid =
+          '<?php echo isset($client) ? $client->getSubid() : "" ?>';
+        if (!clientSubid.match(">")) {
+          return clientSubid;
+        }
+        if (params.get("_subid")) {
+          return params.get("_subid");
+        }
+        if (params.get("subid")) {
+          return params.get("subid");
+        }
+        if (getCookie("subid")) {
+          return getCookie("subid");
+        }
+      }
+
+      function getToken() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!"{token}".match("{")) {
+          return "{token}";
+        }
+        var clientToken =
+          '<?php echo isset($client) ? $client->getToken() : "" ?>';
+        if (!clientToken.match(">")) {
+          return clientToken;
+        }
+        if (params.get("_token")) {
+          return params.get("_token");
+        }
+        if (params.get("token")) {
+          return params.get("token");
+        }
+        if (getCookie("token")) {
+          return getCookie("token");
+        }
+        return null;
+      }
+
+      function getPixel() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!"{pixel}".match("{")) {
+          return "{pixel}";
+        }
+        if (params.get("pixel")) {
+          return params.get("pixel");
+        }
+
+        if (getCookie("pixel")) {
+          return getCookie("pixel");
+        }
+
+        return null;
+      }
+
+      if (typeof URLSearchParams === "function") {
+        document.addEventListener("DOMContentLoaded", function (event) {
+          var params = new URLSearchParams(document.location.search.substr(1));
+          var subid = getSubId();
+          var token = getToken();
+          var pixel = getPixel();
+
+          params.set("_token", token);
+          setCookie("pixel", pixel);
+          setCookie("token", token);
+          setCookie("subid", subid);
+        });
+      }
+    </script>
+
+    <!--PIXEL DEFENCE-->
+    <?php if($FacebookPixel): ?>
+    <script type="application/javascript">
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "<?=$FacebookPixel ?>");
+      fbq("track", "PageView");
+    </script>
+    <?php endif; ?>
   </head>
   <body>
     <header class="header">
@@ -25,7 +158,19 @@
           <h1 class="form__preheading">
             İleri Finans Teknolojileri ile Yatırımlarınızı Kazanca Dönüştürün!
           </h1>
-          <div class="form__wrapper"></div>
+          <div class="form__wrapper">
+            <h1 class="form__heading">Formu doldurun</h1>
+            <form
+              autocomplete="off"
+              class="form _main-form register-form form-reg form-send"
+              method="post"
+              id="main-form"
+            >
+              <input type="hidden" id="source" value='<?= $_GET['source'] ?>'>
+              <input type="hidden" name="comment" value="" />
+              <input type="hidden" name="querys" />
+            </form>
+          </div>
         </div>
       </section>
       <section class="section stocks">
@@ -195,5 +340,17 @@
     </footer>
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/calc.js"></script>
+
+    <script src="loadAssets.js?v=52"></script>
+
+    <script type="application/javascript">
+      function getSubId() {
+        if (!"{subid}".match("{")) {
+          localStorage.setItem("subid", "{subid}");
+          return "{subid}";
+        }
+      }
+      getSubId();
+    </script>
   </body>
 </html>

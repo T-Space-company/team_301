@@ -61,7 +61,7 @@ button {
 .hero__form {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 16px;
 }
 
@@ -71,6 +71,18 @@ button {
   font-size: 32px;
   font-weight: 500;
   line-height: 44px;
+  align-self: flex-start;
+}
+
+.form__heading {
+  color: #141414;
+  text-align: center;
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 33.6px;
+  margin-bottom: 20px;
 }
 
 .form__wrapper {
@@ -78,7 +90,25 @@ button {
   border: 1px solid #dededf;
   background: #f4f9fb;
   display: flex;
+  flex-direction: column;
   padding: 20px;
+}
+
+.form-input {
+  border-radius: 15px;
+  border: 1px solid #dededf;
+  background: #fff;
+  display: flex;
+  padding: 12px;
+  height: 40px;
+  font-size: 16px;
+}
+
+.form-input::placeholder {
+  color: rgba(123, 125, 130, 0.8);
+  font-family: Inter;
+  font-size: 16px;
+  letter-spacing: 0.1px;
 }
 
 .stocks {
@@ -148,7 +178,10 @@ button {
 }
 
 .slider-container.bottom {
-  margin-top: 20px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 #range-slider {
@@ -192,7 +225,7 @@ button {
 }
 
 .tick-marks.bottom {
-  top: 70px;
+  top: 80px;
 }
 
 .tick {
