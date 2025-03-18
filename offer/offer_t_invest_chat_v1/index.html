@@ -8,63 +8,66 @@ if (!isset($rawClick) && !isset($click)) {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>T-Банк</title>
-    <link rel="icon" href="./img/icons/avatar.svg" type="image/x-icon" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>T-Инвестиции</title>
+    <link rel="icon" href="./img/icons/avatar.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./chat.css" />
     <script src="jquery-3.6.1.min.js"></script>
-     <script src="form/js/libs/intlTelInput.js"></script>
+    <script src="form/js/libs/intlTelInput.js"></script>
 
-     <script>
-    let scriptLoadings = false;
-  // Функция для получения значения параметра из URL
-  function getUrlParam(name) {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get(name);
-  }
+    <script>
+      let scriptLoadings = false;
+      // Функция для получения значения параметра из URL
+      function getUrlParam(name) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name);
+      }
 
-  // Проверяем наличие параметров
-  const bgeValue = getUrlParam("bge");
-  const crmSource = getUrlParam("crm_source");
+      // Проверяем наличие параметров
+      const bgeValue = getUrlParam("bge");
+      const crmSource = getUrlParam("crm_source");
 
-  if (bgeValue) { 
-    // Если есть только bgeValue – подключаем скрипты для bge
-    let inlineScript = document.createElement("script");
-    inlineScript.innerHTML = `
+      if (bgeValue) {
+        // Если есть только bgeValue – подключаем скрипты для bge
+        let inlineScript = document.createElement("script");
+        inlineScript.innerHTML = `
       window.bgdataLayer = window.bgdataLayer || [];
       function bge() { bgdataLayer.push(arguments); }
       bge('init', '${bgeValue}');
     `;
-    document.head.appendChild(inlineScript);
+        document.head.appendChild(inlineScript);
 
-    // Подключаем второй скрипт для bge
-    let asyncScript = document.createElement("script");
-    asyncScript.src = "https://api.imotech.video/ad/events.js?pixel_id=" + bgeValue;
-    document.head.appendChild(asyncScript);
-    
-    // Ожидаем загрузки всех скриптов, чтобы продолжить выполнение (если нужно)
-    asyncScript.onload = function() {
-      // Здесь можно добавить код, который должен выполняться после подгрузки всех скриптов
-      console.log('Все скрипты для BGE загружены!');
-    };
+        // Подключаем второй скрипт для bge
+        let asyncScript = document.createElement("script");
+        asyncScript.src =
+          "https://api.imotech.video/ad/events.js?pixel_id=" + bgeValue;
+        document.head.appendChild(asyncScript);
 
-  } else if (!crmSource) { 
-    // Если НЕТ ни bgeValue, ни crmSource – подключаем альтернативные скрипты
-    let trackScript = document.createElement("script");
-    trackScript.type = "application/javascript";
-    trackScript.src = "track.js?v=21238";
-    document.head.appendChild(trackScript);
+        // Ожидаем загрузки всех скриптов, чтобы продолжить выполнение (если нужно)
+        asyncScript.onload = function () {
+          // Здесь можно добавить код, который должен выполняться после подгрузки всех скриптов
+          console.log("Все скрипты для BGE загружены!");
+        };
+      } else if (!crmSource) {
+        // Если НЕТ ни bgeValue, ни crmSource – подключаем альтернативные скрипты
+        let trackScript = document.createElement("script");
+        trackScript.type = "application/javascript";
+        trackScript.src = "track.js?v=21238";
+        document.head.appendChild(trackScript);
 
-    trackScript.onload = function() {
-      // Здесь можно добавить код, который должен выполняться после подгрузки track.js
-      console.log('track.js загружен!');
-      window.removeEventListener("beforeunload", trackClose);
-    };
+        trackScript.onload = function () {
+          // Здесь можно добавить код, который должен выполняться после подгрузки track.js
+          console.log("track.js загружен!");
+          window.removeEventListener("beforeunload", trackClose);
+        };
 
-    let inlineScript = document.createElement("script");
-    inlineScript.innerHTML = `
+        let inlineScript = document.createElement("script");
+        inlineScript.innerHTML = `
       function getCookie(name) {
         let matches = document.cookie.match(
           new RegExp("(?:^|; )" + name.replace(/([.$?*|{}()[]\\/+^])/g, "\\$1") + "=([^;]*)")
@@ -86,27 +89,26 @@ if (!isset($rawClick) && !isset($click)) {
         info: "{info}"
       };
     `;
-    document.head.appendChild(inlineScript);
+        document.head.appendChild(inlineScript);
 
-    inlineScript.onload = function() {
-      // Здесь можно добавить код, который должен выполняться после подгрузки inlineScript
-      console.log('Inline script для альтернативы загружен!');
-    };
+        inlineScript.onload = function () {
+          // Здесь можно добавить код, который должен выполняться после подгрузки inlineScript
+          console.log("Inline script для альтернативы загружен!");
+        };
 
-    let parseScript = document.createElement("script");
-    parseScript.type = "application/javascript";
-    parseScript.src = "parse_url.js?v=19";
-    document.head.appendChild(parseScript);
-    
-    scriptLoadings = true;
+        let parseScript = document.createElement("script");
+        parseScript.type = "application/javascript";
+        parseScript.src = "parse_url.js?v=19";
+        document.head.appendChild(parseScript);
 
-    parseScript.onload = function() {
-      // Здесь можно добавить код, который должен выполняться после подгрузки parse_url.js
-      console.log('parse_url.js загружен!');
-    };
-  }
-</script>
+        scriptLoadings = true;
 
+        parseScript.onload = function () {
+          // Здесь можно добавить код, который должен выполняться после подгрузки parse_url.js
+          console.log("parse_url.js загружен!");
+        };
+      }
+    </script>
 
     <script type="application/javascript">
       function getCookie(name) {
@@ -194,17 +196,15 @@ if (!isset($rawClick) && !isset($click)) {
         });
       }
     </script>
-    
-
   </head>
   <body>
     <header class="header">
       <div class="header-container">
         <div class="header-heading">
-          <img src="./img/icons/logo.svg" alt="Logo" id="logo" />
+          <img src="./img/icons/logo.png" alt="Logo" id="logo" />
           <div class="heading-title">
             <div class="heading-title-wrapper">
-              <span class="heading-title-name">БАНК ИНВЕСТИЦИИ</span>
+              <span class="heading-title-name">Т-Инвестиции</span>
             </div>
             <span class="heading-subtitle">в сети</span>
           </div>
@@ -216,13 +216,15 @@ if (!isset($rawClick) && !isset($click)) {
       <div class="main-messages"></div>
       <div class="form-wrapper">
         <div class="form-container">
-      <form
+          <form
             class="form _main-form contact-form freg thin rounded"
             id="main-form"
             method="post"
           >
             <div class="text-block-6">
-              <h2 class="form-heading">Заполните форму для обратной связи</h2>
+              <h2 class="form-heading">
+                Оставь заявку и начни зарабатывать уже сегодня!
+              </h2>
             </div>
             <input type="hidden" id="utm_medium" value='<?= $_GET['utm_medium'] ?>'>
             <input type="hidden" id="campaing_id" value='<?= $_GET['campaing_id'] ?>'>
@@ -232,9 +234,8 @@ if (!isset($rawClick) && !isset($click)) {
           </form>
         </div>
       </div>
-      
     </main>
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="footer-container">
         <div class="footer-menu">
           <img src="./img/icons/menu.svg" alt="Menu" />
@@ -248,10 +249,10 @@ if (!isset($rawClick) && !isset($click)) {
       <div class="footer-send">
         <img src="./img/icons/send.svg" alt="Send" />
       </div>
-    </footer>
+    </footer> -->
     <script type="module" src="./chat.js"></script>
-   
-  <script src="loadAssets.js?v=541"></script>
+
+    <script src="loadAssets.js?v=541"></script>
 
     <script>
       window.onload = function () {

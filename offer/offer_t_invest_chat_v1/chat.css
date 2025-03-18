@@ -1,19 +1,19 @@
 @font-face {
-  font-family: "TT First Neue";
+  font-family: "TT Firs Neue";
   src: url("./fonts/TT-Firs-Neue-Trial-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "TT First Neue";
+  font-family: "TT Firs Neue";
   src: url("./fonts/TT-Firs-Neue-Trial-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "TT First Neue";
+  font-family: "TT Firs Neue";
   src: url("./fonts/TT-Firs-Neue-Trial-DemiBold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
@@ -56,7 +56,7 @@ p {
   width: 100%;
   min-width: 320px;
   height: 70px;
-  background-color: #333;
+  background: #fedd2d;
   padding: 0 20px 0 20px;
   padding: 0 20px 0 20px;
   display: flex;
@@ -95,16 +95,21 @@ p {
 }
 
 .heading-title-name {
-  color: #fff;
-  font-family: "Tinkoff Sans";
-  font-size: 16px;
+  color: #504137;
+  font-family: "TT Firs Neue";
+  font-size: 18px;
+  font-style: normal;
   font-weight: 600;
+  line-height: normal;
 }
 
 .heading-subtitle {
+  color: #504137;
+  font-family: Inter;
   font-size: 12px;
-  color: #dfdfdf;
-  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
   align-self: flex-start;
 }
 
@@ -235,7 +240,7 @@ p {
   border-radius: 10px 10px 5px 0px;
   padding: 8px 15px;
   max-width: 300px;
-  width: 100%;
+  width: auto;
   height: auto;
   box-sizing: border-box;
   position: relative;
@@ -245,8 +250,8 @@ p {
 }
 
 .message-sender {
-  color: #333;
-  font-family: "Tinkoff Sans";
+  color: #f1c800;
+  font-family: "TT Firs Neue";
   font-size: 14px;
   font-weight: 700;
 }
@@ -255,17 +260,17 @@ p {
   color: #ffdd2d;
 }
 
-.message-field:nth-child(3) .message-text {
+.message-field:nth-child(4) .message-text {
   font-weight: 700;
 }
-
+/* 
 .message-field:nth-child(6) .message-text {
   font-weight: 700;
-}
-
+} */
+/* 
 .message-field:nth-child(9) .message-text {
   max-width: 240px;
-}
+} */
 
 .message.visible {
   opacity: 1;
@@ -285,12 +290,48 @@ p {
 }
 
 .time {
-  color: #545454;
+  color: #7a7a7a;
   font-family: Inter;
   font-size: 10px;
-  font-style: normal;
-  font-weight: 400;
   text-align: right;
+}
+
+.time.answ {
+  color: #fff;
+}
+
+.typing {
+  display: flex;
+  gap: 5px;
+}
+
+.typing span {
+  width: 8px;
+  height: 8px;
+  background: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+  animation: blink 1.4s infinite;
+}
+
+.typing span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.2;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
 }
 
 .answers {
@@ -335,9 +376,9 @@ p {
   transform: translateY(20px);
   transition: opacity 350ms, transform 350ms;
   border-radius: 10px 10px 0px 10px;
-  background: #b1b1b1;
+  background: #c39b5f;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
-  color: #fff;
+  color: #fffcfb;
   font-family: Inter;
   font-size: 14px;
   font-weight: 400;
