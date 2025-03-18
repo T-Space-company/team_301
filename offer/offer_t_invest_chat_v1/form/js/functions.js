@@ -50,27 +50,36 @@ export function validEmail(inputArr) {
 export function renderFormRegistrations(allFormClass) {
   const forms = document.querySelectorAll(`.${allFormClass}`);
   const htmlFormHtml = `
-  <div class="form-fields">
- <div class="form-group input-group form-field">
-    <input class="form-control form-input form__input" name="name" placeholder="Имя*"  type="text" required />
+ <div class="form-group input-group ">
+<label class="input-label">
+  Ваше имя*
+    <input class="form-control form-input form__input" name="name" placeholder="Имя"  type="text" required />
     <i class="fa__err"></i>
-    <span class="fa__errInfo">- Удалите цифры</span>
+    <span class="fa__errInfo">- Удалите цифры </span>
     <i class="fa__checked"></i>
+        </label>
+
 </div>
-  <div class="form-group input-group form-field">
-    <input class="form-control  form-input form__input" name="last_name" placeholder="Фамилия*" required type="text" />
+  <div class="form-group input-group ">
+  <label class="input-label">
+  Ваша фамилия*
+    <input class="form-control  form-input form__input" name="last_name" placeholder="Фамилия" required type="text" />
     <i class="fa__err"></i>
-    <span class="fa__errInfo">- Удалите цифры
+    <span class="fa__errInfo">- Удалите цифры </span>
+    <i class="fa__checked"></i>
+        </label>
+
     </div>
 
 
-  <div class="form-group input-group form-field form-field-last">
-    <input class="form-control form-input _phone" maxlength="10" placeholder="9213456789" name="phone" type="tel" />
-
-   
+  <div class="form-group input-group">
+  <label class="input-label">
+  Ваш номер телефона*
+    <input class="form-control form-input _phone" maxlength="10" placeholder="(921) 345-67-89" name="phone" type="tel" />
     <div class="error-phone"></div>
+  </label>
   </div>
-</div>
+
    <input name="code" type="hidden" value="" />
   <input name="lang" type="hidden" value="" />
   <input type="hidden" name="subid" class="js-inputSubid">

@@ -198,7 +198,7 @@ p {
   padding: 5px 10px;
   width: 70px;
   height: 23px;
-  font-family: Raleway;
+  font-family: Inter;
   font-size: 11px;
   font-weight: 500;
   line-height: 13px;
@@ -437,7 +437,7 @@ p {
   transform: translateY(20px);
   transition: opacity 350ms, transform 350ms;
   display: flex;
-  max-width: 300px;
+  max-width: 340px;
   width: 100%;
   box-sizing: border-box;
   padding: 20px 25px;
@@ -481,56 +481,68 @@ p {
   margin-bottom: 20px !important;
 }
 
-.form-field label {
+/* .form-field label {
   display: block;
   margin-bottom: 5px;
-}
+} */
 
-.form-field input {
-  max-width: 250px;
+.form-input {
   width: 100%;
   height: 50px;
   display: flex;
   padding: 15px;
   align-items: center;
-  border-radius: 10px;
   border: none;
   box-sizing: border-box;
-  font-family: Inter;
+  font-family: "IBM Plex Sans";
   font-size: 14px;
   font-weight: 500;
-  line-height: 3.955px;
+  line-height: 4px;
   box-sizing: border-box;
-  background-color: #ecf1f6;
+  border-radius: 6px;
+  background: #f5f7fa;
 }
 
-.form-field input::placeholder {
-  color: #9b9b9b;
-  font-family: Inter;
+.form-input::placeholder {
+  color: #81858c;
+  font-family: "IBM Plex Sans";
+  font-size: 12px;
+}
+
+.input-label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  color: #504137;
+  font-family: "IBM Plex Sans";
   font-size: 14px;
-  font-weight: 400;
 }
 
 .buttonFormSend {
   display: flex;
-  max-width: 250px;
   width: 100%;
   padding: 15px 30px;
   justify-content: center;
   align-items: center;
   border: none;
-  border-radius: 20px;
-  background: #ffdd2d !important;
+  border-radius: 8px !important;
+  background: #f1c800 !important;
   cursor: pointer;
-  height: 53px !important;
+  height: 50px !important;
 }
 
 .buttonFormText {
-  font-family: Inter;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 4px;
-  color: #000 !important;
+  color: #504137 !important;
+  text-align: center;
+  font-family: "IBM Plex Sans";
+  font-size: 16.5px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
 }
 
 @media (min-width: 769px) {
@@ -543,6 +555,7 @@ p {
   }
   .main {
     margin: 100px auto 80px auto;
+    max-width: 400px;
   }
   .messages-date {
     height: 33px;

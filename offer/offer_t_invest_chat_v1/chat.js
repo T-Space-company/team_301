@@ -148,6 +148,7 @@ document.addEventListener("DOMContentLoaded", () => {
       createQuestion(
         "Извините, чтобы участвовать в программе Вы должны быть совершеннолетним гражданином или резидентом РФ"
       );
+      localStorage.setItem("unsuitable", false);
     };
 
     const handleButton1Click = () => {
@@ -489,12 +490,13 @@ document.addEventListener("DOMContentLoaded", () => {
     createQuestion(
       "Извините, чтобы участвовать  в программе Вы должны быть совершеннолетним гражданином или резидентом РФ"
     );
+    localStorage.setItem("unsuitable", false);
   };
 
   buttonYes.addEventListener("click", handleClickYes);
   buttonNo.addEventListener("click", handleClickNo);
 
-  function onButtonClick(buttonValue, delay = 400) {
+  function onButtonClick(buttonValue, delay = 200) {
     const answer = document.createElement("div");
     answer.classList.add("answer");
 
@@ -525,7 +527,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       answer.classList.add("visible");
       scrollDown(400);
-    }, 400);
+    }, delay);
   }
 
   function createForm() {
