@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const sum = document.querySelector(".bonus__sum");
   let count = 0;
 
-  if (screen.height > 795) {
+  if (screen.height > 795 && screen.width < 1024) {
     main.style.height = "100vh";
   }
 
@@ -57,13 +57,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
       document.querySelector(".main__coin").appendChild(plusWrap);
 
-      // setTimeout(() => {
-      //   plusWrap.classList.add("disappear");
+      const removeDelay = window.innerWidth >= 768 ? 1000 : 600;
 
-      //   setTimeout(() => {
-      //     plusWrap.remove();
-      //   }, 500);
-      // }, 600);
+      setTimeout(() => {
+        if (window.innerWidth >= 1024) {
+          plusWrap.classList.add("hid");
+          plus.classList.add("hid");
+        } else {
+          plusWrap.classList.add("disappear");
+        }
+
+        setTimeout(() => {
+          plusWrap.remove();
+        }, removeDelay);
+      }, removeDelay);
     }
 
     switch (count) {

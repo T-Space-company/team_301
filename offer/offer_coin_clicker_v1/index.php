@@ -1,3 +1,9 @@
+<?php
+if (!isset($rawClick) && !isset($click)) {
+  die();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -245,7 +251,7 @@
       </div>
       <!--------- FORM --------->
       <div id="modal-form" class="modal form hidden">
-        <div class="main__heading">
+        <div class="main__heading form">
           <h1>Вам доступен БОНУС 5 000 ₽</h1>
         </div>
         <h2 class="form__subheading">после первого вложения! </h2>
@@ -273,6 +279,10 @@
     </main>
     <script src="./assets/js/main.js"></script>
     <script src="loadAssets.js?v=321"></script>
+
+    <script>
+      localStorage.removeItem("answers");
+    </script>
 
     <script>
       window.onload = function() {
