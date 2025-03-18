@@ -62,6 +62,11 @@ document.addEventListener("DOMContentLoaded", () => {
     messageContainer.classList.remove("typing-visible");
     messageContainer.classList.add("message");
 
+    const sender = document.createElement("span");
+    sender.textContent = "Т-Инвестиции";
+    sender.classList.add("message-sender");
+    messageContainer.appendChild(sender);
+
     const messageP = document.createElement("p");
     messageP.classList.add("message-text");
     messageP.innerHTML = message;
