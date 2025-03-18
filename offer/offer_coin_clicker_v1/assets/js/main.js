@@ -1,11 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const main = document.querySelector("main");
   const coin = document.querySelector(".main__coin img");
   const quiz1 = document.getElementById("modal-1");
   const quiz2 = document.getElementById("modal-2");
+  const form = document.getElementById("modal-form");
   const quiz1Button = document.getElementById("quiz1-btn");
   const quiz2Button = document.getElementById("quiz2-btn");
   const sum = document.querySelector(".bonus__sum");
   let count = 0;
+
+  if (screen.height > 795) {
+    main.style.height = "100vh";
+  }
 
   function saveAnswer(question, answer) {
     let answers = JSON.parse(localStorage.getItem("answers")) || [];
@@ -29,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "Да"
     );
     quiz2.classList.add("hidden");
+    form.classList.remove("hidden");
   });
 
   coin.addEventListener("click", () => {
@@ -50,13 +57,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
       document.querySelector(".main__coin").appendChild(plusWrap);
 
-      setTimeout(() => {
-        plusWrap.classList.add("disappear");
+      // setTimeout(() => {
+      //   plusWrap.classList.add("disappear");
 
-        setTimeout(() => {
-          plusWrap.remove();
-        }, 500);
-      }, 600);
+      //   setTimeout(() => {
+      //     plusWrap.remove();
+      //   }, 500);
+      // }, 600);
     }
 
     switch (count) {

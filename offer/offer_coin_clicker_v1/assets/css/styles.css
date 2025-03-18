@@ -144,7 +144,7 @@ p {
 }
 
 .main__bottom {
-  margin-top: 25px;
+  margin: 25px 15px 0 15px;
   color: #fff;
   text-align: center;
   font-family: "Fixel Display";
@@ -169,6 +169,7 @@ p {
   justify-content: center;
   background-size: cover;
   background-position: center;
+  z-index: 3;
 }
 
 .coin-wrap.disappear {
@@ -377,8 +378,9 @@ p {
   );
   background-color: #000;
   background-repeat: no-repeat;
-  padding: 0;
+  padding: 0 0 30px 0;
   justify-content: flex-start;
+  overflow: auto;
 }
 
 .form__subheading {
@@ -395,13 +397,116 @@ p {
 
 .modal__content.form {
   border-radius: 25px;
-  border: 1px solid #fff;
-  opacity: 0.5;
+  padding: 25px 20px;
+  border: 1px solid #ffffff5c;
   background: linear-gradient(
     101deg,
-    rgba(217, 217, 217, 0.5) 0%,
+    rgb(217 217 217 / 10%) 0%,
     rgba(217, 217, 217, 0.05) 100%
   );
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(10px);
+  margin-top: 25px;
+}
+
+.form-heading {
+  color: #fff;
+  text-align: center;
+  font-family: "Fixel Display";
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 130%;
+  margin-bottom: 20px;
+  margin: 0 auto 20px auto;
+}
+
+.input-label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: #efefef;
+  font-family: "Fixel Display";
+  font-size: 13.5px;
+}
+
+.form-input {
+  border-radius: 13px;
+  background: #dbdbdb;
+  display: flex;
+  padding: 15px 17px;
+  align-items: center;
+  height: auto;
+  font-family: "Fixel Display";
+  font-size: 15px;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+.form-input::placeholder {
+  color: #676767;
+  font-family: "Fixel Display";
+  font-size: 15px;
+}
+
+.form-checkbox {
+  width: 16px;
+  height: 16px;
+}
+
+.checkbox-text {
+  color: #fff;
+  font-family: "Fixel Display";
+  font-size: 13px;
+  line-height: 17px;
+  margin-left: 17px;
+}
+
+.checkbox-text > .input-accent {
+  background: var(--2, linear-gradient(98deg, #f99c1c 0%, #f8d631 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration-color: #f99c1c;
+  text-decoration-line: underline;
+}
+
+@media (max-width: 375px) {
+  .main__heading {
+    margin-top: 27px;
+  }
+  .main__coin {
+    width: 360px;
+    height: 360px;
+  }
+  .main__bottom {
+    margin: 20px 15px 0 15px;
+  }
+  .coins {
+    width: 350px;
+    height: 99%;
+  }
+  .coins > img {
+    width: 26%;
+  }
+  .coin--t-l {
+    left: 4%;
+    top: 7%;
+  }
+
+  .coin--t-r {
+    right: 15%;
+    top: -3%;
+  }
+
+  .coin--b-r {
+    right: 7%;
+    bottom: 25%;
+  }
+
+  .coin--b-l {
+    bottom: 23%;
+    left: 22%;
+  }
 }
