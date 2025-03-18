@@ -1,7 +1,35 @@
 document.addEventListener("DOMContentLoaded", () => {
   const coin = document.querySelector(".main__coin img");
+  const quiz1 = document.getElementById("modal-1");
+  const quiz2 = document.getElementById("modal-2");
+  const quiz1Button = document.getElementById("quiz1-btn");
+  const quiz2Button = document.getElementById("quiz2-btn");
   const sum = document.querySelector(".bonus__sum");
   let count = 0;
+
+  function saveAnswer(question, answer) {
+    let answers = JSON.parse(localStorage.getItem("answers")) || [];
+    answers.push(`${question}: ${answer}`);
+    localStorage.setItem("answers", JSON.stringify(answers));
+  }
+
+  function openQuiz() {
+    quiz1.classList.remove("hidden");
+  }
+
+  quiz1Button.addEventListener("click", () => {
+    saveAnswer("Вам больше 21 года?", "Да");
+    quiz1.classList.add("hidden");
+    quiz2.classList.remove("hidden");
+  });
+
+  quiz2Button.addEventListener("click", () => {
+    saveAnswer(
+      "Вы являетесь гражданином или резидентом Российской Федерации?",
+      "Да"
+    );
+    quiz2.classList.add("hidden");
+  });
 
   coin.addEventListener("click", () => {
     coin.style.transform = "scale(0.9)";
@@ -23,8 +51,12 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelector(".main__coin").appendChild(plusWrap);
 
       setTimeout(() => {
-        plusWrap.remove();
-      }, 1500);
+        plusWrap.classList.add("disappear");
+
+        setTimeout(() => {
+          plusWrap.remove();
+        }, 500);
+      }, 600);
     }
 
     switch (count) {
@@ -48,9 +80,22 @@ document.addEventListener("DOMContentLoaded", () => {
         const coinTL = document.createElement("img");
         coinTL.classList.add("coin--t-l");
         coinTL.src = "./assets/img/t-l.png";
+        const coinTR = document.createElement("img");
+        coinTR.classList.add("coin--t-r");
+        coinTR.src = "./assets/img/t-r.png";
+        const coinBR = document.createElement("img");
+        coinBR.classList.add("coin--b-r");
+        coinBR.src = "./assets/img/b-r.png";
+        const coinBL = document.createElement("img");
+        coinBL.classList.add("coin--b-l");
+        coinBL.src = "./assets/img/b-l.png";
 
         coinsWrap.appendChild(coinTL);
+        setTimeout(coinsWrap.appendChild(coinTR), 200);
+        setTimeout(coinsWrap.appendChild(coinBR), 250);
+        setTimeout(coinsWrap.appendChild(coinBL), 220);
         document.querySelector(".main__coin").appendChild(coinsWrap);
+        setTimeout(openQuiz, 1500);
         return;
     }
   });
