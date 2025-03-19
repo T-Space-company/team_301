@@ -18,6 +18,12 @@
   font-weight: 600;
   font-style: normal;
 }
+@font-face {
+  font-family: "Fixel Display";
+  src: url("./fonts/FixelDisplay-SemiBold.woff2");
+  font-weight: 600;
+  font-style: normal;
+}
 
 body {
   margin: 0;
@@ -25,6 +31,21 @@ body {
 }
 p {
   margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .header {
@@ -521,6 +542,194 @@ p {
   margin-bottom: 0;
 }
 
+/*<-------------------THANKS PAGE-------------------->*/
+
+.body__thanks {
+  background: #3a294e;
+}
+
+.main-thankyou {
+  width: 100%;
+  padding: 20px;
+  background-position: top;
+  background-repeat: no-repeat;
+  position: absolute;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+}
+
+.main-thankyou__block {
+  border-radius: 10px;
+  border: 1px solid #efcb79;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  max-width: 345px;
+}
+
+.main-thankyou__block > h3 {
+  color: #e2cb79;
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.28px;
+}
+
+.main-thankyou__block > span {
+  color: #ebebf2;
+  text-align: center;
+  font-family: Inter;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.128px;
+}
+
+.timer {
+  color: #fff;
+  text-align: center;
+  font-family: "Fixel Display";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+}
+
+.main-image.thanks > img {
+  width: 100px;
+  animation: ring 1.5s infinite ease-in-out;
+}
+
+.header.active {
+  padding: 10px;
+  position: static;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  height: auto;
+  box-sizing: border-box;
+  gap: 8px;
+  z-index: 1;
+  box-shadow: none;
+}
+
+.header__logo {
+  width: 65px;
+}
+
+.header__text {
+  color: #ebebf2;
+  text-align: center;
+  font-family: Inter;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: -0.8px;
+  text-transform: uppercase;
+}
+
+@keyframes ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(-10deg);
+  }
+  30% {
+    transform: rotate(10deg);
+  }
+  45% {
+    transform: rotate(-10deg);
+  }
+  60% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.main-thankyou__testimonials {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  width: 100%;
+  max-width: 1080px;
+}
+
+.testimonials__heading {
+  color: #fff;
+  text-align: center;
+  font-family: "Fixel Display";
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28px;
+}
+
+.testimonials__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.testimonials__item {
+  display: flex;
+  padding: 15px 0px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  width: 100%;
+  max-width: 345px;
+}
+
+.testimonials__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 345px;
+}
+
+.testimonials__name {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.testimonials__contact,
+.testimonials__city {
+  color: #fff;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 120%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.testimonials__text {
+  color: #fff;
+  font-family: Inter;
+  font-size: 12px;
+  line-height: 150%;
+}
+
 @media (min-width: 769px) {
   .header {
     height: 90px;
@@ -577,6 +786,37 @@ p {
   }
   .visible {
     justify-content: center;
+  }
+
+  /*<-------------------THANKS PAGE-------------------->*/
+  .body__thanks {
+    background: #1a1a1f;
+  }
+  .main-image.thanks > img {
+    width: 240px;
+  }
+  .main-thankyou__block {
+    max-width: 760px;
+    gap: 45px;
+    padding: 33px;
+  }
+  .main-thankyou__block > h3 {
+    font-size: 52px;
+    line-height: 53px;
+  }
+  .main-thankyou__block > span {
+    font-size: 22px;
+    max-width: 500px;
+  }
+  .timer {
+    font-size: 52px;
+    line-height: 62px;
+  }
+  .testimonials__item {
+    max-width: none;
+  }
+  .testimonials__text {
+    font-size: 18px;
   }
 }
 
