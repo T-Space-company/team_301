@@ -1,0 +1,591 @@
+@font-face {
+  font-family: "TT Firs Neue";
+  src: url("./fonts/TT-Firs-Neue-Trial-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Firs Neue";
+  src: url("./fonts/TT-Firs-Neue-Trial-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Firs Neue";
+  src: url("./fonts/TT-Firs-Neue-Trial-DemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  background: #27272f;
+}
+p {
+  margin: 0;
+}
+
+.header {
+  width: 100%;
+  min-width: 320px;
+  height: 70px;
+  background: #27272f;
+  padding: 0 20px 0 20px;
+  padding: 0 20px 0 20px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  box-sizing: border-box;
+  z-index: 10;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.header-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.heading-title {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  margin-left: 8px;
+}
+
+.heading-title-name {
+  color: #fff;
+  font-family: "TT Firs Neue";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.heading-subtitle {
+  color: #767676;
+  text-align: center;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 500;
+  align-self: flex-start;
+}
+
+.footer {
+  width: 100%;
+  min-width: 320px;
+  height: 55px;
+  background-color: #fff;
+  padding: 12px 13px;
+  display: flex;
+  align-items: center;
+  bottom: 0;
+  position: fixed;
+  box-sizing: border-box;
+}
+
+.footer-menu {
+  display: flex;
+  padding: 5px 8px;
+  align-items: center;
+  gap: 4px;
+  border-radius: 100px;
+  height: 30px;
+  box-sizing: border-box;
+  background: #ffdd2d;
+}
+
+.footer-menu-text {
+  color: #333;
+  font-family: Inter;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 8px;
+}
+
+.footer-input {
+  width: 100%;
+  height: 40px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.footer-input-placeholder {
+  color: #a3acb3;
+  font-family: Inter;
+  line-height: 19px;
+}
+
+.footer-send {
+  display: flex;
+  width: 48px;
+  height: 30px;
+  box-sizing: border-box;
+  padding: 5px 8px 5px 14px;
+
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  background: #ffdd2d;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  margin: 80px auto 70px auto;
+}
+
+.messages-date {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  box-sizing: border-box;
+  border-radius: 20px;
+  padding: 5px 10px;
+  width: 70px;
+  height: 23px;
+  font-family: Inter;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 13px;
+  letter-spacing: 0.066px;
+  background: #5f1e8e;
+  color: #fff;
+}
+
+.main-messages {
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.message-field {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.message-field:first-child {
+  margin-top: 15px;
+}
+
+.message-avatar {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 350ms, transform 350ms;
+}
+
+.message {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 350ms, transform 350ms;
+  background: #fff;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 10px 10px 5px 0px;
+  padding: 8px 15px;
+  max-width: 300px;
+  width: auto;
+  height: auto;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.message-sender {
+  color: #5f1e8e;
+  font-family: "TT Firs Neue";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.accent {
+  color: #ffdd2d;
+}
+
+.message-field:nth-child(4) .message-text {
+  font-weight: 700;
+}
+/* 
+.message-field:nth-child(6) .message-text {
+  font-weight: 700;
+} */
+/* 
+.message-field:nth-child(9) .message-text {
+  max-width: 240px;
+} */
+
+.message.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.message-avatar.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.message-text {
+  color: #000;
+  font-family: Inter;
+  font-size: 14px;
+  margin: 0;
+  font-weight: 400;
+}
+
+.time {
+  color: #7a7a7a;
+  font-family: Inter;
+  font-size: 10px;
+  text-align: right;
+}
+
+.time.answ {
+  color: #a0a0a0;
+}
+
+.typing {
+  display: flex;
+  gap: 5px;
+}
+
+.typing span {
+  width: 8px;
+  height: 8px;
+  background: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+  animation: blink 1.4s infinite;
+}
+
+.typing span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.2;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+.answers {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 350ms, transform 350ms;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 37px;
+  margin-top: -10px;
+  max-width: 300px;
+}
+
+.answers:nth-child(2) {
+  flex-direction: column;
+}
+
+.answers.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.button {
+  display: flex;
+  padding: 15px 25px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid #5f1e8e;
+  background: #5f1e8e;
+  color: #fff;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  width: 100%;
+}
+
+.answer {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 350ms, transform 350ms;
+  border-radius: 10px 10px 0px 10px;
+  background: #ffc759;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+  color: #202023;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 10px 15px;
+  margin-top: 15px;
+  gap: 5px;
+  width: auto;
+  max-width: 250px;
+  height: auto;
+  box-sizing: border-box;
+  position: relative;
+  align-items: flex-end;
+  display: flex;
+  justify-content: center;
+  align-self: flex-end;
+}
+
+.answer.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.answer-tail {
+  transform: scaleX(-1);
+  position: absolute;
+  bottom: 0;
+  right: -5px;
+}
+
+#emoji {
+  margin-right: 8px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.form-wrapper {
+  display: none;
+  justify-content: center;
+  gap: 5px;
+  align-items: flex-end;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 15px;
+}
+
+.visible {
+  display: flex;
+}
+
+.form-container {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 350ms, transform 350ms;
+  display: flex;
+  max-width: 340px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px 25px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background: #fff;
+  align-self: center;
+  box-shadow: 0px 4px 5.3px 1px rgba(0, 0, 0, 0.25);
+}
+
+.form-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.form-heading {
+  color: #121214;
+  text-align: center;
+  font-family: "TT Firs Neue";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.form-fields {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.form-field {
+  width: 100%;
+}
+
+.form-field-last {
+  margin-bottom: 20px !important;
+}
+
+/* .form-field label {
+  display: block;
+  margin-bottom: 5px;
+} */
+
+.form-input {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  padding: 15px;
+  align-items: center;
+  border: none;
+  box-sizing: border-box;
+  font-family: "IBM Plex Sans";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 4px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  background: #f5f7fa;
+}
+
+.form-input::placeholder {
+  color: #81858c;
+  font-family: "IBM Plex Sans";
+  font-size: 12px;
+}
+
+.input-label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  color: #504137;
+  font-family: "IBM Plex Sans";
+  font-size: 14px;
+}
+
+.buttonFormSend {
+  display: flex;
+  width: 100%;
+  padding: 15px 30px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 8px !important;
+  background: #5f1e8e !important;
+  cursor: pointer;
+  height: 50px !important;
+}
+
+.buttonFormText {
+  color: #fff !important;
+  text-align: center;
+  font-family: "IBM Plex Sans";
+  font-size: 16.5px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 769px) {
+  .header {
+    height: 90px;
+  }
+  .main {
+    margin: 100px auto 80px auto;
+    max-width: 400px;
+  }
+  .messages-date {
+    height: 33px;
+    width: 80px;
+    font-size: 13px;
+  }
+  .message {
+    max-width: 350px;
+    padding: 10px 20px;
+  }
+  .message-text {
+    font-size: 16px;
+  }
+  .message-avatar {
+    width: 36px;
+  }
+  .answers {
+    max-width: 350px;
+    margin-left: 40px;
+  }
+  .heading-title-name {
+    font-size: 22px;
+  }
+  .heading-subtitle {
+    font-size: 14px;
+  }
+  #logo {
+    width: 45px;
+  }
+  .form-container {
+    max-width: 350px;
+  }
+  .form-field input {
+    max-width: 310px;
+  }
+  .buttonFormSend {
+    max-width: 310px;
+  }
+  .footer {
+    height: 70px;
+  }
+  .footer-menu {
+    height: 35px;
+  }
+  .footer-menu-text {
+    font-size: 15px;
+  }
+  .footer-input-placeholder {
+    font-size: 15px;
+  }
+  .visible {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 325px) {
+  .buttonFormText {
+    font-size: 13px;
+    line-height: 15px;
+  }
+}
