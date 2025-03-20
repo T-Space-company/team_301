@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const chat = document.querySelector(".main-messages");
+  const input = document.getElementById("chat-input");
+  const sendButton = document.getElementById("chat-send");
   const form = document.querySelector(".form-wrapper");
   const formContainer = document.querySelector(".form-container");
 
@@ -10,11 +12,10 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const firstMessages = [
-    "Здравствуйте, я Анна! Ваш личный менеджер",
-    "Спасибо за установку приложения! Мы рады предложить вам уникальную возможность сделать следующий шаг к финансовому благополучию — инвестиции с Сбербанком.",
-    "Представляем вам нашу новую инвестиционную программу, которая позволяет получить значительную прибыль.",
-    "Пройдите небольшой опрос перед началом работы:",
-    "Вы являетесь гражданином или резидентом Российской Федерации?",
+    "Пройдите официальный тест от ПАО «СБЕРБАНК РОССИЯ» и получите доступ к платформе!",
+    "Поздравляю! Теперь от Сбер Банк для Вас открыта возможность зарабатывать на акциях российских и зарубежных компаний и получать от 87 000 ₽ уже с первых недель!",
+    "Пожалуйста, ответьте на следующие вопросы:",
+    "Вы являетесь гражданином Российской Федерации (есть ли у вас Российское гражданство)?",
   ];
 
   function showTypingIndicator(callback, message, delay = 400) {
@@ -109,97 +110,176 @@ document.addEventListener("DOMContentLoaded", () => {
     answers.appendChild(buttonYes);
     answers.appendChild(buttonNo);
     chat.appendChild(answers);
-  }, 4800);
+  }, 4200);
 
   setTimeout(() => {
     answers.classList.add("visible");
-  }, 5200);
+  }, 4600);
+
+  function handleSendAnswer() {
+    let message = input.value.trim();
+    if (message === "") return;
+
+    onButtonClick(message);
+    disableChatInput();
+
+    if (input.dataset.validation === "age") {
+      if (parseInt(message, 10) < 18) {
+        createQuestion(
+          "К сожалению, доступ к платформе могут получить только совершеннолетние граждане Российской Федерации"
+        );
+        localStorage.setItem("unsuitable", "false");
+        return;
+      }
+
+      setTimeout(() => {
+        createQuestion("С какого вы города?");
+        enableChatInput("city");
+        scrollDown(500);
+      }, 200);
+    } else if (input.dataset.validation === "city") {
+      setTimeout(() => {
+        createQuestion("Был ли у вас опыт в инвестициях?");
+        createExperienceButtons();
+        scrollDown(500);
+      }, 200);
+    } else if (input.dataset.validation === "sum") {
+      setTimeout(() => {
+        createQuestion("Откуда вы узнали о нашей платформе?");
+        createInfoButtons();
+        scrollDown(500);
+      }, 200);
+    }
+  }
+
+  function enableChatInput(validationType) {
+    input.removeAttribute("disabled");
+
+    input.dataset.validation = validationType;
+    input.removeEventListener("input", validateInput);
+    input.addEventListener("input", validateInput);
+
+    sendButton.removeEventListener("click", handleSendAnswer);
+    sendButton.addEventListener("click", handleSendAnswer);
+  }
+
+  function disableChatInput() {
+    input.setAttribute("disabled", "");
+    input.removeEventListener("input", validateInput);
+    sendButton.removeEventListener("click", handleSendAnswer);
+    input.value = "";
+  }
+
+  function validateInput(event) {
+    let value = event.target.value.trim();
+
+    switch (event.target.dataset.validation) {
+      case "age":
+        event.target.value = value
+          .replace(/\D/g, "")
+          .replace(/^0+/, "")
+          .slice(0, 2);
+        break;
+      case "city":
+        event.target.value = value
+          .replace(/[^а-яА-ЯёЁ\s-]/g, "")
+          .replace(/\s{2,}/g, " ")
+          .slice(0, 20);
+        break;
+      case "sum":
+        event.target.value = value
+          .replace(/\D/g, "")
+          .replace(/^0+/, "")
+          .slice(0, 8);
+        break;
+    }
+  }
 
   const handleClickYes = () => {
     onButtonClick("Да");
     createQuestion("Сколько вам лет?");
+    enableChatInput("age");
+    // const answers = document.createElement("div");
+    // answers.classList.add("answers");
+    // answers.id = "answers__col";
 
-    const answers = document.createElement("div");
-    answers.classList.add("answers");
-    answers.id = "answers__col";
+    // const handleButton0Click = () => {
+    //   onButtonClick("до 18");
+    //   button0.removeEventListener("click", handleButton1Click);
+    //   button1.removeEventListener("click", handleButton1Click);
+    //   button2.removeEventListener("click", handleButton2Click);
+    //   button3.removeEventListener("click", handleButton3Click);
 
-    const handleButton0Click = () => {
-      onButtonClick("до 18");
-      button0.removeEventListener("click", handleButton1Click);
-      button1.removeEventListener("click", handleButton1Click);
-      button2.removeEventListener("click", handleButton2Click);
-      button3.removeEventListener("click", handleButton3Click);
+    //   createQuestion(
+    //     "К сожалению доступ к платформе могут получить только совершеннолетние граждане Российской Федерации"
+    //   );
+    // };
 
-      createQuestion(
-        "К сожалению доступ к платформе могут получить только совершеннолетние граждане Российской Федерации"
-      );
-    };
+    // const handleButton1Click = () => {
+    //   onButtonClick("18-24");
+    //   button0.removeEventListener("click", handleButton1Click);
+    //   button1.removeEventListener("click", handleButton1Click);
+    //   button2.removeEventListener("click", handleButton2Click);
+    //   button3.removeEventListener("click", handleButton3Click);
 
-    const handleButton1Click = () => {
-      onButtonClick("18-24");
-      button0.removeEventListener("click", handleButton1Click);
-      button1.removeEventListener("click", handleButton1Click);
-      button2.removeEventListener("click", handleButton2Click);
-      button3.removeEventListener("click", handleButton3Click);
+    //   createQuestion("Какую сумму вы бы предпочли зарабатывать?");
+    //   createRevenueButtons();
+    //   scrollDown(200);
+    // };
 
-      createQuestion("Какую сумму вы бы предпочли зарабатывать?");
-      createRevenueButtons();
-      scrollDown(200);
-    };
+    // const handleButton2Click = () => {
+    //   onButtonClick("25-40");
+    //   button0.removeEventListener("click", handleButton1Click);
+    //   button1.removeEventListener("click", handleButton1Click);
+    //   button2.removeEventListener("click", handleButton2Click);
+    //   button3.removeEventListener("click", handleButton3Click);
 
-    const handleButton2Click = () => {
-      onButtonClick("25-40");
-      button0.removeEventListener("click", handleButton1Click);
-      button1.removeEventListener("click", handleButton1Click);
-      button2.removeEventListener("click", handleButton2Click);
-      button3.removeEventListener("click", handleButton3Click);
+    //   createQuestion("Какую сумму вы бы предпочли зарабатывать?");
+    //   createRevenueButtons();
+    //   scrollDown(200);
+    // };
 
-      createQuestion("Какую сумму вы бы предпочли зарабатывать?");
-      createRevenueButtons();
-      scrollDown(200);
-    };
+    // const handleButton3Click = () => {
+    //   onButtonClick("55+");
+    //   button0.removeEventListener("click", handleButton1Click);
+    //   button1.removeEventListener("click", handleButton1Click);
+    //   button2.removeEventListener("click", handleButton2Click);
+    //   button3.removeEventListener("click", handleButton3Click);
 
-    const handleButton3Click = () => {
-      onButtonClick("55+");
-      button0.removeEventListener("click", handleButton1Click);
-      button1.removeEventListener("click", handleButton1Click);
-      button2.removeEventListener("click", handleButton2Click);
-      button3.removeEventListener("click", handleButton3Click);
+    //   createQuestion("Какую сумму вы бы предпочли зарабатывать?");
+    //   createRevenueButtons();
+    //   scrollDown(200);
+    // };
 
-      createQuestion("Какую сумму вы бы предпочли зарабатывать?");
-      createRevenueButtons();
-      scrollDown(200);
-    };
+    // const button0 = document.createElement("button");
+    // button0.textContent = "до 18";
+    // button0.classList.add("button");
+    // button0.addEventListener("click", handleButton0Click);
 
-    const button0 = document.createElement("button");
-    button0.textContent = "до 18";
-    button0.classList.add("button");
-    button0.addEventListener("click", handleButton0Click);
+    // const button1 = document.createElement("button");
+    // button1.textContent = "18-24";
+    // button1.classList.add("button");
+    // button1.addEventListener("click", handleButton1Click);
 
-    const button1 = document.createElement("button");
-    button1.textContent = "18-24";
-    button1.classList.add("button");
-    button1.addEventListener("click", handleButton1Click);
+    // const button2 = document.createElement("button");
+    // button2.textContent = "25-40";
+    // button2.classList.add("button");
+    // button2.addEventListener("click", handleButton2Click);
 
-    const button2 = document.createElement("button");
-    button2.textContent = "25-40";
-    button2.classList.add("button");
-    button2.addEventListener("click", handleButton2Click);
+    // const button3 = document.createElement("button");
+    // button3.textContent = "55+";
+    // button3.classList.add("button");
+    // button3.addEventListener("click", handleButton3Click);
 
-    const button3 = document.createElement("button");
-    button3.textContent = "55+";
-    button3.classList.add("button");
-    button3.addEventListener("click", handleButton3Click);
+    // answers.appendChild(button0);
+    // answers.appendChild(button1);
+    // answers.appendChild(button2);
+    // answers.appendChild(button3);
+    // chat.appendChild(answers);
 
-    answers.appendChild(button0);
-    answers.appendChild(button1);
-    answers.appendChild(button2);
-    answers.appendChild(button3);
-    chat.appendChild(answers);
-
-    setTimeout(() => {
-      answers.classList.add("visible");
-    }, 800);
+    // setTimeout(() => {
+    //   answers.classList.add("visible");
+    // }, 800);
   };
 
   const handleClickNo = () => {
@@ -207,69 +287,53 @@ document.addEventListener("DOMContentLoaded", () => {
     createQuestion(
       "К сожалению, доступ к платформе могут получить только совершеннолетние граждане Российской Федерации."
     );
+    localStorage.setItem("unsuitable", "false");
   };
 
-  function createRevenueButtons() {
+  function createInfoButtons() {
     const answers = document.createElement("div");
     answers.classList.add("answers");
     answers.id = "answers__col";
 
     const handleEarnFirst = () => {
-      onButtonClick("50 000 ₽");
+      onButtonClick("Реклама в интернете");
       removeEventListeners();
-      createQuestion("У вас есть опыт в инвестициях?");
-      createExperienceButtons();
+
       scrollDown(200);
     };
 
     const handleEarnSecond = () => {
-      onButtonClick("100 000 ₽");
+      onButtonClick("От друзей");
       removeEventListeners();
-      createQuestion("У вас есть опыт в инвестициях?");
-      createExperienceButtons();
+
       scrollDown(200);
     };
 
     const handleEarnThird = () => {
-      onButtonClick("200 000 ₽");
+      onButtonClick("Реклама в играх");
       removeEventListeners();
-      createQuestion("У вас есть опыт в инвестициях?");
-      createExperienceButtons();
-      scrollDown(200);
-    };
 
-    const handleEarnFourth = () => {
-      onButtonClick("500 000 ₽");
-      removeEventListeners();
-      createQuestion("У вас есть опыт в инвестициях?");
-      createExperienceButtons();
       scrollDown(200);
     };
 
     const buttonFirst = document.createElement("button");
-    buttonFirst.textContent = "50 000 ₽";
+    buttonFirst.textContent = "Реклама в интернете";
     buttonFirst.classList.add("button");
     buttonFirst.addEventListener("click", handleEarnFirst);
 
     const buttonSecond = document.createElement("button");
-    buttonSecond.textContent = "100 000 ₽";
+    buttonSecond.textContent = "От друзей";
     buttonSecond.classList.add("button");
     buttonSecond.addEventListener("click", handleEarnSecond);
 
     const buttonThird = document.createElement("button");
-    buttonThird.textContent = "200 000 ₽";
+    buttonThird.textContent = "Реклама в играх";
     buttonThird.classList.add("button");
     buttonThird.addEventListener("click", handleEarnThird);
-
-    const buttonFourth = document.createElement("button");
-    buttonFourth.textContent = "500 000 ₽";
-    buttonFourth.classList.add("button");
-    buttonFourth.addEventListener("click", handleEarnFourth);
 
     answers.appendChild(buttonFirst);
     answers.appendChild(buttonSecond);
     answers.appendChild(buttonThird);
-    answers.appendChild(buttonFourth);
     chat.appendChild(answers);
 
     setTimeout(() => {
@@ -280,7 +344,6 @@ document.addEventListener("DOMContentLoaded", () => {
       buttonFirst.removeEventListener("click", handleEarnFirst);
       buttonSecond.removeEventListener("click", handleEarnSecond);
       buttonThird.removeEventListener("click", handleEarnThird);
-      buttonFourth.removeEventListener("click", handleEarnFourth);
     }
   }
 
@@ -290,41 +353,47 @@ document.addEventListener("DOMContentLoaded", () => {
     answers.id = "answers__col";
 
     const handleExpFirst = () => {
-      onButtonClick("Да (позитивный)");
+      onButtonClick("Был успешный");
       removeEventListeners();
-      createQuestion("Подберите для себя удобный рабочий график.");
-      createScheduleButtons();
-      scrollDown(200);
+      createQuestion(
+        "От какой суммы в месяц вы хотите зарабатывать на пассивном доходе?"
+      );
+      enableChatInput("sum");
+      scrollDown(400);
     };
 
     const handleExpSecond = () => {
-      onButtonClick("Нет (негативный)");
+      onButtonClick("Был неудачный");
       removeEventListeners();
-      createQuestion("Подберите для себя удобный рабочий график.");
-      createScheduleButtons();
-      scrollDown(200);
+      createQuestion(
+        "От какой суммы в месяц вы хотите зарабатывать на пассивном доходе?"
+      );
+      enableChatInput("sum");
+      scrollDown(400);
     };
 
     const handleExpThird = () => {
-      onButtonClick("Не имею опыта");
+      onButtonClick("Не было");
       removeEventListeners();
-      createQuestion("Подберите для себя удобный рабочий график.");
-      createScheduleButtons();
-      scrollDown(200);
+      createQuestion(
+        "От какой суммы в месяц вы хотите зарабатывать на пассивном доходе?"
+      );
+      enableChatInput("sum");
+      scrollDown(400);
     };
 
     const buttonFirst = document.createElement("button");
-    buttonFirst.textContent = "Да (позитивный)";
+    buttonFirst.textContent = "Был успешный";
     buttonFirst.classList.add("button");
     buttonFirst.addEventListener("click", handleExpFirst);
 
     const buttonSecond = document.createElement("button");
-    buttonSecond.textContent = "Нет (негативный)";
+    buttonSecond.textContent = "Был неудачный";
     buttonSecond.classList.add("button");
     buttonSecond.addEventListener("click", handleExpSecond);
 
     const buttonThird = document.createElement("button");
-    buttonThird.textContent = "Не имею опыта";
+    buttonThird.textContent = "Не было";
     buttonThird.classList.add("button");
     buttonThird.addEventListener("click", handleExpThird);
 
@@ -410,8 +479,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     setTimeout(() => {
       answer.classList.add("visible");
-      scrollDown(400);
-    }, 400);
+      scrollDown(800);
+    }, 600);
   }
 
   function createForm() {
