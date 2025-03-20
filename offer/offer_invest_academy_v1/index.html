@@ -15,7 +15,7 @@
   </head>
   <body>
     <main class="main">
-      <div class="main__intro">
+      <div class="screen main__intro hidden">
         <div class="modal__content intro">
           <h1 class="intro__heading">Академия инвестиций от Сбер</h1>
           <div class="intro__content">
@@ -32,6 +32,109 @@
             </button>
           </div>
         </div>
+      </div>
+      <div class="screen main__age hidden" id="quiz1">
+        <div class="modal__content quiz">
+          <h2 class="quiz__heading">Сколько Вам лет?</h2>
+          <div class="quiz__items">
+            <a href="err.html" class="quiz__item">
+              <span class="quiz__circle"></span>
+              До 21
+            </a>
+            <button type="button" class="quiz__item">
+              <span class="quiz__circle"></span>
+              21-35
+            </button>
+            <button type="button" class="quiz__item">
+              <span class="quiz__circle"></span>
+              36-50
+            </button>
+            <button type="button" class="quiz__item">
+              <span class="quiz__circle"></span>
+              50 +
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="screen main__citizen hidden" id="quiz2">
+        <div class="modal__content quiz">
+          <h2 class="quiz__heading">
+            Вы являетесь гражданином Российской Федерации?
+          </h2>
+          <div class="quiz__items">
+            <button type="button" class="quiz__item">
+              <span class="quiz__circle"></span>
+              Да
+            </button>
+            <a href="err.html" class="quiz__item">
+              <span class="quiz__circle"></span>
+              Нет
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="screen main__goal hidden" id="quiz3">
+        <div class="modal__content quiz">
+          <h2 class="quiz__heading">Какая Ваша цель обучения?</h2>
+          <div class="quiz__items">
+            <button type="button" class="quiz__item">
+              <span class="quiz__circle"></span>
+              Дополнительный доход
+            </button>
+            <button type="button" class="quiz__item">
+              <span class="quiz__circle"></span>
+              Попробовать что-то новое
+            </button>
+            <button type="button" class="quiz__item">
+              <span class="quiz__circle"></span>
+              Купить недвижимость
+            </button>
+            <button type="button" class="quiz__item">
+              <span class="quiz__circle"></span>
+              Исполнение давней мечты
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="screen main__experience hidden" id="quiz4">
+        <div class="modal__content quiz">
+          <h2 class="quiz__heading">Имеете ли Вы опыт в инвестировании?</h2>
+          <div class="quiz__items">
+            <button type="button" class="quiz__item">
+              <span class="quiz__circle"></span>
+              Да
+            </button>
+            <button type="button" class="quiz__item">
+              <span class="quiz__circle"></span>
+              Нет
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="screen main__profit hidden" id="quiz5">
+        <div class="modal__content quiz">
+          <h2 class="quiz__heading">
+            Средний доход на платформе от "Сбер" начинается от 40 000 рублей в
+            неделю. Сколько Вы хотите зарабатывать?
+          </h2>
+          <div class="quiz__items">
+            <button type="button" class="quiz__item">
+              <span class="quiz__circle"></span>
+              40 000 рублей
+            </button>
+            <button type="button" class="quiz__item">
+              <span class="quiz__circle"></span>
+              70 000 рублей
+            </button>
+            <button type="button" class="quiz__item">
+              <span class="quiz__circle"></span>
+              150 000 рублей
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="screen main__form-wrap" id="form-screen">
+        <div class="modal__content quiz"></div>
       </div>
     </main>
     <script src="./assets/js/timer.js"></script>

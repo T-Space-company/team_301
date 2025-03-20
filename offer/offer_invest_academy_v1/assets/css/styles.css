@@ -6,7 +6,7 @@ main {
   font-family: Nunito;
 }
 
-.main__intro {
+.screen {
   height: 100%;
   backdrop-filter: blur(50px);
   background-color: #00000070;
@@ -26,8 +26,11 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 40px;
   padding: 20px;
+}
+
+.modal__content.intro {
+  gap: 40px;
 }
 
 .intro__heading {
@@ -77,8 +80,48 @@ main {
   background: #ff9d00;
   box-shadow: 0px 1px 4px 0px rgba(242, 166, 36, 0.2);
   color: #363636;
-
   font-size: 16px;
   font-weight: 800;
   line-height: 21px;
+}
+
+.modal__content.quiz {
+  gap: 16px;
+}
+
+.quiz__heading {
+  color: #000;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 26.4px;
+}
+
+.quiz__items {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.quiz__item {
+  padding: 12.8px 16px;
+  border-radius: 5px;
+  border: 1px solid #000;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  background: transparent;
+  gap: 16px;
+}
+
+.quiz__circle {
+  border-radius: 10px;
+  background: #c3c3c3;
+  width: 20px;
+  height: 20px;
 }
