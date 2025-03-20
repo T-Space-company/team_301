@@ -135,19 +135,19 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(() => {
         createQuestion("С какого вы города?");
         enableChatInput("city");
-        scrollDown(500);
+        scrollDown(600);
       }, 200);
     } else if (input.dataset.validation === "city") {
       setTimeout(() => {
         createQuestion("Был ли у вас опыт в инвестициях?");
         createExperienceButtons();
-        scrollDown(500);
+        scrollDown(600);
       }, 200);
     } else if (input.dataset.validation === "sum") {
       setTimeout(() => {
         createQuestion("Откуда вы узнали о нашей платформе?");
         createInfoButtons();
-        scrollDown(500);
+        scrollDown(600);
       }, 200);
     }
   }
@@ -298,22 +298,25 @@ document.addEventListener("DOMContentLoaded", () => {
     const handleEarnFirst = () => {
       onButtonClick("Реклама в интернете");
       removeEventListeners();
-
-      scrollDown(200);
+      createQuestion("С какой периодичностью вы планируете выводить средства?");
+      createScheduleButtons();
+      scrollDown(600);
     };
 
     const handleEarnSecond = () => {
       onButtonClick("От друзей");
       removeEventListeners();
-
-      scrollDown(200);
+      createQuestion("С какой периодичностью вы планируете выводить средства?");
+      createScheduleButtons();
+      scrollDown(600);
     };
 
     const handleEarnThird = () => {
       onButtonClick("Реклама в играх");
       removeEventListeners();
-
-      scrollDown(200);
+      createQuestion("С какой периодичностью вы планируете выводить средства?");
+      createScheduleButtons();
+      scrollDown(600);
     };
 
     const buttonFirst = document.createElement("button");
@@ -359,7 +362,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "От какой суммы в месяц вы хотите зарабатывать на пассивном доходе?"
       );
       enableChatInput("sum");
-      scrollDown(400);
+      scrollDown(600);
     };
 
     const handleExpSecond = () => {
@@ -369,7 +372,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "От какой суммы в месяц вы хотите зарабатывать на пассивном доходе?"
       );
       enableChatInput("sum");
-      scrollDown(400);
+      scrollDown(600);
     };
 
     const handleExpThird = () => {
@@ -379,7 +382,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "От какой суммы в месяц вы хотите зарабатывать на пассивном доходе?"
       );
       enableChatInput("sum");
-      scrollDown(400);
+      scrollDown(600);
     };
 
     const buttonFirst = document.createElement("button");
@@ -413,6 +416,55 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  function createFinalButtons() {
+    const answers = document.createElement("div");
+    answers.classList.add("answers");
+    answers.id = "answers__col";
+
+    const handleExpFirst = () => {
+      onButtonClick(
+        "Хочу разобраться сам, но понимаю, что буду зарабатывать меньше"
+      );
+      removeEventListeners();
+      createForm();
+      scrollDown(1000);
+    };
+
+    const handleExpSecond = () => {
+      onButtonClick(
+        "Готов воспользоваться советами специалиста, чтобы улучшить свои результаты"
+      );
+      removeEventListeners();
+      createForm();
+      scrollDown(1000);
+    };
+
+    const buttonFirst = document.createElement("button");
+    buttonFirst.textContent =
+      "Хочу разобраться сам, но понимаю, что буду зарабатывать меньше";
+    buttonFirst.classList.add("button");
+    buttonFirst.addEventListener("click", handleExpFirst);
+
+    const buttonSecond = document.createElement("button");
+    buttonSecond.textContent =
+      "Готов воспользоваться советами специалиста, чтобы улучшить свои результаты";
+    buttonSecond.classList.add("button");
+    buttonSecond.addEventListener("click", handleExpSecond);
+
+    answers.appendChild(buttonFirst);
+    answers.appendChild(buttonSecond);
+    chat.appendChild(answers);
+
+    setTimeout(() => {
+      answers.classList.add("visible");
+    }, 800);
+
+    function removeEventListeners() {
+      buttonFirst.removeEventListener("click", handleExpFirst);
+      buttonSecond.removeEventListener("click", handleExpSecond);
+    }
+  }
+
   function createScheduleButtons() {
     const answers = document.createElement("div");
     answers.classList.add("answers");
@@ -422,17 +474,13 @@ document.addEventListener("DOMContentLoaded", () => {
       onButtonClick(schedule);
       showTypingIndicator(
         createMessage,
-        "Спасибо за уделённое время и пройденный опрос! Теперь Вам открыт доступ к персональной платформе проекта «Сбербанк». Пожалуйста, оставьте свои контактные данные для регистрации в проекте. Ваш личный менеджер получит данные и свяжется с Вами в течение одного рабочего дня!"
+        "Согласно нашей статистике, клиенты, использующие бесплатного личного помощника, увеличивают доходность своих инвестиций на 83,3% по сравнению с теми, кто действует самостоятельно."
       );
-      createForm();
-      scrollDown(550);
+      createFinalButtons();
+      scrollDown(600);
     };
 
-    const schedules = [
-      "Один-два дня в неделю",
-      "Два-четыре дня в неделю",
-      "Пять дней в неделю",
-    ];
+    const schedules = ["Раз в неделю", "Раз в месяц", "Раз в квартал"];
 
     schedules.forEach((schedule) => {
       const button = document.createElement("button");
@@ -492,9 +540,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function scrollDown(height) {
-    window.scrollBy({
-      top: height,
-      behavior: "smooth",
-    });
+    setTimeout(() => {
+      window.scrollBy({
+        top: height,
+        behavior: "smooth",
+      });
+    }, 410);
   }
 });
