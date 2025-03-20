@@ -2,8 +2,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const chat = document.querySelector(".main-messages");
   const input = document.getElementById("chat-input");
   const sendButton = document.getElementById("chat-send");
+  const sendIcon = document.getElementById("send-icon");
   const form = document.querySelector(".form-wrapper");
   const formContainer = document.querySelector(".form-container");
+
+  function saveAnswer(question, answer) {
+    let answers = JSON.parse(localStorage.getItem("answers")) || [];
+    answers.push(`${question}: ${answer}`);
+    localStorage.setItem("answers", JSON.stringify(answers));
+  }
 
   const userData = {
     Имя: "",
@@ -124,6 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
     disableChatInput();
 
     if (input.dataset.validation === "age") {
+      saveAnswer("Сколько вам лет?", message);
       if (parseInt(message, 10) < 18) {
         createQuestion(
           "К сожалению, доступ к платформе могут получить только совершеннолетние граждане Российской Федерации"
@@ -138,12 +146,18 @@ document.addEventListener("DOMContentLoaded", () => {
         scrollDown(600);
       }, 200);
     } else if (input.dataset.validation === "city") {
+      saveAnswer("С какого вы города?", message);
+
       setTimeout(() => {
         createQuestion("Был ли у вас опыт в инвестициях?");
         createExperienceButtons();
         scrollDown(600);
       }, 200);
     } else if (input.dataset.validation === "sum") {
+      saveAnswer(
+        "От какой суммы в месяц вы хотите зарабатывать на пассивном доходе?",
+        message
+      );
       setTimeout(() => {
         createQuestion("Откуда вы узнали о нашей платформе?");
         createInfoButtons();
@@ -154,6 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function enableChatInput(validationType) {
     input.removeAttribute("disabled");
+    input.focus();
 
     input.dataset.validation = validationType;
     input.removeEventListener("input", validateInput);
@@ -161,12 +176,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     sendButton.removeEventListener("click", handleSendAnswer);
     sendButton.addEventListener("click", handleSendAnswer);
+    sendButton.classList.add("pulse");
+    sendIcon.style.fill = "#006012";
   }
 
   function disableChatInput() {
     input.setAttribute("disabled", "");
     input.removeEventListener("input", validateInput);
     sendButton.removeEventListener("click", handleSendAnswer);
+    sendButton.classList.remove("pulse");
+    sendIcon.style.fill = "#808080";
     input.value = "";
   }
 
@@ -197,6 +216,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const handleClickYes = () => {
     onButtonClick("Да");
+    saveAnswer("Вы являетесь гражданином Российской Федерации?", "Да");
     createQuestion("Сколько вам лет?");
     enableChatInput("age");
     // const answers = document.createElement("div");
@@ -296,6 +316,7 @@ document.addEventListener("DOMContentLoaded", () => {
     answers.id = "answers__col";
 
     const handleEarnFirst = () => {
+      saveAnswer("Откуда вы узнали о нашей платформе?", "Реклама в интернете");
       onButtonClick("Реклама в интернете");
       removeEventListeners();
       createQuestion("С какой периодичностью вы планируете выводить средства?");
@@ -304,6 +325,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const handleEarnSecond = () => {
+      saveAnswer("Откуда вы узнали о нашей платформе?", "От друзей");
       onButtonClick("От друзей");
       removeEventListeners();
       createQuestion("С какой периодичностью вы планируете выводить средства?");
@@ -312,6 +334,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const handleEarnThird = () => {
+      saveAnswer("Откуда вы узнали о нашей платформе?", "Реклама в играх");
       onButtonClick("Реклама в играх");
       removeEventListeners();
       createQuestion("С какой периодичностью вы планируете выводить средства?");
@@ -356,6 +379,7 @@ document.addEventListener("DOMContentLoaded", () => {
     answers.id = "answers__col";
 
     const handleExpFirst = () => {
+      saveAnswer("Был ли у вас опыт в инвестициях?", "Был успешный");
       onButtonClick("Был успешный");
       removeEventListeners();
       createQuestion(
@@ -366,6 +390,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const handleExpSecond = () => {
+      saveAnswer("Был ли у вас опыт в инвестициях?", "Был неудачный");
       onButtonClick("Был неудачный");
       removeEventListeners();
       createQuestion(
@@ -376,6 +401,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const handleExpThird = () => {
+      saveAnswer("Был ли у вас опыт в инвестициях?", "Не было");
       onButtonClick("Не было");
       removeEventListeners();
       createQuestion(
@@ -422,6 +448,10 @@ document.addEventListener("DOMContentLoaded", () => {
     answers.id = "answers__col";
 
     const handleExpFirst = () => {
+      saveAnswer(
+        "Хотите ли использовать личного помощника?",
+        "Хочу разобраться сам"
+      );
       onButtonClick(
         "Хочу разобраться сам, но понимаю, что буду зарабатывать меньше"
       );
@@ -431,6 +461,10 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const handleExpSecond = () => {
+      saveAnswer(
+        "Хотите ли использовать личного помощника?",
+        "Готов воспользоваться"
+      );
       onButtonClick(
         "Готов воспользоваться советами специалиста, чтобы улучшить свои результаты"
       );
@@ -471,6 +505,10 @@ document.addEventListener("DOMContentLoaded", () => {
     answers.id = "answers__col";
 
     const handleSchedule = (schedule) => {
+      saveAnswer(
+        "С какой периодичностью вы планируете выводить средства?",
+        schedule
+      );
       onButtonClick(schedule);
       showTypingIndicator(
         createMessage,
