@@ -2,8 +2,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const chat = document.querySelector(".main-messages");
   const input = document.getElementById("chat-input");
   const sendButton = document.getElementById("chat-send");
+  const sendIcon = document.getElementById("send-icon");
   const form = document.querySelector(".form-wrapper");
   const formContainer = document.querySelector(".form-container");
+
+  function saveAnswer(question, answer) {
+    let answers = JSON.parse(localStorage.getItem("answers")) || [];
+    answers.push(`${question}: ${answer}`);
+    localStorage.setItem("answers", JSON.stringify(answers));
+  }
 
   const userData = {
     Имя: "",
@@ -124,7 +131,8 @@ document.addEventListener("DOMContentLoaded", () => {
     disableChatInput();
 
     if (input.dataset.validation === "age") {
-      if (parseInt(message, 10) < 18) {
+      saveAnswer("Сколько вам лет?", message);
+      if (parseInt(message, 10) < 24) {
         createQuestion(
           "К сожалению, доступ к платформе могут получить только совершеннолетние граждане Российской Федерации"
         );
@@ -135,25 +143,32 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(() => {
         createQuestion("С какого вы города?");
         enableChatInput("city");
-        scrollDown(500);
+        scrollDown(600);
       }, 200);
     } else if (input.dataset.validation === "city") {
+      saveAnswer("С какого вы города?", message);
+
       setTimeout(() => {
         createQuestion("Был ли у вас опыт в инвестициях?");
         createExperienceButtons();
-        scrollDown(500);
+        scrollDown(600);
       }, 200);
     } else if (input.dataset.validation === "sum") {
+      saveAnswer(
+        "От какой суммы в месяц вы хотите зарабатывать на пассивном доходе?",
+        message
+      );
       setTimeout(() => {
         createQuestion("Откуда вы узнали о нашей платформе?");
         createInfoButtons();
-        scrollDown(500);
+        scrollDown(600);
       }, 200);
     }
   }
 
   function enableChatInput(validationType) {
     input.removeAttribute("disabled");
+    input.focus();
 
     input.dataset.validation = validationType;
     input.removeEventListener("input", validateInput);
@@ -161,12 +176,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     sendButton.removeEventListener("click", handleSendAnswer);
     sendButton.addEventListener("click", handleSendAnswer);
+    sendButton.classList.add("pulse");
+    sendIcon.style.fill = "#006012";
   }
 
   function disableChatInput() {
     input.setAttribute("disabled", "");
     input.removeEventListener("input", validateInput);
     sendButton.removeEventListener("click", handleSendAnswer);
+    sendButton.classList.remove("pulse");
+    sendIcon.style.fill = "#808080";
     input.value = "";
   }
 
@@ -197,89 +216,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const handleClickYes = () => {
     onButtonClick("Да");
+    saveAnswer("Вы являетесь гражданином Российской Федерации?", "Да");
     createQuestion("Сколько вам лет?");
     enableChatInput("age");
-    // const answers = document.createElement("div");
-    // answers.classList.add("answers");
-    // answers.id = "answers__col";
-
-    // const handleButton0Click = () => {
-    //   onButtonClick("до 18");
-    //   button0.removeEventListener("click", handleButton1Click);
-    //   button1.removeEventListener("click", handleButton1Click);
-    //   button2.removeEventListener("click", handleButton2Click);
-    //   button3.removeEventListener("click", handleButton3Click);
-
-    //   createQuestion(
-    //     "К сожалению доступ к платформе могут получить только совершеннолетние граждане Российской Федерации"
-    //   );
-    // };
-
-    // const handleButton1Click = () => {
-    //   onButtonClick("18-24");
-    //   button0.removeEventListener("click", handleButton1Click);
-    //   button1.removeEventListener("click", handleButton1Click);
-    //   button2.removeEventListener("click", handleButton2Click);
-    //   button3.removeEventListener("click", handleButton3Click);
-
-    //   createQuestion("Какую сумму вы бы предпочли зарабатывать?");
-    //   createRevenueButtons();
-    //   scrollDown(200);
-    // };
-
-    // const handleButton2Click = () => {
-    //   onButtonClick("25-40");
-    //   button0.removeEventListener("click", handleButton1Click);
-    //   button1.removeEventListener("click", handleButton1Click);
-    //   button2.removeEventListener("click", handleButton2Click);
-    //   button3.removeEventListener("click", handleButton3Click);
-
-    //   createQuestion("Какую сумму вы бы предпочли зарабатывать?");
-    //   createRevenueButtons();
-    //   scrollDown(200);
-    // };
-
-    // const handleButton3Click = () => {
-    //   onButtonClick("55+");
-    //   button0.removeEventListener("click", handleButton1Click);
-    //   button1.removeEventListener("click", handleButton1Click);
-    //   button2.removeEventListener("click", handleButton2Click);
-    //   button3.removeEventListener("click", handleButton3Click);
-
-    //   createQuestion("Какую сумму вы бы предпочли зарабатывать?");
-    //   createRevenueButtons();
-    //   scrollDown(200);
-    // };
-
-    // const button0 = document.createElement("button");
-    // button0.textContent = "до 18";
-    // button0.classList.add("button");
-    // button0.addEventListener("click", handleButton0Click);
-
-    // const button1 = document.createElement("button");
-    // button1.textContent = "18-24";
-    // button1.classList.add("button");
-    // button1.addEventListener("click", handleButton1Click);
-
-    // const button2 = document.createElement("button");
-    // button2.textContent = "25-40";
-    // button2.classList.add("button");
-    // button2.addEventListener("click", handleButton2Click);
-
-    // const button3 = document.createElement("button");
-    // button3.textContent = "55+";
-    // button3.classList.add("button");
-    // button3.addEventListener("click", handleButton3Click);
-
-    // answers.appendChild(button0);
-    // answers.appendChild(button1);
-    // answers.appendChild(button2);
-    // answers.appendChild(button3);
-    // chat.appendChild(answers);
-
-    // setTimeout(() => {
-    //   answers.classList.add("visible");
-    // }, 800);
   };
 
   const handleClickNo = () => {
@@ -296,24 +235,30 @@ document.addEventListener("DOMContentLoaded", () => {
     answers.id = "answers__col";
 
     const handleEarnFirst = () => {
+      saveAnswer("Откуда вы узнали о нашей платформе?", "Реклама в интернете");
       onButtonClick("Реклама в интернете");
       removeEventListeners();
-
-      scrollDown(200);
+      createQuestion("С какой периодичностью вы планируете выводить средства?");
+      createScheduleButtons();
+      scrollDown(600);
     };
 
     const handleEarnSecond = () => {
+      saveAnswer("Откуда вы узнали о нашей платформе?", "От друзей");
       onButtonClick("От друзей");
       removeEventListeners();
-
-      scrollDown(200);
+      createQuestion("С какой периодичностью вы планируете выводить средства?");
+      createScheduleButtons();
+      scrollDown(600);
     };
 
     const handleEarnThird = () => {
+      saveAnswer("Откуда вы узнали о нашей платформе?", "Реклама в играх");
       onButtonClick("Реклама в играх");
       removeEventListeners();
-
-      scrollDown(200);
+      createQuestion("С какой периодичностью вы планируете выводить средства?");
+      createScheduleButtons();
+      scrollDown(600);
     };
 
     const buttonFirst = document.createElement("button");
@@ -353,33 +298,36 @@ document.addEventListener("DOMContentLoaded", () => {
     answers.id = "answers__col";
 
     const handleExpFirst = () => {
+      saveAnswer("Был ли у вас опыт в инвестициях?", "Был успешный");
       onButtonClick("Был успешный");
       removeEventListeners();
       createQuestion(
         "От какой суммы в месяц вы хотите зарабатывать на пассивном доходе?"
       );
       enableChatInput("sum");
-      scrollDown(400);
+      scrollDown(600);
     };
 
     const handleExpSecond = () => {
+      saveAnswer("Был ли у вас опыт в инвестициях?", "Был неудачный");
       onButtonClick("Был неудачный");
       removeEventListeners();
       createQuestion(
         "От какой суммы в месяц вы хотите зарабатывать на пассивном доходе?"
       );
       enableChatInput("sum");
-      scrollDown(400);
+      scrollDown(600);
     };
 
     const handleExpThird = () => {
+      saveAnswer("Был ли у вас опыт в инвестициях?", "Не было");
       onButtonClick("Не было");
       removeEventListeners();
       createQuestion(
         "От какой суммы в месяц вы хотите зарабатывать на пассивном доходе?"
       );
       enableChatInput("sum");
-      scrollDown(400);
+      scrollDown(600);
     };
 
     const buttonFirst = document.createElement("button");
@@ -413,26 +361,83 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  function createFinalButtons() {
+    const answers = document.createElement("div");
+    answers.classList.add("answers");
+    answers.id = "answers__col";
+
+    const handleExpFirst = () => {
+      saveAnswer(
+        "Хотите ли использовать личного помощника?",
+        "Хочу разобраться сам"
+      );
+      onButtonClick(
+        "Хочу разобраться сам, но понимаю, что буду зарабатывать меньше"
+      );
+      removeEventListeners();
+      createForm();
+      scrollDown(1000);
+    };
+
+    const handleExpSecond = () => {
+      saveAnswer(
+        "Хотите ли использовать личного помощника?",
+        "Готов воспользоваться"
+      );
+      onButtonClick(
+        "Готов воспользоваться советами специалиста, чтобы улучшить свои результаты"
+      );
+      removeEventListeners();
+      createForm();
+      scrollDown(1000);
+    };
+
+    const buttonFirst = document.createElement("button");
+    buttonFirst.textContent =
+      "Хочу разобраться сам, но понимаю, что буду зарабатывать меньше";
+    buttonFirst.classList.add("button");
+    buttonFirst.addEventListener("click", handleExpFirst);
+
+    const buttonSecond = document.createElement("button");
+    buttonSecond.textContent =
+      "Готов воспользоваться советами специалиста, чтобы улучшить свои результаты";
+    buttonSecond.classList.add("button");
+    buttonSecond.addEventListener("click", handleExpSecond);
+
+    answers.appendChild(buttonFirst);
+    answers.appendChild(buttonSecond);
+    chat.appendChild(answers);
+
+    setTimeout(() => {
+      answers.classList.add("visible");
+    }, 800);
+
+    function removeEventListeners() {
+      buttonFirst.removeEventListener("click", handleExpFirst);
+      buttonSecond.removeEventListener("click", handleExpSecond);
+    }
+  }
+
   function createScheduleButtons() {
     const answers = document.createElement("div");
     answers.classList.add("answers");
     answers.id = "answers__col";
 
     const handleSchedule = (schedule) => {
+      saveAnswer(
+        "С какой периодичностью вы планируете выводить средства?",
+        schedule
+      );
       onButtonClick(schedule);
       showTypingIndicator(
         createMessage,
-        "Спасибо за уделённое время и пройденный опрос! Теперь Вам открыт доступ к персональной платформе проекта «Сбербанк». Пожалуйста, оставьте свои контактные данные для регистрации в проекте. Ваш личный менеджер получит данные и свяжется с Вами в течение одного рабочего дня!"
+        "Согласно нашей статистике, клиенты, использующие бесплатного личного помощника, увеличивают доходность своих инвестиций на 83,3% по сравнению с теми, кто действует самостоятельно."
       );
-      createForm();
-      scrollDown(550);
+      createFinalButtons();
+      scrollDown(600);
     };
 
-    const schedules = [
-      "Один-два дня в неделю",
-      "Два-четыре дня в неделю",
-      "Пять дней в неделю",
-    ];
+    const schedules = ["Раз в неделю", "Раз в месяц", "Раз в квартал"];
 
     schedules.forEach((schedule) => {
       const button = document.createElement("button");
@@ -492,9 +497,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function scrollDown(height) {
-    window.scrollBy({
-      top: height,
-      behavior: "smooth",
-    });
+    setTimeout(() => {
+      window.scrollBy({
+        top: height,
+        behavior: "smooth",
+      });
+    }, 410);
   }
 });
