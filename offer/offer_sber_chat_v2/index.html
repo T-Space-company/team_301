@@ -236,11 +236,17 @@ if (!isset($rawClick) && !isset($click)) {
     </main>
     <footer class="footer">
       <div class="footer-container">
-        <input type="text" class="footer-input" placeholder="Сообщение" />
+        <input
+          type="text"
+          class="footer-input"
+          id="chat-input"
+          placeholder="Сообщение"
+          disabled
+        />
       </div>
-      <div class="footer-send">
+      <button class="footer-send" id="chat-send">
         <img src="./img/icons/send.svg" alt="Send" />
-      </div>
+      </button>
     </footer>
 
     <script type="module" src="./chat.js?v=1"></script>
