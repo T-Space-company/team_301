@@ -132,7 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (input.dataset.validation === "age") {
       saveAnswer("Сколько вам лет?", message);
-      if (parseInt(message, 10) < 18) {
+      if (parseInt(message, 10) < 24) {
         createQuestion(
           "К сожалению, доступ к платформе могут получить только совершеннолетние граждане Российской Федерации"
         );
@@ -219,87 +219,6 @@ document.addEventListener("DOMContentLoaded", () => {
     saveAnswer("Вы являетесь гражданином Российской Федерации?", "Да");
     createQuestion("Сколько вам лет?");
     enableChatInput("age");
-    // const answers = document.createElement("div");
-    // answers.classList.add("answers");
-    // answers.id = "answers__col";
-
-    // const handleButton0Click = () => {
-    //   onButtonClick("до 18");
-    //   button0.removeEventListener("click", handleButton1Click);
-    //   button1.removeEventListener("click", handleButton1Click);
-    //   button2.removeEventListener("click", handleButton2Click);
-    //   button3.removeEventListener("click", handleButton3Click);
-
-    //   createQuestion(
-    //     "К сожалению доступ к платформе могут получить только совершеннолетние граждане Российской Федерации"
-    //   );
-    // };
-
-    // const handleButton1Click = () => {
-    //   onButtonClick("18-24");
-    //   button0.removeEventListener("click", handleButton1Click);
-    //   button1.removeEventListener("click", handleButton1Click);
-    //   button2.removeEventListener("click", handleButton2Click);
-    //   button3.removeEventListener("click", handleButton3Click);
-
-    //   createQuestion("Какую сумму вы бы предпочли зарабатывать?");
-    //   createRevenueButtons();
-    //   scrollDown(200);
-    // };
-
-    // const handleButton2Click = () => {
-    //   onButtonClick("25-40");
-    //   button0.removeEventListener("click", handleButton1Click);
-    //   button1.removeEventListener("click", handleButton1Click);
-    //   button2.removeEventListener("click", handleButton2Click);
-    //   button3.removeEventListener("click", handleButton3Click);
-
-    //   createQuestion("Какую сумму вы бы предпочли зарабатывать?");
-    //   createRevenueButtons();
-    //   scrollDown(200);
-    // };
-
-    // const handleButton3Click = () => {
-    //   onButtonClick("55+");
-    //   button0.removeEventListener("click", handleButton1Click);
-    //   button1.removeEventListener("click", handleButton1Click);
-    //   button2.removeEventListener("click", handleButton2Click);
-    //   button3.removeEventListener("click", handleButton3Click);
-
-    //   createQuestion("Какую сумму вы бы предпочли зарабатывать?");
-    //   createRevenueButtons();
-    //   scrollDown(200);
-    // };
-
-    // const button0 = document.createElement("button");
-    // button0.textContent = "до 18";
-    // button0.classList.add("button");
-    // button0.addEventListener("click", handleButton0Click);
-
-    // const button1 = document.createElement("button");
-    // button1.textContent = "18-24";
-    // button1.classList.add("button");
-    // button1.addEventListener("click", handleButton1Click);
-
-    // const button2 = document.createElement("button");
-    // button2.textContent = "25-40";
-    // button2.classList.add("button");
-    // button2.addEventListener("click", handleButton2Click);
-
-    // const button3 = document.createElement("button");
-    // button3.textContent = "55+";
-    // button3.classList.add("button");
-    // button3.addEventListener("click", handleButton3Click);
-
-    // answers.appendChild(button0);
-    // answers.appendChild(button1);
-    // answers.appendChild(button2);
-    // answers.appendChild(button3);
-    // chat.appendChild(answers);
-
-    // setTimeout(() => {
-    //   answers.classList.add("visible");
-    // }, 800);
   };
 
   const handleClickNo = () => {

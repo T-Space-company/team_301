@@ -115,6 +115,7 @@ button {
   flex-direction: row;
   align-items: center;
   border: none;
+  border-radius: 10px;
   outline: none;
   transition: 0.25s border;
 }
