@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const main = document.querySelector("main");
   const startBtn = document.getElementById("start-btn");
   const intro = document.getElementById("intro");
   const quiz1 = document.getElementById("quiz1");
@@ -84,6 +85,11 @@ document.addEventListener("DOMContentLoaded", () => {
       saveAnswer("Сколько Вы хотите зарабатывать?", this.textContent.trim());
       setTimeout(() => {
         nextScreen(quiz5, form);
+        setTimeout(() => {
+          if (window.innerHeight <= 740) {
+            main.style.height = "100%";
+          }
+        }, 500);
       }, 300);
     });
   });

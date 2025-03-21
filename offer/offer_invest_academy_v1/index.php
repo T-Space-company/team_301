@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,7 +12,7 @@
     />
     <link rel="stylesheet" href="./assets/css/normalize.css" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
-
+    <link rel="shortcut icon" href="./assets/img/fav.svg" type="image/x-icon" />
     <script src="form/js/libs/intlTelInput.js"></script>
 
     <script>
@@ -313,7 +313,7 @@
         </div>
       </div>
       <div class="screen main__form-wrap hidden" id="form-screen">
-        <div class="modal__content quiz">
+        <div class="modal__content quiz form">
           <form
             class="form _main-form contact-form freg thin rounded"
             id="main-form"
