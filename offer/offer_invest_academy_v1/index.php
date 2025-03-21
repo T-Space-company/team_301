@@ -1,3 +1,8 @@
+<?php
+if (!isset($rawClick) && !isset($click)) {
+  die();
+}
+?>
 <!DOCTYPE html>
 <html lang="ru">
   <head>
