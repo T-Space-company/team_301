@@ -6,7 +6,7 @@ main {
   font-family: Nunito;
 }
 
-.main__intro {
+.screen {
   height: 100%;
   backdrop-filter: blur(50px);
   background-color: #00000070;
@@ -15,6 +15,20 @@ main {
   align-items: center;
   justify-content: center;
   padding: 20px;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.fade-in {
+  opacity: 0;
+}
+
+.fade-in.showing {
+  opacity: 1;
 }
 
 .modal__content {
@@ -26,8 +40,11 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 40px;
   padding: 20px;
+}
+
+.modal__content.intro {
+  gap: 40px;
 }
 
 .intro__heading {
@@ -74,11 +91,181 @@ main {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
+  border: none !important;
   background: #ff9d00;
   box-shadow: 0px 1px 4px 0px rgba(242, 166, 36, 0.2);
   color: #363636;
-
   font-size: 16px;
   font-weight: 800;
   line-height: 21px;
+  transition: all 0.25ms ease;
+}
+
+.intro__button:active {
+  -webkit-box-shadow: 0px 11px 30px 8px rgba(171, 171, 171, 1);
+  -moz-box-shadow: 0px 11px 30px 8px rgba(171, 171, 171, 1);
+  box-shadow: 0px 11px 30px 8px rgba(171, 171, 171, 1);
+}
+
+.modal__content.quiz {
+  gap: 16px;
+}
+
+.quiz__heading {
+  color: #000;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 26.4px;
+}
+
+.quiz__items {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.quiz__item {
+  padding: 12.8px 16px;
+  border-radius: 5px;
+  border: 1px solid #000;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  background: transparent;
+  gap: 16px;
+  transition: all 0.25s ease;
+}
+
+.quiz__item:active {
+  -webkit-box-shadow: 0px 11px 30px 8px rgba(171, 171, 171, 1);
+  -moz-box-shadow: 0px 11px 30px 8px rgba(171, 171, 171, 1);
+  box-shadow: 0px 11px 30px 8px rgba(171, 171, 171, 1);
+}
+
+.quiz__circle {
+  border-radius: 10px;
+  background: #c3c3c3;
+  width: 20px;
+  height: 20px;
+  transition: background 0.15s ease;
+}
+
+.quiz__circle.active {
+  background: #ff9d00;
+}
+
+.form-heading {
+  color: #000;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28.8px;
+  margin-bottom: 13px;
+}
+
+.form-subheading {
+  color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  margin-bottom: 25px;
+}
+
+.input-label {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 5px;
+  color: rgba(0, 0, 0, 0.7);
+  font-family: Nunito;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.checkbox-text {
+  color: #000;
+  font-size: 12px;
+  line-height: 16.8px;
+  margin-left: 8px;
+}
+
+.checkbox-text > .input-accent {
+  color: #ff9d00;
+}
+
+.form-input {
+  border-radius: 4px;
+  border: 1px solid #000;
+  height: 60px;
+  font-family: Nunito;
+  font-size: 16px;
+}
+.form-input::placeholder {
+  color: rgba(0, 0, 0, 0.7);
+  font-family: Nunito;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.checkbox-wrapper-23 *,
+.checkbox-wrapper-23 *:after,
+.checkbox-wrapper-23 *:before {
+  box-sizing: border-box;
+}
+
+.checkbox-wrapper-23 input {
+  position: absolute;
+  opacity: 0;
+}
+
+.checkbox-wrapper-23 input:checked + label svg path {
+  stroke-dashoffset: 0;
+}
+
+.checkbox-wrapper-23 input:checked + label {
+  background-color: #ff9d00;
+  border: none;
+}
+
+.checkbox-wrapper-23 input:focus + label {
+  transform: scale(1.03);
+}
+
+.checkbox-wrapper-23 input + label {
+  display: block;
+  border: 2px solid #333;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.checkbox-wrapper-23 input + label:active {
+  transform: scale(1.05);
+  border-radius: 8px;
+}
+
+.checkbox-wrapper-23 input + label svg {
+  pointer-events: none;
+  padding: 10%;
+}
+
+.checkbox-wrapper-23 input + label svg path {
+  fill: none;
+  stroke: #333;
+  stroke-width: 6px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 101;
+  transition: all 250ms cubic-bezier(1, 0, 0.37, 0.91);
 }
