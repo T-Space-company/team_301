@@ -49,6 +49,105 @@
           </li>
         </ul>
       </div>
+      <div class="screen main__age hidden" id="quiz1">
+        <div class="modal__content quiz">
+          <img src="./assets/img/logo_s.svg" alt="Logo" />
+          <h2 class="quiz__heading">Сколько Вам лет?</h2>
+          <div class="quiz__items">
+            <a href="err.html" class="quiz__item"> До 21 </a>
+            <button type="button" class="quiz__item age">21-35</button>
+            <button type="button" class="quiz__item age">36-50</button>
+            <button type="button" class="quiz__item age">50 +</button>
+          </div>
+        </div>
+      </div>
+      <div class="screen main__citizen hidden" id="quiz2">
+        <div class="modal__content quiz">
+          <img src="./assets/img/logo_s.svg" alt="Logo" />
+          <h2 class="quiz__heading">
+            Вы являетесь гражданином Российской Федерации?
+          </h2>
+          <div class="quiz__items">
+            <button type="button" class="quiz__item citizen">Да</button>
+            <a href="err.html" class="quiz__item"> Нет </a>
+          </div>
+        </div>
+      </div>
+      <div class="screen main__goal hidden" id="quiz3">
+        <div class="modal__content quiz">
+          <img src="./assets/img/logo_s.svg" alt="Logo" />
+          <h2 class="quiz__heading">
+            С какой суммы Вы готовы начать сотрудничество с БКС?
+          </h2>
+          <div class="quiz__items">
+            <button type="button" class="quiz__item goal">
+              10 000 ₽ - 20 000 ₽
+            </button>
+            <button type="button" class="quiz__item goal">
+              20 000 ₽ - 50 000 ₽
+            </button>
+            <button type="button" class="quiz__item goal">
+              50 000 ₽ - 100 000 ₽
+            </button>
+            <button type="button" class="quiz__item goal">100 000 ₽+</button>
+          </div>
+        </div>
+      </div>
+      <div class="screen main__experience hidden" id="quiz4">
+        <div class="modal__content quiz">
+          <h2 class="quiz__heading">
+            Как лучше всего с Вами связаться? (выберите один)
+          </h2>
+          <div class="quiz__items">
+            <button type="button" class="quiz__item expr">WhatsApp</button>
+            <button type="button" class="quiz__item expr">Telegram</button>
+            <button type="button" class="quiz__item expr">
+              Мобильный телефон
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="screen main__profit hidden" id="quiz5">
+        <div class="modal__content quiz">
+          <h2 class="quiz__heading">
+            Средний доход участника в програме от БКС начинаеться от 128 340 ₽ и
+            может достигать 1 000 000 ₽. Сколько вы хотите зарабатывать?
+          </h2>
+          <div class="quiz__items">
+            <button type="button" class="quiz__item profit">
+              50 000 ₽ - 125 000 ₽
+            </button>
+            <button type="button" class="quiz__item profit">
+              125 000 ₽ - 250 000 ₽
+            </button>
+            <button type="button" class="quiz__item profit">
+              250 000 ₽ - 400 000 ₽
+            </button>
+            <button type="button" class="quiz__item profit">400 000 ₽+</button>
+          </div>
+        </div>
+      </div>
+      <div class="screen main__form-wrap hidden" id="form-screen">
+        <div class="modal__content quiz form">
+          <form
+            class="form _main-form contact-form freg thin rounded"
+            id="main-form"
+            method="post"
+          >
+            <div class="text-block-6">
+              <h2 class="form-heading" style="text-align: center">
+                Оставь заявку и начни зарабатывать уже сегодня!
+              </h2>
+            </div>
+            <input type="hidden" id="utm_medium" value='<?= $_GET['utm_medium'] ?>'>
+            <input type="hidden" id="campaing_id" value='<?= $_GET['campaing_id'] ?>'>
+            <input type="hidden" id="slug" value='<?= $_GET['slug'] ?>'> <input
+            type="hidden" id="bge" value='<?= $_GET['bge'] ?>'> <input
+            type="hidden" id="source" value='<?= $_GET['source'] ?>'>
+          </form>
+        </div>
+      </div>
     </main>
+    <script src="./assets/js/main.js"></script>
   </body>
 </html>
