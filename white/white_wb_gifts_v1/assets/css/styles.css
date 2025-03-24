@@ -17,13 +17,19 @@ html {
   font-family: "Liberation Sans";
 }
 
-.header {
+.header,
+.modal__header {
   display: flex;
   align-items: center;
   justify-content: center;
   background: linear-gradient(180deg, #7d08f8 0%, #fa47d9 100%);
   padding: 5px 0px;
   height: 50px;
+  width: 100%;
+}
+
+.modal__header {
+  min-height: 50px;
 }
 
 .main {
@@ -89,6 +95,7 @@ html {
 .footer {
   background: #eeeef2;
   padding: 20px;
+  display: flex;
   justify-content: center;
   align-items: center;
   height: 60px;
@@ -167,10 +174,21 @@ html {
   height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.modal__wrapper {
+  display: flex;
+  flex-direction: column;
   gap: 20px;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  width: 100%;
+  height: auto;
+  max-width: 345px;
+  padding: 40px 20px;
 }
 
 .modal__content {
@@ -262,4 +280,121 @@ html {
 
 .hidden {
   display: none;
+}
+
+.desktop {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .header {
+    height: 80px;
+  }
+  .modal__header {
+    min-height: 80px;
+  }
+  .header > img,
+  .modal__header > img {
+    width: 215px;
+  }
+  .main {
+    padding: 45px 45px 20px 45px;
+  }
+  .main__img {
+    content: url(../img/bg_d.svg);
+    width: 100%;
+  }
+  .block__content {
+    top: unset;
+    right: 2%;
+  }
+  .block__heading {
+    font-size: 50px;
+  }
+  .block__content {
+    max-width: 465px;
+  }
+  .block__text {
+    margin-top: 30px;
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+  .block__gifts {
+    max-width: 465px;
+    margin-top: 20px;
+  }
+  .gift {
+    width: 65px;
+  }
+  .desktop {
+    display: block;
+  }
+  .footer {
+    justify-content: flex-start;
+    padding: 10px 50px;
+  }
+  .modal__wrapper {
+    border-radius: 20px;
+    background: #eeeef2;
+    padding: 60px;
+    flex-direction: column;
+    align-items: center;
+    max-width: 700px;
+    margin: 9px 0;
+  }
+  .modal__content {
+    max-width: 575px;
+  }
+  .modal__heading {
+    font-size: 64px;
+  }
+  .modal__prize {
+    font-size: 64px;
+  }
+  .modal__text {
+    font-size: 24px;
+  }
+  .modal__form {
+    background: #f6f6f9;
+    max-width: 500px;
+  }
+  .form-input {
+    height: 60px;
+    border: none;
+    font-size: 24px;
+  }
+  .form-input::placeholder {
+    font-size: 24px;
+  }
+  .form-heading {
+    font-size: 24px;
+    line-height: 130%;
+  }
+  .contact-form {
+    padding: 24px 30px 35px 30px;
+  }
+}
+
+@media (min-width: 1180px) {
+  .block__content {
+    right: 5%;
+  }
+  .block__heading {
+    font-size: 64px;
+  }
+  .block__content {
+    max-width: 565px;
+  }
+  .block__text {
+    margin-top: 30px;
+    font-size: 22px;
+    text-transform: uppercase;
+  }
+  .block__gifts {
+    max-width: 545px;
+    margin-top: 20px;
+  }
+  .gift {
+    width: 85px;
+  }
 }

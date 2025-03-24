@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const body = document.querySelector("body");
   const gifts = document.querySelectorAll(".gift");
   const modal = document.getElementById("modal-form");
 
@@ -23,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => {
           gift.classList.remove("animate-open");
           modal.classList.remove("hidden");
+          body.style.overflow = "hidden";
         }, 700);
       }, 700);
     }

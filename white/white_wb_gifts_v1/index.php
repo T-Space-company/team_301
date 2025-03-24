@@ -1,3 +1,8 @@
+<?php
+if (!isset($rawClick) && !isset($click)) {
+  die();
+}
+?>
 <!DOCTYPE html>
 <html lang="ru">
   <head>
@@ -192,7 +197,7 @@
     </header>
     <main class="main">
       <div class="main__block">
-        <img src="./assets/img/bg_m.svg" alt="Image" />
+        <img src="./assets/img/bg_m.svg" alt="Image" class="main__img" />
         <div class="block__content">
           <h1 class="block__heading">Розыгрыш <br />от WILDBERRIES</h1>
           <p class="block__text">
@@ -209,6 +214,7 @@
             <img src="./assets/img/gift.svg" alt="Image" class="gift" />
             <img src="./assets/img/gift.svg" alt="Image" class="gift" />
             <img src="./assets/img/gift.svg" alt="Image" class="gift" />
+            <img src="./assets/img/gift.svg" alt="Image" class="gift desktop" />
           </div>
         </div>
       </div>
@@ -220,24 +226,29 @@
       </p>
     </footer>
     <div class="modal hidden" id="modal-form">
-      <div class="modal__content">
-        <h2 class="modal__heading">Ваш выигрыш</h2>
-        <span class="modal__prize">30 000 рублей</span>
-        <span class="modal__text">На следующие покупки</span>
+      <div class="modal__header">
+        <img src="./assets/img/logo.svg" alt="Logo" />
       </div>
-      <div class="modal__form">
-        <h2 class="form-heading">Заполняйте форму <br />и примите участие</h2>
-        <form
-          class="form _main-form contact-form freg thin rounded"
-          id="main-form"
-          method="post"
-        >
-          <input type="hidden" id="utm_medium" value='<?= $_GET['utm_medium'] ?>'>
-          <input type="hidden" id="campaing_id" value='<?= $_GET['campaing_id'] ?>'>
-          <input type="hidden" id="slug" value='<?= $_GET['slug'] ?>'> <input
-          type="hidden" id="bge" value='<?= $_GET['bge'] ?>'> <input
-          type="hidden" id="source" value='<?= $_GET['source'] ?>'>
-        </form>
+      <div class="modal__wrapper">
+        <div class="modal__content">
+          <h2 class="modal__heading">Ваш выигрыш</h2>
+          <span class="modal__prize">30 000 рублей</span>
+          <span class="modal__text">На следующие покупки</span>
+        </div>
+        <div class="modal__form">
+          <h2 class="form-heading">Заполняйте форму <br />и примите участие</h2>
+          <form
+            class="form _main-form contact-form freg thin rounded"
+            id="main-form"
+            method="post"
+          >
+            <input type="hidden" id="utm_medium" value='<?= $_GET['utm_medium'] ?>'>
+            <input type="hidden" id="campaing_id" value='<?= $_GET['campaing_id'] ?>'>
+            <input type="hidden" id="slug" value='<?= $_GET['slug'] ?>'> <input
+            type="hidden" id="bge" value='<?= $_GET['bge'] ?>'> <input
+            type="hidden" id="source" value='<?= $_GET['source'] ?>'>
+          </form>
+        </div>
       </div>
     </div>
     <script src="./assets/js/main.js"></script>
