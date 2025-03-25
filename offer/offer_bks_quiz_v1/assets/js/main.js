@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const quiz5 = document.getElementById("quiz5");
   const profitButtons = document.querySelectorAll(".quiz__item.profit");
   const form = document.getElementById("form-screen");
+  const screenWrap = document.querySelector(".screen__wrapper");
 
   localStorage.removeItem("answers");
 
@@ -42,6 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   startBtn.addEventListener("click", () => {
     setTimeout(() => {
+      screenWrap.classList.remove("hidden");
       nextScreen(quiz1, quiz1);
     }, 200);
   });
