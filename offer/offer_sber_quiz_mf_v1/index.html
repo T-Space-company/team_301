@@ -19,7 +19,7 @@
         <span class="intro__heading">Ваш капитал будет работать на вас</span>
       </div>
       <div class="main__vid">
-        <video src="./assets/img/vid.mp4" muted></video>
+        <video src="./assets/img/vid.mp4" id="main-vid"></video>
       </div>
       <div class="main__quiz">
         <div class="quiz__wrapper" id="quiz1">
@@ -28,9 +28,105 @@
           </h2>
           <h3 class="quiz__question">Был ли у вас опыт в инвестициях?</h3>
           <div class="quiz__buttons">
-            <button type="button" class="quiz__button">Был успешный</button>
-            <button type="button" class="quiz__button">Был неудачный</button>
-            <button type="button" class="quiz__button">Не было</button>
+            <button type="button" class="quiz__button1">Был успешный</button>
+            <button type="button" class="quiz__button1">Был неудачный</button>
+            <button type="button" class="quiz__button1">Не было</button>
+          </div>
+        </div>
+        <div class="quiz__wrapper hidden" id="quiz2">
+          <h2 class="quiz__heading">
+            Доступ к  пакету обучения <br />"+50 000 р за неделю"
+          </h2>
+          <h3 class="quiz__question">
+            От какой суммы в месяц вы хотите зарабатывать на пассивном доходе?
+          </h3>
+          <div class="quiz__buttons">
+            <button type="button" class="quiz__button2">От 75 000</button>
+            <button type="button" class="quiz__button2">От 125 000</button>
+            <button type="button" class="quiz__button2">От 200 000</button>
+          </div>
+        </div>
+        <div class="quiz__wrapper hidden" id="quiz3">
+          <h2 class="quiz__heading">
+            Доступ к  пакету обучения <br />"+50 000 р за неделю"
+          </h2>
+          <h3 class="quiz__question">Откуда вы узнали о нашей платформе?</h3>
+          <div class="quiz__buttons">
+            <button type="button" class="quiz__button3">
+              Реклама в интернете
+            </button>
+            <button type="button" class="quiz__button3">От друзей</button>
+            <button type="button" class="quiz__button3">Реклама в играх</button>
+          </div>
+        </div>
+        <div class="quiz__wrapper hidden" id="quiz4">
+          <h2 class="quiz__heading">
+            Доступ к  пакету обучения <br />"+50 000 р за неделю"
+          </h2>
+          <h3 class="quiz__question">
+            С какой периодичностью вы планируете выводить средства?
+          </h3>
+          <div class="quiz__buttons">
+            <button type="button" class="quiz__button4">Раз в неделю</button>
+            <button type="button" class="quiz__button4">Раз в месяц</button>
+            <button type="button" class="quiz__button4">Раз в квартал</button>
+          </div>
+        </div>
+        <div class="quiz__wrapper hidden" id="quiz5">
+          <h2 class="quiz__heading">
+            Доступ к  пакету обучения <br />"+50 000 р за неделю"
+          </h2>
+          <h3 class="quiz__question">
+            Согласно нашей статистике, клиенты, использующие бесплатного личного
+            помощника, увеличивают доходность своих инвестиций на 83,3% по
+            сравнению с теми, кто действует самостоятельно
+          </h3>
+          <div class="quiz__buttons">
+            <button type="button" class="quiz__button5">
+              Хочу разобраться сам, но понимаю, что буду зарабатывать меньше
+            </button>
+            <button type="button" class="quiz__button5">
+              Готов воспользоваться советами специалиста, чтобы улучшить свои
+              результаты
+            </button>
+          </div>
+        </div>
+        <div class="quiz__wrapper hidden" id="quiz-form">
+          <h2 class="quiz__heading">
+            Доступ к  пакету обучения <br />"+50 000 р за неделю"
+          </h2>
+          <h3 class="quiz__question">Заполните данные чтобы начать работу</h3>
+          <form></form>
+        </div>
+      </div>
+      <!--------- QUESTION 1 --------->
+      <div id="modal-1" class="modal">
+        <div class="modal__content">
+          <p class="modal__question">Вам больше 21 года?</p>
+          <div class="modal__actions">
+            <a href="err.html" class="modal__button--second modal__button--no"
+              >Нет</a
+            >
+            <button class="modal__button--second" id="modal1-btn">Да</button>
+          </div>
+        </div>
+      </div>
+      <!--------- QUESTION 2 --------->
+      <div id="modal-2" class="modal hidden">
+        <div class="modal__content">
+          <p class="modal__question">
+            Вы являетесь гражданином или резидентом Российской Федерации?
+          </p>
+          <div class="modal__actions">
+            <a href="err.html" class="modal__button--second modal__button--no"
+              >Нет</a
+            >
+            <button
+              class="modal__button--second modal__button--yes"
+              id="modal2-btn"
+            >
+              Да
+            </button>
           </div>
         </div>
       </div>
@@ -56,5 +152,6 @@
         </div>
       </div>
     </footer>
+    <script src="./assets/js/main.js"></script>
   </body>
 </html>
