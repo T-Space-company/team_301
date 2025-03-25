@@ -40,8 +40,16 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   function nextScreen(curr, next) {
-    curr.classList.add("hidden");
-    next.classList.remove("hidden");
+    curr.classList.remove("active");
+
+    setTimeout(() => {
+      curr.classList.add("hidden");
+      next.classList.remove("hidden");
+
+      setTimeout(() => {
+        next.classList.add("active");
+      }, 50);
+    }, 400);
   }
 
   quiz1Buttons.forEach((btn) => {
