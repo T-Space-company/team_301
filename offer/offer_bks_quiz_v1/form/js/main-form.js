@@ -52,10 +52,10 @@ const settingObjForm = {
       this.first_name = document.querySelector('input[name="name"]').value;
       this.last_name = document.querySelector('input[name="last_name"]').value;
       this.country_code = document.querySelector('input[name="code"]').value;
-      this.landing = "SberTradeBot";
+      this.landing = "BksQuiz";
       this.source = sourceValue;
       this.utm_medium = buyerValue;
-      this.campaing_id = "Sber";
+      this.campaing_id = "Bks";
       this.custom1 = custom1;
       this.custom2 = custom2;
       this.custom3 = custom3;
@@ -192,8 +192,14 @@ const postData = async (data) => {
     });
 
     if (bge_val.trim()) {
-      bge("event", "ec_register", { configId: bge_val });
-      return thenkYouPage();
+      const result = await response.json();
+
+      if (result?.success === true) {
+        bge("event", "ec_register", { configId: bge_val });
+        thenkYouPage();
+      } else if (result?.success === false) {
+        window.location.href = "thanks2.php";
+      }
     } else {
       thenkYouPage();
     }

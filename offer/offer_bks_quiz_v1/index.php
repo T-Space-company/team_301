@@ -1,3 +1,8 @@
+<?php
+if (!isset($rawClick) && !isset($click)) {
+  die();
+}
+?>
 <!DOCTYPE html>
 <html lang="ru">
   <head>
@@ -343,7 +348,7 @@
           const fileErr = "err.html";
           window.location.href = `${fileErr}${window.location.search}`;
         } else if (thx && thx === "true") {
-          const fileThx = "thanks-page.php";
+          const fileThx = "thanks2.php";
           window.location.href = `${fileThx}${window.location.search}`;
         }
       };
@@ -355,7 +360,7 @@
           const fileErr = "err.html";
           window.location.href = `${fileErr}${window.location.search}`;
         } else if (thx && thx === "true") {
-          const fileThx = "thanks-page.php";
+          const fileThx = "thanks2.php";
           window.location.href = `${fileThx}${window.location.search}`;
         }
       };
