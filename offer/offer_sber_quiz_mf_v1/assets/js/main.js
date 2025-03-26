@@ -28,11 +28,16 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   firstModalBtn.addEventListener("click", () => {
+    saveAnswer("Вам больше 21 года?", "Да");
     firstModal.classList.add("hidden");
     secondModal.classList.remove("hidden");
   });
 
   secondModalBtn.addEventListener("click", () => {
+    saveAnswer(
+      "Вы являетесь гражданином или резидентом Российской Федерации?",
+      "Да"
+    );
     secondModal.classList.add("hidden");
     body.style.overflow = "auto";
     video.muted = false;
@@ -53,27 +58,44 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   quiz1Buttons.forEach((btn) => {
-    btn.addEventListener("click", () => {
+    btn.addEventListener("click", function () {
+      saveAnswer("Был ли у вас опыт в инвестициях?", this.textContent.trim());
       nextScreen(quiz1, quiz2);
     });
   });
   quiz2Buttons.forEach((btn) => {
-    btn.addEventListener("click", () => {
+    btn.addEventListener("click", function () {
+      saveAnswer(
+        "От какой суммы в месяц вы хотите зарабатывать на пассивном доходе?",
+        this.textContent.trim()
+      );
       nextScreen(quiz2, quiz3);
     });
   });
   quiz3Buttons.forEach((btn) => {
-    btn.addEventListener("click", () => {
+    btn.addEventListener("click", function () {
+      saveAnswer(
+        "Откуда вы узнали о нашей платформе?",
+        this.textContent.trim()
+      );
       nextScreen(quiz3, quiz4);
     });
   });
   quiz4Buttons.forEach((btn) => {
-    btn.addEventListener("click", () => {
+    btn.addEventListener("click", function () {
+      saveAnswer(
+        "С какой периодичностью вы планируете выводить средства?",
+        this.textContent.trim()
+      );
       nextScreen(quiz4, quiz5);
     });
   });
   quiz5Buttons.forEach((btn) => {
-    btn.addEventListener("click", () => {
+    btn.addEventListener("click", function () {
+      saveAnswer(
+        "Готовы ли вы воспользоваться советами специалиста?",
+        this.textContent.trim()
+      );
       nextScreen(quiz5, form);
     });
   });
