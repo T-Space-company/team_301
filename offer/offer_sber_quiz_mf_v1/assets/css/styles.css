@@ -19,6 +19,10 @@
   font-weight: 800;
 }
 
+html {
+  background: #292929;
+}
+
 .header {
   background: #292929;
   box-shadow: 0px -0.6px 2.2px 0px rgba(0, 0, 0, 0.25);
@@ -40,6 +44,14 @@
   align-items: center;
   padding: 20px 15px 40px 15px;
   background: #fff;
+}
+
+.main__top {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
 }
 
 .main__intro {
@@ -71,7 +83,6 @@
 .main__vid {
   max-width: 345px;
   width: 100%;
-  margin-top: 20px;
 }
 
 .main__vid > video {
@@ -131,7 +142,7 @@
   font-size: 14px;
   font-weight: 600;
   line-height: 120%;
-  margin-top: 10px;
+  margin: 10px 0;
 }
 
 .quiz__buttons {
@@ -150,6 +161,7 @@
 .quiz__button4,
 .quiz__button5 {
   border-radius: 10px;
+  border: none;
   background: #24b23e;
   display: flex;
   padding: 10px 20px;
@@ -160,6 +172,15 @@
   font-size: 16px;
   font-weight: 700;
   width: 100%;
+  transition: box-shadow 250ms ease;
+}
+.quiz__button:active,
+.quiz__button1:active,
+.quiz__button2:active,
+.quiz__button3:active,
+.quiz__button4:active,
+.quiz__button5:active {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .quiz__button5 {
@@ -175,8 +196,12 @@
   gap: 15px;
 }
 
-.footer__logo {
+.footer__logo.mobile {
   align-self: center;
+}
+
+.footer__logo.desktop {
+  display: none;
 }
 
 .footer__menu {
@@ -293,6 +318,7 @@
 .modal__button--second {
   border-radius: 10px;
   background: #24b23e;
+  border: none;
   display: flex;
   width: 100%;
   max-width: 130px;
@@ -310,6 +336,119 @@
   background: #515151;
 }
 
+.contact-form {
+  width: 100%;
+  max-width: 530px;
+}
+
+.form-input {
+  border-radius: 10px;
+  background: #f4f6fa;
+  display: flex;
+  height: 40px;
+  padding: 18px 20px;
+  align-items: center;
+  font-family: Gilroy;
+  font-size: 16px;
+}
+
+.form-input::placeholder {
+  color: rgba(41, 41, 41, 0.7);
+  font-family: Gilroy;
+  font-size: 16px;
+}
+
 .hidden {
   display: none;
+}
+
+@media (min-width: 1024px) {
+  .header {
+    height: 90px;
+    font-size: 40px;
+  }
+  .main__top {
+    flex-direction: column-reverse;
+  }
+  .logo1 {
+    width: 58px;
+  }
+  .logo2 {
+    width: 250px;
+  }
+  .main {
+    padding: 40px 40px 80px 40px;
+  }
+  .main__vid {
+    max-width: 1140px;
+  }
+  .main__intro {
+    max-width: 1140px;
+  }
+  .intro__heading {
+    font-size: 34px;
+    font-weight: 600;
+  }
+  .intro__heading.top {
+    font-size: 55px;
+  }
+  .main__quiz {
+    max-width: 1140px;
+  }
+  .quiz__heading {
+    max-width: 530px;
+    font-size: 28px;
+  }
+  .quiz__question {
+    font-size: 24px;
+    margin: 50px 0;
+  }
+  .quiz__buttons {
+    max-width: 530px;
+  }
+  .quiz__button,
+  .quiz__button1,
+  .quiz__button2,
+  .quiz__button3,
+  .quiz__button4,
+  .quiz__button5 {
+    padding: 18px 20px;
+    font-size: 20px;
+  }
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: center;
+    padding: 0px 40px;
+  }
+  .footer__logo.mobile {
+    display: none;
+  }
+  .footer__logo.desktop {
+    display: block;
+  }
+  .footer__menu {
+    flex-direction: row;
+    align-items: center;
+    max-width: 430px;
+    gap: 14px 50px;
+    flex-wrap: wrap;
+  }
+  .footer__socials {
+    align-self: flex-start;
+  }
+  .form-input {
+    height: auto;
+  }
+  .modal__content {
+    max-width: 450px;
+  }
+  .modal__question {
+    font-size: 28px;
+  }
+  .modal__button--first,
+  .modal__button--second {
+    font-size: 20px;
+  }
 }
