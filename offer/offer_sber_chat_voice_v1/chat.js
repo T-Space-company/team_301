@@ -113,7 +113,9 @@ document.addEventListener("DOMContentLoaded", () => {
     onButtonClick("Да", 1000);
     stopAllAudio();
     const audio = new Audio("./audio/4.mp3");
-    audio.play();
+    setTimeout(() => {
+      audio.play();
+    }, 400);
     createQuestion(`Сколько вам лет?`);
 
     const answers = document.createElement("div");
@@ -143,7 +145,9 @@ document.addEventListener("DOMContentLoaded", () => {
       button2.removeEventListener("click", handleButton2Click);
       button3.removeEventListener("click", handleButton3Click);
       button4.removeEventListener("click", handleButton4Click);
-      audioProfit.play();
+      setTimeout(() => {
+        audioProfit.play();
+      }, 400);
       createQuestion(`С какой целью Вы хотите увеличить достаток?`);
       createRevenueButtons();
       scrollDown(400);
@@ -157,7 +161,9 @@ document.addEventListener("DOMContentLoaded", () => {
       button2.removeEventListener("click", handleButton2Click);
       button3.removeEventListener("click", handleButton3Click);
       button4.removeEventListener("click", handleButton4Click);
-      audioProfit.play();
+      setTimeout(() => {
+        audioProfit.play();
+      }, 400);
       createQuestion(`С какой целью Вы хотите увеличить достаток?`);
       createRevenueButtons();
       scrollDown(400);
@@ -171,8 +177,9 @@ document.addEventListener("DOMContentLoaded", () => {
       button2.removeEventListener("click", handleButton2Click);
       button3.removeEventListener("click", handleButton3Click);
       button4.removeEventListener("click", handleButton4Click);
-      audioProfit.play();
-
+      setTimeout(() => {
+        audioProfit.play();
+      }, 400);
       createQuestion(`С какой целью Вы хотите увеличить достаток?`);
       createRevenueButtons();
       scrollDown(400);
@@ -185,8 +192,9 @@ document.addEventListener("DOMContentLoaded", () => {
       button2.removeEventListener("click", handleButton2Click);
       button3.removeEventListener("click", handleButton3Click);
       button4.removeEventListener("click", handleButton4Click);
-      audioProfit.play();
-
+      setTimeout(() => {
+        audioProfit.play();
+      }, 400);
       createQuestion(`С какой целью Вы хотите увеличить достаток?`);
       createRevenueButtons();
       scrollDown(400);
@@ -238,7 +246,9 @@ document.addEventListener("DOMContentLoaded", () => {
       onButtonClick("Хочу обезопасить себя от кризиса");
       audioProfit.pause();
       audioProfit.currentTime = 0;
-      audioExp.play();
+      setTimeout(() => {
+        audioExp.play();
+      }, 400);
       removeEventListeners();
       createQuestion(`Имеете ли Вы опыт в инвестировании?`);
       createProfitButtons();
@@ -249,7 +259,9 @@ document.addEventListener("DOMContentLoaded", () => {
       onButtonClick("Хочу получать дополнительный доход");
       audioProfit.pause();
       audioProfit.currentTime = 0;
-      audioExp.play();
+      setTimeout(() => {
+        audioExp.play();
+      }, 400);
       removeEventListeners();
       createQuestion(`Имеете ли Вы опыт в инвестировании?`);
       createProfitButtons();
@@ -260,7 +272,9 @@ document.addEventListener("DOMContentLoaded", () => {
       onButtonClick("Планирую развивать бизнес");
       audioProfit.pause();
       audioProfit.currentTime = 0;
-      audioExp.play();
+      setTimeout(() => {
+        audioExp.play();
+      }, 400);
       removeEventListeners();
       createQuestion(`Имеете ли Вы опыт в инвестировании?`);
       createProfitButtons();
@@ -271,7 +285,9 @@ document.addEventListener("DOMContentLoaded", () => {
       onButtonClick("Хочу, чтобы моя семья не в чем не нуждалась");
       audioProfit.pause();
       audioProfit.currentTime = 0;
-      audioExp.play();
+      setTimeout(() => {
+        audioExp.play();
+      }, 400);
       removeEventListeners();
       createQuestion(`Имеете ли Вы опыт в инвестировании?`);
       createProfitButtons();
@@ -332,7 +348,9 @@ document.addEventListener("DOMContentLoaded", () => {
       onButtonClick("Да, успешно инвестирую по сей день");
       audioExp.pause();
       audioExp.currentTime = 0;
-      audioTime.play();
+      setTimeout(() => {
+        audioTime.play();
+      }, 400);
       removeEventListeners();
       createQuestion(
         `Средний доход в программе от "Сбербанк России" начинается от 30 000 рублей и может достигать 1 245 000 ₽ Сколько Вы хотите зарабатывать?`
@@ -345,7 +363,9 @@ document.addEventListener("DOMContentLoaded", () => {
       onButtonClick("Инвестировал ранее, но сейчас не уделяю этому времени");
       audioExp.pause();
       audioExp.currentTime = 0;
-      audioTime.play();
+      setTimeout(() => {
+        audioTime.play();
+      }, 400);
       removeEventListeners();
       createQuestion(
         `Средний доход в программе от "Сбербанк России" начинается от 30 000 рублей и может достигать 1 245 000 ₽ Сколько Вы хотите зарабатывать?`
@@ -358,7 +378,9 @@ document.addEventListener("DOMContentLoaded", () => {
       onButtonClick("Нет, никогда прежде не инвестировал");
       audioExp.pause();
       audioExp.currentTime = 0;
-      audioTime.play();
+      setTimeout(() => {
+        audioTime.play();
+      }, 400);
       removeEventListeners();
       createQuestion(
         `Средний доход в программе от "Сбербанк России" начинается от 30 000 рублей и может достигать 1 245 000 ₽ Сколько Вы хотите зарабатывать?`
@@ -408,7 +430,9 @@ document.addEventListener("DOMContentLoaded", () => {
       onButtonClick("150 000 рублей");
       audioTime.pause();
       audioTime.currentTime = 0;
-      audioSpend.play();
+      setTimeout(() => {
+        audioSpend.play();
+      }, 400);
       removeEventListeners();
       createQuestion(
         `Как вы планируете распорядиться заработанными на платформе средствами?`
@@ -421,7 +445,9 @@ document.addEventListener("DOMContentLoaded", () => {
       onButtonClick("330 000 рублей");
       audioTime.pause();
       audioTime.currentTime = 0;
-      audioSpend.play();
+      setTimeout(() => {
+        audioSpend.play();
+      }, 400);
       removeEventListeners();
       createQuestion(
         `Как вы планируете распорядиться заработанными на платформе средствами?`
@@ -435,7 +461,9 @@ document.addEventListener("DOMContentLoaded", () => {
       onButtonClick("1 000 000 рублей");
       audioTime.pause();
       audioTime.currentTime = 0;
-      audioSpend.play();
+      setTimeout(() => {
+        audioSpend.play();
+      }, 400);
       removeEventListeners();
       createQuestion(
         `Как вы планируете распорядиться заработанными на платформе средствами?`
@@ -484,7 +512,9 @@ document.addEventListener("DOMContentLoaded", () => {
       onButtonClick("Куплю недвижимость/автомобиль");
       audioSpend.pause();
       audioSpend.currentTime = 0;
-      audioStat.play();
+      setTimeout(() => {
+        audioStat.play();
+      }, 400);
       removeEventListeners();
       createQuestion(
         `Согласно нашей статистике, клиенты, использующие бесплатного личного помощника, увеличивают доходность своих инвестиций на 87,3% по сравнению с теми, кто действует самостоятельно`
@@ -497,7 +527,9 @@ document.addEventListener("DOMContentLoaded", () => {
       onButtonClick("Куплю то, что давно хотел");
       audioSpend.pause();
       audioSpend.currentTime = 0;
-      audioStat.play();
+      setTimeout(() => {
+        audioStat.play();
+      }, 400);
       removeEventListeners();
       createQuestion(
         `Согласно нашей статистике, клиенты, использующие бесплатного личного помощника, увеличивают доходность своих инвестиций на 87,3% по сравнению с теми, кто действует самостоятельно`
@@ -510,7 +542,9 @@ document.addEventListener("DOMContentLoaded", () => {
       onButtonClick("Планирую развивать бизнес");
       audioSpend.pause();
       audioSpend.currentTime = 0;
-      audioStat.play();
+      setTimeout(() => {
+        audioStat.play();
+      }, 400);
       removeEventListeners();
       createQuestion(
         `Согласно нашей статистике, клиенты, использующие бесплатного личного помощника, увеличивают доходность своих инвестиций на 87,3% по сравнению с теми, кто действует самостоятельно`
@@ -523,7 +557,9 @@ document.addEventListener("DOMContentLoaded", () => {
       onButtonClick("Еще не решил/решила");
       audioSpend.pause();
       audioSpend.currentTime = 0;
-      audioStat.play();
+      setTimeout(() => {
+        audioStat.play();
+      }, 400);
       removeEventListeners();
       createQuestion(
         `Согласно нашей статистике, клиенты, использующие бесплатного личного помощника, увеличивают доходность своих инвестиций на 87,3% по сравнению с теми, кто действует самостоятельно`
@@ -582,7 +618,9 @@ document.addEventListener("DOMContentLoaded", () => {
       );
       audioStat.pause();
       audioStat.currentTime = 0;
-      audioFinal.play();
+      setTimeout(() => {
+        audioFinal.play();
+      }, 400);
       removeEventListeners();
       createQuestion(
         `Спасибо за уделённое время и пройденный опрос! Теперь Вам открыт доступ к персональной платформе проекта «Сбербанк Инвестиции». Пожалуйста, оставьте свои контактные данные для регистрации в проекте. Ваш личный менеджер получит данные и свяжется с Вами в течении одного рабочего дня!`
@@ -597,7 +635,9 @@ document.addEventListener("DOMContentLoaded", () => {
       );
       audioStat.pause();
       audioStat.currentTime = 0;
-      audioFinal.play();
+      setTimeout(() => {
+        audioFinal.play();
+      }, 400);
       removeEventListeners();
       createQuestion(
         `Спасибо за уделённое время и пройденный опрос! Теперь Вам открыт доступ к персональной платформе проекта «Сбербанк Инвестиции». Пожалуйста, оставьте свои контактные данные для регистрации в проекте. Ваш личный менеджер получит данные и свяжется с Вами в течении одного рабочего дня!`
@@ -709,8 +749,8 @@ document.addEventListener("DOMContentLoaded", () => {
       startPlaylist();
       firstMessages.forEach((message, i) => {
         setTimeout(() => {
-          showTypingIndicator(createMessage, message, 400);
-        }, i * 1000);
+          showTypingIndicator(createMessage, message, 4000);
+        }, i * 4000);
       });
     }, 400);
 
@@ -721,11 +761,11 @@ document.addEventListener("DOMContentLoaded", () => {
       answers.appendChild(buttonYes);
       answers.appendChild(buttonNo);
       chat.appendChild(answers);
-    }, 4200);
+    }, 16200);
 
     setTimeout(() => {
       answers.classList.add("visible");
-    }, 4600);
+    }, 16600);
   }
 
   startBtn.addEventListener("click", startChat);
