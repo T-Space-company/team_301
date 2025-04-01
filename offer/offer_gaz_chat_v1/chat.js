@@ -18,8 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const firstMessages = [
-    `Здравствуйте! Меня зовут Мария, я Ваш персональный помощник по программе «Т-Банк»`,
-    "Поздравляю! Теперь от Т-Банк для Вас открыта возможность зарабатывать на акциях российских и зарубежных компаний и получать от 93 000 ₽ уже с первых недель!",
+    `Здравствуйте! Меня зовут Мария, я Ваш персональный помощник по программе «Газ Инвестиции»`,
+    "Поздравляю! Теперь от Газ Инвестиции для Вас открыта возможность зарабатывать на акциях российских и зарубежных компаний и получать от 93 000 ₽ уже с первых недель!",
     "Пожалуйста, ответьте на следующие вопросы, чтобы я смогла оказать Вам помощь и приступить к работе:",
     "Являетесь ли вы гражданином или резидентом Российской Федерации?",
   ];
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     messageField.classList.add("message-field");
 
     const avatar = document.createElement("img");
-    avatar.setAttribute("src", "./img/icons/avatar.png");
+    avatar.setAttribute("src", "./img/icons/avatar.svg");
     avatar.classList.add("message-avatar");
 
     const typingDiv = document.createElement("div");
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
     messageContainer.classList.add("message");
 
     const sender = document.createElement("span");
-    sender.textContent = "Т-Инвестиции";
+    sender.textContent = "Газ Инвестиции";
     sender.classList.add("message-sender");
     messageContainer.appendChild(sender);
 
@@ -165,7 +165,7 @@ document.addEventListener("DOMContentLoaded", () => {
       button3.removeEventListener("click", handleButton3Click);
       button4.removeEventListener("click", handleButton4Click);
 
-      createQuestion(`Откуда Вы узнали о проекте «Т-Инвестиции»?`);
+      createQuestion(`Откуда Вы узнали о проекте «Газ Инвестиции»?`);
       createRevenueButtons();
       scrollDown(200);
     };
@@ -179,7 +179,7 @@ document.addEventListener("DOMContentLoaded", () => {
       button3.removeEventListener("click", handleButton3Click);
       button4.removeEventListener("click", handleButton4Click);
 
-      createQuestion(`Откуда Вы узнали о проекте «Т-Инвестиции»?`);
+      createQuestion(`Откуда Вы узнали о проекте «Газ Инвестиции»?`);
       createRevenueButtons();
       scrollDown(200);
     };
@@ -193,7 +193,7 @@ document.addEventListener("DOMContentLoaded", () => {
       button3.removeEventListener("click", handleButton3Click);
       button4.removeEventListener("click", handleButton4Click);
 
-      createQuestion(`Откуда Вы узнали о проекте «Т-Инвестиции»?`);
+      createQuestion(`Откуда Вы узнали о проекте «Газ Инвестиции»?`);
       createRevenueButtons();
       scrollDown(200);
     };
@@ -206,7 +206,7 @@ document.addEventListener("DOMContentLoaded", () => {
       button3.removeEventListener("click", handleButton3Click);
       button4.removeEventListener("click", handleButton4Click);
 
-      createQuestion(`Откуда Вы узнали о проекте «Т-Инвестиции»?`);
+      createQuestion(`Откуда Вы узнали о проекте «Газ Инвестиции»?`);
       createRevenueButtons();
       scrollDown(200);
     };
@@ -254,6 +254,10 @@ document.addEventListener("DOMContentLoaded", () => {
     answers.id = "answers__col";
 
     const handleEarnFirst = () => {
+      saveAnswer(
+        "Откуда Вы узнали о проекте «Газ Инвестиции»?",
+        "Наружная реклама"
+      );
       onButtonClick("Наружная реклама");
       removeEventListeners();
       createQuestion(
@@ -264,7 +268,11 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const handleEarnSecond = () => {
-      onButtonClick("Реклама в интернете ");
+      saveAnswer(
+        "Откуда Вы узнали о проекте «Газ Инвестиции»?",
+        "Реклама в интернете"
+      );
+      onButtonClick("Реклама в интернете");
       removeEventListeners();
       createQuestion(
         `На какую ежемесячную прибыль Вы хотели бы выйти с нашей платформой?`
@@ -274,7 +282,11 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const handleEarnThird = () => {
-      onButtonClick("Рекомендация знакомых ");
+      saveAnswer(
+        "Откуда Вы узнали о проекте «Газ Инвестиции»?",
+        "Рекомендация знакомых"
+      );
+      onButtonClick("Рекомендация знакомых");
       removeEventListeners();
       createQuestion(
         `На какую ежемесячную прибыль Вы хотели бы выйти с нашей платформой?`
@@ -284,7 +296,11 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const handleEarnFourth = () => {
-      onButtonClick("Поисковые платформы ");
+      saveAnswer(
+        "Откуда Вы узнали о проекте «Газ Инвестиции»?",
+        "Поисковые платформы"
+      );
+      onButtonClick("Поисковые платформы");
       removeEventListeners();
       createQuestion(
         `На какую ежемесячную прибыль Вы хотели бы выйти с нашей платформой?`
@@ -337,6 +353,10 @@ document.addEventListener("DOMContentLoaded", () => {
     answers.id = "answers__col";
 
     const handleEarnFirst = () => {
+      saveAnswer(
+        "На какую ежемесячную прибыль Вы хотели бы выйти с нашей платформой?",
+        "До 50 000 рублей"
+      );
       onButtonClick("До 50 000 рублей");
       removeEventListeners();
       createQuestion(
@@ -347,6 +367,10 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const handleEarnSecond = () => {
+      saveAnswer(
+        "На какую ежемесячную прибыль Вы хотели бы выйти с нашей платформой?",
+        "До 80 000 рублей"
+      );
       onButtonClick("До 80 000 рублей");
       removeEventListeners();
       createQuestion(
@@ -357,6 +381,10 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const handleEarnThird = () => {
+      saveAnswer(
+        "На какую ежемесячную прибыль Вы хотели бы выйти с нашей платформой?",
+        "От 150 000 рублей"
+      );
       onButtonClick("от 150 000 рублей");
       removeEventListeners();
       createQuestion(
@@ -367,6 +395,10 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const handleEarnFourth = () => {
+      saveAnswer(
+        "На какую ежемесячную прибыль Вы хотели бы выйти с нашей платформой?",
+        "От 300 000 рублей"
+      );
       onButtonClick("от 300 000 рублей");
       removeEventListeners();
       createQuestion(
@@ -420,31 +452,59 @@ document.addEventListener("DOMContentLoaded", () => {
     answers.id = "answers__col";
 
     const handleEarnFirst = () => {
-      onButtonClick("До часу");
+      saveAnswer(
+        "Сколько времени в неделю Вы готовы уделять для комфортной работы?",
+        "До часу"
+      );
+      onButtonClick("До часу", 850);
       removeEventListeners();
-      createForm();
-      scrollDown(550);
+      createQuestion(
+        "Открытие брокерского счёта в Газ Инвестициях требует инвестиций от 10 000 рублей. Готовы сделать первый шаг, чтобы уже через неделю увеличить свой капитал в несколько раз?"
+      );
+      createLastButtons();
+      scrollDown(650);
     };
 
     const handleEarnSecond = () => {
-      onButtonClick("Пару часов");
+      saveAnswer(
+        "Сколько времени в неделю Вы готовы уделять для комфортной работы?",
+        "Пару часов"
+      );
+      onButtonClick("Пару часов", 850);
       removeEventListeners();
-      createForm();
-      scrollDown(550);
+      createQuestion(
+        "Открытие брокерского счёта в Газ Инвестициях требует инвестиций от 10 000 рублей. Готовы сделать первый шаг, чтобы уже через неделю увеличить свой капитал в несколько раз?"
+      );
+      createLastButtons();
+      scrollDown(650);
     };
 
     const handleEarnThird = () => {
-      onButtonClick("Свыше трех часов");
+      saveAnswer(
+        "Сколько времени в неделю Вы готовы уделять для комфортной работы?",
+        "Свыше трех часов"
+      );
+      onButtonClick("Свыше трех часов", 850);
       removeEventListeners();
-      createForm();
-      scrollDown(550);
+      createQuestion(
+        "Открытие брокерского счёта в Газ Инвестициях требует инвестиций от 10 000 рублей. Готовы сделать первый шаг, чтобы уже через неделю увеличить свой капитал в несколько раз?"
+      );
+      createLastButtons();
+      scrollDown(650);
     };
 
     const handleEarnFourth = () => {
-      onButtonClick("Другое");
+      saveAnswer(
+        "Сколько времени в неделю Вы готовы уделять для комфортной работы?",
+        "Другое"
+      );
+      onButtonClick("Другое", 850);
       removeEventListeners();
-      createForm();
-      scrollDown(550);
+      createQuestion(
+        "Открытие брокерского счёта в Газ Инвестициях требует инвестиций от 10 000 рублей. Готовы сделать первый шаг, чтобы уже через неделю увеличить свой капитал в несколько раз?"
+      );
+      createLastButtons();
+      scrollDown(650);
     };
 
     const buttonFirst = document.createElement("button");
@@ -482,6 +542,74 @@ document.addEventListener("DOMContentLoaded", () => {
       buttonSecond.removeEventListener("click", handleEarnSecond);
       buttonThird.removeEventListener("click", handleEarnThird);
       buttonFourth.removeEventListener("click", handleEarnFourth);
+    }
+  }
+  function createLastButtons() {
+    const answers = document.createElement("div");
+    answers.classList.add("answers");
+    answers.id = "answers__col";
+
+    const handleEarnFirst = () => {
+      saveAnswer(
+        "Открытие брокерского счёта в Газ Инвестициях требует инвестиций от 10 000 рублей. Готовы сделать первый шаг, чтобы уже через неделю увеличить свой капитал в несколько раз?",
+        "Готов(а)"
+      );
+      onButtonClick("Готов(а)");
+      removeEventListeners();
+      createForm();
+      scrollDown(550);
+    };
+
+    const handleEarnSecond = () => {
+      saveAnswer(
+        "Открытие брокерского счёта в Газ Инвестициях требует инвестиций от 10 000 рублей. Готовы сделать первый шаг, чтобы уже через неделю увеличить свой капитал в несколько раз?",
+        "Узнать больше"
+      );
+      onButtonClick("Узнать больше");
+      removeEventListeners();
+      createForm();
+      scrollDown(550);
+    };
+
+    const handleEarnThird = () => {
+      saveAnswer(
+        "Открытие брокерского счёта в Газ Инвестициях требует инвестиций от 10 000 рублей. Готовы сделать первый шаг, чтобы уже через неделю увеличить свой капитал в несколько раз?",
+        "Не готов(а)"
+      );
+      onButtonClick("Не готов(а)");
+      removeEventListeners();
+      createForm();
+      scrollDown(550);
+    };
+
+    const buttonFirst = document.createElement("button");
+    buttonFirst.textContent = "Готов(а)";
+    buttonFirst.classList.add("button");
+    buttonFirst.addEventListener("click", handleEarnFirst);
+
+    const buttonSecond = document.createElement("button");
+    buttonSecond.textContent = "Узнать больше";
+    buttonSecond.classList.add("button");
+    buttonSecond.addEventListener("click", handleEarnSecond);
+
+    const buttonThird = document.createElement("button");
+    buttonThird.textContent = "Не готов(а)";
+    buttonThird.classList.add("button");
+    buttonThird.addEventListener("click", handleEarnThird);
+
+    answers.appendChild(buttonFirst);
+    answers.appendChild(buttonSecond);
+    answers.appendChild(buttonThird);
+    chat.appendChild(answers);
+
+    setTimeout(() => {
+      answers.classList.add("visible");
+    }, 800);
+
+    function removeEventListeners() {
+      buttonFirst.removeEventListener("click", handleEarnFirst);
+      buttonSecond.removeEventListener("click", handleEarnSecond);
+      buttonThird.removeEventListener("click", handleEarnThird);
     }
   }
 
@@ -531,7 +659,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     setTimeout(() => {
       answer.classList.add("visible");
-      scrollDown(400);
+      scrollDown(600);
     }, delay);
   }
 
