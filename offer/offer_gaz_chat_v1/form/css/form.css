@@ -235,7 +235,7 @@ img {
   align-items: center;
   position: absolute;
   right: 0;
-  top: -20%;
+  top: 20%;
   padding: 5px;
   color: RED;
   font-size: 9px;
@@ -325,6 +325,7 @@ img {
   font-family: Arial, sans-serif; /* Шрифт */
   display: block; /* Блочный элемент, чтобы занимал всю ширину контейнера */
   text-align: center; /* Текст по центру */
+  width: 100%;
 }
 .input-group {
   display: block;

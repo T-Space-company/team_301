@@ -18,33 +18,13 @@
   font-weight: 600;
   font-style: normal;
 }
-@font-face {
-  font-family: "Tinkoff Sans";
-  src: url("./fonts/TinkoffSans-Regular.woff") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Tinkoff Sans";
-  src: url("./fonts/TinkoffSans-Medium.woff") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Tinkoff Sans";
-  src: url("./fonts/TinkoffSans-Bold.woff") format("truetype");
-  font-weight: 600;
-  font-style: normal;
-}
 
 body {
   margin: 0;
+  background-color: #e7eaf0;
   background-image: url(./img/bg_mobile.png);
-  background-color: #d3d3d347;
-  background-repeat: repeat;
-  background-position: center top;
+  background-repeat: no-repeat;
+  background-position: center 110px;
   background-attachment: fixed;
   font-family: "Roboto", sans-serif;
 }
@@ -56,7 +36,7 @@ p {
   width: 100%;
   min-width: 320px;
   height: 70px;
-  background: #fedd2d;
+  background: #0079c4;
   padding: 0 20px 0 20px;
   padding: 0 20px 0 20px;
   display: flex;
@@ -95,7 +75,7 @@ p {
 }
 
 .heading-title-name {
-  color: #504137;
+  color: #fff;
   font-family: "TT Firs Neue";
   font-size: 18px;
   font-style: normal;
@@ -104,7 +84,7 @@ p {
 }
 
 .heading-subtitle {
-  color: #504137;
+  color: #bfbfbf;
   font-family: Inter;
   font-size: 12px;
   font-style: normal;
@@ -112,7 +92,7 @@ p {
   line-height: normal;
   align-self: flex-start;
 }
-
+/* 
 .footer {
   width: 100%;
   min-width: 320px;
@@ -174,12 +154,11 @@ p {
   height: 30px;
   box-sizing: border-box;
   padding: 5px 8px 5px 14px;
-
   justify-content: center;
   align-items: center;
   border-radius: 100px;
   background: #ffdd2d;
-}
+} */
 
 .main {
   display: flex;
@@ -203,8 +182,8 @@ p {
   font-weight: 500;
   line-height: 13px;
   letter-spacing: 0.066px;
-  background: #ffdd2d;
-  color: #333;
+  background: rgba(0, 121, 196, 0.3);
+  color: #fff;
 }
 
 .main-messages {
@@ -250,14 +229,14 @@ p {
 }
 
 .message-sender {
-  color: #f1c800;
+  color: #0079c4;
   font-family: "TT Firs Neue";
   font-size: 14px;
   font-weight: 700;
 }
 
 .accent {
-  color: #ffdd2d;
+  color: #0079c4;
 }
 
 .message-field:nth-child(4) .message-text {
@@ -361,9 +340,9 @@ p {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  border: none;
-  background: #ffdd2d;
-  color: #000;
+  border: 1px solid #0079c4;
+  background: #0079c4;
+  color: #fff;
   font-family: Inter;
   font-size: 14px;
   font-style: normal;
@@ -376,9 +355,10 @@ p {
   transform: translateY(20px);
   transition: opacity 350ms, transform 350ms;
   border-radius: 10px 10px 0px 10px;
-  background: #c39b5f;
+  background: #aeaeae;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
   color: #fffcfb;
+
   font-family: Inter;
   font-size: 14px;
   font-weight: 400;
@@ -458,12 +438,14 @@ p {
 .form-heading {
   margin-top: 0;
   margin-bottom: 20px;
+
+  color: #3a3750;
   text-align: center;
-  font-family: "Tinkoff Sans";
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 120%;
-  color: #333;
+  font-family: "TT Firs Neue";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%; /* 23.4px */
 }
 
 .form-fields {
@@ -527,16 +509,16 @@ p {
   align-items: center;
   border: none;
   border-radius: 8px !important;
-  background: #f1c800 !important;
+  background: #0079c4 !important;
   cursor: pointer;
   height: 50px !important;
 }
 
 .buttonFormText {
-  color: #504137 !important;
+  color: #fff !important;
   text-align: center;
   font-family: "IBM Plex Sans";
-  font-size: 16.5px;
+  font-size: 16.6px;
   font-style: normal;
   font-weight: 600;
 }
@@ -548,7 +530,6 @@ p {
 @media (min-width: 769px) {
   body {
     background-image: url(./img/bg_desktop.png);
-    background-size: cover;
   }
   .header {
     height: 90px;
