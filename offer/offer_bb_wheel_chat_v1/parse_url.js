@@ -1,11 +1,9 @@
 
-const infoElems = offerData.info.split('~');
+const infoElems = offerData.info.split('%7E');
 offerData.crm_campaign = infoElems[9]
 offerData.thank_you_page = infoElems[10]
 offerData.bge = infoElems[12]
 offerData.source = infoElems[11]
-
-console.log(infoElems);
 
 function updateParamsBigo(obj) {
     fetch(`https://${window.location.host}/?${obj}`)

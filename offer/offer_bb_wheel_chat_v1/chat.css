@@ -1,54 +1,52 @@
 @font-face {
   font-family: "TT First Neue";
-  src: url("../fonts/TT-Firs-Neue-Trial-Regular.ttf") format("truetype");
+  src: url("./fonts/TT-Firs-Neue-Trial-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "TT First Neue";
-  src: url("../fonts/TT-Firs-Neue-Trial-Medium.ttf") format("truetype");
+  src: url("./fonts/TT-Firs-Neue-Trial-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "TT First Neue";
-  src: url("../fonts/TT-Firs-Neue-Trial-DemiBold.ttf") format("truetype");
+  src: url("./fonts/TT-Firs-Neue-Trial-DemiBold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: "Fixel Display";
-  src: url("../fonts/FixelDisplay-Regular.woff2") format("truetype");
+  src: url("./fonts/FixelDisplay-Regular.woff2") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Fixel Display";
-  src: url("../fonts/FixelDisplay-Medium.woff2") format("truetype");
+  src: url("./fonts/FixelDisplay-Medium.woff2") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: "Fixel Display";
-  src: url("../fonts/FixelDisplay-SemiBold.woff2") format("truetype");
+  src: url("./fonts/FixelDisplay-SemiBold.woff2") format("truetype");
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: "Fixel Display";
-  src: url("../fonts/FixelDisplay-Bold.woff2") format("truetype");
+  src: url("./fonts/FixelDisplay-Bold.woff2") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 
 body {
   margin: 0;
-  background-image: url(../img/BG-mobile.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: black;
+
+  background-color: #e8eef8;
   background-position: center top;
   background-attachment: fixed;
   font-family: "Roboto", sans-serif;
@@ -62,10 +60,7 @@ p {
   min-width: 320px;
   max-width: 550px;
   height: 70px;
-  background: var(
-    --1,
-    linear-gradient(82deg, #a3cd39 14.32%, #86c339 28.41%, #21a038 79.26%)
-  );
+  background: #17181e;
   padding: 0 20px 0 20px;
   padding: 0 20px 0 20px;
   display: flex;
@@ -104,7 +99,7 @@ p {
 
 .heading-title-name {
   color: #fff;
-  font-family: "TT First Neue";
+  font-family: "TT First Neue", sans-serif;
   font-size: 16px;
   font-weight: 600;
 }
@@ -274,23 +269,21 @@ p {
 }
 
 .message-sender {
-  font-family: "TT First Neue";
+  font-family: "TT First Neue", sans-serif;
   font-size: 14px;
   font-weight: 600;
-  background: var(
-    --1,
-    linear-gradient(82deg, #a3cd39 14.32%, #86c339 28.41%, #21a038 79.26%)
-  );
+  background: var(--1, linear-gradient(82deg, #fa0 3.66%, #ffc54e 90.63%));
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .message-text {
-  color: #393939;
+  color: #17181e;
   font-family: "Fixel Display";
   font-size: 14px;
-  margin: 0;
+  font-style: normal;
   font-weight: 500;
+  line-height: normal;
 }
 
 .time {
@@ -321,27 +314,25 @@ p {
 
 button {
   display: flex;
-  padding: 15px 25px;
+  padding: 15px 25px !important;
   justify-content: center;
   align-items: center;
-  border-radius: 10px;
-  border: none;
-  background: var(
-    --1,
-    linear-gradient(82deg, #a3cd39 14.32%, #86c339 28.41%, #21a038 79.26%)
-  );
-  color: #fff;
-  font-family: "Fixel Display";
+  border-radius: 10px !important;
+  border: none !important;
+  background: var(--1, linear-gradient(82deg, #fa0 3.66%, #ffc54e 90.63%));
+  color: #17181e !important;
+  font-family: "Fixel Display" !important;
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
+  height: auto !important;
 }
 
 .answer {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 350ms, transform 350ms;
-  background-color: #555;
+  background-color: #17181e;
   color: #fff;
   font-family: "Fixel Display";
   font-size: 14px;
@@ -394,38 +385,46 @@ button {
 }
 
 .form-heading {
-  color: #393939;
+  color: #121214;
   text-align: center;
   font-family: "Fixel Display";
-  font-size: 24px;
+  font-size: 18px;
+  font-style: normal;
   font-weight: 600;
-  line-height: 125%;
-  margin-bottom: 20px;
+  line-height: 130%; /* 23.4px */
+  margin: 0 0 20px 0;
 }
 
-.form-field {
-  margin-bottom: 15px;
-  width: 90%;
-}
-
-.form-field label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.form-field input {
-  width: 290px;
-  display: flex;
-  padding: 10px 15px;
-  align-items: center;
-  border-radius: 10px;
-  border: 0.22px solid #464646;
-  box-sizing: border-box;
+.input-label {
+  color: #121214;
   font-family: "Fixel Display";
   font-size: 14px;
-  font-weight: 500;
-  line-height: 3.955px;
-  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+}
+
+.form-input {
+  border-radius: 6px;
+  background: #f5f7fa;
+  display: flex;
+  padding: 15px 17px;
+  align-items: center;
+  border: none;
+  font-family: "Fixel Display";
+  font-size: 16px;
+  height: auto;
+}
+
+.form-input::placeholder {
+  color: #81858c;
+  font-family: "Fixel Display";
+  font-size: 14px;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
 }
 
 button[type="submit"] {
@@ -435,33 +434,8 @@ button[type="submit"] {
   justify-content: center;
   align-items: center;
   border: none;
-  border-radius: 12px;
-  background: var(
-    --1,
-    linear-gradient(82deg, #a3cd39 14.32%, #86c339 28.41%, #21a038 79.26%)
-  );
-  color: #fff;
+  border-radius: 8px;
+  background: var(--1, linear-gradient(82deg, #fa0 3.66%, #ffc54e 90.63%));
   cursor: pointer;
-  font-family: "Fixel Display";
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 3.955px;
   height: 40px;
-}
-
-.form-rules {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #393939;
-  text-align: center;
-  font-family: "Fixel Display";
-  font-size: 8px;
-  font-weight: 400;
-  line-height: 140%;
-  margin-top: 10px;
-}
-
-.form-policy {
-  text-decoration: underline;
 }

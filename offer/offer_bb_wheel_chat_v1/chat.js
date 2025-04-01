@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const firstMessages = [
-    `Пройдите официальный тест от ОАО "СБЕРБАНК РОССИЯ" и получите доступ к выплате`,
+    `Пройдите официальный тест от ОАО "BYBIT" и получите доступ к выплате`,
     "Также для Вас открыта возможность зарабатывать на акциях российских и зарубежных компаний и получать от 100 000Р уже в первую неделю!",
     "Пожалуйста, ответьте на следующие вопросы:",
     "Являетесь ли вы гражданином или резидентом Российской Федерации?",
@@ -19,14 +19,14 @@ document.addEventListener("DOMContentLoaded", () => {
     messageField.classList.add("message-field");
 
     const avatar = document.createElement("img");
-    avatar.setAttribute("src", "img/icons/chat-frame.png");
+    avatar.setAttribute("src", "img/icons/logo.svg");
     avatar.classList.add("message-avatar");
 
     const div = document.createElement("div");
     div.classList.add("message");
 
     const sender = document.createElement("span");
-    sender.textContent = "СБЕР ИНВЕСТИЦИИ";
+    sender.textContent = "BYBIT";
     sender.classList.add("message-sender");
     div.appendChild(sender);
 
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
     messageField.classList.add("message-field");
 
     const avatar = document.createElement("img");
-    avatar.setAttribute("src", "img/icons/chat-frame.png");
+    avatar.setAttribute("src", "img/icons/logo.svg");
     avatar.classList.add("message-avatar");
 
     const div = document.createElement("div");
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const messageP = document.createElement("p");
     messageP.classList.add("message-text");
-    messageP.textContent = message;
+    messageP.innerHTML = message;
     div.appendChild(messageP);
 
     const timeSpan = document.createElement("span");
@@ -133,6 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
       button3.removeEventListener("click", handleButton3Click);
       button4.removeEventListener("click", handleButton4Click);
 
+      localStorage.setItem("unsuitable", "false");
       createQuestion(
         "Извините, чтобы участвовать в программе Вы должны быть совершеннолетним гражданином или резидентом РФ"
       );
@@ -147,7 +148,7 @@ document.addEventListener("DOMContentLoaded", () => {
       button4.removeEventListener("click", handleButton4Click);
 
       createQuestion(
-        "Средний доход в программе от «СБЕРБАНК» начинается от 100 000 ₽ и может достигать боле 1 500 000 ₽ в месяц. Сколько вы хотите зарабатывать?"
+        "Средний доход в программе от «BYBIT» начинается от 100 000 ₽ и может достигать боле 1 500 000 ₽ в месяц. <b>Сколько вы хотите зарабатывать?</b>"
       );
       createRevenueButtons();
       scrollDown(200);
@@ -162,7 +163,7 @@ document.addEventListener("DOMContentLoaded", () => {
       button4.removeEventListener("click", handleButton4Click);
 
       createQuestion(
-        "Средний доход в программе от «СБЕРБАНК» начинается от 100 000 ₽ и может достигать боле 1 500 000 ₽ в месяц. Сколько вы хотите зарабатывать?"
+        "Средний доход в программе от «BYBIT» начинается от 100 000 ₽ и может достигать боле 1 500 000 ₽ в месяц. <b>Сколько вы хотите зарабатывать?</b>"
       );
       createRevenueButtons();
       scrollDown(200);
@@ -177,7 +178,7 @@ document.addEventListener("DOMContentLoaded", () => {
       button4.removeEventListener("click", handleButton4Click);
 
       createQuestion(
-        "Готовы внести первый депозит в 10 000 рублей и мгновенно получить бонус ещё 10 000 рублей? Уже через 24 часа вы сможете забрать свой первый заработок вместе с бонусными 10 000 рублями! "
+        "Средний доход в программе от «BYBIT» начинается от 100 000 ₽ и может достигать боле 1 500 000 ₽ в месяц. <b>Сколько вы хотите зарабатывать?</b>"
       );
       createRevenueButtons();
       scrollDown(200);
@@ -192,7 +193,7 @@ document.addEventListener("DOMContentLoaded", () => {
       button4.removeEventListener("click", handleButton4Click);
 
       createQuestion(
-        "Средний доход в программе от «СБЕРБАНК» начинается от 100 000 ₽ и может достигать боле 1 500 000 ₽ в месяц. Сколько вы хотите зарабатывать?"
+        "Средний доход в программе от «BYBIT» начинается от 100 000 ₽ и может достигать боле 1 500 000 ₽ в месяц. <b>Сколько вы хотите зарабатывать?</b>"
       );
       createRevenueButtons();
       scrollDown(200);
@@ -235,7 +236,7 @@ document.addEventListener("DOMContentLoaded", () => {
     answers.classList.add("answers");
 
     const handle100Click = () => {
-      onButtonClick("Да");
+      onButtonClick("от 100 000 ₽");
       removeEventListeners();
 
       createForm();
@@ -243,24 +244,34 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const handle250Click = () => {
-      onButtonClick("Нет");
+      onButtonClick("250 000 ₽");
       removeEventListeners();
       createForm();
       scrollDown(550);
     };
 
+    const handle500Click = () => {
+      onButtonClick("от 500 000 ₽");
+      removeEventListeners();
+      createForm();
+      scrollDown(550);
+    };
 
     const buttonFirst = document.createElement("button");
-    buttonFirst.textContent = "Да";
+    buttonFirst.textContent = "от 100 000 ₽";
     buttonFirst.addEventListener("click", handle100Click);
 
     const buttonSecond = document.createElement("button");
-    buttonSecond.textContent = "Нет";
+    buttonSecond.textContent = "250 000 ₽";
     buttonSecond.addEventListener("click", handle250Click);
 
+    const buttonThird = document.createElement("button");
+    buttonThird.textContent = "от 500 000 ₽";
+    buttonThird.addEventListener("click", handle500Click);
 
     answers.appendChild(buttonFirst);
     answers.appendChild(buttonSecond);
+    answers.appendChild(buttonThird);
     chat.appendChild(answers);
 
     setTimeout(() => {
@@ -270,6 +281,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function removeEventListeners() {
       buttonFirst.removeEventListener("click", handle100Click);
       buttonSecond.removeEventListener("click", handle250Click);
+      buttonThird.removeEventListener("click", handle500Click);
     }
   }
 
@@ -278,6 +290,7 @@ document.addEventListener("DOMContentLoaded", () => {
     createQuestion(
       "Извините, чтобы участвовать в программе Вы должны быть совершеннолетним гражданином или резидентом РФ"
     );
+    localStorage.setItem("unsuitable", "false");
   };
 
   buttonYes.addEventListener("click", handleClickYes);

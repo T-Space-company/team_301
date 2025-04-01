@@ -10,6 +10,10 @@ document.addEventListener("DOMContentLoaded", () => {
   );
   const confettiLeft = document.querySelector(".confetti--left");
   const confettiRight = document.querySelector(".confetti--right");
+  const headingText = document.querySelector(
+    ".main__section-primary__container-item"
+  );
+  const subHeadingText = document.querySelector(".primary__text");
 
   function addTiltAnimation() {
     rouletteContent.classList.add("content__tilt");
@@ -20,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (spinButton) {
     const totalSections = 6;
     const degreesPerSection = 360 / totalSections;
-    const targetSection = 5;
+    const targetSection = 6;
 
     spinButton.addEventListener("click", handleSpinClick);
     function handleSpinClick() {
@@ -33,15 +37,16 @@ document.addEventListener("DOMContentLoaded", () => {
       roulette.style.transform = `rotate(${targetRotation}deg)`;
 
       setTimeout(() => {
-        console.log(`Success`);
         confettiLeft.style.opacity = "1";
         confettiRight.style.opacity = "1";
 
         confettiLeft.classList.add("confetti--left__animate");
         confettiRight.classList.add("confetti--right__animate");
+        headingText.textContent = "Поздравляем!";
+        subHeadingText.textContent = "Вы выиграли бонус";
 
         spinButton.removeEventListener("click", handleSpinClick);
-        spinButton.innerText = "ВНЕСТИ ДЕПОЗИТ";
+        spinButton.innerText = "ЗАБРАТЬ ВЫИГРЫШ";
         spinButton.addEventListener("click", goChat);
       }, duration * 1050);
     }

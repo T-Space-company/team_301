@@ -3,7 +3,7 @@ const body = document.querySelector("body");
 export function thenkYouPage(company) {
   const domain = window.location.hostname;
   const papka = "content";
-  const fileThenk = "../thankYou/thanks-page.php";
+  const fileThenk = "thanks-page.php";
 
   window.location.href = `${fileThenk}${window.location.search}`;
 }
@@ -33,7 +33,6 @@ export function regValitatorInputText(inputArr) {
     }
   });
 }
-
 export function validEmail(inputArr) {
   const reg = /^.*@([a-z0-9-]+\.)+[a-z]{2,4}\s?$/;
 
@@ -48,30 +47,53 @@ export function validEmail(inputArr) {
   });
 }
 
+export const generationsCustomPassword = () => {
+  const chars =
+    "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const passwordLength = 9;
+  let password = "";
+  let num = Math.floor(Math.random() * 10);
+  console.log(num);
+  for (let i = 0; i < passwordLength; i++) {
+    const randomNumber = Math.floor(Math.random() * chars.length);
+    password += chars.substring(randomNumber, randomNumber + 1);
+  }
+  return password + num;
+};
+
 export function renderFormRegistrations(allFormClass) {
   const forms = document.querySelectorAll(`.${allFormClass}`);
   const htmlFormHtml = `
- <div class="form-group input-group ">
-  <label for="name">Введите имя</label>
-    <input class="form-control form-input form__input" name="name" placeholder=""  type="text" required />
+<div class="form-group input-group ">
+<label class="input-label">
+  Ваше имя*
+    <input class="form-control form-input form__input" name="name" placeholder="Имя"  type="text" required />
     <i class="fa__err"></i>
     <span class="fa__errInfo">- Удалите цифры </span>
     <i class="fa__checked"></i>
+        </label>
+
 </div>
   <div class="form-group input-group ">
-  <label for="last_name">Введите фамилию</label>
-    <input class="form-control  form-input form__input" name="last_name" placeholder="" required type="text" />
+  <label class="input-label">
+  Ваша фамилия*
+    <input class="form-control  form-input form__input" name="last_name" placeholder="Фамилия" required type="text" />
     <i class="fa__err"></i>
     <span class="fa__errInfo">- Удалите цифры </span>
     <i class="fa__checked"></i>
+        </label>
+
     </div>
 
 
   <div class="form-group input-group">
-  <label for="phone">Введите телефон</label>
-    <input class="form-control form-input _phone" maxlength="10" placeholder="9121234567" name="phone" required type="tel" />
+  <label class="input-label">
+  Ваш номер телефона*
+    <input class="form-control form-input _phone" maxlength="10" placeholder="(921) 345-67-89" name="phone" type="tel" />
     <div class="error-phone"></div>
+  </label>
   </div>
+
 
    <input name="code" type="hidden" value="" />
   <input name="lang" type="hidden" value="" />
@@ -79,10 +101,10 @@ export function renderFormRegistrations(allFormClass) {
   <input type="hidden" name="answer">
   
   
-  
-  <div class="form-group">
+  <div class="form-group form-group-button">
+
     <button class="btn secondary-solid-btn btn-block buttonSend"  name="submitBtn" type="submit">
-    <p class="btnFormText" style="color:white;">Начать зарабатывать
+    <p class="btnFormText">Начать зарабатывать
     </p>
     </button>
   </div>
@@ -169,38 +191,28 @@ export function preloaderFormSend() {
 
 export function addLoader(allBtnSubmit, btnFormText) {
   allBtnSubmit.forEach((btn) => {
-    // Немедленно отключаем кнопку
+    const loadingForm = document.createElement("img");
+    loadingForm.src = "./form/img/spinner.gif";
+    loadingForm.classList.add("loadBtn");
+    btnFormText.forEach((element) => {
+      element.style.opacity = "0";
+    });
+    btn.appendChild(loadingForm);
     btn.disabled = true;
-
-    // Проверяем, есть ли уже лоадер
-    if (!btn.querySelector(".loadBtn")) {
-      const loadingForm = document.createElement("img");
-      loadingForm.src = "./form/img/spinner.gif";
-      loadingForm.classList.add("loadBtn");
-
-      btnFormText.forEach((element) => {
-        element.style.opacity = "0";
-      });
-
-      btn.appendChild(loadingForm);
-    }
   });
 }
 
 export function removeLoader(allBtnSubmit, btnFormText) {
   allBtnSubmit.forEach((btn) => {
-    const loadingForms = btn.querySelectorAll(".loadBtn");
+    const loadingForm = document.querySelectorAll(".loadBtn");
 
-    loadingForms.forEach((element) => {
-      element.remove();
+    loadingForm.forEach((element) => {
+      element.style.display = "none";
     });
-
     btnFormText.forEach((element) => {
       element.style.opacity = "1";
+      btn.disabled = false;
     });
-
-    // Включаем кнопку обратно
-    // btn.disabled = false;
   });
 }
 

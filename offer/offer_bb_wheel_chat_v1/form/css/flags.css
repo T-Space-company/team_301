@@ -26,13 +26,12 @@ pre {
 
 input, button {
   /* height: 35px; */
-      height: 49px;
-        margin: 0;
-        padding: 6px 12px;
-        border-radius: 10px;
-        font-family: inherit;
-        font-size: 14px;
-        color: inherit; }
+  margin: 0;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-family: inherit;
+  font-size: 100%;
+  color: inherit; }
   input[disabled], button[disabled] {
     background-color: #eee; }
 
