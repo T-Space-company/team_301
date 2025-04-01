@@ -1,57 +1,69 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const rouletteContent = document.querySelector(
-    ".main__section-secondary__container-img-content"
-  );
-  const roulette = document.querySelector(
-    ".main__section-secondary__container-img-wheel"
-  );
-  const spinButton = document.querySelector(
+  const startButton = document.querySelector(
     ".main__section-third__container-button"
   );
+
   const confettiLeft = document.querySelector(".confetti--left");
   const confettiRight = document.querySelector(".confetti--right");
+  const headingWrapper = document.querySelector(
+    ".main__section-primary__container"
+  );
   const headingText = document.querySelector(
     ".main__section-primary__container-item"
   );
-  const subHeadingText = document.querySelector(".primary__text");
+  const subHeadingText = document.getElementById("sum-start-text");
+  const primaryText = document.querySelector(".primary__text");
+  const footerText = document.getElementById("footer-text");
+  const itemsHeading = document.querySelector(".third__subheading");
+  const itemsWrapper = document.querySelector(".third__plates");
+  const items = document.querySelectorAll(".plates__item");
+  const rewards = ["175 ₽", "УДАЧИ", "8 500 ₽"];
+  let opened = 0;
 
-  function addTiltAnimation() {
-    rouletteContent.classList.add("content__tilt");
-  }
+  items.forEach((item) => {
+    item.addEventListener("click", handleClick);
+  });
 
-  window.onload = addTiltAnimation();
+  function handleClick(e) {
+    const item = e.currentTarget;
 
-  if (spinButton) {
-    const totalSections = 6;
-    const degreesPerSection = 360 / totalSections;
-    const targetSection = 6;
+    if (item.classList.contains("flipped")) return;
+    item.classList.add("flipped");
 
-    spinButton.addEventListener("click", handleSpinClick);
-    function handleSpinClick() {
-      let duration = 6;
-      let fullSpins = 10;
-      let targetRotation =
-        fullSpins * 360 + (targetSection - 1) * degreesPerSection;
+    const back = item.querySelector(".plates__back");
 
-      roulette.style.transition = `transform ${duration}s cubic-bezier(0.25, 0.1, 0.25, 1)`;
-      roulette.style.transform = `rotate(${targetRotation}deg)`;
+    if (opened < 3) {
+      back.textContent = rewards[opened];
+    }
 
+    opened++;
+
+    if (opened >= 3) {
+      items.forEach((i) => {
+        i.removeEventListener("click", handleClick);
+      });
       setTimeout(() => {
         confettiLeft.style.opacity = "1";
         confettiRight.style.opacity = "1";
 
         confettiLeft.classList.add("confetti--left__animate");
         confettiRight.classList.add("confetti--right__animate");
+        itemsHeading.classList.add("hidden");
+        headingWrapper.style.marginTop = "30px";
+        itemsWrapper.style.marginTop = "0";
         headingText.textContent = "Поздравляем!";
-        subHeadingText.textContent = "Вы выиграли бонус";
+        primaryText.classList.remove("hidden");
+        subHeadingText.classList.add("secondary");
+        subHeadingText.textContent = "8675₽";
 
-        spinButton.removeEventListener("click", handleSpinClick);
-        spinButton.innerText = "ЗАБРАТЬ ВЫИГРЫШ";
-        spinButton.addEventListener("click", goChat);
-      }, duration * 1050);
+        startButton.classList.remove("hidden");
+        footerText.style.marginTop = "30px";
+        startButton.addEventListener("click", goChat);
+      }, 1000);
     }
-    function goChat() {
-      window.location.href = "chat.php";
-    }
+  }
+
+  function goChat() {
+    window.location.href = "chat.php";
   }
 });

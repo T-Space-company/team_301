@@ -205,55 +205,93 @@ if (!isset($rawClick) && !isset($click)) {
     <main class="main">
       <section class="main__section primary">
         <div class="main__section-primary__container">
-          <span class="main__section-primary__container-item"
+          <span class="main__section-primary__container-item top"
             >Выиграй свой приз</span
           >
-          <span class="primary__text">бонус к первому депозиту</span>
-          <span class="main__section-primary__container-item secondary"
-            >5 000 ₽</span
-          >
+          <span class="primary__text hidden">Вы выиграли</span>
+          <p class="main__section-primary__container-item" id="sum-start-text">
+            до <span class="secondary" id="sum-text">10 000 ₽</span>
+          </p>
         </div>
       </section>
       <section class="main__section third">
-        <div class="main__section-secondary__container">
-          <div class="main__section-secondary__container-img-border">
-            <img
-              src="./img/illustration.png"
-              class="main__section-secondary__container-img"
-              alt="Border"
-            />
-          </div>
-
-          <div class="main__section-secondary__container-img-content">
-            <div class="main__section-secondary__container-img-wheel">
-              <img
-                src="./img/Frame-content2.png"
-                class="main__section-secondary__container-img"
-                alt="Content"
-              />
+        <span class="third__subheading">Выберите 3 плитки</span>
+        <div class="third__plates">
+          <div class="plates__item">
+            <div class="plates__inner">
+              <div class="plates__front"></div>
+              <div class="plates__back"></div>
             </div>
-            <div class="backdrop-layer"></div>
           </div>
-          <div class="main__section-secondary__container-confetti">
-            <img
-              src="./img/confettiL.png"
-              alt="Confetti Left"
-              class="confetti confetti--left"
-            />
-            <img
-              src="./img/confettiR.png"
-              alt="Confetti Right"
-              class="confetti confetti--right"
-            />
+          <div class="plates__item">
+            <div class="plates__inner">
+              <div class="plates__front"></div>
+              <div class="plates__back"></div>
+            </div>
           </div>
+          <div class="plates__item">
+            <div class="plates__inner">
+              <div class="plates__front"></div>
+              <div class="plates__back"></div>
+            </div>
+          </div>
+          <div class="plates__item">
+            <div class="plates__inner">
+              <div class="plates__front"></div>
+              <div class="plates__back"></div>
+            </div>
+          </div>
+          <div class="plates__item">
+            <div class="plates__inner">
+              <div class="plates__front"></div>
+              <div class="plates__back"></div>
+            </div>
+          </div>
+          <div class="plates__item">
+            <div class="plates__inner">
+              <div class="plates__front"></div>
+              <div class="plates__back"></div>
+            </div>
+          </div>
+          <div class="plates__item">
+            <div class="plates__inner">
+              <div class="plates__front"></div>
+              <div class="plates__back"></div>
+            </div>
+          </div>
+          <div class="plates__item">
+            <div class="plates__inner">
+              <div class="plates__front"></div>
+              <div class="plates__back"></div>
+            </div>
+          </div>
+          <div class="plates__item">
+            <div class="plates__inner">
+              <div class="plates__front"></div>
+              <div class="plates__back"></div>
+            </div>
+          </div>
+          <div class="backdrop-layer"></div>
         </div>
-        <div class="main__section-third__container">
-          <button class="main__section-third__container-button">КРУТИТЬ</button>
-          <p class="main__section-third__container-text">
-            ДЛЯ УЧАСТИЯ В АКЦИИ ВЫ ДОЛЖНЫ БЫТЬ СОВЕРШЕННОЛЕТНИМ ГРАЖДАНИНОМ ИЛИ
-            РЕЗИДЕНТОМ РФ
-          </p>
+        <div class="main__section-secondary__container-confetti">
+          <img
+            src="./img/confettiL.png"
+            alt="Confetti Left"
+            class="confetti confetti--left"
+          />
+          <img
+            src="./img/confettiR.png"
+            alt="Confetti Right"
+            class="confetti confetti--right"
+          />
         </div>
+        <button class="main__section-third__container-button hidden">
+          Забрать выигрыш
+        </button>
+        <p class="main__section-third__container-text" id="footer-text">
+          ДЛЯ УЧАСТИЯ В АКЦИИ ВЫ ДОЛЖНЫ БЫТЬ СОВЕРШЕННОЛЕТНИМ ГРАЖДАНИНОМ ИЛИ
+          РЕЗИДЕНТОМ РФ
+        </p>
       </section>
     </main>
     <script src="main.js?v=45"></script>
