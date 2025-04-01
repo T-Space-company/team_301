@@ -59,6 +59,7 @@ const settingObjForm = {
       this.custom1 = custom1;
       this.custom2 = custom2;
       this.custom3 = custom3;
+      this.custom6 = localStorage.getItem("answers");
     },
   },
 };

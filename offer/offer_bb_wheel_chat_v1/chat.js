@@ -7,6 +7,14 @@ document.addEventListener("DOMContentLoaded", () => {
     Телефон: "",
   };
 
+  localStorage.removeItem("answers");
+
+  function saveAnswer(question, answer) {
+    let answers = JSON.parse(localStorage.getItem("answers")) || [];
+    answers.push(`${question}: ${answer}`);
+    localStorage.setItem("answers", JSON.stringify(answers));
+  }
+
   const firstMessages = [
     `Пройдите официальный тест от ОАО "BYBIT" и получите доступ к выплате`,
     "Также для Вас открыта возможность зарабатывать на акциях российских и зарубежных компаний и получать от 100 000Р уже в первую неделю!",
@@ -119,6 +127,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }, 2400);
 
   const handleClickYes = () => {
+    saveAnswer(
+      "Являетесь ли вы гражданином или резидентом Российской Федерации?",
+      "Да"
+    );
     onButtonClick("Да");
     createQuestion("Сколько вам лет?");
 
@@ -140,6 +152,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const handleButton1Click = () => {
+      saveAnswer("Сколько вам лет?", "18-24");
       onButtonClick("18-24");
       button0.removeEventListener("click", handleButton1Click);
       button1.removeEventListener("click", handleButton1Click);
@@ -155,6 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const handleButton2Click = () => {
+      saveAnswer("Сколько вам лет?", "25-40");
       onButtonClick("25-40");
       button0.removeEventListener("click", handleButton1Click);
       button1.removeEventListener("click", handleButton1Click);
@@ -170,6 +184,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const handleButton3Click = () => {
+      saveAnswer("Сколько вам лет?", "40-45");
       onButtonClick("40-45");
       button0.removeEventListener("click", handleButton1Click);
       button1.removeEventListener("click", handleButton1Click);
@@ -185,6 +200,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const handleButton4Click = () => {
+      saveAnswer("Сколько вам лет?", "55+");
       onButtonClick("55+");
       button0.removeEventListener("click", handleButton1Click);
       button1.removeEventListener("click", handleButton1Click);
@@ -236,6 +252,7 @@ document.addEventListener("DOMContentLoaded", () => {
     answers.classList.add("answers");
 
     const handle100Click = () => {
+      saveAnswer("Сколько вы хотите зарабатывать?", "от 100 000 ₽");
       onButtonClick("от 100 000 ₽");
       removeEventListeners();
 
@@ -244,6 +261,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const handle250Click = () => {
+      saveAnswer("Сколько вы хотите зарабатывать?", "250 000 ₽");
       onButtonClick("250 000 ₽");
       removeEventListeners();
       createForm();
@@ -251,6 +269,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const handle500Click = () => {
+      saveAnswer("Сколько вы хотите зарабатывать?", "от 500 000 ₽");
       onButtonClick("от 500 000 ₽");
       removeEventListeners();
       createForm();
