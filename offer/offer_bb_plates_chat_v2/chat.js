@@ -139,7 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const handleButton0Click = () => {
       onButtonClick("до 18");
-      button0.removeEventListener("click", handleButton1Click);
+      button0.removeEventListener("click", handleButton0Click);
       button1.removeEventListener("click", handleButton1Click);
       button2.removeEventListener("click", handleButton2Click);
       button3.removeEventListener("click", handleButton3Click);
@@ -154,7 +154,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const handleButton1Click = () => {
       saveAnswer("Сколько вам лет?", "18-24");
       onButtonClick("18-24");
-      button0.removeEventListener("click", handleButton1Click);
+      button0.removeEventListener("click", handleButton0Click);
       button1.removeEventListener("click", handleButton1Click);
       button2.removeEventListener("click", handleButton2Click);
       button3.removeEventListener("click", handleButton3Click);
@@ -167,7 +167,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const handleButton2Click = () => {
       saveAnswer("Сколько вам лет?", "25-40");
       onButtonClick("25-40");
-      button0.removeEventListener("click", handleButton1Click);
+      button0.removeEventListener("click", handleButton0Click);
       button1.removeEventListener("click", handleButton1Click);
       button2.removeEventListener("click", handleButton2Click);
       button3.removeEventListener("click", handleButton3Click);
@@ -180,7 +180,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const handleButton3Click = () => {
       saveAnswer("Сколько вам лет?", "40-45");
       onButtonClick("40-45");
-      button0.removeEventListener("click", handleButton1Click);
+      button0.removeEventListener("click", handleButton0Click);
       button1.removeEventListener("click", handleButton1Click);
       button2.removeEventListener("click", handleButton2Click);
       button3.removeEventListener("click", handleButton3Click);
@@ -193,7 +193,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const handleButton4Click = () => {
       saveAnswer("Сколько вам лет?", "55+");
       onButtonClick("55+");
-      button0.removeEventListener("click", handleButton1Click);
+      button0.removeEventListener("click", handleButton0Click);
       button1.removeEventListener("click", handleButton1Click);
       button2.removeEventListener("click", handleButton2Click);
       button3.removeEventListener("click", handleButton3Click);
