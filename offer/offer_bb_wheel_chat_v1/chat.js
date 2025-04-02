@@ -160,10 +160,8 @@ document.addEventListener("DOMContentLoaded", () => {
       button3.removeEventListener("click", handleButton3Click);
       button4.removeEventListener("click", handleButton4Click);
 
-      createQuestion(
-        "Средний доход в программе от «BYBIT» начинается от 100 000 ₽ и может достигать боле 1 500 000 ₽ в месяц. <b>Сколько вы хотите зарабатывать?</b>"
-      );
-      createRevenueButtons();
+      createQuestion("С какой целью Вы хотите увеличить достаток?");
+      createGoalButtons();
       scrollDown(200);
     };
 
@@ -176,10 +174,8 @@ document.addEventListener("DOMContentLoaded", () => {
       button3.removeEventListener("click", handleButton3Click);
       button4.removeEventListener("click", handleButton4Click);
 
-      createQuestion(
-        "Средний доход в программе от «BYBIT» начинается от 100 000 ₽ и может достигать боле 1 500 000 ₽ в месяц. <b>Сколько вы хотите зарабатывать?</b>"
-      );
-      createRevenueButtons();
+      createQuestion("С какой целью Вы хотите увеличить достаток?");
+      createGoalButtons();
       scrollDown(200);
     };
 
@@ -192,10 +188,8 @@ document.addEventListener("DOMContentLoaded", () => {
       button3.removeEventListener("click", handleButton3Click);
       button4.removeEventListener("click", handleButton4Click);
 
-      createQuestion(
-        "Средний доход в программе от «BYBIT» начинается от 100 000 ₽ и может достигать боле 1 500 000 ₽ в месяц. <b>Сколько вы хотите зарабатывать?</b>"
-      );
-      createRevenueButtons();
+      createQuestion("С какой целью Вы хотите увеличить достаток?");
+      createGoalButtons();
       scrollDown(200);
     };
 
@@ -208,10 +202,8 @@ document.addEventListener("DOMContentLoaded", () => {
       button3.removeEventListener("click", handleButton3Click);
       button4.removeEventListener("click", handleButton4Click);
 
-      createQuestion(
-        "Средний доход в программе от «BYBIT» начинается от 100 000 ₽ и может достигать боле 1 500 000 ₽ в месяц. <b>Сколько вы хотите зарабатывать?</b>"
-      );
-      createRevenueButtons();
+      createQuestion("С какой целью Вы хотите увеличить достаток?");
+      createGoalButtons();
       scrollDown(200);
     };
 
@@ -246,6 +238,167 @@ document.addEventListener("DOMContentLoaded", () => {
       answers.classList.add("visible");
     }, 800);
   };
+
+  function createGoalButtons() {
+    const answers = document.createElement("div");
+    answers.classList.add("answers");
+
+    const handle1Click = () => {
+      saveAnswer(
+        "С какой целью Вы хотите увеличить достаток?",
+        "Хочу обезопасить себя от кризиса"
+      );
+      onButtonClick("Хочу обезопасить себя от кризиса");
+      removeEventListeners();
+      createQuestion("Имеете ли вы опыт в инвестировании?");
+      createExpButtons();
+      scrollDown(250);
+    };
+
+    const handle2Click = () => {
+      saveAnswer(
+        "С какой целью Вы хотите увеличить достаток?",
+        "Хочу получать дополнительный доход"
+      );
+      onButtonClick("Хочу получать дополнительный доход");
+      removeEventListeners();
+      createQuestion("Имеете ли вы опыт в инвестировании?");
+      createExpButtons();
+      scrollDown(250);
+    };
+
+    const handle3Click = () => {
+      saveAnswer(
+        "С какой целью Вы хотите увеличить достаток?",
+        "Планирую развивать бизнес"
+      );
+      onButtonClick("Планирую развивать бизнес");
+      removeEventListeners();
+      createQuestion("Имеете ли вы опыт в инвестировании?");
+      createExpButtons();
+      scrollDown(250);
+    };
+
+    const handle4Click = () => {
+      saveAnswer(
+        "С какой целью Вы хотите увеличить достаток?",
+        "Хочу, чтобы моя семья ни в чем не нуждалась"
+      );
+      onButtonClick("Хочу, чтобы моя семья ни в чем не нуждалась");
+      removeEventListeners();
+      createQuestion("Имеете ли вы опыт в инвестировании?");
+      createExpButtons();
+      scrollDown(250);
+    };
+
+    const buttonFirst = document.createElement("button");
+    buttonFirst.textContent = "Хочу обезопасить себя от кризиса";
+    buttonFirst.addEventListener("click", handle1Click);
+
+    const buttonSecond = document.createElement("button");
+    buttonSecond.textContent = "Хочу получать дополнительный доход";
+    buttonSecond.addEventListener("click", handle2Click);
+
+    const buttonThird = document.createElement("button");
+    buttonThird.textContent = "Планирую развивать бизнес";
+    buttonThird.addEventListener("click", handle3Click);
+
+    const buttonFourth = document.createElement("button");
+    buttonFourth.textContent = "Хочу, чтобы моя семья ни в чем не нуждалась";
+    buttonFourth.addEventListener("click", handle4Click);
+
+    answers.appendChild(buttonFirst);
+    answers.appendChild(buttonSecond);
+    answers.appendChild(buttonThird);
+    answers.appendChild(buttonFourth);
+    chat.appendChild(answers);
+
+    setTimeout(() => {
+      answers.classList.add("visible");
+    }, 800);
+
+    function removeEventListeners() {
+      buttonFirst.removeEventListener("click", handle1Click);
+      buttonSecond.removeEventListener("click", handle2Click);
+      buttonThird.removeEventListener("click", handle3Click);
+      buttonFourth.removeEventListener("click", handle4Click);
+    }
+  }
+
+  function createExpButtons() {
+    const answers = document.createElement("div");
+    answers.classList.add("answers");
+
+    const handle1Click = () => {
+      saveAnswer(
+        "Имеете ли вы опыт в инвестировании?",
+        "Да, успешно инвестирую по сей день"
+      );
+      onButtonClick("Да, успешно инвестирую по сей день");
+      removeEventListeners();
+      createQuestion(
+        "Средний доход в программе от «BYBIT» начинается от 100 000 ₽ и может достигать боле 1 500 000 ₽ в месяц. <b>Сколько вы хотите зарабатывать?</b>"
+      );
+      createRevenueButtons();
+      scrollDown(250);
+    };
+
+    const handle2Click = () => {
+      saveAnswer(
+        "Имеете ли вы опыт в инвестировании?",
+        "Инвестировал ранее, но сейчас не уделяю этому времени"
+      );
+      onButtonClick("Инвестировал ранее, но сейчас не уделяю этому времени");
+      removeEventListeners();
+      createQuestion(
+        "Средний доход в программе от «BYBIT» начинается от 100 000 ₽ и может достигать боле 1 500 000 ₽ в месяц. <b>Сколько вы хотите зарабатывать?</b>"
+      );
+      createRevenueButtons();
+      scrollDown(250);
+    };
+
+    const handle3Click = () => {
+      saveAnswer(
+        "Имеете ли вы опыт в инвестировании?",
+        "Нет, никогда прежде не инвестировал"
+      );
+      onButtonClick("Нет, никогда прежде не инвестировал");
+      removeEventListeners();
+      createQuestion(
+        "Средний доход в программе от «BYBIT» начинается от 100 000 ₽ и может достигать боле 1 500 000 ₽ в месяц. <b>Сколько вы хотите зарабатывать?</b>"
+      );
+      createRevenueButtons();
+      scrollDown(250);
+    };
+
+    const buttonFirst = document.createElement("button");
+    buttonFirst.textContent = "Да, успешно инвестирую по сей день";
+    buttonFirst.addEventListener("click", handle1Click);
+
+    const buttonSecond = document.createElement("button");
+    buttonSecond.textContent =
+      "Инвестировал ранее, но сейчас не уделяю этому времени";
+    buttonSecond.addEventListener("click", handle2Click);
+
+    const buttonThird = document.createElement("button");
+    buttonThird.textContent = "Нет, никогда прежде не инвестировал";
+    buttonThird.addEventListener("click", handle3Click);
+
+    answers.appendChild(buttonFirst);
+    answers.appendChild(buttonSecond);
+    answers.appendChild(buttonThird);
+    chat.appendChild(answers);
+
+    setTimeout(() => {
+      answers.classList.add("visible");
+    }, 800);
+
+    function removeEventListeners() {
+      buttonFirst.removeEventListener("click", handle1Click);
+      buttonSecond.removeEventListener("click", handle2Click);
+      buttonThird.removeEventListener("click", handle3Click);
+    }
+  }
 
   function createRevenueButtons() {
     const answers = document.createElement("div");
