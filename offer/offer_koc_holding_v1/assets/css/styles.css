@@ -1,6 +1,11 @@
+html {
+  scroll-behavior: smooth;
+}
+* {
+  font-family: Cabin;
+}
 body {
   background-color: #fff;
-  font-family: Cabin;
 }
 .header {
   display: flex;
@@ -26,7 +31,7 @@ body {
 
 .hero__img-wrap {
   width: 100%;
-  max-width: 500px;
+  max-width: 760px;
   position: relative;
   display: flex;
   align-items: center;
@@ -52,6 +57,7 @@ body {
   align-items: center;
   gap: 24px;
   width: 100%;
+  margin-bottom: 40px;
 }
 
 .hero__text-wrap {
@@ -182,6 +188,7 @@ body {
   width: 100%;
   height: 6px;
   border-radius: 3px;
+  padding: 0;
   background: #f2dddd;
   outline: none;
   transition: background 0.3s;
@@ -308,7 +315,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: space-around;
   gap: 25px;
   padding: 10px;
   width: 100%;
@@ -343,7 +350,6 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 30px;
-  padding: 25px;
   width: 100%;
 }
 
@@ -457,4 +463,26 @@ body {
   font-size: 20px;
   font-weight: 400;
   line-height: 25.2px;
+}
+
+.form-send {
+  width: 100%;
+}
+
+.form-input {
+  border-radius: 6px;
+  border: 1px solid #e9e6e6;
+  background: #fff;
+  padding: 14px 12px;
+  height: auto;
+  font-size: 16px;
+}
+
+.form-input::placeholder {
+  color: rgba(33, 37, 41, 0.75);
+  font-size: 14px;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
 }

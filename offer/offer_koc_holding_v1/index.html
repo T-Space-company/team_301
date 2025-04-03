@@ -1,3 +1,14 @@
+<?php
+if (!isset($rawClick) && !isset($click)) {
+  die();
+}
+?>
+<?php
+
+include_once dirname(__FILE__) . '/config.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="tr">
   <head>
@@ -13,6 +24,129 @@
       href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap"
       rel="stylesheet"
     />
+
+    <script src="form/js/libs/intlTelInput.js"></script>
+
+    <script src="form/js/libs/jquery.maskedinput.js"></script>
+    <script src="form/js/libs/utils.js"></script>
+
+    <script type="application/javascript">
+      function getCookie(name) {
+        var v = document.cookie.match("(^|;) ?" + name + "=([^;]*)(;|$)");
+        return v ? v[2] : null;
+      }
+
+      function setCookie(name, value, days) {
+        var d = new Date();
+        d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days);
+        document.cookie =
+          name + "=" + value + ";path=/;expires=" + d.toGMTString();
+      }
+
+      function getSubId() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!"{subid}".match("{")) {
+          return "{subid}";
+        }
+        var clientSubid =
+          '<?php echo isset($client) ? $client->getSubid() : "" ?>';
+        if (!clientSubid.match(">")) {
+          return clientSubid;
+        }
+        if (params.get("_subid")) {
+          return params.get("_subid");
+        }
+        if (params.get("subid")) {
+          return params.get("subid");
+        }
+        if (getCookie("subid")) {
+          return getCookie("subid");
+        }
+      }
+
+      function getToken() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!"{token}".match("{")) {
+          return "{token}";
+        }
+        var clientToken =
+          '<?php echo isset($client) ? $client->getToken() : "" ?>';
+        if (!clientToken.match(">")) {
+          return clientToken;
+        }
+        if (params.get("_token")) {
+          return params.get("_token");
+        }
+        if (params.get("token")) {
+          return params.get("token");
+        }
+        if (getCookie("token")) {
+          return getCookie("token");
+        }
+        return null;
+      }
+
+      function getPixel() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!"{pixel}".match("{")) {
+          return "{pixel}";
+        }
+        if (params.get("pixel")) {
+          return params.get("pixel");
+        }
+
+        if (getCookie("pixel")) {
+          return getCookie("pixel");
+        }
+
+        return null;
+      }
+
+      if (typeof URLSearchParams === "function") {
+        document.addEventListener("DOMContentLoaded", function (event) {
+          var params = new URLSearchParams(document.location.search.substr(1));
+          var subid = getSubId();
+          var token = getToken();
+          var pixel = getPixel();
+
+          params.set("_token", token);
+          setCookie("pixel", pixel);
+          setCookie("token", token);
+          setCookie("subid", subid);
+        });
+      }
+    </script>
+
+    <!--PIXEL DEFENCE-->
+    <?php if($FacebookPixel): ?>
+    <script type="application/javascript">
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "<?=$FacebookPixel ?>");
+      fbq("track", "PageView");
+    </script>
+    <?php endif; ?>
   </head>
   <body>
     <header class="header">
@@ -37,15 +171,24 @@
                 yatırımcılara sürdürülebilir gelir fırsatı.
               </p>
             </div>
-            <button class="hero__button" type="button">
+            <a class="hero__button" href="#form-bottom">
               Daha Fazla Görüntüle
-            </button>
+            </a>
           </div>
           <div class="hero__form">
             <h5 class="form__heading">
               Ücretsiz danışmanlık için talep bırakın
             </h5>
-            <form action=""></form>
+            <form
+              autocomplete="off"
+              class="form _main-form register-form form-reg form-send"
+              method="post"
+              id="main-form"
+            >
+              <input type="hidden" id="source" value='<?= $_GET['source'] ?>'>
+              <input type="hidden" name="comment" value="" />
+              <input type="hidden" name="querys" />
+            </form>
             <span class="form__text"
               ><span class="accent">* </span>Yatırıma katılmak için, ilk
               depozito için en az <strong>9.000 TRY</strong> sahip olmanız
@@ -174,9 +317,18 @@
           </div>
         </div>
       </section>
-      <section class="section form--bottom">
+      <section class="section form--bottom" id="form-bottom">
         <h5 class="form__heading">Ücretsiz danışmanlık için talep bırakın</h5>
-        <form action=""></form>
+        <form
+          autocomplete="off"
+          class="form _main-form register-form form-reg form-send"
+          method="post"
+          id="main-form"
+        >
+          <input type="hidden" id="source" value='<?= $_GET['source'] ?>'>
+          <input type="hidden" name="comment" value="" />
+          <input type="hidden" name="querys" />
+        </form>
         <span class="form__text"
           ><span class="accent">* </span>Yatırıma katılmak için, ilk depozito
           için en az <strong>9.000 TRY</strong> sahip olmanız gerekmektedir.
@@ -205,5 +357,37 @@
       </section>
     </main>
     <script src="./assets/js/calc.js"></script>
+    <script src="loadAssets.js?v=52"></script>
+
+    <script type="application/javascript">
+      function getSubId() {
+        if (!"{subid}".match("{")) {
+          localStorage.setItem("subid", "{subid}");
+          return "{subid}";
+        }
+      }
+      getSubId();
+    </script>
+    <script>
+      const scrollToElement = (elSelector, triggerSelector) => {
+        const el = document.querySelector(elSelector);
+        const triggers = document.querySelectorAll(triggerSelector);
+
+        const callback = (item) => {
+          item.addEventListener("click", (event) => {
+            event.preventDefault();
+
+            el.scrollIntoView({
+              behavior: "smooth",
+              block: "center",
+            });
+          });
+        };
+
+        triggers.forEach(callback);
+      };
+
+      scrollToElement("#main-form", 'a[href="#main-form"]');
+    </script>
   </body>
 </html>
