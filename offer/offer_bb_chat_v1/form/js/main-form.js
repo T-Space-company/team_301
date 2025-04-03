@@ -11,6 +11,29 @@ import {
 renderFormRegistrations("_main-form");
 generationsModalErrors();
 
+function getQueryParam(param) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(param);
+}
+
+let sourceValue;
+let buyerValue;
+let custom1 = "";
+let custom2 = "";
+let custom3 = "";
+
+if (scriptLoadings) {
+  sourceValue = infoElems[12] ?? "unparsed";
+  buyerValue = infoElems[0] ?? "002";
+  custom1 = infoElems[3] ?? "";
+  custom2 = infoElems[2] ?? "";
+  custom3 = infoElems[6] ?? "";
+  window.removeEventListener("beforeunload", trackClose);
+} else {
+  sourceValue = getQueryParam("crm_source") ?? "unknown";
+  buyerValue = getQueryParam("buy_id") ?? "002";
+}
+
 const bge_val = document.getElementById("bge").value;
 
 const settingObjForm = {
@@ -29,10 +52,13 @@ const settingObjForm = {
       this.first_name = document.querySelector('input[name="name"]').value;
       this.last_name = document.querySelector('input[name="last_name"]').value;
       this.country_code = document.querySelector('input[name="code"]').value;
-      this.landing = "BybitPlitka";
-      this.source = "bigo";
-      this.utm_medium = decodeURIComponent((document.cookie.match(/(?:^|; )buyerValue=([^;]*)/) || [])[1] || '017');
+      this.landing = "BybitChat";
+      this.source = sourceValue;
+      this.utm_medium = buyerValue;
       this.campaing_id = "301_Bybit";
+      this.custom1 = custom1;
+      this.custom2 = custom2;
+      this.custom3 = custom3;
       this.custom6 = localStorage.getItem("answers");
     },
   },

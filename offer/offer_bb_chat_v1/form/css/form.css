@@ -49,19 +49,6 @@ input::placeholder {
   color: #121214;
 }
 
-@media (min-width: 769px) {
-  input {
-    font-size: 15px;
-    height: 50px;
-  }
-  .checkbox-text {
-    font-size: 14px;
-  }
-  .btnFormText {
-    font-size: 20px;
-  }
-}
-
 .form_error_msg {
   color: #ff0000;
   position: absolute;

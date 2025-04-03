@@ -340,7 +340,7 @@ button {
   padding: 10px 15px;
   margin-top: 15px;
   gap: 5px;
-  width: auto;
+  max-width: 300px;
   height: auto;
   box-sizing: border-box;
   position: relative;
