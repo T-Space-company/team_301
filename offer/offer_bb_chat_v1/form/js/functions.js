@@ -113,6 +113,7 @@ export function renderFormRegistrations(allFormClass) {
   
 
       `;
+
   forms.forEach((form, index) => {
     form.insertAdjacentHTML("beforeend", htmlFormHtml);
   });

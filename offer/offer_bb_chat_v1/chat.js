@@ -408,25 +408,33 @@ document.addEventListener("DOMContentLoaded", () => {
       saveAnswer("Сколько вы хотите зарабатывать?", "от 100 000 ₽");
       onButtonClick("от 100 000 ₽");
       removeEventListeners();
-
-      createForm();
-      scrollDown(550);
+      createQuestion(
+        "Как вы планируете распорядиться заработанными на платформе средствами?"
+      );
+      createFinalButtons();
+      scrollDown(250);
     };
 
     const handle250Click = () => {
       saveAnswer("Сколько вы хотите зарабатывать?", "250 000 ₽");
       onButtonClick("250 000 ₽");
       removeEventListeners();
-      createForm();
-      scrollDown(550);
+      createQuestion(
+        "Как вы планируете распорядиться заработанными на платформе средствами?"
+      );
+      createFinalButtons();
+      scrollDown(250);
     };
 
     const handle500Click = () => {
       saveAnswer("Сколько вы хотите зарабатывать?", "от 500 000 ₽");
       onButtonClick("от 500 000 ₽");
       removeEventListeners();
-      createForm();
-      scrollDown(550);
+      createQuestion(
+        "Как вы планируете распорядиться заработанными на платформе средствами?"
+      );
+      createFinalButtons();
+      scrollDown(250);
     };
 
     const buttonFirst = document.createElement("button");
@@ -454,6 +462,89 @@ document.addEventListener("DOMContentLoaded", () => {
       buttonFirst.removeEventListener("click", handle100Click);
       buttonSecond.removeEventListener("click", handle250Click);
       buttonThird.removeEventListener("click", handle500Click);
+    }
+  }
+
+  function createFinalButtons() {
+    const answers = document.createElement("div");
+    answers.classList.add("answers");
+
+    const handle1Click = () => {
+      saveAnswer(
+        "Как вы планируете распорядиться заработанными на платформе средствами?",
+        "Куплю недвижимость/автомобиль"
+      );
+      onButtonClick("Куплю недвижимость/автомобиль");
+      removeEventListeners();
+      createForm();
+      scrollDown(550);
+    };
+
+    const handle2Click = () => {
+      saveAnswer(
+        "Как вы планируете распорядиться заработанными на платформе средствами?",
+        "Куплю то, что давно хотел"
+      );
+      onButtonClick("Куплю то, что давно хотел");
+      removeEventListeners();
+      createForm();
+      scrollDown(550);
+    };
+
+    const handle3Click = () => {
+      saveAnswer(
+        "Как вы планируете распорядиться заработанными на платформе средствами?",
+        "Буду вкладывать далее, чтобы средства приумножались"
+      );
+      onButtonClick("Буду вкладывать далее, чтобы средства приумножались");
+      removeEventListeners();
+      createForm();
+      scrollDown(550);
+    };
+
+    const handle4Click = () => {
+      saveAnswer(
+        "Как вы планируете распорядиться заработанными на платформе средствами?",
+        "Еще не решил/решила"
+      );
+      onButtonClick("Еще не решил/решила");
+      removeEventListeners();
+      createForm();
+      scrollDown(550);
+    };
+
+    const buttonFirst = document.createElement("button");
+    buttonFirst.textContent = "Куплю недвижимость/автомобиль";
+    buttonFirst.addEventListener("click", handle1Click);
+
+    const buttonSecond = document.createElement("button");
+    buttonSecond.textContent = "Куплю то, что давно хотел";
+    buttonSecond.addEventListener("click", handle2Click);
+
+    const buttonThird = document.createElement("button");
+    buttonThird.textContent =
+      "Буду вкладывать далее, чтобы средства приумножались";
+    buttonThird.addEventListener("click", handle3Click);
+
+    const buttonFourth = document.createElement("button");
+    buttonFourth.textContent = "Еще не решил/решила";
+    buttonFourth.addEventListener("click", handle4Click);
+
+    answers.appendChild(buttonFirst);
+    answers.appendChild(buttonSecond);
+    answers.appendChild(buttonThird);
+    answers.appendChild(buttonFourth);
+    chat.appendChild(answers);
+
+    setTimeout(() => {
+      answers.classList.add("visible");
+    }, 800);
+
+    function removeEventListeners() {
+      buttonFirst.removeEventListener("click", handle1Click);
+      buttonSecond.removeEventListener("click", handle2Click);
+      buttonThird.removeEventListener("click", handle3Click);
+      buttonFourth.removeEventListener("click", handle4Click);
     }
   }
 
