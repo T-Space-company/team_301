@@ -151,6 +151,45 @@ include_once dirname(__FILE__) . '/config.php';
   <body>
     <header class="header">
       <img src="./assets/img/logo.svg" alt="Image" />
+      <ul class="header__list desktop">
+        <li class="header__list-item">
+          <a href="#main-form"
+            >About <img src="./assets/img/icons/arr.svg" alt="Icon"
+          /></a>
+        </li>
+        <li class="header__list-item">
+          <a href="#main-form">
+            Activity Fields <img src="./assets/img/icons/arr.svg" alt="Icon" />
+          </a>
+        </li>
+        <li class="header__list-item">
+          <a href="#main-form">
+            Investor Relations
+            <img src="./assets/img/icons/arr.svg" alt="Icon" />
+          </a>
+        </li>
+        <li class="header__list-item">
+          <a href="#main-form">
+            Life In Koç <img src="./assets/img/icons/arr.svg" alt="Icon" />
+          </a>
+        </li>
+        <li class="header__list-item">
+          <a href="#main-form">
+            Sustainability <img src="./assets/img/icons/arr.svg" alt="Icon" />
+          </a>
+        </li>
+        <li class="header__list-item">
+          <a href="#main-form">
+            Media Center <img src="./assets/img/icons/arr.svg" alt="Icon" />
+          </a>
+        </li>
+      </ul>
+      <div class="header__lang desktop">
+        <a href="#main-form" class="lang__text">TUR</a>
+        <a href="#main-form"
+          ><img src="./assets/img/icons/search.svg" alt="Icon"
+        /></a>
+      </div>
     </header>
     <main class="main">
       <section class="section hero">
@@ -171,9 +210,6 @@ include_once dirname(__FILE__) . '/config.php';
                 yatırımcılara sürdürülebilir gelir fırsatı.
               </p>
             </div>
-            <a class="hero__button" href="#form-bottom">
-              Daha Fazla Görüntüle
-            </a>
           </div>
           <div class="hero__form">
             <h5 class="form__heading">
@@ -196,53 +232,56 @@ include_once dirname(__FILE__) . '/config.php';
             </span>
           </div>
         </div>
+        <div class="hero__bottom desktop"></div>
       </section>
       <section class="section calc">
         <div class="calc__content-wrap">
           <h2 class="calc__heading">yatırım hesaplayıcı</h2>
-          <div class="calc__wrapper">
-            <div class="slider-container">
-              <label class="label-title">yatırım tutarı</label>
-              <span class="label-num sum">10 000₺</span>
-              <input
-                type="range"
-                id="range-slider"
-                min="10000"
-                max="100000"
-                step="10000"
-                value="10000"
-              />
-              <div class="tick-marks">
-                <span class="tick">10 000</span>
-                <span class="tick">100 000</span>
+          <div class="calc__container-wrap">
+            <div class="calc__wrapper">
+              <div class="slider-container">
+                <label class="label-title">yatırım tutarı</label>
+                <span class="label-num sum">10 000₺</span>
+                <input
+                  type="range"
+                  id="range-slider"
+                  min="10000"
+                  max="100000"
+                  step="10000"
+                  value="10000"
+                />
+                <div class="tick-marks">
+                  <span class="tick">10 000</span>
+                  <span class="tick">100 000</span>
+                </div>
               </div>
-            </div>
 
-            <div class="slider-container bottom">
-              <label class="label-title">dönem</label>
-              <span class="label-num date">1 ay</span>
-              <input
-                type="range"
-                id="investment-slider"
-                min="1"
-                max="12"
-                step="1"
-                value="1"
-              />
-              <div class="tick-marks bottom">
-                <span class="tick">1 ay</span>
-                <span class="tick">12 ay</span>
+              <div class="slider-container bottom">
+                <label class="label-title">dönem</label>
+                <span class="label-num date">1 ay</span>
+                <input
+                  type="range"
+                  id="investment-slider"
+                  min="1"
+                  max="12"
+                  step="1"
+                  value="1"
+                />
+                <div class="tick-marks bottom">
+                  <span class="tick">1 ay</span>
+                  <span class="tick">12 ay</span>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="calc__results">
-            <div class="results__stats">
-              <span class="stats__heading">yatırım tutarı</span>
-              <span class="stats__sum" id="sum-display">10 000₺</span>
-            </div>
-            <div class="results__stats">
-              <span class="stats__heading">Kâr</span>
-              <span class="stats__sum" id="profit-display">22 000₺</span>
+            <div class="calc__results">
+              <div class="results__stats">
+                <span class="stats__heading">yatırım tutarı</span>
+                <span class="stats__sum" id="sum-display">10 000₺</span>
+              </div>
+              <div class="results__stats">
+                <span class="stats__heading">Kâr</span>
+                <span class="stats__sum" id="profit-display">22 000₺</span>
+              </div>
             </div>
           </div>
         </div>

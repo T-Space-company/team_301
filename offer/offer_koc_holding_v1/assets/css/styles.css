@@ -31,7 +31,7 @@ body {
 
 .hero__img-wrap {
   width: 100%;
-  max-width: 760px;
+  max-width: 700px;
   position: relative;
   display: flex;
   align-items: center;
@@ -51,6 +51,10 @@ body {
   height: 100%;
 }
 
+.hero__content-wrap {
+  width: 100%;
+}
+
 .hero__content {
   display: flex;
   flex-direction: column;
@@ -67,6 +71,7 @@ body {
   gap: 24px;
   background: #f9423a;
   width: 100%;
+  max-width: 700px;
   padding: 26px 24px 16px 24px;
 }
 
@@ -159,6 +164,12 @@ body {
   text-transform: uppercase;
 }
 
+.calc__container-wrap {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
 .calc__content-wrap {
   display: flex;
   flex-direction: column;
@@ -188,6 +199,7 @@ body {
   width: 100%;
   height: 6px;
   border-radius: 3px;
+  border: none;
   padding: 0;
   background: #f2dddd;
   outline: none;
@@ -269,7 +281,6 @@ body {
   padding: 20px 40px;
   justify-content: space-between;
   align-items: center;
-  margin-top: -20px;
 }
 
 .results__stats {
@@ -309,6 +320,7 @@ body {
   align-items: flex-start;
   gap: 20px;
   width: 100%;
+  max-width: 600px;
 }
 
 .info__item {
@@ -485,4 +497,195 @@ body {
 
 .form-group:last-child {
   margin-bottom: 0;
+}
+
+.mobile {
+  display: flex;
+}
+
+.desktop {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: flex;
+  }
+  .header {
+    justify-content: space-between;
+    padding: 30px 10px;
+    gap: 20px;
+  }
+  .main {
+    gap: 60px;
+  }
+  .header__list {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+  }
+  .header__list-item {
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22.4px;
+    gap: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .header__lang {
+    display: flex;
+    padding: 0px 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+  }
+  .hero {
+    position: relative;
+  }
+  .hero__img-wrap {
+    max-width: none;
+    min-height: 360px;
+  }
+  .hero__img {
+    content: url(../img/main_desktop.png);
+    min-height: 360px;
+  }
+  .img__overlay {
+    background: rgba(52, 49, 77, 0.83);
+  }
+  .hero__content-wrap {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    max-width: 1200px;
+    top: 40px;
+    padding: 0 20px;
+  }
+  .hero__content {
+    align-items: flex-start;
+  }
+  .hero__text-wrap {
+    background: transparent;
+    padding: 0 12px;
+  }
+  .hero__bottom {
+    width: 100%;
+    background: #f9423a;
+    height: 180px;
+  }
+  .hero__button {
+    width: auto;
+  }
+  .hero__form {
+    width: 100%;
+    max-width: 520px;
+    padding: 50px;
+  }
+  .calc__heading,
+  .info__heading,
+  .reviews__heading,
+  .people__heading,
+  .dev__heading {
+    font-size: 28px;
+  }
+  .calc__content-wrap {
+    max-width: 950px;
+  }
+
+  .calc__container-wrap {
+    flex-direction: row;
+  }
+
+  .calc__results {
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 360px;
+    padding: 32px 48px;
+    gap: 90px;
+  }
+  .stats__sum {
+    font-size: 36px;
+  }
+  .label-title {
+    font-size: 16px;
+  }
+  .label-num {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+  .calc__wrapper {
+    padding: 30px 24px;
+    justify-content: space-between;
+  }
+  #investment-slider,
+  #range-slider {
+    height: 10px;
+  }
+  #investment-slider::-webkit-slider-thumb,
+  #range-slider::-webkit-slider-thumb {
+    width: 35px;
+    height: 35px;
+    background-size: cover;
+    margin-top: -12px;
+  }
+  #investment-slider::-moz-range-thumb,
+  #range-slider::-moz-range-thumb {
+    width: 35px;
+    height: 35px;
+    background-size: cover;
+  }
+  .info__items {
+    max-width: 950px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .info__item {
+    width: auto;
+  }
+  .info__item:nth-child(1) {
+    width: 580px;
+  }
+  .info__item:nth-child(3) {
+    width: 600px;
+  }
+  .reviews {
+    gap: 60px;
+    padding: 40px 20px;
+  }
+  .reviews__items {
+    flex-direction: row;
+    max-width: 1000px;
+  }
+  .reviews__item {
+    gap: 60px;
+  }
+  .people__list {
+    flex-direction: row;
+    max-width: 880px;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .form--bottom {
+    background: #f8f9fa;
+    padding: 40px;
+  }
+  .form__heading {
+    font-size: 36px;
+  }
+  .form-send {
+    max-width: 650px;
+  }
+  .dev {
+    padding-bottom: 60px;
+  }
+  .dev__items {
+    flex-direction: row;
+    align-items: flex-start;
+  }
 }
