@@ -62,6 +62,7 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
+  overflow: hidden;
 }
 
 .wheel__bg {
@@ -73,15 +74,21 @@ body {
   z-index: 5;
 }
 
+.wheel__button.active > img {
+  content: url(../img/btn.svg);
+}
+
 .segment-wrapper {
   position: absolute;
-  width: 125px;
-  display: flex;
+  width: 50%;
+  left: 25%;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  transform-origin: center center;
+  transform-origin: center bottom;
   z-index: 2;
+  display: flex;
+  top: 50%;
 }
 
 .segment-wrapper img {
@@ -105,18 +112,52 @@ body {
   position: absolute;
 }
 
+.wheel__segments {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  transition: transform 1s ease-in-out;
+}
+
 .segment1 {
-  transform: rotate(360deg) translateY(-93px);
+  transform: rotate(360deg) translateY(-90px);
 }
 .segment2 {
-  transform: rotate(72deg) translateY(-93px);
+  transform: rotate(72deg) translateY(-90px);
 }
 .segment3 {
-  transform: rotate(144deg) translateY(-93px);
+  transform: rotate(144deg) translateY(-90px);
 }
 .segment4 {
-  transform: rotate(216deg) translateY(-93px);
+  transform: rotate(216deg) translateY(-90px);
 }
 .segment5 {
-  transform: rotate(288deg) translateY(-93px);
+  transform: rotate(288deg) translateY(-90px);
+}
+
+.segment.active > img {
+  content: url(../img/segment-a.svg);
+}
+
+@keyframes rotateSway {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+  75% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.wheel__animated {
+  animation: rotateSway 3s ease-in-out infinite;
 }
