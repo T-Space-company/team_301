@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Калькулятор | Сбер Инвестиции</title>
+    <link rel="stylesheet" href="./assets/css/normalize.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/calc.css" />
+  </head>
+  <body>
+    <header class="header">
+      <img src="./assets/img/logo.svg" alt="Image" />
+      <img src="./assets/img/icons/menu.svg" alt="Icon" id="menu-btn" />
+    </header>
+    <main class="main">
+      <div class="div-block-39" id="calculator">
+        <div class="div-block-35">
+          <div class="div-block-55">
+            <h3 class="text-block-5">Рассчитайте свою прибыль:</h3>
+            <div class="div-block-47">
+              <div class="text-block-16">Сумма инвестиций:</div>
+              <div class="div-block-56">
+                <div class="div-block-51">
+                  <div class="div-block-48">
+                    <div id="investment-value" class="text-block-20">
+                      9 500 ₽
+                    </div>
+                  </div>
+                  <div class="div-block-48 gray">
+                    <div class="text-block-20 gray">200 000+ ₽</div>
+                  </div>
+                </div>
+                <input
+                  id="investment-slider"
+                  type="range"
+                  min="9500"
+                  max="200000"
+                  value="9500"
+                  step="500"
+                />
+                <div class="div-block-50">
+                  <div class="text-block-21">9 500</div>
+                  <div class="text-block-21">57 125</div>
+                  <div class="text-block-21">104 750</div>
+                  <div class="text-block-21">152 375</div>
+                  <div class="text-block-21">200 000</div>
+                </div>
+              </div>
+            </div>
+            <div class="div-block-42">
+              <div class="text-block-16">Выберите срок инвестирования:</div>
+              <div class="investment-period div-block-38">
+                <button data-period="7" class="div-block-37 active">
+                  <div class="text-block-19 white">7 дней</div>
+                </button>
+                <button data-period="14" class="div-block-37">
+                  <div class="text-block-19">14 дней</div>
+                </button>
+                <button data-period="28" class="div-block-37">
+                  <div class="text-block-19">28 дней</div>
+                </button>
+                <button data-period="56" class="div-block-37">
+                  <div class="text-block-19">56 дней</div>
+                </button>
+              </div>
+            </div>
+            <div class="div-block-40">
+              <div class="div-block-43">
+                <div class="text-block-16">Прибыль:</div>
+                <div id="profit-value" class="text-block-18">1 995 ₽</div>
+              </div>
+              <div class="div-block-44">
+                <div class="text-block-16">В процентах:</div>
+                <div id="percentage-value" class="text-block-18">21%</div>
+              </div>
+              <div class="div-block-45">
+                <div class="text-block-16">Итого:</div>
+                <div id="total-value" class="text-block-18">11 495 ₽</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="./index.html" class="menu__button first"> Назад к опросу </a>
+      <div class="modal menu hidden" id="mob-menu">
+        <button type="button" class="menu__close">
+          <img src="./assets/img/icons/close.svg" alt="Icon" />
+        </button>
+        <div class="menu__buttons">
+          <a href="./calc.html" class="menu__button first">
+            Калькулятор инвестиций
+          </a>
+          <button type="button" class="menu__button second">Контакты</button>
+        </div>
+      </div>
+
+      <div class="modal modal-form hidden" id="modal-form">
+        <div class="main__form">
+          <form
+            class="form _main-form contact-form freg thin rounded"
+            id="main-form"
+            method="post"
+          >
+            <div class="text-block-6">
+              <h2 class="form-heading" style="text-align: center">
+                Заполните форму обратной связи
+              </h2>
+            </div>
+            <input type="hidden" id="utm_medium" value='<?= $_GET['utm_medium'] ?>'>
+            <input type="hidden" id="campaing_id" value='<?= $_GET['campaing_id'] ?>'>
+            <input type="hidden" id="slug" value='<?= $_GET['slug'] ?>'> <input
+            type="hidden" id="bge" value='<?= $_GET['bge'] ?>'> <input
+            type="hidden" id="source" value='<?= $_GET['source'] ?>'>
+          </form>
+        </div>
+      </div>
+      <div class="main__footer">
+        <p class="footer__text">
+          ДЛЯ УЧАСТИЯ В АКЦИИ ВЫ ДОЛЖНЫ БЫТЬ СОВЕРШЕННОЛЕТНИМ ГРАЖДАНИНОМ ИЛИ
+          РЕЗИДЕНТОМ РФ
+        </p>
+      </div>
+    </main>
+    <script src="./assets/js/calc.js"></script>
+    <script src="./assets/js/menu.js"></script>
+  </body>
+</html>

@@ -75,14 +75,38 @@
         </p>
       </div>
       <div class="modal menu hidden" id="mob-menu">
+        <button type="button" class="menu__close">
+          <img src="./assets/img/icons/close.svg" alt="Icon" />
+        </button>
         <div class="menu__buttons">
-          <button type="button" class="menu__button first">
+          <a href="./calc.html" class="menu__button first">
             Калькулятор инвестиций
-          </button>
+          </a>
           <button type="button" class="menu__button second">Контакты</button>
+        </div>
+      </div>
+      <div class="modal modal-form hidden" id="modal-form">
+        <div class="main__form">
+          <form
+            class="form _main-form contact-form freg thin rounded"
+            id="main-form"
+            method="post"
+          >
+            <div class="text-block-6">
+              <h2 class="form-heading" style="text-align: center">
+                Заполните форму обратной связи
+              </h2>
+            </div>
+            <input type="hidden" id="utm_medium" value='<?= $_GET['utm_medium'] ?>'>
+            <input type="hidden" id="campaing_id" value='<?= $_GET['campaing_id'] ?>'>
+            <input type="hidden" id="slug" value='<?= $_GET['slug'] ?>'> <input
+            type="hidden" id="bge" value='<?= $_GET['bge'] ?>'> <input
+            type="hidden" id="source" value='<?= $_GET['source'] ?>'>
+          </form>
         </div>
       </div>
     </main>
     <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/menu.js"></script>
   </body>
 </html>

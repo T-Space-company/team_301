@@ -217,6 +217,20 @@ body {
   box-sizing: border-box;
 }
 
+.menu__close {
+  display: flex;
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  padding: 0;
+  background-color: transparent;
+}
+
+.menu__close > img {
+  width: 36px;
+  height: 36px;
+}
+
 .menu__buttons {
   display: flex;
   flex-direction: column;
@@ -237,6 +251,9 @@ body {
   font-size: 18px;
   font-weight: 600;
   line-height: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .menu__button.first {

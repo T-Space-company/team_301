@@ -5,8 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const segments = document.querySelectorAll(".segment");
   const question = document.querySelector(".main__question h2");
   const form = document.querySelector(".main__form");
-  const menuBtn = document.getElementById("menu-btn");
-  const menu = document.getElementById("mob-menu");
+
   const totalSegments = segments.length;
   const degreesPerSegment = 360 / totalSegments;
   let i = 0;
@@ -127,8 +126,4 @@ document.addEventListener("DOMContentLoaded", () => {
         break;
     }
   }
-
-  menuBtn.addEventListener("click", () => {
-    menu.classList.toggle("hidden");
-  });
 });
