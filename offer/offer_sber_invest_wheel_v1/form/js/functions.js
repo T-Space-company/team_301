@@ -67,7 +67,7 @@ export function renderFormRegistrations(allFormClass) {
 <div class="form-group input-group ">
 <label class="input-label">
   Ваше имя*
-    <input class="form-control form-input form__input" name="name" placeholder="Ваше имя"  type="text" required />
+    <input class="form-control form-input form__input" name="name" placeholder="Имя"  type="text" required />
     <i class="fa__err"></i>
     <span class="fa__errInfo">- Удалите цифры </span>
     <i class="fa__checked"></i>
@@ -77,7 +77,7 @@ export function renderFormRegistrations(allFormClass) {
   <div class="form-group input-group ">
   <label class="input-label">
   Ваша фамилия*
-    <input class="form-control  form-input form__input" name="last_name" placeholder="Ваша фамилия" required type="text" />
+    <input class="form-control  form-input form__input" name="last_name" placeholder="Фамилия" required type="text" />
     <i class="fa__err"></i>
     <span class="fa__errInfo">- Удалите цифры </span>
     <i class="fa__checked"></i>
@@ -89,17 +89,23 @@ export function renderFormRegistrations(allFormClass) {
   <div class="form-group input-group">
   <label class="input-label">
   Ваш номер телефона*
-    <input class="form-control form-input _phone" maxlength="10" placeholder="902 284 - 22 - 79" name="phone" type="tel" />
+    <input class="form-control form-input _phone" maxlength="10" placeholder="(921) 345-67-89" name="phone" type="tel" />
     <div class="error-phone"></div>
   </label>
   </div>
 
-  <div class="form-group input-group group-checkbox">
-  <label class="switch">
+<div class="form-group input-group group-checkbox">
+<div class="checkbox-wrap">
   <input class="form-input form-checkbox" type="checkbox" required>
-  <span class="slider round"></span>
-  </label>
-  <span class="checkbox-text">Я согласен с <span class="input-accent">Политикой Конфиденциальности<span></span>
+</div>
+<span class="checkbox-text">Я согласен с <span class="input-accent">Политикой Конфиденциальности</span></span>
+</div>
+
+<div class="form-group input-group group-checkbox">
+<div class="checkbox-wrap">
+  <input class="form-input form-checkbox" type="checkbox" required>
+</div>
+  <span class="checkbox-text">Я подтверждаю что я совершеннолетний гражданин РФ </span>
 </div>
 
    <input name="code" type="hidden" value="" />
@@ -109,9 +115,8 @@ export function renderFormRegistrations(allFormClass) {
   
   
   <div class="form-group form-group-button">
-
     <button class="btn secondary-solid-btn btn-block buttonSend"  name="submitBtn" type="submit">
-    <p class="btnFormText" style="color:white;">Оставить заявку
+    <p class="btnFormText" style="color:white;">Принять участие
     </p>
     </button>
   </div>

@@ -104,8 +104,9 @@
   border-radius: 10px;
   justify-content: center;
   align-items: center;
-  padding: 10px 15px;
+  padding: 10px;
   display: flex;
+  flex: 1;
   box-shadow: 0 0 5px #0003;
 }
 
