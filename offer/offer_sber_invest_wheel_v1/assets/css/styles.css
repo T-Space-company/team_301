@@ -112,6 +112,14 @@ body {
   position: absolute;
 }
 
+.segment-text > .small {
+  font-size: 8.5px;
+}
+
+.segment-text > .big {
+  font-size: 14px;
+}
+
 .wheel__segments {
   position: absolute;
   width: 100%;
@@ -160,4 +168,82 @@ body {
 
 .wheel__animated {
   animation: rotateSway 3s ease-in-out infinite;
+}
+
+.main__footer {
+  display: flex;
+  position: absolute;
+  bottom: 20px;
+}
+
+.footer__text {
+  color: #fff;
+  text-align: center;
+  font-family: "SB Sans Text";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.main__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 330px;
+  border-radius: 20px;
+  border: 5px solid #4ad8d5;
+  background: #fff;
+  padding: 20px;
+  margin-top: 60px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(58, 58, 58, 0.1);
+  backdrop-filter: blur(41px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.menu__buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 325px;
+}
+
+.menu__button {
+  width: 100%;
+  height: 60px;
+  border-radius: 50px;
+  background: #fff;
+  color: #4ad8d5;
+  text-align: center;
+  font-family: "SB Sans Display";
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 23px;
+}
+
+.menu__button.first {
+  background: linear-gradient(90deg, #134a61 0%, #4ad8d5 100%);
+  color: #fff;
+}
+
+.hidden {
+  display: none;
 }

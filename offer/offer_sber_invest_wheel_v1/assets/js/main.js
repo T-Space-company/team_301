@@ -4,6 +4,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const wheelBtn = document.querySelector(".wheel__button");
   const segments = document.querySelectorAll(".segment");
   const question = document.querySelector(".main__question h2");
+  const form = document.querySelector(".main__form");
+  const menuBtn = document.getElementById("menu-btn");
+  const menu = document.getElementById("mob-menu");
   const totalSegments = segments.length;
   const degreesPerSegment = 360 / totalSegments;
   let i = 0;
@@ -50,6 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   function changeQuestion() {
+    console.log(i);
     switch (i) {
       case 1:
         answers = [
@@ -57,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
           "Инвестиции в будущее",
           "Другое",
           "Помощь<br> близким",
-          "Финансовая независимость",
+          `<span class="small">Финансовая независимость</span>`,
         ];
         question.textContent = "С какой целью Вы хотите увеличить достаток?";
         segments.forEach((segment, index) => {
@@ -69,11 +73,11 @@ document.addEventListener("DOMContentLoaded", () => {
         break;
       case 2:
         answers = [
-          "30 000 ₽",
-          "50 000 ₽",
-          "80 000 ₽",
-          "120 000 ₽",
-          "150 000 ₽",
+          `<span class="big">30 000 ₽</span>`,
+          `<span class="big">50 000 ₽</span>`,
+          `<span class="big">80 000 ₽</span>`,
+          `<span class="big">120 000 ₽</span>`,
+          `<span class="big">150 000 ₽</span>`,
         ];
         question.textContent = `Средний доход в программе от "Сбербанк России" начинается от 30 000 ₽ и может достигать 1 245 000 ₽ Сколько Вы хотите зарабатывать?`;
         segments.forEach((segment, index) => {
@@ -85,13 +89,14 @@ document.addEventListener("DOMContentLoaded", () => {
         break;
       case 3:
         answers = [
-          "30 000 ₽",
-          "50 000 ₽",
-          "80 000 ₽",
-          "120 000 ₽",
-          "150 000 ₽",
+          "Поддержка <br>семьи",
+          "Покупка автомобиля",
+          "Отложить <br>в резерв",
+          "Покупка квартиры",
+          "Путешествия",
         ];
-        question.textContent = "С какой целью Вы хотите увеличить достаток?";
+        question.textContent =
+          "Как вы планируете распорядиться заработанными на платформе средствами?";
         segments.forEach((segment, index) => {
           const span = segment.querySelector("span");
           if (span && answers[index]) {
@@ -99,6 +104,31 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         });
         break;
+      case 4:
+        answers = [
+          "Поддержка <br>семьи",
+          "Покупка автомобиля",
+          "Отложить <br>в резерв",
+          "Покупка квартиры",
+          "Путешествия",
+        ];
+        question.textContent =
+          "Как вы планируете распорядиться заработанными на платформе средствами?";
+        segments.forEach((segment, index) => {
+          const span = segment.querySelector("span");
+          if (span && answers[index]) {
+            span.innerHTML = answers[index];
+          }
+        });
+        const mainQuestion = document.querySelector(".main__question");
+        mainQuestion.classList.add("hidden");
+        wheel.classList.add("hidden");
+        form.classList.remove("hidden");
+        break;
     }
   }
+
+  menuBtn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
 });
