@@ -5,8 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const segments = document.querySelectorAll(".segment");
   const question = document.querySelector(".main__question h2");
   const form = document.querySelector(".main__form");
-  const menuBtn = document.getElementById("menu-btn");
-  const menu = document.getElementById("mob-menu");
+
   const totalSegments = segments.length;
   const degreesPerSegment = 360 / totalSegments;
   let i = 0;
@@ -80,6 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
           `<span class="big">150 000 ₽</span>`,
         ];
         question.textContent = `Средний доход в программе от "Сбербанк России" начинается от 30 000 ₽ и может достигать 1 245 000 ₽ Сколько Вы хотите зарабатывать?`;
+        question.style.fontSize = "16px";
         segments.forEach((segment, index) => {
           const span = segment.querySelector("span");
           if (span && answers[index]) {
@@ -95,6 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
           "Покупка квартиры",
           "Путешествия",
         ];
+        question.style.fontSize = "20px";
         question.textContent =
           "Как вы планируете распорядиться заработанными на платформе средствами?";
         segments.forEach((segment, index) => {
@@ -127,8 +128,4 @@ document.addEventListener("DOMContentLoaded", () => {
         break;
     }
   }
-
-  menuBtn.addEventListener("click", () => {
-    menu.classList.toggle("hidden");
-  });
 });
