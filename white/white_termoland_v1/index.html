@@ -18,41 +18,66 @@
       <div class="header__logo">
         <img src="./assets/img/logo_mob.png" alt="Logo" />
       </div>
+      <a class="header__location desktop" href="#main-form">
+        <img src="./assets/img/icons/point.svg" alt="Icon" />
+        Печатиники
+        <img src="./assets/img/icons/arr.svg" alt="Icon" />
+      </a>
+      <nav class="header__menu desktop">
+        <div class="menu__list">
+          <a href="#main-form">Стоимость</a>
+          <a href="#main-form">Услуги</a>
+          <a href="#main-form">Spa</a>
+          <a href="#main-form">Сертификаты</a>
+          <a href="#main-form">Акции</a>
+          <a href="#main-form">Новости</a>
+          <a href="#main-form">Инвесторам</a>
+        </div>
+      </nav>
       <div class="header__btns">
         <img src="./assets/img/icons/search.svg" alt="Icon" />
         <img src="./assets/img/icons/user.svg" alt="Icon" />
+        <a href="#main-form" class="header__button desktop">Купить билеты</a>
         <img src="./assets/img/icons/menu.svg" alt="Icon" />
       </div>
     </header>
     <main class="main">
       <section class="section hero">
         <div class="hero__banner">
-          <img src="./assets/img/main.jpeg" alt="Image" />
+          <!-- <img src="./assets/img/main.jpeg" alt="Image" /> -->
           <div class="banner__overlay"></div>
+          <div class="banner__items desktop">
+            <div class="banner__item">Стоимость</div>
+          </div>
         </div>
         <div class="hero__info">
-          <div class="info__more">
-            <img src="./assets/img/icons/more.svg" alt="Icon" />
-          </div>
-          <div class="info__contacts">
-            <span class="contacts__heading"
-              >Есть вопросы? <br />
-              Напишите нам в чат</span
-            >
-            <div class="contacts__socials">
-              <div class="contacts__social">
-                <img src="./assets/img/icons/tg.svg" alt="Icon" />
-              </div>
-              <div class="contacts__social">
-                <img src="./assets/img/icons/wa.svg" alt="Icon" />
-              </div>
-              <div class="contacts__social">
-                <img src="./assets/img/icons/vk.svg" alt="Icon" />
-              </div>
+          <div class="info__top desktop">
+            <div class="hero__img desktop">
+              <img src="./assets/img/svg.svg" alt="Image" />
             </div>
-            <button type="button" class="contacts__button">
-              Схема проезда
-            </button>
+          </div>
+          <div class="info__bottom">
+            <div class="info__more">
+              <img src="./assets/img/icons/more.svg" alt="Icon" />
+            </div>
+            <div class="info__contacts">
+              <span class="contacts__heading"
+                >Есть вопросы? <br />
+                Напишите нам в чат</span
+              >
+              <div class="contacts__socials">
+                <div class="contacts__social">
+                  <img src="./assets/img/icons/tg.svg" alt="Icon" />
+                </div>
+                <div class="contacts__social">
+                  <img src="./assets/img/icons/wa.svg" alt="Icon" />
+                </div>
+                <div class="contacts__social">
+                  <img src="./assets/img/icons/vk.svg" alt="Icon" />
+                </div>
+              </div>
+              <a href="#main-form" class="contacts__button"> Схема проезда </a>
+            </div>
           </div>
         </div>
       </section>
@@ -66,10 +91,135 @@
             <span class="includes__text">
               Анимация и мастер-классы, фитнес
             </span>
+            <a href="#main-form" class="includes__btn mobile">Подробнее</a>
+          </div>
+          <div class="includes__item">
+            <div class="includes__img second">
+              <img src="./assets/img/icons/a2.svg" alt="Icon" />
+            </div>
+            <span class="includes__text"> Открытый бассейн </span>
+            <a href="#main-form" class="includes__btn mobile">Подробнее</a>
+          </div>
+          <div class="includes__item">
+            <div class="includes__img third">
+              <img src="./assets/img/icons/a3.svg" alt="Icon" />
+            </div>
+            <span class="includes__text"> Сервис и забота </span>
+            <a href="#main-form" class="includes__btn mobile">Подробнее</a>
+          </div>
+          <div class="includes__item">
+            <div class="includes__img fourth">
+              <img src="./assets/img/icons/a4.svg" alt="Icon" />
+            </div>
+            <span class="includes__text"> Парения </span>
+            <a href="#main-form" class="includes__btn mobile">Подробнее</a>
           </div>
         </div>
       </section>
+      <section class="section complex mobile">
+        <h2 class="complex__heading">Что ждет в комплексе</h2>
+        <div class="complex__content">
+          <img src="./assets/img/complex.png" alt="Image" />
+          <div class="content__overlay"></div>
+          <span class="content__descr">Морская купель</span>
+        </div>
+      </section>
+      <section class="section map mobile">
+        <div class="map__content">
+          <iframe
+            src="https://www.google.com/maps?q=г. Москва, ул. Полбина вл.33А&output=embed"
+            width="100%"
+            height="400"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <div class="map__info">
+            <h3 class="map__heading">Termoland Печатники</h3>
+            <div class="map__address">
+              <div class="address__descr">
+                <img src="./assets/img/icons/point.svg" alt="Icon" />
+                г. Москва, ул. Полбина вл.33А
+              </div>
+              <div class="address__descr">
+                <img src="./assets/img/icons/metro.svg" alt="Icon" />
+                Печатники
+                <span class="address__dist">2,37 км</span>
+              </div>
+            </div>
+            <a href="#main-form" class="address__button">Построить маршрут</a>
+          </div>
+        </div>
+      </section>
+      <section class="section opening">
+        <div class="opening__wrapper">
+          <div class="opening__text">
+            <h2 class="opening__heading">Скоро открытие!</h2>
+            <p class="opening__descr">
+              Оставьте свои контакты, чтобы узнать про открытие первым
+            </p>
+          </div>
+          <form action=""></form>
+        </div>
+      </section>
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <div class="footer__logo desktop">
+        <img src="./assets/img/logo.png" alt="Image" />
+      </div>
+      <div class="footer__menu desktop">
+        <div class="menu__items">
+          <ul class="menu__list--footer">
+            <a href="#main-form">Комплексы</a>
+            <a href="#main-form">О нас</a>
+            <a href="#main-form">Услуги</a>
+            <a href="#main-form">Цены</a>
+            <a href="#main-form">Акции</a>
+          </ul>
+          <ul class="menu__list--footer">
+            <a href="#main-form">Корпоративным клиентам</a>
+            <a href="#main-form">Партнерам</a>
+            <a href="#main-form">Инвесторам</a>
+            <a href="#main-form">Тендеры</a>
+            <a href="#main-form">Вакансии</a>
+          </ul>
+          <ul class="menu__list--footer">
+            <a href="#main-form">Новости</a>
+            <a href="#main-form">Галерея</a>
+            <a href="#main-form">Контакты</a>
+            <a href="#main-form">Карта сайта</a>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__contacts">
+        <div class="contacts__mail desktop">
+          <a href="#main-form">pcht@termoland.ru</a>
+        </div>
+        <div class="contacts__item mobile">
+          <div class="contacts__content">
+            <img src="./assets/img/icons/phone.svg" alt="Icon" />
+          </div>
+          <img src="./assets/img/icons/copy.svg" alt="Icon" />
+        </div>
+        <div class="contacts__item mobile">
+          <div class="contacts__content">
+            <img src="./assets/img/icons/mail.svg" alt="Icon" />
+            <span>pcht@termoland.ru</span>
+          </div>
+          <img src="./assets/img/icons/copy.svg" alt="Icon" />
+        </div>
+        <div class="contacts__wrap">
+          <div class="contacts__item">
+            <img src="./assets/img/icons/f-tg.svg" alt="Icon" />
+            <span>Telegram чат</span>
+          </div>
+          <div class="contacts__item">
+            <img src="./assets/img/icons/f-wa.svg" alt="Icon" />
+            <span>WhatsApp чат</span>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
