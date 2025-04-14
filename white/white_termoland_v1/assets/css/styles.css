@@ -371,7 +371,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 26.5px;
+  gap: 26px;
 }
 
 .opening__heading {
@@ -393,7 +393,6 @@
 
 .footer {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 20px;
@@ -462,12 +461,6 @@
 }
 
 @media (min-width: 768px) {
-  .mobile {
-    display: none;
-  }
-  .desktop {
-    display: flex;
-  }
   .header {
     padding: 16px 20px;
   }
@@ -531,6 +524,15 @@
 }
 
 @media (min-width: 1024px) {
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: flex;
+  }
+  .section {
+    padding: 40px 32px;
+  }
   .header {
     padding: 16px 40px;
     gap: 10px;
@@ -538,12 +540,19 @@
   .header__menu {
     display: flex;
   }
+  .header__location {
+    display: none;
+  }
+  .header__button {
+    display: none;
+  }
   .hero {
     flex-direction: row;
     position: relative;
+    padding: 0 0 30px 0;
   }
   .hero__banner {
-    width: 85%;
+    width: 82%;
     height: 600px;
   }
   .hero__info {
@@ -627,6 +636,58 @@
   .contacts__button {
     max-width: none;
     margin-top: auto;
+  }
+  .opening__heading {
+    font-size: 49px;
+    line-height: 65px;
+  }
+  .opening__descr {
+    font-size: 25px;
+  }
+  .footer {
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 50px 40px;
+    gap: 30px;
+  }
+  .footer__menu {
+    display: flex;
+  }
+  .menu__items {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+  }
+  .menu__list--footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .menu__list--footer > a {
+    color: #111827;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .contacts__wrap {
+    flex-direction: column;
+    max-width: 175px;
+    margin-top: 70px;
+  }
+  .footer__contacts {
+    width: auto;
+    align-items: flex-start;
+  }
+  .contacts__mail {
+    color: #111827;
+    font-family: Inter;
+    font-size: 24px;
+    line-height: 24px;
+    margin: 20px 0;
+  }
+  .contacts__item {
+    gap: 6px;
   }
 }
 
