@@ -29,10 +29,12 @@ const settingObjForm = {
       this.first_name = document.querySelector('input[name="name"]').value;
       this.last_name = document.querySelector('input[name="last_name"]').value;
       this.country_code = document.querySelector('input[name="code"]').value;
-      this.landing = "BybitPlitka";
+      this.landing = "BKSPlitka";
       this.source = "bigo";
-      this.utm_medium = decodeURIComponent((document.cookie.match(/(?:^|; )buyerValue=([^;]*)/) || [])[1] || '017');
-      this.campaing_id = "301_Bybit";
+      this.utm_medium = decodeURIComponent(
+        (document.cookie.match(/(?:^|; )buyerValue=([^;]*)/) || [])[1] || "017"
+      );
+      this.campaing_id = "Bks";
       this.custom6 = localStorage.getItem("answers");
     },
   },

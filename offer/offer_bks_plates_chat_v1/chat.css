@@ -58,8 +58,7 @@ p {
   width: 100%;
   min-width: 320px;
   height: 70px;
-  background: #17181e;
-  padding: 0 20px 0 20px;
+  background: #006df0;
   padding: 0 20px 0 20px;
   display: flex;
   align-items: center;
@@ -270,9 +269,7 @@ p {
   font-family: "TT First Neue", sans-serif;
   font-size: 14px;
   font-weight: 600;
-  background: var(--1, linear-gradient(82deg, #fa0 3.66%, #ffc54e 90.63%));
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #006df0;
 }
 
 .message-text {
@@ -316,9 +313,9 @@ button {
   justify-content: center;
   align-items: center;
   border-radius: 10px !important;
-  border: none !important;
-  background: var(--1, linear-gradient(82deg, #fa0 3.66%, #ffc54e 90.63%));
-  color: #17181e !important;
+  border: 1px solid #006df0 !important;
+  background: #006df0 !important;
+  color: #fff !important;
   font-family: "Fixel Display" !important;
   font-size: 14px;
   font-style: normal;
@@ -330,7 +327,7 @@ button {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 350ms, transform 350ms;
-  background-color: #17181e;
+  background-color: #5c5c5c;
   color: #fff;
   font-family: "Fixel Display";
   font-size: 14px;

@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const firstMessages = [
-    `Пройдите официальный тест от ОАО "BYBIT" и получите доступ к выплате`,
+    `Пройдите официальный тест от ОАО "БКС" и получите доступ к выплате `,
     "Также для Вас открыта возможность зарабатывать на акциях российских и зарубежных компаний и получать от 100 000Р уже в первую неделю!",
     "Пожалуйста, ответьте на следующие вопросы:",
     "Являетесь ли вы гражданином или резидентом Российской Федерации?",
@@ -27,14 +27,14 @@ document.addEventListener("DOMContentLoaded", () => {
     messageField.classList.add("message-field");
 
     const avatar = document.createElement("img");
-    avatar.setAttribute("src", "img/icons/logo.svg");
+    avatar.setAttribute("src", "img/icons/avatar.svg");
     avatar.classList.add("message-avatar");
 
     const div = document.createElement("div");
     div.classList.add("message");
 
     const sender = document.createElement("span");
-    sender.textContent = "BYBIT";
+    sender.textContent = "БКС";
     sender.classList.add("message-sender");
     div.appendChild(sender);
 
@@ -69,14 +69,14 @@ document.addEventListener("DOMContentLoaded", () => {
     messageField.classList.add("message-field");
 
     const avatar = document.createElement("img");
-    avatar.setAttribute("src", "img/icons/logo.svg");
+    avatar.setAttribute("src", "img/icons/avatar.svg");
     avatar.classList.add("message-avatar");
 
     const div = document.createElement("div");
     div.classList.add("message");
 
     const sender = document.createElement("span");
-    sender.textContent = "BYBIT";
+    sender.textContent = "БКС";
     sender.classList.add("message-sender");
     div.appendChild(sender);
 
@@ -159,8 +159,10 @@ document.addEventListener("DOMContentLoaded", () => {
       button2.removeEventListener("click", handleButton2Click);
       button3.removeEventListener("click", handleButton3Click);
       button4.removeEventListener("click", handleButton4Click);
-      createQuestion("Есть ли у вас опыт в инвестировании?");
-      createExpButtons();
+      createQuestion(
+        "Средний доход в программе от «БКС» начинается от 100 000 ₽ и может достигать боле 1 500 000 ₽ в месяц. <b>Сколько вы хотите зарабатывать?</b>"
+      );
+      createRevenueButtons();
       scrollDown(200);
     };
 
@@ -172,8 +174,10 @@ document.addEventListener("DOMContentLoaded", () => {
       button2.removeEventListener("click", handleButton2Click);
       button3.removeEventListener("click", handleButton3Click);
       button4.removeEventListener("click", handleButton4Click);
-      createQuestion("Есть ли у вас опыт в инвестировании?");
-      createExpButtons();
+      createQuestion(
+        "Средний доход в программе от «БКС» начинается от 100 000 ₽ и может достигать боле 1 500 000 ₽ в месяц. <b>Сколько вы хотите зарабатывать?</b>"
+      );
+      createRevenueButtons();
       scrollDown(200);
     };
 
@@ -185,8 +189,10 @@ document.addEventListener("DOMContentLoaded", () => {
       button2.removeEventListener("click", handleButton2Click);
       button3.removeEventListener("click", handleButton3Click);
       button4.removeEventListener("click", handleButton4Click);
-      createQuestion("Есть ли у вас опыт в инвестировании?");
-      createExpButtons();
+      createQuestion(
+        "Средний доход в программе от «БКС» начинается от 100 000 ₽ и может достигать боле 1 500 000 ₽ в месяц. <b>Сколько вы хотите зарабатывать?</b>"
+      );
+      createRevenueButtons();
       scrollDown(200);
     };
 
@@ -198,9 +204,10 @@ document.addEventListener("DOMContentLoaded", () => {
       button2.removeEventListener("click", handleButton2Click);
       button3.removeEventListener("click", handleButton3Click);
       button4.removeEventListener("click", handleButton4Click);
-
-      createQuestion("Есть ли у вас опыт в инвестировании?");
-      createExpButtons();
+      createQuestion(
+        "Средний доход в программе от «БКС» начинается от 100 000 ₽ и может достигать боле 1 500 000 ₽ в месяц. <b>Сколько вы хотите зарабатывать?</b>"
+      );
+      createRevenueButtons();
       scrollDown(200);
     };
 
@@ -374,27 +381,24 @@ document.addEventListener("DOMContentLoaded", () => {
       saveAnswer("Сколько вы хотите зарабатывать?", "от 100 000 ₽");
       onButtonClick("от 100 000 ₽");
       removeEventListeners();
-      createQuestion("С какой суммы вам было бы комфортно начать?");
-      createGoalButtons();
-      scrollDown(250);
+      createForm();
+      scrollDown(550);
     };
 
     const handle250Click = () => {
       saveAnswer("Сколько вы хотите зарабатывать?", "250 000 ₽");
       onButtonClick("250 000 ₽");
       removeEventListeners();
-      createQuestion("С какой суммы вам было бы комфортно начать?");
-      createGoalButtons();
-      scrollDown(250);
+      createForm();
+      scrollDown(550);
     };
 
     const handle500Click = () => {
       saveAnswer("Сколько вы хотите зарабатывать?", "от 500 000 ₽");
       onButtonClick("от 500 000 ₽");
       removeEventListeners();
-      createQuestion("С какой суммы вам было бы комфортно начать?");
-      createGoalButtons();
-      scrollDown(250);
+      createForm();
+      scrollDown(550);
     };
 
     const buttonFirst = document.createElement("button");

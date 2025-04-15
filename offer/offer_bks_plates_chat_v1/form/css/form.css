@@ -46,7 +46,7 @@ input::placeholder {
 .btnFormText {
   font-family: "Fixel Display";
   font-size: 18px;
-  color: #121214;
+  color: #fff;
 }
 
 @media (min-width: 769px) {

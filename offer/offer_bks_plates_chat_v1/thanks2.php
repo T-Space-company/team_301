@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Спасибо за регистрацию!</title>
-    <link rel="icon" href="../img/icons/logo.svg" type="image/x-icon" />
+    <link rel="icon" href="./img/icons/avatar.svg" type="image/x-icon" />
     <link rel="stylesheet" href="./thankYou/thankyou.css" />
   </head>
   <body>
     <header class="header">
       <div class="header__logo">
-        <img src="./img/icons/logo.png" alt="Logo" class="header__logo-img" />
+        <img src="./img/icons/logo.svg" alt="Logo" class="header__logo-img" />
       </div>
     </header>
     <main class="main">
@@ -27,9 +27,7 @@
           <div class="main__section-content-reviews">
             <div class="main__section-content-review">
               <p>
-                С <b>BYBIT</b> я наконец-то начал разбираться в инвестициях!
-                Доходность превышает все мои ожидания, и это еще больше
-                мотивирует.
+                С <b>БКС</b> я наконец-то начал разбираться в инвестициях! Доходность превышает все мои ожидания, и это еще больше мотивирует.
               </p>
               <div class="main__section-content-review-avatar">
                 <img src="./img/avatars/Pic-1.png" width="30px" alt="" />
@@ -41,8 +39,7 @@
             </div>
             <div class="main__section-content-review">
               <p>
-                Искал надежного партнера для долгосрочных вложений, и
-                <b>BYBIT</b> полностью оправдал мои ожидания.
+                Искал надежного партнера для долгосрочных вложений, и <b>БКС</b> полностью оправдал мои ожидания.
               </p>
               <div class="main__section-content-review-avatar">
                 <img src="./img/avatars/Pic-2.png" width="30px" alt="" />
@@ -54,8 +51,7 @@
             </div>
             <div class="main__section-content-review">
               <p>
-                Я работаю с <b>BYBIT</b> уже больше года, и это одно из лучших
-                финансовых решений, что я когда-либо принимал.
+                Я работаю с <b>БКС</b> уже больше года, и это одно из лучших финансовых решений, что я когда-либо принимал.
               </p>
               <div class="main__section-content-review-avatar">
                 <img src="./img/avatars/Pic-3.png" width="30px" alt="" />
@@ -67,7 +63,7 @@
             </div>
             <div class="main__section-content-review">
               <p>
-                <b>BYBIT</b> — это находка для тех, кто хочет пассивный доход и
+                <b>БКС</b> — это находка для тех, кто хочет пассивный доход и
                 при этом минимальные риски.
               </p>
               <div class="main__section-content-review-avatar">
