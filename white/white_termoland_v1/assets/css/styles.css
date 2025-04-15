@@ -552,7 +552,7 @@
     padding: 0 0 30px 0;
   }
   .hero__banner {
-    width: 82%;
+    width: 84%;
     height: 600px;
   }
   .hero__info {
@@ -694,7 +694,7 @@
     align-items: center;
     gap: 8px;
     position: absolute;
-    bottom: 80px;
+    bottom: 60px;
     left: 32px;
     z-index: 3;
   }
