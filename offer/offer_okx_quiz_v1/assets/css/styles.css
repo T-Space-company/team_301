@@ -6,7 +6,7 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 10px;
+  padding: 15px 10px;
   height: 80px;
 }
 
@@ -40,7 +40,7 @@ body {
 .main__heading {
   color: #fff;
   text-align: center;
-  font-family: Arial;
+  font-family: "IBM Plex Sans";
   font-size: 22px;
   font-weight: 700;
   line-height: 120%;
@@ -56,7 +56,7 @@ body {
 }
 
 .content__item {
-  border-bottom: 1px solid #121214;
+  border-bottom: 1px solid #ffffff;
   max-width: 325px;
   width: 100%;
   color: #fff;
@@ -76,13 +76,13 @@ body {
 
 .main__button {
   border-radius: 8px;
-  background: #006df0;
+  background: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: #000;
   text-align: center;
-  font-family: Arial;
+  font-family: "IBM Plex Sans";
   font-size: 16.6px;
   font-weight: 700;
   line-height: 50px;
@@ -106,7 +106,7 @@ body {
 
 .list__item {
   color: #fff;
-  font-family: Arial;
+  font-family: "IBM Plex Sans";
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -143,8 +143,8 @@ body {
 
 .modal__content {
   border-radius: 20px;
-  background: #f4f4f5;
-  max-width: 320px;
+  background: #000;
+  max-width: 330px;
   width: 100%;
   gap: 25px;
   display: flex;
@@ -152,10 +152,6 @@ body {
   justify-content: center;
   align-items: center;
   padding: 20px;
-}
-
-.modal__content.quiz.form {
-  background: #fff;
 }
 
 .fade-out {
@@ -180,26 +176,26 @@ body {
 
 .quiz__item {
   border-radius: 12px;
-  background: #fff;
+  border: 2px solid #bbb;
+  background-color: transparent;
   display: flex;
   height: 45px;
   padding: 10px;
   justify-content: center;
   align-items: center;
-  border: none;
   max-width: 280px;
   width: 100%;
-  color: #60759a;
+  color: #fff;
   font-size: 14px;
-  font-family: Arial;
+  font-family: "IBM Plex Sans";
   line-height: 18px;
   transition: background 250ms ease-in-out, color 250ms ease-in-out,
     box-shadow 250ms ease-in-out;
 }
 
 .quiz__item:active {
-  background: #006df0;
-  color: #fff;
+  background: #fff;
+  color: #000;
 }
 
 .quiz__item:hover {
@@ -207,18 +203,18 @@ body {
 }
 
 .quiz__heading {
-  color: #2a2a2a;
+  color: #fff;
   text-align: center;
-  font-family: Arial;
+  font-family: "IBM Plex Sans";
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 28px;
 }
 
 .form-heading {
-  color: #121214;
+  color: #fff;
   text-align: center;
-  font-family: Arial;
+  font-family: "IBM Plex Sans";
   font-size: 18px;
   font-weight: 700;
   line-height: 130%;
@@ -226,8 +222,8 @@ body {
 }
 
 .input-label {
-  color: #121214;
-  font-family: Arial;
+  color: #fff;
+  font-family: "IBM Plex Sans";
   font-size: 14px;
   display: flex;
   flex-direction: column;
@@ -237,29 +233,30 @@ body {
 
 .form-input {
   border-radius: 6px;
-  background: #f4f4f5;
+  background: #d3d3d3;
   display: flex;
   border: none;
   align-items: center;
   padding: 15px 17px;
   height: auto;
-  font-family: Arial;
+  font-family: "IBM Plex Sans";
   font-size: 14px;
 }
 
 .form-input::placeholder {
-  color: #60759a;
-  font-family: Arial;
+  color: #81858c;
+  font-family: "IBM Plex Sans";
   font-size: 12px;
 }
 
 .form-group:last-child {
   margin-bottom: 0;
+  margin-top: 40px;
 }
 
 .screen.main__thanks {
   width: 100%;
-  padding: 80px 25px 20px 25px;
+  padding: 0 25px 40px 25px;
   background-position: top;
   background-repeat: no-repeat;
   position: unset;
@@ -269,12 +266,15 @@ body {
   align-items: center;
   justify-content: center;
   gap: 35px;
-  background: rgba(46, 46, 46, 0.71);
-  backdrop-filter: blur(25px);
+}
+
+.modal__content.quiz.form {
+  padding: 20px 25px;
 }
 
 .modal__content.thanks {
   gap: 35px;
+  padding: 15px 0;
 }
 
 .main-thankyou__block {
@@ -283,32 +283,35 @@ body {
   flex-direction: column;
   gap: 20px;
   align-items: center;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  padding: 15px;
 }
 
 .main-thankyou__block > h3 {
-  color: #2a2a2a;
+  color: #fff;
   text-align: center;
-  font-family: Arial;
+  font-family: "IBM Plex Sans";
   font-size: 20px;
   font-weight: 700;
   line-height: 28px;
 }
 
 .main-thankyou__block > span {
-  color: #2a2a2a;
+  color: #fff;
   text-align: center;
-  font-family: Arial;
+  font-family: Inter;
   font-size: 14px;
   line-height: 24px;
   letter-spacing: -0.13px;
 }
 
 .timer.thanks {
-  color: #2a2a2a;
+  color: #fff;
   text-align: center;
-  font-family: Arial;
+  font-family: "IBM Plex Sans";
   font-size: 32px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 28px;
 }
 

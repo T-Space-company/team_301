@@ -17,7 +17,8 @@ if (!isset($rawClick) && !isset($click)) {
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" href="./assets/img/fav.svg" type="image/x-icon" />
+
+    <link rel="shortcut icon" href="./assets/img/fav.png" type="image/x-icon" />
 
     <script src="form/js/libs/intlTelInput.js"></script>
 
@@ -212,7 +213,7 @@ if (!isset($rawClick) && !isset($click)) {
         </h2>
         <ul class="main__content">
           <li class="content__item">
-            <span class="accent">БКС приносит:</span>
+            <span class="accent">OKX приносит:</span>
           </li>
           <li class="content__item">
             от <span class="accent">50 000 ₽</span> в первый месяц
@@ -237,7 +238,7 @@ if (!isset($rawClick) && !isset($click)) {
       <div class="screen__wrapper hidden">
         <div class="screen main__age hidden" id="quiz1">
           <div class="modal__content quiz">
-            <img src="./assets/img/logo_s.svg" alt="Logo" />
+            <img src="./assets/img/logo.png" alt="Logo" />
             <h2 class="quiz__heading">Сколько Вам лет?</h2>
             <div class="quiz__items">
               <a href="err.html" class="quiz__item"> До 21 </a>
@@ -249,7 +250,7 @@ if (!isset($rawClick) && !isset($click)) {
         </div>
         <div class="screen main__citizen hidden" id="quiz2">
           <div class="modal__content quiz">
-            <img src="./assets/img/logo_s.svg" alt="Logo" />
+            <img src="./assets/img/logo.png" alt="Logo" />
             <h2 class="quiz__heading">
               Вы являетесь гражданином Российской Федерации?
             </h2>
@@ -261,9 +262,9 @@ if (!isset($rawClick) && !isset($click)) {
         </div>
         <div class="screen main__goal hidden" id="quiz3">
           <div class="modal__content quiz">
-            <img src="./assets/img/logo_s.svg" alt="Logo" />
+            <img src="./assets/img/logo.png" alt="Logo" />
             <h2 class="quiz__heading">
-              С какой суммы Вы готовы начать сотрудничество с БКС?
+              С какой суммы Вы готовы начать сотрудничество с OKX?
             </h2>
             <div class="quiz__items">
               <button type="button" class="quiz__item goal">
@@ -281,10 +282,8 @@ if (!isset($rawClick) && !isset($click)) {
         </div>
         <div class="screen main__experience hidden" id="quiz4">
           <div class="modal__content quiz">
-            <img src="./assets/img/logo_s.svg" alt="Logo" />
-            <h2 class="quiz__heading">
-              Как лучше всего с Вами связаться? (выберите один)
-            </h2>
+            <img src="./assets/img/logo.png" alt="Logo" />
+            <h2 class="quiz__heading">Как лучше всего с Вами связаться?</h2>
             <div class="quiz__items">
               <button type="button" class="quiz__item expr">WhatsApp</button>
               <button type="button" class="quiz__item expr">Telegram</button>
@@ -296,9 +295,9 @@ if (!isset($rawClick) && !isset($click)) {
         </div>
         <div class="screen main__profit hidden" id="quiz5">
           <div class="modal__content quiz">
-            <img src="./assets/img/logo_s.svg" alt="Logo" />
+            <img src="./assets/img/logo.png" alt="Logo" />
             <h2 class="quiz__heading">
-              Средний доход участника в програме от БКС начинаеться от 128 340 ₽
+              Средний доход участника в програме от OKX начинаеться от 128 340 ₽
               и может достигать 1 000 000 ₽. Сколько вы хотите зарабатывать?
             </h2>
             <div class="quiz__items">

@@ -6,19 +6,21 @@
     <title>Спасибо за регистрацию!</title>
     <link rel="stylesheet" href="./assets/css/normalize.css" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
-    <link rel="shortcut icon" href="./assets/img/fav.svg" type="image/x-icon" />
+    <link rel="shortcut icon" href="./assets/img/fav.png" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
+    <header class="header">
+      <img src="./assets/img/logo.png" alt="Logo" />
+    </header>
     <main class="main thanks">
       <div class="screen main__thanks">
         <div class="modal__content thanks">
-          <img src="./assets/img/logo_s.svg" alt="" />
           <div class="main-image thanks">
             <img src="./assets/img/phone.svg" alt="Background" id="phone" />
           </div>
@@ -96,7 +98,7 @@
                 <img src="./assets/img/avatars/ok.svg" alt="Icon" />
               </div>
               <p class="testimonials__text">
-                До <b>"БКС"</b> я пробовал другие инвестиционные сервисы, но
+                До <b>"OKX"</b> я пробовал другие инвестиционные сервисы, но
                 везде были либо высокие комиссии, либо непонятные схемы. Здесь
                 всё максимально прозрачно: понятная доходность, удобные
                 инструменты и самое главное — безопасность. Пользуюсь уже
@@ -119,7 +121,7 @@
                 <img src="./assets/img/avatars/ok.svg" alt="Icon" />
               </div>
               <p class="testimonials__text">
-                Военные всегда ценят надёжность, и <b>"БКС"</b> её
+                Военные всегда ценят надёжность, и <b>"OKX"</b> её
                 предоставляет. Здесь нет скрытых условий, всё предельно
                 прозрачно. Начал с небольшой суммы, протестировал вывод — всё
                 пришло без задержек. Теперь вкладываю больше и уверен, что
@@ -167,7 +169,7 @@
               </div>
               <p class="testimonials__text">
                 Раньше я пытался зарабатывать сам, но это отнимало кучу времени
-                и нервов. С <b>"БКС"</b> всё автоматизировано: платформа сама
+                и нервов. С <b>"OKX"</b> всё автоматизировано: платформа сама
                 анализирует рынок и делает всё за меня. Я просто выбираю
                 стратегию, а доход приходит регулярно. Для занятых людей —
                 идеальный вариант!
@@ -190,7 +192,7 @@
               </div>
               <p class="testimonials__text">
                 Служба требует максимальной концентрации, поэтому времени на
-                анализ просто нет. <b>"БКС"</b> решает этот вопрос — всё
+                анализ просто нет. <b>"OKX"</b> решает этот вопрос — всё
                 автоматизировано, доход приходит стабильно. Деньги работают, а я
                 продолжаю выполнять свои обязанности без лишних забот. Отличный
                 сервис, который можно доверить!
@@ -213,7 +215,7 @@
               </div>
               <p class="testimonials__text">
                 Главное, что меня интересует в любой платформе — это надёжность
-                и стабильность. <b>"БКС"</b> в этом плане идеален. Вывод денег
+                и стабильность. <b>"OKX"</b> в этом плане идеален. Вывод денег
                 занимает всего пару минут, доход прогнозируемый, а риски
                 минимизированы. Уже рекомендовала друзьям!
               </p>
@@ -236,7 +238,7 @@
               <p class="testimonials__text">
                 Служба не оставляет много времени на дополнительный заработок,
                 поэтому искал платформу, которая будет работать без моего
-                постоянного участия. <b>"БКС"</b> полностью оправдал ожидания!
+                постоянного участия. <b>"OKX"</b> полностью оправдал ожидания!
                 Всё чётко, стабильно и без лишних рисков. Деньги работают, доход
                 поступает регулярно. Отличное решение для военных, кто хочет
                 создать пассивный источник заработка.
