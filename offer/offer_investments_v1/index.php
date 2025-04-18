@@ -253,7 +253,7 @@ if (!isset($rawClick) && !isset($click)) {
             method="post"
           >
             <h2 class="form-heading">
-            Пройдите регистрацию, чтобы начать зарабатывать
+            Пройдите регистрацию для начала работы
           </h2>
             <input type="hidden" id="utm_medium" value='<?= $_GET['utm_medium'] ?>'>
             <input type="hidden" id="campaing_id" value='<?= $_GET['campaing_id'] ?>'>
