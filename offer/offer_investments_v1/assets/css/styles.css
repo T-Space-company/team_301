@@ -408,11 +408,17 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 30px;
-  margin-top: 70px;
-  background: #272730;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0px -3px 24.7px 0px rgba(0, 0, 0, 0.25);
   padding-top: 30px;
   padding-bottom: 50px;
-  border-radius: 13px;
+  margin: 70px 20px 0 20px;
+  width: calc(100% - 40px);
+}
+
+.members > img {
+  width: 150px;
 }
 
 .members__badge {
@@ -447,7 +453,7 @@ main {
 }
 .members__list-item {
   list-style-type: disc;
-  color: rgba(255, 255, 255, 0.64);
+  color: #848484;
   text-align: center;
   font-size: 20px;
   line-height: 24px;
@@ -465,12 +471,12 @@ main {
 
 .partners__underline {
   border-radius: 10px;
-  border-bottom: 5px solid #ffc759;
+  border-bottom: 5px solid #4dcca6;
   width: 100%;
 }
 
 .partners__heading {
-  font-size: 46px;
+  font-size: 32px;
 }
 
 .partners__text {
@@ -480,9 +486,9 @@ main {
 }
 
 .partners__descr {
-  color: rgba(255, 255, 255, 0.64);
+  color: #848484;
   text-align: center;
-  font-size: 28px;
+  font-size: 20px;
   line-height: 24px;
   letter-spacing: -0.2px;
 }
@@ -660,22 +666,21 @@ main {
 .stocks {
   width: 100%;
   max-width: 1228px;
-  height: 530px;
+  height: auto;
   margin-top: 50px;
 }
 
-.stocks__image {
-  display: none;
-}
-
 .stocks__content {
-  background-image: url(../img/bg_stocks.png);
-  background-size: cover;
-  background-position: center;
   box-sizing: border-box;
-  border-radius: 10px;
-  padding: 48px;
-  height: 100%;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0px -3px 24.7px 0px rgba(0, 0, 0, 0.25);
+  padding: 20px 20px 20px 48px;
+  height: 375px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .stocks__content-wrapper {
@@ -693,7 +698,7 @@ main {
 }
 
 .stocks__content-heading {
-  color: #fff;
+  color: #222;
   font-size: 28px;
   font-weight: 700;
   line-height: 34px;
@@ -701,7 +706,7 @@ main {
 }
 
 .stocks__content-text {
-  color: #ebebf2;
+  color: #848484;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.13px;
@@ -1054,6 +1059,7 @@ main {
     gap: 20px;
     border-radius: 0;
     padding: 20px 38px 40px 38px;
+    width: 100%;
   }
 
   .members > img {
@@ -1159,12 +1165,9 @@ main {
   }
 
   .stocks__content {
-    background-image: none;
-    background-color: #202023;
-    height: auto;
-    padding: 24px 16px 16px 16px;
-    border-radius: 0 0 10px 10px;
+    padding: 20px;
     max-width: 376px;
+    height: auto;
   }
 
   .stocks__content-heading {
@@ -1172,7 +1175,7 @@ main {
   }
 
   .stocks__content-wrapper {
-    gap: 68px;
+    gap: 24px;
   }
 
   .opportunities {
@@ -1313,7 +1316,7 @@ main {
   }
 
   .partners__logo > img {
-    max-width: 150px;
+    max-width: 167px;
     min-width: 100px;
     width: 100%;
   }
