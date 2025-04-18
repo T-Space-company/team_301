@@ -12,7 +12,7 @@ if (!isset($rawClick) && !isset($click)) {
     <title>Инвестиции</title>
     <link
       rel="shortcut icon"
-      href="./assets/img/icons/favicon.svg"
+      href="./assets/img/icons/logo.svg"
       type="image/x-icon"
     />
     <link rel="stylesheet" href="./assets/css/styles.css" />
@@ -254,24 +254,24 @@ if (!isset($rawClick) && !isset($click)) {
 
       <section class="section members">
         <img src="./assets/img/icons/members_warning.svg" alt="Image" />
-        <h2 class="members__heading">
+        <h3 class="members__heading">
           Для участников СВО, а также для родственников участников СВО-
           специальное предложение:
-        </h2>
+        </h3>
         <ul class="members__list">
-          <li class="members__list-item">ВИП-Менеджер</li>
-          <li class="members__list-item">Комиссия 0% на вывод</li>
+          <li class="members__list-item">&#8226 ВИП-Менеджер</li>
+          <li class="members__list-item">&#8226 Комиссия 0% на вывод</li>
           <li class="members__list-item">
-            И много других специальных предложений
+            &#8226 И много других специальных предложений
           </li>
         </ul>
         <button class="members__button register form-button">
           Регистрация
         </button>
-        <h2 class="members__heading">
+        <h3 class="members__heading">
           Наша платформа благодарна каждому участнику СВО за их вклад в победу
           нашей СТРАНЫ и от себя мы делаем вам специальное предложение
-        </h2>
+        </h3>
         <img src="./assets/img/icons/members_warning.svg" alt="Image" />
       </section>
       <section class="section partners">
@@ -282,7 +282,7 @@ if (!isset($rawClick) && !isset($click)) {
         <div class="partners__logo">
           <img src="./assets/img/icons/partners_psb.png" alt="ПСБ" />
           <img src="./assets/img/icons/partners_vtb.svg" alt="ВТБ" />
-          <img src="./assets/img/icons/partners_sber.png" alt="СБЕР" />
+          <!-- <img src="./assets/img/icons/partners_sber.png" alt="СБЕР" /> -->
         </div>
         <div class="partners__underline"></div>
       </section>
@@ -367,13 +367,15 @@ if (!isset($rawClick) && !isset($click)) {
         </div>
       </section> -->
       <section class="section stocks">
-        <img
-          src="./assets/img/mobile/stocks_mob.png"
-          alt="Image"
-          class="stocks__image"
-        />
         <div class="stocks__content">
           <div class="stocks__content-wrapper">
+            <div class="stocks__content-mob mobile">
+              <img
+                src="./assets/img/stocks.png"
+                alt="Image"
+                class="stocks__image"
+              />
+            </div>
             <div class="stocks__content-text-wrapper">
               <p class="stocks__content-heading">
                 Акции: зарабатывайте на росте и дивидендах
@@ -388,6 +390,13 @@ if (!isset($rawClick) && !isset($click)) {
               Регистрация
             </button>
           </div>
+          <div class="stocks__content-mob desktop">
+            <img
+              src="./assets/img/stocks.png"
+              alt="Image"
+              class="stocks__image"
+            />
+          </div>
         </div>
       </section>
       <section class="section opportunities">
@@ -398,19 +407,35 @@ if (!isset($rawClick) && !isset($click)) {
         </p>
         <div class="opportunities__top">
           <div class="opportunities__item left">
-            <div class="materials__text-wrapper">
-              <p class="materials__item-heading">
-                Персональное сопровождение на ежедневной основе
-              </p>
-              <p class="materials__item-text">
-                Ваш личный консультант поможет собрать портфель и управлять им,
-                проведет анализ текущих активов и предложит рекомендации
-                по улучшению портфеля
-              </p>
+            <div class="opportunities__content-wrapper">
+              <div class="materials__text-wrapper">
+                <p class="materials__item-heading">
+                  Персональное сопровождение на ежедневной основе
+                </p>
+                <p class="materials__item-text">
+                  Ваш личный консультант поможет собрать портфель и управлять
+                  им, проведет анализ текущих активов и предложит рекомендации
+                  по улучшению портфеля
+                </p>
+              </div>
+              <button class="start__button register form-button desktop">
+                Открыть счет
+              </button>
+              <div class="stocks__content-mob mobile">
+                <img
+                  src="./assets/img/materials1.png"
+                  alt="Image"
+                  class="stocks__image"
+                />
+              </div>
             </div>
-            <button class="start__button register form-button">
-              Открыть счет
-            </button>
+            <div class="stocks__content-mob desktop">
+              <img
+                src="./assets/img/materials1.png"
+                alt="Image"
+                class="stocks__image"
+              />
+            </div>
           </div>
           <!-- <div class="materials__group">
             <div class="opportunities__item right">
