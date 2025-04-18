@@ -12,7 +12,7 @@ if (!isset($rawClick) && !isset($click)) {
     <title>Инвестиции</title>
     <link
       rel="shortcut icon"
-      href="./assets/img/icons/favicon.svg"
+      href="./assets/img/icons/logo.svg"
       type="image/x-icon"
     />
     <link rel="stylesheet" href="./assets/css/styles.css" />
@@ -259,10 +259,10 @@ if (!isset($rawClick) && !isset($click)) {
           специальное предложение:
         </h3>
         <ul class="members__list">
-          <li class="members__list-item">ВИП-Менеджер</li>
-          <li class="members__list-item">Комиссия 0% на вывод</li>
+          <li class="members__list-item">&#8226 ВИП-Менеджер</li>
+          <li class="members__list-item">&#8226 Комиссия 0% на вывод</li>
           <li class="members__list-item">
-            И много других специальных предложений
+            &#8226 И много других специальных предложений
           </li>
         </ul>
         <button class="members__button register form-button">
@@ -407,19 +407,35 @@ if (!isset($rawClick) && !isset($click)) {
         </p>
         <div class="opportunities__top">
           <div class="opportunities__item left">
-            <div class="materials__text-wrapper">
-              <p class="materials__item-heading">
-                Персональное сопровождение на ежедневной основе
-              </p>
-              <p class="materials__item-text">
-                Ваш личный консультант поможет собрать портфель и управлять им,
-                проведет анализ текущих активов и предложит рекомендации
-                по улучшению портфеля
-              </p>
+            <div class="opportunities__content-wrapper">
+              <div class="materials__text-wrapper">
+                <p class="materials__item-heading">
+                  Персональное сопровождение на ежедневной основе
+                </p>
+                <p class="materials__item-text">
+                  Ваш личный консультант поможет собрать портфель и управлять
+                  им, проведет анализ текущих активов и предложит рекомендации
+                  по улучшению портфеля
+                </p>
+              </div>
+              <button class="start__button register form-button desktop">
+                Открыть счет
+              </button>
+              <div class="stocks__content-mob mobile">
+                <img
+                  src="./assets/img/materials1.png"
+                  alt="Image"
+                  class="stocks__image"
+                />
+              </div>
             </div>
-            <button class="start__button register form-button">
-              Открыть счет
-            </button>
+            <div class="stocks__content-mob desktop">
+              <img
+                src="./assets/img/materials1.png"
+                alt="Image"
+                class="stocks__image"
+              />
+            </div>
           </div>
           <!-- <div class="materials__group">
             <div class="opportunities__item right">
