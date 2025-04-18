@@ -24,7 +24,7 @@ const cssFiles = [
   "modal-error.css",
 ];
 
-jsFiles = ["libs/utils.js", "main-form.js?v=432"];
+jsFiles = ["libs/utils.js", "main-form.js?v=423"];
 
 // Загрузка всех CSS файлов
 cssFiles.forEach((filename) => {

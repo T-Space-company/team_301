@@ -1,11 +1,56 @@
 @import "flags.css";
-@import "intlTelInput.css?v=1032";
-/* @import "modal-error.css"; */
+@import "intlTelInput.css";
+@import "modal-error.css";
 
 input {
   width: 100%;
   margin: 0 !important;
   height: 35px;
+  border-radius: 10px;
+  border: 0.699px solid #e6e9fc;
+  background: #fff;
+  color: black;
+  font-family: Mont;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.07px;
+}
+
+input[type="checkbox" i] {
+  cursor: pointer;
+}
+
+input::placeholder {
+  color: #727695;
+}
+.buttonSend {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 6px;
+  background: #4dcca6;
+  font-size: 18px;
+  border: 1px solid;
+  padding: 18px 20px;
+}
+
+.loadBtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 20px;
+  max-height: 20px;
+}
+
+.btnFormText {
+  margin: 0 !important;
+  color: #202023;
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 100%;
 }
 
 .form_error_msg {
@@ -57,6 +102,10 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+img {
+  /* width: 100%; */
 }
 
 .top-form {
@@ -115,17 +164,6 @@ input {
   text-align: center;
 }
 
-.buttonSend {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  border-radius: 6px;
-  background: #4dcca6;
-  font-size: 18px;
-  border: 1px solid;
-}
-
 .loadBtn {
   position: absolute;
   top: 50%;
@@ -135,22 +173,13 @@ input {
   max-height: 20px;
 }
 
-.btnFormText {
-  margin: 0 !important;
-  color: #202023;
-  font-family: Inter;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 100%;
-}
-
 .form-group {
   gap: 8px;
   flex-direction: column;
   margin-bottom: 20px;
   width: 100%;
   position: relative;
-  display: flex;
+  display: flex !important;
 }
 
 .valid:-webkit-autofill {
@@ -180,12 +209,6 @@ input {
   padding: 4px;
   line-height: 1;
   text-align: start;
-}
-
-.form-group .btn {
-  margin: 0 auto;
-  height: 56px;
-  width: 100%;
 }
 
 .valid {
@@ -223,16 +246,24 @@ input {
   color: #2ecc71;
 }
 
+.isValid + .fa__err::before {
+  content: none;
+}
+
+.valid + i::before {
+  content: none;
+}
+
 .isValid + .fa__err + .fa__errInfo {
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  right: 0px;
+  right: 0;
   top: 20%;
   padding: 5px;
   color: RED;
-  font-size: 7px;
+  font-size: 9px;
   background: #fff;
   border: 1px solid red !important;
   border-radius: 8px !important;
@@ -319,11 +350,20 @@ input {
   font-family: Arial, sans-serif; /* Шрифт */
   display: block; /* Блочный элемент, чтобы занимал всю ширину контейнера */
   text-align: center; /* Текст по центру */
-  width: 100%;
 }
-/* .input-group {
-    display: block;
-} */
+.input-group {
+  display: block;
+  text-align: left;
+}
+.group-checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.second {
+  margin-top: 20px;
+}
 .error-phone {
   display: none;
 }

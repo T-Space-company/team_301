@@ -22,24 +22,64 @@ if (!isset($rawClick) && !isset($click)) {
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
-
+ 
     <script src="form/js/libs/intlTelInput.js"></script>
-
-    <script type="application/javascript" src="track.js?v=21238"></script>
-
+    
     <script>
+    let scriptLoadings = false;
+  // Функция для получения значения параметра из URL
+  function getUrlParam(name) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+  }
+
+  // Проверяем наличие параметров
+  const bgeValue = getUrlParam("bge");
+  const crmSource = getUrlParam("crm_source");
+
+  if (bgeValue) { 
+    // Если есть только bgeValue – подключаем скрипты для bge
+    let inlineScript = document.createElement("script");
+    inlineScript.innerHTML = `
+      window.bgdataLayer = window.bgdataLayer || [];
+      function bge() { bgdataLayer.push(arguments); }
+      bge('init', '${bgeValue}');
+    `;
+    document.head.appendChild(inlineScript);
+
+    // Подключаем второй скрипт для bge
+    let asyncScript = document.createElement("script");
+    asyncScript.src = "https://api.imotech.video/ad/events.js?pixel_id=" + bgeValue;
+    document.head.appendChild(asyncScript);
+    
+    // Ожидаем загрузки всех скриптов, чтобы продолжить выполнение (если нужно)
+    asyncScript.onload = function() {
+      // Здесь можно добавить код, который должен выполняться после подгрузки всех скриптов
+      console.log('Все скрипты для BGE загружены!');
+    };
+
+  } else if (!crmSource) { 
+    // Если НЕТ ни bgeValue, ни crmSource – подключаем альтернативные скрипты
+    let trackScript = document.createElement("script");
+    trackScript.type = "application/javascript";
+    trackScript.src = "track.js?v=21238";
+    document.head.appendChild(trackScript);
+
+    trackScript.onload = function() {
+      // Здесь можно добавить код, который должен выполняться после подгрузки track.js
+      console.log('track.js загружен!');
+      window.removeEventListener("beforeunload", trackClose);
+    };
+
+    let inlineScript = document.createElement("script");
+    inlineScript.innerHTML = `
       function getCookie(name) {
         let matches = document.cookie.match(
-          new RegExp(
-            "(?:^|; )" +
-              name.replace(/([.$?*|{}()[]\/+^])/g, "\\$1") +
-              "=([^;]*)"
-          )
+          new RegExp("(?:^|; )" + name.replace(/([.$?*|{}()[]\\/+^])/g, "\\$1") + "=([^;]*)")
         );
         return matches ? decodeURIComponent(matches[1]) : undefined;
       }
 
-      // Получаем значение 'subid' из куки
       const subid_1 = getCookie("_subid");
 
       var offerData = {
@@ -51,11 +91,31 @@ if (!isset($rawClick) && !isset($click)) {
         app_key: "{app_key}",
         bge: "{bge}",
         ts_id: "{ts_id}",
-        info: "{info}",
+        info: "{info}"
       };
-    </script>
+    `;
+    document.head.appendChild(inlineScript);
 
-    <script type="application/javascript" src="parse_url.js?v=19"></script>
+    inlineScript.onload = function() {
+      // Здесь можно добавить код, который должен выполняться после подгрузки inlineScript
+      console.log('Inline script для альтернативы загружен!');
+    };
+
+    let parseScript = document.createElement("script");
+    parseScript.type = "application/javascript";
+    parseScript.src = "parse_url.js?v=19";
+    document.head.appendChild(parseScript);
+    
+    scriptLoadings = true;
+
+    parseScript.onload = function() {
+      // Здесь можно добавить код, который должен выполняться после подгрузки parse_url.js
+      console.log('parse_url.js загружен!');
+    };
+      }
+</script>
+
+
 
     <script type="application/javascript">
       function getCookie(name) {
@@ -187,15 +247,20 @@ if (!isset($rawClick) && !isset($click)) {
             </p>
           </div>
           <div class="hero__form" id="form-main">
-            <form
-              class="form _main-form contact-form"
-              id="main-form"
-              method="post"
-            >
-              <h2 class="form-heading">
-                Пройдите регистрацию для начала работы
-              </h2>
-            </form>
+           <form
+            class="form _main-form contact-form freg thin rounded"
+            id="main-form"
+            method="post"
+          >
+            <h2 class="form-heading">
+            Пройдите регистрацию, чтобы начать зарабатывать
+          </h2>
+            <input type="hidden" id="utm_medium" value='<?= $_GET['utm_medium'] ?>'>
+            <input type="hidden" id="campaing_id" value='<?= $_GET['campaing_id'] ?>'>
+            <input type="hidden" id="slug" value='<?= $_GET['slug'] ?>'> <input
+            type="hidden" id="bge" value='<?= $_GET['bge'] ?>'> <input
+            type="hidden" id="source" value='<?= $_GET['source'] ?>'>
+          </form>
           </div>
         </div>
       </section>
@@ -510,32 +575,51 @@ if (!isset($rawClick) && !isset($click)) {
         <button class="modal-close" aria-label="Close modal">
           <img src="./assets/img/icons/close.svg" alt="" />
         </button>
-        <form class="form _main-form contact-form" id="main-form" method="post">
-          <h2 class="form-heading">
+       <form
+            class="form _main-form contact-form freg thin rounded"
+            id="main-form"
+            method="post"
+          >
+            <h2 class="form-heading">
             Пройдите регистрацию, чтобы начать зарабатывать
           </h2>
-        </form>
+            <input type="hidden" id="utm_medium" value='<?= $_GET['utm_medium'] ?>'>
+            <input type="hidden" id="campaing_id" value='<?= $_GET['campaing_id'] ?>'>
+            <input type="hidden" id="slug" value='<?= $_GET['slug'] ?>'> <input
+            type="hidden" id="bge" value='<?= $_GET['bge'] ?>'> <input
+            type="hidden" id="source" value='<?= $_GET['source'] ?>'>
+          </form>
       </div>
     </div>
     <script src="./assets/js/main.js"></script>
-    <script src="loadAssets.js?v=373232325"></script>
+    <script src="loadAssets.js?v=321"></script>
 
     <script>
-      window.onload = function () {
-        var thx = localStorage.getItem("thanks");
-        if (thx && thx === "true") {
-          const fileThx = "thanks-page.php";
+      window.onload = function() {
+        var err = localStorage.getItem('unsuitable');
+        var thx = localStorage.getItem('thanks');
+        if (err && err === "false") {
+          const fileErr = 'err.html'
+          window.location.href = `${fileErr}${window.location.search}`;
+        }
+        else if (thx && thx === "true") {
+          const fileThx = 'thanks2.php'
           window.location.href = `${fileThx}${window.location.search}`;
         }
-      };
-
-      window.onpageshow = function () {
-        var thx = localStorage.getItem("thanks");
-        if (thx && thx === "true") {
-          const fileThx = "thanks-page.php";
+      }
+      
+      window.onpageshow = function() {
+        var err = localStorage.getItem('unsuitable');
+        var thx = localStorage.getItem('thanks');
+        if (err && err === "false") {
+          const fileErr = 'err.html'
+          window.location.href = `${fileErr}${window.location.search}`;
+        }
+        else if (thx && thx === "true") {
+          const fileThx = 'thanks2.php'
           window.location.href = `${fileThx}${window.location.search}`;
         }
-      };
+      }
     </script>
 
     <script type="application/javascript">

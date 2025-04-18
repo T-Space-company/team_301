@@ -33,7 +33,6 @@ export function regValitatorInputText(inputArr) {
     }
   });
 }
-
 export function validEmail(inputArr) {
   const reg = /^.*@([a-z0-9-]+\.)+[a-z]{2,4}\s?$/;
 
@@ -47,6 +46,20 @@ export function validEmail(inputArr) {
     }
   });
 }
+
+export const generationsCustomPassword = () => {
+  const chars =
+    "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const passwordLength = 9;
+  let password = "";
+  let num = Math.floor(Math.random() * 10);
+  console.log(num);
+  for (let i = 0; i < passwordLength; i++) {
+    const randomNumber = Math.floor(Math.random() * chars.length);
+    password += chars.substring(randomNumber, randomNumber + 1);
+  }
+  return password + num;
+};
 
 export function renderFormRegistrations(allFormClass) {
   const forms = document.querySelectorAll(`.${allFormClass}`);

@@ -275,6 +275,7 @@ main {
 .checkbox-text .accent {
   color: #4dcca6;
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .form-group:last-child {
@@ -496,7 +497,6 @@ main {
   display: flex;
   gap: 60px;
   align-items: center;
-  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -1048,7 +1048,6 @@ main {
     display: block;
     width: 100%;
     max-width: 376px;
-    margin-top: 24px;
   }
 
   .start__button {
@@ -1203,6 +1202,7 @@ main {
     flex-direction: column;
     height: auto;
     align-items: center;
+    margin-top: 24px;
   }
   .opportunities__bottom {
     flex-direction: column;
