@@ -1,0 +1,30 @@
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="SVG">
+<g id="Clip path group">
+<mask id="mask0_19_303" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="6" y="2" width="9" height="15">
+<g id="clip0_4065_16476">
+<path id="Vector" d="M14.2059 2.90247H6.72656V16.4739H14.2059V2.90247Z" fill="white"/>
+</g>
+</mask>
+<g mask="url(#mask0_19_303)">
+<g id="Group">
+<path id="Vector_2" d="M6.71094 2.88684L6.75786 16.5102C7.75228 16.3186 8.53425 16.3396 9.41683 16.2599V2.90248L6.71094 2.88684Z" fill="url(#paint0_linear_19_303)"/>
+<path id="Vector_3" d="M11.5313 2.90247H14.2372L14.2684 16.4789L11.5156 16.0253L11.5313 2.90247Z" fill="url(#paint1_linear_19_303)"/>
+<path id="Vector_4" d="M6.74219 2.90247C6.80475 3.05888 11.4345 16.2286 11.4345 16.2286C12.1952 16.2232 13.2153 16.3474 14.2186 16.4632L9.40116 2.90247H6.74219Z" fill="#E50914"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_19_303" x1="7.78832" y1="8.65361" x2="9.73486" y2="7.8573" gradientUnits="userSpaceOnUse">
+<stop stop-color="#B1060F"/>
+<stop offset="0.546072" stop-color="#7B010C"/>
+<stop offset="1" stop-color="#E50914" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="paint1_linear_19_303" x1="12.923" y1="9.98078" x2="10.9322" y2="10.8213" gradientUnits="userSpaceOnUse">
+<stop stop-color="#B1060F"/>
+<stop offset="0.625007" stop-color="#7B010C"/>
+<stop offset="1" stop-color="#B1060F" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>
