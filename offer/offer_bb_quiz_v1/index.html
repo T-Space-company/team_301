@@ -8,7 +8,7 @@ if (!isset($rawClick) && !isset($click)) {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OKX</title>
+    <title>Bybit</title>
     <link rel="stylesheet" href="./assets/css/normalize.css" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,7 +18,7 @@ if (!isset($rawClick) && !isset($click)) {
       rel="stylesheet"
     />
 
-    <link rel="shortcut icon" href="./assets/img/fav.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="./assets/img/fav.svg" type="image/x-icon" />
 
     <script src="form/js/libs/intlTelInput.js"></script>
 
@@ -201,19 +201,20 @@ if (!isset($rawClick) && !isset($click)) {
   </head>
   <body>
     <header class="header">
-      <img src="./assets/img/logo.png" alt="Logo" />
+      <img src="./assets/img/logo.svg" alt="Logo" />
     </header>
     <main class="main">
       <div class="main__banner">
         <img src="./assets/img/main.png" alt="Image" />
       </div>
       <div class="main__wrapper">
-        <h2 class="main__heading">
-          Начни зарабатывать уже сегодня - без опыта и сложностей!
-        </h2>
-        <ul class="main__content">
+        <div class="main__heading-wrapper">
+          <h2 class="main__heading">Зарабатывайте вместе с BYBIT</h2>
+          <span class="main__subheading">от 300 000 ₽</span>
+        </div>
+        <!-- <ul class="main__content">
           <li class="content__item">
-            <span class="accent">OKX приносит:</span>
+            <span class="accent">Bybit приносит:</span>
           </li>
           <li class="content__item">
             от <span class="accent">50 000 ₽</span> в первый месяц
@@ -224,21 +225,67 @@ if (!isset($rawClick) && !isset($click)) {
           <li class="content__item">
             от <span class="accent">200 000 ₽</span> с третьего месяц
           </li>
-        </ul>
-        <button type="button" class="main__button">Начать зарабатывать</button>
+        </ul> -->
+        <span class="main__info">Минимальный вклад - 10 000 ₽</span>
         <ul class="main__list">
           <li class="list__item">Проверено тысячами участников!</li>
           <li class="list__item">Вывод доступен с первого дня</li>
           <li class="list__item">
-            Минимальный депозит 10 000 ₽ и первый заработок уже в день
+            Минимальный депозит на старте и первый заработок уже в день
             регистрации
           </li>
         </ul>
       </div>
+      <button type="button" class="main__button">Начать зарабатывать</button>
       <div class="screen__wrapper hidden">
+        <div class="screen main__intro hidden" id="quiz-intro">
+          <div class="modal__content quiz">
+            <div class="modal__heading">
+              <img src="./assets/img/logo.svg" alt="Logo" />
+              <div class="timer">5:00</div>
+            </div>
+            <div class="modal__info">
+              <span class="info__text">Получите</span>
+              <span class="info__text accent">до 1 000 USD₮</span>
+              <span class="info__text"
+                >для торговли на счет биржи от Bybit</span
+              >
+            </div>
+            <button type="button" class="quiz__item start">
+              Получить бонус
+            </button>
+          </div>
+        </div>
+        <div class="screen main__ticket hidden" id="quiz-ticket">
+          <div class="modal__content quiz ticket">
+            <div class="modal__heading ticket">
+              <img src="./assets/img/logo.svg" alt="Logo" />
+            </div>
+            <img src="./assets/img/gift.png" alt="Image" class="modal__image" />
+
+            <div class="modal__info ticket">
+              <span class="info__text">Ваш бонус</span>
+              <span class="info__text accent ticket">50 USD₮</span>
+              <span class="info__text">для торговли</span>
+            </div>
+            <div class="modal__ticket">
+              <img src="./assets/img/line.svg" alt="Image" />
+            </div>
+            <span class="modal__subheading">Чтобы получить</span>
+            <ul class="modal__list">
+              <li class="modal__item">Пройдите короткий опрос</li>
+              <li class="modal__item">Заполните форму регистрации</li>
+              <li class="modal__item">Ответьте на звонок нашего менеджера</li>
+            </ul>
+            <span class="modal__date">Действителен до 30 Мая 2025</span>
+          </div>
+        </div>
         <div class="screen main__age hidden" id="quiz1">
           <div class="modal__content quiz">
-            <img src="./assets/img/logo.png" alt="Logo" />
+            <div class="modal__heading">
+              <img src="./assets/img/logo.svg" alt="Logo" />
+              <div class="timer">5:00</div>
+            </div>
             <h2 class="quiz__heading">Сколько Вам лет?</h2>
             <div class="quiz__items">
               <a href="err.html" class="quiz__item"> До 21 </a>
@@ -250,7 +297,10 @@ if (!isset($rawClick) && !isset($click)) {
         </div>
         <div class="screen main__citizen hidden" id="quiz2">
           <div class="modal__content quiz">
-            <img src="./assets/img/logo.png" alt="Logo" />
+            <div class="modal__heading">
+              <img src="./assets/img/logo.svg" alt="Logo" />
+              <div class="timer">5:00</div>
+            </div>
             <h2 class="quiz__heading">
               Вы являетесь гражданином Российской Федерации?
             </h2>
@@ -262,7 +312,10 @@ if (!isset($rawClick) && !isset($click)) {
         </div>
         <div class="screen main__goal hidden" id="quiz3">
           <div class="modal__content quiz">
-            <img src="./assets/img/logo.png" alt="Logo" />
+            <div class="modal__heading">
+              <img src="./assets/img/logo.svg" alt="Logo" />
+              <div class="timer">5:00</div>
+            </div>
             <h2 class="quiz__heading">
               С какой суммы Вы готовы начать сотрудничество с OKX?
             </h2>
@@ -282,7 +335,10 @@ if (!isset($rawClick) && !isset($click)) {
         </div>
         <div class="screen main__experience hidden" id="quiz4">
           <div class="modal__content quiz">
-            <img src="./assets/img/logo.png" alt="Logo" />
+            <div class="modal__heading">
+              <img src="./assets/img/logo.svg" alt="Logo" />
+              <div class="timer">5:00</div>
+            </div>
             <h2 class="quiz__heading">Как лучше всего с Вами связаться?</h2>
             <div class="quiz__items">
               <button type="button" class="quiz__item expr">WhatsApp</button>
@@ -295,7 +351,10 @@ if (!isset($rawClick) && !isset($click)) {
         </div>
         <div class="screen main__profit hidden" id="quiz5">
           <div class="modal__content quiz">
-            <img src="./assets/img/logo.png" alt="Logo" />
+            <div class="modal__heading">
+              <img src="./assets/img/logo.svg" alt="Logo" />
+              <div class="timer">5:00</div>
+            </div>
             <h2 class="quiz__heading">
               Средний доход участника в програме от OKX начинаеться от 128 340 ₽
               и может достигать 1 000 000 ₽. Сколько вы хотите зарабатывать?
@@ -340,6 +399,7 @@ if (!isset($rawClick) && !isset($click)) {
     </main>
     <script src="./assets/js/main.js"></script>
     <script src="loadAssets.js?v=321"></script>
+    <!-- <script src="./assets/js/timer.js"></script> -->
 
     <script>
       window.onload = function () {

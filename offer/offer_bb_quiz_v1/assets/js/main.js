@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   const startBtn = document.querySelector(".main__button");
+  const quizIntro = document.getElementById("quiz-intro");
+  const quizTicket = document.getElementById("quiz-ticket");
+  const startQuizBtn = document.querySelector(".quiz__item.start");
   const quiz1 = document.getElementById("quiz1");
   const ageButtons = document.querySelectorAll(".quiz__item.age");
   const quiz2 = document.getElementById("quiz2");
@@ -44,7 +47,18 @@ document.addEventListener("DOMContentLoaded", () => {
   startBtn.addEventListener("click", () => {
     setTimeout(() => {
       screenWrap.classList.remove("hidden");
-      nextScreen(quiz1, quiz1);
+      nextScreen(quizIntro, quizIntro);
+      startTimer();
+    }, 200);
+  });
+
+  startQuizBtn.addEventListener("click", () => {
+    setTimeout(() => {
+      screenWrap.classList.remove("hidden");
+      nextScreen(quizIntro, quizTicket);
+      setTimeout(() => {
+        nextScreen(quizTicket, quiz1);
+      }, 2500);
     }, 200);
   });
 
@@ -93,4 +107,33 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 300);
     });
   });
+
+  let totalTime = 300;
+  const timerElements = document.querySelectorAll(".timer");
+
+  function formatTime(seconds) {
+    const min = Math.floor(seconds / 60)
+      .toString()
+      .padStart(2, "0");
+    const sec = (seconds % 60).toString().padStart(2, "0");
+    return `${min}:${sec}`;
+  }
+
+  function updateTimers() {
+    timerElements.forEach((el) => {
+      el.textContent = formatTime(totalTime);
+    });
+  }
+
+  function startTimer() {
+    updateTimers();
+    const interval = setInterval(() => {
+      totalTime--;
+      if (totalTime < 0) {
+        clearInterval(interval);
+        return;
+      }
+      updateTimers();
+    }, 1000);
+  }
 });
