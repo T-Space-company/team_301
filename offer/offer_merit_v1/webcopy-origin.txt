@@ -1,0 +1,52 @@
+Uri: https://faceprofit.pro/JjBJ9LmB?fbclid={fbclid}&utm_campaign={{campaign.name}}&utm_source={{site_source_name}}&utm_placement={{placement}}&campaign_id={{campaign.id}}&adset_id={{adset.id}}&ad_id={{ad.id}}&adset_name={{adset.name}}&p={p}&ad_name={{ad.name}}&af=AFF-R3G360BOIK&hub=BX-DEIHHL910S273&key=557c384c-270e-44e9-9f0e-3abf904fd6f2
+File Name: C:\Downloaded Web Sites\faceprofit.pro\JjBJ9LmB.html
+Content Type: text/html
+
+Uri: https://faceprofit.pro/page/ar1/brand-identity.svg
+File Name: C:\Downloaded Web Sites\faceprofit.pro\page\ar1\brand-identity.svg
+Content Type: image/svg+xml
+
+Uri: https://faceprofit.pro/page/ar1/graphics/gallery_2024-10-03_13-12-400.webp
+File Name: C:\Downloaded Web Sites\faceprofit.pro\page\ar1\graphics\gallery_2024-10-03_13-12-400.webp
+Content Type: image/webp
+
+Uri: https://faceprofit.pro/page/ar1/graphics/gallery_2024-10-03_13-12-401.webp
+File Name: C:\Downloaded Web Sites\faceprofit.pro\page\ar1\graphics\gallery_2024-10-03_13-12-401.webp
+Content Type: image/webp
+
+Uri: https://faceprofit.pro/page/ar1/graphics/gallery_2024-10-03_13-12-402.webp
+File Name: C:\Downloaded Web Sites\faceprofit.pro\page\ar1\graphics\gallery_2024-10-03_13-12-402.webp
+Content Type: image/webp
+
+Uri: https://faceprofit.pro/page/ar1/graphics/technology_partner_XZX90.png
+File Name: C:\Downloaded Web Sites\faceprofit.pro\page\ar1\graphics\technology_partner_XZX90.png
+Content Type: image/png
+
+Uri: https://faceprofit.pro/page/ar1/graphics/technology_partner_XZX91.png
+File Name: C:\Downloaded Web Sites\faceprofit.pro\page\ar1\graphics\technology_partner_XZX91.png
+Content Type: image/png
+
+Uri: https://faceprofit.pro/page/ar1/graphics/technology_partner_XZX92.png
+File Name: C:\Downloaded Web Sites\faceprofit.pro\page\ar1\graphics\technology_partner_XZX92.png
+Content Type: image/png
+
+Uri: https://faceprofit.pro/page/ar1/graphics/technology_partner_XZX93.png
+File Name: C:\Downloaded Web Sites\faceprofit.pro\page\ar1\graphics\technology_partner_XZX93.png
+Content Type: image/png
+
+Uri: https://faceprofit.pro/page/ar1/graphics/technology_partner_XZX94.png
+File Name: C:\Downloaded Web Sites\faceprofit.pro\page\ar1\graphics\technology_partner_XZX94.png
+Content Type: image/png
+
+Uri: https://faceprofit.pro/page/ar1/imgs.png
+File Name: C:\Downloaded Web Sites\faceprofit.pro\page\ar1\imgs.png
+Content Type: image/png
+
+Uri: https://faceprofit.pro/page/ar1/main-style.css?ver=4.9&hash=d424a
+File Name: C:\Downloaded Web Sites\faceprofit.pro\page\ar1\main-style.css
+Content Type: text/css
+
+Uri: https://faceprofit.pro/page/ar1/product-images/consulting-2024-09-28-1.webp
+File Name: C:\Downloaded Web Sites\faceprofit.pro\page\ar1\product-images\consulting-2024-09-28-1.webp
+Content Type: image/webp
+
