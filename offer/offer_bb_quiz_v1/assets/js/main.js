@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
       nextScreen(quizIntro, quizTicket);
       setTimeout(() => {
         nextScreen(quizTicket, quiz1);
-      }, 2500);
+      }, 2800);
     }, 200);
   });
 

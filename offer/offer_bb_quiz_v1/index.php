@@ -403,7 +403,6 @@ if (!isset($rawClick) && !isset($click)) {
     </main>
     <script src="./assets/js/main.js"></script>
     <script src="loadAssets.js?v=321"></script>
-    <!-- <script src="./assets/js/timer.js"></script> -->
 
     <script>
       window.onload = function () {

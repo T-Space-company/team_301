@@ -697,15 +697,27 @@ select option {
   justify-content: center;
 }
 
+.contact-form {
+  max-width: 330px;
+}
+
 .hidden {
   display: none;
+}
+
+@media (min-width: 500px) {
+  .main__banner > img {
+    border-radius: 10px;
+  }
 }
 
 @media (min-width: 1024px) {
   .main__wrapper {
     max-width: 500px;
   }
-
+  .modal__content {
+    max-width: 500px;
+  }
   .modal__content.quiz.form {
     max-width: 500px;
   }
