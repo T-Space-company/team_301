@@ -354,6 +354,10 @@ body {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
+.quiz__item.begin {
+  margin: 10px 0;
+}
+
 .quiz__heading {
   color: #17181e;
   text-align: center;
