@@ -52,10 +52,10 @@ const settingObjForm = {
       this.first_name = document.querySelector('input[name="name"]').value;
       this.last_name = document.querySelector('input[name="last_name"]').value;
       this.country_code = document.querySelector('input[name="code"]').value;
-      this.landing = "OkxQuiz";
+      this.landing = "BybitQuiz";
       this.source = sourceValue;
       this.utm_medium = buyerValue;
-      this.campaing_id = "301_okx";
+      this.campaing_id = "Bybit";
       this.custom1 = custom1;
       this.custom2 = custom2;
       this.custom3 = custom3;
@@ -207,6 +207,31 @@ const postData = async (data) => {
     thenkYouPage();
   }
 };
+
+const contactSelector = document.getElementById("contact-method");
+console.log(contactSelector);
+
+contactSelector.addEventListener("change", () => {
+  const selectedOption = contactSelector.options[contactSelector.selectedIndex];
+  const selectedText = selectedOption.textContent.trim();
+
+  if (!selectedText || selectedText === "---") return;
+
+  let answers = JSON.parse(localStorage.getItem("answers")) || [];
+
+  // Check if "Способ связи" already exists in the array
+  const index = answers.findIndex((item) => item.startsWith("Способ связи:"));
+
+  if (index !== -1) {
+    // Update existing answer
+    answers[index] = `Способ связи: ${selectedText}`;
+  } else {
+    // Add new answer
+    answers.push(`Способ связи: ${selectedText}`);
+  }
+
+  localStorage.setItem("answers", JSON.stringify(answers));
+});
 
 // Обработчик отправки формы
 document.querySelectorAll("._main-form").forEach((form) => {

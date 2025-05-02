@@ -317,7 +317,7 @@ if (!isset($rawClick) && !isset($click)) {
               <div class="timer">5:00</div>
             </div>
             <h2 class="quiz__heading">
-              С какой суммы Вы готовы начать сотрудничество с OKX?
+              С какой суммы Вы готовы начать сотрудничество с BYBIT?
             </h2>
             <div class="quiz__items">
               <button type="button" class="quiz__item goal">
@@ -333,7 +333,7 @@ if (!isset($rawClick) && !isset($click)) {
             </div>
           </div>
         </div>
-        <div class="screen main__experience hidden" id="quiz4">
+        <!-- <div class="screen main__experience hidden" id="quiz4">
           <div class="modal__content quiz">
             <div class="modal__heading">
               <img src="./assets/img/logo.svg" alt="Logo" />
@@ -348,7 +348,7 @@ if (!isset($rawClick) && !isset($click)) {
               </button>
             </div>
           </div>
-        </div>
+        </div> -->
         <div class="screen main__profit hidden" id="quiz5">
           <div class="modal__content quiz">
             <div class="modal__heading">
@@ -356,8 +356,9 @@ if (!isset($rawClick) && !isset($click)) {
               <div class="timer">5:00</div>
             </div>
             <h2 class="quiz__heading">
-              Средний доход участника в програме от OKX начинаеться от 128 340 ₽
-              и может достигать 1 000 000 ₽. Сколько вы хотите зарабатывать?
+              Средний доход участника в програме от биржи BYBIT начинаеться от
+              128 340 ₽ и может достигать 1 000 000 ₽. Сколько вы хотите
+              зарабатывать?
             </h2>
             <div class="quiz__items">
               <button type="button" class="quiz__item profit">
@@ -377,13 +378,16 @@ if (!isset($rawClick) && !isset($click)) {
         </div>
         <div class="screen main__form-wrap hidden" id="form-screen">
           <div class="modal__content quiz form">
+            <div class="modal__heading form">
+              <img src="./assets/img/logo.svg" alt="Logo" />
+            </div>
             <form
               class="form _main-form contact-form freg thin rounded"
               id="main-form"
               method="post"
             >
               <div class="text-block-6">
-                <h2 class="form-heading" style="text-align: center">
+                <h2 class="form-heading" style="text-align: left">
                   Оставь заявку и начни зарабатывать уже сегодня!
                 </h2>
               </div>
@@ -399,7 +403,6 @@ if (!isset($rawClick) && !isset($click)) {
     </main>
     <script src="./assets/js/main.js"></script>
     <script src="loadAssets.js?v=321"></script>
-    <!-- <script src="./assets/js/timer.js"></script> -->
 
     <script>
       window.onload = function () {
