@@ -277,6 +277,7 @@ if (!isset($rawClick) && !isset($click)) {
               <li class="modal__item">Заполните форму регистрации</li>
               <li class="modal__item">Ответьте на звонок нашего менеджера</li>
             </ul>
+            <button type="button" class="quiz__item begin">Начать</button>
             <span class="modal__date">Действителен до 30 Мая 2025</span>
           </div>
         </div>
