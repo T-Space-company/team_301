@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const quizIntro = document.getElementById("quiz-intro");
   const quizTicket = document.getElementById("quiz-ticket");
   const startQuizBtn = document.querySelector(".quiz__item.start");
+  const openQuizBtn = document.querySelector(".quiz__item.begin");
   const quiz1 = document.getElementById("quiz1");
   const ageButtons = document.querySelectorAll(".quiz__item.age");
   const quiz2 = document.getElementById("quiz2");
@@ -54,12 +55,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   startQuizBtn.addEventListener("click", () => {
     setTimeout(() => {
-      screenWrap.classList.remove("hidden");
       nextScreen(quizIntro, quizTicket);
-      setTimeout(() => {
-        nextScreen(quizTicket, quiz1);
-      }, 2800);
     }, 200);
+  });
+
+  openQuizBtn.addEventListener("click", () => {
+    setTimeout(() => {
+      nextScreen(quizTicket, quiz1);
+    });
   });
 
   ageButtons.forEach((button) => {
