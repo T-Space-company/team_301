@@ -354,10 +354,6 @@ body {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.quiz__item.begin {
-  margin: 10px 0;
-}
-
 .quiz__heading {
   color: #17181e;
   text-align: center;
@@ -630,75 +626,93 @@ select option {
   letter-spacing: 0.9px;
 }
 
-.main__section__content {
+.testimonials__stats {
   display: flex;
   gap: 40px;
   flex-direction: column;
   align-items: center;
 }
 
-.main__section__content-title {
-  display: flex;
-  width: 260px;
-  box-sizing: border-box;
-  padding: 10px 20px;
-  justify-content: center;
-  align-items: center;
+.stats-block {
+  background-color: #fff;
+  padding: 20px;
   border-radius: 20px;
-  background: var(--1, linear-gradient(82deg, #fa0 3.66%, #ffc54e 90.63%));
-}
-.main__section__content-title > span {
-  color: var(--base-white, #fff);
-  text-align: center;
+  color: #121214;
   font-family: "IBM Plex Sans";
+  max-width: 330px;
+}
+
+.stat-item {
+  margin-bottom: 24px;
+}
+
+.stat-item.large {
+  margin-bottom: 40px;
+}
+
+.stat-value {
+  font-size: 28px;
+  font-weight: 600;
+  color: #f7a600;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #121214;
+  margin-top: 4px;
+}
+
+.stats-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.divider {
+  width: 1px;
+  height: 48px;
+  background-color: #acacac;
+}
+
+.testimonials__features {
+  background: #fff;
+  padding: 40px 20px;
+  color: #121214;
+  font-family: "IBM Plex Sans";
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 330px;
+  border-radius: 20px;
+}
+
+.feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  background: transparent; /* вставь SVG или img внутри */
+}
+
+.text h3 {
   font-size: 18px;
   font-weight: 500;
-  letter-spacing: 0.9px;
+  line-height: 1.4;
+  margin: 0;
 }
 
-.main__section-content-reviews {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.main__section-content-review {
-  display: flex;
-  flex-direction: column;
-  max-width: 330px;
-  width: 100%;
-  padding: 20px;
-  height: 156px;
-  justify-content: space-between;
-  box-sizing: border-box;
-  border-radius: 10px;
-  background: #fff;
-}
-
-.main__section-content-review > p {
-  color: #17181e;
-  font-family: "IBM Plex Sans";
-  font-size: 11px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 21px;
-}
-
-.main__section-content-review-avatar {
-  display: flex;
-  gap: 5px;
-}
-
-.main__section-content-review-avatar-name {
-  color: #17181e;
-  font-family: "IBM Plex Sans";
-  font-size: 13px;
-
-  letter-spacing: -0.325px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+.text p {
+  color: #acacac;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 4px 0 0;
 }
 
 .contact-form {
@@ -728,11 +742,10 @@ select option {
   .modal__content.thanks {
     max-width: 500px;
   }
-  .testimonials__item,
-  .testimonials__info {
+  .stats-block {
     max-width: 500px;
   }
-  .main__section-content-review {
+  .testimonials__features {
     max-width: 500px;
   }
 }
