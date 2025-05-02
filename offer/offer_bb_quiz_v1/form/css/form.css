@@ -35,7 +35,7 @@ input::placeholder {
   position: relative;
   padding: 10px 20px;
   border-radius: 8px;
-  background: #fff;
+  background: linear-gradient(82deg, #fa0 3.66%, #ffc54e 90.63%);
   border: none;
   height: 50px;
 }

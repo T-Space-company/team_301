@@ -85,6 +85,17 @@ export function renderFormRegistrations(allFormClass) {
 
     </div>
 
+   <div class="form-group input-group">
+  <label class="input-label" for="contact-method">Выберите способ связи
+  <select id="contact-method" class="form-control form-input form__input" required>
+    <option value="" disabled selected>---</option>
+    <option value="telegram">Telegram</option>
+    <option value="viber">Viber</option>
+    <option value="whatsapp">WhatsApp</option>
+  </select>
+  </label>
+</div>
+
 
   <div class="form-group input-group">
   <label class="input-label">

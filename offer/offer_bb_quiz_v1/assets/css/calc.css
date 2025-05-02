@@ -1,0 +1,154 @@
+.calculator__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+}
+.calculator__heading {
+  color: #17181e;
+  text-align: left;
+  font-family: "IBM Plex Sans";
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.9px;
+}
+.calculator {
+  background: white;
+  border-radius: 10px;
+  padding: 10px 20px;
+  width: 100%;
+  max-width: 330px;
+}
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  text-align: center;
+}
+.section {
+  max-width: 330px;
+  margin: 0 auto 24px auto;
+}
+.label {
+  color: #676767;
+  font-family: "IBM Plex Sans";
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.value {
+  color: #121214;
+  font-family: "IBM Plex Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.range-labels {
+  display: flex;
+  justify-content: space-between;
+  color: #676767;
+  font-family: "IBM Plex Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  border-radius: 6px;
+  background: linear-gradient(to right, #fcb045 50%, #acacac 50%);
+  outline: none;
+  transition: background 450ms ease-in;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  background: url("../img/icons/thumb.svg") no-repeat center center;
+  cursor: pointer;
+  margin-top: -7px;
+}
+
+input[type="range"]::-moz-range-thumb {
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+input[type="range"]::-ms-thumb {
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 5px;
+  border-radius: 6px;
+  background: transparent;
+}
+
+input[type="range"]::-moz-range-track {
+  height: 5px;
+  border-radius: 6px;
+  background: transparent;
+}
+
+input[type="range"]::-ms-track {
+  height: 5px;
+  border-radius: 6px;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+.result {
+  background: linear-gradient(82deg, #fa0 3.66%, #ffc54e 90.63%);
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  padding: 15px 20px;
+  align-items: flex-start;
+  border-radius: 0 0 10px 10px;
+  text-align: center;
+  gap: 7px;
+  margin: 0 0 -10px -20px;
+  width: calc(100% + 40px);
+}
+.result-title {
+  color: #121214;
+  font-family: "IBM Plex Sans";
+  font-size: 14.3px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.result-value {
+  color: #121214;
+  font-family: "IBM Plex Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@media (min-width: 1024px) {
+  .calculator {
+    max-width: 500px;
+  }
+  .result {
+    padding-left: 80px;
+  }
+}

@@ -81,23 +81,23 @@ document.addEventListener("DOMContentLoaded", () => {
   goalButtons.forEach((button) => {
     button.addEventListener("click", function () {
       saveAnswer(
-        "С какой суммы Вы готовы начать сотрудничество с БКС?",
+        "С какой суммы Вы готовы начать сотрудничество с Bybit?",
         this.textContent.trim()
       );
       setTimeout(() => {
-        nextScreen(quiz3, quiz4);
+        nextScreen(quiz3, quiz5);
       }, 300);
     });
   });
 
-  exprButtons.forEach((button) => {
-    button.addEventListener("click", function () {
-      saveAnswer("Как лучше всего с Вами связаться?", this.textContent.trim());
-      setTimeout(() => {
-        nextScreen(quiz4, quiz5);
-      }, 300);
-    });
-  });
+  // exprButtons.forEach((button) => {
+  //   button.addEventListener("click", function () {
+  //     saveAnswer("Как лучше всего с Вами связаться?", this.textContent.trim());
+  //     setTimeout(() => {
+  //       nextScreen(quiz4, quiz5);
+  //     }, 300);
+  //   });
+  // });
 
   profitButtons.forEach((button) => {
     button.addEventListener("click", function () {

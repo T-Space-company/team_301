@@ -211,6 +211,11 @@ body {
   justify-content: center;
 }
 
+.modal__heading.form {
+  width: calc(100% + 50px);
+  justify-content: center;
+}
+
 .modal__info {
   display: flex;
   flex-direction: column;
@@ -232,7 +237,7 @@ body {
 .modal__ticket {
   display: flex;
   align-items: center;
-  width: calc(100% + 40px);
+  width: 100%;
   justify-content: center;
   position: relative;
   height: 35px;
@@ -359,7 +364,7 @@ body {
 }
 
 .form-heading {
-  color: #fff;
+  color: #121214;
   text-align: center;
   font-family: "IBM Plex Sans";
   font-size: 18px;
@@ -369,7 +374,7 @@ body {
 }
 
 .input-label {
-  color: #fff;
+  color: #121214;
   font-family: "IBM Plex Sans";
   font-size: 14px;
   display: flex;
@@ -380,7 +385,7 @@ body {
 
 .form-input {
   border-radius: 6px;
-  background: #d3d3d3;
+  background: #f5f7fa;
   display: flex;
   border: none;
   align-items: center;
@@ -398,7 +403,26 @@ body {
 
 .form-group:last-child {
   margin-bottom: 0;
-  margin-top: 40px;
+  margin-top: 25px;
+}
+
+#contact-method {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: none;
+}
+
+#contact-method:focus {
+  outline: none;
+}
+
+select option {
+  background: white;
+  color: black;
 }
 
 .screen.main__thanks {
@@ -412,16 +436,100 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 35px;
+  gap: 40px;
 }
 
 .modal__content.quiz.form {
   padding: 20px 25px;
+  gap: 25px;
 }
 
 .modal__content.thanks {
-  gap: 35px;
-  padding: 15px 0;
+  gap: 40px;
+  padding: 30px 20px;
+  margin-top: 40px;
+}
+
+.thanks__heading-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.thanks__heading {
+  text-align: center;
+  font-family: "IBM Plex Sans";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -0.28px;
+  text-transform: uppercase;
+  background: linear-gradient(82deg, #fa0 3.66%, #ffc54e 90.63%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.thanks__text {
+  color: #17181e;
+  text-align: center;
+  font-family: "IBM Plex Sans";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 140%;
+  letter-spacing: -0.16px;
+  text-transform: uppercase;
+}
+
+.thanks__text.accent {
+  color: #f00;
+}
+
+.thanks__code {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.code__text {
+  text-align: center;
+  font-family: "IBM Plex Sans";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 140%;
+  letter-spacing: -0.16px;
+  text-transform: uppercase;
+  background: var(--1, linear-gradient(82deg, #fa0 3.66%, #ffc54e 90.63%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.code__num {
+  color: #17181e;
+  text-align: center;
+  font-family: "IBM Plex Sans";
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -0.36px;
+  text-transform: uppercase;
+}
+
+.thanks__guarantee {
+  color: #7c8594;
+  text-align: center;
+  font-family: "IBM Plex Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: -0.12px;
+  text-transform: uppercase;
 }
 
 .main-thankyou__block {
@@ -458,7 +566,7 @@ body {
   font-family: "IBM Plex Sans";
   font-size: 24px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
 }
 .timer.thanks {
   color: #fff;
@@ -501,72 +609,92 @@ body {
 .main-thankyou__testimonials {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
   align-items: center;
   width: 100%;
   max-width: 1080px;
 }
 
 .testimonials__heading {
-  color: #fff;
+  color: #17181e;
   text-align: center;
-  font-family: "Inter";
-  font-size: 24px;
+  font-family: "IBM Plex Sans";
+  font-size: 18px;
   font-style: normal;
-  font-weight: 600;
-  line-height: 28px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.9px;
 }
 
-.testimonials__list {
+.main__section__content {
   display: flex;
+  gap: 40px;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
-  width: 100%;
 }
 
-.testimonials__item {
+.main__section__content-title {
   display: flex;
-  padding: 15px 0px;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 2px;
-  width: 100%;
-  max-width: 345px;
-}
-
-.testimonials__info {
-  display: flex;
-  justify-content: space-between;
+  width: 260px;
+  box-sizing: border-box;
+  padding: 10px 20px;
+  justify-content: center;
   align-items: center;
-  width: 100%;
-  max-width: 345px;
-  gap: 10px;
+  border-radius: 20px;
+  background: var(--1, linear-gradient(82deg, #fa0 3.66%, #ffc54e 90.63%));
 }
-
-.testimonials__name {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-}
-
-.testimonials__contact,
-.testimonials__city {
-  color: #fff;
-  font-family: Inter;
-  font-size: 12px;
+.main__section__content-title > span {
+  color: var(--base-white, #fff);
+  text-align: center;
+  font-family: "IBM Plex Sans";
+  font-size: 18px;
   font-weight: 500;
-  line-height: 120%;
+  letter-spacing: 0.9px;
+}
+
+.main__section-content-reviews {
   display: flex;
   flex-direction: column;
+  gap: 20px;
+}
+
+.main__section-content-review {
+  display: flex;
+  flex-direction: column;
+  max-width: 330px;
+  width: 100%;
+  padding: 20px;
+  height: 156px;
+  justify-content: space-between;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.main__section-content-review > p {
+  color: #17181e;
+  font-family: "IBM Plex Sans";
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.main__section-content-review-avatar {
+  display: flex;
   gap: 5px;
 }
 
-.testimonials__text {
-  color: #fff;
-  font-family: Inter;
-  font-size: 12px;
-  line-height: 150%;
+.main__section-content-review-avatar-name {
+  color: #17181e;
+  font-family: "IBM Plex Sans";
+  font-size: 13px;
+
+  letter-spacing: -0.325px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .hidden {
@@ -582,10 +710,13 @@ body {
     max-width: 500px;
   }
   .modal__content.thanks {
-    max-width: 420px;
+    max-width: 500px;
   }
   .testimonials__item,
   .testimonials__info {
+    max-width: 500px;
+  }
+  .main__section-content-review {
     max-width: 500px;
   }
 }
