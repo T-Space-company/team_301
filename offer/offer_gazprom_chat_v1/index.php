@@ -300,7 +300,7 @@ if (!isset($rawClick) && !isset($click)) {
             >Получите бесплатный доступ к доходу до конца дня</span
           >
         </div>
-        <button type="button" class="modal__button" id="modal-2-btn">
+        <button type="button" class="modal__button second" id="modal-2-btn">
           Продолжить
         </button>
       </div>
