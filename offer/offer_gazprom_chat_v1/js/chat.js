@@ -4,6 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const footerInput = footer.querySelector(".footer__input");
   const footerBtn = footer.querySelector(".footer__btn");
   const errorField = footer.querySelector(".field__error");
+  const firstModal = document.getElementById("modal-1");
+  const firstModalBtn = document.getElementById("modal-1-btn");
+  const secondModal = document.getElementById("modal-2");
+  const secondModalBtn = document.getElementById("modal-2-btn");
 
   const targetQuestions = [
     "Сколько вам лет?",
@@ -35,6 +39,18 @@ document.addEventListener("DOMContentLoaded", () => {
     null,
   ];
 
+  firstModalBtn.addEventListener("click", () => {
+    firstModal.classList.add("hidden");
+    secondModal.classList.remove("hidden");
+  });
+
+  secondModalBtn.addEventListener("click", () => {
+    secondModal.classList.add("hidden");
+    if (counter < contentArray.length) {
+      createDivWithInterval();
+    }
+  });
+
   let counter = 0;
   let trackCounter = 1;
   let questionCounter = 0;
@@ -47,10 +63,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   localStorage.removeItem("answers");
-
-  if (counter < contentArray.length) {
-    createDivWithInterval();
-  }
 
   function saveAnswer(question, answer) {
     let answers = JSON.parse(localStorage.getItem("answers")) || [];
