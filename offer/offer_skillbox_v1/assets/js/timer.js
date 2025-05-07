@@ -7,31 +7,41 @@ document.addEventListener("DOMContentLoaded", () => {
     return tomorrow;
   }
 
-  const countdownElement = document.getElementById("countdown");
-  const endTime = getTomorrowEnd();
+  function startCountdown(elementId, endTime) {
+    const countdownElement = document.getElementById(elementId);
 
-  function updateCountdown() {
-    const now = new Date();
-    const distance = endTime - now;
+    if (!countdownElement) return;
 
-    if (distance <= 0) {
-      countdownElement.textContent = "00:00:00";
-      clearInterval(timerInterval);
-      return;
+    function updateCountdown() {
+      const now = new Date();
+      const distance = endTime - now;
+
+      if (distance <= 0) {
+        countdownElement.textContent = "00:00:00";
+        clearInterval(timerInterval);
+        return;
+      }
+
+      const hours = String(
+        Math.floor((distance / (1000 * 60 * 60)) % 24)
+      ).padStart(2, "0");
+      const minutes = String(
+        Math.floor((distance / (1000 * 60)) % 60)
+      ).padStart(2, "0");
+      const seconds = String(Math.floor((distance / 1000) % 60)).padStart(
+        2,
+        "0"
+      );
+
+      countdownElement.textContent = `${hours}:${minutes}:${seconds}`;
     }
 
-    const hours = String(
-      Math.floor((distance / (1000 * 60 * 60)) % 24)
-    ).padStart(2, "0");
-    const minutes = String(Math.floor((distance / (1000 * 60)) % 60)).padStart(
-      2,
-      "0"
-    );
-    const seconds = String(Math.floor((distance / 1000) % 60)).padStart(2, "0");
-
-    countdownElement.textContent = `${hours}:${minutes}:${seconds}`;
+    updateCountdown();
+    const timerInterval = setInterval(updateCountdown, 1000);
   }
 
-  updateCountdown();
-  const timerInterval = setInterval(updateCountdown, 1000);
+  const endTime = getTomorrowEnd();
+  startCountdown("countdown", endTime);
+  startCountdown("countdown-2", endTime);
+  startCountdown("countdown-3", endTime);
 });
