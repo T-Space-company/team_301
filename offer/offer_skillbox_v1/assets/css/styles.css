@@ -23,6 +23,11 @@
   src: url(../fonts/TTFirsNeue-Bold.woff2);
   font-weight: 700;
 }
+@font-face {
+  font-family: "Mont";
+  src: url(../fonts/Mont-SemiBold.woff);
+  font-weight: 600;
+}
 body {
   background: #141414;
   font-family: "TT Firs Neue";
@@ -31,6 +36,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 10px 20px 35px 20px;
 }
 .header {
   display: flex;
@@ -112,6 +118,16 @@ section {
   border-radius: 10px;
   background: #141414;
   padding: 0px 20px;
+  color: #fff;
+  text-align: center;
+  font-family: Mont;
+  font-size: 48px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 10px;
+  width: 310px;
 }
 
 .hero__discount {
@@ -150,4 +166,80 @@ section {
   font-size: 18px;
   font-weight: 500;
   line-height: 20px;
+}
+
+.hero__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+  max-width: 335px;
+}
+
+.hero__item {
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 9px;
+  border-radius: 20px;
+  background-color: #fff;
+  width: 100%;
+}
+
+.item__heading {
+  color: #000;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.item__descr {
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+.intro {
+  gap: 28px;
+}
+
+.intro__descr-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.intro__heading {
+  color: #e0e0e0;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 34px;
+}
+
+.intro__descr {
+  color: #a3a3a3;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.intro__image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 16px;
+}
+
+.intro__image {
+  width: 100%;
+  border-radius: 16px;
 }
