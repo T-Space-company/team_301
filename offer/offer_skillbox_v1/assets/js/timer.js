@@ -44,4 +44,5 @@ document.addEventListener("DOMContentLoaded", () => {
   startCountdown("countdown", endTime);
   startCountdown("countdown-2", endTime);
   startCountdown("countdown-3", endTime);
+  startCountdown("countdown-4", endTime);
 });
