@@ -30,7 +30,7 @@
 }
 body {
   background: #141414;
-  font-family: "TT Firs Neue";
+  font-family: "TT Firs Neue" !important;
 }
 section {
   display: flex;
@@ -409,6 +409,7 @@ section {
   align-items: flex-start;
   justify-content: center;
   gap: 32px;
+  width: 100%;
 }
 
 .feedback__discount {
@@ -420,6 +421,7 @@ section {
   font-size: 24px;
   font-weight: 500;
   line-height: 28px;
+  margin-bottom: 32px;
 }
 
 .experts {
@@ -883,6 +885,55 @@ section {
   line-height: 16px;
 }
 
+.form-input {
+  border-radius: 10px;
+  border: 1px solid #3d3d3d;
+  background: #292929;
+  padding: 20px 17px;
+  height: auto;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 400;
+  font-family: "TT Firs Neue";
+}
+
+.form-input::placeholder {
+  color: #a3a3a3;
+  font-family: "TT Firs Neue";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.form-checkbox {
+  min-width: 16px;
+  height: 16px;
+  width: 16px;
+  accent-color: #4947ff;
+}
+
+.form-text {
+  color: #a3a3a3;
+  font-family: "TT Firs Neue";
+  font-size: 11.8px;
+  font-weight: 400;
+  line-height: 16px;
+  margin-bottom: 18px;
+}
+
+.form-text > .accent {
+  text-decoration: underline;
+}
+
+.checkbox-text {
+  color: #a3a3a3;
+  font-family: "TT Firs Neue";
+  font-size: 11.8px;
+  font-weight: 400;
+  line-height: 16px;
+  text-decoration: underline;
+}
+
 .mobile {
   display: flex;
 }
@@ -1159,6 +1210,7 @@ section {
   }
   .countdown__content {
     gap: 32px;
+    padding: 32px;
   }
   .countdown--top {
     display: flex;
@@ -1179,6 +1231,10 @@ section {
   }
   .countdown__list {
     gap: 24px;
+  }
+  .countdown__form {
+    height: 810px;
+    padding: 48px;
   }
   .price__descr {
     font-size: 14px;
@@ -1258,6 +1314,10 @@ section {
     align-items: flex-end;
     justify-content: flex-end;
     gap: 105px;
+  }
+  .form__heading {
+    font-size: 32px;
+    line-height: 36px;
   }
 }
 
