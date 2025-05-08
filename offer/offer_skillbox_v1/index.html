@@ -20,15 +20,18 @@
     <main class="main">
       <section class="section hero">
         <div class="hero--top">
+          <span class="hero__subheading desktop"
+            >Комплект курсов. По живому обучению тредингу
+          </span>
           <h1 class="hero__heading">От 0 до результата в трейдинге</h1>
-          <span class="hero__subheading"
+          <span class="hero__subheading mobile"
             >Комплект курсов. По живому обучению тредингу
           </span>
           <div class="hero__image-wrapper">
             <img src="./assets/img/hero.png" alt="Image" class="hero__image" />
           </div>
           <div class="hero__timer">
-            <span class="timer__heading">До конца акции</span>
+            <span class="timer__heading mobile">До конца акции</span>
             <div class="timer" id="countdown"></div>
           </div>
           <div class="hero__discount">
@@ -36,8 +39,34 @@
             <span class="discount__new">10 000 ₽</span>
           </div>
           <a href="#main-form" class="hero__button">Записаться со скидкой</a>
+          <div class="hero__list desktop">
+            <div class="hero__item">
+              <span class="item__heading">С нуля</span>
+              <span class="item__descr"
+                >От инструментов финансовых рынков до блокчейна</span
+              >
+            </div>
+            <div class="hero__item">
+              <span class="item__heading">На практике</span>
+              <span class="item__descr"
+                >Тесты и домашние задания после каждой темы</span
+              >
+            </div>
+            <div class="hero__item">
+              <span class="item__heading"
+                >С готовыми инструментами от экспертов</span
+              >
+              <span class="item__descr">Чек-листы, планы, шаблоны</span>
+            </div>
+            <div class="hero__item accent">
+              <span class="item__heading">-40%</span>
+              <span class="item__descr"
+                >Скидка  действует 2 дня <span id="countdown-hero"></span
+              ></span>
+            </div>
+          </div>
         </div>
-        <div class="hero--bottom">
+        <div class="hero--bottom mobile">
           <div class="hero__list">
             <div class="hero__item">
               <span class="item__heading">С нуля</span>
@@ -75,27 +104,42 @@
       </section>
       <section class="section practice">
         <h2 class="practice__heading">На практике разберётесь, как:</h2>
-        <div class="practice__content">
-          <div class="practice__card--active">
-            <h3 class="card__heading">Принимать решения</h3>
-            <p class="card__descr">
-              Поймёте, на что обращать внимание при выборе ценных бумаг
-              и криптоактивов. Научитесь техническому, новостному
-              и фундаментальному анализу инструментов.
-            </p>
-            <img
-              src="./assets/img/practice.png"
-              alt="Image"
-              class="card__image"
-            />
-          </div>
-          <div class="practice__card">
-            <h2 class="card__heading">Рассчитывать риски</h2>
-            <img src="./assets/img/icons/plus.svg" alt="Icon" />
-          </div>
-          <div class="practice__card">
-            <h2 class="card__heading">Применять топовые инструменты</h2>
-            <img src="./assets/img/icons/plus.svg" alt="Icon" />
+        <div class="practice__content-wrapper">
+          <img
+            src="./assets/img/practice.png"
+            alt="Image"
+            class="card__image desktop"
+          />
+          <div class="practice__content">
+            <div class="practice__card--active">
+              <h3 class="card__heading">Принимать решения</h3>
+              <p class="card__descr">
+                Поймёте, на что обращать внимание при выборе ценных бумаг
+                и криптоактивов. Научитесь техническому, новостному
+                и фундаментальному анализу инструментов.
+              </p>
+              <img
+                src="./assets/img/practice.png"
+                alt="Image"
+                class="card__image mobile"
+              />
+            </div>
+            <div class="practice__card">
+              <h2 class="card__heading">Рассчитывать риски</h2>
+              <img
+                src="./assets/img/icons/plus.svg"
+                alt="Icon"
+                class="mobile"
+              />
+            </div>
+            <div class="practice__card">
+              <h2 class="card__heading">Применять топовые инструменты</h2>
+              <img
+                src="./assets/img/icons/plus.svg"
+                alt="Icon"
+                class="mobile"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -115,7 +159,7 @@
           </div>
         </div>
       </section>
-      <section class="section feedback">
+      <section class="section feedback mobile">
         <div class="feedback__content-wrapper">
           <div class="feedback__content">
             <div class="feedback__timer">
@@ -151,7 +195,7 @@
               <img
                 src="./assets/img/icons/info.svg"
                 alt="Icon"
-                class="experts__info"
+                class="experts__info mobile"
               />
             </div>
             <div class="experts__item">
@@ -165,7 +209,7 @@
               <img
                 src="./assets/img/icons/info.svg"
                 alt="Icon"
-                class="experts__info"
+                class="experts__info mobile"
               />
             </div>
             <div class="experts__item">
@@ -182,7 +226,7 @@
               <img
                 src="./assets/img/icons/info.svg"
                 alt="Icon"
-                class="experts__info"
+                class="experts__info mobile"
               />
             </div>
             <div class="experts__item">
@@ -199,23 +243,82 @@
               <img
                 src="./assets/img/icons/info.svg"
                 alt="Icon"
-                class="experts__info"
+                class="experts__info mobile"
               />
             </div>
           </div>
         </div>
       </section>
+      <section class="section feedback desktop">
+        <div class="feedback__content-wrapper">
+          <div class="feedback__content">
+            <h2 class="feedback__heading">Записаться на курс</h2>
+            <div class="feedback__timer">
+              <span class="timer__heading">До конца акции</span>
+              <div class="timer" id="countdown-form"></div>
+            </div>
+            <div class="feedback__discount">
+              <span class="discount__old">42 000 ₽</span>
+              <span class="discount__new">10 000 ₽</span>
+            </div>
+          </div>
+          <div class="feedback__form"></div>
+        </div>
+      </section>
+      <section class="section support desktop">
+        <h2 class="experts__heading">Команда поддержки будет рядом</h2>
+        <div class="support__content">
+          <div class="support__card">
+            <img
+              src="./assets/img/icons/plus_round.svg"
+              alt="Icon"
+              class="support__plus"
+            />
+            <h3 class="support__position">Куратор-эксперт</h3>
+            <span class="support__descr"
+              >Подробно разбирает домашние задания, помогает сделать их
+              лучше</span
+            >
+          </div>
+          <div class="support__card">
+            <img
+              src="./assets/img/icons/plus_round.svg"
+              alt="Icon"
+              class="support__plus"
+            />
+            <h3 class="support__position">HR-консультант</h3>
+            <span class="support__descr"
+              >Помогает в поиске работы: от плана действий до
+              собеседований</span
+            >
+          </div>
+          <div class="support__card">
+            <img
+              src="./assets/img/icons/plus_round.svg"
+              alt="Icon"
+              class="support__plus"
+            />
+            <h3 class="support__position">Служба заботы</h3>
+            <span class="support__descr"
+              >Помогает с вопросами по платформе и прохождению курса</span
+            >
+          </div>
+        </div>
+      </section>
       <section class="section countdown">
         <div class="countdown__content">
-          <div class="countdown__dates">
-            <span>Старт курса: <span class="accent">открыт</span></span>
-            <span>Осталось: <span class="accent">25 мест</span></span>
+          <div class="countdown--top">
+            <h2 class="countdown__heading desktop">Стоимость курса</h2>
+            <div class="countdown__dates">
+              <span>Набор <span class="accent">открыт</span></span>
+              <span>Осталось: <span class="accent">25 мест</span></span>
+            </div>
           </div>
-          <div class="countdown__timer">
+          <div class="countdown__timer mobile">
             <span class="timer__heading">До конца акции</span>
             <div class="timer" id="countdown-3"></div>
           </div>
-          <h2 class="countdown__heading">Стоимость курса</h2>
+          <h2 class="countdown__heading mobile">Стоимость курса</h2>
           <div class="countdown__price">
             <div class="price--top">
               <img src="./assets/img/icons/percent.png" alt="Icon" />
@@ -232,17 +335,28 @@
               <span class="price__total">10 000 ₽</span>
             </div>
           </div>
+          <div class="countdown__timer desktop">
+            <span class="timer__heading">До конца акции</span>
+            <div class="timer" id="countdown-5"></div>
+          </div>
           <ul class="countdown__list">
             <li class="countdown__item">
               Торговля будет производится в 4х сегментов рынка: Фондовом,
               Валютном, Криптовалютном, Товарно-сырьевом
             </li>
             <li class="countdown__item">Доступ к материалам курса навсегда</li>
+            <li class="countdown__item">
+              Полное сопровождение от опытных аналитикиов и трейдеров
+            </li>
+            <li class="countdown__item">Зароботок уже с первых дней курса</li>
           </ul>
         </div>
         <div class="countdown__form">
-          <h3 class="form__heading">
+          <h3 class="form__heading mobile">
             Записаться на консультацию или оплатить на сайте
+          </h3>
+          <h3 class="form__heading desktop">
+            Заполните форму и наши специалисты свяжутся с вами
           </h3>
         </div>
       </section>
@@ -308,11 +422,15 @@
       <div class="footer--top">
         <div class="footer__contacts">
           <div class="contacts__block">
-            <span class="contacts__phone">8 800 600-78-47</span>
+            <a href="tel:+88006007847" class="contacts__phone"
+              >8 800 600-78-47</a
+            >
             <span class="contacts__descr">Контактный центр</span>
           </div>
           <div class="contacts__block">
-            <span class="contacts__phone">+7 495 308-47-87</span>
+            <a href="tel:+74953084787" class="contacts__phone"
+              >+7 495 308-47-87</a
+            >
             <span class="contacts__descr">Отдел заботы о пользователях</span>
           </div>
         </div>
