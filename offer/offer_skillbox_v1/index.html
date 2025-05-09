@@ -708,8 +708,36 @@ if (!isset($rawClick) && !isset($click)) {
         </div>
       </div>
     </footer>
+
+    <!--------- QUESTION 1 --------->
+    <div id="modal-1" class="modal hidden">
+      <div class="modal__content">
+        <p class="modal__question">
+          Являетесь ли вы гражданином Российской Федерации?
+        </p>
+        <div class="modal__actions">
+          <a class="modal__button--first" href="err.html">Нет</a>
+          <button class="modal__button--first yes">Да</button>
+        </div>
+      </div>
+    </div>
+    <!--------- QUESTION 2 --------->
+    <div id="modal-2" class="modal hidden">
+      <div class="modal__content">
+        <p class="modal__question">Сколько вам лет?</p>
+        <div class="modal__actions vertical">
+          <a class="modal__button--second" href="err.html">До 20</a>
+          <button class="modal__button--second yes">21-35</button>
+          <button class="modal__button--second yes">36-50</button>
+          <button class="modal__button--second yes">51-70</button>
+          <a class="modal__button--second" href="err.html">71+</a>
+        </div>
+      </div>
+    </div>
+
     <script src="./assets/js/timer.js"></script>
     <script src="./assets/js/ticker.js"></script>
+    <script src="./assets/js/quiz.js"></script>
     <script src="loadAssets.js?v=321"></script>
 
     <script>
