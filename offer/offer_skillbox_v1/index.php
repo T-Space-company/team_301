@@ -713,7 +713,7 @@ if (!isset($rawClick) && !isset($click)) {
     <div id="modal-1" class="modal hidden">
       <div class="modal__content">
         <p class="modal__question">
-          Являетесь ли вы гражданином Российской Федерации?
+          Вы являетесь гражданином или резидентом Российской Федерации?
         </p>
         <div class="modal__actions">
           <a class="modal__button--first" href="err.html">Нет</a>

@@ -1,278 +1,249 @@
-
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Спасибо за регистрацию!</title>
-
-
+    <title>Skillbox</title>
+    <link rel="stylesheet" href="./assets/css/normalize.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/img/icons/fav.png"
+      type="image/x-icon"
+    />
   </head>
-
-  <style>
-    .wrapper {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      text-align: center;
-    }
-  </style>
   <body>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Khand:wght@500&display=swap');
-*{
-  margin:0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body  {
-  height: 100vh;
-  display: flex;
-  font-size: 14px;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Khand', sans-serif;
-}
-
-.wrapperAlert {
-  width: 500px;
-  height: 400px;
-  overflow: hidden;
-  border-radius: 12px;
-  border: thin solid #ddd;
-}
-
-.topHalf {
-  width: 100%;
-  color: white;
-  overflow: hidden;
-  min-height: 250px;
-  position: relative;
-  padding: 40px 0;
-  background: rgb(0,0,0);
-  background: -webkit-linear-gradient(45deg, #019871, #a0ebcf);
-}
-
-.topHalf p {
-  margin-bottom: 30px;
-}
-svg {
-  fill: white;
-}
-.topHalf h1 {
-  font-size: 2.25rem;
-  display: block;
-  font-weight: 500;
-  letter-spacing: 0.15rem;
-  text-shadow: 0 2px rgba(128, 128, 128, 0.6);
-}
-
-/* Original Author of Bubbles Animation -- https://codepen.io/Lewitje/pen/BNNJjo */
-.bg-bubbles{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-
-li{
-  position: absolute;
-  list-style: none;
-  display: block;
-  width: 40px;
-  height: 40px;
-  background-color: rgba(255, 255, 255, 0.15);/* fade(green, 75%);*/
-  bottom: -160px;
-
-  -webkit-animation: square 20s infinite;
-  animation:         square 20s infinite;
-
-  -webkit-transition-timing-function: linear;
-  transition-timing-function: linear;
-}
-li:nth-child(1){
-  left: 10%;
-}
-li:nth-child(2){
-  left: 20%;
-
-  width: 80px;
-  height: 80px;
-
-  animation-delay: 2s;
-  animation-duration: 17s;
-}
-li:nth-child(3){
-  left: 25%;
-  animation-delay: 4s;
-}
-li:nth-child(4){
-  left: 40%;
-  width: 60px;
-  height: 60px;
-
-  animation-duration: 22s;
-
-  background-color: rgba(white, 0.3); /* fade(white, 25%); */
-}
-li:nth-child(5){
-  left: 70%;
-}
-li:nth-child(6){
-  left: 80%;
-  width: 120px;
-  height: 120px;
-
-  animation-delay: 3s;
-  background-color: rgba(white, 0.2); /* fade(white, 20%); */
-}
-li:nth-child(7){
-  left: 32%;
-  width: 160px;
-  height: 160px;
-
-  animation-delay: 7s;
-}
-li:nth-child(8){
-  left: 55%;
-  width: 20px;
-  height: 20px;
-
-  animation-delay: 15s;
-  animation-duration: 40s;
-}
-li:nth-child(9){
-  left: 25%;
-  width: 10px;
-  height: 10px;
-
-  animation-delay: 2s;
-  animation-duration: 40s;
-  background-color: rgba(white, 0.3); /*fade(white, 30%);*/
-}
-li:nth-child(10){
-  left: 90%;
-  width: 160px;
-  height: 160px;
-
-  animation-delay: 11s;
-}
-
-@-webkit-keyframes square {
-  0%   { transform: translateY(0); }
-  100% { transform: translateY(-500px) rotate(600deg); }
-}
-@keyframes square {
-  0%   { transform: translateY(0); }
-  100% { transform: translateY(-500px) rotate(600deg); }
-}
-
-.bottomHalf {
-  align-items: center;
-  padding: 35px;
-}
-.bottomHalf p {
-  font-weight: 500;
-  font-size: 1.05rem;
-  margin-bottom: 20px;
-}
-
-button {
-  border: none;
-  color: white;
-  cursor: pointer;
-  border-radius: 12px;
-  padding: 10px 18px;
-  background-color: #019871;
-  text-shadow: 0 1px rgba(128, 128, 128, 0.75);
-}
-button:hover {
-  background-color: #85ddbf;
-}
-    </style>
-    <div class="wrapper">
-      <div class="bloc">
-      <div class="wrapperAlert">
-
-  <div class="contentAlert">
-
-    <div class="topHalf">
-
-      <p><svg viewBox="0 0 512 512" width="100" title="check-circle">
-        <path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z" />
-        </svg></p>
-
-     <ul class="bg-bubbles">
-       <li></li>
-       <li></li>
-       <li></li>
-       <li></li>
-       <li></li>
-       <li></li>
-       <li></li>
-       <li></li>
-       <li></li>
-       <li></li>
-     </ul>
-    </div>
-
-    <div class="bottomHalf">
-
-      <h2>
-      Благодарим за регистрацию!
-      </h2>
-
-      <p>Наши специалисты свяжутся с Вами через <span id="timer"> 29:59</span></p>
-
-    </div>
-
-  </div>
-
-</div>
+    <header class="header">
+      <img src="./assets/img/icons/logo.svg" alt="Logo" />
+      <span class="header__text">Образовательная платформа</span>
+    </header>
+    <main class="main thanks">
+      <section class="section thanks">
+        <div class="thanks__wrapper">
+          <h2 class="thanks__heading">Спасибо за регистрацию!</h2>
+          <span class="thanks__text"
+            >Мы получили твою заявку и наш менеджер уже готовиться звонить
+            вам</span
+          >
+          <span class="thanks__date"
+            >Наш менеджер свяжется с вами в диапазоне 08:00-21:00 по МСК</span
+          >
+        </div>
+        <div class="thanks__bonus">
+          <span class="bonus__preheading">Только сегодня!</span>
+          <h2 class="bonus__heading">5 000₽</h2>
+          <div class="bonus__details">
+            <span class="bonus__descr"
+              >При активации счёта сегодня вы получаете
+              <span class="accent"
+                >бонус в размере 5 000 рублей на первый депозит.</span
+              ></span
+            >
+            <span class="bonus__descr"
+              >Чтобы получить его - ответьте на звонок менеджера</span
+            >
+          </div>
+        </div>
+      </section>
+      <section class="section comments">
+        <div class="comments__message">
+          <div class="message__heading">
+            <div class="message__name">
+              <img src="./assets/img/reviews/r1.png" alt="Image" />
+              <span>Ярик</span>
+            </div>
+            <span class="message__date">26.09.2024</span>
+          </div>
+          <p class="message__text">
+            Привет, не знаю с чего начать свой рассказ, ну начну с начала, когда
+            в первые познакомился с криптой и трейдингом, думал что это лёгкие
+            деньги, большой успех, тачки и тд. Но после обучения появляется
+            четкое понимание дальнейших действий, и постепенно получается
+            добиваься желаемых результатов
+          </p>
+        </div>
+        <div class="comments__message">
+          <div class="message__heading">
+            <div class="message__name">
+              <img src="./assets/img/reviews/r2.png" alt="Image" />
+              <span>Dan</span>
+            </div>
+            <span class="message__date">02.09.2024</span>
+          </div>
+          <p class="message__text">
+            С уверенностью могу сказать, тем кто хочет разобраться и понять как
+            устроены рынки активов и в дальнейшем стать специалистом - обучение
+            в данной школе наилучшее решение. Здесь максимально простым языком
+            подают информацию.
+          </p>
+        </div>
+        <div class="comments__message">
+          <div class="message__heading">
+            <div class="message__name">
+              <img src="./assets/img/reviews/r3.png" alt="Image" />
+              <span>Елена Балабанова</span>
+            </div>
+            <span class="message__date">26.07.2024</span>
+          </div>
+          <p class="message__text">
+            Я довольна всем и в предвкушении дальнейшего обучения в следующих
+            пакетах. Лекторам большое от души благодарю, на стримах все четко
+            объясняют , разжевывают
+          </p>
+        </div>
+        <div class="comments__message">
+          <div class="message__heading">
+            <div class="message__name">
+              <img src="./assets/img/reviews/r4.png" alt="Image" />
+              <span>Ivan</span>
+            </div>
+            <span class="message__date">24.06.2024</span>
+          </div>
+          <p class="message__text">
+            Хоть я и изучал смарт мани до этого, но такое ощущение, будто это
+            было что-то совершенно другое, абсолютно несуразное, без каких-либо
+            определенных правил. А здесь (наверное, так говорят почти все)
+            сложился пазл. Спасибо команде за это!!
+          </p>
+        </div>
+        <div class="comments__message">
+          <div class="message__heading">
+            <div class="message__name">
+              <img src="./assets/img/reviews/r5.png" alt="Image" />
+              <span>Руслан Макуца</span>
+            </div>
+            <span class="message__date">26.06.2024</span>
+          </div>
+          <p class="message__text">
+            Это лучший обучающий продукт. Лучшего обучения, чем у вас, я не
+            встречал (есть с чем сравнить). Спасибо всей команде SKILLBOX за то,
+            что вы тратите свое время на нас.
+          </p>
+        </div>
+        <div class="comments__message">
+          <div class="message__heading">
+            <div class="message__name">
+              <img src="./assets/img/reviews/r6.png" alt="Image" />
+              <span>Dima</span>
+            </div>
+            <span class="message__date">24.06.2024</span>
+          </div>
+          <p class="message__text">
+            Я максимально удовлетворён обучением SKILLBOX. Путь был нелёгкий, я
+            провёл его за домашками и графиками. Но я получил желаемый результат
+            — начал торговлю в лайве, что показало настоящую торговлю
+          </p>
+        </div>
+        <div class="comments__message">
+          <div class="message__heading">
+            <div class="message__name">
+              <img src="./assets/img/reviews/r7.png" alt="Image" />
+              <span>Ermalay</span>
+            </div>
+            <span class="message__date">24.06.2024</span>
+          </div>
+          <p class="message__text">
+            Привет! Отзывы пишу редко... С SKILLBOX познакомился относительно
+            недавно (год назад), хотел попасть на 10 поток, но из- за болезни
+            пришлось перенести! Долго лежал в больнице... И вот уже закончил
+            обучение на 12 потоке.
+          </p>
+        </div>
+        <div class="comments__message">
+          <div class="message__heading">
+            <div class="message__name">
+              <img src="./assets/img/reviews/r8.png" alt="Image" />
+              <span>samposebe</span>
+            </div>
+            <span class="message__date">26.06.2024</span>
+          </div>
+          <p class="message__text">
+            Спасибо большое за знания, очень хорошо и понятно преподносите
+            информацию.
+          </p>
+        </div>
+        <div class="comments__message">
+          <div class="message__heading">
+            <div class="message__name">
+              <img src="./assets/img/reviews/r9.png" alt="Image" />
+              <span>Andrey</span>
+            </div>
+            <span class="message__date">27.06.2024</span>
+          </div>
+          <p class="message__text">
+            Хотел узнать причину движения вверх или вниз, логику — что хотел, то
+            и узнал. Спасибо за курс, рад, что прошёл его!
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer--top">
+        <div class="footer__contacts">
+          <div class="contacts__block">
+            <a href="tel:+88006007847" class="contacts__phone"
+              >8 800 600-78-47</a
+            >
+            <span class="contacts__descr">Контактный центр</span>
+          </div>
+          <div class="contacts__block">
+            <a href="tel:+74953084787" class="contacts__phone"
+              >+7 495 308-47-87</a
+            >
+            <span class="contacts__descr">Отдел заботы о пользователях</span>
+          </div>
+        </div>
+        <div class="footer__address">
+          <div class="address__block">
+            <span class="address__descr"
+              >г. Москва, вн. тер. г. Муниципальный Округ Хамовники, бульвар
+              Смоленский, дом 24, строение 2, помещение 1/3</span
+            >
+            <a href="mailto:hello@skillbox.ru" class="address__mail"
+              >hello@skillbox.ru</a
+            >
+          </div>
+        </div>
+        <div class="footer__socials">
+          <img src="./assets/img/icons/vk.svg" alt="Icon" />
+          <img src="./assets/img/icons/youtube.svg" alt="Icon" />
+          <img src="./assets/img/icons/tg.svg" alt="Icon" />
+        </div>
       </div>
-    </div>
-
-
-  <script>
-    // Получаем элемент таймера
-    const timerElement = document.getElementById('timer');
-    
-    // Разбиваем строку времени на минуты и секунды
-    const timeParts = timerElement.innerHTML.split(':');
-    let minutes = parseInt(timeParts[0]);
-    let seconds = parseInt(timeParts[1]);
-    
-    // Функция обновления таймера
-    function updateTimer() {
-      // Проверяем, не стал ли таймер равен 0
-      if (minutes === 0 && seconds === 0) {
-        clearInterval(timerInterval); // Останавливаем таймер
-        alert('Время вышло!'); // Выводим сообщение
-        return;
-      }
-    
-      // Уменьшаем секунды
-      if (seconds === 0) {
-        minutes--;
-        seconds = 59;
-      } else {
-        seconds--;
-      }
-    
-      // Форматируем время и выводим его на страницу
-      timerElement.innerHTML = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-    }
-    
-    // Вызываем функцию обновления таймера каждую секунду
-    const timerInterval = setInterval(updateTimer, 1000);
-    </script>
-  
-  
-  
+      <div class="footer--bottom">
+        <div class="footer__info">
+          <div class="footer__menu">
+            <span>Правовая информация</span>
+            <span>Партнерская программа</span>
+          </div>
+          <div class="footer__text">
+            <span
+              >Мы <span class="accent">используем файлы cookie</span>,
+              для персонализации сервисов и повышения удобства пользования
+              сайтом. Если вы не согласны на их использование, поменяйте
+              настройки браузера.</span
+            >
+            <span
+              >Skillbox — облачная платформа цифрового образования. Входит
+              в реестр российского ПО. LMS «Skillbox 2.0» принадлежит ООО
+              «Скилбокс». Платформа используется образовательными организациями
+              с целью оказания образовательных услуг.</span
+            >
+            <span
+              >Образовательные услуги оказываются в соответствии с Федеральным
+              законом от 04.05.2011 № 99-ФЗ «О лицензировании отдельных видов
+              деятельности».</span
+            >
+          </div>
+        </div>
+        <div class="footer__copyright">
+          <div class="copyright__award">
+            <img src="./assets/img/icons/award.svg" alt="Icon" />
+            <span>7 лет подряд — обладатель «Премии Рунета» 2018-2024</span>
+          </div>
+          <span class="copyright__text">© Skillbox, 2025</span>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
