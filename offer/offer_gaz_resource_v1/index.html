@@ -31,6 +31,30 @@
         <img src="./assets/img/icons/burger.svg" alt="Меню" />
       </button>
     </header>
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu__inner">
+        <div class="mobile-menu__top">
+          <div class="mobile-menu__logo">
+            <img src="./assets/img/icons/logo_m.svg" alt="Logo" />
+            <div class="mobile-menu__brand">
+              <span class="mobile-menu__brand-main">ГАЗ</span><br />
+              <span class="mobile-menu__brand-sub">Ресурс</span>
+            </div>
+          </div>
+          <button class="mobile-menu__close" id="mobileMenuClose">✕</button>
+        </div>
+
+        <nav class="mobile-menu__nav">
+          <a href="#">Главная</a>
+          <a href="#users">Топ участников</a>
+          <a href="#access">Как получить доступ?</a>
+          <a href="#calc">Калькулятор</a>
+          <a href="#info">О проекте</a>
+        </nav>
+      </div>
+    </div>
+    <div class="mobile-menu__overlay" id="mobileMenuOverlay"></div>
+
     <main class="main">
       <section class="section hero">
         <div class="hero__title">
@@ -42,7 +66,7 @@
         </div>
         <div class="hero__content">
           <div class="hero__video"></div>
-          <details class="hero__info">
+          <details class="hero__info" id="info">
             <summary class="info__summary">
               <img
                 src="./assets/img/icons/info.svg"
@@ -91,7 +115,7 @@
         </div>
         <div class="hero__form"></div>
       </section>
-      <section class="section users">
+      <section class="section users" id="users">
         <h2 class="users__heading">
           ТОП 10 - Самых активных участников платформы
         </h2>
@@ -208,7 +232,7 @@
           </li>
         </ol>
       </section>
-      <section class="section access">
+      <section class="section access" id="access">
         <h2 class="access__heading">
           Как получить доступ к официальным газовым активам
         </h2>
@@ -246,7 +270,7 @@
           <img src="./assets/img/access.png" alt="Image" />
         </div>
       </section>
-      <section class="section calc">
+      <section class="section calc" id="calc">
         <h2 class="calc__heading">С какой суммы лучше всего начать?</h2>
         <span class="calc__descr"
           >Воспользуйтесь нашим калькулятором, чтобы спрогнозировать свою
@@ -301,5 +325,6 @@
       </section>
     </main>
     <script src="./assets/js/calc.js"></script>
+    <script src="./assets/js/menu.js"></script>
   </body>
 </html>
