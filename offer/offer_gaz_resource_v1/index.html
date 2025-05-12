@@ -208,7 +208,98 @@
           </li>
         </ol>
       </section>
+      <section class="section access">
+        <h2 class="access__heading">
+          Как получить доступ к официальным газовым активам
+        </h2>
+        <div class="access__list">
+          <div class="access__point">
+            <img src="./assets/img/icons/access-1.svg" alt="Icon" />
+            <div class="access__info">
+              <span>1.</span>
+              <p>Оставить контактные данные на данном сайте</p>
+            </div>
+          </div>
+          <div class="access__point">
+            <img src="./assets/img/icons/access-2.svg" alt="Icon" />
+            <div class="access__info">
+              <span>2.</span>
+              <p>
+                Дождаться звонка-подтверждения от менеджера и завершить
+                регистрацию 
+              </p>
+            </div>
+          </div>
+          <div class="access__point">
+            <img src="./assets/img/icons/access-3.svg" alt="Icon" />
+            <div class="access__info">
+              <span>3.</span>
+              <p>
+                Легкий старт с минимальными вложениями от 9 500 ₽,  идите к
+                доходу в сопровождении Профессионалов — первый результат уже в
+                течении 2-ух дней!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="access__image">
+          <img src="./assets/img/access.png" alt="Image" />
+        </div>
+      </section>
+      <section class="section calc">
+        <h2 class="calc__heading">С какой суммы лучше всего начать?</h2>
+        <span class="calc__descr"
+          >Воспользуйтесь нашим калькулятором, чтобы спрогнозировать свою
+          прибыль от проекта</span
+        >
+        <div class="calc__wrapper">
+          <div class="calc__form">
+            <div class="calc__input-wrapper">
+              <div class="calc__form-header">
+                <label for="rangeInput">Стартовый капитал</label>
+                <output id="amountDisplay" class="calc__amount"
+                  >15 000 ₽</output
+                >
+              </div>
+              <input
+                type="range"
+                class="calc__range"
+                id="rangeInput"
+                min="10000"
+                max="150000"
+                step="5000"
+                value="15000"
+              />
+              <p class="calc__hint">
+                Выберите сумму инвестиции в слайдере, чтобы моментально
+                рассчитать будущую прибыль
+              </p>
+            </div>
+            <div class="calc__approx">
+              Предполагаемая прибыль:
+              <img class="calc__result-icon" src="./assets/img/icons/rub.svg" />
+            </div>
+            <div class="calc__result">
+              <div class="calc__result-row">
+                <span>Через месяц:</span>
+                <span id="monthResult" class="calc__result-value"
+                  >₽ 150 000</span
+                >
+              </div>
+              <div class="calc__result-row">
+                <span>Через год:</span>
+                <span id="yearResult" class="calc__result-value"
+                  >₽ 1 80000</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section bottom mobile">
+        <div class="bottom__form"></div>
+      </section>
     </main>
-    <footer class="footer"></footer>
+    <script src="./assets/js/calc.js"></script>
   </body>
 </html>
