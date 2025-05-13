@@ -603,6 +603,22 @@ if (!isset($rawClick) && !isset($click)) {
         </div>
       </div>
     </div>
+    <!--------- QUESTION 3 --------->
+    <div id="modal-3" class="modal hidden">
+      <div class="modal__content">
+        <p class="modal__question">Есть ли у вас проблемы с банками?*</p>
+        <div class="modal__actions">
+          <button class="modal__button--third yes">Нет</button>
+          <a class="modal__button--third" href="err.html">Да</a>
+        </div>
+        <span class="modal__additional"
+          ><span class="accent"
+            >** Данный вопрос необходим, чтобы мы могли обеспечить корректный
+            вывод средств.</span
+          ></span
+        >
+      </div>
+    </div>
 
     <script src="./assets/js/calc.js"></script>
     <script src="./assets/js/menu.js"></script>

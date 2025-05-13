@@ -2,8 +2,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const body = document.querySelector("body");
   const modal1 = document.getElementById("modal-1");
   const modal2 = document.getElementById("modal-2");
+  const modal3 = document.getElementById("modal-3");
   const btnYes1 = document.querySelector(".modal__button--first.yes");
   const btnYes2 = document.querySelector(".modal__button--second.yes");
+  const btnYes3 = document.querySelector(".modal__button--third.yes");
 
   localStorage.removeItem("answers");
 
@@ -28,6 +30,12 @@ document.addEventListener("DOMContentLoaded", () => {
       "Да"
     );
     modal2.classList.add("hidden");
+    modal3.classList.remove("hidden");
+  });
+
+  btnYes3.addEventListener("click", () => {
+    saveAnswer("Есть ли у вас проблемы с банками?", "Нет");
+    modal3.classList.add("hidden");
     body.style.overflow = "auto";
   });
 });
