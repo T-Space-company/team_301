@@ -2,7 +2,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: Roboto;
+  font-family: Roboto !important;
 }
 h2 {
   color: #181818;
@@ -11,7 +11,7 @@ h2 {
   line-height: 130%;
 }
 .main {
-  padding: 80px 15px 20px 15px;
+  padding: 90px 15px 20px 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,7 +23,7 @@ h2 {
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  max-width: 600px;
+  max-width: 500px;
   width: 100%;
   margin: 0 auto;
 }
@@ -36,7 +36,7 @@ h2 {
   background-color: #fff;
   width: 100%;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  z-index: 10;
+  z-index: 9999;
 }
 
 .header__logo {
@@ -56,11 +56,31 @@ h2 {
   justify-content: center;
 }
 
-.header__menu.mobile {
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.header__nav > a {
+  color: #434343;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 100%;
+  transition: color 250ms ease-in-out, font-weight 250ms ease-in-out;
+}
+
+.header__nav > a:active {
+  color: #0022a0;
+  font-weight: 600;
+}
+
+.header__menu {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: transparent;
+  border: none;
   padding: 4px;
 }
 
@@ -76,6 +96,32 @@ h2 {
   font-weight: 900;
 }
 
+.hero__title-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+.hero__title {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  gap: 40px;
+}
+.hero__heading {
+  color: #181818;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.hero__descr {
+  color: #181818;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 130%;
+}
+
 .hero__content {
   display: flex;
   flex-direction: column;
@@ -85,7 +131,6 @@ h2 {
 }
 
 .hero__video {
-  height: 345px;
   border-radius: 15px;
   background: #000;
   width: 100%;
@@ -116,7 +161,6 @@ h2 {
 .info__title {
   color: #fff;
   font-size: 12px;
-
   font-weight: 400;
   line-height: 130%;
 }
@@ -141,9 +185,13 @@ h2 {
 .bottom__form {
   border-radius: 15px;
   background: #0022a0;
-  max-width: 350px;
+  max-width: 400px;
   width: 100%;
-  height: 360px;
+  padding: 20px 25px;
+}
+
+.hero__form {
+  max-width: 500px;
 }
 
 .users__heading {
@@ -223,10 +271,17 @@ h2 {
   }
 }
 
-.access__list {
+.access__content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 25px;
+}
+
+.access__list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
   gap: 28px;
 }
@@ -275,6 +330,7 @@ h2 {
   font-size: 14px;
   font-weight: 400;
   line-height: 130%;
+  max-width: 500px;
 }
 
 .calc__wrapper {
@@ -306,7 +362,7 @@ h2 {
   align-items: center;
   justify-content: center;
   width: 100%;
-  gap: 20px;
+  gap: 30px;
 }
 
 .calc__form-header {
@@ -456,7 +512,7 @@ h2 {
   right: 0;
   width: 100%;
   background: #fff;
-  z-index: 1000;
+  z-index: 99999;
   transition: top 0.4s ease;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   border-bottom-left-radius: 10px;
@@ -542,4 +598,198 @@ h2 {
 .mobile-menu__overlay--active {
   opacity: 1;
   pointer-events: all;
+}
+
+.form-heading {
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 130%;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+.form-input {
+  display: flex;
+  padding: 15px 17px;
+  align-items: center;
+  border-radius: 5px;
+  background: #f4f4f5;
+  font-family: Roboto;
+  font-size: 14px;
+  height: 42px;
+}
+
+.form-input::placeholder {
+  color: #60759a;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.mobile {
+  display: flex;
+}
+
+.desktop {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: flex;
+  }
+  h2,
+  .users__heading {
+    color: #181818;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 130%;
+  }
+  .header {
+    padding: 15px 20px;
+    max-width: 1240px;
+    margin: 0 auto;
+    position: relative;
+    box-shadow: none;
+  }
+  .section {
+    max-width: 1240px;
+    gap: 50px;
+  }
+  .main {
+    padding: 50px 80px 100px 80px;
+    gap: 50px;
+  }
+  .hero__title-wrap {
+    gap: 27px;
+  }
+  .hero__heading {
+    color: #181818;
+    font-size: 52px;
+    font-weight: 600;
+    line-height: 100%;
+  }
+  .hero__descr {
+    color: #181818;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 130%;
+  }
+  .hero__form {
+    max-width: 375px;
+  }
+  .hero__video {
+    max-width: 1240px;
+  }
+  .hero__content {
+    width: 100%;
+  }
+  .hero__info {
+    max-width: 1240px;
+    width: 100%;
+  }
+  .info__arrow {
+    margin-left: 0;
+  }
+  .info__summary {
+    justify-content: space-between;
+  }
+  .info__summary > img {
+    width: 50px;
+  }
+  .hero__info {
+    padding: 20px;
+  }
+  .info__title {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 130%;
+  }
+  .info__content {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  .users__list {
+    max-width: 910px;
+  }
+  .users__item {
+    margin-bottom: 20px;
+  }
+  .users__info {
+    max-width: 220px;
+  }
+  .users__bar {
+    width: 545px;
+  }
+  .users__bar > .fill {
+    animation: moveStripes 15s linear infinite;
+  }
+  .users__item > span,
+  .users__info > span {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 130%;
+  }
+  .users__info > span:first-child {
+    font-size: 30px;
+  }
+  .users__info > img {
+    width: 75px;
+    height: 75px;
+  }
+  .access {
+    display: flex;
+    flex-direction: row;
+  }
+  .access__point > img {
+    width: 100px;
+    height: 100px;
+  }
+  .access__info > span {
+    font-size: 30px;
+  }
+  .access__info > p {
+    font-size: 20px;
+  }
+  .access__image {
+    max-width: 495px;
+  }
+  .calc {
+    gap: 25px;
+    align-items: flex-start;
+  }
+  .calc__wrapper {
+    width: 100%;
+  }
+  .calc__form {
+    max-width: 410px;
+  }
+  .calc__descr {
+    max-width: none;
+    font-size: 20px;
+  }
+  .calc__form-header {
+    font-size: 20px;
+    line-height: 110%;
+  }
+  .calc__hint {
+    font-size: 16px;
+  }
+  .calc__approx {
+    font-size: 16px;
+  }
+  .calc__result-row {
+    max-width: 280px;
+  }
+  .calc__result-row > span {
+    font-size: 16px;
+  }
 }
