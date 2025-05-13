@@ -211,6 +211,13 @@ if (!isset($rawClick) && !isset($click)) {
           <span>Ресурс</span>
         </div>
       </div>
+      <nav class="header__nav desktop">
+        <a href="#">Главная</a>
+        <a href="#users">Топ участников</a>
+        <a href="#access">Как получить доступ?</a>
+        <a href="#calc">Калькулятор</a>
+        <a href="#info">О проекте</a>
+      </nav>
       <button type="button" class="header__menu mobile">
         <img src="./assets/img/icons/burger.svg" alt="Меню" />
       </button>
@@ -242,14 +249,43 @@ if (!isset($rawClick) && !isset($click)) {
     <main class="main">
       <section class="section hero">
         <div class="hero__title">
-          <h2 class="hero__heading">ГАЗ ресурс - приносит прибыль россиянам</h2>
-          <span class="hero__descr"
-            >Россияне получили возможность перепродавать газ заграницу по
-            специальным ценам! Закупочные цены на 30% ниже для граждан РФ</span
-          >
+          <div class="hero__title-wrap">
+            <h2 class="hero__heading">
+              ГАЗ ресурс - приносит прибыль россиянам
+            </h2>
+            <span class="hero__descr"
+              >Россияне получили возможность перепродавать газ заграницу по
+              специальным ценам! Закупочные цены на 30% ниже для граждан
+              РФ</span
+            >
+          </div>
+          <div class="hero__form desktop">
+            <form
+              class="form _main-form contact-form freg thin rounded"
+              id="main-form"
+              method="post"
+            >
+              <div class="text-block-6">
+                <h3 class="form-heading" style="text-align: center">
+                  Начни зарабатывать на ресурсах СВОЕЙ СТРАНЫ!
+                </h3>
+              </div>
+              <input type="hidden" id="utm_medium" value='<?= $_GET['utm_medium'] ?>'>
+              <input type="hidden" id="campaing_id" value='<?= $_GET['campaing_id'] ?>'>
+              <input type="hidden" id="slug" value='<?= $_GET['slug'] ?>'>
+              <input type="hidden" id="bge" value='<?= $_GET['bge'] ?>'> <input
+              type="hidden" id="source" value='<?= $_GET['source'] ?>'>
+            </form>
+          </div>
         </div>
         <div class="hero__content">
-          <div class="hero__video"></div>
+          <video
+            src="./assets/img/vid.mp4"
+            class="hero__video"
+            controls
+            autoplay
+            muted
+          ></video>
           <details class="hero__info" id="info">
             <summary class="info__summary">
               <img
@@ -297,7 +333,7 @@ if (!isset($rawClick) && !isset($click)) {
             </p>
           </details>
         </div>
-        <div class="hero__form">
+        <div class="hero__form mobile">
           <form
             class="form _main-form contact-form freg thin rounded"
             id="main-form"
@@ -434,36 +470,38 @@ if (!isset($rawClick) && !isset($click)) {
         </ol>
       </section>
       <section class="section access" id="access">
-        <h2 class="access__heading">
-          Как получить доступ к официальным газовым активам
-        </h2>
-        <div class="access__list">
-          <div class="access__point">
-            <img src="./assets/img/icons/access-1.svg" alt="Icon" />
-            <div class="access__info">
-              <span>1.</span>
-              <p>Оставить контактные данные на данном сайте</p>
+        <div class="access__content">
+          <h2 class="access__heading">
+            Как получить доступ к официальным газовым активам
+          </h2>
+          <div class="access__list">
+            <div class="access__point">
+              <img src="./assets/img/icons/access-1.svg" alt="Icon" />
+              <div class="access__info">
+                <span>1.</span>
+                <p>Оставить контактные данные на данном сайте</p>
+              </div>
             </div>
-          </div>
-          <div class="access__point">
-            <img src="./assets/img/icons/access-2.svg" alt="Icon" />
-            <div class="access__info">
-              <span>2.</span>
-              <p>
-                Дождаться звонка-подтверждения от менеджера и завершить
-                регистрацию 
-              </p>
+            <div class="access__point">
+              <img src="./assets/img/icons/access-2.svg" alt="Icon" />
+              <div class="access__info">
+                <span>2.</span>
+                <p>
+                  Дождаться звонка-подтверждения от менеджера и завершить
+                  регистрацию 
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="access__point">
-            <img src="./assets/img/icons/access-3.svg" alt="Icon" />
-            <div class="access__info">
-              <span>3.</span>
-              <p>
-                Легкий старт с минимальными вложениями от 9 500 ₽,  идите к
-                доходу в сопровождении Профессионалов — первый результат уже в
-                течении 2-ух дней!
-              </p>
+            <div class="access__point">
+              <img src="./assets/img/icons/access-3.svg" alt="Icon" />
+              <div class="access__info">
+                <span>3.</span>
+                <p>
+                  Легкий старт с минимальными вложениями от 9 500 ₽,  идите к
+                  доходу в сопровождении Профессионалов — первый результат уже в
+                  течении 2-ух дней!
+                </p>
+              </div>
             </div>
           </div>
         </div>

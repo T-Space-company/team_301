@@ -52,10 +52,10 @@ const settingObjForm = {
       this.first_name = document.querySelector('input[name="name"]').value;
       this.last_name = document.querySelector('input[name="last_name"]').value;
       this.country_code = document.querySelector('input[name="code"]').value;
-      this.landing = "SberTradeBot";
+      this.landing = "GazResource";
       this.source = sourceValue;
       this.utm_medium = buyerValue;
-      this.campaing_id = "Sber";
+      this.campaing_id = "Gaz";
       this.custom1 = custom1;
       this.custom2 = custom2;
       this.custom3 = custom3;
