@@ -580,8 +580,33 @@ if (!isset($rawClick) && !isset($click)) {
         </div>
       </section>
     </main>
+
+    <!--------- QUESTION 1 --------->
+    <div id="modal-1" class="modal hidden">
+      <div class="modal__content">
+        <p class="modal__question">Вам более 25 лет?</p>
+        <div class="modal__actions">
+          <a class="modal__button--first" href="err.html">Нет</a>
+          <button class="modal__button--first yes">Да</button>
+        </div>
+      </div>
+    </div>
+    <!--------- QUESTION 2 --------->
+    <div id="modal-2" class="modal hidden">
+      <div class="modal__content">
+        <p class="modal__question">
+          Вы являетесь гражданином или резидентом Российской Федерации?
+        </p>
+        <div class="modal__actions">
+          <a class="modal__button--second" href="err.html">Нет</a>
+          <button class="modal__button--second yes">Да</button>
+        </div>
+      </div>
+    </div>
+
     <script src="./assets/js/calc.js"></script>
     <script src="./assets/js/menu.js"></script>
+    <script src="./assets/js/modal.js"></script>
     <script src="loadAssets.js?v=321"></script>
 
     <script>
