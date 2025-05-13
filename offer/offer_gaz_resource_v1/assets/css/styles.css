@@ -685,7 +685,8 @@ h2 {
   flex-direction: column;
 }
 .modal__button--first,
-.modal__button--second {
+.modal__button--second,
+.modal__button--third {
   border-radius: 10px;
   border: none;
   background: #0022a0;
@@ -704,10 +705,20 @@ h2 {
 .modal__button--second:active,
 .modal__button--third:active,
 .modal__button--first:hover,
-.modal__button--second:hover {
+.modal__button--second:hover,
+.modal__button--third:hover {
   -webkit-box-shadow: 4px 4px 14px 3px rgba(34, 60, 80, 0.35);
   -moz-box-shadow: 4px 4px 14px 3px rgba(34, 60, 80, 0.35);
   box-shadow: 4px 4px 14px 3px rgba(34, 60, 80, 0.35);
+}
+
+.modal__additional {
+  font-size: 14px;
+  width: 100%;
+  text-align: center;
+}
+.modal__additional > .accent {
+  font-size: 11px;
 }
 
 .mobile {
@@ -870,5 +881,16 @@ h2 {
   }
   .calc__result-row > span {
     font-size: 16px;
+  }
+  .modal__content {
+    max-width: 450px;
+    gap: 30px;
+    padding: 30px;
+  }
+  .modal__actions {
+    max-width: none;
+  }
+  .modal__question {
+    font-size: 26px;
   }
 }
