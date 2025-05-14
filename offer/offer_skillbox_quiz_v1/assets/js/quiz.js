@@ -3,8 +3,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const modal1 = document.getElementById("modal-1");
   const modal2 = document.getElementById("modal-2");
   const modal3 = document.getElementById("modal-3");
+  const modal4 = document.getElementById("modal-4");
   const btnYes1 = document.querySelectorAll(".modal__button--first.yes");
   const btnYes2 = document.querySelector(".modal__button--second.yes");
+  const btn3 = document.querySelector(".modal__button--third");
+  const btn4 = document.querySelectorAll(".modal__button--fourth");
 
   localStorage.removeItem("answers");
 
@@ -32,5 +35,18 @@ document.addEventListener("DOMContentLoaded", () => {
     );
     modal2.classList.add("hidden");
     modal3.classList.remove("hidden");
+  });
+
+  btn3.addEventListener("click", () => {
+    modal3.classList.add("hidden");
+    modal4.classList.remove("hidden");
+  });
+
+  btn4.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      saveAnswer("Сколько Вы хотите зарабатывать?", btn.textContent.trim());
+      modal4.classList.add("hidden");
+      body.style.overflow = "auto";
+    });
   });
 });
