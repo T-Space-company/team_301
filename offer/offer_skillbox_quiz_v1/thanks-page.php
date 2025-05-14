@@ -29,21 +29,6 @@
             >Наш менеджер свяжется с вами в диапазоне 08:00-21:00 по МСК</span
           >
         </div>
-        <div class="thanks__bonus">
-          <span class="bonus__preheading">Только сегодня!</span>
-          <h2 class="bonus__heading">5 000₽</h2>
-          <div class="bonus__details">
-            <span class="bonus__descr"
-              >При активации счёта сегодня вы получаете
-              <span class="accent"
-                >бонус в размере 5 000 рублей на первый депозит.</span
-              ></span
-            >
-            <span class="bonus__descr"
-              >Чтобы получить его - ответьте на звонок менеджера</span
-            >
-          </div>
-        </div>
       </section>
       <section class="section comments">
         <div class="comments__message">
