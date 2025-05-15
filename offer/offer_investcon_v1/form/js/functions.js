@@ -94,6 +94,28 @@ export function renderFormRegistrations(allFormClass) {
   </label>
   </div>
 
+ <div class="form-group input-group">
+  <label class="checkbox-wrapper">
+  <div class="checkbox-wrap">
+    <input type="checkbox" class="custom-checkbox" required/>
+    </div>    <span class="checkbox-label">
+      Я согласен с <span class="privacy-link">Политикой<br>Конфиденциальности</span>
+    </span>
+  </label>
+</div>
+
+ <div class="form-group input-group">
+  <label class="checkbox-wrapper">
+  <div class="checkbox-wrap">
+    <input type="checkbox" class="custom-checkbox" required/>
+    </div>
+    <span class="checkbox-label">
+      Я подтверждаю, что я совершеннолетний гражданин РФ
+    </span>
+  </label>
+</div>
+
+
    <input name="code" type="hidden" value="" />
   <input name="lang" type="hidden" value="" />
   <input type="hidden" name="subid" class="js-inputSubid">
@@ -101,7 +123,6 @@ export function renderFormRegistrations(allFormClass) {
   
   
   <div class="form-group form-group-button">
-
     <button class="registration-form__submit submit_button_js form__button btn secondary-solid-btn btn-block buttonSend"  name="submitBtn" type="submit">
     <p class="btnFormText">Зарегистрироваться бесплатно
     </p>
