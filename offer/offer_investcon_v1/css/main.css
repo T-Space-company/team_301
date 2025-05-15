@@ -80,6 +80,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
+  width: 100%;
 }
 .header {
   padding-top: 50px;
@@ -260,7 +262,8 @@ body {
 .start__button,
 .content__button,
 .speaker__button,
-.reviews__button {
+.reviews__button,
+.startup__button {
   border-radius: 100px;
   background: var(--bg-main-btn);
   display: flex;
@@ -426,13 +429,22 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
+  gap: 40px;
   width: calc(100% + 40px);
   padding: 40px 20px;
   background: var(--bg-main-btn);
   margin-left: -20px;
 }
 .startup__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  max-width: 340px;
+}
+.startup__content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -469,8 +481,25 @@ body {
   font-family: var(--font-family-Bebas);
   font-size: 18px;
 }
+.timer {
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 17px;
+  text-align: center;
+  font-family: var(--font-family-mont);
+  font-size: 38px;
+  font-weight: 600;
+  color: #cea782;
+  width: 250px;
+  letter-spacing: 8px;
+}
+.startup__button {
+  border-radius: 30px;
+  background: #fff;
+  color: #cea782;
+}
 .footer {
-  padding: 75px 0;
+  padding: 60px 20px 10px;
 }
 .footer__wrapper {
   display: flex;
@@ -478,16 +507,47 @@ body {
   align-items: stretch;
   flex-wrap: wrap;
 }
-.footer a {
-  color: #000;
+.footer__logo_block {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 175px;
+  width: 100%;
+}
+.footer__logo_block > img {
+  width: 40px;
+}
+.footer__logo_block > a {
+  color: #0b0b0b;
+  font-family: var(--font-family-mont);
+  font-size: 25px;
+  font-style: normal;
+  line-height: 22px;
   text-decoration: none;
-  font-size: 12.578px;
-  font-weight: 600;
-  line-height: 2em;
+}
+.footer__policy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.footer__policy > a {
+  color: var(--color-black);
+  font-family: var(--font-family-mont);
+  font-size: 12.6px;
+  line-height: 22px;
+  text-decoration: none;
 }
 .footer__contact_info {
   display: flex;
-  gap: 20px;
+  align-items: flex-start;
+  gap: 18px;
+}
+.footer__contact > a {
+  color: var(--color-black);
+  font-family: var(--font-family-mont);
+  font-size: 12.6px;
+  line-height: 22px;
+  text-decoration: none;
 }
 .completion-slide.actice,
 .footer__policy a {
@@ -500,7 +560,13 @@ body {
   max-width: 90%;
   margin: 30px auto 0;
   padding-top: 10px;
-  border-top: 1px solid #fff;
+  border-top: 1px solid #e9e7e7;
+}
+.footer__end > p {
+  color: #d0d0d0;
+  font-family: var(--font-family-mont);
+  font-size: 9px;
+  line-height: 14px;
 }
 .footer__top {
   display: flex;
@@ -511,7 +577,7 @@ body {
 .modal_quiz_overley {
   display: none;
   position: fixed;
-  background-color: #000;
+  background-color: rgba(25, 25, 25, 1);
   z-index: 999;
   align-items: center;
   justify-content: center;
@@ -525,11 +591,10 @@ body {
   display: flex;
 }
 .quiz__title {
-  font-size: 1.5rem;
-  line-height: 1.2;
-  font-weight: 500;
-  color: var(--neutral-700);
-  margin-bottom: 1rem;
+  color: #9fafbd;
+  font-family: var(--font-family-mont);
+  font-size: 13px;
+  font-weight: 400;
 }
 .expert-info p {
   color: #6b809f;
@@ -559,7 +624,7 @@ body {
 }
 .close-btn {
   font-size: 1.25rem;
-  color: var(--neutral-500);
+  color: #ff4f4f;
   transition: color 0.2s;
 }
 .close-btn:hover,
@@ -578,11 +643,14 @@ body {
 }
 .question {
   flex: 3;
+  margin-top: 60px;
 }
 .question h2 {
-  font-size: 1.75rem;
-  line-height: 1.3;
-  color: var(--neutral-700);
+  color: #6b809f;
+  font-family: var(--font-family-mont);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
   margin-bottom: 2rem;
 }
 .options {
@@ -594,6 +662,12 @@ body {
   position: relative;
   align-items: center;
   padding: 0.75rem 0;
+
+  color: #6b809f;
+  font-family: var(--font-family-mont);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
 }
 .radio-container {
   position: relative;
@@ -744,6 +818,7 @@ body {
     flex-direction: row;
     text-align: left;
     align-items: center;
+    display: none;
   }
   .expert-profile img {
     margin-bottom: 0;

@@ -89,8 +89,7 @@
   }
   .footer__wrapper {
     flex-direction: column;
-    align-items: center;
-    gap: 30px;
+    gap: 75px;
   }
   .header__main_content {
     max-width: 80%;
@@ -123,21 +122,6 @@
   .footer__main_text_top {
     display: block;
   }
-  .footer__top {
-    order: 1;
-  }
-  .footer__order {
-    order: 2;
-    max-width: 230px;
-  }
-  .footer__policy {
-    order: 3;
-    max-width: 230px;
-  }
-  .footer__info_block {
-    order: 4;
-    width: 100%;
-  }
 }
 @media screen and (max-width: 556px) {
   .footer__logo_block img,
@@ -157,14 +141,10 @@
   .info__content_item_name {
     font-size: 16px;
   }
-  .footer__logo_block {
-    max-width: 100px;
-  }
   .info__item_book_img {
     margin-right: 0;
   }
   .navigation {
-    flex-direction: column;
     gap: 10px;
   }
   .question h2 {
