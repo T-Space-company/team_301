@@ -80,7 +80,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
   width: 100%;
 }
 .header {
@@ -100,10 +99,14 @@ body {
   gap: 5px;
 }
 
+.header__logo_block > img {
+  width: 42px;
+}
+
 .header__logo_block > span {
   color: #0b0b0b;
   font-family: var(--font-family-mont);
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 500;
   line-height: 11.5px;
 }
@@ -116,7 +119,7 @@ body {
 .header__main_text_top {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 12px;
 }
 .header__date_box {
@@ -131,10 +134,11 @@ body {
 }
 .header__main {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   padding-bottom: 60px;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  gap: 40px;
 }
 .header__main_content {
   width: 620px;
@@ -149,16 +153,18 @@ body {
   font-size: var(--fz-title-h1);
   font-weight: 400;
   line-height: 1.3em;
-  text-align: center;
+  text-align: left;
 }
 .header__main_text_bottom {
   font-size: 19px;
   font-weight: 500;
   margin-bottom: 64px;
-  text-align: center;
+  text-align: left;
+  max-width: 480px;
 }
 .header__main_img {
-  top: 40%;
+  top: 50%;
+  left: 38%;
   flex-shrink: 0;
   position: absolute;
   z-index: -1;
@@ -166,7 +172,19 @@ body {
 .header__main_img img {
   width: 100%;
 }
-.header__main_form {
+.form {
+  width: 100%;
+}
+.form__heading {
+  color: var(--color-black);
+  text-align: center;
+  font-family: var(--font-family-mont);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+}
+.header__main_form,
+.startup__form {
   border-radius: 20px;
   background: #fff;
   box-shadow: 0px 29px 8px 0px rgba(0, 0, 0, 0),
@@ -174,11 +192,10 @@ body {
   display: flex;
   max-width: 335px;
   width: 100%;
-  height: 400px;
   padding: 30px 20px;
   flex-direction: column;
   align-items: center;
-  margin-top: 40px;
+  gap: 20px;
 }
 .main {
   padding: 0 20px;
@@ -195,6 +212,8 @@ body {
   gap: 40px;
   width: 100%;
   padding-bottom: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 .start__heading,
 .content__heading,
@@ -208,7 +227,7 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 20px;
+  font-size: 32px;
   font-weight: 400;
   line-height: 130%;
   letter-spacing: 0.5px;
@@ -219,12 +238,16 @@ body {
 .steps__items,
 .faq__items {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 30px;
   width: 100%;
-  max-width: 340px;
+
+  max-width: 1200px;
+}
+
+.faq__items {
+  flex-direction: column;
 }
 
 .start__item,
@@ -234,7 +257,7 @@ body {
   background: #fff;
   display: flex;
   padding: 20px;
-  height: 130px;
+  height: 140px;
   flex-direction: column;
   align-items: center;
   gap: 20px;
@@ -283,22 +306,24 @@ body {
 }
 .speaker {
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
   padding-bottom: 60px;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 .speaker > img {
-  max-width: 340px;
+  max-width: 600px;
   width: 100%;
 }
 .speaker__content {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   gap: 20px;
-  max-width: 340px;
+  max-width: 460px;
   width: 100%;
 }
 .speaker__text {
@@ -338,9 +363,8 @@ body {
 .faq__item {
   background-color: #fff;
   border-radius: 20px;
-  padding: 20px;
+  padding: 20px 20px 40px;
   border: none;
-  max-width: 340px;
   width: 100%;
 }
 .faq__question {
@@ -349,12 +373,11 @@ body {
   justify-content: space-between;
   align-items: center;
   font-weight: 500;
-  font-size: 18px;
   padding: 0;
   margin: 0;
   color: var(--color-black);
   font-family: var(--font-family-Bebas);
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
   line-height: 28px;
   letter-spacing: 0.16px;
@@ -375,13 +398,16 @@ body {
 }
 
 .faq__answer {
-  margin-top: 20px;
+  margin-top: 40px;
   color: var(--color-black);
   font-family: var(--font-family-Bebas);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 130%;
   letter-spacing: 0.07px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .reviews__heading {
   margin-bottom: 30px;
@@ -427,44 +453,43 @@ body {
 }
 .startup {
   display: flex;
-  flex-direction: column;
   align-items: center;
   gap: 40px;
   width: calc(100% + 40px);
-  padding: 40px 20px;
+  padding: 40px 80px;
   background: var(--bg-main-btn);
   margin-left: -20px;
 }
 .startup__main {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   gap: 30px;
   width: 100%;
-  max-width: 340px;
+  max-width: 590px;
 }
 .startup__content {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   gap: 20px;
   width: 100%;
-  max-width: 340px;
+  max-width: 590px;
 }
 .startup__heading {
   color: var(--color-black);
   font-family: var(--font-family-Bebas);
-  text-align: center;
-  font-size: 28px;
+  text-align: left;
+  font-size: 48px;
   font-weight: 400;
   line-height: 130%;
 }
 .startup__text {
   color: #fff;
   font-family: var(--font-family-mont);
-  text-align: center;
+  text-align: left;
   font-size: 18px;
   font-style: normal;
   line-height: 27px;
@@ -472,7 +497,7 @@ body {
 .startup__timer {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 20px;
 }
 .timer__heading {
@@ -498,14 +523,18 @@ body {
   background: #fff;
   color: #cea782;
 }
+.startup__form {
+  max-width: 500px;
+}
 .footer {
   padding: 60px 20px 10px;
 }
 .footer__wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: stretch;
+  align-items: center;
   flex-wrap: wrap;
+  gap: 30px;
 }
 .footer__logo_block {
   display: flex;
@@ -637,7 +666,6 @@ body {
 }
 .question-container {
   display: flex;
-  flex-direction: column;
   gap: 2rem;
   animation: 0.5s ease-out fadeIn;
 }
@@ -829,4 +857,8 @@ body {
   .expert-info {
     flex: 1;
   }
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
 }

@@ -17,6 +17,9 @@
   .info__block_bonus {
     top: -53px;
   }
+  .speaker > img {
+    max-width: 500px;
+  }
 }
 @media screen and (max-width: 1070px) {
   .header__title {
@@ -38,6 +41,9 @@
   .info__wrapper {
     flex-direction: column;
     align-items: center;
+  }
+  .speaker > img {
+    max-width: 400px;
   }
   .info__item_book {
     margin-bottom: 80px;
@@ -90,12 +96,103 @@
   .footer__wrapper {
     flex-direction: column;
     gap: 75px;
+    align-items: stretch;
+  }
+  .header__main {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .header__title {
+    text-align: center;
+  }
+  .header__main_text_top {
+    justify-content: center;
+  }
+  .header__main_text_bottom {
+    text-align: center;
+    max-width: none;
+  }
+  .header__main_img {
+    top: 40%;
+    left: unset;
+  }
+  .start__heading,
+  .content__heading,
+  .webinar__heading,
+  .steps__heading,
+  .faq__heading,
+  .reviews__heading {
+    font-size: 20px;
+  }
+  .start__items,
+  .content__items,
+  .webinar__items,
+  .steps__items,
+  .faq__items {
+    flex-direction: column;
+    max-width: 340px;
+  }
+  .start__item,
+  .content__item,
+  .webinar__item {
+    height: 130px;
+  }
+  .speaker {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .speaker > img {
+    max-width: 340px;
+    width: 100%;
+  }
+  .speaker__content {
+    max-width: 340px;
+    align-items: center;
+  }
+  .faq__question {
+    font-size: 16px;
+  }
+  .faq__answer {
+    font-size: 14px;
+  }
+  .faq__item {
+    padding: 20px;
+  }
+  .startup {
+    padding: 40px 20px;
+    flex-direction: column;
+  }
+  .startup__content {
+    align-items: center;
+    max-width: 340px;
+  }
+  .startup__main {
+    align-items: center;
+    max-width: 340px;
+  }
+  .startup__heading {
+    text-align: center;
+    font-size: 28px;
+  }
+
+  .startup__text {
+    text-align: center;
+  }
+  .startup__timer {
+    align-items: flex-start;
+  }
+  .main-btn {
+    margin: 0 auto;
   }
   .header__main_content {
     max-width: 80%;
   }
   .header__logo_block > span {
     font-size: 14px;
+  }
+  .header__logo_block > img {
+    width: 22px;
   }
   .header__date_box {
     font-size: 14px;

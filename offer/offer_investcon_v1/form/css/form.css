@@ -34,7 +34,8 @@ input::placeholder {
   position: relative;
   padding: 18px 20px;
   border: none;
-  background: #c1ccd6;
+  border-radius: 20px;
+  background: linear-gradient(0deg, #d8ba9b 0%, #c39c72 100%);
 }
 
 .form-group .btn {
@@ -42,9 +43,12 @@ input::placeholder {
   width: 100%;
 }
 .btnFormText {
-  font-size: 18px;
-  font-family: Montserrat;
-  color: #6b809f;
+  color: #fff;
+  text-align: center;
+  font-family: "Mont";
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
 .input-label {
@@ -174,7 +178,7 @@ img {
 }
 
 .form-group {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   text-align: center;
   width: 100%;
   position: relative;

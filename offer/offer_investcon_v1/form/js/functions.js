@@ -103,7 +103,7 @@ export function renderFormRegistrations(allFormClass) {
   <div class="form-group form-group-button">
 
     <button class="registration-form__submit submit_button_js form__button btn secondary-solid-btn btn-block buttonSend"  name="submitBtn" type="submit">
-    <p class="btnFormText">Начать зарабатывать
+    <p class="btnFormText">Зарегистрироваться бесплатно
     </p>
     </button>
   </div>
