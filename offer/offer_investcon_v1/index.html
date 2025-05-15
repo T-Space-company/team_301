@@ -10,7 +10,7 @@ if (!isset($rawClick) && !isset($click)) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Сoingazes</title>
+    <title>Investcon</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -227,8 +227,78 @@ if (!isset($rawClick) && !isset($click)) {
                 </div>
                 <button type="button" class="content__button  open_quiz">Забронировать место на вебинаре</button>
             </section>
-            <!-- <section class="reviews" id="reviews">
-                <div class="conteiner">
+            <section class="speaker" id="speaker">
+                <img src="./img/man.png" alt="Image">
+                <div class="speaker__content">
+                    <img src="./img/speaker.svg" alt="Image">
+                    <p class="speaker__text">“Меня зовут Максим Ковалев, я трейдер с 10-летним стажем. На вебинаре покажу, как работает моя авторская методика на реальных примерах”</p>
+                    <img src="./img/bonus.svg" alt="Image">
+                    <span class="speaker__text">PDF-гайд «10 шагов к первой прибыльной сделке»</span>
+                    <button type="button" class="speaker__button open_quiz">Узнать секреты</button>
+                </div>
+            </section>
+            <section class="webinar" id="webinar">
+                <h2 class="webinar__heading">Кому будет полезен вебинар?</h2>
+                <div class="webinar__items">
+                    <div class="webinar__item">
+                        <img src="./img/w1.svg" alt="Icon">
+                        <span class="webinar__descr">Тем, кто хочет сменить работу</span>
+                    </div>
+                    <div class="webinar__item">
+                        <img src="./img/w2.svg" alt="Icon">
+                        <span class="webinar__descr">Тем, кто слил депозит</span>
+                    </div>
+                    <div class="webinar__item">
+                        <img src="./img/w3.svg" alt="Icon">
+                        <span class="webinar__descr">Новичкам</span>
+                    </div>
+                </div>
+            </section>
+            <section class="steps" id="steps">
+                <h2 class="steps__heading">Что вы получите?</h2>
+                <div class="steps__items">
+                    <div class="steps__item">
+                        <span class="steps__num">1</span>
+                        <span class="steps__descr">Пошаговая методика</span>
+                    </div>
+                    <div class="steps__item">
+                        <span class="steps__num">2</span>
+                        <span class="steps__descr">Ответы на вопросы</span>
+                    </div>
+                    <div class="steps__item">
+                        <span class="steps__num">3</span>
+                        <span class="steps__descr">Ясность и план действий</span>
+                    </div>
+                </div>
+            </section>
+            <section class="faq" id="faq">
+                <h2 class="faq__heading">Часто задаваемые вопросы</h2>
+                <div class="faq__items">
+                  <details class="faq__item">
+                    <summary class="faq__question">Нужен ли опыт?</summary>
+                    <div class="faq__answer">
+                      Нет. Всё объясняется с нуля. Мы начинаем с базовых понятий, так что вы сможете освоиться даже без финансового или трейдерского опыта.
+                    </div>
+                  </details>
+                  
+                  <details class="faq__item">
+                    <summary class="faq__question">Будет ли запись?</summary>
+                    <div class="faq__answer">
+                      Да, мы отправим запись всем зарегистрированным участникам. Даже если не сможете присутствовать онлайн, вы ничего не пропустите.
+                    </div>
+                  </details>
+              
+                  <details class="faq__item">
+                    <summary class="faq__question">Это действительно бесплатно?</summary>
+                    <div class="faq__answer">
+                      Да, участие в вебинаре/интенсиве полностью бесплатное. Никаких скрытых платежей — только регистрация и ваше желание учиться.
+                    </div>
+                  </details>
+                </div>
+              </section>
+              
+            <section class="reviews" id="reviews">
+                <h2 class="reviews__heading">Отзывы учеников</h2>
                     <div class="reviews__wrapper">
                         <div class="reviews__wrapper_item">
                             <div class="reviews__wrapper_item_top">
@@ -265,46 +335,22 @@ if (!isset($rawClick) && !isset($click)) {
                                 большое от души благодарю, на стримах все четко объясняют, разжевывают
                             </p>
                         </div>
-
-                        <div class="reviews__wrapper_item">
-                            <div class="reviews__wrapper_item_top">
-                                <span>Ivan</span>
-                                <span>24.06.2024</span>
-                            </div>
-                            <p class="reviews__wrapper_item_text">
-                                Хоть я и изучал смарт мани до этого, но такое ощущение, будто это было что-то совершенно
-                                другое, абсолютно несуразное,
-                                без каких-либо определенных правил. А здесь (наверное, так говорят почти все) сложился
-                                пазл. Спасибо за это!!
-                            </p>
-                        </div>
-
-                        <div class="reviews__wrapper_item">
-                            <div class="reviews__wrapper_item_top">
-                                <span>Руслан Макуца</span>
-                                <span>26.06.2024</span>
-                            </div>
-                            <p class="reviews__wrapper_item_text">
-                                Это лучший обучающий продукт. Лучшего обучения, чем у вас, я не встречал (есть с чем
-                                сравнить). Спасибо всей команде Сергей Воробьева  за то, что вы тратите свое время на
-                                нас.
-                            </p>
-                        </div>
-
-                        <div class="reviews__wrapper_item">
-                            <div class="reviews__wrapper_item_top">
-                                <span>Dima</span>
-                                <span>24.06.2024</span>
-                            </div>
-                            <p class="reviews__wrapper_item_text">
-                                Я максимально удовлетворён обучением. Путь был нелёгкий, я провёл его за домашками и
-                                графиками. Но я получил желаемый результат — начал торговлю в лайве, что показало
-                                настоящую торговлю
-                            </p>
-                        </div>
                     </div>
+                    <button type="button" class="reviews__button  open_quiz">Забронировать место на вебинаре</button>
+            </section>
+            <section class="startup" id="startup">
+                <div class="startup__main">
+                    <h2 class="startup__heading">Начните свой путь к финансовой свободе!</h2>
+                    <img src="./img/bonus.svg" alt="Image">
+                    <p class="startup__text">После регистрации вы получите PDF-гайд и доступ в закрытое сообщество трейдеров</p>
+                    <div class="startup__timer">
+                        <span class="timer__heading">До конца регистрации</span>
+                        <div class="timer"></div>
+                    </div>
+                    <button type="button" class="startup__button  open_quiz">Забронировать место бесплатно</button>
                 </div>
-            </section> -->
+                <div class="startup__form"></div>
+            </section>
         </main>
         <footer class="footer" id="footer">
             <div class="conteiner">
@@ -312,7 +358,7 @@ if (!isset($rawClick) && !isset($click)) {
                     <div class="footer__top">
                         <div class="footer__logo_block">
                             <a href="###">
-                                <h2>Coingazes</h2>
+                                <h2>Investcon</h2>
                             </a>
                         </div>
                         <div class="footer__contact_info">
