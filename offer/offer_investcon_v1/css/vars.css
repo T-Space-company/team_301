@@ -1,0 +1,28 @@
+:root {
+  --bg-body: #f8f8f8;
+  --primary-color: #5b87c7;
+  --primary-light: #ebf2ff;
+  --accent-color: #1a365d;
+  --success-color: #38a169;
+  --warning-color: #dd6b20;
+  --error-color: #e53e3e;
+  --neutral-100: #f7fafc;
+  --neutral-200: #edf2f7;
+  --neutral-300: #e2e8f0;
+  --neutral-400: #cbd5e0;
+  --neutral-500: #a0aec0;
+  --neutral-600: #718096;
+  --neutral-700: #4a5568;
+  --neutral-800: #2d3748;
+  --neutral-900: #1a202c;
+  --bg-btn-red: #ff1919;
+  --font-family-Jost: "Jost", sans-serif;
+  --font-family-mont: "Mont", sans-serif;
+  --font-family-Bebas: "Bebas Neue", sans-serif;
+  --font-size: 14px;
+  --color-black: #1f1f1f;
+  --color-title-header: #1f1f1f;
+  --fz-title-h1: 64px;
+  --bg-main-btn: linear-gradient(0deg, #d8ba9b 0%, #c39c72 100%);
+  --border-radius: 30px;
+}

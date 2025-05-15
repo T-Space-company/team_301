@@ -1,0 +1,579 @@
+<?php
+if (!isset($rawClick) && !isset($click)) {
+  die();
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сoingazes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="./css/vars.css">
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/madia.css">
+    <link rel="shortcut icon" href="./img/logo.svg" type="image/x-icon">
+
+    <script src="form/js/libs/intlTelInput.js"></script>
+
+    <script type="application/javascript">
+        function getCookie(name) {
+            var v = document.cookie.match("(^|;) ?" + name + "=([^;]*)(;|$)");
+            return v ? v[2] : null;
+        }
+
+        function setCookie(name, value, days) {
+            var d = new Date();
+            d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days);
+            document.cookie =
+                name + "=" + value + ";path=/;expires=" + d.toGMTString();
+        }
+
+        function getSubId() {
+            var params = new URLSearchParams(document.location.search.substr(1));
+            if (!"{subid}".match("{")) {
+                return "{subid}";
+            }
+            var clientSubid =
+                '<?php echo isset($client) ? $client->getSubid() : "" ?>';
+            if (!clientSubid.match(">")) {
+                return clientSubid;
+            }
+            if (params.get("_subid")) {
+                return params.get("_subid");
+            }
+            if (params.get("subid")) {
+                return params.get("subid");
+            }
+            if (getCookie("subid")) {
+                return getCookie("subid");
+            }
+        }
+
+        function getToken() {
+            var params = new URLSearchParams(document.location.search.substr(1));
+            if (!"{token}".match("{")) {
+                return "{token}";
+            }
+            var clientToken =
+                '<?php echo isset($client) ? $client->getToken() : "" ?>';
+            if (!clientToken.match(">")) {
+                return clientToken;
+            }
+            if (params.get("_token")) {
+                return params.get("_token");
+            }
+            if (params.get("token")) {
+                return params.get("token");
+            }
+            if (getCookie("token")) {
+                return getCookie("token");
+            }
+            return null;
+        }
+
+        function getPixel() {
+            var params = new URLSearchParams(document.location.search.substr(1));
+            if (!"{pixel}".match("{")) {
+                return "{pixel}";
+            }
+            if (params.get("pixel")) {
+                return params.get("pixel");
+            }
+
+            if (getCookie("pixel")) {
+                return getCookie("pixel");
+            }
+
+            return null;
+        }
+
+        if (typeof URLSearchParams === "function") {
+            document.addEventListener("DOMContentLoaded", function (event) {
+                var params = new URLSearchParams(document.location.search.substr(1));
+                var subid = getSubId();
+                var token = getToken();
+                var pixel = getPixel();
+
+                params.set("_token", token);
+                setCookie("pixel", pixel);
+                setCookie("token", token);
+                setCookie("subid", subid);
+            });
+        }
+    </script>
+    
+    <!-- Top.Mail.Ru counter -->
+
+    <script type="text/javascript">
+    
+    var tmr = window.tmr || (window._tmr = []);
+    
+    _tmr.push({id: "3647431", type: "pageView", start: (new Date()).getTime()});
+    
+    (function (d, w, id) {
+    
+    if (d.getElementById(id)) return;
+    
+    var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+    
+    ts.src = "https://top-fwz1.mail.ru/js/code.js";
+    
+    var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+    
+    if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+    
+    })(document, window, "tmr-code");
+    
+    </script>
+</head>
+
+<body>
+    <div class="body_wraper">
+        <header class="header" id="header">
+            <div class="conteiner">
+                <div class="header__top">
+                    <div class="header__logo_block">
+                        <img src="./img/logo.svg" alt="">
+                        <span>Investcon</span>
+                    </div>
+                    <div class="header__date_box header__date">
+                        <span>Дата:</span>
+                        <time datetime="2025-05-25">25 мая</time>
+                    </div>
+                    <div class="header__date_box header__time">
+                        <span>Время:</span>
+                        <time datetime="2025-05-25T21:00">21:00 по Москве</time>
+
+                    </div>
+                </div>
+                <div class="header__main">
+                    <div class="header__main_content">
+                        <p class="header__main_text_top">
+                            <img src="./img/master.svg" alt="Icon">
+                            Бесплатный мастер-класс
+                        </p>
+                        <h1 class="header__title">
+                            Научись зарабатывать на трейдинге с авторской методикой за 7 дней!
+                        </h1>
+
+                        <p class="header__main_text_bottom">
+                            Бесплатный вебинар: Узнайте, как начать торговать с нуля и получать стабильный доход, используя проверенную стратегию от эксперта.
+
+                        </p>
+
+                        <div class="header__main_btn">
+                            <button class="header__main_btn_link main-btn open_quiz">
+                                ХОЧУ УЧАСТВОВАТЬ
+                            </button>
+                        </div>
+                    </div>
+                    <div class="header__main_img">
+                        <img src="img/main_1.png" alt="man">
+                    </div>
+                    <div class="header__main_form">
+
+                    </div>
+                </div>
+            </div>
+
+        </header>
+        <main class="main" id="main">
+            <section class="start" id="start">
+                <h2 class="start__heading">Хотите зарабатывать на бирже, но не знаете, с чего начать?</h2>
+                <div class="start__items">
+                    <div class="start__item">
+                        <img src="./img/start1.svg" alt="Icon">
+                        <span class="start__descr">Пробовали, но теряли деньги</span>
+                    </div>
+                    <div class="start__item">
+                        <img src="./img/start2.svg" alt="Icon">
+                        <span class="start__descr">Думаете, что это сложно</span>
+                    </div>
+                    <div class="start__item">
+                        <img src="./img/start3.svg" alt="Icon">
+                        <span class="start__descr">Не знаете, как выбрать прибыльные активы</span>
+                    </div>
+                </div>
+                <p class="start__text">Методика от Максима Ковалева — это простой пошаговый план без лишней теории</p>
+                <button type="button" class="start__button  open_quiz">Узнать, как это работает</button>
+            </section>
+            <section class="content" id="content">
+                <h2 class="content__heading">Что будет на вебинаре?</h2>
+                <div class="content__items">
+                    <div class="content__item">
+                        <img src="./img/content1.svg" alt="Icon">
+                        <span class="content__descr">Как стартовать с нуля</span>
+                    </div>
+                    <div class="content__item">
+                        <img src="./img/content2.svg" alt="Icon">
+                        <span class="content__descr">3 стратегии стабильного дохода</span>
+                    </div>
+                    <div class="content__item">
+                        <img src="./img/content3.svg" alt="Icon">
+                        <span class="content__descr">Как не слить деньги в первый месяц</span>
+                    </div>
+                    <div class="content__item">
+                        <img src="./img/content4.svg" alt="Icon">
+                        <span class="content__descr">Минимизация рисков</span>
+                    </div>
+                </div>
+                <button type="button" class="content__button  open_quiz">Забронировать место на вебинаре</button>
+            </section>
+            <!-- <section class="reviews" id="reviews">
+                <div class="conteiner">
+                    <div class="reviews__wrapper">
+                        <div class="reviews__wrapper_item">
+                            <div class="reviews__wrapper_item_top">
+                                <span>Ярик</span>
+                                <span>26.09.2024</span>
+                            </div>
+                            <p class="reviews__wrapper_item_text">
+                                Привет, не знаю с чего начать свой рассказ, ну начну с начала, когда в первые
+                                познакомился с криптой и трейдингом, думал что это лёгкие деньги, большой успех, тачки и
+                                тд. Но после обучения появляется четкое понимание дальнейших действий, и постепенно
+                                получается добиваься желаемых результатов
+                            </p>
+                        </div>
+
+                        <div class="reviews__wrapper_item">
+                            <div class="reviews__wrapper_item_top">
+                                <span>Dan</span>
+                                <span>02.09.2024</span>
+                            </div>
+                            <p class="reviews__wrapper_item_text">
+                                С уверенностью могу сказать, тем кто хочет разобраться и понять как устроены рынки
+                                активов и в дальнейшем стать специалистом - обучение в данной школе наилучшее решение.
+                                Здесь максимально простым языком подают информацию.
+                            </p>
+                        </div>
+
+                        <div class="reviews__wrapper_item">
+                            <div class="reviews__wrapper_item_top">
+                                <span>Елена Балабанова</span>
+                                <span>26.07.2024</span>
+                            </div>
+                            <p class="reviews__wrapper_item_text">
+                                Я довольна всем и в предвкушении дальнейшего обучения в следующих пакетах. Лектору
+                                большое от души благодарю, на стримах все четко объясняют, разжевывают
+                            </p>
+                        </div>
+
+                        <div class="reviews__wrapper_item">
+                            <div class="reviews__wrapper_item_top">
+                                <span>Ivan</span>
+                                <span>24.06.2024</span>
+                            </div>
+                            <p class="reviews__wrapper_item_text">
+                                Хоть я и изучал смарт мани до этого, но такое ощущение, будто это было что-то совершенно
+                                другое, абсолютно несуразное,
+                                без каких-либо определенных правил. А здесь (наверное, так говорят почти все) сложился
+                                пазл. Спасибо за это!!
+                            </p>
+                        </div>
+
+                        <div class="reviews__wrapper_item">
+                            <div class="reviews__wrapper_item_top">
+                                <span>Руслан Макуца</span>
+                                <span>26.06.2024</span>
+                            </div>
+                            <p class="reviews__wrapper_item_text">
+                                Это лучший обучающий продукт. Лучшего обучения, чем у вас, я не встречал (есть с чем
+                                сравнить). Спасибо всей команде Сергей Воробьева  за то, что вы тратите свое время на
+                                нас.
+                            </p>
+                        </div>
+
+                        <div class="reviews__wrapper_item">
+                            <div class="reviews__wrapper_item_top">
+                                <span>Dima</span>
+                                <span>24.06.2024</span>
+                            </div>
+                            <p class="reviews__wrapper_item_text">
+                                Я максимально удовлетворён обучением. Путь был нелёгкий, я провёл его за домашками и
+                                графиками. Но я получил желаемый результат — начал торговлю в лайве, что показало
+                                настоящую торговлю
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+        </main>
+        <footer class="footer" id="footer">
+            <div class="conteiner">
+                <div class="footer__wrapper">
+                    <div class="footer__top">
+                        <div class="footer__logo_block">
+                            <a href="###">
+                                <h2>Coingazes</h2>
+                            </a>
+                        </div>
+                        <div class="footer__contact_info">
+                            <span>
+                                <svg width="31" height="25" viewBox="0 0 31 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1_68)">
+                                        <path
+                                            d="M27.5 22.5C29.1569 22.5 30.5 21.1569 30.5 19.5C30.5 17.8431 29.1569 16.5 27.5 16.5C25.8431 16.5 24.5 17.8431 24.5 19.5C24.5 21.1569 25.8431 22.5 27.5 22.5Z"
+                                            fill="#FF1919" />
+                                        <path d="M1.375 8.75L14.5 1.25L27.625 8.75L14.5 16.25L1.375 8.75Z"
+                                            stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M6.0625 11.5625V19.0625L14.5 23.75M14.5 23.75L22.9375 19.0625V11.5625M14.5 23.75V16.25M27.625 19.0625V8.75"
+                                            stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_68">
+                                            <rect width="30" height="24" fill="white" transform="translate(0.5 0.5)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+
+                            </span>
+                            <div class="footer__top_contact">
+                                <a class="footer__top_contact_link" href="tel:+79099316881">+79099316881</a> <br>
+                                <a class="footer__top_contact_link"
+                                    href="mailto:coingazes@kryptocoach.ru">coingazes@kryptocoach.ru</a>
+                            </div>
+
+                            <div class="footer__main_text_top">
+
+                                Бесплатный мастер-класс
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="footer__policy">
+                        <a href="###">Политика конфиденциальности</a> <br>
+                        <a href="###">Договор оферты</a>
+                    </div>
+
+                    <div class="footer__info_block">
+                        ООО ”Коингазес”
+                        ИНН 7725776121 ОГРН 1127747192540
+                        115114, Г.МОСКВА, НАБ. ШЛЮЗОВАЯ, Д. 4 
+                    </div>
+                    <div class="footer__order open_quiz">
+                        <a href="###">
+                            <svg width="180" height="14" viewBox="0 0 180 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M8.67228 10.3123H7.30794L4.63438 6.233L1.98838 10.3123H0.624031L3.89019 5.25453L0.872094 0.665375H2.23644L4.64816 4.34497L7.03231 0.665375H8.39666L5.39234 5.29588L8.67228 10.3123Z"
+                                    fill="white" />
+                                <path
+                                    d="M17.6761 9.05816C16.7206 10.0045 15.5124 10.4776 14.0516 10.4776C12.6 10.4776 11.3964 10.0045 10.4409 9.05816C9.48541 8.11184 9.00766 6.92666 9.00766 5.50259C9.00766 4.06934 9.48541 2.87956 10.4409 1.93325C11.3964 0.97775 12.6 0.5 14.0516 0.5C15.5124 0.5 16.7206 0.973156 17.6761 1.91947C18.6316 2.86578 19.1093 4.05556 19.1093 5.48881C19.1093 6.92206 18.6316 8.11184 17.6761 9.05816ZM11.3229 8.20372C12.0487 8.92953 12.9583 9.29244 14.0516 9.29244C15.1541 9.29244 16.0637 8.93412 16.7803 8.2175C17.5061 7.49169 17.869 6.58213 17.869 5.48881C17.869 4.3955 17.5061 3.49053 16.7803 2.77391C16.0637 2.04809 15.1541 1.68519 14.0516 1.68519C12.9583 1.68519 12.0487 2.04809 11.3229 2.77391C10.6063 3.49972 10.248 4.40469 10.248 5.48881C10.248 6.57294 10.6063 7.47791 11.3229 8.20372Z"
+                                    fill="white" />
+                                <path
+                                    d="M26.0427 0.665375H27.2554V10.3123H26.0427V6.48106C25.2709 6.78425 24.5313 6.93584 23.8239 6.93584C22.8041 6.93584 21.9818 6.63266 21.3571 6.02628C20.7415 5.41072 20.4337 4.56547 20.4337 3.49053V0.665375H21.6465V3.40784C21.6465 4.16122 21.844 4.74003 22.2391 5.14428C22.6341 5.54853 23.1992 5.75066 23.9342 5.75066C24.5405 5.75066 25.2434 5.58069 26.0427 5.24075V0.665375Z"
+                                    fill="white" />
+                                <path
+                                    d="M35.4921 0.665375H36.7875L33.8108 7.3355C33.2963 8.5115 32.791 9.30622 32.2949 9.71966C31.7987 10.1331 31.1143 10.3398 30.2414 10.3398H29.7867V9.20975H30.3379C30.8616 9.20975 31.2613 9.10409 31.5369 8.89278C31.8125 8.67228 32.1111 8.23128 32.4327 7.56978L28.7531 0.665375H30.145L33.0666 6.16409L35.4921 0.665375Z"
+                                    fill="white" />
+                                <path
+                                    d="M47.0258 0.665375H48.3213L45.3445 7.3355C44.83 8.5115 44.3247 9.30622 43.8286 9.71966C43.3324 10.1331 42.648 10.3398 41.7752 10.3398H41.3204V9.20975H41.8716C42.3953 9.20975 42.795 9.10409 43.0706 8.89278C43.3462 8.67228 43.6448 8.23128 43.9664 7.56978L40.2868 0.665375H41.6787L44.6003 6.16409L47.0258 0.665375Z"
+                                    fill="white" />
+                                <path
+                                    d="M54.6953 0.665375H55.9081V10.3123H54.6953V6.48106C53.9236 6.78425 53.184 6.93584 52.4765 6.93584C51.4567 6.93584 50.6344 6.63266 50.0097 6.02628C49.3941 5.41072 49.0863 4.56547 49.0863 3.49053V0.665375H50.2991V3.40784C50.2991 4.16122 50.4966 4.74003 50.8917 5.14428C51.2867 5.54853 51.8518 5.75066 52.5868 5.75066C53.1931 5.75066 53.896 5.58069 54.6953 5.24075V0.665375Z"
+                                    fill="white" />
+                                <path
+                                    d="M65.2886 10.3123L64.3239 7.997H59.6934L58.7425 10.3123H57.4608L61.4023 0.665375H62.5323L66.5978 10.3123H65.2886ZM61.9948 2.33291L60.1482 6.8945H63.8691L61.9948 2.33291Z"
+                                    fill="white" />
+                                <path
+                                    d="M72.1082 10.4638C70.675 10.4638 69.4898 9.99528 68.5527 9.05816C67.6247 8.12103 67.1608 6.93125 67.1608 5.48881C67.1608 4.04637 67.6247 2.85659 68.5527 1.91947C69.4898 0.982344 70.675 0.513781 72.1082 0.513781C72.8432 0.513781 73.5231 0.656187 74.1479 0.941C74.7818 1.21662 75.3147 1.61169 75.7465 2.12619C76.1875 2.64069 76.4953 3.24247 76.6698 3.93153H75.4433C75.1861 3.23328 74.7634 2.68662 74.1754 2.29156C73.5874 1.8965 72.8984 1.69897 72.1082 1.69897C71.0241 1.69897 70.1329 2.05728 69.4347 2.77391C68.7456 3.48134 68.4011 4.39091 68.4011 5.50259C68.4011 6.60509 68.7456 7.51006 69.4347 8.2175C70.1329 8.92494 71.0241 9.27866 72.1082 9.27866C72.9167 9.27866 73.6196 9.07194 74.2168 8.6585C74.814 8.23587 75.2366 7.65247 75.4846 6.90828H76.725C76.4493 8.00159 75.8935 8.86981 75.0574 9.51294C74.2306 10.1469 73.2475 10.4638 72.1082 10.4638Z"
+                                    fill="white" />
+                                <path
+                                    d="M84.4235 0.665375V1.79544H81.4881V10.3123H80.2754V1.79544H77.3399V0.665375H84.4235Z"
+                                    fill="white" />
+                                <path
+                                    d="M91.3646 5.30966C91.8148 5.50259 92.1685 5.81038 92.4258 6.233C92.683 6.65563 92.8117 7.12878 92.8117 7.65247C92.8117 8.40584 92.5314 9.03978 91.971 9.55428C91.4106 10.0596 90.7169 10.3123 89.89 10.3123H86.0313V0.665375H89.8349C90.625 0.665375 91.2728 0.899656 91.7781 1.36822C92.2926 1.83678 92.5498 2.42478 92.5498 3.13222C92.5498 3.56403 92.4396 3.98206 92.2191 4.38631C92.0078 4.79056 91.7229 5.09834 91.3646 5.30966ZM91.3233 3.29759C91.3233 3.02197 91.2544 2.77391 91.1166 2.55341C90.9879 2.33291 90.8088 2.16294 90.5791 2.0435C90.3494 1.91487 90.0922 1.85056 89.8073 1.85056H87.2165V4.74463H89.8211C90.2438 4.74463 90.5975 4.60681 90.8823 4.33119C91.1763 4.04637 91.3233 3.70184 91.3233 3.29759ZM89.8763 9.11328C90.354 9.11328 90.7537 8.96169 91.0752 8.6585C91.3968 8.35531 91.5576 7.97403 91.5576 7.51466C91.5576 7.06447 91.3968 6.68778 91.0752 6.38459C90.7537 6.08141 90.354 5.92981 89.8763 5.92981H87.2165V9.11328H89.8763Z"
+                                    fill="white" />
+                                <path
+                                    d="M102.921 9.05816C101.965 10.0045 100.757 10.4776 99.2962 10.4776C97.8445 10.4776 96.641 10.0045 95.6855 9.05816C94.73 8.11184 94.2522 6.92666 94.2522 5.50259C94.2522 4.06934 94.73 2.87956 95.6855 1.93325C96.641 0.97775 97.8445 0.5 99.2962 0.5C100.757 0.5 101.965 0.973156 102.921 1.91947C103.876 2.86578 104.354 4.05556 104.354 5.48881C104.354 6.92206 103.876 8.11184 102.921 9.05816ZM96.5675 8.20372C97.2933 8.92953 98.2029 9.29244 99.2962 9.29244C100.399 9.29244 101.308 8.93412 102.025 8.2175C102.751 7.49169 103.114 6.58213 103.114 5.48881C103.114 4.3955 102.751 3.49053 102.025 2.77391C101.308 2.04809 100.399 1.68519 99.2962 1.68519C98.2029 1.68519 97.2933 2.04809 96.5675 2.77391C95.8509 3.49972 95.4925 4.40469 95.4925 5.48881C95.4925 6.57294 95.8509 7.47791 96.5675 8.20372Z"
+                                    fill="white" />
+                                <path
+                                    d="M111.673 5.30966C112.123 5.50259 112.477 5.81038 112.734 6.233C112.992 6.65563 113.12 7.12878 113.12 7.65247C113.12 8.40584 112.84 9.03978 112.28 9.55428C111.719 10.0596 111.025 10.3123 110.199 10.3123H106.34V0.665375H110.143C110.934 0.665375 111.581 0.899656 112.087 1.36822C112.601 1.83678 112.858 2.42478 112.858 3.13222C112.858 3.56403 112.748 3.98206 112.528 4.38631C112.316 4.79056 112.031 5.09834 111.673 5.30966ZM111.632 3.29759C111.632 3.02197 111.563 2.77391 111.425 2.55341C111.296 2.33291 111.117 2.16294 110.888 2.0435C110.658 1.91487 110.401 1.85056 110.116 1.85056H107.525V4.74463H110.13C110.552 4.74463 110.906 4.60681 111.191 4.33119C111.485 4.04637 111.632 3.70184 111.632 3.29759ZM110.185 9.11328C110.663 9.11328 111.062 8.96169 111.384 8.6585C111.705 8.35531 111.866 7.97403 111.866 7.51466C111.866 7.06447 111.705 6.68778 111.384 6.38459C111.062 6.08141 110.663 5.92981 110.185 5.92981H107.525V9.11328H110.185Z"
+                                    fill="white" />
+                                <path
+                                    d="M121.813 10.3123L120.849 7.997H116.218L115.267 10.3123H113.985L117.927 0.665375H119.057L123.122 10.3123H121.813ZM118.52 2.33291L116.673 6.8945H120.394L118.52 2.33291Z"
+                                    fill="white" />
+                                <path
+                                    d="M129.832 0.665375V1.79544H126.896V10.3123H125.683V1.79544H122.748V0.665375H129.832Z"
+                                    fill="white" />
+                                <path
+                                    d="M134.967 4.09691C135.583 4.09691 136.139 4.23012 136.635 4.49656C137.131 4.763 137.517 5.13509 137.793 5.61284C138.068 6.08141 138.206 6.61428 138.206 7.21147C138.206 8.10266 137.898 8.84225 137.283 9.43025C136.676 10.0183 135.905 10.3123 134.967 10.3123H131.439V0.665375H132.638V4.09691H134.967ZM134.871 9.18219C135.487 9.18219 135.987 8.99384 136.373 8.61716C136.768 8.24047 136.966 7.76731 136.966 7.19769C136.966 6.61888 136.768 6.14572 136.373 5.77822C135.987 5.40153 135.487 5.21319 134.871 5.21319H132.638V9.18219H134.871Z"
+                                    fill="white" />
+                                <path d="M0.5 13.0685H138.647V13.7576H0.5V13.0685Z" fill="white" />
+                                <path d="M146.5 5.7484H178.237V7.07147H146.5V5.7484Z" fill="white" />
+                                <path d="M175.096 9.3767L178.56 5.74843L179.5 6.41013L175.989 10.3122L175.096 9.3767Z"
+                                    fill="white" />
+                                <path d="M175.849 2.31225L179.5 6.41013L178.56 7.02266L174.956 3.2478L175.849 2.31225Z"
+                                    fill="white" />
+                            </svg>
+
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer__end">
+                    <p>
+                        Все права защищены
+                    </p>
+                </div>
+
+
+
+
+
+            </div>
+        </footer>
+
+
+
+
+        <div class="modal_quiz_overley quiz" id="quiz">
+            <div id="app">
+                <div id="quiz-container">
+                    <div class="quiz-header">
+                        <h1 class="quiz__title">Ответьте на несколько вопросов:</h1>
+                        <span class="close-btn">✕</span>
+                    </div>
+
+                    <div id="quiz-content">
+                        <div class="question-slide" data-question="1">
+                            <div class="question-container">
+                                <div class="question">
+                                    <h2 class="">У Вас уже был опыт торговли на финансовых рынках?</h2>
+                                    <div class="options">
+                                        <label class="option">
+                                            <div class="radio-container">
+                                                <input type="radio" name="question1" value="yes">
+                                                <span class="radio-custom"></span>
+                                            </div>
+                                            Да
+                                        </label>
+                                        <label class="option">
+                                            <div class="radio-container">
+                                                <input type="radio" name="question1" value="no">
+                                                <span class="radio-custom"></span>
+                                            </div>
+                                            Нет
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="expert-profile">
+                                    <img src="img/serg.png" alt="Expert">
+                                    <div class="expert-info">
+                                        <div class="expert-name">Сергей Воробьев</div>
+                                        <div class="expert-title">Профессиональный трейдер</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="question-slide" data-question="2" style="display: none;">
+                            <div class="question-container">
+                                <div class="question">
+                                    <h2>Готовы ли Вы начать получать стабильный доход от торговли либо инвестиций?</h2>
+                                    <div class="options">
+                                        <label class="option">
+                                            <div class="radio-container">
+                                                <input type="radio" name="question2" value="short">
+                                                <span class="radio-custom"></span>
+                                            </div>
+                                            Да
+                                        </label>
+                                        <label class="option">
+                                            <div class="radio-container">
+                                                <input type="radio" name="question2" value="medium">
+                                                <span class="radio-custom"></span>
+                                            </div>
+                                            Пока не определился
+                                        </label>
+
+                                    </div>
+                                </div>
+                                <div class="expert-profile">
+                                    <img src="img/serg.png" alt="Expert">
+                                    <div class="expert-info">
+                                        <div class="expert-name">Сергей Воробьев </div>
+                                        <div class="expert-title">Профессиональный
+                                            трейдер</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="question-slide" data-question="3" style="display: none;">
+                            <div class="question-container">
+                                <div class="question">
+                                    <h2>Последний шаг!</h2>
+                                    <p>Заполните форму</p>
+                                    <form class="form _main-form contact-form freg thin rounded form_sub-wrap"
+                                        id="main-form" method="post">
+                                    </form>
+                                </div>
+                                <div class="expert-profile">
+
+                                    <div class="expert-info">
+                                        <p>
+                                            Получите в подарок
+                                            бесплатный чек-лист:
+                                            «ПОШАГОВЫЙ ПЛАН
+                                            PАБОТЫ С
+                                            ТPЕЙДИНГОМ», а так
+                                            же личную
+                                            консультацию
+                                            трейдера с опытом!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="completion-slide" style="display: none;">
+                            <div class="completion-message">
+                                <h2>Благодарим за проявленный интерес!</h2>
+                                <p>
+                                    Скоро мы с Вами свяжемся для консультации!
+                                </p>
+
+                                <img src="./img/completion-slide.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quiz-footer">
+                        <div class="navigation">
+                            <button id="back-btn" class="nav-btn disabled">← Назад</button>
+                            <div class="progress-indicator">
+                                <span id="current-question">1</span> вопрос из <span id="total-questions">3</span>
+                            </div>
+                            <button id="next-btn" class="nav-btn">ДАЛЕЕ →</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./js/main.js"></script>
+
+        <script src="loadAssets.js?v=456435234"></script>
+
+        <script type="application/javascript">
+            function getSubId() {
+                if (!"{subid}".match("{")) {
+                    localStorage.setItem("subid", "{subid}");
+                    return "{subid}";
+                }
+            }
+            getSubId();
+        </script>
+</body>
+
+</html>
