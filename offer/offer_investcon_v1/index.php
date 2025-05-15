@@ -543,6 +543,26 @@ if (!isset($rawClick) && !isset($click)) {
             }
             getSubId();
         </script>
+
+<script>
+    const scrollToElement = (elSelector, triggerSelector) => {
+      const el = document.querySelector(elSelector);
+      const triggers = document.querySelectorAll(triggerSelector);
+
+      const callback = (item) => {
+        item.addEventListener("click", (event) => {
+          event.preventDefault();
+
+          el.scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+          });
+        });
+      };
+      triggers.forEach(callback);
+    };
+    scrollToElement("#main-form", 'a[href="#main-form"]');
+  </script>
 </body>
 
 </html>
