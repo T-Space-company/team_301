@@ -1,0 +1,203 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #D1D5DB;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+.mainContainer {
+    padding: 15px;
+    background: #F3F3F3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden;
+}
+.topContainer {
+    display: flex;
+    align-items: center;
+    background: #E4E5E7;
+    padding: 0 70px 0 49px;
+    border-radius: 35px;
+    height: 26.5625vmax;
+    background-image: url("./images/topBg.png");
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: 54%;
+}
+.topContainer img {
+    width: 53.3vmax;
+    height: 26.5625vmax;
+}
+h1 {
+    width: 40%;
+    margin: 0;
+    font-size: 5.11vmax;
+    font-weight: 500;
+    line-height: 6.19vmax;
+    text-align: left;
+}
+.bottomContainers {
+    display: flex;
+    gap: 25px;
+}
+.stage {
+    transition: background-color 1s ease;
+    height: calc(100vh - 26.5625vmax - 15px * 2 - 20px - 20px - 33px);
+    background: #E4E5E7;
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 20px 20px 33px;
+    border-radius: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.stageHead {
+    display: flex;
+    align-items: center;
+}
+.stageHead span {
+    margin-left: 10px;
+}
+.stageNumber {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+.pos1 {
+    background: #6FC575;
+}
+.pos3 .stageNumber{
+    background: #D2D2D9;
+    color: #ACACB9;
+}
+.pos3 span{
+    color: #ACACB9;
+}
+.pos2 .stageNumber{
+    background: #6FC575;
+    color: #fff;
+}
+.pos2 span{
+    color: #ACACB9;
+}
+.pos1 .stageNumber{
+    background: #000;
+    color: #fff;
+}
+.pos1 span{
+    color: #fff;
+}
+.stageImage {
+    margin-top: 18px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.stageImage img {
+    height: 165px;
+}
+.stageFooter {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 35.35px;
+    text-align: center;
+}
+@media screen and (max-width: 1440px) and (min-width: 1024px){
+    .bottomContainersWrap {
+        width: 100%;
+    }
+    .bottomContainers {
+        width: 100%;
+    }
+    .stage {
+        width: calc(20% - 40px - 20px);
+        flex-grow: unset;
+        flex-basis: unset;
+    }
+    .stageImage {
+    }
+    .stageImage img {
+        max-width: 100%;
+    }
+    .stageFooter {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .topContainer {
+        overflow: hidden;
+        max-height: 50vh;
+        height: 50vh;
+        background-position: bottom 0 right -700px;
+        background-size: 140%;
+    }
+    h1 {
+        width: 50%;
+    }
+    .topContainer img {
+        width: unset;
+        height: 50vh;
+    }
+    .stage {
+        height: calc(100vh - 50vh - 15px * 2 - 20px - 20px - 33px);
+    }
+}
+@media screen and (max-width: 1023px) {
+    .topContainer {
+        padding: 2px 26px;
+        align-items: flex-start;
+        background-position: bottom 0 center;
+        background-size: 100%;
+        height: 400px;
+    }
+    h1 {
+        width: 100%;
+        text-align: center;
+        font-size: 32.68px;
+        font-weight: 500;
+        line-height: 39.83px;
+    }
+    .bottomContainersWrap {
+        overflow-x: hidden;
+    }
+    .bottomContainersWrap::-webkit-scrollbar {
+        display: none !important;
+    }
+    .bottomContainers {
+        width: 500%;
+        gap: 0;
+    }
+    .stage {
+        height: calc(100vh - 400px - 15px * 2 - 20px - 20px - 33px);
+    }
+}
+@media screen and (max-width: 1023px) and (orientation: landscape) {
+    .mainContainer {
+        flex-direction: row;
+        height: 100%;
+    }
+    .topContainer {
+        overflow: hidden;
+        max-height: 100%;
+        width: 50%;
+        justify-content: center;
+    }
+    h1 {
+        width: 80%;
+    }
+    .bottomContainersWrap {
+        width: 50%;
+        height: 100%;
+    }
+    .stage {
+        height: calc(100vh - 15px * 2 - 20px - 30px);
+    }
+}
