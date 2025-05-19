@@ -1,0 +1,192 @@
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css
+File Name: C:\Downloaded Web Sites\ravesnut.com\ajax\libs\font-awesome\6.6.0\css\all.min.css
+Content Type: text/css
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/webfonts/fa-brands-400.ttf
+File Name: C:\Downloaded Web Sites\ravesnut.com\ajax\libs\font-awesome\6.6.0\webfonts\fa-brands-400.ttf
+Content Type: application/octet-stream
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/webfonts/fa-brands-400.woff2
+File Name: C:\Downloaded Web Sites\ravesnut.com\ajax\libs\font-awesome\6.6.0\webfonts\fa-brands-400.woff2
+Content Type: application/octet-stream
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/webfonts/fa-regular-400.ttf
+File Name: C:\Downloaded Web Sites\ravesnut.com\ajax\libs\font-awesome\6.6.0\webfonts\fa-regular-400.ttf
+Content Type: application/octet-stream
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/webfonts/fa-regular-400.woff2
+File Name: C:\Downloaded Web Sites\ravesnut.com\ajax\libs\font-awesome\6.6.0\webfonts\fa-regular-400.woff2
+Content Type: application/octet-stream
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/webfonts/fa-solid-900.ttf
+File Name: C:\Downloaded Web Sites\ravesnut.com\ajax\libs\font-awesome\6.6.0\webfonts\fa-solid-900.ttf
+Content Type: application/octet-stream
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/webfonts/fa-solid-900.woff2
+File Name: C:\Downloaded Web Sites\ravesnut.com\ajax\libs\font-awesome\6.6.0\webfonts\fa-solid-900.woff2
+Content Type: application/octet-stream
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/webfonts/fa-v4compatibility.ttf
+File Name: C:\Downloaded Web Sites\ravesnut.com\ajax\libs\font-awesome\6.6.0\webfonts\fa-v4compatibility.ttf
+Content Type: application/octet-stream
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/webfonts/fa-v4compatibility.woff2
+File Name: C:\Downloaded Web Sites\ravesnut.com\ajax\libs\font-awesome\6.6.0\webfonts\fa-v4compatibility.woff2
+Content Type: application/octet-stream
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css
+File Name: C:\Downloaded Web Sites\ravesnut.com\ajax\libs\modern-normalize\2.0.0\modern-normalize.min.css
+Content Type: text/css
+
+Uri: https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap
+File Name: C:\Downloaded Web Sites\ravesnut.com\css2
+Content Type: text/css
+
+Uri: https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuBWYMZg.ttf
+File Name: C:\Downloaded Web Sites\ravesnut.com\s\inter\v18\UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuBWYMZg.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuDyfMZg.ttf
+File Name: C:\Downloaded Web Sites\ravesnut.com\s\inter\v18\UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuDyfMZg.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuDyYMZg.ttf
+File Name: C:\Downloaded Web Sites\ravesnut.com\s\inter\v18\UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuDyYMZg.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYMZg.ttf
+File Name: C:\Downloaded Web Sites\ravesnut.com\s\inter\v18\UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYMZg.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuGKYMZg.ttf
+File Name: C:\Downloaded Web Sites\ravesnut.com\s\inter\v18\UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuGKYMZg.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fMZg.ttf
+File Name: C:\Downloaded Web Sites\ravesnut.com\s\inter\v18\UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fMZg.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyeMZg.ttf
+File Name: C:\Downloaded Web Sites\ravesnut.com\s\inter\v18\UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyeMZg.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf
+File Name: C:\Downloaded Web Sites\ravesnut.com\s\inter\v18\UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuOKfMZg.ttf
+File Name: C:\Downloaded Web Sites\ravesnut.com\s\inter\v18\UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuOKfMZg.ttf
+Content Type: font/ttf
+
+Uri: https://ravesnut.com/?utm_creative=L3&utm_campaign=luna26406&utm_source=EuroSystem&pixel=1139173397148905&userId=96&boxId=500&fbclid=IwZXh0bgNhZW0CMTEAAR0rtUnroPo8GkqT-Eya-iqnvN3aHJ8Ni64ZyoFl2gKoJ8OZDFY78UheS_Q_aem_0HW9eFeqtfaqUaWpVtfo3w
+File Name: C:\Downloaded Web Sites\ravesnut.com\index.htm
+Content Type: text/html
+
+Uri: https://ravesnut.com/lander/european-comision_1722861699/build/css/intlTelInput.css
+File Name: C:\Downloaded Web Sites\ravesnut.com\lander\european-comision_1722861699\build\css\intlTelInput.css
+Content Type: text/css
+
+Uri: https://ravesnut.com/lander/european-comision_1722861699/build/css/styleError.css
+File Name: C:\Downloaded Web Sites\ravesnut.com\lander\european-comision_1722861699\build\css\styleError.css
+Content Type: text/css
+
+Uri: https://ravesnut.com/lander/european-comision_1722861699/build/img/flags.png
+File Name: C:\Downloaded Web Sites\ravesnut.com\lander\european-comision_1722861699\build\img\flags.png
+Content Type: image/png
+
+Uri: https://ravesnut.com/lander/european-comision_1722861699/build/img/flags@2x.png
+File Name: C:\Downloaded Web Sites\ravesnut.com\lander\european-comision_1722861699\build\img\flags@2x.png
+Content Type: image/png
+
+Uri: https://ravesnut.com/lander/european-comision_1722861699/build/js/disabled.js
+File Name: C:\Downloaded Web Sites\ravesnut.com\lander\european-comision_1722861699\build\js\disabled.js
+Content Type: application/javascript
+
+Uri: https://ravesnut.com/lander/european-comision_1722861699/build/js/intlTelInput.js
+File Name: C:\Downloaded Web Sites\ravesnut.com\lander\european-comision_1722861699\build\js\intlTelInput.js
+Content Type: application/javascript
+
+Uri: https://ravesnut.com/lander/european-comision_1722861699/build/js/jQuery.js
+File Name: C:\Downloaded Web Sites\ravesnut.com\lander\european-comision_1722861699\build\js\jQuery.js
+Content Type: application/javascript
+
+Uri: https://ravesnut.com/lander/european-comision_1722861699/build/js/validationEmail.js
+File Name: C:\Downloaded Web Sites\ravesnut.com\lander\european-comision_1722861699\build\js\validationEmail.js
+Content Type: application/javascript
+
+Uri: https://ravesnut.com/lander/european-comision_1722861699/build/js/validationLastname.js
+File Name: C:\Downloaded Web Sites\ravesnut.com\lander\european-comision_1722861699\build\js\validationLastname.js
+Content Type: application/javascript
+
+Uri: https://ravesnut.com/lander/european-comision_1722861699/build/js/validationName.js
+File Name: C:\Downloaded Web Sites\ravesnut.com\lander\european-comision_1722861699\build\js\validationName.js
+Content Type: application/javascript
+
+Uri: https://ravesnut.com/lander/european-comision_1722861699/build/js/validationPhone.js
+File Name: C:\Downloaded Web Sites\ravesnut.com\lander\european-comision_1722861699\build\js\validationPhone.js
+Content Type: application/javascript
+
+Uri: https://ravesnut.com/lander/european-comision_1722861699/css/main.css
+File Name: C:\Downloaded Web Sites\ravesnut.com\lander\european-comision_1722861699\css\main.css
+Content Type: text/css
+
+Uri: https://ravesnut.com/lander/european-comision_1722861699/img/avatar1.png.png
+File Name: C:\Downloaded Web Sites\ravesnut.com\lander\european-comision_1722861699\img\avatar1.png.png
+Content Type: image/png
+
+Uri: https://ravesnut.com/lander/european-comision_1722861699/img/avatar2.png.png
+File Name: C:\Downloaded Web Sites\ravesnut.com\lander\european-comision_1722861699\img\avatar2.png.png
+Content Type: image/png
+
+Uri: https://ravesnut.com/lander/european-comision_1722861699/img/avatar3.png.png
+File Name: C:\Downloaded Web Sites\ravesnut.com\lander\european-comision_1722861699\img\avatar3.png.png
+Content Type: image/png
+
+Uri: https://ravesnut.com/lander/european-comision_1722861699/img/avatar4.png.png
+File Name: C:\Downloaded Web Sites\ravesnut.com\lander\european-comision_1722861699\img\avatar4.png.png
+Content Type: image/png
+
+Uri: https://ravesnut.com/lander/european-comision_1722861699/img/eui-language-selector → Button.png
+File Name: C:\Downloaded Web Sites\ravesnut.com\lander\european-comision_1722861699\img\eui-language-selector → Button.png
+Content Type: image/png
+
+Uri: https://ravesnut.com/lander/european-comision_1722861699/img/logo-ec--en.svg.png
+File Name: C:\Downloaded Web Sites\ravesnut.com\lander\european-comision_1722861699\img\logo-ec--en.svg.png
+Content Type: image/png
+
+Uri: https://ravesnut.com/lander/european-comision_1722861699/img/Picture → logo-ec--en.svg.svg
+File Name: C:\Downloaded Web Sites\ravesnut.com\lander\european-comision_1722861699\img\Picture → logo-ec--en.svg.svg
+Content Type: image/svg+xml
+
+Uri: https://ravesnut.com/lander/european-comision_1722861699/img/president.png
+File Name: C:\Downloaded Web Sites\ravesnut.com\lander\european-comision_1722861699\img\president.png
+Content Type: image/png
+
+Uri: https://ravesnut.com/lander/european-comision_1722861699/img/step1.svg fill.svg
+File Name: C:\Downloaded Web Sites\ravesnut.com\lander\european-comision_1722861699\img\step1.svg fill.svg
+Content Type: image/svg+xml
+
+Uri: https://ravesnut.com/lander/european-comision_1722861699/img/step2.svg fill.png
+File Name: C:\Downloaded Web Sites\ravesnut.com\lander\european-comision_1722861699\img\step2.svg fill.png
+Content Type: image/png
+
+Uri: https://ravesnut.com/lander/european-comision_1722861699/img/step3.svg fill.svg
+File Name: C:\Downloaded Web Sites\ravesnut.com\lander\european-comision_1722861699\img\step3.svg fill.svg
+Content Type: image/svg+xml
+
+Uri: https://ravesnut.com/lander/european-comision_1722861699/img/step4.svg.svg
+File Name: C:\Downloaded Web Sites\ravesnut.com\lander\european-comision_1722861699\img\step4.svg.svg
+Content Type: image/svg+xml
+
+Uri: https://ravesnut.com/lander/european-comision_1722861699/img/withdraw.png
+File Name: C:\Downloaded Web Sites\ravesnut.com\lander\european-comision_1722861699\img\withdraw.png
+Content Type: image/png
+
+Uri: https://ravesnut.com/lander/european-comision_1722861699/table.js
+File Name: C:\Downloaded Web Sites\ravesnut.com\lander\european-comision_1722861699\table.js
+Content Type: application/javascript
+
+Uri: https://ravesnut.com/lander/european-comision_1722861699/vveennna.mp4
+File Name: C:\Downloaded Web Sites\ravesnut.com\lander\european-comision_1722861699\vveennna.mp4
+Content Type: video/mp4
+
