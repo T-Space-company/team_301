@@ -11,6 +11,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 130px 40px 80px;
+  position: relative;
 }
 .header__content {
   display: flex;
@@ -36,11 +37,21 @@ body {
   justify-content: center;
   max-width: 160px;
   width: 100%;
-
   text-align: center;
   font-size: 20px;
   font-weight: 400;
   line-height: 27px;
+}
+.header__tel {
+  position: absolute;
+  top: 40px;
+  right: 70px;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px; /* 120% */
+  letter-spacing: 0.5px;
 }
 .main {
   padding: 60px 15px 50px;
@@ -441,17 +452,109 @@ body {
   font-size: 17px;
   line-height: 25.5px;
 }
+.desktop {
+  display: none;
+}
+.mobile {
+  display: flex;
+}
 @media (min-width: 768px) {
+  .desktop {
+    display: flex;
+  }
+  .mobile {
+    display: none;
+  }
+  .header {
+    padding: 180px 40px 70px;
+  }
+  .header__content {
+    gap: 110px;
+  }
+  .header__heading {
+    font-size: 60px;
+    line-height: 72px;
+  }
+  .main__banner {
+    max-width: 650px;
+  }
+  .main__site {
+    flex-direction: row;
+    max-width: 1140px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .site__image {
+    max-width: 550px;
+  }
+  .site__buttons {
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+  }
+  .site__content {
+    align-items: flex-start;
+    max-width: 460px;
+    width: 100%;
+    padding-bottom: 40px;
+  }
+  .site__heading {
+    font-size: 44px;
+  }
+  .site__price {
+    font-size: 26px;
+  }
+  .site__pricing {
+    align-items: flex-start;
+  }
+  .site__pricing > img {
+    margin-top: 10px;
+  }
+  .pricing__actual {
+    font-size: 44px;
+  }
+  .pricing__second {
+    margin-top: 25px;
+  }
+  .site__descr {
+    align-items: flex-start;
+    max-width: none;
+  }
+  .site__includes {
+    max-width: 460px;
+  }
+  .includes__list li img {
+    margin-left: 30px;
+  }
+  .site__addons {
+    max-width: 460px;
+  }
+  .descr__text {
+    text-align: left;
+  }
   .main__details {
     max-width: 1140px;
+    margin-top: 25px;
+  }
+  .details__heading {
+    justify-content: flex-start;
+    padding: 20px 16px;
   }
   .details__row {
     flex-direction: row;
     justify-content: space-between;
     gap: 40px;
   }
-
   .details__grid {
     width: 48%;
+  }
+  .footer {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 80px 120px;
+  }
+  .footer__descr {
+    text-align: left;
   }
 }
