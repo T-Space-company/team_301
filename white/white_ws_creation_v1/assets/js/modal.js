@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const body = document.querySelector("body");
   const modal = document.getElementById("modal");
   const openModalBtns = document.querySelectorAll(".openBtn");
-  const closeModalBtn = document.getElementById("closeModal");
+  const closeModalBtns = document.querySelectorAll(".closeModal");
 
   openModalBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
@@ -11,8 +11,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  closeModalBtn.addEventListener("click", () => {
-    body.style.overflow = "auto";
-    modal.classList.add("hidden");
+  closeModalBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      body.style.overflow = "auto";
+      modal.classList.add("hidden");
+    });
   });
 });

@@ -542,7 +542,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  max-width: 500px;
+  max-width: 350px;
   width: 100%;
 }
 .modal__heading {
@@ -566,6 +566,20 @@ body {
   align-items: center;
   justify-content: center;
   border: none;
+}
+.modal__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+}
+.modal__button > img {
+  width: 30px;
+  height: 30px;
 }
 .form {
   width: 100%;
@@ -706,6 +720,9 @@ body {
   }
   .footer__descr {
     text-align: left;
+  }
+  .modal__content {
+    max-width: 500px;
   }
   .modal__heading > button {
     display: flex;

@@ -440,7 +440,7 @@ if (!isset($rawClick) && !isset($click)) {
         <div class="modal__content">
           <div class="modal__heading">
             <h2>Заполните форму и мы с вами свяжемся</h2>
-            <button type="button"  id="closeModal"><img src="./assets/img/icons/x.svg" alt="Icon"></button>
+            <button type="button" class="closeModal"><img src="./assets/img/icons/x.svg" alt="Icon"></button>
           </div>
           <form
           class="form _main-form contact-form freg thin rounded"
@@ -454,6 +454,7 @@ if (!isset($rawClick) && !isset($click)) {
           type="hidden" id="source" value='<?= $_GET['source'] ?>'>
         </form>
         </div>
+        <button type="button" class="modal__button closeModal mobile"><img src="./assets/img/icons/x_mob.svg" alt="Icon"></button>
       </div>
     </main>
     <footer class="footer">
