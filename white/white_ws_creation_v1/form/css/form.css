@@ -1,7 +1,6 @@
 @import "flags.css";
 @import "intlTelInput.css";
 @import "modal-error.css";
-
 input {
   width: 100%;
   margin: 0 !important;
@@ -15,7 +14,6 @@ input {
   font-weight: 400;
   letter-spacing: 0.07px;
 }
-
 input::placeholder {
   color: #727695;
 }
@@ -38,7 +36,6 @@ input::placeholder {
   background: #449d44;
   border: none;
 }
-
 .form-group .btn {
   margin: 0 auto;
   width: 100%;
@@ -51,7 +48,6 @@ input::placeholder {
   font-weight: 500;
   text-transform: uppercase;
 }
-
 @media (min-width: 769px) {
   input {
     font-size: 15px;
@@ -64,7 +60,6 @@ input::placeholder {
     font-size: 20px;
   }
 }
-
 .form_error_msg {
   color: #ff0000;
   position: absolute;
@@ -89,7 +84,6 @@ input::placeholder {
   border-radius: 8px !important;
   z-index: 200;
 }
-
 .form-preloader {
   display: none;
   position: absolute;
@@ -99,39 +93,30 @@ input::placeholder {
   left: 0;
   z-index: 100;
   background: rgba(0, 0, 0, 0.7);
-
   align-content: center;
   justify-content: center;
   height: 100%;
 }
-
 .form-preloader.active {
   display: flex;
 }
-
 .form-preloader__img {
   width: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 img {
-  /* width: 100%; */
 }
-
 .top-form {
   font-weight: bold;
 }
-
 .reg-error {
   color: #ff0000;
 }
-
 .form_has_error {
   color: #ff0000;
 }
-
 .reg-form_error {
   text-align: center;
   margin: 25px 0 15px;
@@ -140,7 +125,6 @@ img {
   bottom: 39px;
   width: 100%;
 }
-
 .reg-form .popup {
   box-sizing: border-box;
   position: fixed;
@@ -150,7 +134,6 @@ img {
   height: 100%;
   z-index: 101;
 }
-
 .reg-form .popup .overlay {
   position: fixed;
   top: 0;
@@ -160,7 +143,6 @@ img {
   width: 100%;
   height: 100%;
 }
-
 .reg-form .popup .container {
   display: block;
   width: 320px;
@@ -175,7 +157,6 @@ img {
   box-shadow: 2px 2px 3px 3px rgba(0, 0, 0, 0.3);
   text-align: center;
 }
-
 .loadBtn {
   position: absolute;
   top: 50%;
@@ -184,14 +165,12 @@ img {
   max-width: 20px;
   max-height: 20px;
 }
-
 .form-group {
   margin-bottom: 20px;
   text-align: center;
   width: 100%;
   position: relative;
 }
-
 .valid:-webkit-autofill {
   appearance: none;
   border: 1px solid green;
@@ -202,17 +181,14 @@ img {
   border: 1px solid red !important;
   position: relative;
 }
-
 .iti {
   width: 100%;
 }
-
 .fa__err,
 .fa__checked {
   display: none;
   cursor: pointer;
 }
-
 .fa__errInfo {
   display: none;
   max-width: 180px;
@@ -220,21 +196,17 @@ img {
   line-height: 1;
   text-align: start;
 }
-
 .valid {
   border: 1px solid green;
   position: relative;
 }
-
 .isValid {
   border: 1px solid red !important;
   position: relative;
 }
-
 .isValid + span {
   display: block;
 }
-
 .isValid + .fa__err,
 .valid + i {
   display: block;
@@ -251,19 +223,15 @@ img {
   color: #e74c3c;
   visibility: visible;
 }
-
 .valid + i {
   color: #2ecc71;
 }
-
 .isValid + .fa__err::before {
   content: none;
 }
-
 .valid + i::before {
   content: none;
 }
-
 .isValid + .fa__err + .fa__errInfo {
   display: flex;
   justify-content: center;
@@ -279,24 +247,18 @@ img {
   border-radius: 8px !important;
   z-index: 200;
 }
-
 .notvalidphone {
   background-color: rgb(253, 164, 164) !important;
   border: 1px solid red !important;
 }
-
 .initial {
   border: 1px solid gray !important;
 }
-
 @media (max-width: 400px) {
   .fa__errInfo {
     max-width: 150px;
   }
 }
-
-/* PRELOADER */
-
 .preloaderWrapperForm {
   position: fixed;
   display: flex;
@@ -312,7 +274,6 @@ img {
   margin-top: 50px;
   margin: 0 !important;
 }
-
 .preloaderWrapperForm span {
   width: 5px;
   height: 50px;
@@ -323,7 +284,6 @@ img {
   animation: animade 1.5s infinite ease-in-out;
   margin-right: 4px !important;
 }
-
 @keyframes animade {
   0%,
   50%,
@@ -350,16 +310,16 @@ img {
   animation-delay: 1.5s;
 }
 .error-phone {
-  color: #d8000c; /* Красный цвет текста */
-  background-color: #ffd2d2; /* Светло-красный фон */
-  padding: 8px 10px; /* Отступы вокруг текста */
-  margin-top: 4px; /* Отступ сверху */
-  border: 1px solid #d8000c; /* Граница того же цвета, что и текст */
-  border-radius: 4px; /* Скругленные углы */
-  font-size: 14px; /* Размер шрифта */
-  font-family: Arial, sans-serif; /* Шрифт */
-  display: block; /* Блочный элемент, чтобы занимал всю ширину контейнера */
-  text-align: center; /* Текст по центру */
+  color: #d8000c;
+  background-color: #ffd2d2;
+  padding: 8px 10px;
+  margin-top: 4px;
+  border: 1px solid #d8000c;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  display: block;
+  text-align: center;
 }
 .input-group {
   display: block;
@@ -370,7 +330,6 @@ img {
   flex-direction: row;
   align-items: center;
 }
-
 .second {
   margin-top: 20px;
 }
