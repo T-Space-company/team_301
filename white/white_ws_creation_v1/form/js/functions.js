@@ -94,6 +94,23 @@ export function renderFormRegistrations(allFormClass) {
   </label>
   </div>
 
+ <div class="form-group input-group">
+  <label class="checkbox-label">
+  <div class="checkbox-wrap">
+     <input type="checkbox" name="checkbox" required>
+    </div>
+     <span class="checkbox-descr">Соглашаюсь на обработку персональных данных в соответствии с <a href="./assets/policy.pdf" target="_blank" class="accent">Политикой конфиденциальности</a></span>
+  </label>
+  </div>
+ <div class="form-group input-group">
+  <label class="checkbox-label">
+  <div class="checkbox-wrap">
+     <input type="checkbox" name="checkbox" required>
+    </div>
+     <span class="checkbox-descr">и публичной <a href="./assets/policy.pdf" target="_blank" class="accent">Офертой</a></span>
+  </label>
+  </div>
+
    <input name="code" type="hidden" value="" />
   <input name="lang" type="hidden" value="" />
   <input type="hidden" name="subid" class="js-inputSubid">

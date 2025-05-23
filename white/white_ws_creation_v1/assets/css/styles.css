@@ -584,6 +584,22 @@ body {
 .form-group:last-child {
   margin-bottom: 0;
 }
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.checkbox-wrap {
+  width: 16px;
+  height: 16px;
+}
+.checkbox-wrap > input {
+  width: 16px;
+  height: 16px;
+}
+.checkbox-descr > .accent {
+  color: #337ab7;
+}
 .desktop {
   display: none;
 }
