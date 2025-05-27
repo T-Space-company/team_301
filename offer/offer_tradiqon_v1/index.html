@@ -6,10 +6,99 @@
     <link rel="stylesheet" href="./assets/css/globals.css" />
     <link rel="stylesheet" href="./assets/css/styleguide.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <script src="form/js/libs/intlTelInput.js"></script>
+
+    <script type="application/javascript">
+      function getCookie(name) {
+        var v = document.cookie.match("(^|;) ?" + name + "=([^;]*)(;|$)");
+        return v ? v[2] : null;
+      }
+
+      function setCookie(name, value, days) {
+        var d = new Date();
+        d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days);
+        document.cookie =
+          name + "=" + value + ";path=/;expires=" + d.toGMTString();
+      }
+
+      function getSubId() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!"{subid}".match("{")) {
+          return "{subid}";
+        }
+        var clientSubid =
+          '<?php echo isset($client) ? $client->getSubid() : "" ?>';
+        if (!clientSubid.match(">")) {
+          return clientSubid;
+        }
+        if (params.get("_subid")) {
+          return params.get("_subid");
+        }
+        if (params.get("subid")) {
+          return params.get("subid");
+        }
+        if (getCookie("subid")) {
+          return getCookie("subid");
+        }
+      }
+
+      function getToken() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!"{token}".match("{")) {
+          return "{token}";
+        }
+        var clientToken =
+          '<?php echo isset($client) ? $client->getToken() : "" ?>';
+        if (!clientToken.match(">")) {
+          return clientToken;
+        }
+        if (params.get("_token")) {
+          return params.get("_token");
+        }
+        if (params.get("token")) {
+          return params.get("token");
+        }
+        if (getCookie("token")) {
+          return getCookie("token");
+        }
+        return null;
+      }
+
+      function getPixel() {
+        var params = new URLSearchParams(document.location.search.substr(1));
+        if (!"{pixel}".match("{")) {
+          return "{pixel}";
+        }
+        if (params.get("pixel")) {
+          return params.get("pixel");
+        }
+
+        if (getCookie("pixel")) {
+          return getCookie("pixel");
+        }
+
+        return null;
+      }
+
+      if (typeof URLSearchParams === "function") {
+        document.addEventListener("DOMContentLoaded", function (event) {
+          var params = new URLSearchParams(document.location.search.substr(1));
+          var subid = getSubId();
+          var token = getToken();
+          var pixel = getPixel();
+
+          params.set("_token", token);
+          setCookie("pixel", pixel);
+          setCookie("token", token);
+          setCookie("subid", subid);
+        });
+      }
+    </script>
   </head>
   <body>
     <div class="desktop">
-      <div class="header">
+      <div class="header" id="home">
         <div class="frame">
           <div class="fi">
             <div class="layer">
@@ -20,13 +109,39 @@
           </div>
           <div class="text-wrapper">Tradiqon</div>
         </div>
-        <div class="navbar">
-          <div class="div">Главная</div>
-          <div class="text-wrapper-2">Кому подойдет</div>
-          <div class="text-wrapper-2">Структура</div>
-          <div class="text-wrapper-2">Что получите</div>
-          <div class="text-wrapper-2">FAQ</div>
-          <div class="text-wrapper-2">Регистрация</div>
+        <div class="navbar desk">
+          <a href="#home" class="div">Главная</a>
+          <a href="#start" class="text-wrapper-2">Кому подойдет</a>
+          <a href="#speaker" class="text-wrapper-2">Структура</a>
+          <a href="#webinar" class="text-wrapper-2">Что получите</a>
+          <a href="#faq" class="text-wrapper-2">FAQ</a>
+          <a href="#reg" class="text-wrapper-2">Регистрация</a>
+        </div>
+        <button type="button" class="mob-menu mobile">
+          <img src="./assets/img/icons/btgr.svg" />
+        </button>
+        <div class="mobile-menu" id="mobileMenu">
+          <div class="menu-header">
+            <div class="frame">
+              <div class="fi">
+                <div class="layer">
+                  <div class="overlap-group">
+                    <img src="./assets/img/icons/logo.svg" alt="Logo" />
+                  </div>
+                </div>
+              </div>
+              <div class="text-wrapper">Tradiqon</div>
+            </div>
+            <button type="button" class="close-menu" id="closeMenu">×</button>
+          </div>
+          <nav class="menu-links">
+            <a href="#home" class="text-wrapper-2">Главная</a>
+            <a href="#start" class="text-wrapper-2">Кому подойдёт</a>
+            <a href="#speaker" class="text-wrapper-2">Структура</a>
+            <a href="#webinar" class="text-wrapper-2">Что получите</a>
+            <a href="#faq" class="text-wrapper-2">FAQ</a>
+            <a href="#reg" class="text-wrapper-2">Регистрация</a>
+          </nav>
         </div>
       </div>
       <div class="block">
@@ -41,55 +156,16 @@
               проверенной методикой
             </p>
           </div>
-          <div class="frame-5">
+          <form
+            class="frame-5 form _main-form contact-form freg thin rounded form_sub-wrap"
+            id="main-form"
+            method="post"
+          >
             <div class="heading-3">Осталось 17 мест</div>
-            <div class="frame-4">
-              <div class="frame-6">
-                <div class="heading-4">Ваше имя</div>
-                <div class="div-wrapper"><div class="heading-5">Имя</div></div>
-              </div>
-              <div class="frame-6">
-                <div class="heading-6">Ваш номер телефона</div>
-                <div class="div-wrapper">
-                  <div class="frame-7">
-                    <div class="frame-8">
-                      <div class="flag"></div>
-                      <div class="text-wrapper-3">+7</div>
-                      <img
-                        class="polygon"
-                        src="https://c.animaapp.com/mb56iw47WclffO/img/polygon-1.svg"
-                      />
-                    </div>
-                    <div class="text-wrapper-4">000 000-00-00</div>
-                  </div>
-                </div>
-              </div>
-              <div class="frame-9">
-                <div class="container">
-                  <div class="input">
-                    <div class="image-fill">
-                      <img
-                        class="image"
-                        src="https://c.animaapp.com/mb56iw47WclffO/img/image-1.svg"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <p class="div-2">
-                  <span class="span">Я согласен с </span>
-                  <span class="text-wrapper-5"
-                    >Политикой Конфиденциальности</span
-                  >
-                </p>
-              </div>
-            </div>
-            <div class="heading-wrapper">
-              <div class="heading-7">Хочу участвовать</div>
-            </div>
-          </div>
+          </form>
         </div>
       </div>
-      <div class="block-2">
+      <div class="block-2" id="start">
         <div class="frame-10">
           <div class="header-2">
             <p class="text-wrapper-6">
@@ -141,7 +217,7 @@
           </div>
         </div>
       </div>
-      <div class="block-3">
+      <div class="block-3" id="speaker">
         <div class="text">
           <div class="a-bold-headline-that">О спикере</div>
           <p class="text-wrapper-9">
@@ -149,12 +225,12 @@
             уникальная методика работает на практике, используя реальные примеры
           </p>
           <div class="frame-12">
-            <div class="heading-7">Узнать секреты</div>
+            <a href="#reg" class="heading-7">Узнать секреты</a>
           </div>
         </div>
         <div class="image-2"></div>
       </div>
-      <div class="block-4">
+      <div class="block-4" id="webinar">
         <div class="text-wrapper-10">Что будет на вебинаре</div>
         <div class="icon-section">
           <div class="icon-information">
@@ -175,7 +251,7 @@
           </div>
         </div>
       </div>
-      <div class="block-5">
+      <div class="block-5" id="faq">
         <div class="text-wrapper-13">Часто задаваемые вопросы</div>
         <div class="div-3">
           <div class="card">
@@ -215,85 +291,88 @@
             <div class="text-wrapper-14">Отзывы учеников</div>
           </div>
           <div class="tes-wrapper">
-            <div class="tes">
-              <div class="element">
-                <div class="frame-14">
-                  <img
-                    class="image-3"
-                    src="https://c.animaapp.com/mb56iw47WclffO/img/-.svg"
-                  />
-                  <p class="text-wrapper-15">
-                    Привет! Не знаю, с чего начать свой рассказ… Начну сначала:
-                    когда впервые познакомился <br />с криптой и<br />трейдингом,
-                    думал, что это лёгкие деньги, быстрый<br />успех и всё
-                    просто. <br />Но после обучения появляется<br />чёткое
-                    понимание дальнейших действий, <br />и постепенно<br />начинаешь
-                    достигать желаемых результатов.
-                  </p>
+            <div class="slider-container">
+              <div class="tes">
+                <div class="element">
+                  <div class="frame-14">
+                    <img
+                      class="image-3"
+                      src="https://c.animaapp.com/mb56iw47WclffO/img/-.svg"
+                    />
+                    <p class="text-wrapper-15">
+                      Привет! Не знаю, с чего начать свой рассказ… Начну
+                      сначала: когда впервые познакомился <br />с криптой и<br />трейдингом,
+                      думал, что это лёгкие деньги, быстрый<br />успех и всё
+                      просто. <br />Но после обучения появляется<br />чёткое
+                      понимание дальнейших действий, <br />и постепенно<br />начинаешь
+                      достигать желаемых результатов.
+                    </p>
+                  </div>
+                  <div class="frame-15">
+                    <div class="text-wrapper-16">Александр Иванов</div>
+                  </div>
                 </div>
-                <div class="frame-15">
-                  <div class="text-wrapper-16">Александр Иванов</div>
+                <div class="element">
+                  <div class="frame-14">
+                    <img
+                      class="image-3"
+                      src="https://c.animaapp.com/mb56iw47WclffO/img/-.svg"
+                    />
+                    <p class="text-wrapper-15">
+                      С уверенностью могу сказать: тем, кто хочет<br />разобраться
+                      и понять, как устроены рынки активов и в дальнейшем стать
+                      специалистом — обучение в данной<br />школе лучшее
+                      решение. Здесь максимально просто и<br />понятно подают
+                      информацию.
+                    </p>
+                  </div>
+                  <div class="frame-16">
+                    <div class="text-wrapper-16">Дмитрий Смирнов</div>
+                  </div>
                 </div>
-              </div>
-              <div class="element">
-                <div class="frame-14">
-                  <img
-                    class="image-3"
-                    src="https://c.animaapp.com/mb56iw47WclffO/img/-.svg"
-                  />
-                  <p class="text-wrapper-15">
-                    С уверенностью могу сказать: тем, кто хочет<br />разобраться
-                    и понять, как устроены рынки активов и в дальнейшем стать
-                    специалистом — обучение в данной<br />школе лучшее решение.
-                    Здесь максимально просто и<br />понятно подают информацию.
-                  </p>
+                <div class="element">
+                  <div class="frame-14">
+                    <img
+                      class="image-3"
+                      src="https://c.animaapp.com/mb56iw47WclffO/img/-.svg"
+                    />
+                    <p class="text-wrapper-15">
+                      Я довольна всем <br />и с нетерпением жду продолжения<br />обучения
+                      в следующем пакете. Лектору большое<br />спасибо — на
+                      стримах всё объясняется чётко <br />и доступно, простым
+                      языком.
+                    </p>
+                  </div>
+                  <div class="frame-16">
+                    <div class="text-wrapper-16">Елена Балабанова</div>
+                  </div>
                 </div>
-                <div class="frame-16">
-                  <div class="text-wrapper-16">Дмитрий Смирнов</div>
-                </div>
-              </div>
-              <div class="element">
-                <div class="frame-14">
-                  <img
-                    class="image-3"
-                    src="https://c.animaapp.com/mb56iw47WclffO/img/-.svg"
-                  />
-                  <p class="text-wrapper-15">
-                    Я довольна всем <br />и с нетерпением жду продолжения<br />обучения
-                    в следующем пакете. Лектору большое<br />спасибо — на
-                    стримах всё объясняется чётко <br />и доступно, простым
-                    языком.
-                  </p>
-                </div>
-                <div class="frame-16">
-                  <div class="text-wrapper-16">Елена Балабанова</div>
-                </div>
-              </div>
-              <div class="element">
-                <div class="frame-14">
-                  <img
-                    class="image-3"
-                    src="https://c.animaapp.com/mb56iw47WclffO/img/-.svg"
-                  />
-                  <p class="text-wrapper-15">
-                    Здравствуйте! Позвольте поделиться своим опытом. Когда я
-                    впервые столкнулся <br />с миром криптовалют <br />и
-                    трейдинга, мне казалось, что это легкий путь к богатству.
-                    Однако, после прохождения курса, я осознал, что успех
-                    требует знаний <br />и стратегии. Постепенно я начал
-                    понимать, как действовать, <br />и результаты не заставили
-                    себя ждать.
-                  </p>
-                </div>
-                <div class="frame-15">
-                  <div class="text-wrapper-16">Игорь Лебедев</div>
+                <div class="element">
+                  <div class="frame-14">
+                    <img
+                      class="image-3"
+                      src="https://c.animaapp.com/mb56iw47WclffO/img/-.svg"
+                    />
+                    <p class="text-wrapper-15">
+                      Здравствуйте! Позвольте поделиться своим опытом. Когда я
+                      впервые столкнулся <br />с миром криптовалют <br />и
+                      трейдинга, мне казалось, что это легкий путь к богатству.
+                      Однако, после прохождения курса, я осознал, что успех
+                      требует знаний <br />и стратегии. Постепенно я начал
+                      понимать, как действовать, <br />и результаты не заставили
+                      себя ждать.
+                    </p>
+                  </div>
+                  <div class="frame-15">
+                    <div class="text-wrapper-16">Игорь Лебедев</div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="frame-wrapper">
+      <div class="frame-wrapper" id="reg">
         <div class="frame-17">
           <div class="frame-18">
             <div class="frame-19">
@@ -317,52 +396,13 @@
               </div>
             </div>
           </div>
-          <div class="frame-23">
+          <form
+            class="frame-5 form _main-form contact-form freg thin rounded form_sub-wrap"
+            id="main-form"
+            method="post"
+          >
             <div class="heading-3">Осталось 17 мест</div>
-            <div class="frame-4">
-              <div class="frame-6">
-                <div class="heading-4">Ваше имя</div>
-                <div class="div-wrapper"><div class="heading-5">Имя</div></div>
-              </div>
-              <div class="frame-6">
-                <div class="heading-6">Ваш номер телефона</div>
-                <div class="div-wrapper">
-                  <div class="frame-7">
-                    <div class="frame-8">
-                      <div class="flag"></div>
-                      <div class="text-wrapper-3">+7</div>
-                      <img
-                        class="polygon"
-                        src="https://c.animaapp.com/mb56iw47WclffO/img/polygon-1.svg"
-                      />
-                    </div>
-                    <div class="text-wrapper-4">000 000-00-00</div>
-                  </div>
-                </div>
-              </div>
-              <div class="frame-9">
-                <div class="container">
-                  <div class="input">
-                    <div class="image-fill">
-                      <img
-                        class="image"
-                        src="https://c.animaapp.com/mb56iw47WclffO/img/image-1.svg"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <p class="div-2">
-                  <span class="span">Я согласен с </span>
-                  <span class="text-wrapper-5"
-                    >Политикой Конфиденциальности</span
-                  >
-                </p>
-              </div>
-            </div>
-            <div class="frame-24">
-              <div class="heading-7">Хочу участвовать</div>
-            </div>
-          </div>
+          </form>
         </div>
       </div>
       <div class="footer">
@@ -391,5 +431,57 @@
       </div>
     </div>
     <script src="./assets/js/faq.js"></script>
+    <script src="./assets/js/timer.js"></script>
+    <script src="./assets/js/slider.js"></script>
+    <script src="./assets/js/mobmenu.js"></script>
+
+    <script src="loadAssets.js?v=67856"></script>
+
+    <script type="application/javascript">
+      $(document).on("click", 'a[href^="#"]', function (event) {
+        event.preventDefault();
+
+        $("html, body").animate(
+          {
+            scrollTop: $($.attr(this, "href")).offset().top,
+          },
+          500
+        );
+      });
+
+      function getSubId() {
+        if (!"{subid}".match("{")) {
+          localStorage.setItem("subid", "{subid}");
+          return "{subid}";
+        }
+      }
+      getSubId();
+    </script>
+
+    <script>
+      window.onload = function () {
+        var err = localStorage.getItem("unsuitable");
+        var thx = localStorage.getItem("thanks");
+        if (err && err === "false") {
+          const fileErr = "err.html";
+          window.location.href = `${fileErr}${window.location.search}`;
+        } else if (thx && thx === "true") {
+          const fileThx = "thanks-page.php";
+          window.location.href = `${fileThx}${window.location.search}`;
+        }
+      };
+
+      window.onpageshow = function () {
+        var err = localStorage.getItem("unsuitable");
+        var thx = localStorage.getItem("thanks");
+        if (err && err === "false") {
+          const fileErr = "err.html";
+          window.location.href = `${fileErr}${window.location.search}`;
+        } else if (thx && thx === "true") {
+          const fileThx = "thanks-page.php";
+          window.location.href = `${fileThx}${window.location.search}`;
+        }
+      };
+    </script>
   </body>
 </html>
