@@ -44,7 +44,13 @@ input::placeholder {
   padding: 10px 50px;
   border: none;
   border-radius: 20px;
-  background: var(--Accent-2, #3a4b41);
+  background-color: var(--Accent-2, #3a4b41);
+  transition: background-color 250ms ease;
+}
+
+.buttonSend:active,
+.buttonSend:hover {
+  background-color: rgba(58, 75, 65, 0.7);
 }
 
 .form-group .btn {

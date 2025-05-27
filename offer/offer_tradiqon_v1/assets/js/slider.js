@@ -1,10 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
+  if (window.innerWidth > 1024) return;
+
   const track = document.querySelector(".tes");
   const slides = document.querySelectorAll(".tes .element");
   let currentIndex = 0;
   let isDragging = false;
   let startX = 0;
-  let currentTranslate = 0;
 
   function goToSlide(index) {
     currentIndex = (index + slides.length) % slides.length;
