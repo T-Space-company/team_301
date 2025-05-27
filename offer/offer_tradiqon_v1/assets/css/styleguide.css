@@ -1,0 +1,38 @@
+:root {
+  --heading-3-font-family: "Manrope", Helvetica;
+  --heading-3-font-weight: 400;
+  --heading-3-font-size: 20px;
+  --heading-3-letter-spacing: -0.4px;
+  --heading-3-line-height: 109.00679779052734%;
+  --heading-3-font-style: normal;
+  --heading-font-family: "Manrope", Helvetica;
+  --heading-font-weight: 600;
+  --heading-font-size: 50px;
+  --heading-letter-spacing: -1px;
+  --heading-line-height: 105.81480407714844%;
+  --heading-font-style: normal;
+  --heading-1-font-family: "Manrope", Helvetica;
+  --heading-1-font-weight: 400;
+  --heading-1-font-size: 42px;
+  --heading-1-letter-spacing: -0.84px;
+  --heading-1-line-height: 105.81480407714844%;
+  --heading-1-font-style: normal;
+  --heading-2-font-family: "Manrope", Helvetica;
+  --heading-2-font-weight: 400;
+  --heading-2-font-size: 32px;
+  --heading-2-letter-spacing: -0.64px;
+  --heading-2-line-height: 109.00679779052734%;
+  --heading-2-font-style: normal;
+  --paragraph-font-family: "Manrope", Helvetica;
+  --paragraph-font-weight: 400;
+  --paragraph-font-size: 16px;
+  --paragraph-letter-spacing: 0px;
+  --paragraph-line-height: 109.00679779052734%;
+  --paragraph-font-style: normal;
+  --link-font-family: "Manrope", Helvetica;
+  --link-font-weight: 500;
+  --link-font-size: 12px;
+  --link-letter-spacing: 0px;
+  --link-line-height: 115%;
+  --link-font-style: normal;
+}
