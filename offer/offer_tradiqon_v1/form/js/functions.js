@@ -97,7 +97,7 @@ export function renderFormRegistrations(allFormClass) {
 <div class="form-group input-group">
   <label class="checkbox-label" style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
     <input type="checkbox" name="privacy_agreement" required style="width: 16px; height: 16px;" />
-    <span class="checkbox-text">Я согласен с <a href="/privacy-policy" target="_blank">Политикой Конфиденциальности</a></span>
+    <span class="checkbox-text">Я согласен с <a href="/privacy-policy" target="_blank">Политикой Конфиденциальности и обработкой персональных данных</a></span>
   </label>
 </div>
 

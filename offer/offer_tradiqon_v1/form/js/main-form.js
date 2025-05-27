@@ -20,7 +20,6 @@ const buyerValue = getQueryParam("buyer");
 const utm_content = getQueryParam("utm_content");
 const utm_campaign = getQueryParam("utm_campaign");
 
-
 const settingObjForm = {
   postParams: {
     first_name: null,
@@ -39,10 +38,11 @@ const settingObjForm = {
       this.last_name = document.querySelector('input[name="last_name"]').value;
       this.country_code = document.querySelector('input[name="code"]').value;
       this.landing = "SagynCapital";
-      this.utm_medium = buyerValue;
+      this.utm_medium = "2118";
       this.campaing_id = "Sagyn";
       this.utm_content = utm_content;
       this.utm_campaign = utm_campaign;
+      this.answers = localStorage.getItem("answers");
     },
   },
 };
@@ -168,11 +168,11 @@ const postData = async (data) => {
   addLoader(allBtnSubmit, btnFormText);
   localStorage.setItem("thanks", true);
 
-  fetch('./handler.php', {
-    method: 'POST',
+  fetch("./handler.php", {
+    method: "POST",
     body: JSON.stringify(data),
     headers: {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
     },
   });
   thenkYouPage();

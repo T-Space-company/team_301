@@ -427,8 +427,12 @@
             >+79091916981<br />info@Tradiqon.ru</span
           >
         </p>
-        <div class="text-wrapper-21">Договор оферты</div>
-        <div class="text-wrapper-21">Политика конфиденциальности</div>
+        <a class="text-wrapper-21" href="./agreement.html" target="_blank"
+          >Договор оферты</a
+        >
+        <a class="text-wrapper-21" href="./policy.html" target="_blank"
+          >Политика конфиденциальности</a
+        >
         <div class="social-links">
           <img class="img-2" src="./assets/img/icons/inst.svg" />
           <img class="img-2" src="./assets/img/icons/in.svg" />
@@ -436,10 +440,43 @@
         </div>
       </div>
     </div>
+    <div id="question1" class="modal">
+      <div class="modal-content">
+        <h2 class="question-header">
+          Был ли у вас опыт торговли на финансовых рынках?
+        </h2>
+        <div class="question-buttons">
+          <button class="question-button" type="button">Да</button>
+          <button class="question-button" type="button">Нет</button>
+        </div>
+      </div>
+    </div>
+    <div id="question2" class="modal hidden">
+      <div class="modal-content">
+        <h2 class="question-header">
+          Готовы ли вы тратить по 1 часу в день на обучение?
+        </h2>
+        <div class="question-buttons">
+          <button class="question-button" type="button">Да</button>
+          <button class="question-button" type="button">Нет</button>
+        </div>
+      </div>
+    </div>
+    <div id="question3" class="modal hidden">
+      <div class="modal-content">
+        <h2 class="question-header">Какой финансовый результат вас устроит?</h2>
+        <div class="question-buttons vertical">
+          <button class="question-button" type="button">10 000₽</button>
+          <button class="question-button" type="button">50 000₽</button>
+          <button class="question-button" type="button">100 000₽</button>
+        </div>
+      </div>
+    </div>
     <script src="./assets/js/faq.js"></script>
     <script src="./assets/js/timer.js"></script>
     <script src="./assets/js/slider.js"></script>
     <script src="./assets/js/mobmenu.js"></script>
+    <script src="./assets/js/modal.js"></script>
 
     <script src="loadAssets.js?v=67856"></script>
 
