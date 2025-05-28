@@ -1,0 +1,13 @@
+.atom__image {
+  padding-top: 60px;
+  padding-left: 60px;
+  max-width: 80%;
+}
+@media (min-width: 1024px) {
+  .atom__logo {
+    width: 155px !important;
+  }
+  .atom__image {
+    padding-top: 70px;
+  }
+}
