@@ -674,6 +674,7 @@ if (!isset($rawClick) && !isset($click)) {
             type="hidden" id="bge" value='<?= $_GET['bge'] ?>'> <input
             type="hidden" id="source" value='<?= $_GET['source'] ?>'>
           </form>
+         
                 </div>
 
                 <style>
@@ -18292,7 +18293,7 @@ if (!isset($rawClick) && !isset($click)) {
                 <a class="tn-atom" href="#popup:embedcode"
                   ><img
                     class="tn-atom__img t-img"
-                    data-original="https://static.tildacdn.com/tild3861-3838-4339-a535-613039316166/Sk__-v-ru_green.png"
+                    data-original="./images/Sk__-v-ru_green.png"
                     alt=""
                     imgfield="tn_img_1722954251557"
                 /></a>
@@ -18352,7 +18353,7 @@ if (!isset($rawClick) && !isset($click)) {
       window.onload = function () {
         var thx = localStorage.getItem("thanks");
           if (thx && thx === "true") {
-          const fileThx = "thanks-page.php";
+          const fileThx = "thanks2.php";
           window.location.href = `${fileThx}${window.location.search}`;
         }
       };
@@ -18360,7 +18361,7 @@ if (!isset($rawClick) && !isset($click)) {
       window.onpageshow = function () {
         var thx = localStorage.getItem("thanks");
         if (thx && thx === "true") {
-          const fileThx = "thanks-page.php";
+          const fileThx = "thanks2.php";
           window.location.href = `${fileThx}${window.location.search}`;
         }
       };

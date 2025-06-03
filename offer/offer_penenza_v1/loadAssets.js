@@ -19,12 +19,12 @@ function loadJSModule(filename) {
 const cssFiles = [
   "all.min.css?v=10",
   "flags.css",
-  "form.css?v=8786",
+  "form.css?v=1222315",
   "intlTelInput.css",
   "modal-error.css",
 ];
 
-jsFiles = ["libs/utils.js", "main-form.js?v=34523345"];
+jsFiles = ["libs/utils.js", "main-form.js?v=324234"];
 
 // Загрузка всех CSS файлов
 cssFiles.forEach((filename) => {

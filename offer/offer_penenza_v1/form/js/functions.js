@@ -66,8 +66,8 @@ export function renderFormRegistrations(allFormClass) {
   const htmlFormHtml = `
 <div class="form-group input-group ">
 <label for="name" class="input-label">
-Ваше имя
-    <input class="form-control form-input form__input" name="name" placeholder="Имя"  type="text" required />
+Ваше имя*
+    <input class="form-control form-input form__input" name="name" placeholder="Имя" type="text" required="">
     <i class="fa__err"></i>
     <span class="fa__errInfo">- Удалите цифры </span>
     <i class="fa__checked"></i>
@@ -75,8 +75,8 @@ export function renderFormRegistrations(allFormClass) {
 </div>
   <div class="form-group input-group ">
   <label for="last_name" class="input-label">
-Ваша фамилия
-    <input class="form-control  form-input form__input" name="last_name" placeholder="Ваша фамилия" required type="text" />
+Ваша фамилия*
+    <input class="form-control  form-input form__input" name="last_name" placeholder="Ваша фамилия" required="" type="text">
     <i class="fa__err"></i>
     <span class="fa__errInfo">- Удалите цифры </span>
     <i class="fa__checked"></i>
@@ -86,21 +86,21 @@ export function renderFormRegistrations(allFormClass) {
 
   <div class="form-group input-group">
   <label for="phone" class="input-label">
-Ваш номер телефона
-    <input class="form-control form-input _phone" maxlength="10" placeholder="902 284 - 22 - 79" name="phone" type="tel" />
+Ваш номер телефона*
+    <div class="iti iti--separate-dial-code"><div class="iti__flag-container"><div class="iti__selected-flag" role="combobox" aria-controls="iti-0__country-listbox" aria-owns="iti-0__country-listbox" aria-expanded="false" title="Russia (Россия): +7"><div class="iti__flag iti__ru"></div><div class="iti__selected-dial-code">+7</div></div></div><input class="form-control form-input _phone" maxlength="10" placeholder="902 284 - 22 - 79" name="phone" type="tel" autocomplete="off" data-intl-tel-input-id="0" style="padding-left: 63px;"></div>
     <div class="error-phone"></div>
     </label>
   </div>
 
-   <input name="code" type="hidden" value="" />
-  <input name="lang" type="hidden" value="" />
+   <input name="code" type="hidden" value="">
+  <input name="lang" type="hidden" value="">
   <input type="hidden" name="subid" class="js-inputSubid">
   <input type="hidden" name="answer">
   
   
   <div class="form-group form-group-button">
 
-    <button class="btn secondary-solid-btn btn-block buttonSend"  name="submitBtn" type="submit">
+    <button class="btn secondary-solid-btn btn-block buttonSend" name="submitBtn" type="submit">
     <p class="btnFormText" style="color:white;">Зарегистрироваться
     </p>
     </button>
