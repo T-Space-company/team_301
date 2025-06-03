@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #111;
+  color: white;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.quiz {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.step {
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  overflow: hidden;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.step.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.overlay {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: right;
+  width: 100%;
+  padding: 40px;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.overlay > div {
+  max-width: 500px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  border-radius: 12px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  text-align: center;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+button {
+  padding: 15px 25px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 260px;
+  transition: all 250ms;
+}
+
+button:hover {
+  background: white;
+  color: black;
+}
+
+#btn-step-1 {
+  margin-top: 40px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+input,
+select {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  width: 80%;
+  max-width: 300px;
+}
+
+.btn {
+  background: white;
+  color: black;
+  border: none;
+  padding: 12px 30px;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 10px;
+}
+
+.links {
+  margin-top: 20px;
+  font-size: 0.7rem;
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .overlay {
+    align-items: center;
+    text-align: center;
+  }
+
+  .overlay > div {
+    margin-right: 0;
+  }
+}
