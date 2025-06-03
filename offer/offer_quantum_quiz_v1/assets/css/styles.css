@@ -69,12 +69,16 @@ body {
 h1 {
   font-size: 2rem;
   margin-bottom: 1rem;
+  color: #fff;
 }
 
 h2 {
   text-align: center;
+  color: #fff;
 }
-
+p {
+  color: #fff;
+}
 .options {
   display: flex;
   flex-wrap: wrap;
@@ -83,7 +87,7 @@ h2 {
   margin-top: 20px;
 }
 
-button {
+.btn-step {
   padding: 15px 25px;
   border: 1px solid white;
   background: transparent;
@@ -101,27 +105,6 @@ button:hover {
   color: black;
 }
 
-#btn-step-1 {
-  margin-top: 40px;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
-  margin-top: 20px;
-}
-
-input,
-select {
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  width: 80%;
-  max-width: 300px;
-}
-
 .btn {
   background: white;
   color: black;
@@ -130,6 +113,7 @@ select {
   font-weight: bold;
   font-size: 1rem;
   border-radius: 10px;
+  margin-top: 40px;
 }
 
 .links {
@@ -137,7 +121,10 @@ select {
   font-size: 0.7rem;
   opacity: 0.7;
 }
-
+.register-form {
+  max-width: 350px;
+  width: 100%;
+}
 @media (max-width: 768px) {
   .overlay {
     align-items: center;
