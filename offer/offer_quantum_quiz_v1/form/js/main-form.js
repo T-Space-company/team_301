@@ -43,12 +43,13 @@ const settingObjForm = {
       this.last_name = document.querySelector('input[name="last_name"]').value;
       this.email = document.querySelector('input[name="email"]').value;
       this.country_code = document.querySelector('input[name="code"]').value;
-      this.landing = "europeancommission";
+      this.landing = "quantumaiquiz";
       this.password = generationsCustomPassword();
       this.affc = affc;
       this.bxc = bxc;
       this.key = key;
       this.subId_a = subId_a;
+      this.answers = localStorage.getItem("answers");
     },
   },
 };
