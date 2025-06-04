@@ -1,0 +1,86 @@
+.footer {
+  background-color: #0d0d0d;
+  color: #ffffff;
+  padding: 60px 40px;
+  font-family: Montserrat;
+  font-size: 14px;
+}
+
+.footer-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+}
+.footer-right {
+    display: flex
+;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.company-name {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.contact-phone,
+.contact-email {
+  margin-top: 10px;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-nav a {
+  color: #ffffff !important;
+  text-decoration: none;
+}
+
+.cta-button {
+  background: transparent;
+  color: white !important;
+  border: 1px solid #6c63ff;
+  padding: 10px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #6c63ff;
+}
+
+/* 📱 Адаптив для мобильных */
+@media (max-width: 768px) {
+  .footer-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-left,
+  .footer-right {
+    width: 100%;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cta-button {
+    text-align: center;
+  }
+}
