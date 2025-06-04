@@ -38,7 +38,7 @@ const settingObjForm = {
       this.last_name = document.querySelector('input[name="last_name"]').value;
       this.country_code = document.querySelector('input[name="code"]').value;
       this.landing = "SagynCapital";
-      this.utm_medium = "2103";
+      this.utm_medium = "2129";
       this.campaing_id = "Sagyn";
       this.utm_content = utm_content;
       this.utm_campaign = utm_campaign;

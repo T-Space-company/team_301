@@ -155,6 +155,8 @@ img:not([src]) {
 }
 #form-section {
   padding: 0 60px;
+  max-width: 1160px;
+  margin: 0 auto;
 }
 .form__checkbox {
   display: flex;
