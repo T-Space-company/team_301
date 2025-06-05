@@ -96,7 +96,7 @@ export function renderFormRegistrations(allFormClass) {
   <div class="form-group">
     <label class="form__checkbox">
         <input type="checkbox" name="agree" required>
-        <span>Я согласен с <a target="_blank" href="/policy.html">Политикой Конфиденциальности</a></span>
+        <span>Я согласен с <a target="_blank" href="./policy.html">Политикой Конфиденциальности</a></span>
     </label>
 </div>
   
