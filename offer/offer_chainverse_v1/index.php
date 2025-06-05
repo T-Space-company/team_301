@@ -2701,9 +2701,9 @@
           }
           #rec804855614 .tn-elem[data-elem-id="1727694527034"] {
             z-index: 8;
-            top: 282px;
-            left: calc(50% - 600px + 42px);
-            width: 269px;
+            top: 300px;
+            left: calc(50% - 600px + 130px);
+            width: 140px;
             height: auto;
           }
           #rec804855614 .tn-elem[data-elem-id="1727694527034"] .tn-atom {
@@ -2715,21 +2715,21 @@
           }
           @media screen and (max-width: 1199px) {
             #rec804855614 .tn-elem[data-elem-id="1727694527034"] {
-              left: calc(50% - 480px + 8px);
+              left: calc(50% - 480px + 100px);
               height: auto;
             }
           }
           @media screen and (max-width: 959px) {
             #rec804855614 .tn-elem[data-elem-id="1727694527034"] {
-              left: calc(50% - 320px + 153px);
+              left: calc(50% - 320px + 250px);
               height: auto;
             }
           }
           @media screen and (max-width: 639px) {
             #rec804855614 .tn-elem[data-elem-id="1727694527034"] {
               top: 192px;
-              left: calc(50% - 160px + 17px);
-              width: 233px;
+              left: calc(50% - 160px + 95px);
+              width: 120px;
               height: auto;
             }
           }
@@ -2830,9 +2830,9 @@
           }
           #rec804855614 .tn-elem[data-elem-id="1727694628699"] {
             z-index: 11;
-            top: 201px;
-            left: calc(50% - 600px + 408px);
-            width: 391px;
+            top: 300px;
+            left: calc(50% - 600px + 460px);
+            width: 260px;
             height: auto;
           }
           #rec804855614 .tn-elem[data-elem-id="1727694628699"] .tn-atom {
@@ -2844,22 +2844,22 @@
           }
           @media screen and (max-width: 1199px) {
             #rec804855614 .tn-elem[data-elem-id="1727694628699"] {
-              left: calc(50% - 480px + 285px);
+              left: calc(50% - 480px + 335px);
               height: auto;
             }
           }
           @media screen and (max-width: 959px) {
             #rec804855614 .tn-elem[data-elem-id="1727694628699"] {
-              top: 481px;
-              left: calc(50% - 320px + 134px);
+              top: 580px;
+              left: calc(50% - 320px + 185px);
               height: auto;
             }
           }
           @media screen and (max-width: 639px) {
             #rec804855614 .tn-elem[data-elem-id="1727694628699"] {
-              top: 405px;
-              left: calc(50% - 160px + 0px);
-              width: 309px;
+              top: 465px;
+              left: calc(50% - 160px + 45px);
+              width: 215px;
               height: auto;
             }
           }
@@ -2961,8 +2961,8 @@
           #rec804855614 .tn-elem[data-elem-id="1727694918772"] {
             z-index: 14;
             top: 284px;
-            left: calc(50% - 600px + 818px);
-            width: 315px;
+            left: calc(50% - 600px + 830px);
+            width: 295px;
             height: auto;
           }
           #rec804855614 .tn-elem[data-elem-id="1727694918772"] .tn-atom {
@@ -2974,7 +2974,8 @@
           }
           @media screen and (max-width: 1199px) {
             #rec804855614 .tn-elem[data-elem-id="1727694918772"] {
-              left: calc(50% - 480px + 630px);
+              left: calc(50% - 480px + 650px);
+              width: 280px;
               height: auto;
             }
           }
@@ -2987,8 +2988,8 @@
           }
           @media screen and (max-width: 639px) {
             #rec804855614 .tn-elem[data-elem-id="1727694918772"] {
-              top: 740px;
-              left: calc(50% - 160px + 23px);
+              top: 755px;
+              left: calc(50% - 160px + 40px);
               width: 233px;
               height: auto;
             }
@@ -3143,28 +3144,12 @@
               class="t396__elem tn-elem tn-elem__8048556141727694527034"
               data-elem-id="1727694527034"
               data-elem-type="image"
-              data-field-top-value="282"
-              data-field-left-value="42"
-              data-field-width-value="269"
-              data-field-axisy-value="top"
-              data-field-axisx-value="left"
-              data-field-container-value="grid"
-              data-field-topunits-value="px"
-              data-field-leftunits-value="px"
-              data-field-heightunits-value=""
-              data-field-widthunits-value="px"
-              data-field-filewidth-value="1280"
-              data-field-fileheight-value="853"
-              data-field-top-res-320-value="192"
-              data-field-left-res-320-value="17"
-              data-field-width-res-320-value="233"
-              data-field-left-res-640-value="153"
-              data-field-left-res-960-value="8"
+            
             >
               <div class="tn-atom">
                 <img
                   class="tn-atom__img t-img"
-                  data-original="https://static.tildacdn.com/tild6433-3133-4536-a361-626530353539/cute-little-rich-ham.png"
+                  data-original="images/cute-little-rich-ham.png"
                   src="images/cute-little-rich-ham.png"
                   alt=""
                   imgfield="tn_img_1727694527034"
@@ -3230,29 +3215,12 @@
               class="t396__elem tn-elem tn-elem__8048556141727694628699"
               data-elem-id="1727694628699"
               data-elem-type="image"
-              data-field-top-value="201"
-              data-field-left-value="408"
-              data-field-width-value="391"
-              data-field-axisy-value="top"
-              data-field-axisx-value="left"
-              data-field-container-value="grid"
-              data-field-topunits-value="px"
-              data-field-leftunits-value="px"
-              data-field-heightunits-value=""
-              data-field-widthunits-value="px"
-              data-field-filewidth-value="1280"
-              data-field-fileheight-value="960"
-              data-field-top-res-320-value="405"
-              data-field-left-res-320-value="0"
-              data-field-width-res-320-value="309"
-              data-field-top-res-640-value="481"
-              data-field-left-res-640-value="134"
-              data-field-left-res-960-value="285"
+              
             >
               <div class="tn-atom">
                 <img
                   class="tn-atom__img t-img"
-                  data-original="https://static.tildacdn.com/tild3363-3066-4939-b338-363266626163/usd-bull-buy-market-.png"
+                  data-original="images/usd-bull-buy-market-.png"
                   src="images/usd-bull-buy-market-.png"
                   alt=""
                   imgfield="tn_img_1727694628699"
@@ -3296,7 +3264,7 @@
               data-field-heightunits-value=""
               data-field-widthunits-value="px"
               data-field-top-res-320-value="896"
-              data-field-left-res-320-value="33"
+              data-field-left-res-320-value="23"
               data-field-width-res-320-value="267"
               data-field-top-res-640-value="1086"
               data-field-left-res-640-value="70"
@@ -3317,29 +3285,12 @@
               class="t396__elem tn-elem tn-elem__8048556141727694918772"
               data-elem-id="1727694918772"
               data-elem-type="image"
-              data-field-top-value="284"
-              data-field-left-value="818"
-              data-field-width-value="315"
-              data-field-axisy-value="top"
-              data-field-axisx-value="left"
-              data-field-container-value="grid"
-              data-field-topunits-value="px"
-              data-field-leftunits-value="px"
-              data-field-heightunits-value=""
-              data-field-widthunits-value="px"
-              data-field-filewidth-value="1280"
-              data-field-fileheight-value="717"
-              data-field-top-res-320-value="740"
-              data-field-left-res-320-value="23"
-              data-field-width-res-320-value="233"
-              data-field-top-res-640-value="868"
-              data-field-left-res-640-value="159"
-              data-field-left-res-960-value="630"
+             
             >
               <div class="tn-atom">
                 <img
                   class="tn-atom__img t-img"
-                  data-original="https://static.tildacdn.com/tild3837-3534-4462-a531-326634373966/3d-cartoon-whale-wit.png"
+                  data-original="images/3d-cartoon-whale-wit.png"
                   src="images/3d-cartoon-whale-wit.png"
                   alt=""
                   imgfield="tn_img_1727694918772"
