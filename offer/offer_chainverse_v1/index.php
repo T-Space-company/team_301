@@ -747,7 +747,7 @@
               height: auto;
             }
             #rec804829988 .tn-elem[data-elem-id="1727691741007"] .tn-atom {
-              font-size: 20px;
+              font-size: 23px;
               line-height: 1.15;
               background-size: cover;
             }
@@ -943,7 +943,7 @@
             }
           }
           #rec804829988 .tn-elem[data-elem-id="1727692824188"] {
-            z-index: 16;
+            z-index: 35;
             top: 257px;
             left: calc(50% - 600px + 620px);
             width: 360px;
@@ -1420,10 +1420,10 @@
             class="t396__artboard"
             data-artboard-recid="804829988"
             data-artboard-screens="320,640,960,1200"
-            data-artboard-height="760"
+            data-artboard-height="660"
             data-artboard-valign="center"
             data-artboard-upscale="grid"
-            data-artboard-height-res-320="820"
+            data-artboard-height-res-320="660"
             data-artboard-upscale-res-320="window"
           >
             <div class="t396__carrier" data-artboard-recid="804829988"></div>
@@ -1596,7 +1596,7 @@
               data-field-width-res-320-value="289"
             >
               <div class="tn-atom" field="tn_text_1727691741007">
-                УЧИТЕСЬ ИНВЕСТИРОВАТЬ  <strong>В КРИПТОВАЛЮТЫ</strong>
+                УЧИТЕСЬ <br> ИНВЕСТИРОВАТЬ  <br><strong>В КРИПТОВАЛЮТЫ</strong>
               </div>
             </div>
             <div
@@ -1623,7 +1623,7 @@
                 пользоваться
               </div>
             </div>
-            <div
+            <!-- <div
               class="t396__elem tn-elem tn-elem__8048299881727692810004"
               data-elem-id="1727692810004"
               data-elem-type="image"
@@ -1654,8 +1654,8 @@
                   imgfield="tn_img_1727692810004"
                 />
               </div>
-            </div>
-            <div
+            </div> -->
+            <!-- <div
               class="t396__elem tn-elem tn-elem__8048299881727693125165"
               data-elem-id="1727693125165"
               data-elem-type="image"
@@ -1690,14 +1690,14 @@
                   imgfield="tn_img_1727693125165"
                 />
               </div>
-            </div>
+            </div> -->
             <div
               class="t396__elem tn-elem tn-elem__8048299881727693011751"
               data-elem-id="1727693011751"
               data-elem-type="image"
-              data-field-top-value="470"
-              data-field-left-value="1080"
-              data-field-width-value="195"
+              data-field-top-value="390"
+              data-field-left-value="740"
+              data-field-width-value="420"
               data-field-axisy-value="top"
               data-field-axisx-value="left"
               data-field-container-value="grid"
@@ -1710,23 +1710,23 @@
               data-animate-prx-dy="30"
               data-field-filewidth-value="245"
               data-field-fileheight-value="201"
-              data-field-top-res-320-value="630"
-              data-field-left-res-320-value="213"
-              data-field-width-res-320-value="97"
-              data-field-top-res-640-value="426"
-              data-field-left-res-640-value="170"
+              data-field-top-res-320-value="500"
+              data-field-left-res-320-value="120"
+              data-field-width-res-320-value="200"
+              data-field-top-res-640-value="500"
+              data-field-left-res-640-value="120"
             >
               <div class="tn-atom">
                 <img
                   class="tn-atom__img t-img"
-                  data-original="https://static.tildacdn.com/tild3963-6631-4534-b839-363238633564/image_4-2.png"
+                  data-original="./images/image_4-2.png"
                   src="images/image_4-2.png"
                   alt=""
                   imgfield="tn_img_1727693011751"
                 />
               </div>
             </div>
-            <div
+            <!-- <div
               class="t396__elem tn-elem tn-elem__8048299881727692946198"
               data-elem-id="1727692946198"
               data-elem-type="image"
@@ -1760,8 +1760,8 @@
                   imgfield="tn_img_1727692946198"
                 />
               </div>
-            </div>
-            <div
+            </div> -->
+            <!-- <div
               class="t396__elem tn-elem tn-elem__8048299881727693188357"
               data-elem-id="1727693188357"
               data-elem-type="image"
@@ -1792,14 +1792,14 @@
                   imgfield="tn_img_1727693188357"
                 />
               </div>
-            </div>
+            </div> -->
             <div
               class="t396__elem tn-elem tn-elem__8048299881727692824188"
               data-elem-id="1727692824188"
               data-elem-type="image"
-              data-field-top-value="257"
-              data-field-left-value="620"
-              data-field-width-value="360"
+              data-field-top-value="200"
+              data-field-left-value="600"
+              data-field-width-value="460"
               data-field-axisy-value="top"
               data-field-axisx-value="left"
               data-field-container-value="grid"
@@ -1814,8 +1814,8 @@
               data-animate-sbs-opts="[{'mx':0,'my':0,'sx':1,'sy':1,'op':1,'ro':0,'ti':0,'ea':'0','dt':0},{'mx':0,'my':-30,'sx':1,'sy':1,'op':1,'ro':0,'ti':5000,'ea':'0','dt':0}]"
               data-field-filewidth-value="369"
               data-field-fileheight-value="356"
-              data-field-top-res-320-value="550"
-              data-field-left-res-320-value="96"
+              data-field-top-res-320-value="410"
+              data-field-left-res-320-value="80"
               data-field-width-res-320-value="175"
               data-field-top-res-640-value="393"
               data-field-left-res-640-value="336"
@@ -1834,9 +1834,9 @@
               class="t396__elem tn-elem tn-elem__8048299881727693092521"
               data-elem-id="1727693092521"
               data-elem-type="image"
-              data-field-top-value="518"
-              data-field-left-value="410"
-              data-field-width-value="133"
+              data-field-top-value="318"
+              data-field-left-value="210"
+              data-field-width-value="700"
               data-field-axisy-value="top"
               data-field-axisx-value="left"
               data-field-container-value="grid"
@@ -1849,16 +1849,16 @@
               data-animate-prx-dy="30"
               data-field-filewidth-value="172"
               data-field-fileheight-value="122"
-              data-field-top-res-320-value="668"
-              data-field-left-res-320-value="0"
-              data-field-width-res-320-value="55"
-              data-field-top-res-640-value="620"
-              data-field-left-res-640-value="126"
+              data-field-top-res-320-value="500"
+              data-field-left-res-320-value="-50"
+              data-field-width-res-320-value="280"
+              data-field-top-res-640-value="500"
+              data-field-left-res-640-value="-50"
             >
               <div class="tn-atom">
                 <img
                   class="tn-atom__img t-img"
-                  data-original="https://static.tildacdn.com/tild6561-6436-4133-a364-376530303166/image_4-3.png"
+                  data-original="./images/image_4-3.png"
                   src="images/image_4-3.png"
                   alt=""
                   imgfield="tn_img_1727693092521"
@@ -1869,9 +1869,9 @@
               class="t396__elem tn-elem tn-elem__8048299881727693157040"
               data-elem-id="1727693157040"
               data-elem-type="image"
-              data-field-top-value="135"
-              data-field-left-value="755"
-              data-field-width-value="165"
+              data-field-top-value="105"
+              data-field-left-value="555"
+              data-field-width-value="330"
               data-field-axisy-value="top"
               data-field-axisx-value="left"
               data-field-container-value="grid"
@@ -1884,23 +1884,23 @@
               data-animate-prx-dy="10"
               data-field-filewidth-value="165"
               data-field-fileheight-value="78"
-              data-field-top-res-320-value="130"
-              data-field-left-res-320-value="224"
-              data-field-width-res-320-value="65"
-              data-field-top-res-640-value="118"
-              data-field-left-res-640-value="429"
+              data-field-top-res-320-value="370"
+              data-field-left-res-320-value="50"
+              data-field-width-res-320-value="145"
+              data-field-top-res-640-value="370"
+              data-field-left-res-640-value="50"
             >
               <div class="tn-atom">
                 <img
                   class="tn-atom__img t-img"
-                  data-original="https://static.tildacdn.com/tild3261-3035-4661-b339-613662363934/image_4-5.png"
+                  data-original="images/image_4-5.png"
                   src="images/image_4-5.png"
                   alt=""
                   imgfield="tn_img_1727693157040"
                 />
               </div>
             </div>
-            <div
+            <!-- <div
               class="t396__elem tn-elem tn-elem__8048299881727693237423"
               data-elem-id="1727693237423"
               data-elem-type="image"
@@ -1932,7 +1932,7 @@
                   imgfield="tn_img_1727693237423"
                 />
               </div>
-            </div>
+            </div> -->
             <div
               class="t396__elem tn-elem tn-elem__8048299881727693327662"
               data-elem-id="1727693327662"
@@ -1958,7 +1958,7 @@
             >
               <a class="tn-atom" href="#form-wrap">Участвовать бесплатно</a>
             </div>
-            <div
+            <!-- <div
               class="t396__elem tn-elem tn-elem__8048299881727696232714"
               data-elem-id="1727696232714"
               data-elem-type="image"
@@ -1992,7 +1992,7 @@
                   imgfield="tn_img_1727696232714"
                 />
               </div>
-            </div>
+            </div> -->
             <!-- <div
               class="t396__elem tn-elem tn-elem__8048299881727702141318"
               data-elem-id="1727702141318"
@@ -2701,9 +2701,9 @@
           }
           #rec804855614 .tn-elem[data-elem-id="1727694527034"] {
             z-index: 8;
-            top: 282px;
-            left: calc(50% - 600px + 42px);
-            width: 269px;
+            top: 300px;
+            left: calc(50% - 600px + 130px);
+            width: 140px;
             height: auto;
           }
           #rec804855614 .tn-elem[data-elem-id="1727694527034"] .tn-atom {
@@ -2715,21 +2715,21 @@
           }
           @media screen and (max-width: 1199px) {
             #rec804855614 .tn-elem[data-elem-id="1727694527034"] {
-              left: calc(50% - 480px + 8px);
+              left: calc(50% - 480px + 100px);
               height: auto;
             }
           }
           @media screen and (max-width: 959px) {
             #rec804855614 .tn-elem[data-elem-id="1727694527034"] {
-              left: calc(50% - 320px + 153px);
+              left: calc(50% - 320px + 250px);
               height: auto;
             }
           }
           @media screen and (max-width: 639px) {
             #rec804855614 .tn-elem[data-elem-id="1727694527034"] {
               top: 192px;
-              left: calc(50% - 160px + 17px);
-              width: 233px;
+              left: calc(50% - 160px + 95px);
+              width: 120px;
               height: auto;
             }
           }
@@ -2830,9 +2830,9 @@
           }
           #rec804855614 .tn-elem[data-elem-id="1727694628699"] {
             z-index: 11;
-            top: 201px;
-            left: calc(50% - 600px + 408px);
-            width: 391px;
+            top: 300px;
+            left: calc(50% - 600px + 460px);
+            width: 260px;
             height: auto;
           }
           #rec804855614 .tn-elem[data-elem-id="1727694628699"] .tn-atom {
@@ -2844,22 +2844,22 @@
           }
           @media screen and (max-width: 1199px) {
             #rec804855614 .tn-elem[data-elem-id="1727694628699"] {
-              left: calc(50% - 480px + 285px);
+              left: calc(50% - 480px + 335px);
               height: auto;
             }
           }
           @media screen and (max-width: 959px) {
             #rec804855614 .tn-elem[data-elem-id="1727694628699"] {
-              top: 481px;
-              left: calc(50% - 320px + 134px);
+              top: 580px;
+              left: calc(50% - 320px + 185px);
               height: auto;
             }
           }
           @media screen and (max-width: 639px) {
             #rec804855614 .tn-elem[data-elem-id="1727694628699"] {
-              top: 405px;
-              left: calc(50% - 160px + 0px);
-              width: 309px;
+              top: 465px;
+              left: calc(50% - 160px + 45px);
+              width: 215px;
               height: auto;
             }
           }
@@ -2961,8 +2961,8 @@
           #rec804855614 .tn-elem[data-elem-id="1727694918772"] {
             z-index: 14;
             top: 284px;
-            left: calc(50% - 600px + 818px);
-            width: 315px;
+            left: calc(50% - 600px + 830px);
+            width: 295px;
             height: auto;
           }
           #rec804855614 .tn-elem[data-elem-id="1727694918772"] .tn-atom {
@@ -2974,7 +2974,8 @@
           }
           @media screen and (max-width: 1199px) {
             #rec804855614 .tn-elem[data-elem-id="1727694918772"] {
-              left: calc(50% - 480px + 630px);
+              left: calc(50% - 480px + 650px);
+              width: 280px;
               height: auto;
             }
           }
@@ -2987,8 +2988,8 @@
           }
           @media screen and (max-width: 639px) {
             #rec804855614 .tn-elem[data-elem-id="1727694918772"] {
-              top: 740px;
-              left: calc(50% - 160px + 23px);
+              top: 755px;
+              left: calc(50% - 160px + 40px);
               width: 233px;
               height: auto;
             }
@@ -3143,28 +3144,12 @@
               class="t396__elem tn-elem tn-elem__8048556141727694527034"
               data-elem-id="1727694527034"
               data-elem-type="image"
-              data-field-top-value="282"
-              data-field-left-value="42"
-              data-field-width-value="269"
-              data-field-axisy-value="top"
-              data-field-axisx-value="left"
-              data-field-container-value="grid"
-              data-field-topunits-value="px"
-              data-field-leftunits-value="px"
-              data-field-heightunits-value=""
-              data-field-widthunits-value="px"
-              data-field-filewidth-value="1280"
-              data-field-fileheight-value="853"
-              data-field-top-res-320-value="192"
-              data-field-left-res-320-value="17"
-              data-field-width-res-320-value="233"
-              data-field-left-res-640-value="153"
-              data-field-left-res-960-value="8"
+            
             >
               <div class="tn-atom">
                 <img
                   class="tn-atom__img t-img"
-                  data-original="https://static.tildacdn.com/tild6433-3133-4536-a361-626530353539/cute-little-rich-ham.png"
+                  data-original="images/cute-little-rich-ham.png"
                   src="images/cute-little-rich-ham.png"
                   alt=""
                   imgfield="tn_img_1727694527034"
@@ -3230,29 +3215,12 @@
               class="t396__elem tn-elem tn-elem__8048556141727694628699"
               data-elem-id="1727694628699"
               data-elem-type="image"
-              data-field-top-value="201"
-              data-field-left-value="408"
-              data-field-width-value="391"
-              data-field-axisy-value="top"
-              data-field-axisx-value="left"
-              data-field-container-value="grid"
-              data-field-topunits-value="px"
-              data-field-leftunits-value="px"
-              data-field-heightunits-value=""
-              data-field-widthunits-value="px"
-              data-field-filewidth-value="1280"
-              data-field-fileheight-value="960"
-              data-field-top-res-320-value="405"
-              data-field-left-res-320-value="0"
-              data-field-width-res-320-value="309"
-              data-field-top-res-640-value="481"
-              data-field-left-res-640-value="134"
-              data-field-left-res-960-value="285"
+              
             >
               <div class="tn-atom">
                 <img
                   class="tn-atom__img t-img"
-                  data-original="https://static.tildacdn.com/tild3363-3066-4939-b338-363266626163/usd-bull-buy-market-.png"
+                  data-original="images/usd-bull-buy-market-.png"
                   src="images/usd-bull-buy-market-.png"
                   alt=""
                   imgfield="tn_img_1727694628699"
@@ -3296,7 +3264,7 @@
               data-field-heightunits-value=""
               data-field-widthunits-value="px"
               data-field-top-res-320-value="896"
-              data-field-left-res-320-value="33"
+              data-field-left-res-320-value="23"
               data-field-width-res-320-value="267"
               data-field-top-res-640-value="1086"
               data-field-left-res-640-value="70"
@@ -3317,29 +3285,12 @@
               class="t396__elem tn-elem tn-elem__8048556141727694918772"
               data-elem-id="1727694918772"
               data-elem-type="image"
-              data-field-top-value="284"
-              data-field-left-value="818"
-              data-field-width-value="315"
-              data-field-axisy-value="top"
-              data-field-axisx-value="left"
-              data-field-container-value="grid"
-              data-field-topunits-value="px"
-              data-field-leftunits-value="px"
-              data-field-heightunits-value=""
-              data-field-widthunits-value="px"
-              data-field-filewidth-value="1280"
-              data-field-fileheight-value="717"
-              data-field-top-res-320-value="740"
-              data-field-left-res-320-value="23"
-              data-field-width-res-320-value="233"
-              data-field-top-res-640-value="868"
-              data-field-left-res-640-value="159"
-              data-field-left-res-960-value="630"
+             
             >
               <div class="tn-atom">
                 <img
                   class="tn-atom__img t-img"
-                  data-original="https://static.tildacdn.com/tild3837-3534-4462-a531-326634373966/3d-cartoon-whale-wit.png"
+                  data-original="images/3d-cartoon-whale-wit.png"
                   src="images/3d-cartoon-whale-wit.png"
                   alt=""
                   imgfield="tn_img_1727694918772"
@@ -4482,7 +4433,7 @@
         <!-- T396 -->
         <style>
           #rec804892517 .t396__artboard {
-            height: 1170px;
+            height: 920px;
             background-color: #181818;
           }
           #rec804892517 .t396__filter {
@@ -4522,7 +4473,7 @@
             #rec804892517 .t396__artboard,
             #rec804892517 .t396__filter,
             #rec804892517 .t396__carrier {
-              height: 840px;
+              height: 1450px;
             }
             #rec804892517 .t396__filter {
             }
@@ -5322,455 +5273,73 @@
             class="t396__artboard"
             data-artboard-recid="804892517"
             data-artboard-screens="320,640,960,1200"
-            data-artboard-height="1170"
             data-artboard-valign="center"
             data-artboard-upscale="grid"
-            data-artboard-height-res-320="840"
-            data-artboard-upscale-res-320="window"
-            data-artboard-height-res-640="1130"
+            
+            style="padding: 0 20px;"
           >
             <div class="t396__carrier" data-artboard-recid="804892517"></div>
             <div class="t396__filter" data-artboard-recid="804892517"></div>
-            <div
-              class="t396__elem tn-elem tn-elem__8048925171727693562306"
-              data-elem-id="1727693562306"
-              data-elem-type="shape"
-              data-field-top-value="53"
-              data-field-left-value="20"
-              data-field-height-value="356"
-              data-field-width-value="1161"
-              data-field-axisy-value="top"
-              data-field-axisx-value="left"
-              data-field-container-value="grid"
-              data-field-topunits-value="px"
-              data-field-leftunits-value="px"
-              data-field-heightunits-value="px"
-              data-field-widthunits-value="px"
-              data-field-top-res-320-value="43"
-              data-field-left-res-320-value="10"
-              data-field-height-res-320-value="1411"
-              data-field-width-res-320-value="300"
-              data-field-height-res-640-value="1525"
-              data-field-width-res-640-value="614"
-              data-field-left-res-960-value="14"
-              data-field-height-res-960-value="1071"
-              data-field-width-res-960-value="932"
-            >
-              <div class="tn-atom"></div>
-            </div>
-            <div
-              class="t396__elem tn-elem tn-elem__8048925171727693719780"
-              data-elem-id="1727693719780"
-              data-elem-type="text"
-              data-field-top-value="104"
-              data-field-left-value="77"
-              data-field-height-value="59"
-              data-field-width-value="315"
-              data-field-axisy-value="top"
-              data-field-axisx-value="left"
-              data-field-container-value="grid"
-              data-field-topunits-value="px"
-              data-field-leftunits-value="px"
-              data-field-heightunits-value="px"
-              data-field-widthunits-value="px"
-              data-field-textfit-value="autoheight"
-              data-field-top-res-320-value="65"
-              data-field-left-res-320-value="14"
-              data-field-width-res-320-value="293"
-              data-field-top-res-640-value="55"
-              data-field-left-res-640-value="30"
-              data-field-top-res-960-value="65"
-              data-field-left-res-960-value="40"
-            >
-              <div class="tn-atom" field="tn_text_1727693719780">
-                О АКАДЕМИИ
+     
+            <div class="academy">
+              <div class="academy__container">
+                <div class="academy__left">
+                  <h2 class="academy__title">О АКАДЕМИИ</h2>
+                  <p class="academy__text">
+                    Мы являемся образовательным клубом который объединил единомышленников с различным опытом и навыками для достижения
+одной цели - обмен знаниями, информацией и координация комьюнити в вопросах анализа монет, участия в различных новых проектах,
+извлечения максимальной выгоды из амбассадорских и реферальных программ таких проектов, а также по всем сопутствующим темам. Мы постоянно заключаем новые партнёрства и контракты с независимыми
+аналитиками, инвесторами и трейдерами для того чтобы наше комьюнити имело полную картину рынка криптовалют и быть в курсе
+всех актуальных возможностей.
+                  </p>
+                </div>
+                <div class="academy__right">
+                  <div class="academy__item">
+                    <h3 class="academy__item-title">ВОЗМОЖНОСТЬ</h3>
+                    <p class="academy__item-text">
+                      Увеличить свой капитал поможет вам грамотно управлять рисками и использовать рыночные возможности для стабильного роста капитала — даже если вы новичок
+                    </p>
+                  </div>
+                  <div class="academy__item">
+                    <h3 class="academy__item-title">12</h3>
+                    <p class="academy__item-text">
+                      Криптовалютных конференций по всему миру посетили наши кураторы чтобы всегда быть в курсе зарождающихся трендов и нарративов
+                    </p>
+                  </div>
+                  <div class="academy__item">
+                    <h3 class="academy__item-title">600+</h3>
+                    <p class="academy__item-text">
+                      Наши кураторы помогли ученикам собрать грамотные криптовалютные портфели с учётом их целей и текущей ситуации на рынке
+                    </p>
+                  </div>
+                  <div class="academy__item">
+                    <h3 class="academy__item-title">КАЖДЫЙ</h3>
+                    <p class="academy__item-text">
+                      Участник нашего комьюнити регулярно получают вознаграждения от новых проектов и используют разные стратегии заработка в криптовалюте. Размер прибыли зависит только от ваших действий и текущей ситуации на рынке
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-            <div
-              class="t396__elem tn-elem tn-elem__8048925171727693762082"
-              data-elem-id="1727693762082"
-              data-elem-type="text"
-              data-field-top-value="172"
-              data-field-left-value="78"
-              data-field-height-value="170"
-              data-field-width-value="442"
-              data-field-axisy-value="top"
-              data-field-axisx-value="left"
-              data-field-container-value="grid"
-              data-field-topunits-value="px"
-              data-field-leftunits-value="px"
-              data-field-heightunits-value="px"
-              data-field-widthunits-value="px"
-              data-field-textfit-value="autoheight"
-              data-field-top-res-320-value="102"
-              data-field-left-res-320-value="27"
-              data-field-width-res-320-value="267"
-              data-field-top-res-640-value="118"
-              data-field-left-res-640-value="30"
-              data-field-width-res-640-value="512"
-              data-field-top-res-960-value="128"
-              data-field-left-res-960-value="40"
-            >
-              <div class="tn-atom" field="tn_text_1727693762082">
-                Мы являемся образовательным клубом который объединил
-                единомышленников с различным опытом и навыками для достижения
-                одной цели - обмен знаниями, информацией и координация комьюнити
-                в вопросах анализа монет, участия в различных новых проектах,
-                извлечения максимальной выгоды из амбассадорских и реферальных
-                программ таких проектов, а также по всем сопутствующим темам. Мы
-                постоянно заключаем новые партнёрства и контракты с независимыми
-                аналитиками, инвесторами и трейдерами для того чтобы наше
-                комьюнити имело полную картину рынка криптовалют и быть в курсе
-                всех актуальных возможностей.
+            
+            <div class="speaker">
+              <div class="speaker__container">
+                <h2 class="speaker__title">СПИКЕР</h2>
+                <div class="speaker__content">
+                  <img src="./images/man.png" alt="Гущин Максим" class="speaker__photo">
+                  <div class="speaker__text-block">
+                    <h3 class="speaker__name">Гущин Максим</h3>
+                    <p class="speaker__text">
+                      Я сам прошёл путь от полного нуля до криптопортфеля на $100K.  Я не из тех, кто «торговал когда-то в 2017». 
+Я работаю на рынке прямо сейчас и делюсь с тобой свежими, проверенными инструментами, 
+а не старыми историями.  Сложные моменты объясняю простым и понятным языком — даже если пока с трудом отличаешь биткоин от эфира.  Помогу тебе зарядиться уверенностью и настроиться на результат.  Я уже преодолел этот путь — теперь настала твоя очередь. Я буду рядом, чтобы поддержать и помочь тебе не свернуть с курса
+                    </p>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div
-              class="t396__elem tn-elem tn-elem__8048925171727696986793"
-              data-elem-id="1727696986793"
-              data-elem-type="text"
-              data-field-top-value="117"
-              data-field-left-value="625"
-              data-field-height-value="45"
-              data-field-width-value="215"
-              data-field-axisy-value="top"
-              data-field-axisx-value="left"
-              data-field-container-value="grid"
-              data-field-topunits-value="px"
-              data-field-leftunits-value="px"
-              data-field-heightunits-value="px"
-              data-field-widthunits-value="px"
-              data-field-textfit-value="autoheight"
-              data-field-top-res-320-value="252"
-              data-field-left-res-320-value="29"
-              data-field-width-res-320-value="110"
-              data-field-top-res-640-value="287"
-              data-field-left-res-640-value="32"
-              data-field-width-res-640-value="150"
-              data-field-top-res-960-value="321"
-              data-field-left-res-960-value="35"
-            >
-              <div class="tn-atom" field="tn_text_1727696986793">ОТ 200%</div>
-            </div>
-            <div
-              class="t396__elem tn-elem tn-elem__8048925171727697050456"
-              data-elem-id="1727697050456"
-              data-elem-type="text"
-              data-field-top-value="162"
-              data-field-left-value="633"
-              data-field-height-value="39"
-              data-field-width-value="200"
-              data-field-axisy-value="top"
-              data-field-axisx-value="left"
-              data-field-container-value="grid"
-              data-field-topunits-value="px"
-              data-field-leftunits-value="px"
-              data-field-heightunits-value="px"
-              data-field-widthunits-value="px"
-              data-field-textfit-value="autoheight"
-              data-field-top-res-320-value="281"
-              data-field-left-res-320-value="17"
-              data-field-width-res-320-value="134"
-              data-field-top-res-640-value="326"
-              data-field-left-res-640-value="32"
-              data-field-width-res-640-value="193"
-              data-field-top-res-960-value="366"
-              data-field-left-res-960-value="35"
-            >
-              <div class="tn-atom" field="tn_text_1727697050456">
-                Увеличили свой депозит наши инвесторы, которые в начале года
-                были ещё совсем без опыта
-              </div>
-            </div>
-            <div
-              class="t396__elem tn-elem tn-elem__8048925171727697148313"
-              data-elem-id="1727697148313"
-              data-elem-type="text"
-              data-field-top-value="246"
-              data-field-left-value="625"
-              data-field-height-value="45"
-              data-field-width-value="215"
-              data-field-axisy-value="top"
-              data-field-axisx-value="left"
-              data-field-container-value="grid"
-              data-field-topunits-value="px"
-              data-field-leftunits-value="px"
-              data-field-heightunits-value="px"
-              data-field-widthunits-value="px"
-              data-field-textfit-value="autoheight"
-              data-field-top-res-320-value="340"
-              data-field-left-res-320-value="182"
-              data-field-width-res-320-value="110"
-              data-field-top-res-640-value="286"
-              data-field-left-res-640-value="250"
-              data-field-width-res-640-value="150"
-              data-field-top-res-960-value="322"
-              data-field-left-res-960-value="280"
-            >
-              <div class="tn-atom" field="tn_text_1727697148313">3000$+</div>
-            </div>
-            <div
-              class="t396__elem tn-elem tn-elem__8048925171727697148308"
-              data-elem-id="1727697148308"
-              data-elem-type="text"
-              data-field-top-value="289"
-              data-field-left-value="633"
-              data-field-height-value="52"
-              data-field-width-value="200"
-              data-field-axisy-value="top"
-              data-field-axisx-value="left"
-              data-field-container-value="grid"
-              data-field-topunits-value="px"
-              data-field-leftunits-value="px"
-              data-field-heightunits-value="px"
-              data-field-widthunits-value="px"
-              data-field-textfit-value="autoheight"
-              data-field-top-res-320-value="369"
-              data-field-left-res-320-value="170"
-              data-field-width-res-320-value="134"
-              data-field-top-res-640-value="325"
-              data-field-left-res-640-value="250"
-              data-field-width-res-640-value="217"
-              data-field-top-res-960-value="367"
-              data-field-left-res-960-value="280"
-            >
-              <div class="tn-atom" field="tn_text_1727697148308">
-                В среднем заработали участники комьюнити только на поощрениях со
-                стороны новых проектов, не считая других способов дохода в
-                крипте
-              </div>
-            </div>
-            <div
-              class="t396__elem tn-elem tn-elem__8048925171727697216965"
-              data-elem-id="1727697216965"
-              data-elem-type="text"
-              data-field-top-value="118"
-              data-field-left-value="881"
-              data-field-height-value="45"
-              data-field-width-value="200"
-              data-field-axisy-value="top"
-              data-field-axisx-value="left"
-              data-field-container-value="grid"
-              data-field-topunits-value="px"
-              data-field-leftunits-value="px"
-              data-field-heightunits-value="px"
-              data-field-widthunits-value="px"
-              data-field-textfit-value="autoheight"
-              data-field-top-res-320-value="340"
-              data-field-left-res-320-value="29"
-              data-field-width-res-320-value="110"
-              data-field-top-res-640-value="418"
-              data-field-left-res-640-value="32"
-              data-field-width-res-640-value="150"
-              data-field-top-res-960-value="322"
-              data-field-left-res-960-value="550"
-            >
-              <div class="tn-atom" field="tn_text_1727697216965">12</div>
-            </div>
-            <div
-              class="t396__elem tn-elem tn-elem__8048925171727697216961"
-              data-elem-id="1727697216961"
-              data-elem-type="text"
-              data-field-top-value="162"
-              data-field-left-value="881"
-              data-field-height-value="52"
-              data-field-width-value="200"
-              data-field-axisy-value="top"
-              data-field-axisx-value="left"
-              data-field-container-value="grid"
-              data-field-topunits-value="px"
-              data-field-leftunits-value="px"
-              data-field-heightunits-value="px"
-              data-field-widthunits-value="px"
-              data-field-textfit-value="autoheight"
-              data-field-top-res-320-value="370"
-              data-field-left-res-320-value="19"
-              data-field-width-res-320-value="130"
-              data-field-top-res-640-value="457"
-              data-field-left-res-640-value="32"
-              data-field-width-res-640-value="171"
-              data-field-top-res-960-value="367"
-              data-field-left-res-960-value="550"
-            >
-              <div class="tn-atom" field="tn_text_1727697216961">
-                Криптовалютных конференций по всему миру посетили наши кураторы
-                чтобы всегда быть в курсе зарождающихся трендов и нарративов
-              </div>
-            </div>
-            <div
-              class="t396__elem tn-elem tn-elem__8048925171727697299255"
-              data-elem-id="1727697299255"
-              data-elem-type="text"
-              data-field-top-value="246"
-              data-field-left-value="881"
-              data-field-height-value="45"
-              data-field-width-value="200"
-              data-field-axisy-value="top"
-              data-field-axisx-value="left"
-              data-field-container-value="grid"
-              data-field-topunits-value="px"
-              data-field-leftunits-value="px"
-              data-field-heightunits-value="px"
-              data-field-widthunits-value="px"
-              data-field-textfit-value="autoheight"
-              data-field-top-res-320-value="251"
-              data-field-left-res-320-value="183"
-              data-field-width-res-320-value="110"
-              data-field-top-res-640-value="418"
-              data-field-left-res-640-value="250"
-              data-field-width-res-640-value="150"
-              data-field-top-res-960-value="210"
-              data-field-left-res-960-value="550"
-            >
-              <div class="tn-atom" field="tn_text_1727697299255">600+</div>
-            </div>
-            <div
-              class="t396__elem tn-elem tn-elem__8048925171727697299249"
-              data-elem-id="1727697299249"
-              data-elem-type="text"
-              data-field-top-value="289"
-              data-field-left-value="881"
-              data-field-height-value="39"
-              data-field-width-value="200"
-              data-field-axisy-value="top"
-              data-field-axisx-value="left"
-              data-field-container-value="grid"
-              data-field-topunits-value="px"
-              data-field-leftunits-value="px"
-              data-field-heightunits-value="px"
-              data-field-widthunits-value="px"
-              data-field-textfit-value="autoheight"
-              data-field-top-res-320-value="281"
-              data-field-left-res-320-value="173"
-              data-field-width-res-320-value="130"
-              data-field-top-res-640-value="457"
-              data-field-left-res-640-value="250"
-              data-field-width-res-640-value="171"
-              data-field-top-res-960-value="255"
-              data-field-left-res-960-value="550"
-            >
-              <div class="tn-atom" field="tn_text_1727697299249">
-                Криптовалютных портфелей помогли собрать наши кураторы своим
-                ученикам
-              </div>
-            </div>
-            <div
-              class="t396__elem tn-elem tn-elem__8048925171727697566443"
-              data-elem-id="1727697566443"
-              data-elem-type="text"
-              data-field-top-value="485"
-              data-field-left-value="81"
-              data-field-height-value="56"
-              data-field-width-value="259"
-              data-field-axisy-value="top"
-              data-field-axisx-value="left"
-              data-field-container-value="grid"
-              data-field-topunits-value="px"
-              data-field-leftunits-value="px"
-              data-field-heightunits-value="px"
-              data-field-widthunits-value="px"
-              data-field-textfit-value="autoheight"
-              data-field-top-res-320-value="460"
-              data-field-left-res-320-value="14"
-              data-field-width-res-320-value="293"
-              data-field-top-res-640-value="591"
-              data-field-left-res-640-value="35"
-              data-field-top-res-960-value="488"
-              data-field-left-res-960-value="42"
-            >
-              <div class="tn-atom" field="tn_text_1727697566443" id="4">Спикер</div>
-            </div>
-            <div
-              class="t396__elem tn-elem tn-elem__8048925171727697706387"
-              data-elem-id="1727697706387"
-              data-elem-type="shape"
-              data-field-top-value="566"
-              data-field-left-value="474"
-              data-field-height-value="307"
-              data-field-width-value="251"
-              data-field-axisy-value="top"
-              data-field-axisx-value="left"
-              data-field-container-value="grid"
-              data-field-topunits-value="px"
-              data-field-leftunits-value="px"
-              data-field-heightunits-value="px"
-              data-field-widthunits-value="px"
-              data-field-top-res-320-value="558"
-              data-field-left-res-320-value="17"
-              data-field-height-res-320-value="165"
-              data-field-width-res-320-value="285"
-              data-field-top-res-640-value="664"
-              data-field-left-res-640-value="211"
-              data-field-height-res-640-value="260"
-              data-field-width-res-640-value="213"
-              data-field-top-res-960-value="567"
-              data-field-left-res-960-value="354"
-            >
-              <div
-                class="tn-atom t-bgimg"
-                data-original="images/man.png"
-                aria-label=""
-                role="img"
-              ></div>
-            </div>
-            <div
-              class="t396__elem tn-elem tn-elem__8048925171727697769330"
-              data-elem-id="1727697769330"
-              data-elem-type="text"
-              data-field-top-value="891"
-              data-field-left-value="478"
-              data-field-height-value="21"
-              data-field-width-value="244"
-              data-field-axisy-value="top"
-              data-field-axisx-value="left"
-              data-field-container-value="grid"
-              data-field-topunits-value="px"
-              data-field-leftunits-value="px"
-              data-field-heightunits-value="px"
-              data-field-widthunits-value="px"
-              data-field-textfit-value="autoheight"
-              data-field-top-res-320-value="525"
-              data-field-left-res-320-value="60"
-              data-field-width-res-320-value="199"
-              data-field-top-res-640-value="940"
-              data-field-left-res-640-value="211"
-              data-field-width-res-640-value="217"
-              data-field-top-res-960-value="889"
-              data-field-left-res-960-value="356"
-            >
-              <div class="tn-atom" field="tn_text_1727697769330">
-                Гущин Максим
-              </div>
-            </div>
-            <div
-              class="t396__elem tn-elem tn-elem__8048925171727697817465"
-              data-elem-id="1727697817465"
-              data-elem-type="text"
-              data-field-top-value="918"
-              data-field-left-value="452"
-              data-field-height-value="112"
-              data-field-width-value="295"
-              data-field-axisy-value="top"
-              data-field-axisx-value="left"
-              data-field-container-value="grid"
-              data-field-topunits-value="px"
-              data-field-leftunits-value="px"
-              data-field-heightunits-value="px"
-              data-field-widthunits-value="px"
-              data-field-textfit-value="autoheight"
-              data-field-top-res-320-value="727"
-              data-field-left-res-320-value="35"
-              data-field-width-res-320-value="249"
-              data-field-top-res-640-value="966"
-              data-field-left-res-640-value="211"
-              data-field-width-res-640-value="217"
-              data-field-top-res-960-value="919"
-              data-field-left-res-960-value="357"
-              data-field-width-res-960-value="244"
-            >
-              <div class="tn-atom" field="tn_text_1727697817465">
-                Я сам прошёл путь от полного нуля до криптопортфеля на $100K.  Я не из тех, кто «торговал когда-то в 2017». Я работаю на рынке прямо сейчас и делюсь с тобой свежими, проверенными инструментами, а не старыми историями.  Сложные моменты объясняю простым и понятным языком — даже если пока с трудом отличаешь биткоин от эфира.  Помогу тебе зарядиться уверенностью и настроиться на результат.  Я уже преодолел этот путь — теперь настала твоя очередь. Я буду рядом, чтобы поддержать и помочь тебе не свернуть с курса
-              </div>
-            </div>
+            </в>
+            
+            
           </div>
         </div>
         <script>
@@ -5788,7 +5357,7 @@
       <div
         id="rec834173374"
         class="r t-rec t-rec_pt_90 t-form__screen-hiderecord"
-        style="padding-top: 90px; background-color: #181818;"
+        style="padding-top: 10px; background-color: #181818;"
         data-record-type="1040"
       >
         <!-- t1040 -->
@@ -5839,11 +5408,12 @@
                                     class="t-quiz__cover__text-wrapper align-start"
                                   >
                                     <div
-                                      class="t-quiz__cover__title t-title t-title_xxs"
+                                      class="t-quiz__cover__title t-title t-heading_xs"
                                       field="li_cover_title__1722853964139"
                                     >
-                                      Ответьте на пару вопросов и получите
-                                      бонусы:
+                                    Секретные материалы для тех, кто хочет зайти  
+в крипту с умом <br><br>
+<span style="font-size: 18px;">Пройди мини-опрос и получи:</span>
                                     </div>
                                     <div
                                       class="t-quiz__cover__descr t-descr t-descr_sm"
@@ -5851,7 +5421,7 @@
                                      
                                     >
                                       1. 10$ для тестовой торговли с нашим
-                                      специалистом <br />2. 2 книги: А.Герчик
+                                      специалистом <br />2. Две книги: А.Герчик
                                       "Курс активного трейдера" и Б.Грэм
                                       "Разумный инвестор" - их рекомендуют к
                                       прочтению 90% инвесторов <br />3.
@@ -5901,6 +5471,7 @@
                                       </svg>
                                     </button>
                                   </div>
+                                  <span class="t-quiz-text">Доступ откроется только после анкеты — спеши, пока не закрыли</span>
                                 </div>
                                 <div class="t-quiz__cover__side-cover">
                                   <div
@@ -7630,9 +7201,9 @@
             data-artboard-height="1110"
             data-artboard-valign="center"
             data-artboard-upscale="grid"
-            data-artboard-height-res-320="870"
+            data-artboard-height-res-320="780"
             data-artboard-upscale-res-320="window"
-            data-artboard-height-res-640="1110"
+            data-artboard-height-res-640="780"
           >
             <div class="t396__carrier" data-artboard-recid="804927465"></div>
             <div class="t396__filter" data-artboard-recid="804927465"></div>
@@ -8395,6 +7966,7 @@
               top: 467px;
               left: calc(50% - 320px + 454px);
               height: auto;
+              display: none;
             }
           }
           @media screen and (max-width: 639px) {
@@ -8432,6 +8004,7 @@
               top: 174px;
               left: calc(50% - 320px + -38px);
               height: auto;
+              display: none;
             }
           }
           @media screen and (max-width: 639px) {
@@ -8532,7 +8105,7 @@
             data-artboard-height="410"
             data-artboard-valign="center"
             data-artboard-upscale="grid"
-            data-artboard-height-res-320="480"
+            data-artboard-height-res-320="580"
             data-artboard-upscale-res-320="window"
             data-artboard-height-res-640="590"
             id="form-section"
@@ -8550,54 +8123,24 @@
                     method="post">
                 </form>
               </div>
+              <div class="form-info">
+                <span>Оставляя заявку, я даю свое согласие на обработку персональных данных</span>
+                <span>Обучаем только совершеннолетних + 18!</span>
+                <span>Обучение дает знания и навыки, но результат зависит 
+                  от личных усилий пользователя и рыночной ситуации</span>
+              </div>
             </div>
             
            
-            <div
-              class="t396__elem tn-elem tn-elem__8049137821727700389130"
-              data-elem-id="1727700389130"
-              data-elem-type="image"
-              data-field-top-value="235"
-              data-field-left-value="1120"
-              data-field-height-value="117"
-              data-field-width-value="107"
-              data-field-axisy-value="top"
-              data-field-axisx-value="left"
-              data-field-container-value="grid"
-              data-field-topunits-value="px"
-              data-field-leftunits-value="px"
-              data-field-heightunits-value="px"
-              data-field-widthunits-value="px"
-              data-animate-prx="mouse"
-              data-animate-prx-dx="30"
-              data-animate-prx-dy="30"
-              data-field-filewidth-value="131"
-              data-field-fileheight-value="143"
-              data-field-heightmode-value="hug"
-              data-field-top-res-320-value="519"
-              data-field-left-res-320-value="240"
-              data-field-width-res-320-value="51"
-              data-field-top-res-640-value="256"
-              data-field-left-res-640-value="503"
-            >
-              <div class="tn-atom">
-                <img
-                  class="tn-atom__img t-img"
-                  data-original="https://static.tildacdn.com/tild3634-6130-4939-a339-663536326337/image_4-1.png"
-                  src="images/image_4-1.png"
-                  alt=""
-                  imgfield="tn_img_1727700389130"
-                />
-              </div>
-            </div>
+           
             <div
               class="t396__elem tn-elem tn-elem__8049137821727700389129"
               data-elem-id="1727700389129"
               data-elem-type="image"
-              data-field-top-value="294"
-              data-field-left-value="956"
+              data-field-top-value="480"
+              data-field-left-value="1050"
               data-field-height-value="73"
-              data-field-width-value="96"
+              data-field-width-value="140"
               data-field-axisy-value="top"
               data-field-axisx-value="left"
               data-field-container-value="grid"
@@ -8617,7 +8160,7 @@
               <div class="tn-atom">
                 <img
                   class="tn-atom__img t-img"
-                  data-original="https://static.tildacdn.com/tild3536-3430-4061-b939-613636613332/image_4-6.png"
+                  data-original="images/image_4-6.png"
                   src="images/image_4-6.png"
                   alt=""
                   imgfield="tn_img_1727700389129"
@@ -8628,10 +8171,10 @@
               class="t396__elem tn-elem tn-elem__8049137821727700389126"
               data-elem-id="1727700389126"
               data-elem-type="image"
-              data-field-top-value="36"
-              data-field-left-value="-8"
+              data-field-top-value="0"
+              data-field-left-value="0"
               data-field-height-value="88"
-              data-field-width-value="128"
+              data-field-width-value="190"
               data-field-axisy-value="top"
               data-field-axisx-value="left"
               data-field-container-value="grid"
@@ -8654,51 +8197,14 @@
               <div class="tn-atom">
                 <img
                   class="tn-atom__img t-img"
-                  data-original="https://static.tildacdn.com/tild6331-6365-4435-a633-633735613238/image_4.png"
+                  data-original="images/image_4.png"
                   src="images/image_4.png"
                   alt=""
                   imgfield="tn_img_1727700389126"
                 />
               </div>
             </div>
-            <div
-              class="t396__elem tn-elem tn-elem__8049137821727700389123"
-              data-elem-id="1727700389123"
-              data-elem-type="image"
-              data-field-top-value="124"
-              data-field-left-value="0"
-              data-field-height-value="52"
-              data-field-width-value="73"
-              data-field-axisy-value="top"
-              data-field-axisx-value="left"
-              data-field-container-value="grid"
-              data-field-topunits-value="px"
-              data-field-leftunits-value="px"
-              data-field-heightunits-value="px"
-              data-field-widthunits-value="px"
-              data-animate-prx="mouse"
-              data-animate-prx-dx="30"
-              data-animate-prx-dy="30"
-              data-field-filewidth-value="172"
-              data-field-fileheight-value="122"
-              data-field-heightmode-value="hug"
-              data-field-top-res-320-value="668"
-              data-field-left-res-320-value="0"
-              data-field-width-res-320-value="55"
-              data-field-top-res-640-value="620"
-              data-field-left-res-640-value="126"
-            >
-              <div class="tn-atom">
-                <img
-                  class="tn-atom__img t-img"
-                  data-original="https://static.tildacdn.com/tild6561-6436-4133-a364-376530303166/image_4-3.png"
-                  src="images/image_4-3.png"
-                  alt=""
-                  imgfield="tn_img_1727700389123"
-                />
-              </div>
-            </div>
-         
+          
           </div>
         </div>
         <script>
