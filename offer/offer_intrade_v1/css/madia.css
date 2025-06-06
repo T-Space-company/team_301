@@ -1,0 +1,203 @@
+@media screen and (max-width: 1250px) {
+  .info {
+    margin-top: -300px;
+    padding: 5% 92px;
+  }
+  .info__block_bonus {
+    top: -60px;
+  }
+  .header__main_img {
+    transform: translateY(-20%);
+  }
+}
+@media screen and (max-width: 1170px) {
+  .info {
+    margin-top: -200px;
+  }
+  .info__item_book_img {
+    margin-right: 30px;
+  }
+  .info__block_bonus {
+    top: -53px;
+  }
+}
+@media screen and (max-width: 1070px) {
+  .header__title {
+    font-size: 40px;
+  }
+  .info__bg,
+  .info__item_book_img_des {
+    display: none;
+  }
+  .info__item_book_img_mob {
+    display: block;
+  }
+  .info {
+    background: #303030;
+  }
+  .header__main_content {
+    width: 420px;
+  }
+  .info__wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .info__item_book {
+    margin-bottom: 80px;
+  }
+  .info__item_book .info__block_bonus {
+    left: 50%;
+  }
+  .info__wrapper_content .info__block_bonus {
+    left: 50%;
+    top: -80px;
+    transform: translateX(-50%);
+  }
+}
+@media screen and (max-width: 992px) {
+  .header__main_img {
+    transform: translateY(0);
+    flex-shrink: 0;
+    position: absolute;
+    top: 150px;
+    right: -330px;
+    z-index: -1;
+  }
+  .info {
+    margin-top: 400px;
+    padding: 44px 92px;
+  }
+  .header {
+    overflow: hidden;
+  }
+  .send_bid__wrapper {
+    flex-direction: column-reverse;
+  }
+  .header__main_content {
+    max-width: 60%;
+  }
+  .info__block_bonus {
+    top: -44px;
+  }
+}
+@media screen and (max-width: 756px) {
+  .info {
+    padding: 30px;
+    margin-top: 300px;
+  }
+  .info__block_bonus {
+    top: -30px;
+  }
+  .reviews__wrapper_item {
+    width: calc(100% / 2 - 20px);
+  }
+  .footer__order,
+  .footer__policy,
+  .footer__top,
+  .header__logo_block img,
+  .main-btn {
+    width: 100%;
+  }
+  .footer__wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .header__main_content {
+    max-width: 80%;
+  }
+  .header__date_box {
+    font-size: 14px;
+    line-height: 1em;
+  }
+  .header__logo_block,
+  .footer__logo_block {
+    font-size: 16px;
+    gap: 5px;
+  }
+  .header__logo_block > img,
+  .footer__logo_block > img {
+    width: 30px;
+  }
+  .header {
+    padding-top: 20px;
+  }
+  .send_bid_title {
+    font-size: 26px;
+  }
+  .send_bid__book {
+    margin-left: 0;
+  }
+  .send_bid__book_img {
+    margin-right: 0;
+  }
+  .footer__top_contact {
+    display: none;
+  }
+  .footer__main_text_top {
+    display: block;
+  }
+  .footer__top {
+    order: 1;
+  }
+  .footer__order {
+    order: 2;
+    max-width: 230px;
+  }
+  .footer__policy {
+    order: 3;
+    max-width: 230px;
+  }
+  .footer__info_block {
+    order: 4;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 556px) {
+  .footer__logo_block img,
+  .reviews__wrapper_item {
+    width: 100%;
+  }
+  .header__title {
+    font-size: 25px;
+  }
+  .header__main_text_bottom {
+    font-size: 12px;
+  }
+  .info {
+    margin-top: 250px;
+    padding: 30px 10px;
+  }
+  .info__content_item_name {
+    font-size: 16px;
+  }
+
+  .info__item_book_img {
+    margin-right: 0;
+  }
+  .navigation {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .question h2 {
+    font-size: 20px;
+  }
+  .options {
+    gap: 5px;
+  }
+  #quiz-content {
+    padding: 10px 15px;
+  }
+  #app {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 380px) {
+  .footer__top {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .footer__logo_block {
+    max-width: 100%;
+  }
+}
