@@ -99,11 +99,20 @@ export function renderFormRegistrations(allFormClass) {
   <input type="hidden" name="subid" class="js-inputSubid">
   <input type="hidden" name="answer">
   
+
+  <div class="form-group checkbox-wrapper">
+  <label class="custom-checkbox">
+    <input type="checkbox" required name="consent" />
+    <span class="checkbox-mark"></span>
+    <span class="checkbox-text">Даю согласие на обработку личных данных</span>
+  </label>
+</div>
+
   
   <div class="form-group form-group-button">
 
     <button class="registration-form__submit submit_button_js form__button btn secondary-solid-btn btn-block buttonSend"  name="submitBtn" type="submit">
-    <p class="btnFormText">Начать зарабатывать
+    <p class="btnFormText">Записаться
     </p>
     </button>
   </div>
