@@ -52,6 +52,7 @@ if (isset($_GET['success']) || isset($_SESSION['visited'])) {
 <link href="src/css/tilda-popup-1.1.min.css" media="print" onerror="this.loaderr='y';" onload="this.media='all';" rel="stylesheet" type="text/css"/> <noscript><link href="src/css/tilda-popup-1.1.min.css" media="all" rel="stylesheet" type="text/css"/></noscript>
 <link href="src/css/tilda-cover-1.0.min.css" media="all" onerror="this.loaderr='y';" rel="stylesheet" type="text/css"/>
 <link href="src/css/fonts-tildasans.css" media="all" onerror="this.loaderr='y';" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="src/css/additional.css">
 <script charset="utf-8" nomodule="" src="src/js/tilda-polyfill-1.0.min.js"></script>
 <script type="text/javascript">
         function t_onReady(func) {
@@ -278,6 +279,9 @@ if (isset($_GET['success']) || isset($_SESSION['visited'])) {
                     #rec828874079 .t396__carrier {
                         background-attachment: scroll;
                     }
+                    #rec828874079 .t396__carrier {
+                    background-position: right center;
+                }
                 }
 
                 @media screen and (max-width:639px) {
@@ -403,7 +407,8 @@ if (isset($_GET['success']) || isset($_SESSION['visited'])) {
                 @media (hover),
                 (min-width:0\0) {
                     #rec828874079 .tn-elem[data-elem-id="1727691682010"] .tn-atom:hover {
-                        background-color: #116655;
+                        background-color: #00698c;
+                        border-color: #00698c;
                         background-image: none;
                     }
                 }
@@ -668,6 +673,7 @@ if (isset($_GET['success']) || isset($_SESSION['visited'])) {
                         top: 1027px;
                         left: calc(50% - 320px + 237px);
                         height: auto;
+                        display: none;
                     }
                 }
 
@@ -1106,6 +1112,7 @@ if (isset($_GET['success']) || isset($_SESSION['visited'])) {
                         top: 12px;
                         left: calc(50% - 320px + 487px);
                         height: auto;
+                        display: none;
                     }
                 }
 
@@ -1629,7 +1636,7 @@ if (isset($_GET['success']) || isset($_SESSION['visited'])) {
                     }
                 }
             </style>
-<div class="t396">
+<div class="t396" id="1">
 <div class="t396__artboard" data-artboard-height="900" data-artboard-height-res-320="1490" data-artboard-height-res-640="1140" data-artboard-height-res-960="900" data-artboard-recid="828874079" data-artboard-screens="320,640,960,1200" data-artboard-upscale="grid" data-artboard-upscale-res-320="window" data-artboard-valign="center">
 <div class="t396__carrier t-bgimg" data-artboard-recid="828874079" data-original="./images/bg1.png"></div>
 <div class="t396__filter" data-artboard-recid="828874079"></div>
@@ -2699,7 +2706,7 @@ if (isset($_GET['success']) || isset($_SESSION['visited'])) {
                     }
                 }
             </style>
-<div class="t396">
+<div class="t396" id="2">
 <div class="t396__artboard" data-artboard-height="1140" data-artboard-height-res-320="800" data-artboard-height-res-640="1110" data-artboard-recid="828874339" data-artboard-screens="320,640,960,1200" data-artboard-upscale="grid" data-artboard-upscale-res-320="window" data-artboard-valign="center">
 <div class="t396__carrier t-bgimg" data-artboard-recid="828874339" data-original="https://static.tildacdn.com/tild3663-6133-4837-b938-373234326539/54f114a7e6e67aca30f6.jpg"></div>
 <div class="t396__filter" data-artboard-recid="828874339"></div>
@@ -4423,7 +4430,7 @@ background-position: center top;
                     }
                 }
             </style>
-<div class="t396">
+<div class="t396" id="3">
 <div class="t396__artboard" data-artboard-height="870" data-artboard-height-res-320="2010" data-artboard-height-res-480="1280" data-artboard-height-res-640="1430" data-artboard-height-res-960="1160" data-artboard-recid="828874176" data-artboard-screens="320,480,640,960,1200" data-artboard-upscale="grid" data-artboard-valign="center">
 <div class="t396__carrier t-bgimg" data-artboard-recid="828874176" data-original="https://static.tildacdn.com/tild3964-3765-4963-b830-616639323032/abstract-waveforms-d.jpg"></div>
 <div class="t396__filter" data-artboard-recid="828874176"></div>
@@ -4565,7 +4572,7 @@ background-position: center top;
 </div>
 <div class="r t-rec t-rec_pt_60 t-rec_pb_60" data-bg-color="#333333" data-record-type="526" id="rec828874438" style="padding-top:60px;padding-bottom:60px;background-color:#333333; ">
 <!-- t526 -->
-<div class="t526">
+<div class="t526" id="4">
 <div class="t-section__container t-container t-container_flex">
 <div class="t-col t-col_12">
 <div class="t-section__title t-title t-title_xs t-align_center t-margin_auto" field="btitle"> <span style="color: #fff;">Спикер на нашем обучении</span> </div>
@@ -5027,7 +5034,7 @@ background-position: center top;
 <div class="t698">
 <div class="t-container">
 <div class="t-width t-width_8 t698__mainblock">
-<div class="t-cover__wrapper t-valign_middle" style="height:100vh;">
+<div class="t-cover__wrapper t-valign_middle" style="height:100vh;" id="form-wrap">
 <div class="t698__mainwrapper" data-hook-content="covercontent">
 <div class="t698__title t-title t-title_xs" field="title">Откройте для себя мир криптовалют</div>
 <div>
@@ -5084,6 +5091,15 @@ background-position: center top;
                       <div class="error-phone"></div>
                     </label>
                   </div>
+
+                  <div class="form-group checkbox-wrapper">
+                    <label class="custom-checkbox">
+                      <input type="checkbox" required name="consent" />
+                      <span class="checkbox-mark"></span>
+                      <span class="checkbox-text">Я согласен с <a href="policy.html" target="_blank">Политикой Конфиденциальности</a></span>
+                    </label>
+                  </div>
+                  
 
                   <input name="code" type="hidden" value="" />
                   <input name="lang" type="hidden" value="" />
@@ -5177,9 +5193,9 @@ background-position: center top;
             </script>
 </div>
 <div class="r t-rec" data-record-type="215" id="rec828874590" style=" "> <a name="5" style="font-size:0;"></a> </div>
-<div class="r t-rec t-rec_pt_30 t-rec_pb_90" data-animationappear="off" data-bg-color="#f2f2f4" data-record-type="585" id="rec828874704" style="padding-top:30px;padding-bottom:90px;background-color:#f2f2f4; ">
+<div class="r t-rec t-rec_pt_30 t-rec_pb_90" data-animationappear="off" data-bg-color="#f2f2f4" data-record-type="585" id="rec828874704" style="padding-top:30px;padding-bottom:90px;background-color: #0A0711; ">
 <!-- T585 -->
-<div class="t585">
+<div class="t585" id="5">
 <div class="t-container">
 <div class="t-col t-col_12">
 <div class="t585__accordion" data-accordion="true" data-scroll-to-expanded="false">
@@ -5273,6 +5289,33 @@ background-position: center top;
 </div>
 </div>
 </div>
+<footer class="footer">
+    <div class="footer__container">
+      <div class="footer__left">
+        <p class="footer__company">ООО "КРИПТОРИКСА"</p>
+        <p class="footer__address">
+          Адрес: 109004, город Москва, ул Александра Солженицына, д. 27,<br />
+          этаж/помещ. 4/1 офис/ком. 409/13в
+        </p>
+        <p class="footer__brand">CRYPTORIXA</p>
+      </div>
+  
+      <nav class="footer__nav">
+        <a href="#1">Для кого</a>
+        <a href="#2">Программа курса</a>
+        <a href="#3">О академии</a>
+        <a href="#4">Спикер</a>
+        <a href="#5">Вопросы</a>
+      </nav>
+  
+      <div class="footer__right">
+        <p class="footer__phone">+7 909 191 6981</p>
+        <p class="footer__email">info@chainverse.ru</p>
+        <a class="footer__button" href="#form-wrap">Оставить заявку</a>
+      </div>
+    </div>
+  </footer>
+  
 <script>
                 t_onReady(function() {
                     t_onFuncLoad('t585_init', function() {
@@ -5283,13 +5326,13 @@ background-position: center top;
 <style>
                 #rec828874704 .t585__title {
                     font-size: 18px;
-                    color: #7a7a7a;
+                    color: #FFF;
                     font-weight: 500;
                 }
 
                 #rec828874704 .t585__text {
                     font-size: 16px;
-                    color: #7a7a7a;
+                    color: #FFF;
                 }
             </style>
 </div>
